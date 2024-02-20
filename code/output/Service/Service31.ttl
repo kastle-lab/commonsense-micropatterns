@@ -1,0 +1,30 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:ServiceProvider rdf:type rdfs:Class .
+ex:providesService rdf:type rdf:Property ;
+  rdfs:domain ex:ServiceProvider ;
+  rdfs:range ex:Service .
+ex:Service rdf:type rdfs:Class .
+ex:serviceName rdf:type rdf:Property ;
+  rdfs:domain ex:Service ;
+  rdfs:range rdfs:Literal .
+ex:serviceDescription rdf:type rdf:Property ;
+  rdfs:domain ex:Service ;
+  rdfs:range rdfs:Literal .
+ex:serviceArea rdf:type rdf:Property ;
+  rdfs:domain ex:ServiceProvider ;
+  rdfs:range rdfs:Literal .
+ex:address rdf:type rdf:Property ;
+  rdfs:domain ex:ServiceProvider ;
+  rdfs:range rdfs:Literal .
+ex:contact rdf:type rdf:Property ;
+  rdfs:domain ex:ServiceProvider ;
+  rdfs:range rdfs:Literal .
+ex:JohnsCleaningService rdf:type ex:ServiceProvider ;
+  ex:providesService ex:Cleaning ;
+  ex:serviceArea "New York" ;
+  ex:address "10, Central Park West, New York" ;
+  ex:contact "(212) 555-1234" .
+ex:Cleaning rdf:type ex:Service ;
+  ex:serviceName "Home Cleaning Service" ;
+  ex:serviceDescription "We offer a comprehensive cleaning service for your home or apartment." .

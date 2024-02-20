@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:City a rdfs:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A large and permanent human settlement" ;
+    rdfs:subClassOf :GeologicalPlace .
+:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of the city" ;
+    rdfs:domain :City ;
+    rdfs:range xsd:string .
+   :population a rdf:Property ;
+    rdfs:label "population" ;
+    rdfs:comment "The population of the city" ;
+    rdfs:domain :City ;
+    rdfs:range xsd:integer .
+    :isLocatedIn a rdf:Property ;
+    rdfs:label "is located in" ;
+    rdfs:comment "The city is located in some country" ;
+    rdfs:domain :City ;
+    rdfs:range :Country .
+    :hasArea a rdf:Property ;
+    rdfs:label "has area" ;
+    rdfs:comment "The city has some area in square kilometers" ;
+    rdfs:domain :City ;
+    rdfs:range xsd:float .
+:GeologicalPlace a rdfs:Class ;
+    rdfs:label "Geological Place" ;
+    rdfs:comment "A place defined by geological characteristics" .
+:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A geographic entity that is politically recognized as a sovereign state" .

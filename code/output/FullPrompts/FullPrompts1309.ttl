@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix work: <http://example.org/work#> .
+work:Work rdf:type rdfs:Class ;
+    rdfs:comment "A class representing all kinds of work"^^xsd:string ;
+    rdfs:label "Work"^^xsd:string .
+work:Job rdf:type rdfs:Class ;
+    rdfs:subClassOf work:Work ;
+    rdfs:label "Job"^^xsd:string ;
+    rdfs:comment "A class representing formal employment"^^xsd:string .
+work:Task rdf:type rdfs:Class ;
+    rdfs:subClassOf work:Work ;
+    rdfs:label "Task"^^xsd:string ;
+    rdfs:comment "A class representing a specific piece of work or assignment"^^xsd:string .
+work:Volunteer rdf:type rdfs:Class ;
+    rdfs:subClassOf work:Work ;
+    rdfs:label "Volunteer"^^xsd:string ;
+    rdfs:comment "A class representing unpaid work, often for a charitable cause"^^xsd:string .
+work:startDate rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:dateTime ;
+    rdfs:domain work:Work ;
+    rdfs:label "start date"^^xsd:string ;
+    rdfs:comment "The start date of a work"^^xsd:string .
+work:endDate rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:dateTime ;
+    rdfs:domain work:Work ;
+    rdfs:label "end date"^^xsd:string ;
+    rdfs:comment "The end date of a work"^^xsd:string .
+work:worker rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Worker ;
+    rdfs:label "worker"^^xsd:string ;
+    rdfs:comment "The person who does the work"^^xsd:string .
+work:Worker rdf:type owl:Class ;
+    rdfs:label "Worker"^^xsd:string ;
+    rdfs:comment "A class representing person who is doing work"^^xsd:string .

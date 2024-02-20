@@ -1,0 +1,24 @@
+@prefix ex: <http://example.com/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Sofa a rdfs:Class ;
+rdfs:label "Sofa"@en ;
+rdfs:comment "A piece of furniture designed for several sitters"@en .
+ex:numberOfSeats a rdfs:Property ;
+rdfs:domain ex:Sofa ;
+rdfs:range xsd:integer ;
+rdfs:label "number of seats"@en ;
+rdfs:comment "The capacity of a sofa in terms of the number of seats"@en .
+ex:hasUpholstery a rdfs:Property ;
+rdfs:domain ex:Sofa ;
+rdfs:range xsd:string ;
+rdfs:label "has upholstery"@en ;
+rdfs:comment "The type of material or fabric used for the upholstery on a sofa"@en .
+ ex:belongsToStyle a rdfs:Property ;
+rdfs:domain ex:Sofa ;
+rdfs:range ex:FurnitureStyle ;
+rdfs:label "belongs to style"@en ;
+rdfs:comment "The style of design that a sofa belongs to"@en .
+ex:FurnitureStyle a rdfs:Class ;
+rdfs:label "Furniture Style"@en ;
+rdfs:comment "A classification denotes the design aesthetic of a piece of furniture"@en .

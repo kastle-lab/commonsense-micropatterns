@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix body: <http://example.org/Body#> .
+body:Body rdf:type rdfs:Class .
+body:head rdf:type rdfs:Class ;
+  rdfs:subClassOf body:Body .
+body:arm rdf:type rdfs:Class ;
+  rdfs:subClassOf body:Body .
+body:leg rdf:type rdfs:Class ;
+  rdfs:subClassOf body:Body .
+  body:torso rdf:type rdfs:Class ;
+  rdfs:subClassOf body:Body .
+  body:BodyPart rdf:type rdfs:Class .
+  body:hasPart rdf:type rdf:Property ;
+  rdfs:range body:BodyPart ;
+  rdfs:domain body:Body .
+body:head rdf:type body:BodyPart .
+body:arm rdf:type body:BodyPart .
+body:leg rdf:type body:BodyPart .
+body:torso rdf:type body:BodyPart .
+body:JohnDoe rdf:type body:Body ;
+  body:hasPart body:head, body:arm, body:leg, body:torso .

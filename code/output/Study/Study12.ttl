@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix study: <http://www.example.com/study#> .
+#Class Declarationsstudy:Study rdfs:subClassOf owl:Thing .
+study:Subject rdfs:subClassOf owl:Thing .
+study:Student rdfs:subClassOf owl:Thing .
+study:Tutor rdfs:subClassOf owl:Thing .
+study:SourceMaterial rdfs:subClassOf owl:Thing .
+study:Location rdfs:subClassOf owl:Thing .
+#Property Declarationsstudy:hasSubject rdf:type owl:ObjectProperty .
+study:hasStudent rdf:type owl:ObjectProperty .
+study:isTutoredBy rdf:type owl:ObjectProperty .
+study:usesSourceMaterial rdf:type owl:ObjectProperty .
+study:takesPlaceAt rdf:type owl:ObjectProperty .
+#Inverse Property Declarationsstudy:isSubjectOf owl:inverseOf study:hasSubject .
+study:isStudiedBy owl:inverseOf study:hasStudent .
+study:tutorsStudy owl:inverseOf study:isTutoredBy .
+study:isUsedInStudy owl:inverseOf study:usesSourceMaterial .
+study:isLocationOfStudy owl:inverseOf study:takesPlaceAt .
+#Property Domain and Range Declarationsstudy:hasSubject rdfs:domain study:Study .
+study:hasSubject rdfs:range study:Subject .
+study:hasStudent rdfs:domain study:Study .
+study:hasStudent rdfs:range study:Student .
+study:isTutoredBy rdfs:domain study:Study .
+study:isTutoredBy rdfs:range study:Tutor .
+study:usesSourceMaterial rdfs:domain study:Study .
+study:usesSourceMaterial rdfs:range study:SourceMaterial .
+study:takesPlaceAt rdfs:domain study:Study .
+study:takesPlaceAt rdfs:range study:Location .

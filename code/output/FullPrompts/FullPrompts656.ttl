@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+<#Place> rdf:type rdfs:Class ;
+          rdfs:label "Place"@en .
+<#Country> rdf:type rdfs:Class ;
+           rdfs:label "Country"@en ;
+           rdfs:subClassOf <#Place> .
+<#City> rdf:type rdfs:Class ;
+        rdfs:label "City"@en ;
+        rdfs:subClassOf <#Place> .
+<#Region> rdf:type rdfs:Class ;
+          rdfs:label "Region"@en ;
+          rdfs:subClassOf <#Place> .
+<#Town> rdf:type rdfs:Class ;
+        rdfs:label "Town"@en ;
+        rdfs:subClassOf <#Place> .
+<#PlaceName> rdf:type rdf:Property ;
+    rdfs:label "has place name"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain <#Place> .
+<#latitude> rdf:type rdf:Property ;
+    rdfs:label "has latitude"@en ;
+    rdfs:range geo:lat ;
+    rdfs:domain <#Place> .
+<#longitude> rdf:type rdf:Property ;
+    rdfs:label "has longitude"@en ;
+    rdfs:range geo:long ;
+    rdfs:domain <#Place> .

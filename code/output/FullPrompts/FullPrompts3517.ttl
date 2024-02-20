@@ -1,0 +1,25 @@
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Office a rdfs:Class .
+ex:hasDepartment a rdfs:Property ;
+  rdfs:domain ex:Office ;
+  rdfs:range ex:Department .
+ex:hasEmployee a rdfs:Property ;
+  rdfs:domain ex:Office ;
+  rdfs:range ex:Employee .
+ex:Department a rdfs:Class ;
+  rdfs:subClassOf ex:Office .
+  ex:Employee a rdfs:Class ;
+  rdfs:subClassOf ex:Office .
+ex:hasRole a rdfs:Property ;
+  rdfs:domain ex:Employee ;
+  rdfs:range ex:Role .
+ex:Role a rdfs:Class .
+ex:hasOfficeLocation a rdfs:Property ;
+  rdfs:domain ex:Office ;
+  rdfs:range ex:Location .
+ex:Location a rdfs:Class .
+ex:hasOfficeEquipment a rdfs:Property ;
+  rdfs:domain ex:Office ;
+  rdfs:range ex:Equipment .
+  ex:Equipment a rdfs:Class .

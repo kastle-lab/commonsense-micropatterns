@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Room rdf:type rdfs:Class .
+ex:hasRoom rdf:type rdf:Property ;
+       rdfs:domain ex:Building ;
+       rdfs:range ex:Room .
+ ex:hasCapacity rdf:type rdf:Property ;
+        rdfs:domain ex:Room ;
+        rdfs:range xsd:integer .
+ex:Room365 a ex:Room ;
+       ex:hasCapacity "200"^^xsd:integer .
+ ex:BuildingA ex:hasRoom ex:Room365 .

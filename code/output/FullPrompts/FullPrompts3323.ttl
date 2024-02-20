@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix back: <http://www.example.org/back#> .
+## Class definitionsback:Back rdf:type owl:Class ;
+   rdfs:comment "The class of all back parts" .
+back:HumanBack rdf:type owl:Class ;
+   rdfs:subClassOf back:Back ;
+   rdfs:comment "The class of all human back parts" .
+back:UpperBack rdf:type owl:Class ;
+   rdfs:subClassOf back:HumanBack ;
+   rdfs:comment "The upper part of human back" .
+back:LowerBack rdf:type owl:Class ;
+   rdfs:subClassOf back:HumanBack ;
+   rdfs:comment "The lower part of human back" .
+   back:Spine rdf:type owl:Class ;
+   rdfs:subClassOf back:HumanBack ;
+   rdfs:comment "The spine, an essential part of human back" .
+## Class relationsback:HumanBack rdfs:subClassOf back:Back .
+back:UpperBack rdfs:subClassOf back:HumanBack .
+back:LowerBack rdfs:subClassOf back:HumanBack .
+back:Spine rdfs:subClassOf back:HumanBack .
+## Object propertiesback:hasPart rdf:type owl:ObjectProperty ;
+   rdfs:domain back:HumanBack ;
+   rdfs:range back:Back ;
+   rdfs:comment "A property indicating a part of human back" .
+## Property relations      back:HumanBack back:hasPart back:Spine .
+back:HumanBack back:hasPart back:UpperBack .
+back:HumanBack back:hasPart back:LowerBack .

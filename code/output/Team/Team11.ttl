@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix team: <http://www.example.org/team#> .
+team:Team a rdfs:Class ;
+  rdfs:comment "A group of individuals working together to achieve a common goal."@en .
+team:hasMember a rdf:Property ;
+  rdfs:domain team:Team ;
+  rdfs:range team:TeamMember ;
+  rdfs:comment "The property that relates a team to its members."@en .
+team:TeamMember a rdfs:Class ;
+  rdfs:comment "An individual who is part of a team."@en .
+team:hasTask a rdf:Property ;
+  rdfs:domain team:Team ;
+  rdfs:range team:Task ;
+  rdfs:comment "The property that relates a team to a task that the team is working on."@en .
+team:Task a rdfs:Class ;
+  rdfs:comment "A piece of work to be done or undertaken by the team."@en .
+team:hasDeadline a rdf:Property ;
+  rdfs:domain team:Task ;
+  rdfs:range xsd:date ;
+  rdfs:comment "The property that relates a task to its deadline."@en .
+ team:hasName a rdf:Property ;
+  rdfs:domain team:Team, team:TeamMember, team:Task ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The property that provides the names for team, team members, and task."@en .

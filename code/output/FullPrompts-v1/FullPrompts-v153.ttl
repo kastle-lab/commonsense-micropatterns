@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix yearOnt: <http://www.example.org/yearOntology#> .
+yearOnt:Year rdf:type owl:Class ;
+              rdfs:comment "Represents a year" ;
+              rdfs:label "Year" .
+yearOnt:hasMonth rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relates a year to its months" ;
+                 rdfs:label "has month" ;
+                 rdfs:domain yearOnt:Year ;
+                 rdfs:range yearOnt:Month .
+yearOnt:Month rdf:type owl:Class ;
+              rdfs:comment "Represents a month in a year" ;
+              rdfs:label "Month" .
+yearOnt:hasDay rdf:type owl:ObjectProperty ;
+               rdfs:comment "Relates a month to its days" ;
+               rdfs:label "has day" ;
+               rdfs:domain yearOnt:Month ;
+               rdfs:range yearOnt:Day .
+yearOnt:Day rdf:type owl:Class ;
+            rdfs:comment "Represents a day in a month" ;
+            rdfs:label "Day" .
+yearOnt:hasEvent rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relates a day to its events" ;
+                 rdfs:label "has event" ;
+                 rdfs:domain yearOnt:Day ;
+                 rdfs:range yearOnt:Event .
+yearOnt:Event rdf:type owl:Class ;
+              rdfs:comment "Represents an event in a day" ;
+              rdfs:label "Event" .
+yearOnt:number rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Represents a numeric value of the year, month, day, or event" ;
+               rdfs:label "number" ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( yearOnt:Year yearOnt:Month yearOnt:Day yearOnt:Event ) ] ;
+               rdfs:range xsd:int .

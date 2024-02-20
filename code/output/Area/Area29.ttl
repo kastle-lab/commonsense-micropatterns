@@ -1,0 +1,11 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Uptown ex:hasArea ex:Area1 .
+ex:Area1 a ex:Area ;
+   ex:inSquareMeters "1200000"^^xsd:decimal .
+   ex:Downtown ex:hasArea ex:Area2 .
+ex:Area2 a ex:Area ;
+   ex:inSquareMeters "800000"^^xsd:decimal .
+ex:Midtown ex:hasArea ex:Area3 .
+ex:Area3 a ex:Area ;
+   ex:inSquareMeters "500000"^^xsd:decimal .

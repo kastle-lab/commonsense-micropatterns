@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Case1 a ex:Case ;
+    ex:caseNumber "12345"^^xsd:string ;
+    ex:title "The State vs John Doe"^^xsd:string ;
+    ex:judge "Judge Smith"^^xsd:string ;
+    ex:court "Supreme Court"^^xsd:string .
+ex:Case2 a ex:Case ;
+    ex:caseNumber "67890"^^xsd:string ;
+    ex:title "The People vs Jane Doe"^^xsd:string ;
+    ex:judge "Judge Johnson"^^xsd:string ;
+    ex:court "District Court"^^xsd:string .

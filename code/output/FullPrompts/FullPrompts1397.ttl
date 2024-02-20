@@ -1,0 +1,5 @@
+@prefix ex: <http://example.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ex:Point1 rdf:type geo:Point ;
+   geo:asWKT "POINT(51.5074 -0.1278)"^^geo:wktLiteral .

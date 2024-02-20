@@ -1,0 +1,15 @@
+@prefix : <http://example.org/#> .
+:Door a owl:Class ;
+:hasColor a owl:DatatypeProperty ;
+  rdfs:domain :Door ;
+  rdfs:range xsd:string ;
+.:hasMaterial a owl:DatatypeProperty ;
+  rdfs:domain :Door ;
+  rdfs:range xsd:string ;
+.:hasShape a owl:DatatypeProperty ;
+  rdfs:domain :Door ;
+  rdfs:range xsd:string ;
+.:isOpen a owl:DatatypeProperty ;
+  rdfs:domain :Door ;
+  rdfs:range xsd:boolean ;
+.

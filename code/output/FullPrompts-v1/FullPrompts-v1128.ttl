@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.org/day#> .
+day:Day rdf:type rdfs:Class ;
+       rdfs:comment "A full 24-hour period where the earth completes one rotation."@en ;
+       rdfs:label "Day"@en .
+day:hasHours rdf:type rdf:Property ;
+       rdfs:domain day:Day ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "The total number of hours in a day, typically 24."@en ;
+       rdfs:label "has hours"@en .
+day:hasMinutes rdf:type rdf:Property ;
+       rdfs:domain day:Day ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "The total number of minutes in a day, typically 1440."@en ;
+       rdfs:label "has minutes"@en .
+day:hasSeconds rdf:type rdf:Property ;
+       rdfs:domain day:Day ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "The total number of seconds in a day, typically 86400."@en ;
+       rdfs:label "has seconds"@en .
+day:hasPart rdf:type rdf:Property ;
+       rdfs:domain day:Day ;
+       rdfs:range day:DayPart ;
+       rdfs:comment "A day is divided into different parts such as morning, afternoon, evening and night."@en ;
+       rdfs:label "has part"@en .
+day:DayPart rdf:type rdfs:Class ;
+       rdfs:comment "A specific part of a day, including morning, afternoon, evening, and night."@en ;
+       rdfs:label "Day part"@en .
+day:Morning rdf:type day:DayPart ;
+       rdfs:label "Morning"@en ;
+       rdfs:comment "The period of time from sunrise to noon."@en .
+day:Afternoon rdf:type day:DayPart ;
+       rdfs:label "Afternoon"@en ;
+       rdfs:comment "The period of time from noon to evening."@en .
+day:Evening rdf:type day:DayPart ;
+       rdfs:label "Evening"@en ;
+       rdfs:comment "The period of time between afternoon and night, typically after sunset."@en .
+day:Night rdf:type day:DayPart ;
+       rdfs:label "Night"@en ;
+       rdfs:comment "The period of time when the sun is below the horizon, typically from sunset to sunrise."@en .

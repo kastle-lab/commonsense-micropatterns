@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://example.org/life#> .
+life:Life  rdf:type rdfs:Class ;
+  rdfs:label "Life"@en ;
+  rdfs:comment "The instance of existence characterized by growth, reproduction, and constant adaptation via natural selection"@en .
+life:Organism  rdf:type rdfs:Class ;
+  rdfs:subClassOf life:Life ;
+  rdfs:comment "A complex structure of interdependent and subordinate structures that contribute to the survival and functioning of the whole"@en .
+life:Animal  rdf:type rdfs:Class ;
+  rdfs:subClassOf life:Organism ;
+  rdfs:label "Animal"@en ;
+  rdfs:comment "A living organism belonging to Kingdom Animalia"@en .
+life:Plant  rdf:type rdfs:Class ;
+  rdfs:subClassOf life:Organism ;
+  rdfs:label "Plant"@en ;
+  rdfs:comment "A living organism belonging to Kingdom Plantae"@en .
+life:Microorganism  rdf:type rdfs:Class ;
+  rdfs:subClassOf life:Organism ;
+  rdfs:label "Microorganism"@en ;
+  rdfs:comment "A microscopic organism not visible to the naked eye"@en .
+life:hasLifeCycle  rdf:type rdf:Property ;
+  rdfs:domain life:Life ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The series of changes in the life of an organism"@en .
+life:hasAdaptation  rdf:type rdf:Property ;
+  rdfs:domain life:Life ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Any alteration in the structure or function of an organism that allows it to survive in its own environment"@en .

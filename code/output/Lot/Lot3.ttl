@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lot: <http://example.org/lot#> .
+lot:Lot rdf:type rdfs:Class ;
+   rdfs:label "Lot"@en ;
+   rdfs:comment "A set of objects grouped together for sale."@en .
+lot:hasLotNumber rdf:type rdf:Property ;
+    rdfs:label "has lot number"@en ;
+    rdfs:comment "The lot number is the unique identifier of the lot."@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range xsd:string .
+lot:hasAuctionDate rdf:type rdf:Property ;
+    rdfs:label "has auction date"@en ;
+    rdfs:comment "The date the lot goes up for auction."@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range xsd:date .
+lot:hasStartingPrice rdf:type rdf:Property ;
+    rdfs:label "has starting price"@en ;
+    rdfs:comment "The starting price of the lot."@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range xsd:decimal .
+lot:isPartOfAuction rdf:type rdf:Property ;
+    rdfs:label "is part of an auction"@en ;
+    rdfs:comment "The auction where the lot is listed."@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range lot:Auction .
+lot:Auction rdf:type rdfs:Class ;
+    rdfs:label "Auction"@en ;
+    rdfs:comment "An auction is a method of selling properties by bid, where the item is sold to the highest bidder."@en .

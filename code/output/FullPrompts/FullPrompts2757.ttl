@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix service: <http://www.example.org/ontology/service#> .
+service:Service rdf:type rdfs:Class ;
+  rdfs:comment "The class of services" ;
+  rdfs:label "Service" .
+service:name rdf:type rdf:Property ;
+  rdfs:domain service:Service ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the service" ;
+  rdfs:label "Name" .
+service:description rdf:type rdf:Property ;
+  rdfs:domain service:Service ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The description of the service" ;
+  rdfs:label "Description" .
+service:provider rdf:type rdf:Property ;
+  rdfs:domain service:Service ;
+  rdfs:range service:ServiceProvider ;
+  rdfs:comment "The provider of the service" ;
+  rdfs:label "Provider" .
+service:ServiceProvider rdf:type rdfs:Class ;
+  rdfs:comment "The class of service providers" ;
+  rdfs:label "Service Provider" .
+service:providerName rdf:type rdf:Property ;
+  rdfs:domain service:ServiceProvider ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the service provider" ;
+  rdfs:label "Provider Name" .

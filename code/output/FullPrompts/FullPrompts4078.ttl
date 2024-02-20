@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Force    rdf:type rdfs:Class ;
+    rdfs:label "Force" ;
+    rdfs:comment "The entity Force, usually described in Newtons, that causes movement or change." .
+ex:GravitationalForce    rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Force ;
+    rdfs:label "Gravitational Force" ;
+    rdfs:comment "The force of attraction between all masses in the universe." .
+ex:FrictionalForce    rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Force ;
+    rdfs:label "Frictional Force" ;
+    rdfs:comment "The force resisting the relative motion of surfaces in contact." .
+ex:NetForce    rdf:type rdfs:Class ;
+    rdfs:label "Net Force" ;
+    rdfs:comment "The vector sum of all the forces that act on an object." .
+  ex:appliesForce    rdf:type rdf:Property ;
+    rdfs:label "applies force" ;
+    rdfs:comment "The subject applies force to the object." ;
+    rdfs:domain ex:Force ;
+    rdfs:range ex:Entity .
+ex:resistsForce    rdf:type rdf:Property ;
+    rdfs:label "resists force" ;
+    rdfs:comment "The subject resists the force from the object." ;
+    rdfs:domain ex:Force ;
+    rdfs:range ex:Entity .

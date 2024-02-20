@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix teacher: <http://www.example.org/ontology/teacher#> .
+teacher:Teacher rdf:type owl:Class ;
+                 rdfs:label "Teacher" ;
+                 rdfs:comment "An individual who imparts knowledge or skills to students" ;
+                 rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+teacher:teachSubject rdf:type owl:ObjectProperty ;
+                      rdfs:label "teachSubject" ;
+                      rdfs:comment "The subject that a teacher teaches" ;
+                      rdfs:domain teacher:Teacher ;
+                      rdfs:range teacher:Subject .
+teacher:first_name rdf:type owl:DatatypeProperty ;
+                   rdfs:label "first name" ;
+                   rdfs:comment "The first name of a teacher" ;
+                   rdfs:domain teacher:Teacher ;
+                   rdfs:range xsd:string .
+teacher:last_name rdf:type owl:DatatypeProperty ;
+                  rdfs:label "last name" ;
+                  rdfs:comment "The last name of a teacher" ;
+                  rdfs:domain teacher:Teacher ;
+                  rdfs:range xsd:string .
+teacher:hasID rdf:type owl:DatatypeProperty ;
+              rdfs:label "ID" ;
+              rdfs:comment "The identification number of a teacher" ;
+              rdfs:domain teacher:Teacher ;
+              rdfs:range xsd:integer .
+teacher:Subject rdf:type owl:Class ;
+                rdfs:label "Subject" ;
+                rdfs:comment "A field of knowledge or study that teachers can teach" .
+teacher:subjectName rdf:type owl:DatatypeProperty ;
+                    rdfs:label "subject name" ;
+                    rdfs:comment "The name of a subject" ;
+                    rdfs:domain teacher:Subject ;
+                    rdfs:range xsd:string .

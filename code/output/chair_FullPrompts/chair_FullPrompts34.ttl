@@ -1,0 +1,26 @@
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ex:Chair  rdf:type rdfs:Class ;
+  rdfs:label "Chair" ;
+  rdfs:comment "A piece of furniture with a raised surface supported by legs." .
+ex:hasMaterial  rdf:type rdf:Property ;
+  rdfs:label "has material" ;
+  rdfs:comment "The material from which an item is made." ;
+  rdfs:domain ex:Chair ;
+  rdfs:range rdfs:Literal .
+ex:hasColor  rdf:type rdf:Property ;
+  rdfs:label "has color" ;
+  rdfs:comment "The color of an item." ;
+  rdfs:domain ex:Chair ;
+  rdfs:range rdfs:Literal .
+ex:hasSeatHeight  rdf:type rdf:Property ;
+  rdfs:label "has seat height" ;
+  rdfs:comment "The height of the seat of the chair." ;
+  rdfs:domain ex:Chair ;
+  rdfs:range rdfs:Literal .
+ex:hasArmrest  rdf:type rdf:Property ;
+  rdfs:label "has armrest" ;
+  rdfs:comment "Indicates whether the chair has armrests or not." ;
+  rdfs:domain ex:Chair ;
+  rdfs:range rdfs:Literal .

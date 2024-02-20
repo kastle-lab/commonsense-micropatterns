@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix story: <http://example.org/story#> .
+story:Story a rdfs:Class ;
+    rdfs:comment "A narrative or account of events, experiences, or the like, whether true or fictitious."@en ;
+    rdfs:label "Story"@en .
+story:Character a rdfs:Class ;
+    rdfs:comment "A person, animal, or entity in a story."@en ;
+    rdfs:label "Character"@en .
+story:Setting a rdfs:Class ;
+    rdfs:comment "The place or type of surroundings where a story is set."@en ;
+    rdfs:label "Setting"@en .
+story:Plot a rdfs:Class ;
+    rdfs:comment "The main events of a story devised and presented by the writer as an interrelated sequence."@en ;
+    rdfs:label "Plot"@en .
+story:Theme a rdfs:Class ;
+    rdfs:comment "The central topic or idea explored in a text."@en ;
+    rdfs:label "Theme"@en .
+story:hasCharacter a rdf:Property ;
+    rdfs:domain story:Story ;
+    rdfs:range story:Character ;
+    rdfs:label "has character"@en ;
+    rdfs:comment "Relation between a story and its characters."@en .
+story:hasSetting a rdf:Property ;
+    rdfs:domain story:Story ;
+    rdfs:range story:Setting ;
+    rdfs:label "has setting"@en ;
+    rdfs:comment "Relation between a story and its setting."@en .
+story:hasPlot a rdf:Property ;
+    rdfs:domain story:Story ;
+    rdfs:range story:Plot ;
+    rdfs:label "has plot"@en ;
+    rdfs:comment "Relation between a story and its plot."@en .
+story:hasTheme a rdf:Property ;
+    rdfs:domain story:Story ;
+    rdfs:range story:Theme ;
+    rdfs:label "has theme"@en ;
+    rdfs:comment "Relation between a story and its theme."@en .

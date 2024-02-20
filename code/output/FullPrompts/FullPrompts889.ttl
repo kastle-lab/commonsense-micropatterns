@@ -1,0 +1,3 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://example.org/resource1>  a xsd:integer ;
+  xsd:value "123"^^xsd:int .

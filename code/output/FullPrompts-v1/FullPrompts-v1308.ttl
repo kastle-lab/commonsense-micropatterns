@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com#> .
+# Ontology Declaration<http://example.com>  rdf:type owl:Ontology ;
+  owl:versionInfo "1.0" .
+# Life Class Declarationex:Life  rdf:type owl:Class .
+# Subclasses of Lifeex:Animal   rdf:type owl:Class ;
+  rdfs:subClassOf ex:Life .
+ex:Plant   rdf:type owl:Class ;
+  rdfs:subClassOf ex:Life .
+# Object Property: hasLifeex:hasLife  rdf:type owl:ObjectProperty ;
+  rdfs:range ex:Life ;
+  rdfs:domain ex:Entity .
+# Example Usageex:Entity1  rdf:type ex:Entity ;
+  ex:hasLife ex:Animal1 .
+ex:Entity2  rdf:type ex:Entity ;
+  ex:hasLife ex:Plant1 .
+ex:Animal1  rdf:type ex:Animal .
+ex:Plant1  rdf:type ex:Plant .

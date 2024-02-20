@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix morning: <http://example.com/morning#> .
+morning:Morning    a rdfs:Class ;
+    rdfs:label "Morning" ;
+    rdfs:comment "A period of time from the start of the day until noon" .
+morning:Sunrise    a rdfs:Class ;
+    rdfs:subClassOf morning:Morning ;
+    rdfs:label "Sunrise" ;
+    rdfs:comment "A part of morning when the sun appears on the horizon" .
+morning:Breakfast    a rdfs:Class ;
+    rdfs:subClassOf morning:Morning ;
+    rdfs:label "Breakfast" ;
+    rdfs:comment "A meal eaten in the morning" .
+morning:Activity    a rdfs:Class ;
+    rdfs:label "Activity" ;
+    rdfs:comment "Actions or tasks that are typical in the morning" .
+morning:start_time    a rdf:Property ;
+    rdfs:label "start time" ;
+    rdfs:comment "Starting time of a morning activity" ;
+    rdfs:domain morning:Morning ;
+    rdfs:range xsd:time .
+morning:end_time    a rdf:Property ;
+    rdfs:label "end time" ;
+    rdfs:comment "Ending time of a morning activity" ;
+    rdfs:domain morning:Morning ;
+    rdfs:range xsd:time .
+morning:hasActivity    a rdf:Property ;
+    rdfs:label "has activity" ;
+    rdfs:comment "Indicates a morning activity" ;
+    rdfs:domain morning:Morning ;
+    rdfs:range morning:Activity .

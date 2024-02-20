@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix area: <http://www.example.org/area#> .
+# Area classarea:Area    rdf:type rdfs:Class ;
+    rdfs:comment "Entity representing an Area" ;
+    rdfs:label "Area"@en .
+# Area propertiesarea:hasID    rdf:type rdf:Property ;
+    rdfs:domain area:Area ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A unique identifier for the area" ;
+    rdfs:label "has ID"@en .
+area:hasName    rdf:type rdf:Property ;
+    rdfs:domain area:Area ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Name of the area" ;
+    rdfs:label "has name"@en .
+area:hasSize    rdf:type rdf:Property ;
+    rdfs:domain area:Area ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Size of the area" ;
+    rdfs:label "has size"@en .

@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Declaration of the class 'Service'ex:Service a rdfs:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:comment "A class representing any type of service, such as a delivery service, repair service, etc."@en .
+# We can define sub-classes of 'Service' if needed. Example:ex:DeliveryService a rdfs:Class ;
+    rdfs:label "Delivery Service"@en ;
+    rdfs:comment "A service that delivers something from one location to another"@en ;
+    rdfs:subClassOf ex:Service .

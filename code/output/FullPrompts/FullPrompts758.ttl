@@ -1,0 +1,22 @@
+@prefix : <http://www.example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Case a rdfs:Class ;
+    rdfs:label "Case"@en ;
+    rdfs:comment "Represents a legal case in the law domain"@en .
+:hasCaseNumber a rdf:Property ;
+    rdfs:label "case number"@en ;
+    rdfs:comment "The unique identifier of a legal case"@en ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:string .
+:hasCaseDate a rdf:Property ;
+    rdfs:label "case date"@en ;
+    rdfs:comment "The date a legal case was opened or lodged"@en ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:date .
+:hasCaseDescription a rdf:Property ;
+    rdfs:label "case description"@en ;
+    rdfs:comment "Brief description of the legal case"@en ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:string .

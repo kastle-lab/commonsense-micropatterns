@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix week: <http://example.org/week/> .
+week:Week a rdfs:Class ;
+    rdfs:comment "Represents a week within a calendar system" ;
+    rdfs:label "Week" .
+week:hasDay a rdf:Property ;
+    rdfs:domain week:Week ;
+    rdfs:range week:Day ;
+    rdfs:comment "Indicates a specific day within a week." ;
+    rdfs:label "hasDay" .
+week:Day a rdfs:Class ;
+    rdfs:label "Day" ;
+    rdfs:comment "Represents a day within a week." .
+week:Day rdfs:subClassOf week:Week .
+week:Monday a week:Day ;
+    rdfs:label "Monday" ;
+    rdfs:comment "Monday is the first day of the work week." .
+week:Tuesday a week:Day ;
+    rdfs:label "Tuesday" ;
+    rdfs:comment "Tuesday is the second day of the work week." .
+week:isDayOfTheWeek a rdf:Property ;
+    rdfs:domain week:Day ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Label indicating which day of the week it is" ;
+    rdfs:label "isDayOfTheWeek" .
+week:Monday week:isDayOfTheWeek "Monday"^^xsd:string .
+week:Tuesday week:isDayOfTheWeek "Tuesday"^^xsd:string .

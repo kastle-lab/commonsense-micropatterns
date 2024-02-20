@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix example: <http://www.example.org#> .
+example:EndEvent rdf:type owl:Class ;
+    rdfs:label "End Event"@en ;
+    rdfs:subClassOf example:Event ;
+    rdfs:comment "Represents the end event of a process"@en .
+example:hasEndEvent rdf:type owl:ObjectProperty ;
+    rdfs:domain example:Process ;
+    rdfs:range example:EndEvent ;
+    rdfs:label "has End Event"@en ;
+    rdfs:comment "Relation between a process and its end event"@en .
+example:hasDateTime rdf:type owl:DatatypeProperty ;
+    rdfs:domain example:EndEvent ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has date time"@en ;
+    rdfs:comment "The exact date and time when the end event occurred"@en .

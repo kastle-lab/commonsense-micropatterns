@@ -1,0 +1,19 @@
+@prefix : <http://example.org/> .
+:Result    a       rdfs:Class ;
+    rdfs:label "Result" ;
+    rdfs:comment "Describes the outcome of a given action or process" .
+:hasResult    a          rdf:Property ;
+    rdfs:label "has result" ;
+    rdfs:domain :ActionOrProcess ;
+    rdfs:range  :Result .
+:ActionOrProcess    a          rdfs:Class ;
+    rdfs:label "Action or Process" .
+:Success    a           :Result ;
+    rdfs:label  "Success" ;
+    rdfs:comment "Indicates that the action or process has been successfully completed." .
+:Failure    a           :Result ;
+    rdfs:label  "Failure" ;
+    rdfs:comment "Indicates that the action or process has not been successfully completed." .
+:InProgress    a           :Result ;
+    rdfs:label  "In progress" ;
+    rdfs:comment "Indicates that the action or process is still ongoing." .

@@ -1,0 +1,4 @@
+@prefix : <http://example.org/>.:Reason    a :Concept ;
+    :isPartOf :Ontology ;
+    :hasAttribute :LogicalThinking ;
+    :relatedConcept :Wisdom, :Intelligence .

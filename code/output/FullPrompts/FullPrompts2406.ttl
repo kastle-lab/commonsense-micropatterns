@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/study#> .
+ex:Study a rdfs:Class ;
+    rdfs:label "Study" ;
+    rdfs:comment "Class representing a study or learning activity" .
+ex:hasTopic a rdf:Property ;
+    rdfs:label "has topic" ;
+    rdfs:domain ex:Study ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "Property linking a study to its topic" .
+ex:hasDuration a rdf:Property ;
+    rdfs:label "has duration" ;
+    rdfs:domain ex:Study ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Property linking a study to its duration" .

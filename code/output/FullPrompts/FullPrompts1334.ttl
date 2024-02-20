@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com#> .
+ex:Work rdf:type rdfs:Class .
+ex:hasWorker rdf:type rdf:Property ;
+             rdfs:domain ex:Work ;
+             rdfs:range ex:Person .
+ex:hasPlace rdf:type rdf:Property ;
+            rdfs:domain ex:Work ;
+            rdfs:range ex:Location .
+ex:hasHours rdf:type rdf:Property ;
+            rdfs:domain ex:Work ;
+            rdfs:range xsd:string .
+ex:hasJobTitle rdf:type rdf:Property ;
+               rdfs:domain ex:Work ;
+               rdfs:range xsd:string .
+ ex:Person rdf:type owl:Class .
+ ex:Location rdf:type owl:Class .

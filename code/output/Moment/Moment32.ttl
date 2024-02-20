@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Moment rdf:type rdfs:Class .
+ex:hasMoment rdf:type rdf:Property ;
+    rdfs:domain ex:Event ;
+    rdfs:range ex:Moment .
+ex:Event ex:hasMoment ex:Moment1 .
+ex:Moment1 rdf:type ex:Moment ;
+    rdfs:label "A specific point in time"^^xsd:string .

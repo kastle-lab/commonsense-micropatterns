@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Program a rdfs:Class ;
+    rdfs:comment "represents a program" .
+ex:hasName a rdf:Property ;
+    rdfs:domain ex:Program ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "the name of the program" .
+ex:hasId a rdf:Property ;
+    rdfs:domain ex:Program ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "an unique identifier of the program" .
+ex:SampleProgram a ex:Program ;
+    ex:hasName "Sample Program" ;
+    ex:hasId "SP001" .

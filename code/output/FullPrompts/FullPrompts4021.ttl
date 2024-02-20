@@ -1,0 +1,6 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+<http://example.org#Air> a owl:Class ;
+  rdfs:label "Air"@en ;
+  rdfs:comment "The substance that we breathe, a mixture of nitrogen, oxygen, and trace gases that forms Earth's atmosphere."@en .

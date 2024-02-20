@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:Result rdf:type rdfs:Class .
+:hasResult rdf:type rdf:Property ;
+          rdfs:domain :Experiment ;
+          rdfs:range :Result .
+            :Experiment rdf:type rdfs:Class .
+:experiment1 rdf:type :Experiment ;
+            :hasResult :result1 .
+            :result1 rdf:type :Result ;
+         rdfs:label "Positive"^^xsd:string .
+         :result2 rdf:type :Result ;
+         rdfs:label "Negative"^^xsd:string .

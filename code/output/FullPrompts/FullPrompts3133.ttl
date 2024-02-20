@@ -1,0 +1,9 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<http://example.com#President>    rdf:type  owl:Class ;
+    rdfs:label  "President"@en ;
+    rdfs:comment  "The chief executive officer of a country or organization."@en .
+<http://example.com#BarackObama>    rdf:type  <http://example.com#President> ;
+    rdfs:label  "Barack Obama"@en ;
+    rdfs:comment  "44th President of the United States."@en .

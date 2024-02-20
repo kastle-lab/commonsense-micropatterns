@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix year: <http://example.org/ontology/year#> .
+year:Year a rdfs:Class ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "A period of 365 or 366 days, in the Gregorian calendar, divided into 12 calendar months"@en ;
+    rdfs:subClassOf xsd:gYear .
+year:hasMonth a rdf:Property ;
+    rdfs:label "has month"@en ;
+    rdfs:comment "Relates a year class instance to a month class instance"@en ;
+    rdfs:domain year:Year ;
+    rdfs:range year:Month .
+year:Month a rdfs:Class ;
+    rdfs:label "Month"@en ;
+    rdfs:comment "A period of time, used with calendars, which is approximately as long as a natural period related to the motion of the Moon"@en ;
+    rdfs:subClassOf xsd:gMonth .
+year:hasDay a rdf:Property ;
+    rdfs:label "has day"@en ;
+    rdfs:comment "Relates a month class instance to a day class instance"@en ;
+    rdfs:domain year:Month ;
+    rdfs:range year:Day .
+year:Day a rdfs:Class ;
+    rdfs:label "Day"@en ;
+    rdfs:comment "A period of 24 hours, from one midnight to the next, which is the standard time unit in human life"@en ;
+    rdfs:subClassOf xsd:gDay .

@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix li: <http://www.example.org/life#> .
+li:Life a rdfs:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:comment "The class of all things that are considered alive"@en .
+li:Human a rdfs:Class ;
+    rdfs:subClassOf li:Life ;
+    rdfs:label "Human"@en ;
+    rdfs:comment "The class of all humans"@en .
+li:Animal a rdfs:Class ;
+    rdfs:subClassOf li:Life ;
+    rdfs:label "Animal"@en ;
+    rdfs:comment "The class of all animals"@en .
+li:Plant a rdfs:Class ;
+    rdfs:subClassOf li:Life ;
+    rdfs:label "Plant"@en ;
+    rdfs:comment "The class of all plants"@en .
+li:birthDate a rdf:Property ;
+    rdfs:domain li:Life ;
+    rdfs:range xsd:Date ;
+    rdfs:label "birth date"@en ;
+    rdfs:comment "The date when a living thing was born"@en .
+li:deathDate a rdf:Property ;
+    rdfs:domain li:Life ;
+    rdfs:range xsd:Date ;
+    rdfs:label "death date"@en ;
+    rdfs:comment "The date when a living thing died"@en .
+li:hasParent a rdf:Property ;
+    rdfs:domain li:Life ;
+    rdfs:range li:Life ;
+    rdfs:label "has parent"@en ;
+    rdfs:comment "The living thing that gave birth to another living thing"@en .
+li:hasChild a rdf:Property ;
+    rdfs:domain li:Life ;
+    rdfs:range li:Life ;
+    rdfs:label "has child"@en ;
+    rdfs:comment "A living thing that was birthed by another living thing"@en .

@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kind: <http://example.org/kind#> .
+kind:Kind rdf:type rdfs:Class .
+kind:Animal rdf:type kind:Kind ;
+    rdfs:label "Animal"@en ;
+    rdfs:comment "Represents the kind of animals."@en .
+kind:Plant rdf:type kind:Kind ;
+    rdfs:label "Plant"@en ;
+    rdfs:comment "Represents the kind of plants."@en .

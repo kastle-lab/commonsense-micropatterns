@@ -1,0 +1,36 @@
+@prefix : <http://www.example.com/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Program rdf:type rdfs:Class ;
+    rdfs:label "Program" ;
+    rdfs:comment "A Software Program" .
+:hasName rdf:type rdf:Property ;
+    rdfs:label "has name" ;
+    rdfs:domain :Program ;
+    rdfs:range rdfs:Literal .
+:developedBy rdf:type rdf:Property ;
+    rdfs:label "developed by" ;
+    rdfs:domain :Program ;
+    rdfs:range :Developer .
+:Developer rdf:type rdfs:Class ;
+    rdfs:label "Developer" ;
+    rdfs:comment "A person or a company who creates a software program" .
+:hasExperience rdf:type rdf:Property ;
+    rdfs:label "has experience" ;
+    rdfs:domain :Developer ;
+    rdfs:range rdfs:Literal .
+:ProgrammingLanguage rdf:type rdfs:Class ;
+    rdfs:label "Programming language" ;
+    rdfs:comment "A formal language comprising a set of instructions that produce various kinds of output" .
+:Program rdfs:subClassOf :ProgrammingLanguage .
+:writtenIn rdf:type rdf:Property ;
+    rdfs:label "written in" ;
+    rdfs:domain :Program ;
+    rdfs:range :ProgrammingLanguage .
+:usesLibrary rdf:type rdf:Property ;
+    rdfs:label "uses library" ;
+    rdfs:domain :Program ;
+    rdfs:range :Library .
+:Library rdf:type rdfs:Class ;
+    rdfs:label "Library" ;
+    rdfs:comment "A collection of non-volatile resources used by software programs" .

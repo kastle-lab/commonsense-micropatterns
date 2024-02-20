@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix minute: <http://www.example.org/ontology/minute#> .
+minute:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology dedicated to minute"@en .
+minute:Minute    rdf:type owl:Class ;
+    rdfs:comment "A class representing the unit of time - minute"@en ;
+    rdfs:label "Minute"@en .
+minute:hasSeconds    rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:domain minute:Minute ;
+    rdfs:comment "A property representing seconds in a minute"@en ;
+    rdfs:label "has seconds"@en .
+minute:inHour    rdf:type owl:ObjectProperty ;
+    rdfs:range minute:Hour ;
+    rdfs:domain minute:Minute ;
+    rdfs:comment "A property relating minutes to an hour"@en ;
+    rdfs:label "in hour"@en .
+minute:Hour    rdf:type owl:Class ;
+    rdfs:comment "A class representing the unit of time - hour"@en ;
+    rdfs:label "Hour"@en .

@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix water: <http://example.org/water#> .
+# Classeswater:Water rdf:type rdfs:Class ;
+    rdfs:comment "The liquid substance that is vital for all known forms of life"^^xsd:string ;
+    rdfs:label "Water"^^xsd:string .
+water:SaltWater rdf:type rdfs:Class ;
+    rdfs:subClassOf water:Water ;
+    rdfs:comment "Water from the sea or ocean, with a high salt content"^^xsd:string ;
+    rdfs:label "Salt Water"^^xsd:string .
+water:FreshWater rdf:type rdfs:Class ;
+    rdfs:subClassOf water:Water ;
+    rdfs:comment "Water that is naturally occurring and has low concentrations of dissolved salts and minerals"^^xsd:string ;
+    rdfs:label "Fresh Water"^^xsd:string .
+# Propertieswater:isSourceOf rdf:type rdf:Property ;
+    rdfs:domain water:Water ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The source from which the water originated"^^xsd:string ;
+    rdfs:label "is source of"^^xsd:string .
+water:hasTemperature rdf:type rdf:Property ;
+    rdfs:domain water:Water ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The temperature of the water in degrees Celsius"^^xsd:string ;
+    rdfs:label "has temperature"^^xsd:string .
+water:hasPH rdf:type rdf:Property ;
+    rdfs:domain water:Water ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The pH level of the water"^^xsd:string ;
+    rdfs:label "has pH"^^xsd:string .

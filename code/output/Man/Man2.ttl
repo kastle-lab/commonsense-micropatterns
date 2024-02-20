@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix manOnto: <http://www.example.com/ontology/man#> .
+manOnto:Man    a rdfs:Class ;
+    rdfs:comment "A man is a male human" ;
+    rdfs:subClassOf foaf:Person ;
+    .
+manOnto:hasAge    a rdf:Property ;
+    rdfs:comment "The age of a Man" ;
+    rdfs:domain manOnto:Man ;
+    rdfs:range xsd:integer ;
+    .
+manOnto:hasName    a rdf:Property ;
+    rdfs:comment "The name of a Man" ;
+    rdfs:domain manOnto:Man ;
+    rdfs:range xsd:string ;
+    .
+manOnto:hasOccupation    a rdf:Property ;
+    rdfs:comment "The occupation of a Man" ;
+    rdfs:domain manOnto:Man ;
+    rdfs:range xsd:string ;
+    .

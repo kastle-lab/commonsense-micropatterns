@@ -1,0 +1,37 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/study#> .
+:Study a rdfs:Class ;
+  rdfs:label "Study" ;
+  rdfs:comment "Acquisition of knowledge by means of researching, being taught, self-teaching, or from learning from experience" .
+:Subject a rdfs:Class ;
+  rdfs:label "Subject" ;
+  rdfs:comment "Specific area of knowledge that forms part of a curriculum or individual study" .
+:Student a rdfs:Class ;
+  rdfs:label "Student" ;
+  rdfs:comment "Individual who is engaged in learning, typically within an educational institution" .
+:Teacher a rdfs:Class ;
+  rdfs:label "Teacher" ;
+  rdfs:comment "Individual who instructs others in a specific area of knowledge" .
+:EducationalInstitution a rdfs:Class ;
+  rdfs:label "Educational Institution" ;
+  rdfs:comment "Organization that provides education or training" .
+:studiesIn a rdfs:Property ;
+  rdfs:domain :Student ;
+  rdfs:range :EducationalInstitution ;
+  rdfs:label "studies in" ;
+  rdfs:comment "Denotes the educational institution where a student is studying" .
+:studiesSubject a rdfs:Property ;
+  rdfs:domain :Student ;
+  rdfs:range :Subject ;
+  rdfs:label "studies subject" ;
+  rdfs:comment "Denotes the subject a student is studying" .
+:teachesSubject a rdfs:Property ;
+  rdfs:domain :Teacher ;
+  rdfs:range :Subject ;
+  rdfs:label "teaches subject" ;
+  rdfs:comment "Denotes the subject a teacher instructs" .
+:teachesIn a rdfs:Property ;
+  rdfs:domain :Teacher ;
+  rdfs:range :EducationalInstitution ;
+  rdfs:label "teaches in" ;
+  rdfs:comment "Denotes the educational institution where a teacher instructs students" .

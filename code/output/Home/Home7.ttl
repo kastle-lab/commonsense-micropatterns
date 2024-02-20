@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix home: <http://example.org/home.owl#> .
+home:Home a owl:Class ;
+  rdfs:label "Home" ;
+  rdfs:comment "A place where someone lives" .
+home:Bedroom a owl:Class ;
+  rdfs:label "Bedroom" ;
+  rdfs:subClassOf home:Home ;
+  rdfs:comment "A room within a home for sleeping" .
+home:Kitchen a owl:Class ;
+  rdfs:label "Kitchen" ;
+  rdfs:subClassOf home:Home ;
+  rdfs:comment "A room within a home for cooking and food preparation" .
+home:Bathroom a owl:Class ;
+  rdfs:label "Bathroom" ;
+  rdfs:subClassOf home:Home ;
+  rdfs:comment "A room within a home used for personal hygiene activities" .
+home:LivingRoom a owl:Class ;
+  rdfs:label "Living Room" ;
+  rdfs:subClassOf home:Home ;
+  rdfs:comment "A room in a home used for common social or leisure activities" .
+home:hasRoom a owl:ObjectProperty ;
+  rdfs:domain home:Home ;
+  rdfs:range home:Room ;
+  rdfs:label "has room" ;
+  rdfs:comment "Relates a home to its rooms".
+home:Room a owl:Class ;
+  rdfs:label "Room" ;
+  rdfs:comment "A part or division of a building enclosed by walls, floor, and ceiling".
+  home:Furniture a owl:Class ;
+  rdfs:label "Furniture" ;
+  rdfs:comment "Large movable equipment, such as tables and chairs, used to make a house, office, or other space suitable for living or working".
+home:hasFurniture a owl:ObjectProperty ;
+  rdfs:domain home:Room ;
+  rdfs:range home:Furniture ;
+  rdfs:label "has furniture" ;
+  rdfs:comment "Relates a room to its furniture".

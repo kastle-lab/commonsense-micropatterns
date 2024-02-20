@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://www.example.com/air#> .
+air: a rdf:Class ;
+    rdfs:label "Air"@en ;
+    rdfs:comment "The mixture of invisible odorless tasteless gases (such as nitrogen and oxygen) that surrounds the earth"@en .
+air:Pressure a rdf:Property ;
+    rdfs:label "Pressure"@en ;
+    rdfs:comment "The force applied perpendicular to the surface of an object per unit area"@en ;
+    rdfs:domain air: ;
+    rdfs:range xsd:decimal .
+air:Temperature a rdf:Property ;
+    rdfs:label "Temperature"@en ;
+    rdfs:comment "Degree of hotness or coldness measured on a definite scale"@en ;
+    rdfs:domain air: ;
+    rdfs:range xsd:decimal .
+air:Humidity a rdf:Property ;
+    rdfs:label "Humidity"@en ;
+    rdfs:comment "The concentration of water vapor in the air"@en ;
+    rdfs:domain air: ;
+    rdfs:range xsd:decimal .
+air:Quality a rdf:Property ;
+    rdfs:label "Quality"@en ;
+    rdfs:comment "The level of pollutants in the air"@en ;
+    rdfs:domain air: ;
+    rdfs:range xsd:string .

@@ -1,0 +1,23 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Air rdf:type rdfs:Class ;
+  rdfs:label "Air" ;
+  rdfs:comment "An entity that represents air as a mixture of gases that forms the Earth's atmosphere.".
+ex:Oxygen rdf:type rdfs:Class ;
+  rdfs:label "Oxygen" ;
+  rdfs:comment "A component of air, essential for most life on Earth.".
+ex:Nitrogen rdf:type rdfs:Class ;
+  rdfs:label "Nitrogen" ;
+  rdfs:comment "A component of air, the most abundant element in the Earth's atmosphere.".
+ex:color rdf:type rdf:Property ;
+  rdfs:label "color" ;
+  rdfs:domain ex:Air ;
+  rdfs:range rdfs:Literal .
+ex:composition rdf:type rdf:Property ;
+  rdfs:label "composition" ;
+  rdfs:domain ex:Air ;
+  rdfs:rangeex:Element .
+ex:air1 rdf:type ex:Air ;
+  ex:color "Colorless" ;
+  ex:composition ex:Oxygen, ex:Nitrogen.

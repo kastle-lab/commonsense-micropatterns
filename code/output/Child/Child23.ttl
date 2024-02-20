@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<http://example.com/child1> a foaf:Person ;
+    foaf:givenName "John" ;
+    foaf:familyName "Doe" ;
+    foaf:age "7" ;
+    foaf:birthday "2014-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    foaf:parent <http://example.com/parent1> , <http://example.com/parent2> .
+<http://example.com/parent1> a foaf:Person ;
+    foaf:givenName "Jane" ;
+    foaf:familyName "Doe" .
+<http://example.com/parent2> a foaf:Person ;
+    foaf:givenName "Jim" ;
+    foaf:familyName "Doe" .

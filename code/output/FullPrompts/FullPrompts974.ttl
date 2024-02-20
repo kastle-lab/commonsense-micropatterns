@@ -1,0 +1,17 @@
+ The model describes a "Problem" in terms of its title and description.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/> .
+:Problem a rdfs:Class .
+:hasTitle a rdf:Property;
+    rdfs:domain :Problem;
+    rdfs:range rdfs:Literal .
+:hasDescription a rdf:Property;
+    rdfs:domain :Problem;
+    rdfs:range rdfs:Literal .
+:problem1 a :Problem;
+    :hasTitle "Problem title 1" ;
+    :hasDescription "Problem description 1" .
+:problem2 a :Problem;
+    :hasTitle "Problem title 2" ;
+    :hasDescription "Problem description 2" .

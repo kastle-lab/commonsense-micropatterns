@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/ontology#> .
+:Parent rdf:type owl:Class ;
+        rdfs:comment "A parent individual, who has at least one child"^^xsd:string ;
+        rdfs:subClassOf :Person .
+:hasChild rdf:type owl:ObjectProperty ;
+         rdfs:domain :Parent ;
+         rdfs:range :Person ;
+         rdfs:comment "Indicates that a person has a child, who is also a person"^^xsd:string .
+:isChildOf rdf:type owl:ObjectProperty ;
+         rdfs:domain :Person ;
+         rdfs:range :Parent ;
+         rdfs:comment "Indicates that a person is a child of a parent"^^xsd:string ;
+         owl:inverseOf :hasChild .
+         :Person rdf:type owl:Class .
+:mother rdf:type owl:Class ;
+         rdfs:subClassOf :Parent ;
+         rdfs:comment "A female parent"^^xsd:string .
+:father rdf:type owl:Class ;
+         rdfs:subClassOf :Parent ;
+         rdfs:comment "A male parent"^^xsd:string .

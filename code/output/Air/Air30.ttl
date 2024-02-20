@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Air    rdf:type rdfs:Class ;
+    rdfs:label "Air"@en ;
+    rdfs:comment "A mixture of gases that make up the earth's atmosphere"@en .
+    ex:containsOxygen    rdf:type rdf:Property ;
+    rdfs:domain ex:Air ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "contains oxygen"@en ;
+    rdfs:comment "Indicates that the air contains oxygen"@en .
+ex:containsNitrogen    rdf:type rdf:Property ;
+    rdfs:domain ex:Air ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "contains nitrogen"@en ;
+    rdfs:comment "Indicates that the air contains nitrogen"@en .
+ex:containsCarbonDioxide    rdf:type rdf:Property ;
+    rdfs:domain ex:Air ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "contains carbon dioxide"@en ;
+    rdfs:comment "Indicates that the air contains carbon dioxide"@en .

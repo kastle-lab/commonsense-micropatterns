@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:City rdf:type rdfs:Class ;
+rdfs:label "City" ;
+rdfs:comment "A city is a large human settlement. It can be a place where people live, work, and play."@en .
+ex:name rdf:type rdf:Property ;
+rdfs:label "name" ;
+rdfs:comment "The name of the city."@en ;
+rdfs:domain ex:City ;
+rdfs:range xsd:string .
+ex:population rdf:type rdf:Property ;
+rdfs:label "population" ;
+rdfs:comment "The number of people that live in the city."@en ;
+rdfs:domain ex:City ;
+rdfs:range xsd:integer .
+ex:country rdf:type rdf:Property ;
+rdfs:label "country" ;
+rdfs:comment "The country in which the city is located."@en ;
+rdfs:domain ex:City ;
+rdfs:range ex:Country .
+ex:Country rdf:type rdfs:Class ;
+rdfs:label "Country" ;
+rdfs:comment "A country is a region that is identified as a distinct national entity in political geography."@en .

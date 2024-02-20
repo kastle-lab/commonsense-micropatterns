@@ -1,0 +1,26 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix end: <http://example.org/end#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+end:     a rdfs:Class ;
+    rdfs:label "End"@en ;
+    rdfs:comment "The concept of something's terminal part or its conclusion"@en .
+    end:finalPhase     a rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range xsd:string ;
+    rdfs:label "finalPhase"@en ;
+    rdfs:comment "The last part or phase of something"@en .
+end:deadline     a rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "deadline"@en ;
+    rdfs:comment "The latest time or date by which something should be completed"@en .
+end:endPoint     a rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range xsd:string ;
+    rdfs:label "endPoint"@en ;
+    rdfs:comment "The final point of a physical or conceptual entity"@en .
+end:conclusion     a rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range xsd:string ;
+    rdfs:label "conclusion"@en ;
+    rdfs:comment "The final judgement or decision reached by reasoning"@en .

@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix res: <http://www.example.org/research#> .
+ res:Research rdf:type owl:Class ;
+  rdfs:label "Research"@en ;
+  rdfs:comment "The activity where individuals perform investigations to discover new knowledge or insights"@en .
+res:Researcher rdf:type owl:Class ;
+  rdfs:label "Researcher"@en ;
+  rdfs:comment "An individual who carries out research"@en .
+res:Publication rdf:type owl:Class ;
+  rdfs:label "Publication"@en ;
+  rdfs:comment "A document that communicates the results of research, generally in the form of an article or book"@en .
+res:ResearchField rdf:type owl:Class ;
+  rdfs:label "Research field"@en ;
+  rdfs:comment "A specific domain that is subject to research"@en .
+res:performs rdf:type owl:ObjectProperty ;
+  rdfs:label "performs"@en ;
+  rdfs:domain res:Researcher ;
+  rdfs:range res:Research .
+res:publishes rdf:type owl:ObjectProperty ;
+  rdfs:label "publishes"@en ;
+  rdfs:domain res:Researcher ;
+  rdfs:range res:Publication .
+res:contributesTo rdf:type owl:ObjectProperty ;
+  rdfs:label "contributes to"@en ;
+  rdfs:domain res:Researcher ;
+  rdfs:range res:ResearchField .
+res:inField rdf:type owl:ObjectProperty ;
+  rdfs:label "in field"@en ;
+  rdfs:domain res:Research ;
+  rdfs:range res:ResearchField .
+res:resultsIn rdf:type owl:ObjectProperty ;
+  rdfs:label "results in"@en ;
+  rdfs:domain res:Research ;
+  rdfs:range res:Publication .

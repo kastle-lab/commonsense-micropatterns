@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://www.example.org/life#> .
+life:Life rdfs:subClassOf rdf:resource .
+life:Life rdfs:label "Life"@en .
+life:Animal rdfs:subClassOf life:Life .
+life:Animal rdfs:label "Animal"@en .
+life:Animal rdfs:comment "An animal is a living organism that feeds on organic matter, typically having specialization of sense organs and nervous system and able to respond rapidly to stimuli."@en .
+life:Plant rdfs:subClassOf life:Life .
+life:Plant rdfs:label "Plant"@en .
+life:Plant rdfs:comment "A plant is a living organism of the kind exemplified by trees, shrubs, herbs, grasses, ferns, and mosses, absorbing water and inorganic substances through its roots, and synthesizing nutrients in its leaves by photosynthesis using the green pigment chlorophyll."@en .
+life:Human rdfs:subClassOf life:Animal .
+life:Human rdfs:label "Human"@en .
+life:Human rdfs:comment "Humans are a species of highly intelligent primates. They are the only extant members of the subtribe Hominina and together with chimpanzees, gorillas, and orangutans, they are part of the family Hominidae."@en .
+life:hasLifeStage rdfs:label "has life stage"@en .
+life:hasLifeStage rdfs:domain life:Life .
+life:hasLifeStage rdfs:range life:LifeStage .
+life:LifeStage rdfs:subClassOf rdf:resource .
+life:LifeStage rdfs:label "Life Stage"@en .
+life:LifeStage rdfs:comment "A distinct phase of life such as birth, childhood, adolescence, adulthood or old-age."@en .
+life:Birth rdfs:subClassOf life:LifeStage .
+life:Birth rdfs:label "Birth"@en .
+life:Birth rdfs:comment "The process of childbirth, at the end of a pregnancy period, the start of a new life."@en.life:Adulthood rdfs:subClassOf life:LifeStage .
+life:Adulthood rdfs:label "Adulthood"@en .
+life:Adulthood rdfs:comment "The state or condition of being fully grown or mature."@en.

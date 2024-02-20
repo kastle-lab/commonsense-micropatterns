@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix h2o: <http://www.example.org/water#> .
+h2o: a owl:Ontology ;
+    rdfs:comment "An ontology about water"@en ;
+    rdfs:label "WaterOntology"@en .
+h2o:Water a owl:Class ;
+    rdfs:comment "The class of all things which are water"@en ;
+    rdfs:label "Water"@en ;
+    rdfs:subClassOf owl:Thing .
+h2o:DrinkingWater a owl:Class ;
+    rdfs:comment "The subclass of water that is fit for drinking"@en ;
+    rdfs:label "DrinkingWater"@en ;
+    rdfs:subClassOf h2o:Water .
+h2o:SeaWater a owl:Class ;
+    rdfs:comment "The subclass of water that is found in seas and oceans"@en ;
+    rdfs:label "SeaWater"@en ;
+    rdfs:subClassOf h2o:Water .
+h2o:hasTemperature a owl:DatatypeProperty ;
+    rdfs:comment "A property to define the temperature of the water"@en ;
+    rdfs:label "hasTemperature"@en ;
+    rdfs:range xsd:double ;
+    rdfs:domain h2o:Water .
+h2o:isPolluted a owl:DatatypeProperty ;
+    rdfs:comment "A property to define if the water is polluted or not"@en ;
+    rdfs:label "isPolluted"@en ;
+    rdfs:range xsd:boolean ;
+    rdfs:domain h2o:Water .
+h2o:hasPH a owl:DatatypeProperty ;
+    rdfs:comment "A property to define the PH value of the water"@en ;
+    rdfs:label "hasPH"@en ;
+    rdfs:range xsd:double ;
+    rdfs:domain h2o:Water .

@@ -1,0 +1,26 @@
+@prefix : <http://www.example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Word rdf:type owl:Class .
+:hasSpelling rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Word ;
+             rdfs:range xsd:string .
+:hasDefinition rdf:type owl:ObjectProperty ;
+               rdfs:domain :Word ;
+               rdfs:range :Definition .
+:Definition rdf:type owl:Class .
+:hasPartOfSpeech rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Word ;
+                 rdfs:range :PartOfSpeech .
+:PartOfSpeech rdf:type owl:Class .
+:Noun rdf:type owl:NamedIndividual ,             :PartOfSpeech .
+:Verb rdf:type owl:NamedIndividual ,             :PartOfSpeech .
+:Adjective rdf:type owl:NamedIndividual ,                    :PartOfSpeech .
+:Adverb rdf:type owl:NamedIndividual ,              :PartOfSpeech .
+:ExampleWord rdf:type owl:NamedIndividual ,                     :Word ;
+             :hasSpelling "example"^^xsd:string ;
+             :hasDefinition :ExampleDefinition ;
+             :hasPartOfSpeech :Noun .
+:ExampleDefinition rdf:type owl:NamedIndividual ,                           :Definition .

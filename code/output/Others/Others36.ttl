@@ -1,0 +1,24 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:People a rdfs:Class ;
+    rdfs:comment "A class for persons."@en .
+:Food a rdfs:Class ;
+    rdfs:comment "A class for food."@en .
+:provides a rdf:Property ;
+    rdfs:comment "Indicates that a person provides a food."@en ;
+    rdfs:domain :People ;
+    rdfs:range :Food .
+:hasName a rdf:Property ;
+    rdfs:comment "Indicates the name of a person or a food."@en ;
+    rdfs:domain :People, :Food ;
+    rdfs:range xsd:string .
+:hasType a rdf:Property ;
+    rdfs:comment "Indicates the type of a food."@en ;
+    rdfs:domain :Food ;
+    rdfs:range xsd:string .
+:John a :People ;
+    :hasName "John"^^xsd:string .
+:Fish a :Food ;
+    :hasName "Fish"^^xsd:string ;
+    :hasType "Seafood"^^xsd:string .
+:John :provides :Fish .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix reason: <http://www.semanticweb.org/reason#> .
+# Defining class Reasonreason:Reason rdf:type owl:Class ;
+    rdfs:comment "Represents the abstract concept of reason or reasoning" ;
+    rdfs:label "Reason" .
+# Defining sub-classes for Reasonreason:Logical_Reasoning rdf:type owl:Class ;
+    rdfs:subClassOf reason:Reason ;
+    rdfs:comment "Represents the sub-concept of logical reasoning" ;
+    rdfs:label "Logical Reasoning" .
+reason:Moral_Reasoning rdf:type owl:Class ;
+    rdfs:subClassOf reason:Reason ;
+    rdfs:comment "Represents the sub-concept of moral reasoning" ;
+    rdfs:label "Moral Reasoning" .
+reason:Emotional_Reasoning rdf:type owl:Class ;
+    rdfs:subClassOf reason:Reason ;
+    rdfs:comment "Represents the sub-concept of emotional reasoning" ;
+    rdfs:label "Emotional Reasoning" .
+# Defining properties for Reasonreason:hasEffect rdf:type owl:ObjectProperty ;
+    rdfs:domain reason:Reason ;
+    rdfs:range reason:Effect ;
+    rdfs:comment "Represents the possible consequences or effects of a reasoning" ;
+    rdfs:label "has effect" .
+# Defining Effect classreason:Effect rdf:type owl:Class ;
+    rdfs:comment "Represents the consequence or effect of a reasoning" ;
+    rdfs:label "Effect" .

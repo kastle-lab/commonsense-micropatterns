@@ -1,0 +1,36 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix game: <http://example.org/game#> .
+game:Game a owl:Class ;
+  rdfs:label "Game"@en ;
+  rdfs:comment "A structured form of play, typically for enjoyment and sometimes used as an educational tool"@en .
+game:genre a owl:DatatypeProperty ;
+  rdfs:label "genre"@en ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The genre of the game"@en .
+game:platform a owl:DatatypeProperty ;
+  rdfs:label "platform"@en ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The platform on which the game can be played"@en .
+game:developer a owl:DatatypeProperty ;
+  rdfs:label "developer"@en ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The developer of the game"@en .
+game:releaseDate a owl:DatatypeProperty ;
+  rdfs:label "release date"@en ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:date ;
+  rdfs:comment "The release date of the game"@en .
+game:Player a owl:Class ;
+  rdfs:label "Player"@en ;
+  rdfs:comment "A person who plays games" .
+game:plays a owl:ObjectProperty ;
+  rdfs:label "plays"@en ;
+  rdfs:domain game:Player ;
+  rdfs:range game:Game ;
+  rdfs:comment "The game that the player plays"@en .

@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix party: <http://example.org/party/> .
+party:Event rdf:type rdfs:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "A social gathering" ;
+    rdfs:subClassOf rdfs:Resource .
+party:Party rdf:type rdfs:Class ;
+    rdfs:label "Party" ;
+    rdfs:comment "An event often involving food, drink, and entertainment" ;
+    rdfs:subClassOf party:Event .
+party:BirthdayParty rdf:type rdfs:Class ;
+    rdfs:label "Birthday Party" ;
+    rdfs:comment "A party celebrated on the anniversary of someone's birth" ;
+    rdfs:subClassOf party:Party .
+party:hasHost rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range party:Person ;
+    rdfs:label "has host" ;
+    rdfs:comment "The entity that hosts or throws the party" .
+party:hasGuest rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range party:Person ;
+    rdfs:label "has guest" ;
+    rdfs:comment "The entity that attends the party as a guest" .
+party:Person rdf:type rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "An individual person" ;
+    rdfs:subClassOf rdfs:Resource .
+party:hasLocation rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string ;
+    rdfs:label "has location" ;
+    rdfs:comment "The physical location where the party takes place" .
+party:hasDate rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:date ;
+    rdfs:label "has date" ;
+    rdfs:comment "The date on which the party takes place" .
+party:hasTime rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:time ;
+    rdfs:label "has time" ;
+    rdfs:comment "The time at which the party starts" .

@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org#> .
+:World rdf:type owl:Class .
+:hasCountry rdf:type owl:ObjectProperty ;
+           rdfs:domain :World ;
+           rdfs:range :Country .
+:Country rdf:type owl:Class .
+    hasCapital rdf:type owl:ObjectProperty ;
+           rdfs:domain :Country ;
+           rdfs:range :City .
+    :City rdf:type owl:Class .

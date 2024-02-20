@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://www.w3.org/2002/07/life#> .
+# Class Declarationslife:Life rdfs:subClassOf owl:Thing .
+life:Human rdfs:subClassOf life:Life .
+life:Animal rdfs:subClassOf life:Life .
+life:Plant rdfs:subClassOf life:Life .
+life:Bacteria rdfs:subClassOf life:Life .
+# Property Declarationslife:hasName rdf:type owl:DatatypeProperty .
+life:hasName rdfs:range xsd:string .
+life:hasAge rdf:type owl:DatatypeProperty .
+life:hasAge rdfs:range xsd:number .
+# SubProperty Declarationslife:hasHumanName rdfs:subPropertyOf life:hasName .
+life:hasAnimalName rdfs:subPropertyOf life:hasName .
+life:hasPlantName rdfs:subPropertyOf life:hasName .
+life:hasBacteriaName rdfs:subPropertyOf life:hasName .
+# Class Human Propertylife:Human owl:equivalentClass [    rdf:type owl:Class ;
+    owl:onProperty life:hasHumanName ;
+    owl:allValuesFrom xsd:string] .
+# Class Animal Propertylife:Animal owl:equivalentClass [    rdf:type owl:Class ;
+    owl:onProperty life:hasAnimalName ;
+    owl:allValuesFrom xsd:string] .
+# Class Plant Propertylife:Plant owl:equivalentClass [    rdf:type owl:Class ;
+    owl:onProperty life:hasPlantName ;
+    owl:allValuesFrom xsd:string] .
+# Class Bacteria Propertylife:Bacteria owl:equivalentClass [    rdf:type owl:Class ;
+    owl:onProperty life:hasBacteriaName ;
+    owl:allValuesFrom xsd:string] .

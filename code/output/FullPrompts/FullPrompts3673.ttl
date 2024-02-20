@@ -1,0 +1,22 @@
+@prefix : <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Result rdf:type rdfs:Class ;
+        rdfs:comment "Represent the outcome of an action or event" .
+:Action rdfs:subClassOf :Result ;
+         rdfs:comment "The effort or activity that leads to a result" .
+:Event rdfs:subClassOf :Result ;
+       rdfs:comment "An occurrence that leads to a result" .
+:hasResult rdf:type rdf:Property ;
+           rdfs:domain :Action ;
+           rdfs:range :Result ;
+           rdfs:comment "Relates an action to its result" .
+:causes rdf:type rdf:Property ;
+        rdfs:domain :Event ;
+        rdfs:range :Result ;
+        rdfs:comment "Relates an event to its result" .
+:score rdf:type rdf:Property ;
+       rdfs:domain :Result ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "Relates a result to its score or value" .

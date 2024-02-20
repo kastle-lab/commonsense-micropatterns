@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org#> .
+:sofa rdf:type owl:Class ;
+      rdfs:label "Sofa" ;
+      rdfs:subClassOf :furniture .
+ :furniture rdf:type owl:Class ;
+           rdfs:label "Furniture" .
+:WoodenSofa rdf:type owl:Class ;
+            rdfs:subClassOf :sofa ;
+            rdfs:label "Wooden Sofa" .
+:LeatherSofa rdf:type owl:Class ;
+             rdfs:subClassOf :sofa ;
+             rdfs:label "Leather Sofa" .
+:numSeats rdf:type owl:DatatypeProperty ;
+          rdfs:domain :sofa ;
+          rdfs:range rdf:integer ;
+          rdfs:label "numSeats" .
+:hasMaterial rdf:type owl:ObjectProperty ;
+             rdfs:domain :sofa ;
+             rdfs:range :material ;
+             rdfs:label "hasMaterial" .
+:material rdf:type owl:Class ;
+          rdfs:label "Material" .
+:leather rdf:type :material ;
+         rdfs:label "Leather" .
+:wood rdf:type :material ;
+      rdfs:label "Wood" .

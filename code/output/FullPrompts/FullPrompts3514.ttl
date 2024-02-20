@@ -1,0 +1,43 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/office#> .
+:Office a owl:Class ;
+    rdfs:label "Office"@en ;
+    rdfs:comment "A space or group of spaces where administrative work is done"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+        owl:unionOf (            :MeetingRoom            :PrivateOffice            :Workspace    )] .
+:MeetingRoom a owl:Class ;
+    rdfs:label "Meeting Room"@en ;
+    rdfs:comment "A room where meetings are held"@en ;
+    rdfs:subClassOf :Office .
+:PrivateOffice a owl:Class ;
+    rdfs:label "Private Office"@en ;
+    rdfs:comment "An office assigned to a specific individual"@en ;
+    rdfs:subClassOf :Office .
+:Workspace a owl:Class ;
+    rdfs:label "Workspace"@en ;
+    rdfs:comment "A space used for work tasks that is not specifically designated as a private office or meeting room"@en ;
+    rdfs:subClassOf :Office .
+:Furniture a owl:Class ;
+    rdfs:label "Furniture"@en ;
+    rdfs:comment "Movables intended to support human activity"@en .
+:OfficeEquipment a owl:Class ;
+    rdfs:label "Office Equipment"@en ;
+    rdfs:comment "Items of hardware used to facilitate productivity in an office"@en .
+:hasFurniture a owl:ObjectProperty ;
+    rdfs:label "has furniture"@en ;
+    rdfs:comment "An office contains furniture"@en ;
+    rdfs:domain :Office ;
+    rdfs:range :Furniture .
+:hasOfficeEquipment a owl:ObjectProperty ;
+    rdfs:label "has office equipment"@en ;
+    rdfs:comment "An office contains office equipment"@en ;
+    rdfs:domain :Office ;
+    rdfs:range :OfficeEquipment .
+:isOccupiedBy a owl:ObjectProperty ;
+    rdfs:label "is occupied by"@en ;
+    rdfs:comment "An office is occupied by workers"@en ;
+    rdfs:domain :Office ;
+    rdfs:range :Worker .
+:Worker a owl:Class ;
+    rdfs:label "Worker"@en ;
+    rdfs:comment "An individual who does a specific kind of work in an office"@en .

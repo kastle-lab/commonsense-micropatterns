@@ -1,0 +1,30 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+<urn:absolute:night>  a owl:Class ;
+  rdfs:label "Night" ;
+  rdfs:subClassOf time:TemporalEntity ;
+  rdfs:comment "The period of time from sunset to sunrise." .
+  <urn:absolute:hasStartTime>  a owl:DatatypeProperty ;
+  rdfs:label "Has start time" ;
+  rdfs:domain <urn:absolute:night> ;
+  rdfs:range xsd:time .
+  <urn:absolute:hasEndTime>  a owl:DatatypeProperty ;
+  rdfs:label "Has end time" ;
+  rdfs:domain <urn:absolute:night> ;
+  rdfs:range xsd:time .
+<urn:absolute:hasMoonPhase>  a owl:DatatypeProperty ;
+  rdfs:label "Has moon phase" ;
+  rdfs:domain <urn:absolute:night> ;
+  rdfs:range xsd:string .
+  <urn:absolute:isDark>  a owl:DatatypeProperty ;
+  rdfs:label "Is dark" ;
+  rdfs:domain <urn:absolute:night> ;
+  rdfs:range xsd:boolean .
+  <urn:absolute:partOf>  a owl:ObjectProperty ;
+  rdfs:label "Part of" ;
+  rdfs:domain <urn:absolute:night> ;
+  rdfs:range <urn:absolute:day-night-cycle> .
+<urn:absolute:day-night-cycle>   a owl:Class;
+  rdfs:label "Day-Night Cycle" ;

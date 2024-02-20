@@ -1,0 +1,20 @@
+@prefix ex: <http://www.example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Place a owl:Class ;
+  rdfs:comment "A location or venue" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:label "Place"@en .
+ex:name a owl:DatatypeProperty ;
+  rdfs:domain ex:Place ;
+  rdfs:range xsd:string ;
+  rdfs:label "name"@en .
+ex:locatedIn a owl:ObjectProperty ;
+  rdfs:domain ex:Place ;
+  rdfs:range ex:Place ;
+  rdfs:label "located in"@en .
+ex:City a owl:Class ;
+  rdfs:subClassOf ex:Place ;
+  rdfs:comment "A large human settlement"@en ;
+  rdfs:label "City"@en .

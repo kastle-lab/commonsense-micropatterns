@@ -1,0 +1,32 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Door a owl:Class ;
+rdfs:label "Door"@en ;
+rdfs:comment "A structure used to block off, or allow access to, an entrance or enclosed space such as a building or room."@en ;
+rdfs:subClassOf :PhysicalObject .
+:hasMaterial a owl:ObjectProperty ;
+rdfs:label "has material"@en ;
+rdfs:comment "The material that the door is made of."@en ;
+rdfs:domain :Door ;
+rdfs:range :Material .
+:hasOneOrTwoLeaves a owl:DatatypeProperty ;
+rdfs:label "has one or two leaves"@en ;
+rdfs:comment "A door can have one or two leaves (panels)."@en ;
+rdfs:domain :Door ;
+rdfs:range xsd:boolean .
+:hasLock a owl:DatatypeProperty ;
+rdfs:label "has lock"@en ;
+rdfs:comment "A door may have a lock."@en ;
+rdfs:domain :Door ;
+rdfs:range xsd:boolean .
+:locatedIn a owl:ObjectProperty ;
+rdfs:label "located in"@en;
+rdfs:comment "Specifies the building or room where the door is located."@en ;
+rdfs:domain :Door ;
+rdfs:range :Location .
+:usedFor a owl:ObjectProperty ;
+rdfs:label "used for"@en;
+rdfs:comment "Specifies the use cases of the door (entry, exit, fire escape, etc.)"@en ;
+rdfs:domain :Door ;
+rdfs:range :Usage .

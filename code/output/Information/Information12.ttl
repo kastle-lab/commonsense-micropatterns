@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix info: <http://example.org/info#> .
+info:Information rdf:type rdfs:Class ;
+                 rdfs:comment "A collection of data or knowledge" .
+info:isBasedOn rdf:type rdf:Property ;
+               rdfs:range info:Source ;
+               rdfs:domain info:Information ;
+               rdfs:comment "The source where the information came from" .
+info:Source rdf:type rdfs:Class ;
+            rdfs:comment "The origin for pieces of information" .
+info:hasFormat rdf:type rdf:Property ;
+               rdfs:range info:Format ;
+               rdfs:domain info:Information ;
+               rdfs:comment "The format in which the information is presented" .
+info:Format rdf:type rdfs:Class ;
+            rdfs:comment "Different ways that information can be organised or presented" .
+info:hasAuthor rdf:type rdf:Property ;
+               rdfs:range info:Author ;
+               rdfs:domain info:Information ;
+               rdfs:comment "Individual or entity who created the information" .
+info:Author rdf:type rdfs:Class ;
+            rdfs:comment "Creator of the piece of information" .

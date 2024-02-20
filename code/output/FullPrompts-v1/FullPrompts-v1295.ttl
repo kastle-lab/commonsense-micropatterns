@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/life#> .
+# Lifeex:Life rdf:type rdfs:Class ;
+  rdfs:comment "The general concept of life." .
+# Human lifeex:HumanLife rdf:type rdfs:Class ;
+  rdfs:label "Human life";
+  rdfs:subClassOf ex:Life ;
+  rdfs:comment "The life of a human being." .
+# Animal lifeex:AnimalLife rdf:type rdfs:Class ;
+  rdfs:label "Animal life";
+  rdfs:subClassOf ex:Life ;
+  rdfs:comment "The life of an animal." .
+# Plant lifeex:PlantLife rdf:type rdfs:Class ;
+  rdfs:label "Plant life";
+  rdfs:subClassOf ex:Life ;
+  rdfs:comment "The life of a plant." .
+# Microbial lifeex:MicrobialLife rdf:type rdfs:Class ;
+  rdfs:label "Microbial life";
+  rdfs:subClassOf ex:Life ;
+  rdfs:comment "The life of a microorganisim." .
+  # Life cycleex:LifeCycle rdf:type rdfs:Class ;
+  rdfs:label "Life cycle";
+  rdfs:comment "The series of changes in the life of an organism including reproduction." .
+ex:hasLifeCycle rdf:type rdf:Property ;
+  rdfs:domain ex:Life ;
+  rdfs:range ex:LifeCycle ;
+  rdfs:comment "Relates a lifeform to its lifecycle." .

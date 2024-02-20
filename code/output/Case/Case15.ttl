@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/case#> .
+: a owl:Ontology ;
+  rdfs:label "Case Ontology"@en ;
+  rdfs:comment "An ontology of cases"@en ;
+  rdfs:versionInfo "1.0"@en .
+:Case a owl:Class ;
+  rdfs:label "Case"@en ;
+  rdfs:comment "Represent a general concept of a case"@en .
+:LegalCase a owl:Class ;
+  rdfs:subClassOf :Case ;
+  rdfs:label "Legal Case"@en ;
+  rdfs:comment "Represent a concept of a legal case"@en .
+:BusinessCase a owl:Class ;
+  rdfs:subClassOf :Case ;
+  rdfs:label "Business Case"@en ;
+  rdfs:comment "Represent a concept of a business case"@en .
+:hasParties a owl:ObjectProperty ;
+  rdfs:domain :Case ;
+  rdfs:range :Party ;
+  rdfs:label "has parties"@en ;
+   rdfs:comment "Describes parties involved in the case"@en .
+  :hasJudge a owl:ObjectProperty ;
+  rdfs:domain :LegalCase ;
+  rdfs:range :Judge ;
+  rdfs:label "has judge"@en ;
+  rdfs:comment "Describes judge involved in a legal case"@en .
+:Party a owl:Class ;
+  rdfs:label "Party"@en ;
+  rdfs:comment "Represents a party, individuals or organizations involved in the case"@en .
+:Judge a owl:Class ;
+  rdfs:label "Judge"@en ;
+  rdfs:comment "Represents a judge, a person who presides over court proceedings in a legal case"@en .

@@ -1,0 +1,32 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/air#> .
+:Air a rdfs:Class ;
+  rdfs:label "Air" ;
+  rdfs:comment "The mixture of gases that surrounds the Earth and forms its atmosphere." .
+:Component a rdfs:Class ;
+  rdfs:label "Component" ;
+  rdfs:comment "The different gases that compose the air." .
+:Nitrogen a :Component ;
+  rdfs:label "Nitrogen" ;
+  rdfs:comment "Nitrogen gas, the most prevalent gas in air." .
+:Oxygen a :Component ;
+  rdfs:label "Oxygen" ;
+  rdfs:comment "Oxygen gas, essential for life processes." .
+:CarbonDioxide a :Component ;
+  rdfs:label "Carbon Dioxide" ;
+  rdfs:comment "Carbon Dioxide gas, a trace gas in air." .
+:Argon a :Component ;
+  rdfs:label "Argon" ;
+  rdfs:comment "Argon gas, another trace gas in air." .
+:AirComposition a rdfs:Property ;
+  rdfs:label "has component" ;
+  rdfs:domain :Air ;
+  rdfs:range :Component ;
+  rdfs:comment "The components or gases that make up air." .
+:Air rdfs:subClassOf  [ a rdfs:Restriction ;
+    rdfs:onProperty :AirComposition ;
+    rfs:allValuesFrom :Component ] .
+:Nitrogen rdfs:subClassOf :Component .
+:Oxygen rdfs:subClassOf :Component .
+:CarbonDioxide rdfs:subClassOf :Component .
+:Argon rdfs:subClassOf :Component .

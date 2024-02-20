@@ -1,0 +1,37 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kind: <http://example.com/kind#> .
+kind:Kind  rdf:type rdfs:Class ;
+  rdfs:label "Kind"@en ;
+  rdfs:comment "Class of all kinds or types, classes, sorts, genres or forms of things"@en .
+kind:name  rdf:type rdf:Property ;
+  rdfs:label "Name"@en ;
+  rdfs:comment "The name of a kind."@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range xsd:string .
+kind:hasSubKind  rdf:type rdf:Property ;
+  rdfs:label "has SubKind"@en ;
+  rdfs:comment "A relation between a kind and its subkind."@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range kind:Kind .
+kind:hasSuperKind  rdf:type rdf:Property ;
+  rdfs:label "has SuperKind"@en ;
+  rdfs:comment "A relation from a kind to the kind above it in the hierarchy."@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range kind:Kind .
+kind:isKindOf  rdf:type rdf:Property ;
+  rdfs:label "is Kind of"@en ;
+  rdfs:comment "An object property to indicate that one kind is a kind of another kind."@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range kind:Kind .
+ kind:hasInstances  rdf:type rdf:Property ;
+  rdfs:label "has instances"@en ;
+  rdfs:comment "An object property to indicate that a particular kind has certain instances."@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range xsd:string .
+kind:example  rdf:type rdf:Property ;
+  rdfs:label "Example"@en ;
+  rdfs:comment "An example of the kind."@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range xsd:string .

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/ontology#> .
+:Water a rdfs:Class ;
+    rdfs:label "Water"@en ;
+    rdfs:comment "Natural liquid that is essential for the survival of most known forms of life."@en ;
+    :provides :Hydration, :Sanitation ;
+    :comesFrom :NaturalSources ;
+    :isEssentialFor :Life .
+:Hydration a rdfs:Class ;
+    rdfs:label "Hydration"@en ;
+    rdfs:comment "The process of causing something to absorb water."@en .
+:Sanitation a rdfs:Class ;
+    rdfs:label "Sanitation"@en ;
+    rdfs:comment "Disposal of waste products."@en .
+:NaturalSources a rdfs:Class ;
+    rdfs:label "Natural Sources"@en ;
+    rdfs:comment "Sources found in nature, such as rivers, lakes, and groundwater."@en .
+:Life a rdfs:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:comment "A condition that distinguishes animals and plants from inorganic matter."@en .

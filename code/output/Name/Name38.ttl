@@ -1,0 +1,4 @@
+@prefix ex: <http://example.com/> .
+ex:JohnDoe rdf:type ex:Person ;
+   ex:hasFirstName "John" ;
+   ex:hasLastName "Doe" .

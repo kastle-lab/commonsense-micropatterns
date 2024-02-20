@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix game: <http://example.org/game/> .
+# Classesgame:Game rdf:type rdfs:Class ;
+    rdfs:label "Game" ;
+    rdfs:comment "A structured form of play, usually undertaken for entertainment or fun."@en .
+game:BoardGame rdf:type rdfs:Class ;
+    rdfs:label "Board Game" ;
+    rdfs:comment "A game that involves counters or pieces moved or placed on a pre-marked surface or 'board'."@en ;
+    rdfs:subClassOf game:Game .
+game:VideoGame rdf:type rdfs:Class ;
+    rdfs:label "Video Game" ;
+    rdfs:comment "An electronic game that involves interaction with a user interface to generate visual feedback on a video device such as a TV screen or computer monitor."@en ;
+    rdfs:subClassOf game:Game .
+# Propertiesgame:hasPlayer rdf:type rdf:Property ;
+    rdfs:label "has player" ;
+    rdfs:comment "The player of the game."@en ;
+    rdfs:domain game:Game ;
+    rdfs:range xsd:string .
+game:hasScore rdf:type rdf:Property ;
+    rdfs:label "has score" ;
+    rdfs:comment "The score of the game."@en ;
+    rdfs:domain game:Game ;
+    rdfs:range xsd:integer .
+game:hasRules rdf:type rdf:Property ;
+    rdfs:label "has rules" ;
+    rdfs:comment "The rules of the game."@en ;
+    rdfs:domain game:Game ;
+    rdfs:range xsd:string .
+game:hasTitle rdf:type rdf:Property ;
+    rdfs:label "has title" ;
+    rdfs:comment "The title of the game."@en ;
+    rdfs:domain game:Game ;
+    rdfs:range xsd:string .
+# Instancegame:Monopoly rdf:type game:BoardGame ;
+    game:hasTitle "Monopoly"@en ;
+    game:hasPlayer "John Doe" ;
+    game:hasScore 250 ;
+    game:hasRules "The players move around the board buying or trading properties, developing their properties with houses and hotels."@en .

@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://example.com/word#> .
+wd:Word a rdfs:Class;
+    rdfs:label "Word"@en;
+    rdfs:comment "The main class for the ontology representing a word in a language"@en.wd:hasSpelling a rdf:Property;
+    rdfs:label "hasSpelling"@en;
+    rdfs:comment "The spelling of a word"@en;
+    rdfs:domain wd:Word;
+    rdfs:range xsd:string.wd:hasDefinition a rdf:Property;
+    rdfs:label "Has definition"@en;
+    rdfs:comment "The definition of a word"@en;
+    rdfs:domain wd:Word;
+    rdfs:range xsd:string.wd:hasPartOfSpeech a rdf:Property;
+    rdfs:label "part of speech"@en;
+    rdfs:comment "The grammatical role of a word (e.g., noun, verb, adjective, etc.)"@en;
+    rdfs:domain wd:Word;
+    rdfs:range wd:PartOfSpeech.wd:PartOfSpeech a rdfs:Class;
+    rdfs:label "Part of Speech"@en;
+    rdfs:comment "The grammatical function of a word in a phrase, sentence or text."@en.

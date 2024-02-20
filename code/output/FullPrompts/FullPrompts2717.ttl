@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix house: <http://example.com/house#> .
+house:House a rdfs:Class ;
+    rdfs:label "House"@en ;
+    rdfs:comment "A structure serving as a dwelling for one or more persons"@en .
+house:hasDoor a rdf:Property ;
+    rdfs:label "has door"@en ;
+    rdfs:comment "The house has a door"@en ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:boolean .
+house:hasWindow a rdf:Property ;
+    rdfs:label "has window"@en ;
+    rdfs:comment "The house has a window"@en ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:boolean .
+house:numberOfRooms a rdf:Property ;
+    rdfs:label "number of rooms"@en ;
+    rdfs:comment "The number of rooms in a house"@en ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:integer .
+house:hasGarage a rdf:Property ;
+    rdfs:label "has garage"@en ;
+    rdfs:comment "The house has a garage"@en ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:boolean .
+house:hasBackyard a rdf:Property ;
+    rdfs:label "has backyard"@en ;
+    rdfs:comment "The house has a backyard"@en ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:boolean .
+house:address a rdf:Property ;
+    rdfs:label "address"@en ;
+    rdfs:comment "The address where the house is located"@en ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:string .

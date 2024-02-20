@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Party rdf:type rdfs:Class ;
+  rdfs:label "Party" .
+          :Guest rdf:type rdfs:Class ;
+  rdfs:label "Guest" ;
+  rdfs:subClassOf :Party .
+:Host rdf:type rdfs:Class ;
+  rdfs:label "Host" ;
+  rdfs:subClassOf :Party .
+:Venue rdf:type rdfs:Class ;
+  rdfs:label "Venue" .
+  :FoodAndDrinks rdf:type rdfs:Class ;
+  rdfs:label "Food and Drinks" .
+:hasHost rdf:type rdf:Property ;
+  rdfs:domain :Party ;
+  rdfs:range :Host ;
+  rdfs:label "has host" .
+:hasGuest rdf:type rdf:Property ;
+  rdfs:domain :Party ;
+  rdfs:range :Guest ;
+  rdfs:label "has guest" .
+:hasVenue rdf:type rdf:Property ;
+  rdfs:domain :Party ;
+  rdfs:range :Venue ;
+  rdfs:label "has venue" .
+:includes rdf:type rdf:Property ;
+  rdfs:domain :Party ;
+  rdfs:range :FoodAndDrinks ;
+  rdfs:label "includes food and drinks" .

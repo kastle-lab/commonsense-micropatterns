@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<http://example.com/ontology#Idea>  rdf:type rdfs:Class ;
+  rdfs:label "Idea"@en ;
+  rdfs:comment "An abstract or general notion underlying a human reasoning or decision."@en .
+<http://example.com/ontology#hasIdea>  rdf:type rdf:Property ;
+  rdfs:domain <http://example.com/ontology#Person> ;
+  rdfs:range <http://example.com/ontology#Idea> ;
+  rdfs:label "has idea"@en ;
+  rdfs:comment "A person can have an idea."@en .
+  <http://example.com/ontology#inspiredBy>  rdf:type rdf:Property ;
+  rdfs:domain <http://example.com/ontology#Idea> ;
+  rdfs:range <http://example.com/ontology#Event> ;
+  rdfs:label "inspired by"@en ;
+  rdfs:comment "An idea can be inspired by an event."@en .
+<http://example.com/ontology#leadTo>  rdf:type rdf:Property ;
+  rdfs:domain <http://example.com/ontology#Idea> ;
+  rdfs:range <http://example.com/ontology#Action> ;
+  rdfs:label "lead to"@en ;
+  rdfs:comment "An idea can lead to an action."@en .

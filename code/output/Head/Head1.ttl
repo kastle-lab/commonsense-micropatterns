@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix head: <http://example.com/head#> .
+head:Head rdf:type owl:Class .
+head:Head rdfs:label "Head"@en .
+head:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:label "has part"@en ;
+    rdfs:domain head:Head .
+head:Brain rdf:type owl:Class ;
+    rdfs:label "Brain"@en ;
+    rdfs:subClassOf [        rdf:type owl:Restriction ;
+        owl:onProperty head:hasPart ;
+        owl:someValuesFrom head:Brain    ].head:Eye rdf:type owl:Class ;
+    rdfs:label "Eye"@en ;
+    rdfs:subClassOf [        rdf:type owl:Restriction ;
+        owl:onProperty head:hasPart ;
+        owl:someValuesFrom head:Eye    ] .
+head:Nose rdf:type owl:Class ;
+    rdfs:label "Nose"@en ;
+    rdfs:subClassOf [        rdf:type owl:Restriction ;
+        owl:onProperty head:hasPart ;
+        owl:someValuesFrom head:Nose    ] .
+head:Mouth rdf:type owl:Class ;
+    rdfs:label "Mouth"@en ;
+    rdfs:subClassOf [        rdf:type owl:Restriction ;
+        owl:onProperty head:hasPart ;
+        owl:someValuesFrom head:Mouth    ] .
+head:Ear rdf:type owl:Class ;
+    rdfs:label "Ear"@en ;
+    rdfs:subClassOf [        rdf:type owl:Restriction ;
+        owl:onProperty head:hasPart ;
+        owl:someValuesFrom head:Ear    ] .

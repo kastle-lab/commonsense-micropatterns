@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sch: <http://example.org/school/> .
+sch:School a rdfs:Class ;
+    rdfs:label "School"^^xsd:string ;
+    rdfs:comment "The concept of a School"^^xsd:string .
+sch:Student a rdfs:Class ;
+    rdfs:label "Student"^^xsd:string ;
+    rdfs:comment "An individual who attends a School"^^xsd:string ;
+    rdfs:subClassOf sch:School .
+sch:Teacher a rdfs:Class ;
+    rdfs:label "Teacher"^^xsd:string ;
+    rdfs:comment "An individual who teaches at a School"^^xsd:string ;
+    rdfs:subClassOf sch:School .
+sch:Course a rdfs:Class ;
+    rdfs:label "Course"^^xsd:string ;
+    rdfs:comment "A subject taught in a School"^^xsd:string ;
+    rdfs:subClassOf sch:School .
+sch:teaches a rdf:Property ;
+    rdfs:label "teaches"^^xsd:string ;
+    rdfs:comment "A relation between Teacher and Course"^^xsd:string ;
+    rdfs:domain sch:Teacher ;
+    rdfs:range sch:Course .
+sch:enrolledIn a rdf:Property ;
+    rdfs:label "enrolled in"^^xsd:string ;
+    rdfs:comment "A relation between Student and Course"^^xsd:string ;
+    rdfs:domain sch:Student ;
+    rdfs:range sch:Course .

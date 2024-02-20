@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix house: <http://example.com/house#> .
+house:House a rdfs:Class ;
+  rdfs:label "House"@en ;
+  rdfs:comment "A building for human habitation"@en .
+house:hasAddress a rdf:Property ;
+  rdfs:domain house:House ;
+  rdfs:range xsd:string ;
+  rdfs:label "has address"@en ;
+  rdfs:comment "The property that represents the address of the house"@en .
+  house:hasNumberOfRooms a rdf:Property ;
+  rdfs:domain house:House ;
+  rdfs:range xsd:int ;
+  rdfs:label "has number of rooms"@en ;
+  rdfs:comment "The property that represents the number of rooms in the house"@en .
+  house:isOccupied a rdf:Property ;
+  rdfs:domain house:House ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "is occupied"@en ;
+  rdfs:comment "The property that represents whether the house is currently occupied or not"@en .

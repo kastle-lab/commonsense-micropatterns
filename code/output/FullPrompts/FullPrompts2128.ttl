@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+# Define classes:Person a rdfs:Class ;
+# Define properties:name a rdf:Property ;
+  rdfs:domain :Person ;
+  rdfs:range rdfs:Literal .
+:age a rdf:Property ;
+  rdfs:domain :Person ;
+  rdfs:range rdfs:Literal .
+:gender a rdf:Property ;
+  rdfs:domain :Person ;
+  rdfs:range rdfs:Literal .
+# Define individuals:John a :Person ;
+  :name "John Doe" ;
+  :age 30 ;
+  :gender "Male" .
+:Jane a :Person ;
+  :name "Jane Doe" ;
+  :age 28 ;
+  :gender "Female" .

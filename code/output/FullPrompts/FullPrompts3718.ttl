@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ch: <http://example.org/ontology/Change#> .
+# Class declarationsch:Change a owl:Class ;
+    rdfs:comment "Primary concept of 'Change'"@en ;
+    rdfs:label "Change"@en ;
+    rdfs:subClassOf owl:Thing .
+ch:PhysicalChange a owl:Class ;
+    rdfs:comment "Change in physical state or properties"@en ;
+    rdfs:label "Physical Change"@en ;
+    rdfs:subClassOf ch:Change .
+ch:PsychologicalChange a owl:Class ;
+    rdfs:comment "Change in psychological or emotional state"@en ;
+    rdfs:label "Psychological Change"@en ;
+    rdfs:subClassOf ch:Change .
+ch:SocialChange a owl:Class ;
+    rdfs:comment "Change in social relations, structures, or systems"@en ;
+    rdfs:label "Social Change"@en ;
+    rdfs:subClassOf ch:Change .
+# Object propertiesch:hasCause a owl:ObjectProperty ;
+    rdfs:comment "Cause of a given change"@en ;
+    rdfs:domain ch:Change ;
+    rdfs:range owl:Thing ;
+    rdfs:label "has cause"@en .
+ch:hasEffect a owl:ObjectProperty ;
+    rdfs:comment "Effect of a given change"@en ;
+    rdfs:domain ch:Change ;
+    rdfs:range owl:Thing ;
+    rdfs:label "has effect"@en .
+ch:hasMedium a owl:ObjectProperty ;
+    rdfs:comment "Medium in which the change happens"@en ;
+    rdfs:domain ch:Change ;
+    rdfs:range owl:Thing ;
+    rdfs:label "has medium"@en .
+# Data propertiesch:startTime a owl:DatatypeProperty ;
+    rdfs:comment "Start time of a change"@en ;
+    rdfs:domain ch:Change ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "start time"@en .
+ch:endTime a owl:DatatypeProperty ;
+    rdfs:comment "End time of a change"@en ;
+    rdfs:domain ch:Change ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "end time"@en .

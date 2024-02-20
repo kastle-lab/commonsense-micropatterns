@@ -1,0 +1,12 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sch: <http://schema.org/> .
+<http://example.org/study1>    a sch:Study ;
+    sch:name "Quantum Physics Study" ;
+    sch:author "John Doe" ;
+    sch:datePublished "2021-01-01"^^xsd:date ;
+    sch:description "A study exploring the principles of quantum physics" .
+<http://example.org/study2>    a sch:Study ;
+    sch:name "Environmental Science Study" ;
+    sch:author "Jane Doe" ;
+    sch:datePublished "2020-11-01"^^xsd:date ;
+    sch:description "A study focusing on the impact of climate change" .

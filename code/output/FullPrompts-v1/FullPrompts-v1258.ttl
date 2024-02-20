@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix world: <http://www.example.org/world#> .
+world:     a owl:Ontology ;
+    rdfs:comment "Ontology of the world" ;
+    rdfs:label "World" .
+world:Continent    a owl:Class ;
+    rdfs:label "Continent" ;
+    rdfs:comment "A continent is one of several large landmasses." .
+world:Country    a owl:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A country is a political entity with defined borders."world:City    a owl:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A city is a large town or urban area." .
+world:isPartOf     rdf:type owl:ObjectProperty ;
+    rdfs:domain world:Country ;
+    rdfs:range world:Continent ;
+    rdfs:label "is part of" ;
+    rdfs:comment "Signifies that a country is part of a specific continent." .
+world:hasCapital     rdf:type owl:ObjectProperty ;
+    rdfs:domain world:Country ;
+    rdfs:range world:City ;
+    rdfs:label "has capital" ;
+    rdfs:comment "Signifies that a country has a specific city as its capital.".

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://example.org/way#> .
+way:     a owl:Ontology ;
+    rdfs:comment "An ontology about ways, routes, paths" .
+way:Way    a owl:Class ;
+    rdfs:comment "A class representing all kinds of ways or paths" ;
+    rdfs:subClassOf rdfs:Resource .
+way:Road    a owl:Class ;
+    rdfs:comment "A subclass representing a public, typically paved way" ;
+    rdfs:subClassOf way:Way .
+way:Footpath    a owl:Class ;
+    rdfs:comment "A subclass representing a way for walking or hiking" ;
+    rdfs:subClassOf way:Way .
+way:CyclingPath    a owl:Class ;
+    rdfs:comment "A subclass representing a way specifically for cycling" ;
+    rdfs:subClassOf way:Way .
+way:name    a owl:DatatypeProperty ;
+    rdfs:comment "The name of a way" ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:string .
+way:length    a owl:DatatypeProperty ;
+    rdfs:comment "The length of a way in kilometers" ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:float .
+way:connectedTo    a owl:ObjectProperty ;
+    rdfs:comment "A relation between two ways that are connected" ;
+    rdfs:domain way:Way ;
+    rdfs:range way:Way .

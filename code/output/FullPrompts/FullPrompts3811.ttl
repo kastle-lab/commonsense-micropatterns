@@ -1,0 +1,25 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rea: <http://example.org/ontology/reason#> .
+rea:Reason a rdfs:Class ;
+  rdfs:label "Reason"@en ;
+  rdfs:comment "A class representing reasons or causes for actions or events."@en ;
+  rdfs:subClassOf [ a rdfs:Class ;
+ rdfs:label "Abstract thing"@en ] .
+rea:hasLogicalBasis a rdf:Property ;
+  rdfs:label "has logical basis"@en ;
+  rdfs:comment "The property linking a reason to its logical basis (or lack thereof)."@en ;
+  rdfs:domain rea:Reason ;
+  rdfs:range rdfs:Resource .
+rea:actionTriggeredBy a rdf:Property ;
+  rdfs:label "action triggered"@en ;
+  rdfs:comment "The property linking a reason to the action it triggers."@en ;
+  rdfs:domain rea:Reason ;
+  rdfs:range [ a rdfs:Class ;
+ rdfs:label "Action"@en ].rea:causesEvent a rdf:Property ;
+  rdfs:label "causes event"@en ;
+  rdfs:comment "The property linking a reason to the event it causes."@en ;
+  rdfs:domain rea:Reason ;
+  rdfs:range [ a rdfs:Class ;
+ rdfs:label "Event"@en ] .

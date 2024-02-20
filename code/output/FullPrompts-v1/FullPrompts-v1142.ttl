@@ -1,0 +1,23 @@
+@prefix : <http://example.org/ontology/>@prefix xsd: <http://www.w3.org/2001/XMLSchema#> @prefix s: <http://example.org/ontology/day/>:Day a rdfs:Class ;
+    rdfs:comment "A class to represent a day in a week" .
+:id a rdf:Property ;
+    rdfs:domain :Day ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The unique identifier of a day in a week".
+:name a rdf:Property ;
+    rdfs:domain :Day ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the day in the week".
+:type a rdf:Property ;
+    rdfs:domain :Day ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The type of the day: Weekday or Weekend".
+s:Day1 a :Day ;
+    :id 1 ;
+    :name "Monday" ;
+    :type "Weekday" .
+  s:Day2 a :Day ;
+    :id 2 ;
+    :name "Tuesday" ;
+    :type "Weekday" .
+  # and so on for the other days...

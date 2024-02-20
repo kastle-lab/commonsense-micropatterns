@@ -1,0 +1,27 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix job: <http://www.example.org/job#> .
+job:Job a rdfs:Class ;
+    rdfs:label "Job"@en ;
+    rdfs:comment "A specific role or responsibility that a person performs in exchange for economic compensation"@en .
+job:hasPositionTitle a rdfs:DatatypeProperty ;
+    rdfs:label "has position title"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range rdfs:Literal .
+ job:hasJobDescription a rdfs:DatatypeProperty ;
+    rdfs:label "has job description"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range rdfs:Literal .
+ job:belongsToIndustry a rdfs:ObjectProperty ;
+    rdfs:label "belongs to industry"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range job:Industry .
+job:isLocatedIn a rdfs:ObjectProperty ;
+    rdfs:label "is located in"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range job:Location .
+job:Industry a rdfs:Class ;
+    rdfs:label "Industry"@en ;
+    rdfs:comment "A grouping of similar businesses related by their production of similar goods or services"@en .
+job:Location a rdfs:Class ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "A geographic location where a job is performed"@en .

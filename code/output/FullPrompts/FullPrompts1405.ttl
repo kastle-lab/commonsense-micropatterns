@@ -1,0 +1,22 @@
+@prefix : <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Point a rdfs:Class ;
+    rdfs:label "Point" ;
+    rdfs:comment "A point in a certain space" .
+:xCoordinate a rdf:Property ;
+    rdfs:domain :Point ;
+    rdfs:range xsd:float ;
+    rdfs:label "x-coordinate" ;
+    rdfs:comment "The x-coordinate of the point" .
+:yCoordinate a rdf:Property ;
+    rdfs:domain :Point ;
+    rdfs:range xsd:float ;
+     rdfs:label "y-coordinate" ;
+    rdfs:comment "The y-coordinate of the point" .
+:zCoordinate a rdf:Property ;
+    rdfs:domain :Point ;
+    rdfs:range xsd:float ;
+     rdfs:label "z-coordinate" ;
+    rdfs:comment "The z-coordinate of the point" .

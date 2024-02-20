@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://example.com/ontology#> .
+ont:Student a rdfs:Class .
+ont:hasName a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range xsd:string .
+ont:attendsUniversity a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range ont:University .
+ont:University a rdfs:Class .
+ont:isEnrolledInCourse a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range ont:Course .
+ont:Course a rdfs:Class .
+ont:Course     rdfs:subClassOf ont:AcademicSubject .
+ont:AcademicSubject a rdfs:Class .
+ont:hasGrade a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range xsd:float .
+    ont:hasStudentID a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range xsd:int .
+ ont:isFullTime a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range xsd:boolean .
+ ont:hasMajor a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range ont:AcademicSubject .
+ ont:hasMinor a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range ont:AcademicSubject .
+ont:isGraduateStudent a rdf:Property ;
+    rdfs:domain ont:Student ;
+    rdfs:range xsd:boolean .

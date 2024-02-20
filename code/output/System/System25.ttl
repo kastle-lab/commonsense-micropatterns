@@ -1,0 +1,8 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/> .
+ex:System rdf:type rdf:Class .
+ex:SubSystem1 rdf:type ex:System .
+ex:SubSystem2 rdf:type ex:System .
+ex:SubSystem1 ex:partOf ex:System .
+ex:SubSystem2 ex:partOf ex:System .

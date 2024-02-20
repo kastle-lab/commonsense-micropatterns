@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://example.org/air#> .
+air:Air rdf:type rdfs:Class ;
+rdfs:label "Air"@en ;
+rdfs:comment "Atmospheric air that is necessary for breathing and for sustaining most forms of life."@en .
+air:Component rdf:type rdfs:Class ;
+rdfs:label "Component"@en ;
+rdfs:comment "A substance that makes up air"@en .
+air:hasComponent rdf:type rdf:Property ;
+rdfs:domain air:Air ;
+rdfs:range air:Component ;
+rdfs:label "has component"@en ;
+rdfs:comment "Relation between air and its components"@en .
+air:Nitrogen rdf:type air:Component ;
+rdfs:label "Nitrogen"@en ;
+rdfs:comment "An element that makes up about 78% of the Earth's atmosphere."@en .
+air:Oxygen rdf:type air:Component ;
+rdfs:label "Oxygen"@en ;
+rdfs:comment "An element that makes up about 21% of the Earth's atmosphere."@en .
+air:OtherGases rdf:type air:Component ;
+rdfs:label "Other gases"@en ;
+rdfs:comment "Other elements that makeup about 1% of the Earth's atmosphere."@en .
+air:airInstance rdf:type air:Air ;
+air:hasComponent air:Nitrogen ;
+air:hasComponent air:Oxygen ;
+air:hasComponent air:OtherGases .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix art: <http://example.com/art#> .
+art:Painting a rdfs:Class ;
+    rdfs:label "Painting"@en ;
+    rdfs:comment "A work of art made by applying paint"@en .
+    art:Sculpture a rdfs:Class ;
+    rdfs:label "Sculpture"@en ;
+    rdfs:comment "A work of art made by carving or shaping hard materials"@en .
+art:Artist a rdfs:Class ;
+    rdfs:label "Artist"@en ;
+    rdfs:comment "An individual who creates works of art"@en .
+art:createdBy a rdf:Property ;
+    rdfs:domain art:Painting ;
+    rdfs:domain art:Sculpture ;
+    rdfs:range art:Artist ;
+    rdfs:label "created by"@en ;
+    rdfs:comment "The artist who created a piece of art"@en .
+art:picasso a art:Artist ;
+    rdfs:label "Pablo Picasso"@en .
+art:guernica a art:Painting ;
+    rdfs:label "Guernica"@en ;
+    art:createdBy art:picasso .
+art:manBird a art:Sculpture ;
+    rdfs:label "Man and Bird"@en ;
+    art:createdBy art:picasso .

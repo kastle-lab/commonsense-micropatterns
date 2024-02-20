@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Body rdf:type rdfs:Class .
+ex:hasPart rdf:type rdf:Property ;
+          rdfs:domain ex:Body ;
+          rdfs:range ex:BodyPart .
+ex:BodyPart rdf:type rdfs:Class .
+# Example usageex:HumanBody rdf:type ex:Body .
+ex:Heart rdf:type ex:BodyPart .
+ex:HumanBody ex:hasPart ex:Heart .

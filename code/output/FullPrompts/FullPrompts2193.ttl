@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edu: <http://www.education.org/> .
+## Class Definitionsedu:Student     rdf:type rdfs:Class ;
+    rdfs:label "Student"@en ;
+    rdfs:comment "An individual who is enrolled in an educational institution or in a course or program of study, typically recognized by a degree or diploma upon completion."@en.edu:Course     rdf:type rdfs:Class ;
+    rdfs:label "Course"@en ;
+    rdfs:comment "An organized program of study, typically leading to a degree or certificate."@en.## Property Definitionsedu:enrolledIn     rdf:type rdf:Property ;
+    rdfs:label "enrolled in"@en ;
+    rdfs:comment "Refers to a student being registered or enrolled in a course or program of study."@en;
+    rdfs:domain edu:Student ;
+    rdfs:range edu:Course.edu:birthdate     rdf:type rdf:Property ;
+    rdfs:label "birthdate"@en ;
+    rdfs:comment "The birthdate of the student."@en;
+    rdfs:domain edu:Student ;
+    rdfs:range xsd:date.## Individual Definitionsedu:John     rdf:type edu:Student ;
+    rdfs:label "John"@en ;
+    edu:birthdate "1990-08-24"^^xsd:date ;
+    edu:enrolledIn edu:Math101.edu:Math101     rdf:type edu:Course ;
+    rdfs:label "Math 101"@en ;
+    rdfs:comment "An introductory course in Mathematics."@en.

@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix myOnt: <http://example.com/myOntology#> .
+myOnt:Number     rdf:type rdfs:Class ;
+    rdfs:label "Number" ;
+    rdfs:comment "Represent a generic abstract numeric object in the knowledge system" .
+myOnt:hasValue    rdf:type rdf:Property ;
+    rdfs:label "hasValue" ;
+    rdfs:comment "property representing the numeric value of a Number" ;
+    rdfs:domain myOnt:Number ;
+    rdfs:range xsd:decimal .

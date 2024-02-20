@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Father a rdfs:Class ;
+   rdfs:subClassOf ex:Male ;
+   rdfs:label "Father" ;
+   rdfs:comment "Class that represents biological or adoptive fathers." .
+ex:hasFather a rdf:Property ;
+     rdfs:domain ex:Person ;
+     rdfs:range ex:Father ;
+     rdfs:label "has father" ;
+     rdfs:comment "Property that links a person to their father." .
+ex:isFatherOf a rdf:Property ;
+     rdfs:domain ex:Father ;
+     rdfs:range ex:Person ;
+     rdfs:label "is father of" ;
+     rdfs:comment "Property that links a father to their child." .

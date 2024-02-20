@@ -1,0 +1,20 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org#> .
+ex:School    a owl:Class ;
+   rdfs:subClassOf owl:Thing ;
+    rdfs:label "School" .
+   ex:hasStudent   a owl:ObjectProperty ;
+   rdfs:domain ex:School ;
+   rdfs:range ex:Student ;
+   rdfs:label "has student" .
+ex:hasTeacher   a owl:ObjectProperty ;
+   rdfs:domain ex:School ;
+   rdfs:range ex:Teacher ;
+   rdfs:label "has teacher" .
+ex:Student    a owl:Class ;
+   rdfs:subClassOf owl:Thing ;
+   rdfs:label "Student" .
+ex:Teacher    a owl:Class ;
+   rdfs:subClassOf owl:Thing ;
+   rdfs:label "Teacher" .

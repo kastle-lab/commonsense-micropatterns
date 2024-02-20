@@ -1,0 +1,37 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix work: <http://example.org/work/> .
+work:Job a owl:Class ;
+    rdfs:label "Job"@en ;
+    rdfs:comment "An employment position held by a person"@en .
+work:Employee a owl:Class ;
+    rdfs:label "Employee"@en ;
+    rdfs:comment "A person who works under an employment contract"@en .
+work:Employer a owl:Class ;
+    rdfs:label "Employer"@en ;
+    rdfs:comment "A person or organization employing people"@en .
+work:hasJob a owl:ObjectProperty ;
+    rdfs:domain work:Employee ;
+    rdfs:range work:Job ;
+    rdfs:label "has job"@en ;
+    rdfs:comment "Links an employee to the job they have"@en .
+work:employs a owl:ObjectProperty ;
+    rdfs:domain work:Employer ;
+    rdfs:range work:Employee ;
+    rdfs:label "employs"@en ;
+    rdfs:comment "Links an employer to the people they employ"@en .
+work:jobTitle a owl:DatatypeProperty ;
+    rdfs:domain work:Job ;
+    rdfs:range xsd:string ;
+    rdfs:label "job title"@en ;
+    rdfs:comment "The title of a job"@en .
+work:salary a owl:DatatypeProperty ;
+    rdfs:domain work:Job ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "salary"@en ;
+    rdfs:comment "The salary for a job"@en .
+work:fullName a owl:DatatypeProperty ;
+    rdfs:domain work:Employee ;
+    rdfs:range xsd:string ;
+    rdfs:label "full name"@en ;
+    rdfs:comment "The full name of an employee"@en .

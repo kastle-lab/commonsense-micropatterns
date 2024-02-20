@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Company a rdfs:Class ;
+    rdfs:label "Company"@en ;
+    rdfs:comment "A business or organization that provides goods or services"@en .
+ex:name a rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of the company"@en ;
+    rdfs:domain ex:Company ;
+    rdfs:range xsd:string .
+ex:location a rdf:Property ;
+    rdfs:label "location"@en ;
+    rdfs:comment "The location of the company"@en ;
+    rdfs:domain ex:Company ;
+    rdfs:range xsd:string .
+ex:industry a rdf:Property ;
+    rdfs:label "industry"@en ;
+    rdfs:comment "The industry the company operates in"@en ;
+    rdfs:domain ex:Company ;
+    rdfs:range xsd:string .
+ex:numberOfEmployees a rdf:Property ;
+    rdfs:label "number of employees"@en ;
+    rdfs:comment "The number of employees in the company"@en ;
+    rdfs:domain ex:Company ;
+    rdfs:range xsd:integer .

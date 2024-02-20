@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix study: <http://example.org/study/> .
+study:Study a rdfs:Class ;
+    rdfs:label "Study" ;
+    rdfs:comment "A systematic investigation to establish facts or principles or to collect information on a subject." .
+study:Course a rdfs:Class ;
+    rdfs:subClassOf study:Study ;
+    rdfs:label "Course" ;
+    rdfs:comment "A course of study is a program that an individual chooses to study." .
+study:Subject a rdfs:Class ;
+    rdfs:subClassOf study:Study ;
+    rdfs:label "Subject" ;
+    rdfs:comment "Subject is the branch of knowledge studied or taught in a school, college, or university." .
+study:hasSubject a rdf:Property ;
+    rdfs:domain study:Course ;
+    rdfs:range study:Subject ;
+    rdfs:label "has subject" ;
+    rdfs:comment "The property that connects a course with its subject." .
+study:studentName a rdf:Property ;
+    rdfs:domain study:Study ;
+    rdfs:range xsd:string ;
+    rdfs:label "student name" ;
+    rdfs:comment "The property that holds a student's name." .
+study:duration a rdf:Property ;
+    rdfs:domain study:Study ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:label "duration" ;
+    rdfs:comment "The property that holds the duration (in years) of a course of study." .
+study:isPartOf a rdf:Property ;
+    rdfs:domain study:Course ;
+    rdfs:range study:Study ;
+    rdfs:label "is part of" ;
+    rdfs:comment "The property that links a course to the broader study program it is part of." .
+study:Professor a rdfs:Class ;
+    rdfs:label "Professor" ;
+    rdfs:comment "A teacher of the highest rank in a college or university." .
+study:teaches a rdf:Property ;
+    rdfs:domain study:Professor ;
+    rdfs:range study:Course ;
+    rdfs:Label "teaches" ;
+    rdfs:comment "The property that links a professor with the course they teach." .

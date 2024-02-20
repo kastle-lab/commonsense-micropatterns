@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Air rdf:type owl:Class ;
+  rdfs:label "Air" ;
+  rdfs:subClassOf ex:PhysicalSubstance .
+ex:containsOxygen rdf:type owl:ObjectProperty ;
+  rdfs:label "contains oxygen" ;
+  rdfs:domain ex:Air ;
+  rdfs:range ex:ChemicalElement .
+ex:containsNitrogen rdf:type owl:ObjectProperty ;
+  rdfs:label "contains nitrogen" ;
+  rdfs:domain ex:Air ;
+  rdfs:range ex:ChemicalElement .
+ex:ChemicalElement rdf:type owl:Class ;
+  rdfs:label "Chemical Element" ;
+  rdfs:subClassOf ex:PhysicalSubstance .
+ex:Oxygen rdf:type ex:ChemicalElement ;
+  rdfs:label "Oxygen" .
+ex:Nitrogen rdf:type ex:ChemicalElement ;
+  rdfs:label "Nitrogen" .
+ex:AirPollution rdf:type owl:Class ;
+  rdfs:label "Air Pollution" ;
+  rdfs:subClassOf ex:EnvironmentalImpact .
+ex:hasAirPollution rdf:type owl:ObjectProperty ;
+  rdfs:label "has air pollution" ;
+  rdfs:domain ex:Air ;
+  rdfs:range ex:AirPollution .
+ex:PhysicalSubstance rdf:type owl:Class ;
+  rdfs:label "Physical Substance" .
+ex:EnvironmentalImpact rdf:type owl:Class ;
+  rdfs:label "Environmental Impact" .

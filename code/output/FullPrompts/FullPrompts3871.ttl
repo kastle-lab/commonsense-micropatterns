@@ -1,0 +1,25 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/research#> .
+:Research a rdf:Class ;
+    rdfs:label "Research"@en ;
+    rdfs:comment "This represents the research activities within the organization"@en .
+:ResearchTopic a rdf:Class ;
+    rdfs:label "Research Topic"@en ;
+    rdfs:comment "This represents a specific topic of research within the organization"@en ;
+    rdfs:subClassOf :Research .
+:hasResearchTopic a rdf:Property ;
+    rdfs:label "has research topic"@en ;
+    rdfs:comment "The property that relates a Research with it's research topic"@en ;
+    rdfs:domain :Research ;
+    rdfs:range :ResearchTopic .
+:Researcher a rdf:Class ;
+    rdfs:label "Researcher"@en ;
+    rdfs:comment "This represents a Researcher who carries out the research"@en .
+:conductsResearch a rdf:Property ;
+    rdfs:label "conducts research"@en ;
+    rdfs:comment "The property that relates a Researcher to the Research they carry out"@en ;
+    rdfs:domain :Researcher ;
+    rdfs:range :Research .

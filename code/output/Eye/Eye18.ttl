@@ -1,0 +1,28 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Eye rdf:type owl:Class ;
+    rdfs:label "Eye"@en ;
+    rdfs:comment "The organ of sight"@en ;
+    rdfs:subClassOf <http://www.example.org/#Organ> ;
+    :hasPart :Cornea ;
+    :hasPart :Iris ;
+    :hasPart :Lens ;
+    :hasPart :Retina .
+:Cornea rdf:type owl:Class ;
+    rdfs:label "Cornea"@en ;
+    rdfs:comment "The transparent layer forming the front of the eye."@en ;
+    rdfs:subClassOf :Eye .
+:Iris rdf:type owl:Class ;
+    rdfs:label "Iris"@en ;
+    rdfs:comment "The thin, circular structure in the eye, responsible for controlling the diameter and size of the pupil."@en ;
+    rdfs:subClassOf :Eye .
+:Lens rdf:type owl:Class ;
+    rdfs:label "Lens"@en ;
+    rdfs:comment "The transparent elastic structure in the eye that helps to control the amount of light reaching the retina."@en ;
+    rdfs:subClassOf :Eye .
+:Retina rdf:type owl:Class ;
+    rdfs:label "Retina"@en ;
+    rdfs:comment "The light-sensitive layer of tissue at the back of the inner eye that captures visual information."@en ;
+    rdfs:subClassOf :Eye .

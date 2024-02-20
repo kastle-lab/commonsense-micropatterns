@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix world: <http://www.myontology.com/world#> .
+world:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology dedicated to the world"^^xsd:string .
+world:Country     rdf:type owl:Class ;
+    rdfs:comment "Pertains to countries in the world"^^xsd:string ;
+    rdfs:subClassOf rdfs:Resource .
+world:Continent     rdf:type owl:Class ;
+    rdfs:comment "Pertains to continents in the world"^^xsd:string ;
+    rdfs:subClassOf rdfs:Resource .
+    world:Ocean     rdf:type owl:Class ;
+    rdfs:comment "Pertains to oceans in the world"^^xsd:string ;
+    rdfs:subClassOf rdfs:Resource .
+world:hasCapital     rdf:type owl:ObjectProperty ;
+    rdfs:domain world:Country ;
+    rdfs:range world:City ;
+    rdfs:comment "Connects a country to its capital city."^^xsd:string .
+world:isLocatedOn     rdf:type owl:ObjectProperty ;
+    rdfs:domain world:Country ;
+    rdfs:range world:Continent ;
+    rdfs:comment "Connects a country to the continent it is located on."^^xsd:string .
+world:City     rdf:type owl:Class ;
+    rdfs:comment "Pertains to cities around the world"^^xsd:string ;
+    rdfs:subClassOf rdfs:Resource .
+world:Population    rdf:type owl:Class ;
+    rdfs:comment "Pertains to the population of a specific resource in the world"^^xsd:string ;
+    rdfs:subClassOf rdfs:Resource .

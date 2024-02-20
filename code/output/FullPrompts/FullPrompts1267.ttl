@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix question: <http://www.example.org/question/> .
+question:Question rdf:type rdfs:Class ;
+  rdfs:label "Question"@en ;
+  rdfs:comment "A class representing any type of question"@en .
+question:hasContent rdf:type rdf:Property ;
+  rdfs:label "hasContent"@en ;
+  rdfs:comment "The content of a question"@en ;
+  rdfs:domain question:Question ;
+  rdfs:range xsd:string .
+question:hasAnswer rdf:type rdf:Property ;
+  rdfs:label "hasAnswer"@en ;
+  rdfs:comment "The answer to a question"@en ;
+  rdfs:domain question:Question ;
+  rdfs:range xsd:string .
+question:isAskedBy rdf:type rdf:Property ;
+  rdfs:label "isAskedBy"@en ;
+  rdfs:comment "The person or entity who asked the question"@en ;
+  rdfs:domain question:Question ;
+  rdfs:range xsd:string .
+question:isAnsweredBy rdf:type rdf:Property ;
+  rdfs:label "isAnsweredBy"@en ;
+  rdfs:comment "The person or entity who answered the question"@en ;
+  rdfs:domain question:Question ;
+  rdfs:range xsd:string .

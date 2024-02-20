@@ -1,0 +1,15 @@
+@prefix : <http://example.org/> .
+:Entity a owl:Class .
+:Level a owl:Class ;
+   rdfs:subClassOf :Entity .
+:hasLevel a owl:ObjectProperty ;
+    rdfs:domain :Entity ;
+    rdfs:range :Level .
+:Entity1 a :Entity ;
+    :hasLevel :LevelA .
+:Entity2 a :Entity ;
+    :hasLevel :LevelB .
+:LevelA a :Level ;
+    rdfs:label "Level A" .
+:LevelB a :Level ;
+    rdfs:label "Level B" .

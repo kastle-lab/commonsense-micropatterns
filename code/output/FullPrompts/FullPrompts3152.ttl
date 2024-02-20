@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix team: <http://www.example.org/team#> .
+team: a owl:Ontology ;
+    rdfs:comment "Ontology dedicated to Team" .
+team:Team a owl:Class ;
+    rdfs:comment "A team is a group of individuals working together to achieve a goal." .
+    team:Member a owl:Class ;
+    rdfs:label "Member" ;
+    rdfs:comment "An individual who is part of a team." .
+team:Role a owl:Class ;
+    rdfs:comment "A role assigned to a team member." .
+team:hasMember a owl:ObjectProperty ;
+    rdfs:domain team:Team ;
+    rdfs:range team:Member ;
+    rdfs:comment "Relates a team to its members." .
+team:hasRole a owl:ObjectProperty ;
+    rdfs:domain team:Member ;
+    rdfs:range team:Role ;
+    rdfs:comment "Relates a member to their role within the team." .
+team:startDate a owl:DatatypeProperty ;
+    rdfs:domain team:Team ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Indicates the start date of the team." .
+team:endDate a owl:DatatypeProperty ;
+    rdfs:domain team:Team ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Indicates the end date of the team." .

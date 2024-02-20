@@ -1,0 +1,36 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sot: <http://example.org/story-ontology#> .
+### Classes sot:Story a rdfs:Class ;
+    rdfs:comment "A narrative or tale, real or imagined" .
+sot:Character a rdfs:Class ;
+    rdfs:comment "An actor or person appearing in a story" .
+sot:Setting a rdfs:Class ;
+    rdfs:comment "The place and time where a story takes place" .
+sot:Event a rdfs:Class ;
+    rdfs:comment "A significant occurrence within a story" .
+### Properties sot:hasCharacter a rdf:Property ;
+    rdfs:domain sot:Story ;
+    rdfs:range sot:Character ;
+    rdfs:comment "Indicates a character appearing in a story" .
+sot:hasSetting a rdf:Property ;
+    rdfs:domain sot:Story ;
+    rdfs:range sot:Setting ;
+    rdfs:comment "Indicates where and when a story takes place" .
+sot:hasEvent a rdf:Property ;
+    rdfs:domain sot:Story ;
+    rdfs:range sot:Event ;
+    rdfs:comment "Indicates a significant event within a story" .
+### Individuals sot:story1 a sot:Story ;
+    sot:hasCharacter sot:character1 ;
+    sot:hasSetting sot:setting1 ;
+    sot:hasEvent sot:event1 ;
+    dct:title "Example Story" ;
+    dct:creator "John Smith" .
+sot:character1 a sot:Character ;
+    foaf:name "John Doe" .
+sot:setting1 a sot:Setting ;
+    dct:description "A small town in 1940s" .
+sot:event1 a sot:Event ;
+    dct:description "An unexpected discovery" .

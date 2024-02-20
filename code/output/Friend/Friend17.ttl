@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix friend: <http://example.com/friend#> .
+friend:Friend a rdfs:Class ;
+  rdfs:label "Friend" ;
+  rdfs:comment "A class representing a friendship" .
+friend:hasFriend a rdf:Property ;
+  rdfs:label "has friend" ;
+  rdfs:comment "Indicates a relational property between two friends" ;
+  rdfs:domain friend:Friend ;
+  rdfs:range friend:Friend .
+friend:since a rdf:Property ;
+  rdfs:label "since" ;
+  rdfs:comment "Indicates the date when the friendship started" ;
+  rdfs:domain friend:Friend ;
+  rdfs:range xsd:date .
+friend:hasCommonInterest a rdf:Property ;
+  rdfs:label "has common interest" ;
+  rdfs:comment "Indicates the shared interests between two friends" ;
+  rdfs:domain friend:Friend ;
+  rdfs:range rdfs:Resource .
+ friend:hasSharedExperience a rdf:Property ;
+  rdfs:label "has shared experience" ;
+  rdfs:comment "Shows the shared experiences between two friends" ;
+  rdfs:domain friend:Friend ;
+  rdfs:range rdfs:Resource .
+ friend:hasDuration a rdf:Property ;
+  rdfs:label "has duration" ;
+  rdfs:comment "Indicates the length or duration of the friendship" ;
+  rdfs:domain friend:Friend ;
+  rdfs:range xsd:duration.

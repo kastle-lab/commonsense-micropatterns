@@ -1,0 +1,4 @@
+@prefix : <http://www.example.com/>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Law a rdfs:Class ;
+  rdfs:label "Law" ;
+  rdfs:comment "A system of rules that is created and enforced through social or governmental institutions to regulate behavior" .

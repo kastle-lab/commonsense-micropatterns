@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix world: <http://example.org/world#> .
+### Classesworld:Continent rdf:type owl:Class ;
+    rdfs:comment "A class representing a continent on earth" .
+world:Country rdf:type owl:Class ;
+    rdfs:comment "A class representing a country on earth" ;
+    rdfs:subClassOf world:Continent .
+world:City rdf:type owl:Class ;
+    rdfs:comment "A class representing a city on earth" ;
+    rdfs:subClassOf world:Country .
+### Propertiesworld:isPartOf rdf:type owl:ObjectProperty ;
+    rdfs:comment "A property linking a country or a city to the continent or country it is part of" ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (world:Country world:City) ] ;
+    rdfs:range world:Continent .
+world:hasPopulation rdf:type owl:DatatypeProperty ;
+    rdfs:comment "A property representing the population of a continent, country or city" ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (world:Continent world:Country world:City) ] ;
+    rdfs:range xsd:positiveInteger .

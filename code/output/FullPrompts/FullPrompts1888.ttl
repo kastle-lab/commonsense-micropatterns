@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix law: <http://example.org/law#> .
+law:Law rdf:type owl:Class ;
+    rdfs:label "Law"@en ;
+    rdfs:comment "The legal principles and regulations established by a government and applicable to a people."@en .
+law:hasTitle rdf:type owl:DatatypeProperty ;
+    rdfs:label "has title"@en ;
+    rdfs:comment "The title of the law."@en ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:string .
+law:hasNumber rdf:type owl:DatatypeProperty ;
+    rdfs:label "has number"@en ;
+    rdfs:comment "The law number."@en ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:int .
+law:hasEffectiveDate rdf:type owl:DatatypeProperty ;
+    rdfs:label "effective date"@en ;
+    rdfs:comment "The date when the law became effective."@en ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:date .
+law:isPartOf rdf:type owl:ObjectProperty ;
+    rdfs:label "is part of"@en ;
+    rdfs:comment "The law is part of a larger body of laws (e.g. a code, a regulation etc.)."@en ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Law .
+law:hasStatus rdf:type owl:DatatypeProperty ;
+    rdfs:label "has status"@en ;
+    rdfs:comment "The current status of the law (e.g. enacted, repealed, amended etc.)."@en ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:string .

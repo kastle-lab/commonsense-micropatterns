@@ -1,0 +1,7 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Back a rdf:Property ;
+    rdfs:label "Back"@en ;
+    rdfs:comment "Defines navigation back to a previous object or location"@en ;
+    rdfs:domain :WebPage ;
+    rdfs:range :WebPage .

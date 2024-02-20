@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix house: <http://example.org/house#> .
+# Define the House classhouse:House a rdfs:Class ;
+    rdfs:comment "A structure that is a dwelling or place for habitation by human beings" ;
+    rdfs:label "House" .
+# Define properties of the House classhouse:hasNumberOfRooms a rdf:Property ;
+    rdfs:comment "The number of rooms in the house" ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:integer .
+house:hasAddress a rdf:Property ;
+    rdfs:comment "The address of the house" ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:string .
+house:isOwnedBy a rdf:Property ;
+    rdfs:comment "The owner of the house" ;
+    rdfs:domain house:House ;
+    rdfs:range house:Person .
+    # Define the Person classhouse:Person a rdfs:Class ;
+    rdfs:comment "An individual person" ;
+    rdfs:label "Person" .
+house:name a rdf:Property ;
+    rdfs:comment "The name of the person" ;
+    rdfs:domain house:Person ;
+    rdfs:range xsd:string .
+house:ownsHouse a rdf:Property ;
+    rdfs:comment "Indicates the house or houses owned by the person" ;
+    rdfs:domain house:Person ;
+    rdfs:range house:House .

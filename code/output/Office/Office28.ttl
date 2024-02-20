@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix office: <http://example.com/office#> .
+office:Office rdf:type rdfs:Class .
+office:hasEmployee rdf:type rdf:Property ;
+   rdfs:domain office:Office ;
+   rdfs:range office:Employee .
+office:Employee rdf:type rdfs:Class .
+   office:hasDesk rdf:type rdf:Property ;
+   rdfs:domain office:Employee ;
+   rdfs:range office:Desk .
+office:Desk rdf:type rdfs:Class .
+office:Office owl:disjointWith office:Employee, office:Desk .
+office:Employee owl:disjointWith office:Desk .

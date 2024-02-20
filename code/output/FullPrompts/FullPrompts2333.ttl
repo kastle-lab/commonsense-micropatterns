@@ -1,0 +1,24 @@
+@prefix : <http://example.org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Lot  rdf:type rdfs:Class ;
+  rdfs:label "Lot" ;
+  rdfs:comment "A piece of land." .
+:hasSize  rdf:type rdf:Property ;
+  rdfs:label "has size" ;
+  rdfs:domain :Lot ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "The size of a lot, typically in square feet or acres." .
+:hasLocation  rdf:type rdf:Property ;
+  rdfs:label "has location" ;
+  rdfs:domain :Lot ;
+  rdfs:range :Location ;
+  rdfs:comment "The geographic location of a lot." .
+:Location  rdf:type rdfs:Class ;
+  rdfs:label "Location" ;
+  rdfs:comment "A geographic location." .
+:hasAddress  rdf:type rdf:Property ;
+  rdfs:label "has address" ;
+  rdfs:domain :Location ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The street address of a location." .

@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix person: <http://example.com/ontology/person#> .
+person:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human being"@en .
+person:name a rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "The name of the person"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range rdfs:Literal .
+person:age a rdf:Property ;
+    rdfs:label "has age"@en ;
+    rdfs:comment "The age of the person"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range rdfs:Literal .
+    person:gender a rdf:Property ;
+    rdfs:label "has gender"@en ;
+    rdfs:comment "The gender of the person"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range rdfs:Literal .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/#> .
+:Way rdf:type rdfs:Class .
+:Manner rdf:type rdfs:Class .
+:Direction rdf:type rdfs:Class .
+:Path rdf:type rdfs:Class .
+:leadsTo rdf:type rdf:Property ;
+  rdfs:domain :Way ;
+  rdfs:range :Place .
+  :takenBy rdf:type rdf:Property ;
+  rdfs:domain :Way ;
+  rdfs:range :Entity .
+  :hasWay rdf:type rdf:Property ;
+  rdfs:domain [ rdf:type rdfs:Class ] ;
+  rdfs:range :Way .
+:Path rdfs:subClassOf :Way .
+:Direction rdfs:subClassOf :Way .
+:Manner rdfs:subClassOf :Way .
+:Place rdf:type rdfs:Class .
+:Entity rdf:type rdfs:Class .
+:Place1 rdf:type :Place .
+:Entity1 rdf:type :Entity .
+:Way1 rdf:type :Way ;
+  :leadsTo :Place1 ;
+  :takenBy :Entity1 .

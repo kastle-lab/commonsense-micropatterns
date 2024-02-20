@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+dbo:Year a rdfs:Class ;
+  rdfs:label "Year"@en ;
+  rdfs:subClassOf xsd:integer ;
+  rdfs:comment "The class of all calendar years."@en .

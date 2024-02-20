@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix moment: <http://www.example.org/moments/> .
+moment:Moment  rdf:type owl:Class ;
+  rdfs:comment "A point of time." ;
+  rdfs:label "Moment" .
+moment:hasDate  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:dateTime ;
+  rdfs:domain moment:Moment ;
+  rdfs:comment "The date of the moment." ;
+  rdfs:label "has date" .
+moment:fromEvent   rdf:type owl:ObjectProperty ;
+  rdfs:range moment:Event ;
+  rdfs:domain moment:Moment ;
+  rdfs:comment "The event from which the moment is derived." ;
+  rdfs:label "from event" .
+moment:Event  rdf:type owl:Class ;
+  rdfs:comment "An occurrence that gives rise to a moment." ;
+  rdfs:label "Event" .
+moment:hasDuration   rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:duration ;
+  rdfs:domain moment:Event ;
+  rdfs:comment "The duration of the event." ;
+  rdfs:label "has duration" .
+moment:hasLocation  rdf:type owl:ObjectProperty ;
+  rdfs:range moment:Location ;
+  rdfs:domain moment:Event ;
+  rdfs:comment "The location of the event." ;
+  rdfs:label "has location" .
+moment:Location  rdf:type owl:Class ;
+  rdfs:comment "A location where an event takes place." ;
+  rdfs:label "Location" .
+moment:hasName  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+  rdfs:domain moment:Location ;
+  rdfs:comment "The name of the location." ;
+  rdfs:label "has name" .

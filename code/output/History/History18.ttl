@@ -1,0 +1,32 @@
+# Defining Base URI and Prefixes@base <http://example.org/history/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Classes:History a rdfs:Class;
+         rdfs:comment "All events that have occurred in the past".
+:HistoricalEvent a rdfs:Class;
+                rdfs:comment "An occurrence within human history".
+:HistoricalPeriod a rdfs:Class;
+                 rdfs:comment "A length of time singled out because of specific events, trends, innovations, or high culture".
+:HistoricalFigure a rdfs:Class;
+                 rdfs:comment "Any person who has significantly influenced the course of history".
+                 # Properties:hasEvent a rdf:Property;
+             rdfs:domain :History;
+             rdfs:range :HistoricalEvent;
+             rdfs:comment "Relates a period of history to the events that occurred during that time".
+:hasPeriod a rdf:Property;
+              rdfs:domain :History;
+              rdfs:range :HistoricalPeriod;
+              rdfs:comment "Relates a period of history to the larger history".
+:hasFigure a rdf:Property;
+           rdfs:domain :History;
+           rdfs:range :HistoricalFigure;
+           rdfs:comment "Relates a figure to the period or event within which they were influential".
+:eventOccurredDuring a rdf:Property;
+           rdfs:domain :HistoricalEvent;
+           rdfs:range :HistoricalPeriod;
+           rdfs:comment "Relates an event to the period during which it occurred".
+:figureLivedDuring a rdf:Property;
+           rdfs:domain :HistoricalFigure;
+           rdfs:range :HistoricalPeriod;
+           rdfs:comment "Relates a figure to the period during which they lived and/or were influential".

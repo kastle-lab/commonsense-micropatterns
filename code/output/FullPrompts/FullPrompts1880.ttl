@@ -1,0 +1,12 @@
+@prefix ex: <http://example.com/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Law rdf:type rdfs:Class .
+ex:EnforcementBody rdf:type rdfs:Class .
+ex:enforces rdf:type rdf:Property ;
+    rdfs:domain ex:EnforcementBody ;
+    rdfs:range ex:Law .
+ex:LegalAct rdf:type ex:Law ;
+    rdfs:label "Legal Act" .
+ex:Police rdf:type ex:EnforcementBody ;
+    ex:enforces ex:LegalAct.

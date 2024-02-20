@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix stu: <http://www.example.org/students#> .
+stu:Student a rdfs:Class ;
+    rdfs:comment "A learner or someone who attends an educational institution."@en ;
+    rdfs:label "Student"@en .
+stu:hasName a rdf:Property ;
+    rdfs:domain stu:Student ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the student."@en ;
+    rdfs:label "has name"@en .
+stu:hasAge a rdf:Property ;
+    rdfs:domain stu:Student ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The age of the student."@en ;
+    rdfs:label "has age"@en .
+stu:hasID a rdf:Property ;
+    rdfs:domain stu:Student ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The ID of the student."@en ;
+    rdfs:label "has ID"@en .
+stu:attendsUniversity a rdf:Property ;
+    rdfs:domain stu:Student ;
+    rdfs:range stu:University ;
+    rdfs:comment "The university that the student attends."@en ;
+    rdfs:label "attends university"@en .
+stu:University a rdfs:Class ;
+    rdfs:comment "An institution of higher (or tertiary) education and research."@en ;
+    rdfs:label "University"@en.stu:studiesCourse a rdf:Property ;
+    rdfs:domain stu:Student ;
+    rdfs:range stu:Course ;
+    rdfs:comment "The course that the student is studying."@en ;
+    rdfs:label "studies course"@en .
+stu:Course a rdfs:Class ;
+    rdfs:comment "A unit of instruction in one subject, lasting one academic term."@en ;
+    rdfs:label "Course"@en .
+stu:hasGrade a rdf:Property ;
+    rdfs:domain stu:Student ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The grade of the student in a particular course."@en ;
+    rdfs:label "has grade"@en .

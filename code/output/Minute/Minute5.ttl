@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix timecat: <http://www.example.com/timecategory#> .
+time:unitMinute rdf:type rdfs:Class ;
+    rdfs:label "Minute"@en ;
+    rdfs:comment "Unit of time" ;
+    rdfs:subClassOf time:TemporalUnit .
+time:Duration rdf:type rdfs:Class ;
+    rdfs:subClassOf time:TemporalEntity .
+timecat:hasUnit rdf:type rdf:Property ;
+    rdfs:label "has unit"@en ;
+    rdfs:range time:unitMinute ;
+    rdfs:domain time:Duration ;
+    rdfs:subPropertyOf time:unitType .
+timecat:hasNumericValue rdf:type rdf:Property ;
+    rdfs:label "has numeric value"@en ;
+    rdfs:domain time:Duration ;
+    rdfs:range xsd:decimal .
+_:a_time_duration rdf:type time:Duration ;
+    timecat:hasUnit time:unitMinute ;
+    timecat:hasNumericValue "45"^^xsd:decimal .
+# In the example above, a time duration is defined with a unit of Minute and a numeric value of 45.

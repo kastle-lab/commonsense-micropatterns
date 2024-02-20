@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix face: <http://www.example.com/ontologies/face#> .
+face:Face rdf:type owl:Class ;
+          rdfs:label "Face" ;
+          rdfs:comment "Concept representing a face of a human or animal" .
+face:hasEye rdf:type owl:ObjectProperty ;
+            rdfs:label "hasEye" ;
+            rdfs:comment "The face has eyes as a part of its structure" ;
+            rdfs:domain face:Face ;
+            rdfs:range face:Eye .
+face:Eye rdf:type owl:Class ;
+         rdfs:label "Eye" ;
+         rdfs:comment "Eye is a part of the face structure" .
+face:hasNose rdf:type owl:ObjectProperty ;
+             rdfs:label "hasNose" ;
+             rdfs:comment "The face has a nose as a part of its structure" ;
+             rdfs:domain face:Face ;
+             rdfs:range face:Nose .
+face:Nose rdf:type owl:Class ;
+          rdfs:label "Nose" ;
+          rdfs:comment "Nose is a part of the face structure" .
+face:hasMouth rdf:type owl:ObjectProperty ;
+              rdfs:label "hasMouth" ;
+              rdfs:comment "The face has a mouth as a part of its structure" ;
+              rdfs:domain face:Face ;
+              rdfs:range face:Mouth .
+face:Mouth rdf:type owl:Class ;
+           rdfs:label "Mouth" ;
+           rdfs:comment "Mouth is a part of the face structure" .
+      face:hasCheek rdf:type owl:ObjectProperty ;
+             rdfs:label "hasCheek" ;
+             rdfs:comment "The face has cheek as a part of its structure" ;
+             rdfs:domain face:Face ;
+             rdfs:range face:Cheek .
+face:Cheek rdf:type owl:Class ;
+           rdfs:label "Cheek" ;
+           rdfs:comment "Cheek is a part of the face structure" .

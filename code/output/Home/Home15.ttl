@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix home: <http://example.org/home#> .
+# Classeshome:Home a rdfs:Class ;
+  rdfs:label "Home"@en ;
+  rdfs:comment "A place where someone lives"@en .
+home:Room a rdfs:Class ;
+  rdfs:label "Room"@en ;
+  rdfs:comment "A part of a house delineated by walls"@en .
+home:Furniture a rdfs:Class ;
+  rdfs:label "Furniture"@en ;
+  rdfs:comment "Objects that support human activities"@en .
+# Propertieshome:hasRoom a rdf:Property ;
+  rdfs:label "has room"@en ;
+  rdfs:comment "The property that relates a home to its rooms"@en ;
+  rdfs:domain home:Home ;
+  rdfs:range home:Room .
+home:hasFurniture a rdf:Property ;
+  rdfs:label "has furniture"@en ;
+  rdfs:comment "The property that relates a room to its furniture"@en ;
+  rdfs:domain home:Room ;
+  rdfs:range home:Furniture .
+home:ownerOf a rdf:Property ;
+  rdfs:label "owner of"@en ;
+  rdfs:comment "The property that relates a person to a home they own"@en ;
+  rdfs:domain home:Person ;
+  rdfs:range home:Home .

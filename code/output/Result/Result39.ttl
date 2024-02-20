@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Action ex:produces ex:Result .
+ex:Result rdf:type ex:OutputType .
+ex:Result ex:hasTimestamp "2022-01-01T00:00:00"^^xsd:dateTime .
+ex:Result ex:hasValue "Some Value" .

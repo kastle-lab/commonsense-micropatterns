@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix units: <http://qudt.org/vocab/unit#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:Minute a rdfs:Class ;
+    rdfs:subClassOf time:TemporalUnit ;
+    rdfs:label "Minute" ;
+    rdfs:comment "A unit of time equal to 60 seconds" ;
+    owl:sameAs units:MIN ;
+    .
+time:hasTemporalDuration    a rdf:Property ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:DurationDescription ;
+    rdfs:subPropertyOf time:hasDuration ;
+    rdfs:label "has temporal duration" ;
+    rdfs:comment "The duration of the time interval, specified in terms of some time unit." ;
+.time:DurationDescription a rdfs:Class ;
+    rdfs:label "Duration description" ;
+    rdfs:comment "A description of a duration, specified using some time unit." ;
+.time:DurationDescription     rdfs:subClassOf [        a owl:Restriction ;
+        owl:onProperty time:hasTemporalDuration ;
+        owl:someValuesFrom time:Minute ;
+    ] .
+    time:second a time:TemporalUnit ;
+    rdfs:label "second"@en ;
+    .
+time:DurationDescription    rdfs:subClassOf [        a owl:Restriction ;
+        owl:onProperty time:numericDuration ;
+        owl:someValuesFrom xsd:decimal ;
+    ] .
+time:numericDuration    a rdf:Property ;
+    rdfs:domain time:TemporalUnit ;
+    rdfs:range xsd:decimal ;
+    .

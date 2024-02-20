@@ -1,0 +1,17 @@
+@prefix : <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Class definitions:Information rdf:type rdfs:Class .
+:InformationProvider rdf:type rdfs:Class .
+# Subclasses of InformationProvider:Bookseller rdf:type rdfs:Class ;
+    rdfs:subClassOf :InformationProvider .
+    :NewsAgency rdf:type rdfs:Class ;
+    rdfs:subClassOf :InformationProvider .
+    :EducationalInstitute rdf:type rdfs:Class ;
+    rdfs:subClassOf :InformationProvider .
+    # Property definitions:providesInformation rdf:type rdf:Property ;
+    rdfs:domain :InformationProvider ;
+    rdfs:range :Information .
+# Some example individuals    :NewsAgency1 rdf:type :NewsAgency .
+:NewsItem1 rdf:type :Information .
+:NewsAgency1 :providesInformation :NewsItem1 .

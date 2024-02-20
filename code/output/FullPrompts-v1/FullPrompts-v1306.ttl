@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://example.org/life#> .
+life:Human a rdfs:Class ;
+    rdfs:label "Human" ;
+    rdfs:subClassOf life:Animal .
+life:Animal a rdfs:Class ;
+    rdfs:label "Animal" ;
+    rdfs:subClassOf life:LivingBeings .
+life:LivingBeings a rdfs:Class ;
+    rdfs:label "Living Beings" ;
+    rdfs:comment "This class represents all organisms that are alive" .
+life:John a life:Human ;
+    rdfs:label "John" ;
+    rdfs:comment "John is an example of a human being" .

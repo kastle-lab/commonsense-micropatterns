@@ -1,0 +1,42 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/ontology#> .
+:Man a owl:Class ;
+    rdfs:label "Man" ;
+    rdfs:subClassOf :Human .
+:Human a owl:Class ;
+    rdfs:label "Human" .
+:hasAge a owl:DatatypeProperty ;
+    rdfs:label "has age" ;
+    rdfs:domain :Man ;
+    rdfs:range xsd:integer .
+:hasName a owl:DatatypeProperty ;
+    rdfs:label "has name" ;
+    rdfs:domain :Man ;
+    rdfs:range xsd:string .
+:hasGender a owl:DatatypeProperty ;
+    rdfs:label "has gender" ;
+    rdfs:domain :Man ;
+    rdfs:range xsd:string .
+:isMarriedTo a owl:ObjectProperty ;
+    rdfs:label "is married to" ;
+    rdfs:domain :Man ;
+    rdfs:range :Woman .
+:Woman a owl:Class ;
+    rdfs:label "Woman" ;
+    rdfs:subClassOf :Human .
+:worksAt a owl:ObjectProperty ;
+    rdfs:label "works at" ;
+    rdfs:domain :Man ;
+    rdfs:range :Workplace .
+:Workplace a owl:Class ;
+    rdfs:label "Workplace" .
+:isFatherOf a owl:ObjectProperty ;
+    rdfs:label "is father of" ;
+    rdfs:domain :Man ;
+    rdfs:range :Child .
+:Child a owl:Class ;
+    rdfs:label "Child" ;
+    rdfs:subClassOf :Human .

@@ -1,0 +1,5 @@
+@prefix : <http://example.org/> .
+:point a owl:Class .
+:provides a owl:ObjectProperty ;
+         rdfs:domain :point ;
+         rdfs:range :Thing .

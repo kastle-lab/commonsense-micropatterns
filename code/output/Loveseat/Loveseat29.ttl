@@ -1,0 +1,26 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix furniture: <http://example.org/furniture#> .
+furniture:loveseat a foaf:Thing, furniture:Furniture ;
+    furniture:partOfCategory furniture:SofaCategory ;
+    furniture:hasMaterial "Leather"^^xsd:string ;
+    furniture:hasColor "Brown"^^xsd:string ;
+    furniture:hasDimensions furniture:Dimensions ;
+        furniture:length "1.5 meters"^^xsd:string ;
+        furniture:width "1 meter"^^xsd:string ;
+        furniture:height "0.75 meters"^^xsd:string ;
+    furniture:hasCapacity "2 persons"^^xsd:string ;
+.furniture:Furniture a foaf:Class ;
+    rdfs:label "Furniture"@en ;
+.furniture:SofaCategory a foaf:Class ;
+    rdfs:label "Sofa Category"@en ;
+    rdfs:subClassOf furniture:Furniture ;
+.furniture:hasMaterial a rdf:Property ;
+    rdfs:range xsd:string ;
+.furniture:hasColor a rdf:Property ;
+    rdfs:range xsd:string ;
+.furniture:Dimensions a foaf:Class ;
+    rdfs:label "Dimensions"@en ;
+.furniture:hasCapacity a rdf:Property ;
+    rdfs:range xsd:string ;
+.

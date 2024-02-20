@@ -1,0 +1,36 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix end: <http://example.org/ontology/end#> .
+end:     a owl:Ontology ;
+    rdfs:comment "An ontology for defining the concept of End or Termination"@en .
+end:End     a owl:Class ;
+    rdfs:comment "The concept of End, Termination or Conclusion"@en ;
+    rdfs:label "End"@en .
+end:hasEnd    a owl:ObjectProperty ;
+    rdfs:domain end:Process ;
+    rdfs:range end:End ;
+    rdfs:label "has end"@en ;
+    rdfs:comment "Relates some process to its end or termination"@en .
+end:EndOfLife    a owl:Class ;
+    rdfs:label "End of life"@en ;
+    rdfs:comment "The termination of life, often referred to as death"@en ;
+    rdfs:subClassOf end:End .
+end:EndOfEvent    a owl:Class ;
+    rdfs:label "End of event"@en ;
+    rdfs:comment "The conclusion of an event"@en ;
+    rdfs:subClassOf end:End .
+end:Process    a owl:Class ;
+    rdfs:comment "A sequence of events or actions"@en ;
+    rdfs:label "Process"@en .
+end:Life    a owl:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:comment "The existence of an individual human being or animal"@en .
+end:Event    a owl:Class ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "Something that happens, especially a significant happening"@en .
+<http://example.org/entity/johns_life>    a end:Life ;
+    end:hasEnd end:EndOfLife .
+<http://example.org/entity/music_concert>    a end:Event ;
+    end:hasEnd end:EndOfEvent .

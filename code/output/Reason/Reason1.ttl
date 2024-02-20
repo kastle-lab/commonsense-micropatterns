@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix reason: <http://www.example.org/reason#> .
+#Reason conceptreason:Reason a rdfs:Class ;
+    rdfs:comment "The ability of the mind to think, understand and form judgments logically"@en ;
+    rdfs:label "Reason"@en .
+#Subclasses of Reasonreason:LogicalReasoning a rdfs:Class ;
+    rdfs:subClassOf reason:Reason ;
+    rdfs:comment "Reasoning conducted or assessed according to strict principles of validity"@en ;
+    rdfs:label "Logical Reasoning"@en .
+reason:CriticalThinking a rdfs:Class ;
+    rdfs:subClassOf reason:Reason ;
+    rdfs:comment "The objective analysis and evaluation of an issue in order to form a judgment"@en ;
+    rdfs:label "Critical Thinking"@en .
+#Properties related to Reasonreason:hasSubject a rdf:Property ;
+    rdfs:domain reason:Reason ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The subject that is being reasoned about"@en ;
+    rdfs:label "has subject"@en .
+reason:hasConclusion a rdf:Property ;
+    rdfs:domain reason:Reason ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The conclusion reached through reason"@en ;
+    rdfs:label "has conclusion"@en .
+reason:usesMethod a rdf:Property ;
+    rdfs:domain reason:Reason ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The method or technique used in reasoning"@en ;
+    rdfs:label "uses method"@en .

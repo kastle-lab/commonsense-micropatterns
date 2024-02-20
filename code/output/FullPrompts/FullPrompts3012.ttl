@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Member a rdfs:Class ;
+    rdfs:label "Member" ;
+    rdfs:comment "A member of an organization or group."@en .
+ex:memberOf a rdf:Property ;
+    rdfs:label "is a member of" ;
+    rdfs:comment "A property indicating the organization or group of which an individual is a member."@en ;
+    rdfs:domain ex:Member ;
+    rdfs:range ex:Organization .
+ex:Organization a rdfs:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "An organization or group."@en .

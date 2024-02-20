@@ -1,0 +1,40 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix case: <http://www.example.org/case/> .
+case:LegalCase a rdfs:Class ;
+  rdfs:label "Legal Case"@en ;
+  rdfs:comment "Defines a legal case or proceeding"@en .
+  case:archive a rdf:Property ;
+  rdfs:label "archive"@en ;
+  rdfs:comment "The archive where the case records are stored"@en ;
+  rdfs:domain case:LegalCase ;
+  rdfs:range xsd:string .
+  case:caseNumber a rdf:Property ;
+  rdfs:label "case number"@en ;
+  rdfs:comment "The unique number assigned to a case"@en ;
+  rdfs:domain case:LegalCase ;
+  rdfs:range xsd:string .
+  case:defendant a rdf:Property ;
+  rdfs:label "defendant"@en ;
+  rdfs:comment "The individual or party against whom the case is filed"@en ;
+  rdfs:domain case:LegalCase ;
+  rdfs:range xsd:string .
+  case:plaintiff a rdf:Property ;
+  rdfs:label "plaintiff"@en ;
+  rdfs:comment "The individual or party who filed the case"@en ;
+  rdfs:domain case:LegalCase ;
+  rdfs:range xsd:string .
+case:court a rdf:Property ;
+  rdfs:label "court"@en ;
+  rdfs:comment "The judicial institution where the case is judged"@en ;
+  rdfs:domain case:LegalCase ;
+  rdfs:range xsd:string .
+  case:dateFiled a rdf:Property ;
+  rdfs:label "date filed"@en ;
+  rdfs:comment "The date when the case was filed"@en ;
+  rdfs:domain case:LegalCase ;
+  rdfs:range xsd:date .
+case:status a rdf:Property ;
+  rdfs:label "status"@en ;
+  rdfs:comment "The current status of the case"@en ;
+  rdfs:domain case:LegalCase ;
+  rdfs:range xsd:string .

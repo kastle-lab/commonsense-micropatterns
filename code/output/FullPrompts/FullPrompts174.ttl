@@ -1,0 +1,15 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Year a rdfs:Class ;
+    rdfs:comment "A particular year in the Gregorian calendar" ;
+    rdfs:label "Year" .
+ex:hasYear a owl:DatatypeProperty ;
+    rdfs:domain ex:Entity ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Property representing the year an entity is associated with" ;
+    rdfs:label "hasYear" .
+ex:Entity a owl:Class ;
+    rdfs:comment "A generalized class for any entity which can have a year associated with it" ;
+    rdfs:label "Entity" .

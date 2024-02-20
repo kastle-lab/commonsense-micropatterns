@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix number: <http://example.com/number#> .
+number: a rdf:Property ;
+  rdfs:label "Number" ;
+  rdfs:comment "Represent all possible forms of numbers" ;
+  rdfs:range xsd:decimal ;
+  rdfs:domain rdf:Resource .
+  number:Natural a rdf:Class ;
+  rdfs:label "Natural Number" ;
+  rdfs:comment "Represent the set of all natural numbers (0, 1, 2, .
+..)" ;
+  rdfs:subClassOf number: .
+number:Integer a rdf:Class ;
+  rdfs:label "Integer" ;
+  rdfs:comment "Represent the set of all integers (... -2, -1, 0, 1, 2, .
+..)" ;
+  rdfs:subClassOf number: .
+number:Rational a rdf:Class ;
+  rdfs:label "Rational Number" ;
+  rdfs:comment "Represent the set of all rational numbers, i.e., numbers that can be expressed as ratio of two integers" ;
+  rdfs:subClassOf number: .
+number:Real a rdf:Class ;
+  rdfs:label "Real Number" ;
+  rdfs:comment "Represent the set of all real numbers including all rational and irrational numbers" ;
+  rdfs:subClassOf number: .
+number:Complex a rdf:Class ;
+  rdfs:label "Complex Number" ;
+  rdfs:comment "Represent the set of all complex numbers including real and imaginary components" ;
+  rdfs:subClassOf number: .

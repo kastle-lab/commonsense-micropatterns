@@ -1,0 +1,21 @@
+ This is by no means all-encompassing but should provide a solid starting point. This RDF/Turtle example includes basic entities and relationships related to the concept of "Life".
+ 
+@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Life rdf:type rdfs:Class .
+:Human rdf:type rdfs:Class ;
+         rdfs:subClassOf :Life .
+:Animal rdf:type rdfs:Class ;
+           rdfs:subClassOf :Life .
+:Plant rdf:type rdfs:Class ;
+          rdfs:subClassOf :Life .
+:john rdf:type :Human .
+:fluffy rdf:type :Animal .
+:rose rdf:type :Plant .
+:hasLife rdf:type rdf:Property ;
+            rdfs:domain :Life ;
+            rdfs:range :Life .
+:john :hasLife :Life .
+:fluffy :hasLife :Life .
+:rose :hasLife :Life .

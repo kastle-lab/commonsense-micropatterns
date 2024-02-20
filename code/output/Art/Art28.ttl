@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix art: <http://example.com/art#> .
+art:Art a rdfs:Class ;
+ rdfs:label "Art"@en ;
+ rdfs:comment "The concept of art which includes various forms like painting, sculpture, literature, music etc"@en .
+art:painting a rdfs:Class ;
+ rdfs:label "Painting"@en ;
+ rdfs:subClassOf art:Art .
+art:sculpture a rdfs:Class ;
+ rdfs:label "Sculpture"@en ;
+ rdfs:subClassOf art:Art .
+art:literature a rdfs:Class ;
+ rdfs:label "Literature"@en ;
+ rdfs:subClassOf art:Art .
+art:music a rdfs:Class ;
+ rdfs:label "Music"@en ;
+ rdfs:subClassOf art:Art .
+art:artist a rdfs:Class ;
+ rdfs:label "Artist"@en ;
+ rdfs:comment "An individual who creates art" .
+art:creates a rdf:Property ;
+ rdfs:label "creates"@en ;
+ rdfs:domain art:artist ;
+ rdfs:range art:Art ;
+ rdfs:comment "Reflects the relationship between an artist and the art they create" .

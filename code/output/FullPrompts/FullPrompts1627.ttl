@@ -1,0 +1,35 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/area#> .
+:Rectangle    a       :Triangle;
+    :hasBase xsd:decimal;
+    :hasHeight xsd:decimal .
+:Circle    a           :Circle;
+    :hasRadius  xsd:decimal .
+:Square    a       :Square;
+    :hasSide xsd:decimal .
+:Parallelogram    a           :Parallelogram;
+    :hasBase xsd:decimal ;
+    :hasHeight  xsd:decimal .
+:Area     a       rdfs:Class;
+    rdfs:comment  "The Area in the context of 2-dimensional shapes"@en;
+    :areaOf  :Triangle, :Square, :Rectangle, :Circle, :Parallelogram;
+    rdfs:subClassOf  xsd:decimal .
+:areaOf    a       rdf:Property;
+    rdfs:comment  "The property that defines what shape the area is associated with."@en;
+    rdfs:domain  :Area;
+    rdfs:range   :Shape .
+:hasBase     a       rdf:Property;
+    rdfs:comment  "The property that defines the base of a shape.",     rdfs:domain  :Shape;
+    rdfs:range   xsd:decimal .
+:hasHeight     a       rdf:Property;
+    rdfs:comment  "The property that defines the height of a shape.",     rdfs:domain  :Shape;
+    rdfs:range   xsd:decimal .
+:hasSide     a       rdf:Property;
+    rdfs:comment  "The property that defines the side of a shape.",     rdfs:domain  :Shape;
+    rdfs:range   xsd:decimal .
+:hasRadius     a       rdf:Property;
+    rdfs:comment  "The property that defines the radius of a shape.",     rdfs:domain  :Shape;
+    rdfs:range   xsd:decimal .
+:Shape     a       rdfs:Class;
+    rdfs:comment  "The class of 2-dimensional shapes"@en;
+    rdfs:subClassOf  rdfs:Resource .

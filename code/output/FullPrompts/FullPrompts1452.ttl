@@ -1,0 +1,2 @@
+@prefix : <http://example.org/> .
+:Home a owl:Class .

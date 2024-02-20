@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/ontology#> .
+:Part     rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Part"@en ;
+    rdfs:comment "This defines a Part in the ontology."@en ;
+    rdfs:isDefinedBy <http://example.org/ontology> .
+:partOf    rdf:type owl:ObjectProperty ;
+    rdfs:domain :Part ;
+    rdfs:range :Thing ;
+    rdfs:label "part of"@en ;
+    rdfs:comment "The property that defines what a Part is part of."@en .
+:hasPart    rdf:type owl:ObjectProperty ;
+    rdfs:domain :Thing ;
+    rdfs:range :Part ;
+    rdfs:label "has part"@en ;
+    rdfs:comment "The property that defines what things have Parts."@en .

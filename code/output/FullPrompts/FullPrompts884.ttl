@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:RootClass rdfs:subClassOf owl:Thing .
+:Number rdfs:subClassOf :RootClass ;
+    rdfs:comment "A numeral entity" ;
+    rdfs:label "Number" .
+:numberValue rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Number ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has number value" ;
+    rdfs:comment "The numerical value of the Number entity." .
+:numberType rdf:type owl:ObjectProperty ;
+    rdfs:domain :Number ;
+    rdfs:range :NumberType ;
+    rdfs:label "has number type" ;
+    rdfs:comment "The type of the Number like integer, rational, real, etc." .
+:NumberType rdfs:subClassOf :RootClass ;
+    rdfs:comment "The type of the Number entity" ;
+    rdfs:label "NumberType" .

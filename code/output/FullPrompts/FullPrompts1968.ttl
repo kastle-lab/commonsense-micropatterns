@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/health#> .
+:Health rdf:type owl:Class .
+:Patient rdf:type owl:Class .
+:Doctor rdf:type owl:Class .
+:Treatment rdf:type owl:Class .
+:hasHealth rdf:type owl:ObjectProperty ;
+  rdfs:domain :Patient ;
+  rdfs:range :Health .
+:hasDoctor rdf:type owl:ObjectProperty ;
+  rdfs:domain :Patient ;
+  rdfs:range :Doctor .
+:hasPatient rdf:type owl:ObjectProperty ;
+  rdfs:domain :Doctor ;
+  rdfs:range :Patient .
+:prescribes rdf:type owl:ObjectProperty ;
+  rdfs:domain :Doctor ;
+  rdfs:range :Treatment .
+:receives rdf:type owl:ObjectProperty ;
+  rdfs:domain :Patient ;
+  rdfs:range :Treatment .
+:Healthy rdf:type owl:NamedIndividual, :Health .
+:Sick rdf:type owl:NamedIndividual, :Health .
+:John rdf:type owl:NamedIndividual, :Patient ;
+  :hasHealth :Sick ;
+  :hasDoctor :DrSmith ;
+  :receives :Antibiotics .
+:DrSmith rdf:type owl:NamedIndividual, :Doctor ;
+  :hasPatient :John ;
+  :prescribes :Antibiotics .
+:Antibiotics rdf:type owl:NamedIndividual, :Treatment .

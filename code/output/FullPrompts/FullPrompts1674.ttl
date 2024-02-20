@@ -1,0 +1,60 @@
+@prefix : <http://www.example.com/history#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:History rdf:type owl:Class .
+:Event rdf:type owl:Class .
+:hasEvent rdf:type owl:ObjectProperty ;
+         rdfs:domain :History ;
+         rdfs:range :Event .
+:Period rdf:type owl:Class .
+:hasPeriod rdf:type owl:ObjectProperty ;
+           rdfs:domain :History ;
+           rdfs:range :Period .
+:Person rdf:type owl:Class .
+:hasInfluence rdf:type owl:ObjectProperty ;
+              rdfs:domain :Person ;
+              rdfs:range :Event, :Period .
+:Location rdf:type owl:Class .
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:domain :Event, :Period ;
+             rdfs:range :Location .
+:Date rdf:type owl:DataType ;
+      rdfs:range xsd:date .
+:hasStartDate rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Event, :Period ;
+              rdfs:range :Date .
+:hasEndDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Event, :Period ;
+            rdfs:range :Date .
+ :Civilization rdf:type owl:Class .
+:partOfCivilization rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Event, :Period, :Person ;
+                    rdfs:range :Civilization .
+ :Culture rdf:type owl:Class .
+:influencedByCulture rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Person ;
+                     rdfs:range :Culture .
+ :hasSignificance rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Event ;
+                 rdfs:range xsd:string .
+ :Battle rdf:type owl:Class ;
+        rdfs:subClassOf :Event .
+:War rdf:type owl:Class ;
+     rdfs:subClassOf :Period .
+:King rdf:type owl:Class ;
+     rdfs:subClassOf :Person .
+:Museum rdf:type owl:Class .
+:holdsArtifact rdf:type owl:ObjectProperty ;
+               rdfs:domain :Museum ;
+               rdfs:range :Artifact .
+:Artifact rdf:type owl:Class .
+:fromEvent rdf:type owl:ObjectProperty ;
+           rdfs:domain :Artifact ;
+           rdfs:range :Event .
+:fromPeriod rdf:type owl:ObjectProperty ;
+            rdfs:domain :Artifact ;
+            rdfs:range :Period .
+ :hasAuthor  rdf:type owl:ObjectProperty;
+            rdfs:domain :Artifact ;
+            rdfs:range :Person .

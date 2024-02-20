@@ -1,0 +1,27 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fo: <http://example.org/force_ontology#> .
+fo:Force rdf:type rdfs:Class ;
+    rdfs:label "Force"@en ;
+    rdfs:comment "Physical influence causing an object to undergo a change in speed, direction or shape."@en .
+fo:Magnitude rdf:type owl:DatatypeProperty ;
+    rdfs:label "has magnitude"@en ;
+    rdfs:domain fo:Force ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The magnitude representing the size of the Force."@en .
+fo:Direction rdf:type owl:DatatypeProperty ;
+    rdfs:label "has direction"@en ;
+    rdfs:domain fo:Force ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The direction in which the Force is exerted."@en .
+fo:ResultsIn rdf:type owl:ObjectProperty ;
+    rdfs:label "results in"@en ;
+    rdfs:domain fo:Force ;
+    rdfs:range fo:Change ;
+    rdfs:comment "The change caused by the force."@en .
+fo:Change rdf:type rdfs:Class ;
+    rdfs:label "Change"@en ;
+    rdfs:comment "The effect of a Force on a physical object, either changing its speed, direction or shape."@en .

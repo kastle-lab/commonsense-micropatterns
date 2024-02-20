@@ -1,0 +1,30 @@
+@prefix : <http://example.org/history/>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>:History a rdfs:Class ;
+    rdfs:label "History"@en ;
+    rdfs:comment "Representation of the field of history"@en .
+:Event a rdfs:Class ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "Historical event"@en .
+:Era a rdfs:Class ;
+    rdfs:label "Era"@en ;
+    rdfs:comment "Historical era or period"@en .
+:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "Person involved in history"@en .
+:Artifact a rdfs:Class ;
+    rdfs:label "Artifact"@en ;
+    rdfs:comment "Historical artifact"@en .
+:occursIn a rdfs:Property ;
+    rdfs:domain :Event ;
+    rdfs:range :Era ;
+    rdfs:label "occurs in"@en ;
+    rdfs:comment "Represents that a historical event occurs in a certain era"@en .
+:participatesIn a rdfs:Property ;
+    rdfs:domain :Person ;
+    rdfs:range :Event ;
+    rdfs:label "participates in"@en ;
+    rdfs:comment "Represents that a person participates in a historical event"@en .
+:discoveredAt a rdfs:Property ;
+    rdfs:domain :Artifact ;
+    rdfs:range :Event ;
+    rdfs:label "discovered at"@en ;
+    rdfs:comment "Represents that an artifact was discovered at a historical event"@en .

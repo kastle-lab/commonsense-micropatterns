@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ontology: <http://example.org/ontology#> .
+ontology:IntegerNumber    rdf:type rdfs:Class ;
+    rdfs:label "Integer Number"@en ;
+    rdfs:subClassOf ontology:Number ;
+    rdfs:comment "Classification of numbers that are integer in nature"@en .
+ontology:RealNumber    rdf:type rdfs:Class ;
+    rdfs:label "Real Number"@en ;
+    rdfs:subClassOf ontology:Number ;
+    rdfs:comment "Classification of numbers that are real in nature"@en .
+ontology:ComplexNumber    rdf:type rdfs:Class ;
+    rdfs:label "Complex Number"@en ;
+    rdfs:subClassOf ontology:Number ;
+    rdfs:comment "Classification of numbers that are complex in nature"@en .
+ontology:Number    rdf:type rdfs:Class ;
+    rdfs:label "Number"@en ;
+    rdfs:comment "Abstract entity representing a base concept of all number types"@en .

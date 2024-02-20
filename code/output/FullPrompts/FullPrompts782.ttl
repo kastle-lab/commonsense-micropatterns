@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix govt: <http://www.example.org/govt#> .
+govt:Government rdf:type owl:Class ;
+    rdfs:comment "A class representing Governments" ;
+    rdfs:label "Government" .
+govt:Executive rdf:type owl:Class ;
+    rdfs:subClassOf govt:Government ;
+    rdfs:comment "A class representing the executive branch of government" ;
+    rdfs:label "Executive" .
+govt:Legislative rdf:type owl:Class ;
+    rdfs:subClassOf govt:Government ;
+    rdfs:comment "A class representing the legislative branch of government" ;
+    rdfs:label "Legislative" .
+govt:Judiciary rdf:type owl:Class ;
+    rdfs:subClassOf govt:Government ;
+    rdfs:comment "A class representing the judiciary branch of government" ;
+    rdfs:label "Judiciary" .
+govt:Republic rdf:type owl:Class ;
+    rdfs:subClassOf govt:Government ;
+    rdfs:comment "A class representing republic governments" ;
+    rdfs:label "Republic" .
+govt:Democracy rdf:type owl:Class ;
+    rdfs:subClassOf govt:Government ;
+    rdfs:comment "A class representing democratic governments" ;
+    rdfs:label "Democracy" .
+govt:Monarchy rdf:type owl:Class ;
+    rdfs:subClassOf govt:Government ;
+    rdfs:comment "A class representing monarchical governments" ;
+    rdfs:label "Monarchy" .
+govt:Federal rdf:type owl:Class ;
+    rdfs:subClassOf govt:Government ;
+    rdfs:comment "A class representing federal governments" ;
+    rdfs:label "Federal" .
+govt:Policy rdf:type owl:Class ;
+    rdfs:comment "A class representing government policies" ;
+    rdfs:label "Policy" .
+govt:Regulation rdf:type owl:Class ;
+    rdfs:comment "A class representing government regulations" ;
+    rdfs:label "Regulation" .

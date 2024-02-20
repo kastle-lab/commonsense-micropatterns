@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/business#> .
+:Business rdf:type rdfs:Class .
+:hasName rdf:type rdf:Property ;
+         rdfs:domain :Business ;
+         rdfs:range xsd:string .
+         :hasLocation rdf:type rdf:Property ;
+             rdfs:domain :Business ;
+             rdfs:range xsd:string .
+:hasEmployee rdf:type rdf:Property ;
+             rdfs:domain :Business ;
+             rdfs:range :Employee .
+:Employee rdf:type rdfs:Class .

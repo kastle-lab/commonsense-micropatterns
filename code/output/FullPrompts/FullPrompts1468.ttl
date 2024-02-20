@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sch: <http://example.org/school#> .
+sch:School    rdf:type rdfs:Class ;
+    rdfs:comment "The class of all schools."@en ;
+    rdfs:label "School"@en .
+sch:Teacher    rdf:type rdfs:Class ;
+    rdfs:comment "The class of all teachers."@en ;
+    rdfs:label "Teacher"@en .
+sch:Student    rdf:type rdfs:Class ;
+    rdfs:comment "The class of all students."@en ;
+    rdfs:label "Student"@en .
+sch:hasTeacher    rdf:type rdf:Property ;
+    rdfs:domain sch:School ;
+    rdfs:range sch:Teacher ;
+    rdfs:comment "The relation that connects a school with its teachers."@en ;
+    rdfs:label "has teacher"@en .
+sch:hasStudent    rdf:type rdf:Property ;
+    rdfs:domain sch:School ;
+    rdfs:range sch:Student ;
+    rdfs:comment "The relation that connects a school with its students."@en ;
+    rdfs:label "has student"@en .
+sch:teachesAt    rdf:type rdf:Property ;
+    rdfs:domain sch:Teacher ;
+    rdfs:range sch:School ;
+    rdfs:comment "The relation that connects a teacher with their school."@en ;
+    rdfs:label "teaches at"@en .
+sch:studiesAt    rdf:type rdf:Property ;
+    rdfs:domain sch:Student ;
+    rdfs:range sch:School ;
+    rdfs:comment "The relation that connects a student with their school."@en ;
+    rdfs:label "studies at"@en .
+sch:Course    rdf:type rdfs:Class ;
+    rdfs:comment "The class of all courses."@en ;
+    rdfs:label "Course"@en .
+sch:teachesCourse    rdf:type rdf:Property ;
+    rdfs:domain sch:Teacher ;
+    rdfs:range sch:Course ;
+    rdfs:comment "The relation that connects a teacher with their course."@en ;
+    rdfs:label "teaches course"@en .
+sch:isEnrolledIn    rdf:type rdf:Property ;
+    rdfs:domain sch:Student ;
+    rdfs:range sch:Course ;
+    rdfs:comment "The relation that connects a student with their course."@en ;
+    rdfs:label "is enrolled in"@en .

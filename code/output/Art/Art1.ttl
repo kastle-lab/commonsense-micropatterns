@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix art: <http://www.example.org/art#> .
+art:ArtWork   rdf:type rdfs:Class ;
+  rdfs:label "Art Work"@en ;
+  rdfs:comment "A work of art, which could be a painting, sculpture, installation or other form of artistic creation."@en ;
+.art:Artist  rdf:type rdfs:Class ;
+  rdfs:label "Artist"@en ;
+  rdfs:comment "An individual who creates artwork."@en ;
+.art:style  rdf:type rdf:Property ;
+  rdfs:domain art:ArtWork ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "style"@en ;
+  rdfs:comment "The style in which an art work is produced, such as impressionism, cubism, surrealism etc."@en ;
+.art:medium   rdf:type rdf:Property ;
+  rdfs:domain art:ArtWork ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "medium"@en ;
+  rdfs:comment "The medium used in creation of the art work, such as oil, watercolor, digital, etc."@en ;
+.art:createdBy   rdf:type rdf:Property ;
+  rdfs:domain art:ArtWork ;
+  rdfs:range art:Artist ;
+  rdfs:label "created by"@en ;
+  rdfs:comment "The artist who created the art work."@en ;
+.art:Artist  rdf:type rdfs:Class ;
+  rdfs:label "Artist"@en ;
+  rdfs:comment "An individual who creates art."@en.art:birthDate   rdf:type rdf:Property ;
+  rdfs:domain art:Artist ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "date of birth"@en ;
+  rdfs:comment "The birth date of the artist."@en;
+.art:nationality  rdf:type rdf:Property ;
+  rdfs:domain art:Artist ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "nationality"@en ;
+  rdfs:comment "The nationality of the artist."@en ;
+.

@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://www.example.org/air#> .
+air:Air a rdfs:Class ;
+    rdfs:label "Air" ;
+    rdfs:comment "The mixture of gases surrounding the earth and forming its atmosphere"@en .
+air:CarbonDioxide a rdfs:Class ;
+    rdfs:subClassOf air:Air ;
+    rdfs:label "Carbon Dioxide" ;
+    rdfs:comment "A heavy colorless gas that does not support combustion, dissolved in oceans and exhaled by animals, absorbed by plants in photosynthesis"@en .
+    air:Nitrogen a rdfs:Class ;
+    rdfs:subClassOf air:Air ;
+    rdfs:label "Nitrogen" ;
+    rdfs:comment "A colorless, odorless unreactive gas that forms about 78 percent of the earth's atmosphere"@en .
+    air:Oxygen a rdfs:Class ;
+    rdfs:subClassOf air:Air ;
+    rdfs:label "Oxygen" ;
+    rdfs:comment "A colorless, odorless reactive gas, the life-supporting component of the air"@en .
+    air:hasVolume a rdf:Property ;
+    rdfs:label "has volume" ;
+    rdfs:comment "The volume of the air"@en ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:decimal .
+    air:hasPressure a rdf:Property ;
+    rdfs:label "has pressure" ;
+    rdfs:comment "The pressure of the air"@en ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:decimal .
+    air:hasTemperature a rdf:Property ;
+    rdfs:label "has temperature" ;
+    rdfs:comment "The temperature of the air"@en ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:decimal .

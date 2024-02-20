@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix side: <http://www.example.org/side#> .
+side:     rdf:type rdfs:Class ;
+    rdfs:comment "A class representing the concept of side in a spacial context or a situation."@en ;
+    rdfs:label "Side" .
+side:LeftSide     rdf:type rdfs:Class ;
+    rdfs:subClassOf side: ;
+    rdfs:comment "A class representing the left side, in relation to an object or situation."@en ;
+    rdfs:label "Left Side" .
+side:RightSide     rdf:type rdfs:Class ;
+    rdfs:subClassOf side: ;
+    rdfs:comment "A class representing the right side, in relation to an object or situation."@en ;
+    rdfs:label "Right Side" .
+side:TopSide     rdf:type rdfs:Class ;
+    rdfs:subClassOf side: ;
+    rdfs:comment "A class representing the top side, in relation to an object."@en ;
+    rdfs:label "Top Side" .
+side:BottomSide     rdf:type rdfs:Class ;
+    rdfs:subClassOf side: ;
+    rdfs:comment "A class representing the bottom side, in relation to an object."@en ;
+    rdfs:label "Bottom Side" .
+side:InteriorSide     rdf:type rdfs:Class ;
+    rdfs:subClassOf side: ;
+    rdfs:comment "A class representing the interior side, in relation to a closed object or area."@en ;
+    rdfs:label "Interior Side" .
+side:ExteriorSide     rdf:type rdfs:Class ;
+    rdfs:subClassOf side: ;
+    rdfs:comment "A class representing the exterior side, in relation to a closed object or area."@en ;
+    rdfs:label "Exterior Side" .

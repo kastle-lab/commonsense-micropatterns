@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix reason: <http://example.org/reason#> .
+# Class definitionsreason:Reason a owl:Class ;
+    rdfs:comment "A representation of a reason or rationale for something."@en ;
+    rdfs:label "Reason"@en .
+reason:CausalReason a owl:Class ;
+    rdfs:subClassOf reason:Reason ;
+    rdfs:comment "A type of reason that explains something on the basis of cause-effect relationship."@en ;
+    rdfs:label "Causal Reason"@en .
+reason:JustifyingReason a owl:Class ;
+    rdfs:subClassOf reason:Reason ;
+    rdfs:comment "A type of reason used for providing justification or rationale for an action or event."@en ;
+    rdfs:label "Justifying Reason"@en .
+# Property definitionsreason:hasReason a owl:ObjectProperty ;
+    rdfs:domain [ a owl:ClassUnionOf ( owl:Thing ) ] ;
+    rdfs:range reason:Reason ;
+    rdfs:comment "Relates an entity to the reason or rationale behind its existence or occurrence."@en ;
+    rdfs:label "has reason"@en .
+reason:explainedBy a owl:ObjectProperty ;
+    rdfs:domain reason:Reason ;
+    rdfs:range [ a owl:ClassUnionOf ( owl:Thing ) ] ;
+    rdfs:comment "Links a reason to the event, action, or entity that it explains or justifies."@en ;
+    rdfs:label "is explained by"@en .

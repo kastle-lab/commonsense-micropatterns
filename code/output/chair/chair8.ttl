@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix furniture: <http://example.org/furniture#> .
+furniture:Chair rdf:type owl:Class ;
+    rdfs:label "Chair" ;
+    rdfs:comment "A piece of furniture designed to seat one person, typically consisting of a back, a seat, and four legs."@en ;
+    rdfs:subClassOf furniture:Furniture .
+    furniture:hasLegs rdf:type owl:DatatypeProperty ;
+    rdfs:label "has legs" ;
+    rdfs:comment "The number of legs the piece of furniture has."@en ;
+    rdfs:domain furniture:Furniture ;
+    rdfs:range xsd:integer .
+furniture:hasBack rdf:type owl:ObjectProperty ;
+    rdfs:label "has back" ;
+    rdfs:comment "Indicates if the chair has a back"@en ;
+    rdfs:domain furniture:Chair ;
+    rdfs:range xsd:boolean .
+furniture:hasArmrests rdf:type owl:ObjectProperty ;
+    rdfs:label "has armrests" ;
+    rdfs:comment "Indicates if the chair has armrests"@en ;
+    rdfs:domain furniture:Chair ;
+    rdfs:range xsd:boolean  .
+furniture:material rdf:type owl:ObjectProperty ;
+    rdfs:label "made of" ;
+    rdfs:comment "Indicates the material the chair is made of"@en ;
+    rdfs:domain furniture:Chair ;
+    rdfs:range furniture:Material .
+furniture:Material rdf:type owl:Class ;
+    rdfs:label "Material" ;
+    rdfs:comment "The type of material a piece of furniture is made from."@en ;
+furniture:Wood rdf:type furniture:Material ;
+    rdfs:label "Wood" ;
+    rdfs:comment "A type of hard material derived from trees."@en .
+furniture:Metal rdf:type furniture:Material ;
+    rdfs:label "Metal" ;
+    rdfs:comment "A type of hard material derived from mining."@en .
+furniture:Plastic rdf:type furniture:Material ;
+    rdfs:label "Plastic" ;
+    rdfs:comment "A type of synthetic or semi-synthetic materials."@en .

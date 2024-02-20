@@ -1,0 +1,48 @@
+@prefix sch: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix g: <http://www.guyontology.com/> .
+# Class declarationsg:Guy a rdfs:Class ;
+    rdfs:label "Guy" ;
+    rdfs:comment "Representation of a guy named Guy" .
+g:Job a rdfs:Class ;
+    rdfs:label "Job" ;
+    rdfs:comment "Representation of a job in Guy's career" .
+g:Hobby a rdfs:Class ;
+    rdfs:label "Hobby" ;
+    rdfs:comment "Representation of Guy's hobby" .
+# Property declarationsg:hasJob a rdfs:Property ;
+    rdfs:label "has job" ;
+    rdfs:domain g:Guy ;
+    rdfs:range g:Job ;
+    rdfs:comment "The job that Guy currently has" .
+g:hasHobby a rdfs:Property ;
+    rdfs:label "has hobby" ;
+    rdfs:domain g:Guy ;
+    rdfs:range g:Hobby ;
+    rdfs:comment "The hobby that Guy currently pursues" .
+g:birthdate a rdfs:Property ;
+    rdfs:label "birthdate" ;
+    rdfs:domain g:Guy ;
+    rdfs:range xsd:Date ;
+    rdfs:comment "Guy's date of birth" .
+g:name a rdfs:Property ;
+    rdfs:label "name" ;
+    rdfs:domain g:Guy ;
+    rdfs:range xsd:Text ;
+    rdfs:comment "Guy's name" .
+g:location a rdfs:Property ;
+    rdfs:label "location" ;
+    rdfs:domain g:Guy ;
+    rdfs:range xsd:Text ;
+    rdfs:comment "Guy's current location" .
+# Individual declarationsg:GuyInstance a g:Guy ;
+    g:name "Guy" ;
+    g:birthdate "1985-05-10"^^xsd:Date ;
+    g:location "New York" .
+g:Developer a g:Job ;
+    rdfs:label "Developer" .
+g:Photography a g:Hobby ;
+    rdfs:label "Photography" .
+# Relationshipsg:GuyInstance g:hasJob g:Developer .
+g:GuyInstance g:hasHobby g:Photography .

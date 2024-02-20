@@ -1,0 +1,7 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+<http://example.com/ontology/Life>    rdf:type owl:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:comment "The condition that distinguishes organisms from inorganic objects and dead organisms, being manifested by growth through metabolism, reproduction, and the power of adaptation to environment through changes originating internally."@en ;
+    rdfs:subClassOf <http://example.com/ontology/BiologicalPhenomenon> .

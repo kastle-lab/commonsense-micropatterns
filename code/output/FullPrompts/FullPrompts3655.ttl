@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+ @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://example.org/Party#123> a foaf:Event ;
+   foaf:name "Birthday Party"^^xsd:string ;
+   foaf:topic "Celebration of John's 30th Birthday"^^xsd:string ;
+   foaf:maker <http://example.org/Person#John> ;
+   foaf:member <http://example.org/Person#Alice> ;
+   foaf:member <http://example.org/Person#Bob> .
+<http://example.org/Person#John> a foaf:Person ;
+   foaf:name "John"^^xsd:string .
+<http://example.org/Person#Alice> a foaf:Person ;
+   foaf:name "Alice"^^xsd:string .
+<http://example.org/Person#Bob> a foaf:Person ;
+   foaf:name "Bob"^^xsd:string .

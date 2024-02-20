@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix memb: <http://example.com/membership_ontology#> .
+memb:Member rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a member" ;
+    rdfs:label "Member" .
+memb:id rdf:type rdf:Property ;
+    rdfs:domain memb:Member ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The unique identifier of a member" ;
+    rdfs:label "member id" .
+memb:name rdf:type rdf:Property ;
+    rdfs:domain memb:Member ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of a member" ;
+    rdfs:label "member name" .
+memb:email rdf:type rdf:Property ;
+    rdfs:domain memb:Member ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The email address of a member" ;
+    rdfs:label "member email" .
+memb:joinedDate rdf:type rdf:Property ;
+    rdfs:domain memb:Member ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The date when the member joined" ;
+    rdfs:label "member joined date" .
+memb:membershipType rdf:type rdf:Property ;
+    rdfs:domain memb:Member ;
+    rdfs:range memb:MembershipType ;
+    rdfs:comment "The type of membership of a member" ;
+    rdfs:label "membership type" .
+memb:MembershipType rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a membership type" ;
+    rdfs:label "Membership Type" .

@@ -1,0 +1,15 @@
+@prefix ns: <http://www.example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ns:War     a rdfs:Class ;
+    rdfs:label "War"@en ;
+    rdfs:comment "A state of armed conflict between different countries or different groups within a country"@en .
+ns:participatingCountry    a owl:ObjectProperty ;
+    rdfs:label "participating country"@en ;
+    rdfs:domain ns:War ;
+    rdfs:range ns:Country.ns:casualty    a owl:DatatypeProperty ;
+    rdfs:label "casualty"@en ;
+    rdfs:domain ns:War ;
+    rdfs:range xsd:integer.ns:Country     a rdfs:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A nation with its own government, occupying a particular territory"@en .

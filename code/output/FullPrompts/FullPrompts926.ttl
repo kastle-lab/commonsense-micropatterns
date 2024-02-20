@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Define the class Groupex:Group a rdfs:Class ;
+# Define propertiesex:hasMember a rdf:Property ;
+  rdfs:domain ex:Group ;
+  rdfs:range ex:Person .
+ex:hasLeader a rdf:Property ;
+  rdfs:domain ex:Group ;
+  rdfs:range ex:Person .
+# Define individualsex:GroupA a ex:Group .
+ex:PersonA a ex:Person ;
+  rdfs:label "Person A" .
+ex:PersonB a ex:Person ;
+  rdfs:label "Person B" .
+# Assign propertiesex:GroupA ex:hasLeader ex:PersonA ;
+  ex:hasMember ex:PersonB .

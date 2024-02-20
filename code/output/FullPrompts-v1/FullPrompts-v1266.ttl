@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/world#> .
+ex:World rdf:type rdf:Class .
+# Subclasses or Instances in the Worldex:Continent rdf:type rdf:Class ;
+    rdfs:subClassOf ex:World .
+ex:Ocean rdf:type rdf:Class ;
+    rdfs:subClassOf ex:World .
+ex:People rdf:type rdf:Class ;
+    rdfs:subClassOf ex:World .
+# Few Instancesex:Asia rdf:type ex:Continent .
+ex:Indian rdf:type ex:Ocean .
+# Propertiesex:hasPeople rdf:type rdf:Property ;
+    rdfs:domain ex:World ;
+    rdfs:range ex:People .
+ex:hasArea rdf:type rdf:Property ;
+    rdfs:domain ex:Continent ;
+    rdfs:range xsd:integer .
+# Area of Asiaex:Asia ex:hasArea 44040000 .
+# People Relationex:Asia ex:hasPeople ex:People .

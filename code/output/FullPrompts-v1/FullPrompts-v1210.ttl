@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix man: <http://example.org/man#> .
+man:Man rdf:type rdfs:Class ;
+  rdfs:comment "A class representing a human being who is male."@en .
+man:hasName rdf:type owl:DatatypeProperty ;
+  rdfs:domain man:Man ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The given name of a man.".
+ man:hasAge rdf:type owl:DatatypeProperty ;
+  rdfs:domain man:Man ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The age of a man." .
+man:hasNationality rdf:type owl:ObjectProperty ;
+  rdfs:domain man:Man ;
+  rdfs:range man:Country ;
+  rdfs:comment "The nationality of a man." .
+man:Country rdf:type rdfs:Class ;
+  rdfs:comment "A class representing a country." .
+man:bornIn rdf:type owl:ObjectProperty ;
+  rdfs:domain man:Man ;
+  rdfs:range man:Country ;
+  rdfs:comment "The birth place of a man." .
+man:hasJob rdf:type owl:ObjectProperty ;
+  rdfs:domain man:Man ;
+  rdfs:Range man:Job ;
+  rdfs:comment "The job of a man." .
+man:Job rdf:type rdfs:Class ;
+  rdfs:comment "A class representing a job." .

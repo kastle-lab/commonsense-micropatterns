@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.org/day#> .
+day:Day a rdfs:Class ;
+    rdfs:label "Day" ;
+    rdfs:comment "Representation of a Day in a week or a calendar day" .
+day:hasDayOfWeek a rdf:Property ;
+    rdfs:label "has day of week" ;
+    rdfs:comment "The day of the week it is" ;
+    rdfs:domain day:Day ;
+    rdfs:range rdfs:Literal .
+day:hasDate a rdf:Property ;
+    rdfs:label "has date" ;
+    rdfs:comment "The calendar date of the Day" ;
+    rdfs:domain day:Day ;
+    rdfs:range xsd:date .

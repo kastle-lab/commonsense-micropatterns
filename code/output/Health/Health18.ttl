@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/health#> .
+:Health a rdfs:Class ;
+  rdfs:label "Health"@en ;
+  rdfs:comment "Concept related to all aspects of health, including physical, mental and social aspects."@en .
+:PhysicalHealth a rdfs:Class ;
+  rdfs:subClassOf :Health ;
+  rdfs:label "Physical Health"@en ;
+  rdfs:comment "Concept related to physical well-being."@en .
+:MentalHealth a rdfs:Class ;
+  rdfs:subClassOf :Health ;
+  rdfs:label "Mental Health"@en ;
+  rdfs:comment "Concept related to mental well-being."@en .
+:SocialHealth a rdfs:Class ;
+  rdfs:subClassOf :Health ;
+  rdfs:label "Social Health"@en ;
+  rdfs:comment "Concept related to social well-being."@en .
+:hasGymMembership a rdf:Property ;
+  rdfs:domain :Person ;
+  rdfs:range :GymMembership ;
+  rdfs:label "has gym membership"@en ;
+  rdfs:comment "Indicates if a person has a gym membership or not."@en .
+  :GymMembership a rdfs:Class ;
+  rdfs:label "Gym Membership"@en ;
+  rdfs:comment "A membership that allows a person to access a gym facility."@en .
+:Person a rdfs:Class ;
+  rdfs:label "Person"@en ;
+  rdfs:comment "A human individual."@en .

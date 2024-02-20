@@ -1,0 +1,12 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.com/> .
+:Woman a rdfs:Class .
+:Woman rdfs:subClassOf :Human .
+:name a rdfs:DatatypeProperty ;
+  rdfs:domain :Woman .
+  :age a rdfs:DatatypeProperty ;
+  rdfs:domain :Woman ;
+  rdfs:range rdfs:Literal .
+:hasChild a rdfs:ObjectProperty ;
+  rdfs:domain :Woman ;
+  rdfs:range :Human .

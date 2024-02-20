@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix com: <http://www.example.com/communities#> .
+com:Community     rdf:type owl:Class ;
+    rdfs:label "Community"@en ;
+    rdfs:comment "A group of people living in the same place or having a particular characteristic in common"@en .
+com:name    rdf:type owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:domain com:Community ;
+    rdfs:range xsd:string .
+com:hasMember     rdf:type owl:ObjectProperty ;
+    rdfs:label "has member"@en ;
+    rdfs:domain com:Community ;
+    rdfs:range com:Member .
+com:Member     rdf:type owl:Class ;
+    rdfs:label "Member"@en ;
+    rdfs:comment "An individual belongs to a community"@en .
+com:locatedIn    rdf:type owl:ObjectProperty ;
+    rdfs:label "located in"@en ;
+    rdfs:domain com:Community ;
+    rdfs:range com:Location .
+com:Location     rdf:type owl:Class ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "The geographical area where a community is based"@en .
+    com:population      rdf:type owl:DatatypeProperty ;
+    rdfs:label "population"@en ;
+    rdfs:domain com:Community ;
+    rdfs:range xsd:integer .

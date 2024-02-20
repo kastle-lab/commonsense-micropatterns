@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.example.com/person#> .
+person:Person a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human being regardless of age, gender, or other specification"@en ;
+    rdfs:subClassOf owl:Thing .
+person:hasName a owl:DatatypeProperty ;
+    rdfs:label "has name"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range xsd:string .
+person:hasAge a owl:DatatypeProperty ;
+    rdfs:label "has age"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range xsd:int .
+person:hasGender a owl:DatatypeProperty ;
+    rdfs:label "has gender"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range xsd:string .
+person:isMarriedTo a owl:ObjectProperty ;
+    rdfs:label "is married to"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range person:Person .
+person:hasChild a owl:ObjectProperty ;
+    rdfs:label "has child"@en ;
+    rdfs:domain person:Person ;
+    rdfs:range person:Person .

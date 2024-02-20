@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix office: <http://www.example.org/office#> .
+office: contains rdfs:subPropertyOf rdf:Property .
+office:Office a rdfs:Class ;
+  rdfs:label "Office"@en ;
+  rdfs:comment "A place where people work, often within an organization."@en .
+office:Employee a rdfs:Class ;
+  rdfs:label "Employee"@en ;
+  rdfs:comment "A person who works at an Office."@en .
+office:Desk a rdfs:Class ;
+  rdfs:label "Desk"@en ;
+  rdfs:comment "A piece of furniture with a flat surface, used for working at."@en .
+office:Chair a rdfs:Class ;
+  rdfs:label "Chair"@en ;
+  rdfs:comment "A piece of furniture for someone to sit on, usually with four legs and a back."@en .
+office:Computer a rdfs:Class ;
+  rdfs:label "Computer"@en ;
+  rdfs:comment "An electronic device for storing and processing data."@en .
+office:contains a rdf:Property ;
+  rdfs:label "contains"@en ;
+  rdfs:domain office:Office ;
+  rdfs:range rdfs:Resource .
+office:worksAt a rdf:Property ;
+  rdfs:label "works at"@en ;
+  rdfs:domain office:Employee ;
+  rdfs:range office:Office .
+office:uses a rdf:Property ;
+  rdfs:label "uses"@en ;
+  rdfs:domain office:Employee ;
+  rdfs:range rdfs:Resource .

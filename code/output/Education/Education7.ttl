@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edu: <http://www.example.org/education#> .
+edu:EducationCourse a owl:Class ;
+    rdfs:label "Education Course" ;
+    rdfs:comment "A class teaching specific subject within an education setting." .
+edu:Student a owl:Class ;
+    rdfs:label "Student" ;
+    rdfs:comment "A person enrolled in an education course or school." .
+edu:Teacher a owl:Class ;
+    rdfs:label "Teacher" ;
+    rdfs:comment "A professional who instructs students in a specific subject or skill." .
+edu:teaches a owl:ObjectProperty ;
+    rdfs:domain edu:Teacher ;
+    rdfs:range edu:EducationCourse ;
+    rdfs:label "teaches" ;
+    rdfs:comment "Links a teacher with a course that they teach." .
+edu:studies a owl:ObjectProperty ;
+    rdfs:domain edu:Student ;
+    rdfs:range edu:EducationCourse ;
+    rdfs:label "studies" ;
+    rdfs:comment "Links a student with a course that they study." .
+edu:name a owl:DatatypeProperty ;
+    rdfs:domain [ owl:unionOf (edu:Student edu:Teacher edu:EducationCourse) ] ;
+    rdfs:range xsd:string ;
+    rdfs:label "name" ;
+    rdfs:comment "Indicates the name of a course, student or teacher." .
+edu:age a owl:DatatypeProperty ;
+    rdfs:domain edu:Student ;
+    rdfs:range xsd:integer ;
+    rdfs:label "age" ;
+    rdfs:comment "Indicates the age of a student." .
+edu:subject a owl:DatatypeProperty ;
+    rdfs:domain edu:EducationCourse ;
+    rdfs:range xsd:string ;
+    rdfs:label "subject" ;
+    rdfs:comment "Indicates the subject of a course." .

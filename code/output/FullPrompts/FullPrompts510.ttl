@@ -1,0 +1,45 @@
+@prefix : <http://www.example.org#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Part a rdfs:Class ;
+  rdfs:label "Part" ;
+  rdfs:comment "A part or piece of something" ;
+.:hasPart a rdfs:Property ;
+  rdfs:label "has part" ;
+  rdfs:comment "Indicates that an entity includes this part" ;
+  rdfs:domain :Part ;
+  rdfs:range :Part ;
+.:isPartOf a rdfs:Property ;
+  rdfs:label "is part of" ;
+  rdfs:comment "Indicates that a part is included in this entity" ;
+  rdfs:domain :Part ;
+  rdfs:range :Part ;
+.:belongsTo a rdfs:Property ;
+  rdfs:label "belongs to" ;
+  rdfs:comment "Indicates the link between a part and its whole" ;
+  rdfs:domain :Part ;
+.  :partId a rdfs:Property ;
+  rdfs:label "ID" ;
+  rdfs:comment "Unique identifier for a part" ;
+  rdfs:domain :Part ;
+.:partName a rdfs:Property ;
+  rdfs:label "Name" ;
+  rdfs:comment "Name of a part" ;
+  rdfs:domain :Part ;
+.:partDescription a rdfs:Property ;
+  rdfs:label "Description" ;
+  rdfs:comment "Detailed information about a part" ;
+  rdfs:domain :Part ;
+.:partType a rdfs:Property ;
+  rdfs:label "Type" ;
+  rdfs:comment "Type or category of a part" ;
+  rdfs:domain :Part ;
+. :partManufacturer a rdfs:Property ;
+  rdfs:label "Manufacturer" ;
+  rdfs:comment "Company or person that made the part" ;
+  rdfs:domain :Part ;
+ .
+ :partModel a rdfs:Property ;
+  rdfs:label "Model" ;
+  rdfs:comment "The model number or name of the part" ;
+  rdfs:domain :Part ;
+.

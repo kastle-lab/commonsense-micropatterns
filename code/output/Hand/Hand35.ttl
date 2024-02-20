@@ -1,0 +1,5 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Hand a rdfs:Class ;
+  rdfs:comment "A human hand"@en ;
+  rdfs:label "Hand"@en .

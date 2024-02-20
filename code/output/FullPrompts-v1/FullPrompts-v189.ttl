@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://example.org/Way#> .
+way:Way rdf:type rdfs:Class ;
+        rdfs:label "Way" ;
+        rdfs:comment "A method, style, direction or manner in which something can be done or occurs." .
+way:Method rdf:type rdfs:Class ;
+            rdfs:subClassOf way:Way ;
+            rdfs:label "Method" ;
+            rdfs:comment "A particular procedure for accomplishing or approaching something." .
+way:Manner rdf:type rdfs:Class ;
+            rdfs:subClassOf way:Way ;
+            rdfs:label "Manner" ;
+            rdfs:comment "A way in which a thing is done or happens." .
+way:Direction rdf:type rdfs:Class ;
+            rdfs:subClassOf way:Way ;
+            rdfs:label "Direction" ;
+            rdfs:comment "A course along which an object or person moves." .
+way:Style rdf:type rdfs:Class ;
+            rdfs:subClassOf way:Way ;
+            rdfs:label "Style" ;
+            rdfs:comment "A way of doing things, especially in a fashionable or distinctive manner." .

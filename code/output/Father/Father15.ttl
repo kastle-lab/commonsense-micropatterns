@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/#> .
+ex:Father a rdfs:Class ;
+  rdfs:label "Father" ;
+  rdfs:comment "A person that has begotten a child, also known as a male parent." .
+ex:hasFather a rdf:Property ;
+  rdfs:label "has father" ;
+  rdfs:comment "A property indicating a person's father." ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Father .
+ex:isFatherOf a rdf:Property ;
+  rdfs:label "is father of" ;
+  rdfs:comment "A property indicating a person to whom one is a father." ;
+  rdfs:domain ex:Father ;
+  rdfs:range ex:Person .

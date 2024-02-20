@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix thing: <http://www.example.org/thing#> .
+thing:Thing rdf:type rdfs:Class ;
+    rdfs:label "Thing"@en ;
+    rdfs:comment "This is a general class encompassing all things."@en .
+thing:PhysicalThing rdf:type rdfs:Class ;
+    rdfs:subClassOf thing:Thing ;
+    rdfs:label "Physical Thing"@en ;
+    rdfs:comment "This class includes all physical things that you can perceive with your senses"@en .
+thing:AbstractThing rdf:type rdfs:Class ;
+    rdfs:subClassOf thing:Thing ;
+    rdfs:label "Abstract Thing"@en ;
+    rdfs:comment "This class includes all abstract things that you cannot perceive with your senses "@en .

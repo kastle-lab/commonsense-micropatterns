@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+# Class Definitionex:Teacher a rdfs:Class ;
+     rdfs:label "Teacher"@en ;
+     rdfs:comment "A class representing a person who teaches, especially in a school."@en ;
+     rdfs:subClassOf ex:Person .
+# Property Definitionsex:teachesSubject a rdf:Property ;
+     rdfs:label "teaches subject"@en ;
+     rdfs:comment "The subject that the teacher teaches."@en ;
+     rdfs:domain ex:Teacher ;
+     rdfs:range xsd:string .
+     ex:hasYearsOfExperience a rdf:Property ;
+     rdfs:label "has years of experience"@en ;
+     rdfs:comment "The number of years the teacher has been teaching."@en ;
+     rdfs:domain ex:Teacher ;
+     rdfs:range xsd:integer .
+     ex:worksAt a rdf:Property ;
+    rdfs:label "works at"@en ;
+    rdfs:comment "The school or institution where the teacher works."@en ;
+    rdfs:domain ex:Teacher ;
+    rdfs:range ex:School .
+# Individual Definitionex:JohnDoe a ex:Teacher ;
+    ex:teachesSubject "Math" ;
+    ex:hasYearsOfExperience 15 ;
+    ex:worksAt ex:CentralHighSchool .
+ex:CentralHighSchool a ex:School ;
+     rdfs:label "Central High School"@en .

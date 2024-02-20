@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://example.org/air#> .
+air:     rdf:type rdfs:Class ;
+    rdfs:label "Air"^^xsd:string ;
+    rdfs:comment "Entity regarded as transparent and invisible substance that surrounds the earth"^^xsd:string ;
+    .
+air:components    rdf:type rdf:Property ;
+    rdfs:label "has components"^^xsd:string ;
+    rdfs:comment "The components that make up the air"^^xsd:string ;
+    rdfs:domain air: ;
+    rdfs:range air:Component ;
+    .
+air:Component    rdf:type rdfs:Class ;
+    rdfs:label "Components of Air"^^xsd:string ;
+    rdfs:comment "Components that make up the air including Oxygen, Nitrogen, Carbon Dioxide etc"^^xsd:string ;
+    .
+air:Oxygen    rdf:type air:Component ;
+    rdfs:label "Oxygen"^^xsd:string ;
+    rdfs:comment "A component of air, a colorless, odorless reactive gas"^^xsd:string ;
+    .
+air:Nitrogen    rdf:type air:Component ;
+    rdfs:label "Nitrogen"^^xsd:string ;
+    rdfs:comment "A component of air, a colorless, odorless unreactive gas"^^xsd:string ;
+    .
+air:CarbonDioxide    rdf:type air:Component ;
+    rdfs:label "CarbonDioxide"^^xsd:string ;
+    rdfs:comment "A component of air and a colorless, odorless gas produced by burning carbon and organic compounds"^^xsd:string ;
+    .

@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix force: <http://example.org/Force/> .
+force:    a owl:Ontology ;
+    rdfs:comment "Ontology of the concept of Force" ;
+    rdfs:label "Force" .
+force:Force    a rdfs:Class ;
+    rdfs:label "Force" ;
+    rdfs:comment "A push or pull upon an object resulting from the object's interaction with another object." .
+force:hasForceValue    a owl:DatatypeProperty ;
+    rdfs:label "has force value" ;
+    rdfs:domain force:Force ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The magnitude of the force" .
+force:hasDirection    a owl:ObjectProperty ;
+    rdfs:label "has direction" ;
+    rdfs:domain force:Force ;
+    rdfs:range force:Direction ;
+    rdfs:comment "The direction of the force" .
+force:Direction    a rdfs:Class ;
+    rdfs:label "Direction" ;
+    rdfs:comment "The space in which a force is exerted." .
+force:hasUnit    a owl:ObjectProperty ;
+    rdfs:label "has unit" ;
+    rdfs:domain force:Force ;
+    rdfs:range force:ForceUnit ;
+    rdfs:comment "The unit in which the force is measured" .
+force:ForceUnit    a rdfs:Class ;
+    rdfs:label "Force Unit" ;
+    rdfs:comment "Units for measuring force, e.g., Newtons." .
+force:AppliedForce    a rdfs:Class ;
+    rdfs:subClassOf force:Force ;
+    rdfs:label "Applied Force" ;
+    rdfs:comment "Force which is applied to an object by another object" .
+force:ResultantForce    a rdfs:Class ;
+    rdfs:subClassOf force:Force ;
+    rdfs:label "Resultant Force" ;
+    rdfs:comment "The sum of all forces acting on an object".

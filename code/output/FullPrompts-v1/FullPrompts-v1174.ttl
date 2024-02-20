@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix thing: <http://example.org/thing#> .
+thing:    rdf:type rdfs:Class ;
+    rdfs:comment "A general concept for any entity or object."^^xsd:string .
+thing:PhysicalObject    rdf:type rdfs:Class ;
+    rdfs:subClassOf thing: ;
+    rdfs:comment "A thing that exists physically."^^xsd:string .
+thing:AbstractConcept    rdf:type rdfs:Class ;
+    rdfs:subClassOf thing: ;
+    rdfs:comment "A thing that exists only in premise or as an idea, not having a physical or tangible existence."^^xsd:string .
+thing:LivingEntity    rdf:type rdfs:Class ;
+    rdfs:subClassOf thing:PhysicalObject ;
+    rdfs:comment "A thing that is a living organism."^^xsd:string .
+thing:NonlivingEntity    rdf:type rdfs:Class ;
+    rdfs:subClassOf thing:PhysicalObject ;
+    rdfs:comment "A thing that is a non-living, material object."^^xsd:string .
+thing:Person    rdf:type rdfs:Class ;
+    rdfs:subClassOf thing:LivingEntity ;
+    rdfs:comment "A thing that is a human being."^^xsd:string .
+thing:Animal    rdf:type rdfs:Class ;
+    rdfs:subClassOf thing:LivingEntity ;
+    rdfs:comment "A thing that is a non-human animal."^^xsd:string .
+thing:Plant    rdf:type rdfs:Class ;
+    rdfs:subClassOf thing:LivingEntity ;
+    rdfs:comment "A thing that is a plant."^^xsd:string .

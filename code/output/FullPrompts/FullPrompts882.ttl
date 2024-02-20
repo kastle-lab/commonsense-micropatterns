@@ -1,0 +1,28 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/#> .
+:Number a owl:Class ;
+    rdfs:label "Number" ;
+    rdfs:comment "Root class for Number ontology" ;
+    rdfs:subClassOf owl:Thing ;
+     .
+:primeNumber a owl:Class;
+    rdfs:subClassOf :Number;
+    rdfs:label "primeNumber";
+     .
+:evenNumber a owl:Class;
+    rdfs:subClassOf :Number;
+    rdfs:label "evenNumber";
+     .
+:oddNumber a owl:Class;
+    rdfs:subClassOf :Number;
+    rdfs:label "oddNumber";
+     .
+:negativeNumber a owl:Class;
+    rdfs:subClassOf :Number;
+    rdfs:label "negativeNumber";
+     .
+:positiveNumber a owl:Class;
+    rdfs:subClassOf :Number;
+    rdfs:label "positiveNumber";
+     .

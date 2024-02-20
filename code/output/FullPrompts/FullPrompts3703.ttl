@@ -1,0 +1,3 @@
+
+@prefix ex: <http://example.com/> .
+ex:Experiment ex:hasResult ex:Result .

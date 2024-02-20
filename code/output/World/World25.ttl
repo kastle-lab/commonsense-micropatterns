@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/> .
+ex:World   rdf:type owl:Class ;
+  rdfs:label "World" ;
+  rdfs:comment "Model of the physical universe in its entirety" .
+ex:hasPart  rdf:type owl:ObjectProperty ;
+  rdfs:label "has part" ;
+  rdfs:comment "Entity/Object that is a part of the World" ;
+  rdfs:domain ex:World ;
+  rdfs:range owl:Thing .

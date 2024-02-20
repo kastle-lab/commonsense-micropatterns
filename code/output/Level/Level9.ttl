@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org#> .
+ex:Level a rdfs:Class ;
+  rdfs:label "Level" ;
+  rdfs:comment "A class representing different levels." .
+ex:Beginner a ex:Level ;
+  rdfs:label "Beginner" ;
+  rdfs:comment "Beginner level." .
+ex:Intermediate a ex:Level ;
+  rdfs:label "Intermediate" ;
+  rdfs:comment "Intermediate level." .
+ex:Expert a ex:Level ;
+  rdfs:label "Expert" ;
+  rdfs:comment "Expert level." .
+ex:hasLevel a rdf:Property ;
+  rdfs:range ex:Level ;
+  rdfs:domain ex:Person ;
+  rdfs:label "has level" ;
+  rdfs:comment "A property representing a person's expertise level." .
+ex:Skill a rdfs:Class ;
+  rdfs:label "Skill" ;
+  rdfs:comment "A class representing different skills." .
+ex:hasSkill a rdf:Property ;
+  rdfs:range ex:Skill ;
+  rdfs:domain ex:Person ;
+  rdfs:label "has skill" ;
+  rdfs:comment "A property representing a person's skill." .

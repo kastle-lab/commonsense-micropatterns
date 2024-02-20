@@ -1,0 +1,13 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:HumanHand    a rdfs:Class ;
+    rdfs:label "Human hand"@en ;
+    rdfs:comment "The appendage located at the end of the human forearm"@en .
+ex:hasLeftHand    a rdf:Property ;
+    rdfs:label "has left hand"@en ;
+    rdfs:domain ex:Human ;
+    rdfs:range ex:HumanHand .
+ex:hasRightHand    a rdf:Property ;
+    rdfs:label "has right hand"@en ;
+    rdfs:domain ex:Human ;
+    rdfs:range ex:HumanHand .

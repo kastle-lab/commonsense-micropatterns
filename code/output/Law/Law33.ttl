@@ -1,0 +1,18 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Law rdfs:Class ;
+    rdfs:label "Law"@en ;
+    rdfs:comment "A system of rules recognized by a particular country or community."@en ;
+    rdfs:subClassOf :SocialConcept .
+:hasName a rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:domain :Law ;
+    rdfs:range xsd:string .
+:hasJurisdiction a rdf:Property ;
+    rdfs:label "has jurisdiction"@en ;
+    rdfs:domain :Law ;
+    rdfs:range :Country .
+ :Country rdfs:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "Recognized political entity on the geographic map."@en ;
+    rdfs:subClassOf :Location .

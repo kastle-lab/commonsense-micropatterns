@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix svc: <http://www.example.org/service#> .
+svc:Service rdf:type rdfs:Class ;
+             rdfs:label "Service"@en ;
+            rdfs:comment "A class representing the concept of service"@en .
+svc:ServiceProvider rdf:type rdfs:Class ;
+                  rdfs:label "Service Provider"@en ;
+                  rdfs:comment "A class representing the entity that provides a service"@en .
+svc:ServiceConsumer rdf:type rdfs:Class ;
+                  rdfs:label "Service Consumer"@en ;
+                  rdfs:comment "A class representing the entity that uses a service"@en .
+svc:serviceProvider rdf:type rdf:Property ;
+                   rdfs:domain svc:Service ;
+                   rdfs:range svc:ServiceProvider ;
+                   rdfs:label "service provider"@en ;
+                   rdfs:comment "The property linking a service with its provider"@en .
+svc:serviceConsumer rdf:type rdf:Property ;
+                   rdfs:domain svc:Service ;
+                   rdfs:range svc:ServiceConsumer ;
+                   rdfs:label "service consumer"@en ;
+                   rdfs:comment "The property linking a service with its consumer"@en .
+svc:serviceType rdf:type rdf:Property ;
+               rdfs:domain svc:Service ;
+               rdfs:range xsd:string ;
+               rdfs:label "service type"@en ;
+               rdfs:comment "The property indicating the type of a service"@en .

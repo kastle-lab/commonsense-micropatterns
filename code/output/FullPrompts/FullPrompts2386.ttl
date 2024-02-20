@@ -1,0 +1,36 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix study: <http://www.example.com/study#> .
+<http://www.example.com/study>  rdf:type owl:Ontology ;
+  rdfs:comment "An ontology focused on the concept of Study" ;
+  rdfs:label "StudyOntology" .
+study:Study  rdf:type owl:Class ;
+  rdfs:label "Study" ;
+  rdfs:comment "The concept of study or learning activity" .
+study:Subject  rdf:type owl:Class ;
+  rdfs:label "Subject" ;
+  rdfs:comment "The subject or topic associated with a study" .
+study:Student  rdf:type owl:Class ;
+  rdfs:label "Student" ;
+  rdfs:comment "The individual who engage in the activity of study" .
+study:reads  rdf:type owl:ObjectProperty ;
+  rdfs:domain study:Student ;
+  rdfs:range study:Study ;
+  rdfs:label "reads" ;
+  rdfs:comment "The action of studying performed by a student" .
+study:studies  rdf:type owl:ObjectProperty ;
+  rdfs:domain study:Student ;
+  rdfs:range study:Subject ;
+  rdfs:label "studies" ;
+  rdfs:comment "The action by which a student study a specific subject" .
+study:hasStudy  rdf:type owl:ObjectProperty ;
+  rdfs:domain study:Subject ;
+  rdfs:range study:Study ;
+    rdfs:label "hasStudy" ;
+  rdfs:comment "The relationship between a subject and a study, indicating that a study is about a specific subject" .
+ study:duration  rdf:type owl:DatatypeProperty ;
+  rdfs:domain study:Study ;
+  rdfs:range rdf:integer ;
+  rdfs:label "duration" ;
+  rdfs:comment "The duration of a study in hours" .

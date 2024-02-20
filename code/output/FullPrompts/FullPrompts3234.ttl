@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+# Define Idea as a classex:Idea a rdfs:Class ;
+    rdfs:label "Idea"@en ;
+    rdfs:comment "A concept or mental impression"@en .
+# Define properties related to Ideaex:Originator a rdf:Property ;
+    rdfs:label "originator"@en ;
+    rdfs:comment "The person who proposed or thought the idea"@en ;
+    rdfs:domain ex:Idea ;
+    rdfs:range ex:Person .
+ex:Timestamp a rdf:Property ;
+    rdfs:label "timestamp"@en ;
+    rdfs:comment "The time when the idea was proposed or thought"@en ;
+    rdfs:domain ex:Idea ;
+    rdfs:range xsd:dateTime .
+ex:Category a rdf:Property ;
+    rdfs:label "category"@en ;
+    rdfs:comment "The category to which the idea belongs"@en ;
+    rdfs:domain ex:Idea ;
+    rdfs:range ex:Category .
+# Define Person as a classex:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human being"@en .
+# Define Category as a classex:Category a rdfs:Class ;
+    rdfs:label "Category"@en ;
+    rdfs:comment "A class or division of people or things"@en .

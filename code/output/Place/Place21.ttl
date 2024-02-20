@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <https://schema.org/GeoCoordinates#> .
+# Define a class 'Place':Place rdf:type rdfs:Class ;
+    rdfs:comment "A location or area" .
+# Define properties of 'Place':hasName rdf:type rdf:Property ;
+    rdfs:domain :Place ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the place" .
+:hasLatitude rdf:type rdf:Property ;
+    rdfs:domain :Place ;
+    rdfs:range geo:latitude ;
+    rdfs:comment "The latitude of the place" .
+:hasLongitude rdf:type rdf:Property ;
+    rdfs:domain :Place ;
+    rdfs:range geo:longitude ;
+    rdfs:comment "The longitude of the place" .
+# An example place - 'Eiffel Tower':EiffelTower rdf:type :Place ;
+    :hasName "Eiffel Tower" ;
+    :hasLatitude "48.8584" ;
+    :hasLongitude "2.2945" .

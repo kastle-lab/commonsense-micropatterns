@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Reason    rdf:type owl:Class ;
+    rdfs:label "Reason" ;
+    rdfs:comment "The mental capacity to understand, make judgments, and infer conclusions from information." .
+ex:hasReason    rdf:type owl:ObjectProperty ;
+    rdfs:label "has reason" ;
+    rdfs:comment "A property that links an entity to the reason(s) associated with it." ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Reason .
+ex:Entity    rdf:type owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "A thing with distinct and independent existence, which can have reasons associated with it." .

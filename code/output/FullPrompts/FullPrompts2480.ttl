@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix word: <http://example.com/ontology/word#> .
+word:     rdf:type rdfs:Class ;
+    rdfs:comment "A unit of language, consisting of one or more spoken sounds or their written representation, which functions as a principal carrier of meaning."@en ;
+    rdfs:label "Word"@en .
+word:Spelling    rdf:type rdfs:Class ;
+    rdfs:subClassOf word: ;
+    rdfs:comment "The manner in which a word is spelled."@en ;
+    rdfs:label "Spelling"@en .
+word:Definition    rdf:type rdfs:Class ;
+    rdfs:subClassOf word: ;
+    rdfs:comment "A statement of the exact meaning of a word."@en ;
+    rdfs:label "Definition"@en .
+word:hasSpelling    rdf:type rdf:Property ;
+    rdfs:domain word: ;
+    rdfs:range word:Spelling ;
+    rdfs:comment "The spelling of a word."@en ;
+    rdfs:label "hasSpelling"@en .
+word:hasDefinition    rdf:type rdf:Property ;
+    rdfs:domain word: ;
+    rdfs:range word:Definition ;
+    rdfs:comment "The definition of a word."@en ;
+    rdfs:label "hasDefinition"@en .

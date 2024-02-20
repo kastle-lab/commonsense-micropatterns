@@ -1,0 +1,5 @@
+@prefix : <http://example.org/> .
+:Right a owl:Class .
+:provides a owl:ObjectProperty ;
+    rdfs:domain :Right ;
+    rdfs:range :Resource .

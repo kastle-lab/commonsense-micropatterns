@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix state: <http://example.org/state#> .
+# Defining classesstate:State rdf:type rdfs:Class ;
+    rdfs:label "State"@en ;
+    rdfs:comment "The main entity representing a U.S. state or a state in any other context"@en .
+# Defining propertiesstate:hasName rdf:type rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:domain state:State ;
+    rdfs:range xsd:string .
+state:hasGovernor rdf:type rdf:Property ;
+    rdfs:label "has governor"@en ;
+    rdfs:domain state:State ;
+    rdfs:range xsd:string .
+state:hasPopulation rdf:type rdf:Property ;
+    rdfs:label "has population"@en ;
+    rdfs:domain state:State ;
+    rdfs:range xsd:integer .
+state:hasCapital rdf:type rdf:Property ;
+    rdfs:label "has capital"@en ;
+    rdfs:domain state:State ;
+    rdfs:range xsd:string .
+# Defining an object (a specific state)state:California rdf:type state:State ;
+    state:hasName "California" ;
+    state:hasGovernor "Gavin Newsom" ;
+    state:hasPopulation 39538223 ;
+    state:hasCapital "Sacramento" .

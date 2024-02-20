@@ -1,0 +1,26 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Area a rdfs:Class ;
+  rdfs:label "Area"@en ;
+  rdfs:comment "A measure of the amount of space within a closed boundary"@en ;
+  rdfs:subClassOf :PhysicalQuantity .
+:hasArea a rdf:Property ;
+  rdfs:label "has area"@en ;
+  rdfs:comment "A property indicating the size of a space in terms of length times width"@en ;
+  rdfs:range :Area ;
+  rdfs:domain :Thing .
+:SquareMeter a rdfs:Class ;
+  rdfs:label "Square meter"@en ;
+  rdfs:comment "A standard unit of area in the International System of Units (SI), symbolized as m2"@en ;
+  rdfs:subClassOf :Area .
+:SquareFoot a rdfs:Class ;
+  rdfs:label "Square foot"@en ;
+  rdfs:comment "A standard unit of area in the Imperial and U.S. customary measurement systems, symbolized as ft2"@en ;
+  rdfs:subClassOf :Area .
+:Thing a rdfs:Class ;
+  rdfs:label "Thing"@en .
+:hasMeasurement rdfs:subPropertyOf :hasArea ;
+  rdfs:label "has measurement"@en ;
+  rdfs:comment "A property indicating the numerical aspect of an area, denoted in some unit of area"@en ;
+  rdfs:range xsd:decimal ;
+  rdfs:domain :Area .

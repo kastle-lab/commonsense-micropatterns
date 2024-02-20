@@ -1,0 +1,24 @@
+@prefix : <http://www.example.com/> .
+:Office a rdfs:Class ;
+rdfs:label "Office"@en ;
+rdfs:comment "Area or a room where work is performed or business is administered"@en .
+:hasFloorArea a rdf:Property ;
+rdfs:domain :Office ;
+rdfs:range xsd:float ;
+rdfs:label "has floor area (in square meters)"@en ;
+rdfs:comment "An office has a floor area expressed in square meters"@en .
+:hasAddress a rdf:Property ;
+rdfs:domain :Office ;
+rdfs:range :Address ;
+rdfs:label "has address"@en ;
+rdfs:comment "The office has an address"@en .
+:onFloor a rdf:Property ;
+rdfs:domain :Office ;
+rdfs:range xsd:int ;
+rdfs:label "on floor"@en ;
+rdfs:comment "The office is located on a certain floor of a building"@en .
+:hasEmployee a rdf:Property ;
+rdfs:domain :Office ;
+rdfs:range :Employee ;
+rdfs:label "has employee"@en ;
+rdfs:comment "Which employees work in the office"@en .

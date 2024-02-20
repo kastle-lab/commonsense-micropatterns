@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix info: <http://example.org/info#> .
+info:Information a rdfs:Class ;
+  rdfs:label "Information" ;
+  rdfs:comment "The class of all pieces of Information" .
+info:hasSource a rdf:Property ;
+  rdfs:label "has source" ;
+  rdfs:comment "The source from where the Information is derived" ;
+  rdfs:domain info:Information ;
+  rdfs:range rdfs:Resource .
+info:hasContent a rdf:Property ;
+  rdfs:label "has content" ;
+  rdfs:comment "The content of the Information" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:string .
+info:hasDate a rdf:Property ;
+  rdfs:label "has date" ;
+  rdfs:comment "The date when the Information was created/published" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:date .
+info:isVerified a rdf:Property ;
+  rdfs:label "is verified" ;
+  rdfs:comment "Indicator if the Information is verified or not" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:boolean .

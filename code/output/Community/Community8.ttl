@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix com: <http://example.org/community#> .
+# Classescom:Community rdf:type owl:Class .
+com:Person rdf:type owl:Class .
+com:Location rdf:type owl:Class .
+com:Event rdf:type owl:Class .
+# Propertiescom:hasMember rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Community ;
+    rdfs:range com:Person .
+com:locatedAt rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Community ;
+    rdfs:range com:Location .
+com:hosts rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Community ;
+    rdfs:range com:Event .
+com:participates rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Person ;
+    rdfs:range com:Event .
+# Sample Datacom:techCommunity rdf:type com:Community ;
+    com:locatedAt [        rdf:type com:Location ;
+        rdfs:label "San Francisco" ;
+        xsd:string "US" ;
+    ];
+    com:hosts [        rdf:type com:Event ;
+        rdfs:label "Tech Conference" ;
+        xsd:string "Annual tech conference for community members"    ] .
+com:journeyCommunity rdf:type com:Community ;
+    com:locatedAt [        rdf:type com:Location ;
+        rdfs:label "Los Angeles" ;
+        xsd:string "US" ;
+    ];
+    com:hosts [        rdf:type com:Event ;
+        rdfs:label "Running Event" ;
+        xsd:string "Annual running event for community members"    ] .

@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Program rdf:type rdfs:Class ;
+      rdfs:comment "A class representing a computer program" .
+ex:name rdf:type rdf:Property ;
+      rdfs:domain ex:Program ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The name of the program" .
+ex:version rdf:type rdf:Property ;
+      rdfs:domain ex:Program ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The version of the program" .
+ex:developer rdf:type rdf:Property ;
+      rdfs:domain ex:Program ;
+      rdfs:range ex:Person ;
+      rdfs:comment "The developer of the program" .
+ex:Person rdf:type rdfs:Class ;
+      rdfs:comment "A class representing a person" .

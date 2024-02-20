@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.org/> .
+ex:Mother a rdfs:Class;
+    rdfs:label "Mother"@en;
+    rdfs:comment "Individual who is a female parent of a person or offspring"@en;
+    rdfs:subClassOf foaf:Person .
+ex:hasMother a rdf:Property;
+    rdfs:label "has mother"@en;
+    rdfs:comment "Property indicating the mother of a person"@en;
+    rdfs:domain foaf:Person;
+    rdfs:range ex:Mother .
+ex:isMotherOf a rdf:Property;
+    rdfs:label "is mother of"@en;
+    rdfs:comment "Property indicating the person/offspring of a mother"@en;
+    rdfs:domain ex:Mother;
+    rdfs:range foaf:Person .
+ex:Mother    rdfs:subClassOf ex:Parent;
+    ex:isGender "Female"^^xsd:string .
+ex:Parent a rdfs:Class;
+    rdfs:label "Parent"@en;
+    rdfs:comment "Individual who has a biological or legal familial relationship to a child"@en;
+    rdfs:subClassOf foaf:Person .

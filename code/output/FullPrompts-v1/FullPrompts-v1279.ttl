@@ -1,0 +1,9 @@
+ex:World    a rdfs:Class ;
+    rdfs:label "World" ;
+    rdfs:comment "The universe or sphere in which something exists or takes place." .
+    ex:Earth    a ex:World ;
+    rdfs:label "Earth" ;
+    rdfs:comment "The third planet from the Sun in our solar system." .
+    ex:Mars    a ex:World ;
+    rdfs:label "Mars" ;
+    rdfs:comment "The fourth planet from the Sun in our solar system." .

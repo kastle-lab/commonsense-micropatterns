@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+# Class: Parent:Parent rdf:type rdfs:Class ;
+  rdfs:comment "A parent is a caretaker of the offspring in their own species"@en ;
+  rdfs:label "Parent"@en .
+# Subclass: Mother:Mother rdf:type rdfs:Class ;
+  rdfs:subClassOf :Parent ;
+  rdfs:comment "A female parent" ;
+  rdfs:label "Mother"@en .
+# Subclass: Father:Father rdf:type rdfs:Class ;
+  rdfs:subClassOf :Parent ;
+  rdfs:comment "A male parent" ;
+  rdfs:label "Father"@en .
+# Property: hasChild:hasChild rdf:type rdf:Property ;
+  rdfs:domain :Parent ;
+  rdfs:range :Person ;
+  rdfs:label "has child"@en ;
+  rdfs:comment "Relates a parent to their child"@en .
+  # Property: hasParent:hasParent rdf:type rdf:Property ;
+  rdfs:range :Parent ;
+  rdfs:domain :Person ;
+  rdfs:label "has parent"@en ;
+  rdfs:comment "Relates a person to their parent"@en .
+  # Individual: John:John rdf:type foaf:Person ;
+  foaf:name "John" ;
+  :hasParent :Sarah, :Michael .
+# Individual: Sarah:Sarah rdf:type :Mother ;
+  foaf:name "Sarah" ;
+  :hasChild :John .
+# Individual: Michael:Michael rdf:type :Father ;
+  foaf:name "Michael" ;
+  :hasChild :John .

@@ -1,0 +1,20 @@
+@prefix : <http://example.com/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Lot a rdfs:Class .
+:hasLotArea a rdfs:Property ;
+    rdfs:domain :Lot ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Represent the area of a lot in square meters" .
+:hasLotNumber a rdfs:Property ;
+    rdfs:domain :Lot ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Represent the number of a Lot" .
+:hasAddress a rdfs:Property ;
+    rdfs:domain :Lot ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Represent the address of a Lot" .
+    :isForSale a rdfs:Property ;
+    rdfs:domain :Lot ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Represent if a Lot is for sale" .

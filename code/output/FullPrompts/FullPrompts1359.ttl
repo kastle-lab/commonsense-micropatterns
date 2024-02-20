@@ -1,0 +1,21 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Night a ex:TimePeriod ;
+    ex:after ex:Sunset ;
+    ex:before ex:Sunrise .
+    ex:Sunset a ex:Event ;
+    ex:indicates ex:Night ;
+    ex:timeOfDay "18:00:00"^^xsd:time .
+ex:Sunrise a ex:Event ;
+    ex:indicates ex:Day ;
+    ex:timeOfDay "06:00:00"^^xsd:time .
+    ex:Day a ex:TimePeriod ;
+    ex:after ex:Sunrise ;
+    ex:before ex:Sunset .
+ex:TimePeriod a rdfs:Class .
+ex:Event a rdfs:Class .
+ex:after a rdf:Property .
+ex:before a rdf:Property .
+ex:indicates a rdf:Property .
+ex:timeOfDay a rdf:Property ;
+    rdfs:range xsd:time .

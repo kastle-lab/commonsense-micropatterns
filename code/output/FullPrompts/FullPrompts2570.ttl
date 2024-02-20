@@ -1,0 +1,11 @@
+@prefix : <http://example.org/issue#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:Issue rdf:type rdf:Class .
+:hasIssue rdf:type rdf:Property ;
+    rdf:domain :Entity ;
+    rdf:range :Issue .
+:IssueDescription rdf:type rdf:Property ;
+    rdf:domain :Issue ;
+    rdf:range :Text .
+:Entity01 :hasIssue :Issue01 .
+:Issue01 :IssueDescription "Issue description here" .

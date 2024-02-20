@@ -1,0 +1,3 @@
+@prefix : <http://example.com/#> .
+:MORNING rdf:type :TIME_PERIOD .
+:MORNING :isPartOf :DAY .

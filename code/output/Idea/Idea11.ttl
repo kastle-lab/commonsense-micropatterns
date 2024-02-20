@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix idea: <http://www.example.com/ontology/idea#> .
+idea:Idea a rdfs:Class ;
+   rdfs:label "Idea" ;
+   rdfs:comment "A concept or mental impression" .
+idea:hasOrigin a rdf:Property ;
+   rdfs:label "has origin" ;
+   rdfs:comment "The source or root of an idea" ;
+   rdfs:domain idea:Idea ;
+   rdfs:range xsd:string .
+idea:isRelatedTo a rdf:Property ;
+   rdfs:label "is related to" ;
+   rdfs:comment "Relation between two ideas" ;
+   rdfs:domain idea:Idea ;
+   rdfs:range idea:Idea .
+idea:hasImpact a rdf:Property ;
+   rdfs:label "has impact" ;
+   rdfs:comment "The effect produced by an idea" ;
+   rdfs:domain idea:Idea ;
+   rdfs:range xsd:string .
+idea:hasDate a rdf:Property ;
+   rdfs:label "has date" ;
+   rdfs:comment "The date when an idea was conceived" ;
+   rdfs:domain idea:Idea ;
+   rdfs:range xsd:date .

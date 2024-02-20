@@ -1,0 +1,29 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:World rdf:type rdfs:Class ;
+          rdfs:comment "The planet Earth and everything on it." ;
+          rdfs:subClassOf ex:Universe .
+ex:Continent rdf:type rdfs:Class ;
+             rdfs:comment "Any of the world's main continuous expanses of land." ;
+             rdfs:subClassOf ex:World .
+ex:Ocean rdf:type rdfs:Class ;
+         rdfs:comment "The vast body of salt water that covers almost three fourths of the earth's surface." ;
+         rdfs:subClassOf ex:World .
+ex:Country rdf:type rdfs:Class ;
+           rdfs:comment "A nation with its own government, occupying a particular territory." ;
+           rdfs:subClassOf ex:Continent .
+ex:City rdf:type rdfs:Class ;
+        rdfs:comment "A large town." ;
+        rdfs:subClassOf ex:Country .
+ex:Mountain rdf:type rdfs:Class ;
+            rdfs:comment "A large natural elevation of the earth's surface rising abruptly from the surrounding level;
+ a large hill." ;
+            rdfs:subClassOf ex:Continent .
+ex:River rdf:type rdfs:Class ;
+         rdfs:comment "A large natural stream of water flowing in a channel to the sea, a lake, or another river." ;
+         rdfs:subClassOf ex:Continent .
+ex:Lake rdf:type rdfs:Class ;
+        rdfs:comment "A large body of water surrounded by land." ;
+        rdfs:subClassOf ex:Continent .

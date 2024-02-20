@@ -1,0 +1,56 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wo: <http://example.com/work_ontology#> .
+wo:Work a rdfs:Class ;
+    rdfs:label "Work"@en ;
+    rdfs:comment "A class representing any type of work or employment."@en .
+wo:Job a rdfs:Class ;
+    rdfs:subClassOf wo:Work ;
+    rdfs:label "Job"@en ;
+    rdfs:comment "A regular remunerative position."@en .
+wo:FreelanceJob a rdfs:Class ;
+    rdfs:subClassOf wo:Job ;
+    rdfs:label "Freelance Job"@en ;
+    rdfs:comment "A job in which a person works for themselves, rather than for a company."@en .
+wo:FullTimeJob a rdfs:Class ;
+    rdfs:subClassOf wo:Job ;
+    rdfs:label "Full-time Job"@en ;
+    rdfs:comment "A job that requires working for a full set of hours per week."@en .
+wo:PartTimeJob a rdfs:Class ;
+    rdfs:subClassOf wo:Job ;
+    rdfs:label "Part-time Job"@en ;
+    rdfs:comment "A job that requires working for less than the normal hours per week."@en .
+wo:title a rdf:Property ;
+    rdfs:domain wo:Work ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A title or name of the work."@en .
+wo:organization a rdf:Property ;
+    rdfs:domain wo:Work ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The organization or company the work is for."@en .
+wo:location a rdf:Property ;
+    rdfs:domain wo:Work ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The location where the work takes place."@en .
+wo:description a rdf:Property ;
+    rdfs:domain wo:Work ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Description of the work."@en .
+wo:startDate a rdf:Property ;
+    rdfs:domain wo:Work ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Date when the work starts."@en .
+wo:endDate a rdf:Property ;
+    rdfs:domain wo:Work ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Date when the work ends."@en .
+wo:salary a rdf:Property ;
+    rdfs:domain wo:Job ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The remuneration for the job."@en .
+wo:hoursPerWeek a rdf:Property ;
+    rdfs:domain wo:Job ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The number of hours needed to work per week for the job."@en .

@@ -1,0 +1,6 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:State  rdf:type rdfs:Class ;
+  rdfs:label "State"@en ;
+  rdfs:comment "A specific region or area which forms part of a country or federation"@en .

@@ -1,0 +1,18 @@
+@prefix : <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+# Define class "Teacher":Teacher rdf:type rdfs:Class ;
+    rdfs:label "Teacher" ;
+    rdfs:comment "An individual who provides education to students." .
+# Define the "teachesCourse" property:teachesCourse rdf:type rdf:Property ;
+    rdfs:label "teaches course" ;
+    rdfs:domain :Teacher ;
+    rdfs:range :Course .
+# Define the "teachesStudent" property:teachesStudent rdf:type rdf:Property ;
+    rdfs:label "teaches student" ;
+    rdfs:domain :Teacher ;
+    rdfs:range foaf:Person .
+# Define class "Course":Course rdf:type rdfs:Class ;
+    rdfs:label "Course" ;
+    rdfs:comment "A course that is taught by a teacher." .

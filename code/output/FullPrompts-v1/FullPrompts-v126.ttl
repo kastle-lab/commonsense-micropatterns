@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://www.example.org/> .
+ex:Person   rdf:type rdfs:Class ;
+  rdfs:label "Person" ;
+  rdfs:subClassOf foaf:Person ;
+  rdfs:comment "A person class specifically utilized within the example domain." .
+ex:hasName   rdf:type rdf:Property ;
+  rdfs:label "hasName" ;
+  rdfs:domain ex:Person ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "A property to indicate the name of a person." .
+ex:hasAge   rdf:type rdf:Property ;
+  rdfs:label "hasAge" ;
+  rdfs:domain ex:Person ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "A property to indicate the age of a person." .

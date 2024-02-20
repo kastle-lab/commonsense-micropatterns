@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://www.example.org/ontology#> .
+ont:Group rdf:type owl:Class .
+ont:hasMember rdf:type owl:ObjectProperty ;
+             rdfs:domain ont:Group ;
+             rdfs:range ont:Member .
+ont:Member rdf:type owl:Class .
+ont:hasName rdf:type owl:DatatypeProperty ;
+            rdfs:domain ont:Member ;
+            rdfs:range xsd:string .
+ont:hasAge rdf:type owl:DatatypeProperty ;
+           rdfs:domain ont:Member ;
+           rdfs:range xsd:integer .
+ont:Member      rdfs:subClassOf           [ rdf:type owl:Restriction ;
+            owl:onProperty ont:hasName ;
+            owl:minCardinality 1 ] ,          [ rdf:type owl:Restriction ;
+            owl:onProperty ont:hasAge ;
+            owl:minCardinality 1 ] .
+ont:Group      rdfs:subClassOf           [ rdf:type owl:Restriction ;
+            owl:onProperty ont:hasMember ;
+            owl:minCardinality 1 ] .

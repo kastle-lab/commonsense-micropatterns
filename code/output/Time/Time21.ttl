@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:Time    rdf:type rdfs:Class ;
+   rdfs:subClassOf rdfs:Resource ;
+   rdfs:comment "A temporal entity i.e., a position or extent in time."@en ;
+   rdfs:label "Time".
+time:inXSDDateTime  rdf:type owl:DatatypeProperty;
+  rdfs:domain time:Time;
+  rdfs:range xsd:dateTime;
+  rdfs:comment "Property relating a time entity to its xsd:dateTime representation"@en ;
+  rdfs:label "in XSD Date Time" .
+time:hasBeginning    rdf:type owl:ObjectProperty ;
+   rdfs:domain time:Time ;
+   rdfs:range time:Instant ;
+   rdfs:comment "The beginning of a temporal entity"@en ;
+   rdfs:label "has beginning" .
+time:hasEnd     rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Time ;
+    rdfs:range time:Instant ;
+    rdfs:comment "The end of a temporal entity"@en ;
+    rdfs:label "has end" .
+time:Instant    rdf:type rdfs:Class ;
+   rdfs:subClassOf time:Time ;
+   rdfs:comment "A temporal instant"@en ;
+   rdfs:label "Instant" .

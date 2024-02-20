@@ -1,0 +1,42 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix art: <http://example.com/ontology/art#> .
+art:Art rdfs:subClassOf owl:Thing ;
+      rdfs:label "Art"@en ;
+      rdfs:comment "The concept of Art as a form of human expression"@en ;
+      rdfs:seeAlso <http://dbpedia.org/page/Art> .
+art:Artist rdfs:subClassOf owl:Thing ;
+           rdfs:label "Artist"@en ;
+           rdfs:comment "An individual who creates art"@en ;
+           rdfs:seeAlso <http://dbpedia.org/page/Artist> .
+art:Artwork rdfs:subClassOf art:Art ;
+            rdfs:label "Artwork"@en ;
+            rdfs:comment "A physical or digital piece of art"@en ;
+            rdfs:seeAlso <http://dbpedia.org/page/Artwork> .
+art:hasCreator rdf:type owl:ObjectProperty ;
+               rdfs:domain art:Artwork ;
+               rdfs:range art:Artist ;
+               rdfs:label "has creator"@en ;
+               rdfs:comment "Property that indicates the artist of an artwork"@en .
+art:created rdf:type owl:ObjectProperty ;
+            rdfs:domain art:Artist ;
+            rdfs:range art:Artwork ;
+            rdfs:label "created"@en ;
+            rdfs:comment "Property that indicates the artwork created by an artist"@en .
+art:genre rdf:type owl:DatatypeProperty ;
+          rdfs:domain art:Artwork ;
+          rdfs:range xsd:string ;
+          rdfs:label "genre"@en ;
+          rdfs:comment "Property that indicates the genre of an artwork"@en .
+art:creationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain art:Artwork ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:label "creation date"@en ;
+                 rdfs:comment "Property that indicates the creation date of an artwork"@en .
+art:medium rdf:type owl:DatatypeProperty ;
+           rdfs:domain art:Artwork ;
+           rdfs:range xsd:string ;
+           rdfs:label "medium"@en ;
+           rdfs:comment "Property that indicates the medium used to create an artwork"@en .

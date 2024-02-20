@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/school#> .
+ex:School a rdfs:Class ;
+    rdfs:comment "A school is an educational institution"^^xsd:string ;
+    rdfs:label "School"^^xsd:string .
+ex:name a rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the school"^^xsd:string ;
+    rdfs:label "name"^^xsd:string .
+ex:location a rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The location of the school"^^xsd:string ;
+    rdfs:label "location"^^xsd:string .
+ex:hasStudent a rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range ex:Student ;
+    rdfs:comment "The student that attends the school"^^xsd:string ;
+    rdfs:label "has student"^^xsd:string .
+ex:Student a rdfs:Class ;
+    rdfs:comment "A student is a person who is studying at a school or college"^^xsd:string ;
+    rdfs:label "Student"^^xsd:string .
+ex:studyingIn a rdf:Property ;
+    rdfs:domain ex:Student ;
+    rdfs:range ex:School ;
+    rdfs:comment "The school where the student is studying"^^xsd:string ;
+    rdfs:label "studying in"^^xsd:string .

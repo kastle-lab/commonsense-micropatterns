@@ -1,0 +1,28 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix idea: <http://example.org/idea#> .
+idea:Idea a rdfs:Class .
+idea:name a rdf:Property ;
+  rdfs:domain idea:Idea ;
+  rdfs:range xsd:string .
+idea:belongsTo a rdf:Property ;
+  rdfs:domain idea:Idea ;
+  rdfs:range idea:Category .
+idea:Category a rdfs:Class .
+idea:categoryName a rdf:Property ;
+  rdfs:domain idea:Category ;
+  rdfs:range xsd:string .
+idea:Creator a rdfs:Class .
+idea:creatorName a rdf:Property ;
+  rdfs:domain idea:Creator ;
+  rdfs:range xsd:string .
+idea:creates a rdf:Property ;
+  rdfs:domain idea:Creator ;
+  rdfs:range idea:Idea .
+idea:idea1 a idea:Idea ;
+  idea:name "Idea One" ;
+  idea:belongsTo idea:category1 .
+idea:category1 a idea:Category ;
+  idea:categoryName "Category One" .
+idea:creator1 a idea:Creator ;
+  idea:creatorName "John Doe" ;
+  idea:creates idea:idea1 .

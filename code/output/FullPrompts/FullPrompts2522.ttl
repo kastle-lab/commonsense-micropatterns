@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/Business#> .
+:Business a rdfs:Class ;
+    rdfs:comment "A commercial or industrial entity involved in professional, commercial, and industrial activities" .
+:BusinessOwner a :Person ;
+    rdfs:comment "A person who owns a business" ;
+    rdfs:subClassOf :Business .
+:Employee a :Person ;
+    rdfs:comment "A person employed by a business" ;
+    rdfs:subClassOf :Business .
+:Product a rdfs:Class ;
+    rdfs:comment "A thing that a business produces or sells" .
+:Service a rdfs:Class ;
+    rdfs:comment "A task that a business performs for customers" .
+:Customer a :Person ;
+    rdfs:comment "A person or entity that buys products or services from a business" ;
+    rdfs:subClassOf :Business .
+:Person a rdfs:Class ;
+    rdfs:comment "A human being" .
+:owns a rdf:Property ;
+    rdfs:domain :Person ;
+    rdfs:range :Business ;
+    rdfs:comment "The person owns a business" .
+:employs a rdf:Property ;
+    rdfs:domain :Business ;
+    rdfs:range :Person ;
+    rdfs:comment "The business employs a person" .
+:buys a rdf:Property ;
+    rdfs:domain :Person ;
+    rdfs:range :Product ;
+    rdfs:comment "The person buys a product" .
+:provides a rdf:Property ;
+    rdfs:domain :Business ;
+    rdfs:range :Service ;
+    rdfs:comment "The business provides a service" .

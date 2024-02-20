@@ -1,0 +1,6 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/> .
+# Define a 'Moment' instanceex:myMoment a ex:Moment ;
+    ex:timestamp "2021-10-14T12:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# Associate the 'Moment' with an 'Event'ex:myEvent a ex:Event ;
+    ex:hasMoment ex:myMoment .

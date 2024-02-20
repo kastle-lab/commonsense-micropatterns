@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix service: <http://example.com/service#> .
+service:Service rdf:type rdfs:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:comment "An act of helping or doing work for someone"@en .
+service:name rdf:type rdf:Property ;
+    rdfs:label "service name"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:string .
+service:provider rdf:type rdf:Property ;
+    rdfs:label "service provider"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:string .
+service:startTime rdf:type rdf:Property ;
+    rdfs:label "start time"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:dateTime .
+service:endTime rdf:type rdf:Property ;
+    rdfs:label "end time"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:dateTime .
+service:cost rdf:type rdf:Property ;
+    rdfs:label "cost"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:float .
+service:rating rdf:type rdf:Property ;
+    rdfs:label "rating"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:float .

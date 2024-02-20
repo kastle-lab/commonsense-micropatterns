@@ -1,0 +1,30 @@
+@prefix : <http://www.example.org/case#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Case a rdfs:Class ;
+    rdfs:label "Case"^^xsd:string ;
+    rdfs:comment "Represents a general Case"^^xsd:string .
+:hasCaseID a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:integer ;
+    rdfs:label "hasCaseID"^^xsd:string ;
+    rdfs:comment "The ID of the Case"^^xsd:string .
+:hasCaseType a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:string ;
+    rdfs:label "hasCaseType"^^xsd:string ;
+    rdfs:comment "The type of the Case"^^xsd:string .
+:hasCaseStatus a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:string ;
+    rdfs:label "hasCaseStatus"^^xsd:string ;
+    rdfs:comment "The status of the Case"^^xsd:string .
+:hasCaseDate a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:date ;
+    rdfs:label "hasCaseDate"^^xsd:string ;
+    rdfs:comment "The date of the Case"^^xsd:string .
+:hasCaseDescription a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range xsd:string ;
+    rdfs:label "hasCaseDescription"^^xsd:string ;
+    rdfs:comment "The description of the Case"^^xsd:string .

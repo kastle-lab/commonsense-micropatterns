@@ -1,0 +1,13 @@
+@prefix ex: <http://example.com/> .
+ex:Back a rdf:Class ;
+    rdfs:label "Back"@en ;
+    rdfs:comment "The rear surface or part of the human body, or a similar surface in an animal or other living organism."@en ;
+    rdfs:subClassOf ex:BodyPart .
+ex:LumbarRegion a rdf:Class ;
+    rdfs:label "Lumbar Region"@en ;
+    rdfs:comment "The portion of the back between the lowest ribs and the pelvis."@en ;
+    rdfs:subClassOf ex:Back .
+ex:CervicalRegion a rdf:Class ;
+    rdfs:label "Cervical Region"@en ;
+    rdfs:comment "The uppermost region of the back, consisting of the seven vertebral levels of the neck."@en ;
+    rdfs:subClassOf ex:Back .

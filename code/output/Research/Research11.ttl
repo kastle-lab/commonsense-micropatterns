@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+<http://example.com/ontology/research#>    rdf:type owl:Ontology ;
+    rdfs:label "Research ontology" ;
+    rdfs:comment "A structure for research-related information" .
+<http://example.com/ontology/research#Research>    rdf:type owl:Class ;
+    rdfs:label "Research" ;
+    rdfs:comment "The systematic investigation and study of materials and sources to establish facts and reach conclusions" .
+<http://example.com/ontology/research#Researcher>    rdf:type owl:Class ;
+    rdfs:label "Researcher" ;
+    rdf:comment "An individual who conducts systematic investigation and study of materials and sources" ;
+    rdfs:subClassOf owl:Thing ;
+    owl:disjointWith <http://example.com/ontology/research#Research> .
+<http://example.com/ontology/research#Methodology>    rdf:type owl:Class ;
+    rdfs:label "Methodology" ;
+    rdf:comment "The system of methods used in a particular area of study or activity" ;
+    rdfs:subClassOf <http://example.com/ontology/research#Research> .
+<http://example.com/ontology/research#conducts>    rdf:type owl:ObjectProperty ;
+    rdfs:label "conducts" ;
+    rdfs:comment "The action of carrying out a research" ;
+    rdfs:domain <http://example.com/ontology/research#Researcher> ;
+    rdfs:range <http://example.com/ontology/research#Research> .
+<http://example.com/ontology/research#employs>    rdf:type owl:ObjectProperty ;
+    rdfs:label "employs" ;
+    rdfs:comment "Make use of a particular methodology in a research" ;
+    rdfs:domain <http://example.com/ontology/research#Research> ;
+    rdfs:range <http://example.com/ontology/research#Methodology> .

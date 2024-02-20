@@ -1,0 +1,6 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:issue a rdfs:Class .
+:hasIssue a rdfs:Property ;
+    rdfs:domain :Product ;
+    rdfs:range :issue.:Product a rdfs:Class.

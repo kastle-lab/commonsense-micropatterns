@@ -1,0 +1,23 @@
+@prefix life: <http://www.example.org/life#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+life:Life rdfs:label "Life" .
+life:Life rdfs:subClassOf "Biology" .
+life:Life rdfs:comment "The condition that distinguishes animals and plants from inorganic matter, including the capacity for growth, reproduction, functional activity, and continual change preceding death." .
+life:BiologicalProcess rdfs:label "Biological Process" .
+life:BiologicalProcess rdfs:subClassOf life:Life .
+life:BiologicalProcess rdfs:comment "A sequence of events accomplished by an entity that is part of a living organism." .
+life:Organism rdfs:label "Organism" .
+life:Organism rdfs:subClassOf life:Life .
+life:Organism rdfs:comment "An individual animal, plant, or single-celled life form." .
+life:Cell rdfs:label "Cell" .
+life:Cell rdfs:subClassOf life:Life .
+life:Cell rdfs:comment "The smallest structural and functional unit of an organism, which is typically microscopic and consists of cytoplasm and a nucleus enclosed in a membrane." .
+life:Reproduction rdfs:label "Reproduction" .
+life:Reproduction rdfs:subClassOf life:BiologicalProcess .
+life:Reproduction rdfs:comment "The biological process by which new individual organisms – 'offspring' – are produced from their 'parents'." .
+life:Growth rdfs:label "Growth" .
+life:Growth rdfs:subClassOf life:BiologicalProcess .
+life:Growth rdfs:comment "The process of increasing in size." .
+life:InorganicMatter rdfs:label "Inorganic Matter" .
+life:InorganicMatter rdfs:subClassOf "Chemistry" .
+life:InorganicMatter rdfs:comment "Matter that is not of biological origin." .

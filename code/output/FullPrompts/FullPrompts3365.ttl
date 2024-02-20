@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix parent: <http://example.org/ParentOntology#> .
+parent:Parent rdf:type rdfs:Class ;
+    rdfs:label "Parent Class"@en ;
+    rdfs:comment "Represent parent entities"@en .
+parent:hasChild rdf:type rdf:Property ;
+    rdfs:label "has child"@en ;
+    rdfs:comment "A parent has a child"@en ;
+    rdfs:domain parent:Parent ;
+    rdfs:range parent:Child .
+parent:isParentOf rdf:type rdf:Property ;
+    rdfs:label "is parent of"@en ;
+    rdfs:comment "A parent is parent of someone"@en ;
+    rdfs:domain parent:Parent ;
+    rdfs:range xsd:string .
+parent:Child rdf:type rdfs:Class ;
+    rdfs:label "Child Class"@en ;
+    rdfs:comment "Represent child entities"@en .
+parent:hasParent rdf:type rdf:Property ;
+    rdfs:label "has parent"@en ;
+    rdfs:comment "A child has a parent"@en ;
+    rdfs:domain parent:Child ;
+    rdfs:range parent:Parent .
+parent:isChildOf rdf:type rdf:Property ;
+    rdfs:label "is child of"@en ;
+    rdfs:comment "A child is child of someone"@en ;
+    rdfs:domain parent:Child ;
+    rdfs:range xsd:string .

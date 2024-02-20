@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Point a rdfs:Class ;
+    rdfs:comment "A spatial location or position represented using coordinates" ;
+    rdfs:label "Point" .
+ex:hasX a rdf:Property ;
+    rdfs:domain ex:Point ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The X coordinate of a point" ;
+    rdfs:label "hasX" .
+ex:hasY a rdf:Property ;
+    rdfs:domain ex:Point ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The Y coordinate of a point" ;
+    rdfs:label "hasY" .
+ex:hasZ a rdf:Property ;
+    rdfs:domain ex:Point ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The Z coordinate of a point, if it exists" ;
+    rdfs:label "hasZ" .
+This model simply describes a "Point" using three properties: "hasX", "hasY", and "hasZ" which represent the X, Y, and Z coordinates of the point. Note that the Z coordinate is optional, as some points may only exist in two dimensions.

@@ -1,0 +1,30 @@
+@prefix : <http://www.example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Room rdf:type rdfs:Class .
+:hasRoomNumber rdf:type rdf:Property ;
+    rdfs:domain :Room ;
+    rdfs:range xsd:string .
+:hasArea rdf:type rdf:Property ;
+    rdfs:domain :Room ;
+    rdfs:range xsd:float .
+:occupant rdf:type rdf:Property ;
+    rdfs:domain :Room .
+:Person rdf:type rdfs:Class ;
+    rdfs:subClassOf [ rdf:type rdfs:Class ;
+                      rdfs:subClassOf :occupant ] .
+:hasFunction rdf:type rdf:Property ;
+    rdfs:domain :Room ;
+    rdfs:range :RoomFunction .
+:RoomFunction rdf:type rdfs:Class ;
+    rdfs:label "function of a room"@en .
+:Bedroom rdf:type rdfs:Class ;
+    rdfs:subClassOf :RoomFunction ;
+    rdfs:comment "A room for sleeping in."@en .
+:LivingRoom rdf:type rdfs:Class ;
+    rdfs:subClassOf :RoomFunction ;
+    rdfs:comment "A room in a house for general and informal everyday uses."@en .
+:Kitchen rdf:type rdfs:Class ;
+    rdfs:subClassOf :RoomFunction ;
+    rdfs:comment "A room used for cooking or food preparation in a dwelling or in a commercial establishment."@en .

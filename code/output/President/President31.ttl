@@ -1,0 +1,8 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Define the class Presidentex:President rdf:type rdfs:Class .
+# Define the object properties which will represent relationships of the Presidentex:leads rdf:type rdf:Property .
+ex:isElectedBy rdf:type rdf:Property .
+# Define the role of the presidentex:presidentRole rdf:type ex:President ;
+    rdfs:comment "The role of a President" ;

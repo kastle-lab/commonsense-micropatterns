@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wordOnt: <http://www.example.org/wordOntology#> .
+wordOnt:Word rdf:type owl:Class .
+wordOnt:hasSpelling rdf:type owl:DatatypeProperty ;
+    rdfs:domain wordOnt:Word ;
+    rdfs:range xsd:string .
+    wordOnt:hasLength rdf:type owl:DatatypeProperty ;
+    rdfs:domain wordOnt:Word ;
+    rdfs:range xsd:int .
+wordOnt:partOfSpeech rdf:type owl:ObjectProperty ;
+    rdfs:domain wordOnt:Word ;
+    rdfs:range wordOnt:PartOfSpeech .
+    wordOnt:hasSynonyms rdf:type owl:ObjectProperty ;
+    rdfs:domain wordOnt:Word ;
+    rdfs:range wordOnt:Word .
+wordOnt:PartOfSpeech rdf:type owl:Class .
+wordOnt:Noun rdf:type owl:NamedClass ;
+    rdfs:subClassOf wordOnt:PartOfSpeech .
+wordOnt:Verb rdf:type owl:NamedClass ;
+    rdfs:subClassOf wordOnt:PartOfSpeech .
+wordOnt:Adjective rdf:type owl:NamedClass ;
+    rdfs:subClassOf wordOnt:PartOfSpeech .
+wordOnt:Adverb rdf:type owl:NamedClass ;
+    rdfs:subClassOf wordOnt:PartOfSpeech .

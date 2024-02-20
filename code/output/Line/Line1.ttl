@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix line: <http://example.org/line#> .
+line:Line a rdfs:Class ;
+    rdfs:comment "A class representing a line."@en ;
+    rdfs:label "Line"@en .
+line:hasLength a rdf:Property ;
+    rdfs:comment "A property representing the length of a line."@en ;
+    rdfs:label "hasLength"@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain line:Line .
+line:hasStartPoint a rdf:Property ;
+    rdfs:comment "A property representing the start point of a line."@en ;
+    rdfs:label "hasStartPoint"@en ;
+    rdfs:domain line:Line ;
+    rdfs:range line:Point .
+line:hasEndPoint a rdf:Property ;
+    rdfs:comment "A property representing the end point of a line."@en ;
+    rdfs:label "hasEndPoint"@en ;
+    rdfs:domain line:Line ;
+    rdfs:range line:Point .
+    line:Point a rdfs:Class ;
+    rdfs:comment "A class representing a point."@en ;
+    rdfs:label "Point"@en .
+line:hasXCoordinate a rdf:Property ;
+    rdfs:comment "A property representing the X coordinate of a point."@en ;
+    rdfs:label "hasXCoordinate"@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain line:Point .
+line:hasYCoordinate a rdf:Property ;
+    rdfs:comment "A property representing the Y coordinate of a point."@en ;
+    rdfs:label "hasYCoordinate"@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain line:Point .

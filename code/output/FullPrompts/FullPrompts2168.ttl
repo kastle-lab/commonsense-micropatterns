@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.geonames.org/ontology#> .
+<http://example.org/State> rdf:type owl:Class ;
+    rdfs:subClassOf geo:Feature ;
+    rdfs:comment "A politically defined territory"@en ;
+    rdfs:label "State"@en .
+<http://example.org/Country> rdf:type owl:Class ;
+    rdfs:subClassOf geo:Feature ;
+     rdfs:comment "A politically defined territory which has sovereignty, may contain multiple states"@en ;
+    rdfs:label "Country"@en .
+<http://example.org/hasState> rdf:type owl:ObjectProperty ;
+    rdfs:domain <http://example.org/Country> ;
+    rdfs:range <http://example.org/State> ;
+    rdfs:comment "A relation indicating that a country contains a state"@en ;
+    rdfs:label "has state"@en .
+<http://example.org/isPartOf> rdf:type owl:ObjectProperty ;
+    rdfs:domain <http://example.org/State> ;
+    rdfs:range <http://example.org/Country> ;
+    rdfs:comment "A relation indicating that a state is part of a country"@en ;
+    rdfs:label "is part of"@en .

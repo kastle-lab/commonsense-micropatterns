@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Question  rdf:type rdfs:Class ;
+  rdfs:label "Question"@en ;
+  rdfs:comment "Entity that represents a query or examination prompt"@en .
+ex:hasQuestionText  rdf:type rdf:Property ;
+  rdfs:domain ex:Question ;
+  rdfs:range xsd:string ;
+  rdfs:label "has question text"@en ;
+  rdfs:comment "Text that shows exact query or examination prompt"@en .
+ex:hasAnswer  rdf:type rdf:Property ;
+  rdfs:domain ex:Question ;
+  rdfs:range ex:Answer ;
+  rdfs:label "has answer"@en ;
+  rdfs:comment "Answer to the specific question"@en .
+ex:Answer  rdf:type rdfs:Class ;
+  rdfs:label "Answer"@en ;
+  rdfs:comment "Response or reply to a question"@en .
+ex:hasAnswerText  rdf:type rdf:Property ;
+  rdfs:domain ex:Answer ;
+  rdfs:range xsd:string ;
+  rdfs:label "has answer text"@en ;
+  rdfs:comment "The actual response or reply text to a question"@en .

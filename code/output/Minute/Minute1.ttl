@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/ontology#> .
+:Minute rdf:type rdfs:Class ;
+  rdfs:label "Minute"@en ;
+  rdfs:comment "The unit of time called Minute"@en .
+:hasMinutes rdf:type rdf:Property ;
+  rdfs:label "has minutes"@en ;
+  rdfs:range :Minute ;
+  rdfs:comment "Refers to a span of time that has a particular number of minutes"@en .
+:Second rdf:type rdfs:Class ;
+  rdfs:label "Second"@en ;
+  rdfs:subClassOf :Minute ;
+  rdfs:comment "A unit of time, where 60 seconds equal 1 minute"@en .
+:hasSeconds rdf:type rdf:Property ;
+  rdfs:label "has seconds"@en ;
+  rdfs:range :Second ;
+  rdfs:comment "Refers to a span of time that has a particular number of seconds"@en .
+:Hour rdf:type rdfs:Class ;
+  rdfs:label "Hour"@en ;
+  rdfs:subClassOf :Minute ;
+  rdfs:comment "A unit of time, where 60 minutes equal 1 hour"@en .
+:hasHours rdf:type rdf:Property ;
+  rdfs:label "has hours"@en ;
+  rdfs:range :Hour ;
+  rdfs:comment "Refers to a span of time that has a particular number of hours"@en .

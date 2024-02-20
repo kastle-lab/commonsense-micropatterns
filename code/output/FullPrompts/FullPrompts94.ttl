@@ -1,0 +1,30 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:loveseat a rdfs:Class ;
+    rdfs:comment "A type of furniture intended for two people seating" ;
+    rdfs:label "Loveseat"@en .
+:hasMaterial a rdfs:Property ;
+    rdfs:comment "The material used in the manufacture of the loveseat" ;
+    rdfs:domain :loveseat ;
+    rdfs:range xsd:string ;
+    rdfs:label "has material"@en .
+:hasColor a rdfs:Property ;
+    rdfs:comment "The color of the loveseat" ;
+    rdfs:domain :loveseat ;
+    rdfs:range xsd:string ;
+    rdfs:label "has color"@en .
+:hasStyle a rdfs:Property ;
+    rdfs:comment "The style of the loveseat" ;
+    rdfs:domain :loveseat ;
+    rdfs:range xsd:string ;
+    rdfs:label "has style"@en .
+:hasManufacturer a rdfs:Property ;
+    rdfs:comment "The manufacturer of the loveseat" ;
+    rdfs:domain :loveseat ;
+    rdfs:range xsd:string ;
+    rdfs:label "has manufacturer"@en .
+:hasPrice a rdfs:Property ;
+    rdfs:comment "The price of the loveseat" ;
+    rdfs:domain :loveseat ;
+    rdfs:range xsd:float ;
+    rdfs:label "has price"@en .

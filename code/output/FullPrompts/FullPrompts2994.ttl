@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/member#> .
+ex:Member rdf:type rdfs:Class ;
+         rdfs:label "Member" .
+  ex:hasMemberID rdf:type rdf:Property ;
+        rdfs:label "has member ID" ;
+        rdfs:domain ex:Member ;
+        rdfs:range xsd:string .
+ex:hasName rdf:type rdf:Property ;
+        rdfs:label "has name" ;
+        rdfs:domain ex:Member ;
+        rdfs:range xsd:string .
+ex:hasDateOfBirth rdf:type rdf:Property ;
+        rdfs:label "has date of birth" ;
+        rdfs:domain ex:Member ;
+        rdfs:range xsd:date .
+ex:hasEmail rdf:type rdf:Property ;
+        rdfs:label "has email" ;
+        rdfs:domain ex:Member ;
+        rdfs:range xsd:string .
+ex:livesInCity rdf:type rdf:Property ;
+        rdfs:label "lives in city" ;
+        rdfs:domain ex:Member ;
+        rdfs:range xsd:string .
+  ex:joinedOn rdf:type rdf:Property ;
+        rdfs:label "joined on" ;
+        rdfs:domain ex:Member ;
+        rdfs:range xsd:date .
+ex:hasMembershipType rdf:type rdf:Property ;
+        rdfs:label "has membership type" ;
+        rdfs:domain ex:Member ;
+        rdfs:range xsd:string .

@@ -1,0 +1,23 @@
+@prefix : <http://www.example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Face rdf:type rdfs:Class ;
+    rdfs:label "Face"@en .
+    :hasEye rdf:type rdf:Property ;
+    rdfs:label "has eye"@en ;
+    rdfs:domain :Face ;
+    rdfs:range :Eye .
+    :hasNose rdf:type rdf:Property ;
+    rdfs:label "has nose"@en ;
+    rdfs:domain :Face ;
+    rdfs:range :Nose .
+    :hasMouth rdf:type rdf:Property ;
+    rdfs:label "has mouth"@en ;
+    rdfs:domain :Face ;
+    rdfs:range :Mouth .
+    :Eye rdf:type rdfs:Class ;
+    rdfs:label "Eye"@en .
+    :Nose rdf:type rdfs:Class ;
+    rdfs:label "Nose"@en .
+    :Mouth rdf:type rdfs:Class ;
+    rdfs:label "Mouth"@en .

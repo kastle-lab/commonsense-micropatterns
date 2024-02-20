@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sofa: <http://example.org/sofa#> .
+sofa: a rdfs:Class ;
+      rdfs:label "Sofa"^^xsd:string ;
+      rdfs:comment "Furniture designed for seating"^^xsd:string .
+sofa:color a rdf:Property ;
+      rdfs:label "color"^^xsd:string ;
+      rdfs:domain sofa: ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The color of the sofa"^^xsd:string .
+sofa:material a rdf:Property ;
+      rdfs:label "material"^^xsd:string ;
+      rdfs:domain sofa: ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The primary material of the sofa"^^xsd:string .
+      sofa:size a rdf:Property ;
+      rdfs:label "size"^^xsd:string ;
+      rdfs:domain sofa: ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The size of the sofa"^^xsd:string .
+sofa:brand a rdf:Property ;
+      rdfs:label "brand"^^xsd:string ;
+      rdfs:domain sofa: ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The brand of the sofa"^^xsd:string .
+sofa:price a rdf:Property ;
+      rdfs:label "price"^^xsd:string ;
+      rdfs:domain sofa: ;
+      rdfs:range xsd:decimal ;
+      rdfs:comment "The price of the sofa"^^xsd:string .
+sofa:style a rdf:Property ;
+      rdfs:label "style"^^xsd:string ;
+      rdfs:domain sofa: ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The style of the sofa"^^xsd:string .

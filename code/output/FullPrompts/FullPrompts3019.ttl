@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns: <http://www.example.org/ns#> .
+ns:Member  rdf:type rdfs:Class ;
+  rdfs:comment "The class of all members in concept."@en ;
+  rdfs:label "Member"@en .
+ns:memberOf  rdf:type rdf:Property ;
+  rdfs:domain ns:Member ;
+  rdfs:range ns:Group ;
+  rdfs:comment "The property relating a member to the group they are part of."@en ;
+  rdfs:label "memberOf"@en .

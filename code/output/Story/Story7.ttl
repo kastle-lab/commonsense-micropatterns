@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix story: <http://www.example.com/story#> .
+story:Story a rdfs:Class ;
+  rdfs:comment "A narrative, either true or fictional, composed of a sequence of connected events."@en ;
+  rdfs:label "Story"@en .
+story:Author a rdfs:Class ;
+  rdfs:comment "The person who wrote the story."@en ;
+  rdfs:label "Author"@en .
+story:Character a rdfs:Class ;
+  rdfs:comment "A person, animal or any other thing with a role in the story."@en ;
+  rdfs:label "Character"@en .
+story:Setting a rdfs:Class ;
+  rdfs:comment "The time, place and conditions at the time when the story's actions occur."@en ;
+  rdfs:label "Setting"@en .
+story:writtenBy a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range story:Author ;
+  rdfs:comment "Links a story to its author."@en ;
+  rdfs:label "written by"@en .
+story:hasCharacter a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range story:Character ;
+  rdfs:comment "Links a story to one of its characters."@en ;
+  rdfs:label "has character"@en .
+story:hasSetting a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range story:Setting ;
+  rdfs:comment "Links a story to its setting."@en ;
+  rdfs:label "has setting"@en .
+story:Plot a rdfs:Class ;
+  rdfs:comment "The events that make up a story, particularly as they relate to one another in a pattern, in a sequence, through cause and effect, or by coincidence."@en ;
+  rdfs:label "Plot"@en .
+story:hasPlot a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range story:Plot ;
+  rdfs:comment "Links a story to its plot."@en ;
+  rdfs:label "has plot"@en .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Sofa rdf:type rdfs:Class ;
+    rdfs:comment "A comfortable seat wide enough for two/three people to sit at a time"^^xsd:string ;
+    rdfs:label "Sofa"^^xsd:string .
+ex:LeatherSofa rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Sofa ;
+    rdfs:label "Leather Sofa"^^xsd:string ;
+    rdfs:comment "A sofa covered in leather material"^^xsd:string .
+ex:FabricSofa rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Sofa ;
+    rdfs:label "Fabric Sofa"^^xsd:string ;
+    rdfs:comment "A sofa covered in fabric material"^^xsd:string .
+ex:sofaStyle rdf:type rdf:Property ;
+    rdf:domain ex:Sofa ;
+    rdf:range xsd:string ;
+    rdfs:label "sofa style"^^xsd:string ;
+    rdfs:comment "The style or design of a sofa"^^xsd:string .
+ex:sofaColor rdf:type rdf:Property ;
+    rdf:domain ex:Sofa ;
+    rdf:range xsd:string ;
+    rdfs:label "sofa color"^^xsd:string ;
+    rdfs:comment "The color of a sofa"^^xsd:string .
+ex:sofaSize rdf:type rdf:Property ;
+    rdf:domain ex:Sofa ;
+    rdf:range xsd:string ;
+    rdfs:label "sofa size"^^xsd:string ;
+    rdfs:comment "The size of a sofa"^^xsd:string .

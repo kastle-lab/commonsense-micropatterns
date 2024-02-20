@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Man rdf:type rdfs:Class ;
+# Defining properties for Man:hasName rdf:type rdf:Property ;
+    rdfs:domain :Man ;
+    rdfs:range xsd:string .
+:hasAge rdf:type rdf:Property ;
+    rdfs:domain :Man ;
+    rdfs:range xsd:integer .
+:hasNationality rdf:type rdf:Property ;
+    rdfs:domain :Man ;
+    rdfs:range :Country .
+:Country rdf:type rdfs:Class .

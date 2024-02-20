@@ -1,0 +1,6 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/> .
+ex:John rdf:type ex:Teacher .
+This pattern is quite straightforward. It creates a resource "John" and classifies it as a "Teacher".
+ The prefix "ex" is a placeholder and should be replaced with the actual namespace of your data.The 'rdf:type' is used to state that "John" is an instance of the class "Teacher".
+Please note that Turtle/RDF syntax is case sensitive. So `ex:Teacher` and `ex:teacher` are two different things.

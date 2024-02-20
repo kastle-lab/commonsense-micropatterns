@@ -1,0 +1,26 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Office a rdfs:Class ;
+  rdfs:label "Office" ;
+  rdfs:comment "A place where people work" .
+:address a rdf:Property ;
+  rdfs:domain :Office ;
+  rdfs:range xsd:string ;
+  rdfs:label "address" ;
+  rdfs:comment "The address of the office" .
+:officeNumber a rdf:Property ;
+  rdfs:domain :Office ;
+  rdfs:range xsd:integer ;
+  rdfs:label "officeNumber" ;
+  rdfs:comment "The number of the office" .
+:officeSize a rdf:Property ;
+  rdfs:domain :Office ;
+  rdfs:range xsd:integer ;
+  rdfs:label "officeSize" ;
+  rdfs:comment "The size of the office in square meters" .
+:inCharge a rdf:Property ;
+  rdfs:domain :Office ;
+  rdfs:range :Person ;
+  rdfs:label "inCharge" ;
+  rdfs:comment "The person in charge of the office" .

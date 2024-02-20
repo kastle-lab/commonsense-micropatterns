@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+ex:Guy rdf:type foaf:Person ;
+    foaf:givenName "Guy" ;
+    foaf:familyName "Smith" ;
+    foaf:mbox <mailto:guysmith@example.com> ;
+    ex:hasAge "35"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+    ex:hasGender "Male" ;
+    ex:livesIn "New York" ;
+    ex:hasOccupation "Engineer" ;
+    ex:hasMaritalStatus "Married" ;
+    ex:hasChild ex:John , ex:Lisa .
+  ex:John rdf:type foaf:Person ;
+    foaf:givenName "John" ;
+    foaf:familyName "Smith" .
+ex:Lisa rdf:type foaf:Person ;
+    foaf:givenName "Lisa" ;
+    foaf:familyName "Smith" .
+ex:hasAge rdf:type rdf:Property ;
+    rdfs:label "has age" ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#integer> .
+ex:hasGender rdf:type rdf:Property ;
+    rdfs:label "has gender" ;
+    rdfs:range rdfs:Literal .
+ex:livesIn rdf:type rdf:Property ;
+    rdfs:label "lives in" ;
+    rdfs:range rdfs:Literal .
+ex:hasOccupation rdf:type rdf:Property ;
+    rdfs:label "has occupation" ;
+    rdfs:range rdfs:Literal .
+ex:hasMaritalStatus rdf:type rdf:Property ;
+    rdfs:label "has marital status" ;
+    rdfs:range rdfs:Literal .
+ex:hasChild rdf:type rdf:Property ;
+    rdfs:label "has child" ;
+    rdfs:range foaf:Person .

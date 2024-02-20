@@ -1,0 +1,16 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:Reason a rdfs:Class ;
+    rdfs:label "Reason"@en ;
+    rdfs:comment "The cause, explanation, or justification for an action or event"@en .
+:hasReason    a rdf:Property ;
+    rdfs:range :Reason ;
+    rdfs:label "has reason"@en ;
+    rdfs:domain :Action ;
+    rdfs:comment "Relates an action to its Reason"@en .
+:Action a rdfs:Class ;
+    rdfs:label "Action"@en ;
+    rdfs:comment "A thing done;
+ an act"@en .

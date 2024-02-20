@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:City a rdf:Class .
+ex:name a rdf:Property ;
+    rdf:domain ex:City ;
+    rdf:range xsd:string .
+  ex:population a rdf:Property ;
+    rdf:domain ex:City ;
+    rdf:range xsd:integer .
+ex:country a rdf:Property ;
+    rdf:domain ex:City ;
+    rdf:range ex:Country .
+ex:Country a rdf:Class .

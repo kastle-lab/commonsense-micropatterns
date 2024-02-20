@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix night: <http://www.example.org/night#> .
+night:Night a owl:Class ;
+  rdfs:label "Night" ;
+  rdfs:comment "This is a class representing the concept of Night" .
+night:Star a owl:Class ;
+  rdfs:label "Star" ;
+  rdfs:comment "This is a class representing Stars visible during night" .
+night:Moon a owl:Class ;
+  rdfs:label "Moon" ;
+  rdfs:comment "This is a class representing the Moon visible during night" .
+night:isPresentDuring a owl:ObjectProperty ;
+  rdfs:label "is present during" ;
+  rdfs:domain night:Star ;
+  rdfs:range night:Night .
+night:isIlluminatedBy a owl:ObjectProperty ;
+  rdfs:label "is illuminated by" ;
+  rdfs:domain night:Moon ;
+  rdfs:range night:Night .
+night:hasInSky a owl:ObjectProperty ;
+  rdfs:label "has in sky" ;
+  rdfs:domain night:Night ;
+  rdfs:range night:Star, night:Moon .

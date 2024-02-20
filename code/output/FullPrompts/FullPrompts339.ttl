@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix man: <http://www.example.com/man#> .
+man:Man rdf:type owl:Class ;
+  rdfs:label "Man"@en ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:comment "This is a class for all men"@en .
+man:hasAge rdf:type owl:DatatypeProperty ;
+  rdfs:label "has age"@en ;
+  rdfs:domain man:Man ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The age of the man"@en .
+man:hasName rdf:type owl:DatatypeProperty ;
+  rdfs:label "has name"@en ;
+  rdfs:domain man:Man ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the man"@en .
+man:hasOccupation rdf:type owl:ObjectProperty ;
+  rdfs:label "has occupation"@en ;
+  rdfs:domain man:Man ;
+  rdfs:comment "The occupation of the man"@en .
+man:Occupation rdf:type owl:Class ;
+  rdfs:label "Occupation"@en ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:comment "This class represents occupations"@en .

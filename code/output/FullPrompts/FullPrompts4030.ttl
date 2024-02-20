@@ -1,0 +1,29 @@
+@prefix ex: <http://example.org/> .
+ex:air a rdf:Class ;
+    rdfs:label "Air" ;
+    rdfs:comment "The natural gaseous substance that covers the earth and is what we breathe." .
+ex:containsNitrogen a rdf:Property ;
+    rdfs:label "Contains Nitrogen" ;
+    rdfs:comment "The air contains Nitrogen." ;
+    rdfs:domain ex:air ;
+    rdfs:range xsd:boolean .
+ex:containsOxygen a rdf:Property ;
+    rdfs:label "Contains Oxygen" ;
+    rdfs:comment "The air contains Oxygen." ;
+    rdfs:domain ex:air ;
+    rdfs:range xsd:boolean .
+ex:containsOtherGases a rdf:Property ;
+    rdfs:label "Contains other gases" ;
+    rdfs:comment "The air contains other gases in smaller proportions." ;
+    rdfs:domain ex:air ;
+    rdfs:range xsd:boolean .
+ex:isInhaled a rdf:Property ;
+    rdfs:label "Is inhaled" ;
+    rdfs:comment "The air is inhaled by humans and other creatures." ;
+    rdfs:domain ex:air ;
+    rdfs:range xsd:boolean .
+ex:earthAtmosphere ex:air true ;
+    ex:containsNitrogen true ;
+    ex:containsOxygen true ;
+    ex:containsOtherGases true ;
+    ex:isInhaled true .

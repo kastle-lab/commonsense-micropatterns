@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix res: <http://www.example.org/research#> .
+res:Research a rdfs:Class ;
+    rdfs:label "Research"^^xsd:string ;
+    rdfs:comment "The systematic investigation into and study of materials and sources to establish facts and reach new conclusions."^^xsd:string .
+res:ResearchTopic a rdfs:Class ;
+    rdfs:subClassOf res:Research ;
+    rdfs:label "ResearchTopic"^^xsd:string ;
+    rdfs:comment "Specific subject or issue being studied in a research project."^^xsd:string .
+res:ResearchMethod a rdfs:Class ;
+    rdfs:subClassOf res:Research ;
+    rdfs:label "ResearchMethod"^^xsd:string ;
+    rdfs:comment "Method or procedure used in the research process."^^xsd:string .
+res:Researcher a rdfs:Class ;
+    rdfs:label "Researcher"^^xsd:string ;
+    rdfs:comment "Person who conducts research."^^xsd:string .
+res:conducts a rdf:Property ;
+    rdfs:domain res:Researcher ;
+    rdfs:range res:Research ;
+    rdfs:label "conducts"^^xsd:string ;
+    rdfs:comment "Link a researcher to the research they conduct."^^xsd:string .
+res:studies a rdf:Property ;
+    rdfs:domain res:Researcher ;
+    rdfs:range res:ResearchTopic ;
+    rdfs:label "studies"^^xsd:string ;
+    rdfs:comment "Link a researcher to the topic they study."^^xsd:string .
+res:uses a rdf:Property ;
+    rdfs:domain res:Research ;
+    rdfs:range res:ResearchMethod ;
+    rdfs:label "uses"^^xsd:string ;
+    rdfs:comment "Link a research project to the method it uses."^^xsd:string .

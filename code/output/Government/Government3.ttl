@@ -1,0 +1,33 @@
+`@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gov: <http://example.org/government#> .
+gov:Government   rdf:type rdfs:Class ;
+  rdfs:comment "A group of people that governs a community or unit" ;
+  rdfs:label "Government"^^xsd:string .
+gov:Department   rdf:type rdfs:Class ;
+  rdfs:subClassOf gov:Government ;
+  rdfs:comment "A division of a government, typically a level of administration" ;
+  rdfs:label "Department"^^xsd:string .
+gov:hasDepartment  rdf:type rdf:Property ;
+  rdfs:domain gov:Government ;
+  rdfs:range gov:Department ;
+  rdfs:label "governmental department" ;
+  rdfs:comment "A property indicating a department within a government" .
+gov:Minister  rdf:type rdfs:Class ;
+  rdfs:comment "A government official who heads a governmental department" ;
+  rdfs:label "Minister"^^xsd:string .
+gov:heads  rdf:type rdf:Property ;
+  rdfs:domain gov:Minister ;
+  rdfs:range gov:Department ;
+  rdfs:label "head of department" ;
+  rdfs:comment "A property indicating a minister who heads a department" .
+gov:Legislation  rdf:type rdfs:Class ;
+  rdfs:comment "A law or set of laws suggested by a government and made official by a parliament" ;
+  rdfs:label "Legislation"^^xsd:string .
+gov:passedBy  rdf:type rdf:Property ;
+  rdfs:domain gov:Legislation ;
+  rdfs:range gov:Government ;
+  rdfs:label "passed by" ;
+  rdfs:comment "A property indicating a government that passed a legislation" .
+`

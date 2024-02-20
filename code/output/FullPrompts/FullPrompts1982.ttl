@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix city: <http://www.cityontology.com#> .
+city:City rdf:type rdfs:Class .
+rdfs:label "City"@en .
+city:population rdf:type rdf:Property ;
+  rdfs:domain city:City ;
+  rdfs:range xsd:integer ;
+  rdfs:label "population"@en;
+  rdfs:comment "The population of the city"@en .
+city:country rdf:type rdf:Property ;
+  rdfs:domain city:City ;
+  rdfs:range city:Country ;
+  rdfs:label "country"@en;
+  rdfs:comment "The country the city belongs to"@en .
+city:Country rdf:type rdfs:Class ;
+  rdfs:label "Country"@en .
+city:area rdf:type rdf:Property;
+  rdfs:domain city:City;
+  rdfs:range xsd:float;
+  rdfs:label "area"@en;
+  rdfs:comment "The total area covered by the city"@en .
+city:hasBuilding rdf:type rdf:Property;
+  rdfs:domain city:City;
+  rdfs:range city:Building;
+  rdfs:label "hasBuilding"@en ;
+  rdfs:comment "The city contains this building"@en .
+city:Building rdf:type rdfs:Class;
+  rdfs:label "Building"@en .

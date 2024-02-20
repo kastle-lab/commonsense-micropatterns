@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+#Class of Father:Father a rdfs:Class ;
+    rdfs:label "Father"@en ;
+    rdfs:comment "Class of all fathers"@en .
+    #Property of hasFather:hasFather a rdf:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range :Father ;
+    rdfs:label "has father"@en ;
+    rdfs:comment "The property that relates a person to their father"@en .
+#Subclass of Male:Father rdfs:subClassOf foaf:Male .
+    #Individual Example:John a foaf:Person, :Father ;
+    foaf:firstName "John"^^xsd:string ;
+    foaf:familyName "Doe"^^xsd:string .
+    :Sam a foaf:Person ;
+    foaf:firstName "Sam"^^xsd:string ;
+    foaf:familyName "Doe"^^xsd:string ;
+    :hasFather :John .

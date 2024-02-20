@@ -1,0 +1,32 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix warOnto: <http://www.example.org/warOntology#> .
+warOnto:War a rdfs:Class ;
+  rdfs:label "War" ;
+  rdfs:comment "Class for representing war events" .
+warOnto:name a rdfs:DatatypeProperty ;
+  rdfs:domain warOnto:War ;
+  rdfs:range xsd:string ;
+  rdfs:label "name" ;
+  rdfs:comment "The name of the war." .
+warOnto:involvedCountry a rdfs:ObjectProperty ;
+  rdfs:domain warOnto:War ;
+  rdfs:range owl:Thing ;
+  rdfs:label "involvedCountry" ;
+  rdfs:comment "The countries involved in the war." .
+warOnto:startDate a rdfs:DatatypeProperty ;
+  rdfs:domain warOnto:War ;
+  rdfs:range xsd:date ;
+  rdfs:label "startDate" ;
+  rdfs:comment "The date when the war started." .
+warOnto:endDate a rdfs:DatatypeProperty ;
+  rdfs:domain warOnto:War ;
+  rdfs:range xsd:date ;
+  rdfs:label "endDate" ;
+  rdfs:comment "The date when the war ended." .
+warOnto:result a rdfs:DatatypeProperty ;
+  rdfs:domain warOnto:War ;
+  rdfs:range xsd:string ;
+  rdfs:label "result" ;
+  rdfs:comment "The outcome or result of the war." .

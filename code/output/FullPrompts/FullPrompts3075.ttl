@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix name: <http://ontology.example.org/name#> .
+name:Name rdf:type rdfs:Class ;
+    rdfs:comment "Concept of a Name" ;
+    rdfs:subClassOf owl:Thing ;
+    .
+name:hasfirstName rdf:type rdf:Property ;
+    rdfs:domain name:Name ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The given or first name related to Name" ;
+    .
+name:haslastName rdf:type rdf:Property ;
+    rdfs:domain name:Name ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The family or last name related to Name" ;
+    .
+name:hasmiddleName rdf:type rdf:Property ;
+    rdfs:domain name:Name ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The middle name related to Name" ;
+    .
+name:hasPrefix rdf:type rdf:Property ;
+    rdfs:domain name:Name ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The prefix (Mr., Mrs., etc.) related to Name" ;
+    .
+    name:hasSuffix rdf:type rdf:Property ;
+    rdfs:domain name:Name ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The suffix (Jr., III, etc.) related to Name" ;
+    .
+name:Person rdf:type rdfs:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "A person who has a Name" ;
+    .
+name:hasName rdf:type rdf:Property ;
+    rdfs:domain name:Person ;
+    rdfs:range name:Name ;
+    rdfs:comment "The Name of a person" ;
+    .

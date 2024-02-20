@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix world: <http://www.example.org/world#> .
+world:    rdf:type owl:Ontology ;
+    rdfs:comment "An ontology encompassing the World" .
+world:Place    rdf:type owl:Class ;
+    rdfs:comment "Represents any place in the world" .
+world:Person    rdf:type owl:Class ;
+    rdfs:comment "Represents any person in the world" .
+world:Organization    rdf:type owl:Class ;
+    rdfs:comment "Represents any organization in the world" .
+world:locatedIn    rdf:type owl:ObjectProperty ;
+    rdfs:domain world:Person ;
+    rdfs:range world:Place ;
+    rdfs:comment "Link a person to a place where the person is located" .
+world:memberOf    rdf:type owl:ObjectProperty ;
+    rdfs:domain world:Person ;
+    rdfs:range world:Organization ;
+    rdfs:comment "Link a person to an organization to which the person belongs" .
+world:hosts    rdf:type owl:ObjectProperty ;
+    rdfs:domain world:Place ;
+    rdfs:range world:Organization ;
+    rdfs:comment "Link a place to an organization that is hosted in that place" .
+world:name    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ owl:unionOf ( world:Place world:Person world:Organization ) ] ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of a place, person or organization" .
+world:population    rdf:type owl:DatatypeProperty ;
+    rdfs:domain world:Place ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The population of a place" .

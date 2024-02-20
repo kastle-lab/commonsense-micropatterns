@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/student#> .
+# Classes:Student a rdfs:Class ;
+  rdfs:label "Student" .
+:Course a rdfs:Class ;
+  rdfs:label "Course" .
+:University a rdfs:Class ;
+  rdfs:label "University" .
+# Properties:attends a rdf:Property ;
+  rdfs:domain :Student ;
+  rdfs:range :Course ;
+  rdfs:label "attends" .
+:studiesAt a rdf:Property ;
+  rdfs:domain :Student ;
+  rdfs:range :University ;
+  rdfs:label "studies at" .
+:hasName a rdf:Property ;
+  rdfs:domain :Student ;
+  rdfs:range xsd:string ;
+  rdfs:label "has name" .
+:hasAge a rdf:Property ;
+  rdfs:domain :Student ;
+  rdfs:range xsd:integer ;
+  rdfs:label "has age" .
+:isEnrolledIn a rdf:Property ;
+  rdfs:domain :Student ;
+  rdfs:range :Course ;
+  rdfs:label "is enrolled in" .
+# Instance:student1 a :Student ;
+  :hasName "John Doe" ;
+  :hasAge 21 ;
+  :studiesAt :university1 ;
+  :isEnrolledIn :course1 .
+:university1 a :University ;
+  rdfs:label "University 1" .
+:course1 a :Course ;
+  rdfs:label "Course 1" .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix others: <http://example.org/others#> .
+others:Unknown     rdf:type rdfs:Class ;
+    rdfs:label "Unknown"@en ;
+    rdfs:comment "An entity that is unknown or not specified."@en .
+others:Stranger    rdf:type rdfs:Class ;
+    rdfs:subClassOf others:Unknown ;
+    rdfs:label "Stranger"@en ;
+    rdfs:comment "An unknown person that has not been encountered before."@en .
+    others:Alien    rdf:type rdfs:Class ;
+    rdfs:subClassOf others:Unknown ;
+    rdfs:label "Alien"@en ;
+    rdfs:comment "A being from another planet;
+ extraterrestrial life."@en .
+ others:Foreigner    rdf:type rdfs:Class ;
+    rdfs:label "Foreigner"@en ;
+    rdfs:comment "A person from another country or another nationality."@en .
+others:Outsider    rdf:type rdfs:Class ;
+    rdfs:label "Outsider"@en ;
+    rdfs:comment "A person who does not belong to a particular society or group."@en .
+others:name     rdf:type rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of an entity"@en ;
+    rdfs:domain others:Unknown;
+    rdfs:range xsd:string .

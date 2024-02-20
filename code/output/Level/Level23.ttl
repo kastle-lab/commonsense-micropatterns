@@ -1,0 +1,16 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/level#> .
+:Level rdf:type rdfs:Class .
+:levelID rdf:type rdf:Property ;
+    rdfs:domain :Level ;
+    rdfs:range xsd:string .
+:levelDesc rdf:type rdf:Property ;
+    rdfs:domain :Level ;
+    rdfs:range xsd:string .
+:Level1 rdf:type :Level ;
+    :levelID "L1" ;
+    :levelDesc "This is Level 1" .
+  :Level2 rdf:type :Level ;
+    :levelID "L2" ;
+    :levelDesc "This is Level 2" .

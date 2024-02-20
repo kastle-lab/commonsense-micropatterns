@@ -1,0 +1,13 @@
+ 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:john rdf:type :Person ;
+      rdfs:label "John"^^xsd:string .
+:paris rdf:type :City ;
+       rdfs:label "Paris"^^xsd:string .
+:moment1 rdf:type :Moment ;
+         :involvedPerson :john ;
+         :tookPlaceIn :paris ;
+         :time "2022-08-30T15:30:00"^^xsd:dateTime .

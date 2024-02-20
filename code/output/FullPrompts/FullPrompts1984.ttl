@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.geonames.org/ontology#> .
+geo:City rdf:type owl:Class ;
+    rdfs:subClassOf geo:GeonamesFeature ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A large and permanent human settlement."@en .
+geo:population rdf:type owl:DatatypeProperty ;
+    rdfs:domain geo:City ;
+    rdfs:range xsd:integer ;
+    rdfs:label "population"@en ;
+    rdfs:comment "The number of inhabitants of a city."@en .
+geo:country rdf:type owl:ObjectProperty ;
+    rdfs:domain geo:City ;
+    rdfs:range geo:Country ;
+    rdfs:label "country"@en ;
+    rdfs:comment "The country wherein a city is located."@en .
+geo:area rdf:type owl:DatatypeProperty ;
+    rdfs:domain geo:City ;
+    rdfs:range xsd:float ;
+    rdfs:label "area"@en ;
+    rdfs:comment "The total land, water, and urban area of a city in km²."@en .
+geo:elevation rdf:type owl:DatatypeProperty ;
+    rdfs:domain geo:City ;
+    rdfs:range xsd:float ;
+    rdfs:label "elevation"@en ;
+    rdfs:comment "The elevation of a city above sea level in meters."@en .
+geo:timeZone rdf:type owl:ObjectProperty ;
+    rdfs:domain geo:City ;
+    rdfs:range geo:TimeZone ;
+    rdfs:label "time zone"@en ;
+    rdfs:comment "The time zone a city falls within."@en .

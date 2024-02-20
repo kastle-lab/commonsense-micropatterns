@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fam: <http://ontology.example.com/family/> .
+fam:Father a rdfs:Class ;
+    rdfs:label "Father" ;
+    rdfs:comment "A man in relation to his natural child or children" ;
+    rdfs:subClassOf fam:Parent .
+fam:hasFather a rdf:Property ;
+    rdfs:label "has father" ;
+    rdfs:comment "has father relation from a child to their father" ;
+    rdfs:domain fam:Child ;
+    rdfs:range fam:Father .
+fam:hasChild a rdf:Property ;
+    rdfs:label "has child" ;
+    rdfs:comment "has child relation from a father to their child" ;
+    rdfs:domain fam:Father ;
+    rdfs:range fam:Child .
+    fam:isMarriedTo a rdf:Property ;
+    rdfs:label "is married to" ;
+    rdfs:comment "is married to relation from a father to their spouse" ;
+    rdfs:domain fam:Father ;
+    rdfs:range fam:Mother .
+fam:Father rdfs:seeAlso fam:Mother.fam:Father rdfs:seeAlso fam:Child.fam:Father rdfs:seeAlso fam:Parent.fam:Father owl:disjointWith fam:Mother.fam:Father owl:disjointWith fam:Child.

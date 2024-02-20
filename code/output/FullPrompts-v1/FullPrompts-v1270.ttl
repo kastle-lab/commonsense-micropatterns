@@ -1,0 +1,7 @@
+Creating an ontology model to capture the World in its entirety would be a colossal task due to the vast number of entities, relationships, properties, etc. involved. In reality, such a model would necessitate terabytes or even petabytes of data, going beyond structuring data, needing extensive knowledge in domain-specific sciences and involving various other complexities.However, for the sake of simplicity in this context, I'll provide a very basic ontology of the world focusing on continents, countries, and their populations.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.org#> .
+ex:Continent rdf:type rdfs:Class .
+ex:Country rdf:type rdfs:Class ;

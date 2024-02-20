@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:TimePoint a rdfs:Class ;
+    rdfs:label "Time point"@en ;
+    rdfs:comment "A point in time, or 'moment'"@en .
+:Moment a rdfs:Class ;
+    rdfs:label "Moment"@en ;
+    rdfs:subClassOf :TimePoint;
+    rdfs:comment "Specific instance of time point"@en.:MomentProperty a rdfs:Class ;
+    rdfs:label "Moment Property"@en ;
+    rdfs:comment "Properties associated with a specific moment"@en .
+:hasMoment a rdf:Property ;
+    rdfs:label "has moment"@en ;
+    rdfs:domain :TimePoint ;
+    rdfs:range :Moment ;
+    rdfs:comment "Relates a time point to a specific moment"@en .
+:hasMomentProperty a rdf:Property ;
+    rdfs:label "has moment property"@en ;
+    rdfs:domain :Moment ;
+    rdfs:range :MomentProperty ;
+    rdfs:comment "Relates a moment to its associated properties"@en .
+:time a rdf:Property ;
+    rdfs:label "time"@en ;
+    rdfs:domain :MomentProperty ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Denotes the exact time of a moment"@en .
+:date a rdf:Property ;
+    rdfs:label "date"@en ;
+    rdfs:domain :MomentProperty ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Denotes the exact date of a moment"@en .

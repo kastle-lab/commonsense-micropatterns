@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix word: <http://www.example.com/word#> .
+word:Word rdf:type owl:Class ;
+    rdfs:comment "This class represents words as units of language" ;
+    rdfs:label "Word"@en ;
+    rdfs:subClassOf rdfs:Resource .
+word:hasSpelling rdf:type owl:DatatypeProperty ;
+    rdfs:comment "This property represents the spelling of a word" ;
+    rdfs:label "has spelling"@en ;
+    rdfs:domain word:Word ;
+    rdfs:range xsd:string .
+word:hasLength rdf:type owl:DatatypeProperty ;
+    rdfs:comment "This property represents the length of a word" ;
+    rdfs:label "has length"@en ;
+    rdfs:domain word:Word ;
+    rdfs:range xsd:integer .
+word:partOfSpeech rdf:type owl:ObjectProperty ;
+    rdfs:comment "This property relates a word with its part of speech" ;
+    rdfs:label "is part of speech"@en ;
+    rdfs:domain word:Word ;
+    rdfs:range word:PartOfSpeech .
+word:PartOfSpeech rdf:type owl:Class ;
+    rdfs:comment "This class represents parts of speech" ;
+    rdfs:label "Part of speech"@en ;
+    rdfs:subClassOf rdfs:Resource .

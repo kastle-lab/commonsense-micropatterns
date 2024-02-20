@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/#> .
+    :Mother rdf:type rdfs:Class ;
+    rdfs:label "Mother"@en ;
+    rdfs:comment "A female parent"@en .
+       :Person rdf:type rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "An individual human being"@en .
+        :hasMother rdf:type rdf:Property ;
+    rdfs:label "has mother"@en ;
+    rdfs:comment "The mother of a person"@en ;
+    rdfs:domain :Person ;
+    rdfs:range :Mother .
+        :isMotherOf rdf:type rdf:Property ;
+    rdfs:label "is mother of"@en ;
+    rdfs:comment "A person to whom a woman gave birth"@en ;
+    rdfs:domain :Mother ;
+    rdfs:range :Person .

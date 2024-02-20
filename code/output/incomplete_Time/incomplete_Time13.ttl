@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.ontology-of-time.org#> .
+time:Time     rdf:type owl:Class ;
+    rdfs:label "Time"@en ;
+    rdfs:comment "Temporal measure or indication"@en .
+time:Instant    rdf:type owl:Class ;
+    rdfs:label "Instant"@en ;
+    rdfs:comment "A specific point in time"@en ;
+    rdfs:subClassOf time:Time .
+time:Interval    rdf:type owl:Class ;
+    rdfs:label "Interval"@en ;
+    rdfs:comment "A stretch or duration of time"@en ;
+    rdfs:subClassOf time:Time .
+time:hasBeginning    rdf:type owl:ObjectProperty ;
+    rdfs:label "has beginning"@en ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant .
+time:hasEnd    rdf:type owl:ObjectProperty ;
+    rdfs:label "has end"@en ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant .
+time:inDateTime    rdf:type owl:DatatypeProperty ;
+    rdfs:label "in date time"@en ;
+    rdfs:domain time:Instant ;
+    rdfs:range xsd:dateTime .
+time:durationInMilliseconds    rdf:type owl:DatatypeProperty ;
+    rdfs:label "duration in milliseconds"@en ;
+    rdfs:domain time:Interval ;
+    rdfs:range xsd:integer .

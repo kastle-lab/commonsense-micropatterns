@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix water: <http://example.org/water#> .
+water:     rdf:type rdfs:Class ;
+    rdfs:label "Water"@en .
+water:Freshwater     rdf:type rdfs:Class ;
+    rdfs:subClassOf water: ;
+    rdfs:label "Freshwater"@en .
+water:Saltwater     rdf:type rdfs:Class ;
+    rdfs:subClassOf water: ;
+    rdfs:label "Saltwater"@en .
+water:PollutedWater     rdf:type rdfs:Class ;
+    rdfs:subClassOf water: ;
+    rdfs:label "Polluted Water"@en .
+water:Ice     rdf:type rdfs:Class ;
+    rdfs:subClassOf water: ;
+    rdfs:label "Ice"@en .
+water:Steam     rdf:type rdfs:Class ;
+    rdfs:subClassOf water: ;
+    rdfs:label "Steam"@en .
+water:pH     rdf:type rdf:Property ;
+    rdfs:domain water: ;
+    rdfs:range xsd:float ;
+    rdfs:label "pH"@en .
+water:temperature     rdf:type rdf:Property ;
+    rdfs:domain water: ;
+    rdfs:range xsd:float ;
+    rdfs:label "Temperature"@en .
+water:containsSalt     rdf:type rdf:Property ;
+    rdfs:domain water:;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Contains Salt"@en .
+water:pollutants     rdf:type rdf:Property ;
+    rdfs:domain water:PollutedWater ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Pollutants"@en .

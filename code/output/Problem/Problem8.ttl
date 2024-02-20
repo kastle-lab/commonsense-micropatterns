@@ -1,0 +1,30 @@
+@prefix : <http://www.example.com/problem#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Problem a rdfs:Class ;
+  rdfs:comment "A class representing a problem or issue" ;
+  rdfs:label "Problem" .
+:hasDescription a rdf:Property ;
+  rdfs:domain :Problem ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The description of the problem" ;
+  rdfs:label "hasDescription" .
+:hasSeverity a rdf:Property ;
+  rdfs:domain :Problem ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The severity of the problem on a scale of 1-10" ;
+  rdfs:label "hasSeverity" .
+:hasSolution a rdf:Property ;
+  rdfs:domain :Problem ;
+  rdfs:range :Solution ;
+  rdfs:comment "A possible solution to the problem" ;
+  rdfs:label "hasSolution" .
+:Solution a rdfs:Class ;
+  rdfs:comment "A class representing a solution to a problem" ;
+  rdfs:label "Solution" .
+:hasStep a rdf:Property ;
+  rdfs:domain :Solution ;
+  rdfs:range xsd:string ;
+  rdfs:comment "A step in the solution" ;
+  rdfs:label "hasStep" .

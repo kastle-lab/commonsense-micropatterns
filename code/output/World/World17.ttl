@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix world: <http://example.org/world#> .
+world:     rdf:type rdfs:Class ;
+    rdfs:label "World"@en ;
+    rdfs:comment "The ultimate environment which encompasses all living and non-living things"@en .
+world:Continent     rdf:type rdfs:Class ;
+    rdfs:subClassOf world: ;
+    rdfs:label "Continent"@en ;
+    rdfs:comment "Large, continuous areas of land on Earth"@en .
+world:Country     rdf:type rdfs:Class ;
+    rdfs:subClassOf world:Continent ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A distinct territorial body or political entity"@en .
+world:City     rdf:type rdfs:Class ;
+    rdfs:subClassOf world:Country ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A large human settlement often being a local governmental area"@en .
+world:Ocean     rdf:type rdfs:Class ;
+    rdfs:subClassOf world: ;
+    rdfs:label "Ocean"@en ;
+    rdfs:comment "Large bodies of salt water that surround the continents and cover more than 70 percent of the Earth's surface"@en .
+world:Mountain     rdf:type rdfs:Class ;
+    rdfs:subClassOf world: ;
+    rdfs:label "Mountain"@en ;
+    rdfs:comment "A large natural elevation of the earth's surface rising abruptly from the surrounding level;
+ a large steep hill"@en .
+# Property definitionsworld:isLocatedIn     rdf:type rdf:Property ;
+    rdfs:label "is located in"@en ;
+    rdfs:domain world:City ;
+    rdfs:range world:Country .
+world:hasBorderWith     rdf:type rdf:Property ;
+    rdfs:label "has border with"@en ;
+    rdfs:domain world:Country ;
+    rdfs:range world:Country .
+world:hasPopulation     rdf:type rdf:Property ;
+    rdfs:label "has population"@en ;
+    rdfs:domain world:City ;
+    rdfs:range xsd:integer.

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix service: <http://www.example.com/service#> .
+service:Service    a               rdfs:Class;
+    rdfs:comment   "A category of activities provided for the benefit of others."@en ;
+    rdfs:label     "Service"@en.service:name    a               rdf:Property;
+    rdfs:comment   "The name of the service."@en;
+    rdfs:domain    service:Service;
+    rdfs:range     xsd:string.service:description    a               rdf:Property;
+    rdfs:comment   "Detailed explanation about the service."@en;
+    rdfs:domain    service:Service;
+    rdfs:range     xsd:string.service:price    a               rdf:Property;
+    rdfs:comment   "The cost of the service."@en;
+    rdfs:domain    service:Service;
+    rdfs:range     xsd:double.service:provider    a               rdf:Property;
+    rdfs:comment   "The provider or company offering the service."@en;
+    rdfs:domain    service:Service;
+    rdfs:range     xsd:string.service:rating    a               rdf:Property;
+    rdfs:comment   "The rating of the service based on customer reviews."@en;
+    rdfs:domain    service:Service;
+    rdfs:range     xsd:double.

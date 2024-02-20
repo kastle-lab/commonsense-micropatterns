@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com/> .
+# Declaring the class Thingex:Thing rdf:type owl:Class ;
+# Labeling and commenting on the class in Englishrdfs:label "Thing"@en ;
+rdfs:comment "A class representing the concept of Thing."@en .
+# Declaring properties of Thingex:hasColor rdf:type owl:DatatypeProperty ;
+rdfs:label "has color"@en ;
+rdfs:comment "A property indicating the color of the Thing."@en ;
+rdfs:domain ex:Thing ;
+rdfs:range xsd:string .
+ex:hasSize rdf:type owl:DatatypeProperty ;
+rdfs:label "has size"@en ;
+rdfs:comment "A property indicating the size of the Thing."@en ;
+rdfs:domain ex:Thing ;
+rdfs:range xsd:string .
+ex:hasWeight rdf:type owl:DatatypeProperty ;
+rdfs:label "has weight"@en ;
+rdfs:comment "A property indicating the weight of the Thing."@en ;
+rdfs:domain ex:Thing ;
+rdfs:range xsd:float .
+# Declaring subclassex:PhysicalThing rdf:type owl:Class ;
+rdfs:subClassOf ex:Thing ;
+rdfs:label "Physical Thing"@en ;
+rdfs:comment "A subclass of Thing that has physical existence."@en .
+ex:AbstractThing rdf:type owl:Class ;
+rdfs:subClassOf ex:Thing ;
+rdfs:label "Abstract Thing"@en ;
+rdfs:comment "A subclass of Thing that has no physical existence."@en .

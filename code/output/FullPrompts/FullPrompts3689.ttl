@@ -1,0 +1,13 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Result a rdfs:Class ;
+     rdfs:label "Result"@en ;
+    rdfs:comment "Final outcome of a process, event, or situation"@en .
+:hasResult a rdfs:Property ;
+    rdfs:label "has result"@en ;
+    rdfs:domain :Event ;
+    rdfs:range :Result ;
+    rdfs:comment "Relates an event or process to its result or outcome"@en .
+:Event a rdfs:Class ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "A happening or occurrence that can have a result"@en.

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com/> .
+# Defining Classesex:World rdf:type owl:Class .
+ex:Continent rdf:type owl:Class .
+ex:Country rdf:type owl:Class .
+ex:City rdf:type owl:Class .
+ex:Person rdf:type owl:Class .
+ex:Language rdf:type owl:Class .
+#Defining Subclassesex:Continent rdfs:subClassOf ex:World .
+ex:Country rdfs:subClassOf ex:Continent .
+ex:City rdfs:subClassOf ex:Country .
+#Defining Object Propertiesex:hasContinent rdf:type owl:ObjectProperty ;
+    rdfs:range ex:Continent ;
+    rdfs:domain ex:World .
+ex:hasCountry rdf:type owl:ObjectProperty ;
+    rdfs:range ex:Country ;
+    rdfs:domain ex:Continent .
+ex:hasCity rdf:type owl:ObjectProperty ;
+    rdfs:range ex:City ;
+    rdfs:domain ex:Country .
+ex:hasPerson rdf:type owl:ObjectProperty ;
+    rdfs:range ex:Person ;
+    rdfs:domain ex:City .
+#Defining Datatype Propertiesex:population rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:City ;
+    rdfs:range rdf:nonNegativeInteger .
+ex:area rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Country ;
+    rdfs:range rdf:nonNegativeInteger .
+ex:hasLanguage rdf:type owl:DatatypeProperty ;
+    rdfs:range ex:Language ;
+    rdfs:domain ex:Country .
+#Defining Instancesex:Earth rdf:type ex:World.ex:Asia rdf:type ex:Continent;
+    ex:hasContinent ex:Earth.ex:Nepal rdf:type ex:Country;
+    ex:hasCountry ex:Asia.ex:Kathmandu rdf:type ex:City;
+    ex:hasCity ex:Nepal.ex:Anita rdf:type ex:Person;
+    ex:hasPerson ex:Kathmandu.ex:English rdf:type ex:Language;
+    ex:hasLanguage ex:Nepal.#Valuesex:Kathmandu ex:population "1000000" .
+ex:Nepal ex:area "147516" .

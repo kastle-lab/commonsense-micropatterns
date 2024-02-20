@@ -1,0 +1,31 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Declaration of 'Head' classex:Head rdf:type rdfs:Class .
+# Some properties that a 'Head' class might haveex:hasEyes rdf:type rdf:Property ;
+           rdfs:domain ex:Head ;
+           rdfs:range ex:Eye .
+ex:hasNose rdf:type rdf:Property ;
+           rdfs:domain ex:Head ;
+           rdfs:range ex:Nose .
+ ex:hasMouth rdf:type rdf:Property ;
+            rdfs:domain ex:Head ;
+            rdfs:range ex:Mouth .
+ex:hasEars rdf:type rdf:Property ;
+           rdfs:domain ex:Head ;
+           rdfs:range ex:Ear .
+# Some individuals of 'Head' classex:Head1 rdf:type ex:Head ;
+         ex:hasEyes ex:Eye1, ex:Eye2 ;
+         ex:hasNose ex:Nose1 ;
+         ex:hasMouth ex:Mouth1 ;
+         ex:hasEars ex:Ear1, ex:Ear2 .
+# Declaration of other classes and individualsex:Eye rdf:type rdfs:Class .
+ex:Eye1 rdf:type ex:Eye .
+ex:Eye2 rdf:type ex:Eye .
+ex:Nose rdf:type rdfs:Class .
+ex:Nose1 rdf:type ex:Nose .
+ex:Mouth rdf:type rdfs:Class .
+ex:Mouth1 rdf:type ex:Mouth .
+ex:Ear rdf:type rdfs:Class .
+ex:Ear1 rdf:type ex:Ear .
+ex:Ear2 rdf:type ex:Ear .

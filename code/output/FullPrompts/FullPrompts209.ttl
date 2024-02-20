@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xxx: <http://example.com/ns#> .
+xxx:Way rdf:type rdfs:Class ;
+    rdfs:label "Way"@en ;
+    rdfs:comment "The abstract concept of a course of action, method, or path taken to achieve a particular goal or result."@en .
+xxx:PhysicalWay rdf:type rdfs:Class ;
+    rdfs:subClassOf xxx:Way ;
+    rdfs:label "Physical Way"@en ;
+    rdfs:comment "A tangible or physical way, such as a road, path, or highway."@en .
+xxx:ConceptualWay rdf:type rdfs:Class ;
+    rdfs:subClassOf xxx:Way ;
+    rdfs:label "Conceptual Way"@en ;
+    rdfs:comment "An intangible way, such as a plan, strategy, or method."@en .
+xxx:hasStartPoint rdf:type rdf:Property ;
+    rdfs:label "has start point"@en ;
+    rdfs:domain xxx:Way ;
+    rdfs:range xxx:Point .
+xxx:hasEndPoint rdf:type rdf:Property ;
+    rdfs:label "has end point"@en ;
+    rdfs:domain xxx:Way ;
+    rdfs:range xxx:Point .
+xxx:Point rdf:type rdfs:Class ;
+    rdfs:label "Point"@en ;
+    rdfs:comment "A specific location or position in space."@en .
+xxx:hasWay rdf:type rdf:Property ;
+    rdfs:label "has way"@en ;
+    rdfs:domain xxx:Entity ;
+    rdfs:range xxx:Way .
+xxx:Entity rdf:type rdfs:Class ;
+    rdfs:label "Entity"@en .

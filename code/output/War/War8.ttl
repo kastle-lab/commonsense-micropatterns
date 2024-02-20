@@ -1,0 +1,12 @@
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix war: <http://example.org/war#> .
+war:War rdf:type owl:Class .
+war:Combatant rdf:type owl:Class .
+war:Battle rdf:type owl:Class .
+war:Weapon rdf:type owl:Class .
+war:Civilian rdf:type owl:Class .
+warhasCombatant rdf:type owl:ObjectProperty ;

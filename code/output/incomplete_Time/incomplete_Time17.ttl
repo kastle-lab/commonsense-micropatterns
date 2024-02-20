@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.semanticweb.org/ontology#> .
+time:DateTime    rdf:type owl:Class ;
+    rdfs:label "DateTime" ;
+    rdfs:comment "A specific point in time." .
+time:Duration    rdf:type owl:Class ;
+    rdfs:label "Duration" ;
+    rdfs:comment "A length of time." .
+time:Interval    rdf:type owl:Class ;
+    rdfs:label "Interval" ;
+    rdfs:comment "A time interval." .
+time:TimeZone    rdf:type owl:Class ;
+    rdfs:label "TimeZone" ;
+    rdfs:comment "A time zone." .
+time:hasStart    rdf:type owl:DatatypeProperty ;
+    rdfs:label "has start" ;
+    rdfs:comment "Property linking an interval to its start time." ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:DateTime .
+time:hasEnd    rdf:type owl:DatatypeProperty ;
+    rdfs:label "has end" ;
+    rdfs:comment "Property linking an interval to its end time." ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:DateTime .
+time:hasDuration    rdf:type owl:DatatypeProperty ;
+    rdfs:label "has duration" ;
+    rdfs:comment "Property linking an interval to its duration." ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Duration .
+time:inTimeZone    rdf:type owl:ObjectProperty ;
+    rdfs:label "in time zone" ;
+    rdfs:comment "Property linking a DateTime or Duration to its time zone." ;
+    rdfs:domain owl:unionOf (time:DateTime time:Duration) ;
+    rdfs:range time:TimeZone .

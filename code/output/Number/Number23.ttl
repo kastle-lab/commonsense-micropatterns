@@ -1,0 +1,8 @@
+    rdfs:range xsd:integer ;
+    rdfs:domain :Entity ;
+    rdfs:label "has number"@en .
+:Entity a rdfs:Class ;
+    rdfs:label "Entity"@en ;
+    rdfs:comment "Any sort of entity that might have a numerical identifier"@en .
+:123 a :Entity ;
+    :hasNumber 123 .

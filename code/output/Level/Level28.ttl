@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <http://example.org/stuff/1.0/> .
+my:Level a rdfs:Class ;
+    rdfs:label "Level"@en ;
+    rdfs:comment """A condition, position or rank in a scale"""@en ;
+    rdfs:subClassOf my:Measurement .
+my:beginner a my:Level ;
+    rdfs:label "Beginner level"@en ;
+    my:levelNumber "1"^^xsd:int.my:intermediate a my:Level ;
+    rdfs:label "Intermediate level"@en ;
+    my:levelNumber "2"^^xsd:int. my:advanced a my:Level ;
+    rdfs:label "Advanced level"@en ;
+    my:levelNumber "3"^^xsd:int.

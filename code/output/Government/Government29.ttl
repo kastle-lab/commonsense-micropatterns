@@ -1,0 +1,33 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gov: <http://example.org/ontology/government#> .
+# Define Government as a Classgov:Government   a rdfs:Class ;
+  rdfs:comment "The class of all Governments" .
+# Define Government attributesgov:hasName  a rdf:Property ;
+  rdfs:domain gov:Government ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of a Government" .
+  gov:hasCountry  a rdf:Property ;
+  rdfs:domain gov:Government ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The country of a Government" .
+  gov:hasEstablishmentDate  a rdf:Property ;
+  rdfs:domain gov:Government ;
+  rdfs:range xsd:date ;
+  rdfs:comment "The establishment date of a Government" .
+  # Define Government bodies as subclasses of Governmentgov:Executive  a rdfs:Class ;
+  rdfs:subClassOf gov:Government ;
+  rdfs:comment "The executive branch of a Government" .
+  gov:Legislative  a rdfs:Class ;
+  rdfs:subClassOf gov:Government ;
+  rdfs:comment "The legislative branch of a Government"  .
+gov:Judicial  a rdfs:Class ;
+  rdfs:subClassOf gov:Government ;
+  rdfs:comment "The judicial branch of a Government"  .
+# Define some governments and entitiesgov:USGovernment  a gov:Government ;
+  gov:hasName "United States Government" ;
+  gov:hasCountry "United States" ;
+  gov:hasEstablishmentDate "1789-04-30"^^xsd:date .
+gov:USExecutive  a gov:Executive ;
+  gov:hasName "Executive Branch of the United States Government" ;
+  gov:hasCountry "United States" ;
+  gov:hasEstablishmentDate "1789-04-30"^^xsd:date .

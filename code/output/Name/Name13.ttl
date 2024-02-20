@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix name: <http://www.example.org/ontology/name#> .
+name:Name rdf:type rdfs:Class ;
+  rdfs:comment "The class of all names."@en .
+name:hasFirstName rdf:type rdf:Property ;
+  rdfs:domain name:Name ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The first name of a person."@en .
+name:hasMiddleName rdf:type rdf:Property ;
+  rdfs:domain name:Name ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The middle name of a person."@en .
+name:hasLastName rdf:type rdf:Property ;
+  rdfs:domain name:Name ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The last name of a person."@en .
+name:hasFullName rdf:type rdf:Property ;
+  rdfs:domain name:Name ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The full name of a person."@en .
+name:hasNickName rdf:type rdf:Property ;
+  rdfs:domain name:Name ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The nick name of a person."@en .
+name:hasNamePrefix rdf:type rdf:Property ;
+  rdfs:domain name:Name ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The prefix of a person's name."@en .
+name:hasNameSuffix rdf:type rdf:Property ;
+  rdfs:domain name:Name ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The suffix of a person's name."@en .

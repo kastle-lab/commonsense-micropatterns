@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Art rdf:type rdfs:Class ;
+    rdfs:label "Art"@en ;
+    rdfs:comment "Class representing the concept of Art in general"@en .
+ex:Painting rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Art ;
+    rdfs:label "Painting"@en ;
+    rdfs:comment "Subclass of Art representing the concept of Painting"@en .
+ex:Sculpture rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Art ;
+    rdfs:label "Sculpture"@en ;
+    rdfs:comment "Subclass of Art representing the concept of Sculpture"@en .
+ex:Artist rdf:type rdfs:Class ;
+    rdfs:label "Artist"@en ;
+    rdfs:comment "Class representing the concept of an individual who creates Art"@en .
+ex:creates rdf:type rdf:Property ;
+    rdfs:domain ex:Artist ;
+    rdfs:range ex:Art ;
+    rdfs:label "creates"@en ;
+    rdfs:comment "Property representing the act of creating Art by an Artist"@en .
+ex:Picasso rdf:type ex:Artist ;
+    ex:creates ex:Guernica .
+ex:Guernica rdf:type ex:Painting ;
+    rdfs:label "Guernica"@en ;
+    rdfs:comment "Famous Painting created by Picasso"@en .

@@ -1,0 +1,7 @@
+@prefix ex: <http://example.com/> .
+ex:Night     a ex:TimePeriod ;
+    ex:isPartOf ex:DayNightCycle ;
+    ex:follows ex:Day ;
+    ex:precedes ex:Day ;
+    ex:hasLightLevel "Low"^^ex:LightLevel ;
+    ex:hasActivityLevel "Low"^^ex:ActivityLevel .

@@ -1,0 +1,38 @@
+@prefix base: <http://example.com/base#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix office: <http://example.com/office#> .
+office:Office a rdfs:Class ;
+    rdfs:label "Office"@en ;
+    rdfs:comment "Represents an office with employees, departments and equipment"@en ;
+    rdfs:subClassOf base:Building .
+office:Employee a rdfs:Class ;
+    rdfs:label "Employee"@en ;
+    rdfs:comment "Represents an employee working in the office"@en ;
+    rdfs:subClassOf base:Person .
+office:Department a rdfs:Class ;
+    rdfs:label "Department"@en ;
+    rdfs:comment "Represents a department within the office"@en.office:Equipment a rdfs:Class ;
+    rdfs:label "Equipment"@en ;
+    rdfs:comment "Represents equipment found within the office"@en.office:worksIn a rdf:Property ;
+    rdfs:range office:Office ;
+    rdfs:domain office:Employee ;
+    rdfs:label "works in"@en ;
+    rdfs:comment "Indicates the office where an employee works"@en .
+office:partOf a rdf:Property ;
+    rdfs:range office:Office ;
+    rdfs:domain office:Department ;
+    rdfs:label "part of"@en ;
+    rdfs:comment "Indicates the office where a department is located"@en .
+office:uses a rdf:Property ;
+    rdfs:range office:Equipment ;
+    rdfs:domain office:Employee ;
+    rdfs:label "uses"@en ;
+    rdfs:comment "Indicates the equipment that an employee uses"@en .
+office:locatedIn a rdf:Property ;
+    rdfs:range office:Office ;
+    rdfs:domain office:Equipment ;
+    rdfs:label "located in"@en ;
+    rdfs:comment "Indicates the office where the equipment is located"@en .

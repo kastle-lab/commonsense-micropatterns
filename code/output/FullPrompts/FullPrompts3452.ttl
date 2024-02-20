@@ -1,0 +1,14 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Thing a rdfs:Class .
+:Human a rdfs:Class ;
+    rdfs:subClassOf :Thing .
+:Alien a rdfs:Class ;
+    rdfs:subClassOf :Thing .
+:Other a rdfs:Class ;
+    rdfs:subClassOf :Thing ;
+    owl:disjointWith :Human, :Alien .
+:John a :Human .
+:Xen a :Alien .
+:Unidentified a :Other .

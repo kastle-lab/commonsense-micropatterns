@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix other: <http://example.org/others#> .
+other: a rdfs:Class ;
+  rdfs:label "Other"@en .
+other:Person a rdfs:Class ;
+  rdfs:subClassOf other: ;
+  rdfs:label "Person"@en .
+other:animal a rdfs:Class ;
+  rdfs:subClassOf other: ;
+  rdfs:label "Animal"@en .
+other:object a rdfs:Class ;
+  rdfs:subClassOf other: ;
+  rdfs:label "Object"@en .
+other:hasName a rdf:Property ;
+  rdfs:domain other:Person ;
+  rdfs:range xsd:string ;
+  rdfs:label "has name"@en .
+other:hasAge a rdf:Property ;
+  rdfs:domain other:Person ;
+  rdfs:range xsd:integer ;
+  rdfs:label "has age"@en .
+other:hasSpecies a rdf:Property ;
+  rdfs:domain other:Animal ;
+  rdfs:range xsd:string ;
+  rdfs:label "has species"@en .
+other:hasShape a rdf:Property ;
+  rdfs:domain other:Object ;
+  rdfs:range xsd:string ;
+  rdfs:label "has shape"@en .

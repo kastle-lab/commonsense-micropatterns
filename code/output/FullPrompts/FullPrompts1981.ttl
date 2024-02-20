@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix gis: <http://www.opengis.net/ont/geosparql#> .
+@prefix ex: <http://www.example.org/city#> .
+ex:City a rdfs:Class ;
+  rdfs:subClassOf gis:Feature ;
+  rdfs:comment "A large human settlement, often a significant economic, political or cultural hub."@en ;
+  rdfs:label "City"@en .
+ex:Population a owl:DatatypeProperty ;
+  rdfs:domain ex:City ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The total number of individuals living in the city."@en ;
+  rdfs:label "Population"@en .
+ex:hasMayor a owl:ObjectProperty ;
+  rdfs:domain ex:City ;
+  rdfs:range ex:Person ;
+  rdfs:comment "The mayor is chosen or elected as the leader of city's government."@en ;
+  rdfs:label "Has Mayor"@en .
+ex:isLocatedIn a owl:ObjectProperty ;
+  rdfs:domain ex:City ;
+  rdfs:range ex:Country ;
+  rdfs:comment "The country in which the city is located."@en ;
+  rdfs:label "Is located in"@en .
+ex:Person a rdfs:Class ;
+  rdfs:comment "A human individual."@en ;
+  rdfs:label "Person"@en .
+ex:Country a rdfs:Class ;
+  rdfs:comment "A geographic area constituting a nation or state."@en ;
+  rdfs:label "Country"@en .
+ex:areaInSqKm a owl:DatatypeProperty ;
+  rdfs:domain ex:City ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "The total area of the city measured in square kilometres."@en ;
+  rdfs:label "Area In Square Kilometres"@en .
+ex:isCapitalOf a owl:ObjectProperty ;
+  rdfs:domain ex:City ;
+  rdfs:range ex:Country ;
+  rdfs:comment "Indicates if the city is a capital of a country."@en ;
+  rdfs:label "Is Capital Of"@en .

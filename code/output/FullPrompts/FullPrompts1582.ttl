@@ -1,0 +1,30 @@
+@prefix ex: <http://example.com/> .
+ex:Mother a rdfs:Class ;
+  rdfs:label "Mother"@en ;
+  rdfs:comment "A female parent"@en ;
+  rdfs:subClassOf ex:Parent .
+ex:hasMother a rdf:Property ;
+  rdfs:label "has mother"@en ;
+  rdfs:comment "Indicates the mother of someone"@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Mother .
+ex:isMotherOf a rdf:Property ;
+  rdfs:label "is mother of"@en ;
+  rdfs:comment "Indicates the child/children that the mother has"@en ;
+  rdfs:domain ex:Mother ;
+  rdfs:range ex:Person .
+  ex:birthday a rdf:Property ;
+  rdfs:label "birthday"@en ;
+  rdfs:comment "Indicates the birth date of the mother"@en ;
+  rdfs:domain ex:Mother ;
+  rdfs:range xsd:date .
+  ex:hasDaughter a rdf:Property ;
+  rdfs:label "has daughter"@en ;
+  rdfs:comment "Indicates the daughter of the mother"@en ;
+  rdfs:domain ex:Mother ;
+  rdfs:range ex:FemaleChild .
+  ex:hasSon a rdf:Property ;
+  rdfs:label "has son"@en ;
+  rdfs:comment "Indicates the son of the mother"@en ;
+  rdfs:domain ex:Mother ;
+  rdfs:range ex:MaleChild .

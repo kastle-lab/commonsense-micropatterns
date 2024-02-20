@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/water#> .
+ex:Water rdf:type rdf:Class .
+ex:hasForm rdf:type rdf:Property ;
+    rdf:domain ex:Water ;
+    rdf:range rdf:Literal .
+ex:hasTemperature rdf:type rdf:Property ;
+    rdf:domain ex:Water ;
+    rdf:range xsd:float .
+ex:sourceOf rdf:type rdf:Property ;
+    rdf:domain ex:Water ;
+    rdf:range rdf:Class .
+ex:Lake rdf:type rdf:Class .
+ex:River rdf:type rdf:Class .
+    ex:seaOceans rdf:type rdf:Class .
+ ex:Glaciers rdf:type rdf:Class .
+ex:GroundWater rdf:type rdf:Class .
+ ex:FreshWater rdf:type ex:Water ;
+    ex:hasForm "Liquid"^^xsd:string ;
+    ex:hasTemperature "15"^^xsd:float ;
+    ex:sourceOf ex:River .
+ex:SaltWater rdf:type ex:Water ;
+    ex:hasForm "Liquid"^^xsd:string ;
+    ex:hasTemperature "14"^^xsd:float ;
+    ex:sourceOf ex:seaOceans .

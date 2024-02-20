@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix night: <http://www.example.org/ontologies/night#> .
+night:Night rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "The period from sunset to sunrise in each twenty-four hours".
+night:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:domain night:Night ;
+    rdfs:range owl:Thing ;
+    rdfs:comment "A part of night, eg. early night, midnight, late night".
+night:isTimeOf rdf:type owl:ObjectProperty ;
+    rdfs:domain night:Night ;
+    rdfs:range owl:Thing ;
+    rdfs:comment "A relation indicating what a certain time of night is related to, eg. Night is time of sleep".
+night:earlyNight rdf:type owl:Class ;
+    rdfs:subClassOf night:Night ;
+    rdfs:comment "The period just after sunset".
+night:midnight rdf:type owl:Class ;
+    rdfs:subClassOf night:Night ;
+    rdfs:comment "The middle of the night;
+ specifically, the moment of time that is equidistant between dusk and dawn".
+night:lateNight rdf:type owl:Class ;
+    rdfs:subClassOf night:Night ;
+    rdfs:comment "The period just before sunrise".
+night:sleep rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "A condition of body and mind such as that which typically recurs for several hours every night, in which the nervous system is relatively inactive, the eyes closed, the postural muscles relaxed, and consciousness practically suspended".
+night:sleep rdf:type owl:thing ;
+    night:isTimeOf night:Night .
+night:darkness rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "The partial or total absence of light".
+night:darkness rdf:type owl:thing ;
+    night:isTimeOf night:Night .
+night:astronomy rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "The branch of science which deals with celestial objects, space, and the physical universe as a whole, often practiced at night".
+night:astronomy rdf:type owl:thing ;
+    night:isTimeOf night:Night .

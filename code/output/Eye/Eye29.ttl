@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/ontology#> .
+exo:Eye rdf:type owl:Class ;
+    rdfs:label "Eye" ;
+    rdfs:comment "A class representing the organ Eye" ;
+    rdfs:subClassOf exo:Organ .
+exo:hasColor rdf:type owl:ObjectProperty ;
+    rdfs:label "hasColor" ;
+    rdfs:comment "A property representing the color of an Eye" ;
+    rdfs:domain exo:Eye ;
+    rdfs:range exo:Color .
+exo:hasVision rdf:type owl:ObjectProperty ;
+    rdfs:label "hasVision" ;
+    rdfs:comment "A property representing the vision capability of an Eye" ;
+    rdfs:domain exo:Eye ;
+    rdfs:range exo:Vision .
+exo:Color rdf:type owl:Class ;
+    rdfs:label "Color" ;
+    rdfs:comment "A class representing the Color" .
+exo:Vision rdf:type owl:Class ;
+    rdfs:label "Vision" ;
+    rdfs:comment "A class representing the Vision" .
+exo:Organ rdf:type owl:Class ;
+    rdfs:label "Organ" ;
+    rdfs:comment "A class representing the Organ" .

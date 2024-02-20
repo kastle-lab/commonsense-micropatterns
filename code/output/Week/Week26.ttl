@@ -1,0 +1,36 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.com#> .
+ex:Week a rdfs:Class ;
+    rdfs:comment "The class of all weeks" ;
+    rdfs:label "Week" .
+ex:hasDay a rdf:Property ;
+    rdfs:domain ex:Week ;
+    rdfs:range ex:Day ;
+    rdfs:comment "The property that links a week to its days" ;
+    rdfs:label "has day" .
+ex:Day a rdfs:Class ;
+    rdfs:comment "The class of all days" ;
+    rdfs:label "Day" .
+ex:Monday a ex:Day ;
+    rdfs:comment "The first day of the week" ;
+    rdfs:label "Monday" .
+ex:Tuesday a ex:Day ;
+    rdfs:comment "The second day of the week" ;
+    rdfs:label "Tuesday" .
+ex:Wednesday a ex:Day ;
+    rdfs:comment "The third day of the week" ;
+    rdfs:label "Wednesday" .
+ex:Thursday a ex:Day ;
+    rdfs:comment "The fourth day of the week" ;
+    rdfs:label "Thursday" .
+ex:Friday a ex:Day ;
+    rdfs:comment "The fifth day of the week" ;
+    rdfs:label "Friday" .
+ex:Saturday a ex:Day ;
+    rdfs:comment "The sixth day of the week" ;
+    rdfs:label "Saturday" .
+ex:Sunday a ex:Day ;
+    rdfs:comment "The seventh day of the week" ;
+    rdfs:label "Sunday" .

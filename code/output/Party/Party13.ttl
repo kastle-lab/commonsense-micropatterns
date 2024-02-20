@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix party: <http://example.org/party#> .
+# Class definitionsparty:Party rdf:type rdfs:Class ;
+  rdfs:comment "A social gathering for celebration or recreation" .
+party:Guest rdf:type rdfs:Class ;
+  rdfs:comment "A person who attends a party" .
+party:Host rdf:type rdfs:Class ;
+  rdfs:comment "A person who holds or organizes a party" .
+# Property Definitionsparty:hasGuest rdf:type rdf:Property ;
+  rdfs:domain party:Party ;
+  rdfs:range party:Guest ;
+  rdfs:comment "The property linking a party to its guest(s)" .
+party:hasHost rdf:type rdf:Property ;
+  rdfs:domain party:Party ;
+  rdfs:range party:Host ;
+  rdfs:comment "The property linking a party to its host" .
+party:hasLocation rdf:type rdf:Property ;
+  rdfs:domain party:Party ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The property linking a party to its location" .
+party:hasDate rdf:type rdf:Property ;
+  rdfs:domain party:Party ;
+  rdfs:range xsd:date ;
+  rdfs:comment "The property linking a party to its date" .
+party:hasName rdf:type rdf:Property ;
+  rdfs:domain party:Party ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The property linking a party to its name" .

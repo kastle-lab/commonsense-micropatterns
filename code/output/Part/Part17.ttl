@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix part: <http://example.org/parts#> .
+part:Part rdf:type owl:Class ;
+          rdfs:comment "A physical piece or component of something."^^xsd:string ;
+          rdfs:label "Part"^^xsd:string .
+part:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain part:Part ;
+      rdfs:range xsd:string ;
+      rdfs:label "name"^^xsd:string ;
+      rdfs:comment "The name of the part."^^xsd:string .
+part:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain part:Part ;
+        rdfs:range part:Part ;
+        owl:inverseOf part:hasPart ;
+        rdfs:label "part of"^^xsd:string ;
+        rdfs:comment "Indicate that a part is part of another part."^^xsd:string .
+part:hasPart rdf:type owl:ObjectProperty ;
+        rdfs:domain part:Part ;
+        rdfs:range part:Part ;
+        owl:inverseOf part:partOf ;
+        rdfs:label "has part"^^xsd:string ;
+        rdfs:comment "Indicates that a part has other parts."^^xsd:string .
+part:weight rdf:type owl:DatatypeProperty ;
+       rdfs:domain part:Part ;
+       rdfs:range xsd:float ;
+       rdfs:label "weight"^^xsd:string ;
+       rdfs:comment "The weight of the part."^^xsd:string .
+part:manufacturer rdf:Type owl:DatatypeProperty ;
+      rdfs:domain part:Part ;
+      rdfs:range xsd:string ;
+      rdfs:label "manufacturer"^^xsd:string ;
+      rdfs:comment "The manufacturer of the part."^^xsd:string .

@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <http://example.com/myontology#> .
+my:Chair rdf:type owl:Class ;
+  rdfs:subClassOf my:Furniture ;
+  rdfs:comment "A chair is a piece of furniture with a raised surface supported by legs, commonly used to seat a single person."@en ;
+  rdfs:label "Chair"@en .
+my:hasMaterial rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+  rdfs:domain my:Chair ;
+  rdfs:label "has material"@en ;
+  rdfs:comment "The material that the chair is made of"@en .
+my:hasColor rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+  rdfs:domain my:Chair ;
+  rdfs:label "has color"@en ;
+  rdfs:comment "The color of the chair"@en .
+my:hasStyle rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+  rdfs:domain my:Chair ;
+  rdfs:label "has style"@en ;
+  rdfs:comment "The style of the chair"@en .

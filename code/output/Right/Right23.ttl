@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.com#> .
+ex:RightToHealth rdf:type rdfs:Class ;
+  rdfs:subClassOf ex:Right ;
+  rdfs:label "Right to Health"@en ;
+  rdfs:comment "The right to health is the economic, social and cultural right to a universal minimum standard of health to which all individuals are entitled."@en .
+ex:Right rdf:type rdfs:Class ;
+  rdfs:label "Right"@en ;
+  rdfs:comment "A right is a justifiable claim, held by all human beings, that protects individuals and groups against any actions that interfere with fundamental human needs or undermine basic human dignity."@en .

@@ -1,0 +1,38 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://ex.org/Time#> .
+time: a owl:Ontology ;
+      rdfs:comment "An ontology of the concept of time"@en .
+time:TimePeriod a owl:Class ;
+      rdfs:label "Time Period"@en ;
+      rdfs:comment "Represents a period of time"@en .
+time:DateTime a owl:Class ;
+      rdfs:label "DateTime"@en ;
+      rdfs:comment "Represents a specific date and time"@en .
+time:Duration a owl:Class ;
+      rdfs:label "Duration"@en ;
+      rdfs:comment "Represents the length of a time period"@en .
+time:TimeZone a owl:Class ;
+      rdfs:label "TimeZone"@en ;
+      rdfs:comment "Represents a time zone"@en .
+time:hasStartTime a owl:ObjectProperty ;
+      rdfs:domain time:TimePeriod ;
+      rdfs:range time:DateTime ;
+      rdfs:label "has start time"@en ;
+      rdfs:comment "Indicates the start time of a time period"@en .
+time:hasEndTime a owl:ObjectProperty ;
+      rdfs:domain time:TimePeriod ;
+      rdfs:range time:DateTime ;
+      rdfs:label "has end time"@en ;
+      rdfs:comment "Indicates the end time of a time period"@en .
+time:hasDuration a owl:DatatypeProperty ;
+      rdfs:domain time:TimePeriod ;
+      rdfs:range xsd:duration ;
+      rdfs:label "has duration"@en ;
+      rdfs:comment "Indicates the duration of a time period "@en .
+time:inTimeZone a owl:ObjectProperty ;
+      rdfs:domain time:DateTime ;
+      rdfs:range time:TimeZone ;
+      rdfs:label "in time zone"@en ;
+      rdfs:comment "Indicates the time zone a date and time is in"@en .

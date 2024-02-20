@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:City a rdfs:Class ;
+     rdfs:label "City" ;
+     rdfs:comment "A large and permanent human settlement" ;
+     .
+ex:hasName a rdf:Property ;
+     rdfs:label "has name" ;
+     rdfs:comment "The name of something." ;
+     rdfs:domain ex:City ;
+     rdfs:range xsd:string ;
+     .
+ex:hasPopulation a rdf:Property ;
+     rdfs:label "has population" ;
+     rdfs:comment "The population of the city." ;
+     rdfs:domain ex:City ;
+     rdfs:range xsd:integer ;
+     .
+ex:isPartOf a rdf:Property ;
+     rdfs:label "is part of" ;
+     rdfs:comment "Indicates a larger geographical entity the city belongs to." ;
+     rdfs:domain ex:City ;
+     rdfs:range ex:Country ;
+     .
+ex:Country a rdfs:Class ;
+     rdfs:label "Country" ;
+     rdfs:comment "A distinct territorial body or political entity." ;
+     .

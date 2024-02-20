@@ -1,0 +1,24 @@
+@prefix : <http://www.example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Issue rdf:type rdfs:Class ;
+    rdfs:label "Issue"@en ;
+    rdfs:comment "A topic that is subject to debate, controversy, or disputes."@en .
+:hasIssue rdf:type rdf:Property ;
+    rdfs:label "has issue"@en ;
+    rdfs:comment "A relation that indicates a subject has an issue."@en ;
+    rdfs:domain :Subject ;
+    rdfs:range :Issue .
+:IssueResolution rdf:type rdfs:Class ;
+    rdfs:label "Issue resolution"@en ;
+    rdfs:comment "The method or process of solving an issue."@en .
+:resolvesIssue rdf:type rdf:Property ;
+    rdfs:label "resolves issue"@en ;
+    rdfs:comment "A relation that indicates an issue resolution resolves a specific issue."@en ;
+    rdfs:domain :IssueResolution ;
+    rdfs:range :Issue .
+:Subject rdf:type rdfs:Class ;
+    rdfs:label "Subject"@en ;
+    rdfs:comment "The entity that has an issue."@en .

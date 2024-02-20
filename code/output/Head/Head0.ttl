@@ -1,0 +1,41 @@
+@prefix : <http://example.org/head#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Head a rdfs:Class ;
+  rdfs:label "Head" ;
+  rdfs:comment "An upper part of the human body that contains the brain, eyes, ears, nose, and mouth" .
+:Brain a rdfs:Class ;
+  rdfs:subClassOf :Head ;
+  rdfs:label "Brain" ;
+  rdfs:comment "The organ inside the head that controls thought, memory, feelings, and activity" .
+:Eye a rdfs:Class ;
+  rdfs:subClassOf :Head ;
+  rdfs:label "Eye" ;
+  rdfs:comment "Organ of sight in humans and animals" .
+:Ear a rdfs:Class ;
+  rdfs:subClassOf :Head ;
+  rdfs:label "Ear" ;
+  rdfs:comment "The organ in the head used for hearing and balance" .
+:Nose a rdfs:Class ;
+  rdfs:subClassOf :Head ;
+  rdfs:label "Nose" ;
+  rdfs:comment "The part of the face that sticks out above the mouth, through which you breathe and smell" .
+:Mouth a rdfs:Class ;
+  rdfs:subClassOf :Head ;
+  rdfs:label "Mouth" ;
+  rdfs:comment "The opening in the face used for eating, speaking, etc." .
+:hasPart rdf:type rdf:Property ;
+  rdfs:label "has part" ;
+  rdfs:range :Head ;
+  rdfs:domain rdfs:Class ;
+  rdfs:comment "Property to link a class with its parts" .
+:Brain rdfs:subClassOf [  rdf:type owl:Restriction ;
+  :hasPart rdf:maxCardinality 1] .
+:Eye rdfs:subClassOf [  rdf:type owl:Restriction ;
+  :hasPart rdf:maxCardinality 2] .
+:Ear rdfs:subClassOf [  rdf:type owl:Restriction ;
+  :hasPart rdf:maxCardinality 2] .
+:Nose rdfs:subClassOf [  rdf:type owl:Restriction ;
+  :hasPart rdf:maxCardinality 1] .
+:Mouth rdfs:subClassOf [  rdf:type owl:Restriction ;
+  :hasPart rdf:maxCardinality 1] .

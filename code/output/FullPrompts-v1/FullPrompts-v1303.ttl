@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix life: <http://example.org/life#> .
+# Concept of Lifelife:Life a rdfs:Class ;
+  rdfs:label "Life"@en ;
+  rdfs:comment "The condition that distinguishes organisms from inorganic objects and dead organisms, being manifested by growth through metabolism, the ability to reproduce, and adaptation to the environment."@en .
+# Individual instances of Lifelife:HumanLife a life:Life ;
+  rdfs:label "Human life"@en ;
+  rdfs:comment "The existence of an individual human being or animal."@en .
+life:PlantLife a life:Life ;
+  rdfs:label "Plant life"@en ;
+  rdfs:comment "The existence of a plant individual or species, capable of growth, metabolism, reproduction, and adaptation to environment."@en .
+# Propertieslife:hasLifeSpan a rdf:Property ;
+  rdfs:label "has life span"@en ;
+  rdfs:domain life:Life ;
+  rdfs:range xsd:decimal .
+life:HumanLife life:hasLifeSpan "79.2"^^xsd:decimal .
+life:PlantLife life:hasLifeSpan "5.0"^^xsd:decimal .

@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:loveseat a :Furniture;
+    :hasType "Loveseat"^^xsd:string ;
+    :hasMaterial :Leather ;
+    :hasColor "Brown"^^xsd:string .

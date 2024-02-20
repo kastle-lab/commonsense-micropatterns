@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fact: <http://www.example.org/fact#> .
+fact:   rdf:type owl:Ontology ;
+  rdfs:comment "An ontology of facts"@en .
+fact:Fact   rdf:type owl:Class ;
+  rdfs:label "Fact"@en ;
+  rdfs:comment "This class represents all facts."@en .
+fact:hasSource   rdf:type owl:ObjectProperty ;
+  rdfs:label "has source"@en ;
+  rdfs:comment "The source or origin of a fact."@en ;
+  rdfs:domain fact:Fact ;
+  rdfs:range fact:Source .
+fact:Source   rdf:type owl:Class ;
+  rdfs:label "Source"@en ;
+  rdfs:comment "Source of a fact, such as book, journal, person, website etc."@en .
+fact:hasFactType   rdf:type owl:ObjectProperty ;
+  rdfs:label "has fact type"@en ;
+  rdfs:comment "The type of a fact."@en ;
+  rdfs:domain fact:Fact ;
+  rdfs:range fact:FactType .
+fact:FactType   rdf:type owl:Class ;
+  rdfs:label "Fact Type"@en ;
+  rdfs:comment "Type of a fact, such as historical fact, scientific fact, mathematical fact etc."@en .
+fact:dateRecorded   rdf:type owl:DatatypeProperty ;
+  rdfs:label "date recorded"@en ;
+  rdfs:comment "The date when the fact was recorded."@en ;
+  rdfs:domain fact:Fact ;
+  rdfs:range xsd:date .
+fact:isVerified   rdf:type owl:DatatypeProperty ;
+  rdfs:label "is verified"@en ;
+  rdfs:comment "Indicates if a fact is verified or not."@en ;
+  rdfs:domain fact:Fact ;
+  rdfs:range xsd:boolean .

@@ -1,0 +1,32 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Week a rdfs:Class ;
+    rdfs:label "Week"@en ;
+    rdfs:comment "The class of all weeks"@en ;
+    rdfs:subClassOf :TimePeriod .
+:Monday a :Week ;
+    rdfs:label "Monday"@en ;
+    :hasOrder 1^^xsd:integer .
+:Tuesday a :Week ;
+    rdfs:label "Tuesday"@en ;
+    :hasOrder 2^^xsd:integer .
+:Wednesday a :Week ;
+    rdfs:label "Wednesday"@en ;
+    :hasOrder 3^^xsd:integer .
+:Thursday a :Week ;
+    rdfs:label "Thursday"@en ;
+    :hasOrder 4^^xsd:integer .
+:Friday a :Week ;
+    rdfs:label "Friday"@en ;
+    :hasOrder 5^^xsd:integer .
+:Saturday a :Week ;
+    rdfs:label "Saturday"@en ;
+    :hasOrder 6^^xsd:integer .
+:Sunday a :Week ;
+    rdfs:label "Sunday"@en ;
+    :hasOrder 7^^xsd:integer .
+:hasOrder a rdf:Property ;
+    rdfs:label "has order"@en ;
+    rdfs:comment "Property for the order of days in a week"@en ;
+    rdfs:range xsd:integer ;
+    rdfs:domain :Week .

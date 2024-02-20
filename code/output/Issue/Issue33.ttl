@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Issue a rdfs:Class ;
+    rdfs:label "Issue"@en ;
+    rdfs:comment "A matter of concern or a problem"@en .
+    :hasIssue a rdf:Property ;
+    rdfs:label "has issue"@en ;
+    rdfs:comment "Property for associating something with an issue"@en ;
+    rdfs:domain :Something ;
+    rdfs:range :Issue .
+    :isIssueOf a rdf:Property ;
+    rdfs:label "is issue of"@en ;
+    rdfs:comment "Property for associating an issue with something"@en ;
+    rdfs:domain :Issue ;
+    rdfs:range :Something .
+:Something a rdfs:Class ;
+    rdfs:label "Something"@en ;
+    rdfs:comment "A thing, entity or being that can have an issue"@en .

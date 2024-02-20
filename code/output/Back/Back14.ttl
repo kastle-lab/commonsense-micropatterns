@@ -1,0 +1,29 @@
+@prefix : <http://www.example.com#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Back a rdfs:Class ;
+    rdfs:label "Back"@en ;
+    rdfs:comment "An ontology class representing the backside of something."@en .
+:Human a rdfs:Class ;
+    rdfs:subClassOf :Back ;
+    rdfs:label "Human"@en ;
+    rdfs:comment "A subclass representing human back"@en .
+    :Animal a rdfs:Class ;
+    rdfs:subClassOf :Back ;
+    rdfs:label "Animal"@en ;
+    rdfs:comment "A subclass representing animal back"@en .
+     :backOfObject a rdfs:Property ;
+     rdfs:domain :Back ;
+     rdfs:range xsd:string ;
+    rdfs:label "backOfObject"@en ;
+     rdfs:comment "A property indicating something is at the backside of an object."@en .
+:hasSpine a rdfs:Property ;
+    rdfs:domain :Human ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "hasSpine"@en ;
+    rdfs:comment "A property indicating if a human or an animal has a spine."@en .
+ :hasTail a rdfs:Property ;
+    rdfs:domain :Animal ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "hasTail"@en ;
+    rdfs:comment "A property indicating if an animal has a tail."@en .

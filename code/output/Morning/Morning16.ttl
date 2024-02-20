@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Morning rdf:type rdfs:Class .
+ex:Sunrise rdf:type rdfs:Class ;
+           rdfs:subClassOf ex:Morning .
+ex:Breakfast rdf:type rdfs:Class ;
+             rdfs:subClassOf ex:Morning .
+ex:MorningRoutine rdf:type rdfs:Class ;
+                  rdfs:subClassOf ex:Morning .
+ex:StartOfWork rdf:type rdfs:Class ;
+               rdfs:subClassOf ex:Morning .
+## Instances of Morningex:MyMorning rdf:type ex:Morning ;
+             ex:hasPart ex:MySunrise, ex:MyBreakfast, ex:MyMorningRoutine, ex:MyStartOfWork .
+ex:MySunrise rdf:type ex:Sunrise .
+ex:MyBreakfast rdf:type ex:Breakfast .
+ex:MyMorningRoutine rdf:type ex:MorningRoutine .
+ex:MyStartOfWork rdf:type ex:StartOfWork .
+## Propertiesex:hasPart rdf:type rdf:Property ;
+           rdfs:domain ex:Morning ;
+           rdfs:range rdfs:Resource .
+ex:timeOfDay rdf:type rdf:Property ;
+             rdfs:domain ex:Morning ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The time of day the morning starts, typical values might be 'dawn', '6am', etc." .
+## For the instance MyMorning, specify time of dayex:MyMorning ex:timeOfDay "6am"^^xsd:string .

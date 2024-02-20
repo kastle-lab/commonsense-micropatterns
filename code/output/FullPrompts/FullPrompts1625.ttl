@@ -1,0 +1,33 @@
+@prefix : <http://www.example.org/ontology/area#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Area a rdfs:Class ;
+    rdfs:label "Area" ;
+    rdfs:comment "A particular extent of space, whether of definite or indefinite extent" .
+:SquareArea a rdfs:Class ;
+    rdfs:subClassOf :Area ;
+    rdfs:label "Square Area" ;
+    rdfs:comment "Area of a square space" .
+:CircleArea a rdfs:Class ;
+    rdfs:subClassOf :Area ;
+    rdfs:label "Circle Area" ;
+    rdfs:comment "Area of a circular space" .
+:RectangleArea a rdfs:Class ;
+    rdfs:subClassOf :Area ;
+    rdfs:label "Rectangle Area" ;
+    rdfs:comment "Area of a rectangular space" .
+:TriangleArea a rdfs:Class ;
+    rdfs:subClassOf :Area ;
+    rdfs:label "Triangle Area" ;
+    rdfs:comment "Area of a triangular space" .
+:value a rdf:Property ;
+    rdfs:domain :Area ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "value" ;
+    rdfs:comment "Numerical value representing the area" .
+:unit a rdf:Property ;
+    rdfs:domain :Area ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "unit" ;
+    rdfs:comment "The unit in which the area is measured, such as sqm or sqft" .

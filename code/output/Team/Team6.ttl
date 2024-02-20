@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/ontology#> .
+# Class definitionsex:Team rdf:type owl:Class ;
+    rdfs:label "Team" ;
+    rdfs:comment "A group of people organized to work together." .
+ex:Player rdf:type owl:Class ;
+    rdfs:label "Player" ;
+    rdfs:comment "An individual who participates in a team." .
+ex:Coach rdf:type owl:Class ;
+    rdfs:label "Coach" ;
+    rdfs:comment "A person who guides the team." .
+ex:Sport rdf:type owl:Class ;
+    rdfs:label "Sport" ;
+    rdfs:comment "The sport that the team participates in" .
+# Object property definitionsex:hasPlayer rdf:type owl:ObjectProperty ;
+    rdfs:label "has player" ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Player ;
+    rdfs:comment "Relates a team to its players." .
+ex:hasCoach rdf:type owl:ObjectProperty ;
+    rdfs:label "has coach" ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Coach ;
+    rdfs:comment "Relates a team to its coach." .
+ex:playsSport rdf:type owl:ObjectProperty ;
+    rdfs:label "plays sport" ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Sport ;
+    rdfs:comment "Relates a team to the sport it plays." .
+# Data property definitionsex:teamName rdf:type owl:DatatypeProperty ;
+    rdfs:label "team name" ;
+    rdfs:domain ex:Team ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the team." .
+ex:playerName rdf:type owl:DatatypeProperty ;
+    rdfs:label "player name" ;
+    rdfs:domain ex:Player ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the player." .
+ex:coachName rdf:type owl:DatatypeProperty ;
+    rdfs:label "coach name" ;
+    rdfs:domain ex:Coach ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the coach." .
+ex:sportName rdf:type owl:DatatypeProperty ;
+    rdfs:label "sport name" ;
+    rdfs:domain ex:Sport ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the sport." .

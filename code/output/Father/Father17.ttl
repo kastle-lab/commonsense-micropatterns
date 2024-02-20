@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Father a rdfs:Class ;
+    rdfs:subClassOf ex:Man ;
+    rdfs:label "Father"@en ;
+    rdfs:comment "A man who has given birth to a child or who has accepted a child as his own, through legal means or through an informal arrangement"@en .
+    ex:hasChild a rdf:Property ;
+    rdfs:domain ex:Father ;
+    rdfs:range ex:Person ;
+    rdfs:label "has child"@en ;
+    rdfs:comment "The father's child"@en .
+    ex:isFatherOf a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Father ;
+    rdfs:label "is father of"@en ;
+    rdfs:comment "The person's father"@en .
+ ex:hasSpouse a rdf:Property ;
+    rdfs:domain ex:Father ;
+    rdfs:range ex:Woman ;
+    rdfs:label "has spouse"@en ;
+    rdfs:comment "The father's spouse"@en .
+ex:Man a rdfs:Class ;
+    rdfs:label "Man"@en ;
+    rdfs:comment "An adult human male"@en .
+    ex:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human being"@en .
+    ex:Woman a rdfs:Class ;
+    rdfs:label "Woman"@en ;
+    rdfs:comment "An adult human female"@en .

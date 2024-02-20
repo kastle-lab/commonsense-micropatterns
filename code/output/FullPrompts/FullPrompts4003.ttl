@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://example.org/air#> .
+air:Air rdf:type rdfs:Class .
+air:isComposedOf rdf:type rdf:Property ;
+    rdfs:domain air:Air ;
+    rdfs:range air:Gas ;
+     rdfs:comment "Defines what gases make up the air." .
+air:Gas rdf:type rdfs:Class .
+air:Oxygen rdf:type air:Gas ;
+    rdfs:label "Oxygen"@en .
+air:Nitrogen rdf:type air:Gas ;
+    rdfs:label "Nitrogen"@en .
+air:CarbonDioxide rdf:type air:Gas ;
+    rdfs:label "Carbon Dioxide"@en .
+air:inAtmosphere rdf:type rdf:Property ;
+    rdfs:domain air:Gas ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Defines whether the gas is in the Earth's atmosphere." .
+ air:Oxygen air:inAtmosphere true^^xsd:boolean .
+air:CarbonDioxide air:inAtmosphere true^^xsd:boolean .
+air:Nitrogen air:inAtmosphere true^^xsd:boolean .
+air:percentageOf rdf:type rdf:Property ;
+    rdfs:domain air:Gas ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Defines the percentage of the gas in the total volume of air." .
+air:Oxygen air:percentageOf 20.8 .
+air:Nitrogen air:percentageOf 78.1 .
+air:CarbonDioxide air:percentageOf 0.04 .

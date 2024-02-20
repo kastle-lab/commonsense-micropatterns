@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.com/homeOntology#> .
+: a owl:Ontology ;
+  rdfs:comment "A simple ontology model for Home"@en .
+:Home a owl:Class ;
+  rdfs:comment "Represents a home"@en ;
+  rdfs:subClassOf rdfs:Resource .
+:hasAddress a rdf:Property ;
+  rdfs:domain :Home ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Represents the address of the home"@en .
+:hasNumberOfRooms a rdf:Property ;
+  rdfs:domain :Home ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "Represents the number of rooms in the home"@en .
+:hasOwner a rdf:Property ;
+  rdfs:domain :Home ;
+  rdfs:range :Person ;
+  rdfs:comment "Represents the owner of the home"@en .
+:Person a owl:Class ;
+  rdfs:comment "Represents a person"@en ;
+  rdfs:subClassOf rdfs:Resource .

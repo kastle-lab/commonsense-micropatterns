@@ -1,0 +1,8 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Result a rdf:Class .
+ex:hasResult a rdf:Property ;
+      rdf:domain ex:Experiment ;
+      rdf:range ex:Result .
+ex:Experiment ex:hasResult "An example result"^^xsd:string .

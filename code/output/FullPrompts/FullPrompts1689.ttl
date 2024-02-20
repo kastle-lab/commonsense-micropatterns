@@ -1,0 +1,20 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com#> .
+:History a rdfs:Class .
+:Event a rdfs:Class ;
+    rdfs:subClassOf :History .
+:Battle a rdfs:Class ;
+    rdfs:subClassOf :Event .
+:Signing a rdfs:Class ;
+    rdfs:subClassOf :Event .
+:Declaration a rdfs:Class ;
+    rdfs:subClassOf :Event .
+    :hasDate a rdf:Property ;
+    rdfs:domain :Event ;
+    rdfs:range xsd:dateTime .
+:hasLocation a rdf:Property ;
+    rdfs:domain :Event ;
+    rdfs:range xsd:string .
+    :hasParticipants a rdf:Property ;
+    rdfs:domain :Event ;
+    rdfs:range xsd:string .

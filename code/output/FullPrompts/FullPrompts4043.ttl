@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix teacher: <http://www.example.org/ontologies/teacher#> .
+teacher:Teacher rdf:type owl:Class ;
+    rdfs:label "Teacher"@en ;
+    rdfs:comment "An educational professional who instructs students in various subjects" .
+teacher:name rdf:type owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of the teacher" ;
+    rdfs:domain teacher:Teacher ;
+    rdfs:range xsd:string .
+teacher:teaches_subject rdf:type owl:ObjectProperty ;
+    rdfs:label "teaches subject"@en ;
+    rdfs:comment "The subject that the teacher teaches" ;
+    rdfs:domain teacher:Teacher ;
+    rdfs:range teacher:Subject .
+teacher:works_at rdf:type owl:ObjectProperty ;
+    rdfs:label "works at"@en ;
+    rdfs:comment "The educational institution where the teacher works" ;
+    rdfs:domain teacher:Teacher ;
+    rdfs:range teacher:School .
+teacher:hasExperience rdf:type owl:DatatypeProperty ;
+    rdfs:label "has experience"@en ;
+    rdfs:comment "The years of experience the teacher has" ;
+    rdfs:domain teacher:Teacher ;
+    rdfs:range xsd:integer .
+teacher:School rdf:type owl:Class ;
+    rdfs:label "School"@en ;
+    rdfs:comment "An educational institution where learning is facilitated" .
+teacher:Subject rdf:type owl:Class ;
+    rdfs:label "Subject"@en ;
+    rdfs:comment "A discipline or field of study taught in schools".

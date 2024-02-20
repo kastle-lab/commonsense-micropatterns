@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix job: <http://example.org/job/> .
+# Job classjob:Job rdf:type rdfs:Class ;
+   rdfs:label "Job" ;
+   rdfs:comment "A position of employment" .
+# Propertiesjob:hasPosition rdf:type rdf:Property ;
+   rdfs:range job:Position ;
+   rdfs:domain job:Job ;
+   rdfs:label "has position" ;
+   rdfs:comment "The specific position associated with the job" .
+job:hasSalary rdf:type rdf:Property ;
+   rdfs:range xsd:decimal ;
+   rdfs:domain job:Job ;
+   rdfs:label "has salary" ;
+   rdfs:comment "The salary or wage associated with the job" .
+job:requiresEducation rdf:type rdf:Property ;
+   rdfs:range xsd:string ;
+   rdfs:domain job:Job ;
+   rdfs:label "requires education" ;
+   rdfs:comment "The level of education required for the job" .
+job:isLocatedAt rdf:type rdf:Property ;
+   rdfs:range job:Location ;
+   rdfs:domain job:Job ;
+   rdfs:label "is located at" ;
+   rdfs:comment "The location where the job is based" .
+# Some concepts related to Jobjob:Position rdf:type rdfs:Class ;
+   rdfs:label "Position" ;
+   rdfs:comment "A specific role or function within an organization" .
+job:Location rdf:type rdfs:Class ;
+   rdfs:label "Location" ;
+   rdfs:comment "The geographical area where a job is based" .

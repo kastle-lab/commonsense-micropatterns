@@ -1,0 +1,15 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geom: <http://www.example.org/geometry#> .
+geom:Line a rdfs:Class ;
+    rdfs:comment "A straight one-dimensional figure having no thickness and extending infinitely in both directions" ;
+    rdfs:label "Line" .
+geom:containsPoint a rdf:Property ;
+    rdfs:domain geom:Line ;
+    rdfs:range geom:Point ;
+    rdfs:comment "A relation between a line and a point contained in that line" ;
+    rdfs:label "contains point" .
+geom:Point a rdfs:Class ;
+    rdfs:comment "A particular location in space with no size, only position" ;
+    rdfs:label "Point" .

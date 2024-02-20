@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix person: <http://example.org/person#> .
+# Define the class Personperson:Person rdf:type owl:Class .
+# Define properties for the class Personperson:firstName rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Person ;
+    rdfs:range xsd:string .
+    person:lastName rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Person ;
+    rdfs:range xsd:string .
+person:age rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Person ;
+    rdfs:range xsd:integer .
+person:gender rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Person ;
+    rdfs:range xsd:string .
+person:hasAddress rdf:type owl:ObjectProperty ;
+    rdfs:domain person:Person ;
+    rdfs:range person:Address .
+# Define the class Addressperson:Address rdf:type owl:Class .
+# Define properties for the class Addressperson:street rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Address ;
+    rdfs:range xsd:string .
+person:city rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Address ;
+    rdfs:range xsd:string .
+person:state rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Address ;
+    rdfs:range xsd:string .
+person:zipCode rdf:type owl:DatatypeProperty ;
+    rdfs:domain person:Address ;
+    rdfs:range xsd:string .

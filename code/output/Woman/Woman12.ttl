@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix human: <http://www.example.org/human#> .
+human:Woman rdf:type owl:Class ;
+   rdfs:subClassOf human:Human ;
+   rdfs:label "Woman"@en ;
+   rdfs:comment "A adult human female."@en .
+human:Human rdf:type owl:Class ;
+   rdfs:label "Human"@en ;
+   rdfs:comment "A rational animal, belonging to the species Homo sapiens."@en .
+human:hasAge rdf:type owl:DatatypeProperty ;
+   rdfs:domain human:Human ;
+   rdfs:range xsd:integer ;
+   rdfs:label "has age"@en ;
+   rdfs:comment "Denotes the age of a human."@en .
+human:hasGender rdf:type owl:DatatypeProperty ;
+   rdfs:domain human:Human ;
+   rdfs:range xsd:string ;
+   rdfs:label "has gender"@en ;
+   rdfs:comment "Denotes the gender of a human."@en .
+human:hasName rdf:type owl:DatatypeProperty ;
+   rdfs:domain human:Human ;
+   rdfs:range xsd:string ;
+   rdfs:label "has name"@en ;
+   rdfs:comment "Denotes the name of a human."@en .
+ human:Mother rdf:type owl:Class ;
+   rdfs:subClassOf human:Woman ;
+   rdfs:label "Mother"@en ;
+   rdfs:comment "A woman who has given birth to a child (not necessarily her biological child)"@en .
+human:Daughter rdf:type owl:Class ;
+   rdfs:subClassOf human:Woman ;
+   rdfs:label "Daughter"@en ;
+   rdfs:comment "A female offspring of a human."@en .

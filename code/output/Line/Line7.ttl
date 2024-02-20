@@ -1,0 +1,33 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://example.org/Line>    a owl:Class ;
+    rdfs:label "Line" ;
+    rdfs:comment "Represents a straight path that is endless in both directions."@en ;
+    rdfs:subClassOf schema:Thing ;
+    .
+<http://example.org/Line#startPoint>    a owl:DatatypeProperty ;
+    rdfs:label "start point" ;
+    rdfs:comment "The starting point of a line."@en ;
+    rdfs:domain <http://example.org/Line> ;
+    rdfs:range xsd:integer ;
+    .
+<http://example.org/Line#endPoint>    a owl:DatatypeProperty ;
+    rdfs:label "end point" ;
+    rdfs:comment "The ending point of a line."@en ;
+    rdfs:domain <http://example.org/Line> ;
+    rdfs:range xsd:integer ;
+    .
+<http://example.org/Line#slope>    a owl:DatatypeProperty ;
+    rdfs:label "slope" ;
+    rdfs:comment "The slope of a line."@en ;
+    rdfs:domain <http://example.org/Line> ;
+    rdfs:range xsd:float ;
+    .
+<http://example.org/Line#length>    a owl:DatatypeProperty ;
+    rdfs:label "length" ;
+    rdfs:comment "The length of a line."@en ;
+    rdfs:domain <http://example.org/Line> ;
+    rdfs:range xsd:float ;
+    .

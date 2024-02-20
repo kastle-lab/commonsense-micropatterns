@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix door: <http://example.org/door#> .
+door: a rdfs:Class ;
+  rdfs:label "Door"^^xsd:string ;
+  rdfs:comment "A hinged, sliding, or revolving barrier at the entrance to a building, room, or vehicle, or in the framework of a cupboard."@en .
+door:material a rdf:Property ;
+  rdfs:label "material"^^xsd:string ;
+  rdfs:comment "The material from which a door is made."@en ;
+  rdfs:domain door: ;
+  rdfs:range xsd:string .
+door:color a rdf:Property ;
+  rdfs:label "color"^^xsd:string ;
+  rdfs:comment "The color of a door."@en ;
+  rdfs:domain door: ;
+  rdfs:range xsd:string .
+door:isOpen  a rdf:Property ;
+  rdfs:label "isOpen"^^xsd:string ;
+  rdfs:comment "The status of a door being open or closed."@en ;
+  rdfs:domain door: ;
+  rdfs:range xsd:boolean .

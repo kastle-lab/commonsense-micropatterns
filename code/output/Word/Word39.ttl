@@ -1,0 +1,16 @@
+@prefix ex: <http://example.com/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Word a rdfs:Class ;
+    rdfs:label "Word"@en ;
+    rdfs:comment "Representing a linguistic word in our ontology."@en .
+    ex:hasSpelling a rdfs:Property ;
+    rdfs:domain ex:Word ;
+    rdfs:range xsd:string ;
+    rdfs:label "hasSpelling"@en ;
+    rdfs:comment "The normal spelling of a word."@en .
+ex:hasLength a rdfs:Property ;
+    rdfs:domain ex:Word ;
+    rdfs:range xsd:integer ;
+    rdfs:label "hasLength"@en ;
+    rdfs:comment "The length of a word in number of characters."@en .

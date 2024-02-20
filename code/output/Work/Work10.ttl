@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http://example.org/work#> .
+work:Work rdf:type owl:Class .
+work:hasJobTitle rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:string .
+    work:hasSalary rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:decimal .
+work:hasStartDate rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:date .
+work:Employer rdf:type owl:Class .
+work:Work rdfs:subClassOf [  rdf:type owl:Restriction ;
+  owl:onProperty work:hasEmployer ;
+  owl:someValuesFrom work:Employer] .
+work:hasEmployer rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Employer .
+work:hasLocation rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:string .
+    work:isFullTime rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:boolean .
+work:isRemote rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:boolean .

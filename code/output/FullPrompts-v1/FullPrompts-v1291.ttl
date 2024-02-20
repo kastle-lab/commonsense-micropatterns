@@ -1,0 +1,30 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://example.org/life#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+life:Life  rdfs:subClassOf xsd:Thing ;
+  rdfs:label "Life"@en ;
+  rdfs:comment "Refers to the condition that differentiates organisms that have biological processes from those that do not, either because they are dead or they were never alive"@en .
+life:TerrestrialLife  rdfs:subClassOf life:Life ;
+  rdfs:label "Terrestrial Life"@en ;
+  rdfs:comment "Refers to life that live on land"@en .
+  life:AquaticLife  rdfs:subClassOf life:Life ;
+  rdfs:label "Aquatic Life"@en ;
+  rdfs:comment "Refers to life that live in water"@en .
+life:PlantLife  rdfs:subClassOf life:Life ;
+  rdfs:label "Plant Life"@en ;
+  rdfs:comment "Refers to life form that is a part of the kingdom Plantae"@en .
+life:AnimalLife  rdfs:subClassOf life:Life ;
+  rdfs:label "Animal Life"@en ;
+  rdfs:comment "Refers to life form that is a part of the kingdom Animalia"@en .
+life:MicrobialLife  rdfs:subClassOf life:Life ;
+  rdfs:label "Microbial Life"@en ;
+  rdfs:comment "Refers to life form that is a part of the kingdom of microscopic organisms"@en .
+life:Human  rdfs:subClassOf life:AnimalLife ;
+  rdfs:label "Human"@en ;
+  rdfs:comment "Refers to Homo Sapiens, a species of life"@en .
+ life:Birth  rdfs:subClassOf xsd:Event ;
+  rdfs:label "Birth"@en ;
+  rdfs:comment "The start of a new life"@en .
+life:Death  rdfs:subClassOf xsd:Event ;
+  rdfs:label "Death"@en ;
+  rdfs:comment "The end of a life"@en .

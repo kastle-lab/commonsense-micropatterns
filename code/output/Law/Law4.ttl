@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix law: <http://www.example.org/law#> .
+law:Law    a rdfs:Class ;
+    rdfs:comment "The abstraction encompassing all legal principles and rules."@en ;
+    rdfs:label "Law"@en .
+    law:Case    a rdfs:Class ;
+    rdfs:subClassOf law:Law ;
+    rdfs:comment "A specific application of the law, usually involving a dispute between parties."@en ;
+    rdfs:label "Case"@en .
+law:Statute    a rdfs:Class ;
+    rdfs:subClassOf law:Law ;
+    rdfs:comment "A written law passed by a legislative body."@en ;
+    rdfs:label "Statute"@en .
+law:Constitution    a rdfs:Class ;
+    rdfs:subClassOf law:Law ;
+    rdfs:comment "The system of fundamental principles according to which a nation, state, corporation, or the like, is governed."@en ;
+    rdfs:label "Constitution"@en .
+law:hasCase    a rdf:Property ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Case ;
+    rdfs:comment "Relates a legal domain to its specific case."@en ;
+    rdfs:label "has case"@en .
+law:hasStatute    a rdf:Property ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Statute ;
+    rdfs:comment "Relates a legal domain to its specific statute."@en ;
+    rdfs:label "has statute"@en .
+law:hasConstitution    a rdf:Property ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Constitution ;
+    rdfs:comment "Relates a legal domain to its specific constitution."@en ;
+    rdfs:label "has constitution"@en .
+law:correspondsTo    a rdf:Property ;
+    rdfs:domain law:Case ;
+    rdfs:range law:Statute ;
+    rdfs:comment "Relates a case to the statute it corresponds to."@en ;
+    rdfs:label "corresponds to"@en .

@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix place: <http://example.org/place/> .
+place:Place rdf:type rdfs:Class ;
+  rdfs:label "Place"@en ;
+  rdfs:comment "A location or area"@en .
+place:name rdf:type rdf:Property ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:string ;
+  rdfs:label "Name of the place"@en ;
+  rdfs:comment "The name of the location or area"@en .
+place:hasLatitude rdf:type rdf:Property ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "Latitude of the place"@en ;
+  rdfs:comment "The latitude co-ordinate of the location or area"@en .
+place:hasLongitude rdf:type rdf:Property ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "Longitude of the place"@en ;
+  rdfs:comment "The longitude co-ordinate of the location or area"@en .
+  place:Country rdfs:subClassOf place:Place ;
+  rdfs:label "Country"@en ;
+  rdfs:comment "A country, a distinct region in geography"@en .
+place:City rdfs:subClassOf place:Place ;
+  rdfs:label "City"@en ;
+  rdfs:comment "A city, a large human settlement"@en .
+place:hasPopulation rdf:type rdf:Property ;
+  rdfs:domain place:City ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Population of the city"@en ;
+  rdfs:comment "The total number of people living in the city"@en .

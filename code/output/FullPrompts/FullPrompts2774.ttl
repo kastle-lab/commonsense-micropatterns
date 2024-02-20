@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/ontology#> .
+:Service a owl:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:comment "A class representing services, such as financial services, health services or subscription services."@en .
+:hasServiceProvider a owl:ObjectProperty ;
+    rdfs:domain :Service ;
+    rdfs:range :ServiceProvider ;
+    rdfs:label "has service provider"@en ;
+    rdfs:comment "A property representing the provider of a Service."@en .
+:hasServiceConsumer a owl:ObjectProperty ;
+    rdfs:domain :Service ;
+    rdfs:range :ServiceConsumer ;
+    rdfs:label "has service consumer"@en ;
+    rdfs:comment "A property representing the consumer of a Service."@en .
+:ServiceProvider a owl:Class ;
+    rdfs:label "Service Provider"@en ;
+    rdfs:comment "A class representing entities that provide Services."@en .
+:ServiceConsumer a owl:Class ;
+    rdfs:label "Service Consumer"@en ;
+    rdfs:comment "A class representing entities that consume Services."@en .

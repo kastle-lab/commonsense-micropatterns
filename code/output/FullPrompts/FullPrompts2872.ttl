@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Game  rdf:type rdfs:Class ;
+  rdfs:label "Game" ;
+  rdfs:comment "Class representing the concept of games" .
+ex:hasName  rdf:type rdf:Property ;
+  rdfs:domain ex:Game ;
+  rdfs:range xsd:string ;
+  rdfs:label "has name" ;
+  rdfs:comment "Relates a game to its name" .
+ex:hasGenre  rdf:type rdf:Property ;
+  rdfs:domain ex:Game ;
+  rdfs:range ex:Genre ;
+  rdfs:label "has genre" ;
+  rdfs:comment "Relates a game to its genre" .
+ex:Genre  rdf:type rdfs:Class ;
+  rdfs:label "Genre" ;
+  rdfs:comment "Class representing the genre of a game" .
+ex:Developer  rdf:type rdfs:Class ;
+  rdfs:label "Developer" ;
+  rdfs:comment "Class representing the developer of a game" .
+ex:developedBy  rdf:type rdf:Property ;
+  rdfs:domain ex:Game ;
+  rdfs:range ex:Developer ;
+  rdfs:label "developed by" ;
+  rdfs:comment "Relates a game to its developer" .
+ex:hasPlatform  rdf:type rdf:Property ;
+  rdfs:domain ex:Game ;
+  rdfs:range ex:Platform ;
+  rdfs:label "has platform" ;
+  rdfs:comment "Relates a game to the platform it can be played on" .
+ex:Platform  rdf:type rdfs:Class ;
+  rdfs:label "Platform" ;
+  rdfs:comment "Class representing the platform a game can be played on" .

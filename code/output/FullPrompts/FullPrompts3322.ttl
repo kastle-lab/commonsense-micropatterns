@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix back: <http://www.example.com/back#> .
+back:Back a rdfs:Class ;
+    rdfs:label "Back"^^xsd:string ;
+    rdfs:comment "The rear part of the human body"^^xsd:string .
+back:UpperBack a rdfs:Class ;
+    rdfs:subClassOf back:Back ;
+    rdfs:label "Upper Back"^^xsd:string ;
+    rdfs:comment "Upper area of back spanning the shoulder blades and spine"^^xsd:string .
+back:LowerBack a rdfs:Class ;
+    rdfs:subClassOf back:Back ;
+    rdfs:label "Lower Back"^^xsd:string ;
+    rdfs:comment "Area of back spanning(lower ribs to the hip bones)"^^xsd:string .
+back:Spine a rdfs:Class ;
+    rdfs:subClassOf back:Back ;
+    rdfs:label "Spine"^^xsd:string ;
+    rdfs:comment "The series of vertebrae supporting the upper body, from the pelvis to the neck"^^xsd:string .
+back:BackMuscles a rdfs:Class ;
+    rdfs:subClassOf back:Back ;
+    rdfs:label "Back Muscles"^^xsd:string ;
+    rdfs:comment "The group of muscles that covers the back area."^^xsd:string .
+back:BackInjury a rdfs:Class ;
+    rdfs:label "Back Injury"^^xsd:string ;
+    rdfs:comment "Injury or harm to the back area"^^xsd:string .
+back:BackPain a rdfs:Class ;
+    rdfs:label "Back Pain"^^xsd:string ;
+    rdfs:comment "Pain felt in, or originating from, the back"^^xsd:string .
+back:hasInjury rdfs:Domain back:Back ;
+    rdfs:Range back:BackInjury ;
+    rdfs:label "has Injury"^^xsd:string ;
+    rdfs:comment "Relation indicating back has an injury"^^xsd:string .
+back:hasPain rdfs:Domain back:Back ;
+    rdfs:Range back:BackPain ;
+    rdfs:label "has Pain"^^xsd:string ;
+    rdfs:comment "Relation indicating back has pain"^^xsd:string .

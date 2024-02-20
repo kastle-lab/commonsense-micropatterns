@@ -1,0 +1,4 @@
+@prefix ont: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>@prefix dbo: <http://dbpedia.org/ontology/>@prefix dcterms: <http://purl.org/dc/terms/>@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix xsd: <http://www.w3.org/2001/XMLSchema#><https://example.org/Business>    rdf:type dbo:Company ;
+    rdfs:label "Business"@en ;
+    rdfs:comment "A commercial entity that provides goods or services."@en ;
+.

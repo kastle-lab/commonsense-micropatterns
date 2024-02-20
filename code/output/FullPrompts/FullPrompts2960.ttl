@@ -1,0 +1,34 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix end: <http://example.org/end#> .
+end:     rdf:type owl:Ontology ;
+    rdfs:comment "Ontology dedicated to the concept of end" ;
+    rdfs:label "End ontology" .
+end:End     rdf:type owl:Class ;
+    rdfs:label "End" ;
+    rdfs:comment "The concept of end or termination" .
+end:EndTime    rdf:type owl:Class ;
+    rdfs:subClassOf end:End ;
+    rdfs:label "End Time" ;
+    rdfs:comment "The time at which something ends" .
+end:EndLocation    rdf:type owl:Class ;
+    rdfs:subClassOf end:End ;
+    rdfs:label "End Location" ;
+    rdfs:comment "The location at which something ends" .
+end:EndDate    rdf:type owl:DatatypeProperty ;
+    rdfs:domain end:End ;
+    rdfs:range xsd:date ;
+    rdfs:label "End date" ;
+    rdfs:comment "The date at which something ends" .
+end:hasEndTime    rdf:type owl:ObjectProperty ;
+    rdfs:domain end:End ;
+    rdfs:range end:EndTime ;
+    rdfs:label "has end time" ;
+    rdfs:comment "Relation associating an end with a specific end time" .
+end:hasEndLocation    rdf:type owl:ObjectProperty ;
+    rdfs:domain end:End ;
+    rdfs:range end:EndLocation ;
+    rdfs:label "has end location" ;
+    rdfs:comment "Relation associating an end with a specific end location" .

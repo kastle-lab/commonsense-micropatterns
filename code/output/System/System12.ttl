@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix system: <http://example.org/system#> .
+system:System rdf:type rdfs:Class ;
+              rdfs:label "System"@en ;
+              rdfs:comment "A set of interacting or interrelated elements that act as a whole."@en .
+              system:SubSystem rdf:type rdfs:Class;
+                 rdfs:subClassOf system:System ;
+                 rdfs:label "Sub System"@en ;
+                 rdfs:comment "A system that is part of a larger system."@en .
+                system:ControlSystem rdf:type rdfs:Class;
+                    rdfs:subClassOf system:System ;
+                    rdfs:label "Control System"@en ;
+                    rdfs:comment "A system that is intended to manage, command, direct, or regulate itself or other systems, using some form of control loop."@en .
+system:hasComponent rdf:type rdf:Property;
+                    rdfs:domain system:System;
+                    rdfs:range system:System;
+                    rdfs:label "has component"@en;
+                    rdfs:comment "A property representing a relationship between a system and its components."@en.system:hasOutput rdf:type rdf:Property;
+                 rdfs:domain system:System;
+                 rdfs:range rdf:Resource;
+                 rdfs:label "has output"@en;
+                 rdfs:comment "A property representing a relationship between a system and its output."@en.system:hasInput rdf:type rdf:Property;
+                rdfs:domain system:System;
+                rdfs:range rdf:Resource;
+                rdfs:label "has input"@en;
+                rdfs:comment "A property representing a relationship between a system and its input."@en.

@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix place: <http://example.org/place#> .
+place:   rdf:type owl:Ontology ;
+  rdfs:comment "An ontology about places" .
+place:Place   rdf:type owl:Class ;
+  rdfs:comment "A geographic location" .
+place:City   rdf:type owl:Class ;
+  rdfs:comment "A large human settlement" ;
+  rdfs:subClassOf place:Place .
+place:Country   rdf:type owl:Class ;
+  rdfs:comment "A region that is identified as a distinct entity in political geography" ;
+  rdfs:subClassOf place:Place .
+place:Continent   rdf:type owl:Class ;
+  rdfs:comment "One of the world's main continuous expanses of land" ;
+  rdfs:subClassOf place:Place .
+place:Building   rdf:type owl:Class ;
+  rdfs:comment "A structure with a roof and walls standing more or less permanently in one place" ;
+  rdfs:subClassOf place:Place .
+place:landmark   rdf:type owl:Class ;
+  rdfs:comment "An object or feature of a landscape or town that is easily seen and recognized from a distance, especially one that marks a location" ;
+  rdfs:subClassOf place:Place .
+place:isLocatedIn  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Indicates the place where a certain location is situated" ;
+  rdfs:domain place:Place ;
+  rdfs:range place:Place .
+place:hasName  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Represent the name of a place" ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:string .

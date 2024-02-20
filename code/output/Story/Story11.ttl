@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix story: <http://www.example.org/story#> .
+# Class declarationsstory:Story a rdfs:Class;
+  rdfs:label "Story" ;
+  rdfs:comment "The class of all stories." .
+story:Character a rdfs:Class ;
+  rdfs:label "Character" ;
+  rdfs:comment "A character included in the story." .
+story:Setting a rdfs:Class ;
+  rdfs:label "Setting" ;
+  rdfs:comment "The setting in which the story takes place." .
+story:Theme a rdfs:Class ;
+  rdfs:label "Theme" ;
+  rdfs:comment "The themes outlined in the story." .
+# Property declarationsstory:hasCharacter a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range story:Character ;
+  rdfs:label "has character" ;
+  rdfs:comment "represents a character present in the story." .
+story:hasSetting a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range story:Setting ;
+  rdfs:label "has setting" ;
+  rdfs:comment "represents the setting where the story takes place." .
+story:hasTheme a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range story:Theme ;
+  rdfs:label "has theme" ;
+  rdfs:comment "represents the theme of the story." .
+# Datatype Propertystory:year a rdfs:Datatype ;
+  rdfs:domain story:Story ;
+  rdfs:range xsd:integer ;
+  rdfs:label "year" ;
+  rdfs:comment "represents the year when the story was written." .
+story:title a rdf:Property ;
+  rdfs:domain story:Story ;
+  rdfs:range xsd:string ;
+  rdfs:label "title" ;
+  rdfs:comment "represents the title of the story." .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://www.example.org/life#> .
+life:Animal rdf:type rdfs:Class .
+life:Plant rdf:type rdfs:Class .
+life:Herbivore rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Animal .
+    life:Carnivore rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Animal .
+ life:Tree rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Plant .
+ life:Eats rdf:type rdf:Property ;
+    rdfs:domain life:Animal ;
+    rdfs:range life:Plant .
+life:Cat rdf:type life:Carnivore .
+life:Cow rdf:type life:Herbivore .
+life:Grass rdf:type life:Plant .
+life:OakTree rdf:type life:Tree .
+life:Cat life:Eats life:Grass .
+life:Cow life:Eats life:Grass .
+life:Age rdf:type rdf:Property ;
+    rdfs:domain life:Animal ;
+    rdfs:range xsd:integer .
+life:Cat life:Age "5"^^xsd:integer .
+ life:Cow life:Age "2"^^xsd:integer .

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix team: <http://example.org/team#> .
+team:Team rdf:type rdfs:Class ;
+  rdfs:label "Team"@en ;
+  rdfs:comment "A group of persons associated together in work or activity."@en .
+team:member rdf:type rdf:Property ;
+  rdfs:label "member"@en ;
+  rdfs:comment "A person who belongs to a given team."@en ;
+  rdfs:domain team:Team ;
+  rdfs:range rdfs:Resource .
+team:teamName rdf:type rdf:Property ;
+  rdfs:label "team name"@en ;
+  rdfs:comment "The name of a team."@en ;
+  rdfs:domain team:Team ;
+  rdfs:range xsd:string .
+team:teamLeader rdf:type rdf:Property ;
+  rdfs:label "team leader"@en ;
+  rdfs:comment "A person who leads or manages a team."@en ;
+  rdfs:domain team:Team ;
+  rdfs:range rdfs:Resource .

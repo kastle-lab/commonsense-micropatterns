@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/story#> .
+ex:Story rdf:type rdfs:Class .
+ex:Character rdf:type rdfs:Class .
+ex:Setting rdf:type rdfs:Class .
+ex:Plot rdf:type rdfs:Class .
+ex:hasCharacter rdf:type rdf:Property ;
+    rdfs:domain ex:Story ;
+    rdfs:range ex:Character .
+ex:hasSetting rdf:type rdf:Property ;
+    rdfs:domain ex:Story ;
+    rdfs:range ex:Setting .
+ex:hasPlot rdf:type rdf:Property ;
+    rdfs:domain ex:Story ;
+    rdfs:range ex:Plot .
+ex:Character rdfs:subClassOf ex:Story .
+ex:Setting rdfs:subClassOf ex:Story .
+ex:Plot rdfs:subClassOf ex:Story .
+ex:Character ex:hasProperty "Name", "Role" .
+ex:Setting ex:hasProperty "Location", "Time" .
+ex:Plot ex:hasProperty "Conflict", "Resolution" .

@@ -1,0 +1,5 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:Animal rdf:type :Kind .
+:Dog rdf:type :Animal .
+:Cat rdf:type :Animal .

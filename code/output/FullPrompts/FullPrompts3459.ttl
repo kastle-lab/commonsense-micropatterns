@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://example.com/ontology#> .
+ont:Others rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Others"@en ;
+          rdfs:comment "A class to capture others or miscellaneous entities."@en .
+ont:id rdf:type owl:DatatypeProperty ;
+       rdfs:domain ont:Others ;
+       rdfs:range xsd:string ;
+       rdfs:label "id"@en ;
+       rdfs:comment "An identifier for the others."@en .
+ont:name rdf:type owl:DatatypeProperty ;
+         rdfs:domain ont:Others ;
+         rdfs:range xsd:string ;
+         rdfs:label "name"@en ;
+         rdfs:comment "A commonly used name of the others."@en .
+ont:description rdf:type owl:DatatypeProperty ;
+                rdfs:domain ont:Others ;
+                rdfs:range xsd:string ;
+                rdfs:label "description"@en ;
+                rdfs:comment "A description of the others."@en .

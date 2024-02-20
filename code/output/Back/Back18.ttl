@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix back: <http://example.org/back#> .
+back:     rdf:type owl:Class ;
+    rdfs:label "Back"@en ;
+    rdfs:comment "The back is the rear part of the human body, from the neck to the end of the spine."@en ;
+    org:isPartOf owl:SomeValuesFrom :HumanBody.back:UpperBack    rdf:type owl:Class ;
+    rdfs:subClassOf back: ;
+    rdfs:label "Upper Back"@en ;
+    rdfs:comment "The upper back is the area of back between the bottom of the neck and the top of the torso."@en .
+back:LowerBack    rdf:type owl:Class ;
+    rdfs:subClassOf back: ;
+    rdfs:label "Lower Back"@en ;
+    rdfs:comment "The lower back is the area of back extending from the bottom of the spine to the top of the buttocks."@en .

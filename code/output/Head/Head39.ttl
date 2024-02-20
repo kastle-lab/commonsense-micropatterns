@@ -1,0 +1,7 @@
+@prefix : <http://example.com/> .
+:Head a owl:Class .
+:Human a owl:Class .
+:hasHead a owl:ObjectProperty ;
+    rdfs:domain :Human ;
+    rdfs:range :Head .
+:provides a owl:ObjectProperty .

@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix place: <http://www.example.org/place#> .
+place:  a owl:Ontology ;
+  rdfs:comment "A basic ontology to represent Place" ;
+  rdfs:label "Place" .
+place:Place   a rdfs:Class ;
+  rdfs:comment "Represents the concept of a place" ;
+  rdfs:label "Place" .
+place:name   a owl:DatatypeProperty ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the place" ;
+  rdfs:label "name" .
+place:hasLocation   a owl:ObjectProperty ;
+  rdfs:domain place:Place ;
+  rdfs:range place:Location ;
+  rdfs:comment "The location of the place" ;
+  rdfs:label "hasLocation" .
+place:Location   a rdfs:Class ;
+  rdfs:comment "Represents the location of a place in terms of latitude and longitude" ;
+  rdfs:label "Location" .
+place:latitude   a owl:DatatypeProperty ;
+  rdfs:domain place:Location ;
+  rdfs:range xsd:float ;
+  rdfs:comment "The latitude of the location" ;
+  rdfs:label "latitude" .
+place:longitude   a owl:DatatypeProperty ;
+  rdfs:domain place:Location ;
+  rdfs:range xsd:float ;
+  rdfs:comment "The longitude of the location" ;
+  rdfs:label "longitude" .

@@ -1,0 +1,63 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.com/body#> .
+:Body rdfs:subClassOf owl:Thing .
+:HumanBody rdfs:subClassOf :Body .
+:AnimalBody rdfs:subClassOf :Body .
+:Head rdfs:subClassOf :BodyPart .
+:Torso rdfs:subClassOf :BodyPart .
+:Arm rdfs:subClassOf :BodyPart .
+:Leg rdfs:subClassOf :BodyPart .
+:BodyPart rdfs:subClassOf :Body ;
+     rdfs:label "Body Part"^^xsd:string .
+:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:domain :Body ;
+    rdfs:range :BodyPart ;
+    rdfs:label "has part" .
+:HumanBody :hasPart :Head .
+:HumanBody :hasPart :Torso .
+:HumanBody :hasPart :Arm .
+:HumanBody :hasPart :Leg .
+:AnimalBody :hasPart :Head .
+:AnimalBody :hasPart :Torso .
+:AnimalBody :hasPart :Leg .
+:Organ rdfs:subClassOf :BodyPart .
+:Heart rdfs:subClassOf :Organ .
+:Lung rdfs:subClassOf :Organ .
+:Brain rdfs:subClassOf :Organ .
+:hasOrgan rdf:type owl:ObjectProperty ;
+    rdfs:domain :Body ;
+    rdfs:range :Organ ;
+    rdfs:label "has organ" .
+:HumanBody :hasOrgan :Heart .
+:HumanBody :hasOrgan :Lung .
+:HumanBody :hasOrgan :Brain .
+   :AnimalBody :hasOrgan :Heart .
+:AnimalBody :hasOrgan :Lung .
+:Human Eye rdfs:subClassOf :BodyPart .
+:Human Ear rdfs:subClassOf :BodyPart .
+:hasSensoryOrgan rdf:type owl:ObjectProperty ;
+    rdfs:domain :Body ;
+    rdfs:range :BodyPart ;
+    rdfs:label "has sensory organ" .
+:HumanBody :hasSensoryOrgan :Human Eye .
+:HumanBody :hasSensoryOrgan :Human Ear .
+  :Animal Eye rdfs:subClassOf :BodyPart .
+:Animal Ear rdfs:subClassOf :BodyPart .
+:AnimalBody :hasSensoryOrgan :Animal Eye .
+:AnimalBody :hasSensoryOrgan :Animal Ear .
+ :Tissue rdfs:subClassOf :BodyPart .
+:MuscleTissue rdfs:subClassOf :Tissue .
+:NervousTissue rdfs:subClassOf :Tissue .
+:ConnectiveTissue rdfs:subClassOf :Tissue .
+:hasTissue rdf:type owl:ObjectProperty ;
+    rdfs:domain :Body ;
+    rdfs:range :Tissue ;
+    rdfs:label "has tissue" .
+:HumanBody :hasTissue :MuscleTissue .
+:HumanBody :hasTissue :NervousTissue .
+:HumanBody :hasTissue :ConnectiveTissue .
+:AnimalBody :hasTissue :MuscleTissue .
+:AnimalBody :hasTissue :NervousTissue .
+:AnimalBody :hasTissue :ConnectiveTissue .

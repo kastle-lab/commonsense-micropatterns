@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ @prefix ex: <http://www.example.org/> .
+ex:Chair rdf:type rdfs:Class .
+ex:hasMaterial rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+    rdfs:range rdfs:Literal .
+ ex:hasColor rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+     rdfs:range rdfs:Literal .
+ex:hasStyle rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+     rdfs:range rdfs:Literal .
+ex:hasPrice rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+    rdfs:range rdfs:Literal .
+ex:OfficeChair rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Chair .
+ex:DiningChair rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Chair .

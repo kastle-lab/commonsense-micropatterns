@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ @prefix owl: <http://www.w3.org/2002/07/owl#> .
+ @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ @prefix : <http://www.example.org/problem#> .
+ :Problem a owl:Class ;
+    rdfs:label "Problem" ;
+    rdfs:comment "A matter or situation regarded as unwelcome or harmful and needing to be dealt with and overcome" ;
+    rdfs:subClassOf owl:Thing .
+:hasSolution a rdf:Property ;
+    rdfs:label "hasSolution" ;
+    rdfs:comment "Specific answer or resolution to a problem" ;
+    rdfs:range :Solution ;
+    rdfs:domain :Problem .
+:hasComplexity a rdf:Property ;
+    rdfs:label "hasComplexity" ;
+    rdfs:comment "Level of difficulty or complication of a problem" ;
+    rdfs:range xsd:integer ;
+    rdfs:domain :Problem .
+:Solution a owl:Class ;
+    rdfs:label "Solution" ;
+    rdfs:comment "A means of solving a problem or dealing with a difficult situation" ;
+    rdfs:subClassOf owl:Thing .

@@ -1,0 +1,4 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix base: <http://example.com/#> .
+base:Back rdf:type rdfs:Class .
+#Example of instancebase:MaryBack rdf:type base:Back .

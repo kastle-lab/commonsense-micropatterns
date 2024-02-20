@@ -1,0 +1,36 @@
+@prefix : <http://example.org/door#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+: a owl:Ontology ;
+  rdfs:comment "A door ontology." .
+:Door a owl:Class ;
+  rdfs:label "Door" ;
+  rdfs:comment "A door is a moveable barrier used to cover an opening." .
+:DoorMaterial a owl:Class ;
+  rdfs:label "Door Material" ;
+  rdfs:comment "The material from which a door is made." .
+:metal a :DoorMaterial ;
+  rdfs:label "Metal" ;
+  rdfs:comment "A door made of metal." .
+:wood a :DoorMaterial ;
+  rdfs:label "Wood" ;
+  rdfs:comment "A door made of wood." .
+:DoorColor a owl:Class ;
+  rdfs:label "Door Color" ;
+  rdfs:comment "The color of a door." .
+:red a :DoorColor ;
+  rdfs:label "Red" ;
+  rdfs:comment "A door that is red." .
+:black a :DoorColor ;
+  rdfs:label "Black" ;
+  rdfs:comment "A door that is black." .
+:isMadeOf a owl:ObjectProperty ;
+  rdfs:label "is made of" ;
+  rdfs:domain :Door ;
+  rdfs:range :DoorMaterial ;
+  rdfs:comment "Relates a door to its material." .
+:hasColor a owl:ObjectProperty ;
+  rdfs:label "has color" ;
+  rdfs:domain :Door ;
+  rdfs:range :DoorColor ;
+  rdfs:comment "Relates a door to its color." .

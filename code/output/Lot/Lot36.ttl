@@ -1,0 +1,4 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Lot    a rdfs:Class ;
+    rdfs:comment "A parcel of land having fixed boundaries and designated on a plot or survey" ;
+    rdfs:label "Lot" .

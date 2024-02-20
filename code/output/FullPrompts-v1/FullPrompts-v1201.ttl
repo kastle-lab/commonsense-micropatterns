@@ -1,0 +1,5 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.com/ontology#> .
+:Thing a rdfs:Class ;
+  rdfs:label "Thing"@en ;
+  rdfs:comment "A representation of the most general class of objects or entities."@en .

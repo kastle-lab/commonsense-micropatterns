@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix force: <http://www.example.org/ontology/force#> .
+force: a owl:Class ;
+    rdfs:label "Force" ;
+    rdfs:comment "The concept of force in physics" .
+force:external a owl:Class ;
+    rdfs:label "External Force" ;
+    rdfs:comment "Forces that are from outside an object" ;
+    rdfs:subClassOf force: .
+force:internal a owl:Class ;
+    rdfs:label "Internal Force" ;
+    rdfs:comment "Forces that are from within an object" ;
+    rdfs:subClassOf force: .
+force:friction a owl:Class ;
+    rdfs:label "Friction" ;
+    rdfs:comment "Force resisting relative motion of solid surfaces, layers or elements" ;
+    rdfs:subClassOf force:external .
+force:gravity a owl:Class ;
+    rdfs:label "Gravity" ;
+    rdfs:comment "Force by which a planet or other body draws objects toward its center" ;
+    rdfs:subClassOf force:external .
+force:normal a owl:Class ;
+    rdfs:label "Normal Force" ;
+    rdfs:comment "Support force exerted upon an object in contact with another stable object" ;
+    rdfs:subClassOf force:external .
+force:tension a owl:Class ;
+    rdfs:label "Tension" ;
+    rdfs:comment "Force transmitted through a string, rope, cable or similar object" ;
+    rdfs:subClassOf force:internal .
+force:forceValue a owl:DatatypeProperty ;
+    rdfs:label "Force Value" ;
+    rdfs:comment "The magnitude of force" ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain force: .
+force:forceDirection a owl:DatatypeProperty ;
+    rdfs:label "Force Direction" ;
+    rdfs:comment "The direction in which the force is applied" ;
+    rdfs:range xsd:string ;
+    rdfs:domain force: .
+force:unitOfMeasure a owl:DatatypeProperty ;
+    rdfs:label "Unit of Measure" ;
+    rdfs:comment "The unit in which the force is measured" ;
+    rdfs:range xsd:string ;
+    rdfs:domain force: .

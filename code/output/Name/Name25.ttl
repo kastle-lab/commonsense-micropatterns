@@ -1,0 +1,16 @@
+ 
+@prefix : <http://example.org/name#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Person rdf:type rdfs:Class .
+:firstName rdf:type rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain :Person ;
+    rdfs:label "First Name" ;
+    rdfs:comment "The first name of a person" .
+:lastName rdf:type rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain :Person ;
+    rdfs:label "Last Name" ;
+    rdfs:comment "The last name of a person" .

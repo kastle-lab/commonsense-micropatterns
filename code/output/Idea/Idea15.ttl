@@ -1,0 +1,27 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Idea rdf:type owl:Class ;
+rdfs:subClassOf owl:Thing ;
+ rdfs:label "Idea"@en;
+rdfs:comment "An entity representing a concept or plan developed by thinking or occurring suddenly in the mind."@en ;
+rdfs:isDefinedBy : .
+:IdeaCreator rdf:type owl:ObjectProperty ;
+rdfs:label "Idea Creator" ;
+rdfs:domain :Idea ;
+ rdfs:range :Person ;
+rdfs:comment "The creator or originator of the idea."@en ;
+ rdfs:isDefinedBy : .
+:creationDate rdf:type owl:DatatypeProperty ;
+rdfs:label "Creation Date" ;
+rdfs:domain :Idea ;
+ rdfs:range xsd:date ;
+ rdfs:comment "The date when the Idea was conceptualized or created."@en ;
+ rdfs:isDefinedBy : .
+:description rdf:type owl:DatatypeProperty ;
+rdfs:label "Description" ;
+rdfs:domain :Idea ;
+ rdfs:range xsd:string ;
+ rdfs:comment "A detailed explanation about the idea."@en ;
+ rdfs:isDefinedBy : .

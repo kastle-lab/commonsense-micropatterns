@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.org#> .
+ex:Result    a rdfs:Class ;
+    rdfs:comment "Represents a result of some process" ;
+    rdfs:label "Result"@en .
+ex:hasResult     a rdf:Property ;
+    rdfs:domain ex:Process ;
+    rdfs:range ex:Result ;
+    rdfs:label "has result"@en ;
+    rdfs:comment "The property that represents the result of a process" .
+ex:Process    a rdfs:Class ;
+    rdfs:comment "A process that produces a result" ;
+    rdfs:label "Process"@en .

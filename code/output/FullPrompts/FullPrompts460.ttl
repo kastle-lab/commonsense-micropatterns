@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hand: <http://example.org/hand#> .
+hand:Hand rdf:type rdfs:Class .
+hand:hasParts rdf:type rdf:Property ;
+    rdfs:comment "The hand has 5 fingers" ;
+    rdfs:domain hand:Hand ;
+    rdfs:range hand:Finger .
+hand:Finger rdf:type rdfs:Class ;
+    rdfs:subClassOf hand:HandPart .
+hand:HandPart rdf:type rdfs:Class ;
+    rdfs:comment "Parts of a hand" .
+hand:Thumb rdf:type rdfs:Class ;
+    rdfs:subClassOf hand:Finger .
+hand:Index rdf:type rdfs:Class ;
+    rdfs:subClassOf hand:Finger .
+hand:Middle rdf:type rdfs:Class ;
+    rdfs:subClassOf hand:Finger .
+hand:Ring rdf:type rdfs:Class ;
+    rdfs:subClassOf hand:Finger .
+hand:Little rdf:type rdfs:Class ;
+    rdfs:subClassOf hand:Finger .
+hand:hasSkin rdf:type rdf:Property ;
+    rdfs:domain hand:Hand ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Does a hand have skin?" .
+hand:canGrasp rdf:type rdf:Property ;
+    rdfs:domain hand:Hand ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Can a hand grasp objects?" .
+hand:hasNails rdf:type rdf:Property ;
+    rdfs:domain hand:Finger ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Do fingers have nails?" .

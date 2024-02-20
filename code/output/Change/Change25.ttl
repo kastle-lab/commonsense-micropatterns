@@ -1,0 +1,27 @@
+@prefix : <http://www.example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:ChangeEvent a rdfs:Class ;
+  rdfs:comment "An event where the state of an Entity is changed."@en ;
+  rdfs:label "Change Event"@en .
+:occursAt a rdf:Property ;
+  rdfs:domain :ChangeEvent ;
+  rdfs:range :TimePoint ;
+  rdfs:comment "The time at which the Change Event occurred."@en ;
+  rdfs:label "occurs at"@en .
+:changesEntity a rdf:Property ;
+  rdfs:domain :ChangeEvent ;
+  rdfs:range :Entity ;
+  rdfs:comment "The entity that is changed in the Change Event."@en ;
+  rdfs:label "changes entity"@en .
+ :Entity a rdfs:Class ;
+  rdfs:comment "A thing with distinct and independent existence."@en ;
+  rdfs:label "Entity"@en .
+:TimePoint a rdfs:Class ;
+  rdfs:comment "A specific point in time."@en ;
+  rdfs:label "Time Point"@en .
+:changeEvent1 a :ChangeEvent ;
+  :occursAt :timePoint1 ;
+  :changesEntity :entity1 .
+:entity1 a :Entity .
+:timePoint1 a :TimePoint .

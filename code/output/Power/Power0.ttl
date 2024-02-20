@@ -1,0 +1,25 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix power: <http://example.org/power#> .
+power:Electric rdf:type rdfs:Class;
+    rdfs:comment "Electrical power or energy" .
+power:Mechanical rdf:type rdfs:Class;
+    rdfs:comment "Mechanical power or energy" .
+power:Nuclear rdf:type rdfs:Class;
+    rdfs:wattage "Nuclear power or energy" .
+power:Solar rdf:type rdfs:Class;
+    rdfs:comment "Solar power or energy" .
+power:Wind rdf:type rdfs:Class;
+    rdfs:comment "Wind power or energy" .
+power:Hydraulic rdf:type rdfs:Class;
+    rdfs:comment "Hydraulic power or energy" .
+power:Geothermal rdf:type rdfs:Class;
+    rdfs:comment "Geothermal power or energy" .
+power:Wattage rdf:type rdf:Property;
+    rdfs:comment "Measurement of power output" ;
+    rdfs:domain power:Power ;
+    rdfs:range xsd:float .
+power:Source rdf:type rdf:Property;
+    rdfs:comment "Source of the power" ;
+    rdfs:domain power:Power ;
+    rdfs:range rdfs:Resource .

@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://www.example.org/handontology#> .
+ont:Hand rdfs:subClassOf rdfs:Class ;
+  rdfs:comment "A class representing a human hand" .
+ont:fingerCount rdf:type rdf:Property ;
+  rdfs:domain ont:Hand ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "Property denoting the number of fingers in a hand" .
+ont:isLeft rdf:type rdf:Property ;
+  rdfs:domain ont:Hand ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Property denoting if a hand is left hand" .
+ont:isRight rdf:type rdf:Property ;
+  rdfs:domain ont:Hand ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Property denoting if a hand is right hand" .
+ont:finger rdf:type rdfs:Class ;
+  rdfs:subClassOf rdfs:Resource ;
+  rdfs:comment "A class representing a finger on a hand" .
+ont:belongsTo rdf:type rdf:Property ;
+  rdfs:domain ont:finger ;
+  rdfs:range ont:Hand ;
+  rdfs:comment "Property linking a finger to the hand it belongs to" .
+ont:thumb rdf:type ont:finger ;
+  rdfs:label "Thumb" .
+ont:indexFinger rdf:type ont:finger ;
+  rdfs:label "Index Finger" .
+ont:middleFinger rdf:type ont:finger ;
+  rdfs:label "Middle Finger" .
+ont:ringFinger rdf:type ont:finger ;
+  rdfs:label "Ring Finger" .
+ont:pinky rdf:type ont:finger ;
+  rdfs:label "Pinky" .

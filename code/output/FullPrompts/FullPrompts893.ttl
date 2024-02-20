@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <http://example.org/myontology#> .
+my:Number a rdfs:Class ;
+  rdfs:comment "Class representing a general concept of Number" .
+my:integerNumber a rdfs:Class ;
+  rdfs:subClassOf my:Number ;
+  rdfs:comment "Class representing integer numbers" .
+my:floatNumber a rdfs:Class ;
+  rdfs:subClassOf my:Number ;
+  rdfs:comment "Class representing floating point numbers" .
+my:numberValue a rdf:Property ;
+  rdfs:comment "Property representing a value of the number" ;
+  rdfs:domain my:Number ;
+  rdfs:range xsd:decimal .
+ my:numberValueInteger a rdf:Property ;
+  rdfs:subPropertyOf my:numberValue ;
+  rdfs:comment "Property representing a value of the integer number" ;
+  rdfs:domain my:integerNumber ;
+  rdfs:range xsd:integer .
+my:numberValueFloat a rdf:Property ;
+  rdfs:subPropertyOf my:numberValue ;
+  rdfs:comment "Property representing a value of the float number" ;
+  rdfs:domain my:floatNumber ;
+  rdfs:range xsd:float .

@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://www.example.org/ontology#> .
+ont:Member rdf:type rdfs:Class .
+ont:membershipDuration rdf:type rdf:Property ;
+    rdfs:domain ont:Member ;
+    rdfs:range xsd:duration .
+ont:membershipStart  rdf:type rdf:Property ;
+    rdfs:domain ont:Member ;
+    rdfs:range xsd:date .
+ont:membershipEnd rdf:type rdf:Property ;
+    rdfs:domain ont:Member ;
+    rdfs:range xsd:date .
+ont:hasMembership rdf:type rdf:Property ;
+    rdfs:domain ont:Member ;
+    rdfs:range ont:Membership .
+ont:Membership rdf:type rdfs:Class .
+ont:MembershipStatus rdf:type rdfs:Class ;
+    rdfs:subClassOf ont:Membership .
+ont:isActive rdf:type rdf:Property ;
+    rdfs:domain ont:MembershipStatus ;
+    rdfs:range xsd:boolean .
+ ont:MemberName rdf:type rdf:Property ;
+    rdfs:domain ont:Member ;
+    rdfs:range xsd:string .
+  ont:MemberID rdf:type rdf:Property ;
+    rdfs:domain ont:Member ;
+    rdfs:range xsd:string .
+This ontology defines a "Member" class with properties such as "membershipDuration", "membershipStart", "membershipEnd", "hasMembership", "MemberName", and "MemberID".
+ Also introduces a "Membership" class with subclasses of "MembershipStatus".
+ "Membership" has a "isActive" property.

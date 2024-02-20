@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.example.com/ontology#> .
+:Change a rdf:Class ;
+    rdfs:label "Change" ;
+    rdfs:comment "Changes or modifications to entities" .
+:Event a rdf:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "Events that constitute a change" .
+:hasEvent a rdf:Property ;
+    rdf:domain :Change ;
+    rdf:range :Event ;
+    rdfs:label "has event" ;
+    rdfs:comment "Change has event or series of events" .
+:occursAt a rdf:Property ;
+    rdf:domain :Event ;
+    rdf:range xsd:dateTime ;
+    rdfs:label "occurs at" ;
+    rdfs:comment "Time at which event occurs" .
+:performedBy a rdf:Property ;
+    rdf:domain :Event ;
+    rdf:range :Agent ;
+    rdfs:label "performed by" ;
+    rdfs:comment "Agent performing the event" .

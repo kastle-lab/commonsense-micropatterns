@@ -1,0 +1,34 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.com/members#> .
+:#Member a rdfs:Class ;
+    rdfs:label "Member" ;
+    rdfs:comment "A member of an organization" .
+:#hasMember a rdf:Property ;
+    rdfs:label "has member" ;
+    rdfs:domain :Organization ;
+    rdfs:range :Member ;
+    rdfs:comment "Property that shows the Member of the Organization" .
+:#memberSince a rdf:Property ;
+    rdfs:label "member since" ;
+    rdfs:domain :Member ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Date when the Member joined" .
+:#Membership a rdfs:Class ;
+    rdfs:label "Membership" ;
+    rdfs:comment "Membership of a Member in an Organization" .
+:#hasMembership a rdf:Property ;
+    rdfs:label "has membership" ;
+    rdfs:domain :Member ;
+    rdfs:range :Membership ;
+    rdfs:comment "Property that shows the Membership of a Member" .
+:#hasMembershipType a rdf:Property ;
+    rdfs:label "has membership type" ;
+    rdfs:domain :Membership ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Type of Membership (e.g. Premium, Regular, etc.)" .
+:#Organization a rdfs:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "An organization where members belong" .

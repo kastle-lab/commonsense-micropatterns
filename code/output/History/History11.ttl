@@ -1,0 +1,27 @@
+@prefix : <http://www.example.org/history#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+: a owl:Ontology ;
+  rdfs:comment "An ontology for describing history" .
+:Person a owl:Class ;
+  rdfs:label "Person" ;
+  rdfs:comment "A historical person" .
+:Event a owl:Class ;
+  rdfs:label "Event" ;
+  rdfs:comment "A historical event" .
+:Date a owl:DatatypeProperty ;
+  rdfs:comment "The date of an event" ;
+  rdfs:domain :Event ;
+  rdfs:range xsd:dateTime .
+:ParticipatedIn a owl:ObjectProperty ;
+  rdfs:comment "Indicates a person who participated in an event" ;
+  rdfs:domain :Person ;
+  rdfs:range :Event .
+:Julius_Caesar a :Person ;
+  rdfs:label "Julius Caesar" .
+:Crossing_the_Rubicon a :Event ;
+  rdfs:label "Crossing the Rubicon" ;
+  :Date "49-01-10T00:00:00+00:00"^^xsd:dateTime .
+:Julius_Caesar :ParticipatedIn :Crossing_the_Rubicon .

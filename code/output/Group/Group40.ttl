@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/#> .
+# Here we define the class Group:Group a rdfs:Class ;
+  rdfs:label "Group" ;
+  rdfs:comment "A collection of individuals or entities." .
+# Here we define a property memberOf to link an individual to a group:memberOf a rdf:Property ;
+  rdfs:label "is member of" ;
+  rdfs:domain :Individual ;
+  rdfs:range :Group ;
+  rdfs:comment "The property that represents the membership of an individual in a group." .
+# Here we define an individual John who is a member of a specific group:John a :Individual ;
+  :memberOf :Group1 .
+  # Here we define the group that John is a member of:Group1 a :Group ;
+  rdfs:label "Group 1" .

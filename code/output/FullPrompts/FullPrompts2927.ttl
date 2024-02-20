@@ -1,0 +1,27 @@
+@base <http://example.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/#> .
+:Line a rdfs:Class ;
+    rdfs:label "Line"^^xsd:string ;
+    rdfs:comment "A line is a straight one-dimensional figure having no thickness and extending infinitely in both directions."@en .
+:hasStartPoint a rdf:Property ;
+    rdfs:domain :Line ;
+    rdfs:range :Point ;
+    rdfs:label "has start point"^^xsd:string ;
+    rdfs:comment "The start point of a line."@en .
+:hasEndPoint a rdf:Property ;
+    rdfs:domain :Line ;
+    rdfs:range :Point ;
+    rdfs:label "has end point"^^xsd:string ;
+    rdfs:comment "The end point of a line."@en .
+:hasLength a rdf:Property ;
+    rdfs:domain :Line ;
+    rdfs:range xsd:float ;
+    rdfs:label "has length"^^xsd:string ;
+    rdfs:comment "The length of a line."@en .
+:Point a rdfs:Class ;
+    rdfs:label "Point"^^xsd:string ;
+    rdfs:comment "A point is an exact location in space."@en .

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hand: <http://www.handontology.org/hand#> .
+hand:     a owl:Ontology ;
+    rdfs:comment "An ontology dedicated to human hand" .
+hand:Hand     a owl:Class ;
+    rdfs:label "Hand" ;
+    rdfs:comment "A human hand" .
+hand:Finger     a owl:Class ;
+    rdfs:label "Finger" ;
+    rdfs:comment "A finger on a human hand" .
+hand:Thumb     a owl:Class ;
+    rdfs:label "Thumb" ;
+    rdfs:subClassOf hand:Finger ;
+    rdfs:comment "The thumb on a human hand" .
+hand:IndexFinger     a owl:Class ;
+    rdfs:label "Index Finger" ;
+    rdfs:subClassOf hand:Finger ;
+    rdfs:comment "The index finger on a human hand" .
+hand:MiddleFinger     a owl:Class ;
+    rdfs:label "Middle Finger" ;
+    rdfs:subClassOf hand:Finger ;
+    rdfs:comment "The middle finger on a human hand" .
+hand:RingFinger     a owl:Class ;
+    rdfs:label "Ring Finger" ;
+    rdfs:subClassOf hand:Finger ;
+    rdfs:comment "The ring finger on a human hand" .
+hand:LittleFinger     a owl:Class ;
+    rdfs:label "Little Finger" ;
+    rdfs:subClassOf hand:Finger ;
+    rdfs:comment "The little or pinky finger on a human hand" .
+hand:hasFinger     a owl:ObjectProperty ;
+    rdfs:domain hand:Hand ;
+    rdfs:range hand:Finger ;
+    rdfs:label "has finger" ;
+    rdfs:comment "Relates a hand to its fingers" .

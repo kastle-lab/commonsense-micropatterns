@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://www.example.org/way#> .
+way:Way rdf:type rdfs:Class ;
+    rdfs:label "Way"@en ;
+    rdfs:comment "Class representing a method, direction, manners or style of doing something."@en .
+way:direct rdf:type rdf:Property ;
+    rdfs:label "direct"@en ;
+    rdfs:comment "Property representing the orientation or direction of a way."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:string .
+way:type rdf:type rdf:Property ;
+    rdfs:label "type"@en ;
+    rdfs:comment "Property representing the type or kind of a way."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:string .
+way:length rdf:type rdf:Property ;
+    rdfs:label "length"@en ;
+    rdfs:comment "Property representing the length of a way in terms of distance covered."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:decimal .
+way:difficulty rdf:type rdf:Property ;
+    rdfs:label "difficulty"@en ;
+    rdfs:comment "Property representing the level of challenge or difficulty associated with a way."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:string .
+way:Mode rdf:type rdfs:Class ;
+    rdfs:label "Mode"@en ;
+    rdfs:comment "Class representing different forms or modes of transversing a way."@en .
+way:mode rdf:type rdf:Property ;
+    rdfs:label "mode"@en ;
+    rdfs:comment "Property representing the mode of transversing a way."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range way:Mode .
+way:WayExample rdf:type way:Way ;
+    way:direct "North"^^xsd:string ;
+    way:type "Footpath"^^xsd:string ;
+    way:length "5.5"^^xsd:decimal ;
+    way:difficulty "Easy"^^xsd:string ;
+    way:mode way:Walking .
+way:Walking rdf:type way:Mode ;
+    rdfs:label "Walking"@en ;
+    rdfs:comment "Mode represents that the way is to be traversed by walking."@en .

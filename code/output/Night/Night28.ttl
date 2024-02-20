@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://example.com/ontology#> .
+ont:Night rdf:type rdfs:Class ;
+       rdfs:subClassOf ont:PeriodOfTime ;
+       rdfs:label "Night"@en ;
+       rdfs:comment "The period of time between sunset and sunrise when it is dark outside."@en ;
+       ont:hasStart ont:Sunset ;
+       ont:hasEnd ont:Sunrise .
+# Sunset entityont:Sunset rdf:type rdfs:Class ;
+         rdfs:subClassOf ont:TimePoint ;
+         rdfs:label "Sunset"@en ;
+         rdfs:comment "The time in the evening when the sun disappears or daylight fades."@en .
+# Sunrise entityont:Sunrise rdf:type rdfs:Class ;
+           rdfs:subClassOf ont:TimePoint ;
+           rdfs:label "Sunrise"@en ;
+           rdfs:comment "The time in the morning when the sun appears or full daylight arrives."@en .

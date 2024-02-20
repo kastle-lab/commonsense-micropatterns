@@ -1,0 +1,17 @@
+@prefix : <http://example.org/back#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Back rdf:type rdfs:Class .
+:hasPart rdf:type rdf:Property ;
+    rdfs:domain :Back ;
+    rdfs:range :BodyPart .
+:UpperBack rdf:type :Back ;
+    rdfs:label "Upper back" .
+:MiddleBack rdf:type :Back ;
+    rdfs:label "Middle back" .
+:LowerBack rdf:type :Back ;
+    rdfs:label "Lower back" .
+:Back :hasPart :UpperBack ;
+    :hasPart :MiddleBack ;
+    :hasPart :LowerBack .
+This is a very basic ontology model for the concept of a "Back" in terms of human anatomy. The model defines "Back" as a class and uses the property "hasPart" to associate this class with other classes representing different parts of the back (e.g. "UpperBack", "MiddleBack", and "LowerBack"). The labels for these classes provide human-readable names.

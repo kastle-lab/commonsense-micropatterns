@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.example.org/time#> .
+time:Time     a rdfs:Class ;
+     rdfs:label "Time" ;
+     rdfs:comment "Class representing notion of time" .
+time:hasHour     a rdf:Property ;
+     rdfs:label "has hour" ;
+     rdfs:domain time:Time ;
+     rdfs:range xsd:integer ;
+     rdfs:comment "Property representing hour segment of time" .
+time:hasMinute     a rdf:Property ;
+     rdfs:label "has minute" ;
+     rdfs:domain time:Time ;
+     rdfs:range xsd:integer ;
+     rdfs:comment "Property representing minute segment of time" .
+time:hasSecond     a rdf:Property ;
+     rdfs:label "has second" ;
+     rdfs:domain time:Time ;
+     rdfs:range xsd:integer ;
+     rdfs:comment "Property representing second segment of time" .

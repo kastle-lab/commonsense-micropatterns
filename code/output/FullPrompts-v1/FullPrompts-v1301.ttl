@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://www.example.org/life#> .
+life:   rdf:type rdfs:Class ;
+  rdfs:comment "The class of all life." ;
+  rdfs:label "Life" .
+life:Human  rdf:type rdfs:Class ;
+  rdfs:subClassOf life: ;
+  rdfs:comment "The class of all human life." ;
+  rdfs:label "Human" .
+life:Animal  rdf:type rdfs:Class ;
+  rdfs:subClassOf life: ;
+  rdfs:comment "The class of all animal life." ;
+  rdfs:label "Animal" .
+life:Plant  rdf:type rdfs:Class ;
+  rdfs:subClassOf life: ;
+  rdfs:comment "The class of all plant life." ;
+  rdfs:label "Plant" .
+life:Bacteria  rdf:type rdfs:Class ;
+  rdfs:subClassOf life: ;
+  rdfs:comment "The class of all bacterial life." ;
+  rdfs:label "Bacteria" .
+life:Virus  rdf:type rdfs:Class ;
+  rdfs:subClassOf life: ;
+  rdfs:comment "The class of all viral life, though viruses are at the edge of what we define as life." ;
+  rdfs:label "Virus" .
+life:hasLife  rdf:type rdf:Property ;
+  rdfs:domain life: ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "A property indicating whether an entity has life." ;
+  rdfs:label "hasLife" .
+life:canReproduce  rdf:type rdf:Property ;
+  rdfs:domain life: ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "A property indicating whether an entity can reproduce." ;
+  rdfs:label "canReproduce" .
+life:canGrow  rdf:type rdf:Property ;
+  rdfs:domain life: ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "A property indicating whether an entity can grow." ;
+  rdfs:label "canGrow" .
+life:canEvolve  rdf:type rdf:Property ;
+  rdfs:domain life: ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "A property indicating whether an entity can evolve." ;
+  rdfs:label "canEvolve" .

@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/> .
+ex:CarPart rdf:type rdf:Class .
+ex:Engine ex:partOf ex:Car .
+ex:Engine rdf:type ex:CarPart .
+ex:Wheel ex:partOf ex:Car .
+ ex:Wheel rdf:type ex:CarPart .
+ex:partOf rdf:type rdf:Property ;
+          rdfs:domain ex:CarPart ;
+          rdfs:range ex:Car .

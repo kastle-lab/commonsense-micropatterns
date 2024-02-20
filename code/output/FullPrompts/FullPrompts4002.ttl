@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://example.org/ontology/air#> .
+air:     rdf:type rdfs:Class ;
+    rdfs:label "Air"@en ;
+    rdfs:comment "The invisible gaseous substance surrounding the earth, a mixture mainly of oxygen and nitrogen."@en .
+air:Composition     rdf:type rdfs:Class ;
+    rdfs:label "Composition"@en ;
+    rdfs:comment "The details about the different components of air."@en .
+air:Nitrogen     rdf:type rdfs:Class ;
+    rdfs:label "Nitrogen"@en ;
+    rdfs:comment "A colorless, odorless gaseous element that constitutes about four-fifths of the volume of the atmosphere."@en .
+    air:Oxygen     rdf:type rdfs:Class ;
+    rdfs:label "Oxygen"@en ;
+    rdfs:comment "A colorless, odorless reactive gaseous element that is life-supporting, constituting about one fifth of the air."@en .
+air:hasPart     rdf:type rdf:Property ;
+    rdfs:label "has part"@en ;
+    rdfs:comment "Relates air to its components."@en ;
+    rdfs:domain air: ;
+    rdfs:range air:Composition .
+air:percentage     rdf:type rdf:Property ;
+    rdfs:label "percentage"@en ;
+    rdfs:comment "The part of air a component constitutes expressed as a percentage"@en ;
+    rdfs:domain air:Composition ;
+    rdfs:range xsd:decimal .
+    air:AirQuality    rdf:type rdfs:Class;
+    rdfs:label "Air Quality"@en;
+    rdfs:comment "The degree to which air is free from pollution"@en. air:Pollutant     rdf:type rdfs:Class;
+    rdfs:label "Pollutant"@en;
+    rdfs:comment "A substance that has been introduced to the atmosphere that has harmful or poisonous effects"@en.    air:contains    rdf:type rdf:Property;
+    rdfs:label "contains"@en;
+    rdfs:comment "Relates air to any pollutants it contains"@en;
+    rdfs:domain air:AirQuality;
+    rdfs:range air:Pollutant.

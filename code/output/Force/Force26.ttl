@@ -1,0 +1,21 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:PhysicalConcept a rdfs:Class .
+:Force a rdfs:Class ;
+    rdfs:subClassOf :PhysicalConcept ;
+    rdfs:comment "The concept of force in Physics" .
+:Magnitude a rdfs:Class ;
+    rdfs:subClassOf :PhysicalConcept ;
+    rdfs:comment "The magnitude of a physical quantity" .
+:Direction a rdfs:Class ;
+    rdfs:subClassOf :PhysicalConcept ;
+    rdfs:comment "The direction of a physical quantity" .
+:hasMagnitude a rdf:Property ;
+    rdfs:domain :Force ;
+    rdfs:range :Magnitude ;
+    rdfs:comment "Property that links a force to its magnitude" .
+:hasDirection a rdf:Property ;
+    rdfs:domain :Force ;
+    rdfs:range :Direction ;
+    rdfs:comment "Property that links a force to its direction" .

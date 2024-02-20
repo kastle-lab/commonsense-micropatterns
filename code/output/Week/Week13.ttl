@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix ex: <http://example.org/> .
+ex:Week rdf:type rdfs:Class ;
+    rdfs:label "Week" ;
+    rdfs:comment "A period of seven consecutive days." .
+ex:Monday rdf:type ex:DayOfWeek ;
+    rdfs:label "Monday" ;
+    rdfs:comment "The first day of the week." .
+ex:Tuesday rdf:type ex:DayOfWeek ;
+    rdfs:label "Tuesday" ;
+    rdfs:comment "The second day of the week." .
+ex:DayOfWeek rdf:type rdfs:Class ;
+    rdfs:label "Day of the Week" ;
+    rdfs:comment "Represents a day within a week." ;
+    rdfs:subClassOf ex:Week .
+ex:Week rdfs:subClassOf time:TemporalUnit ;
+    rdfs:comment "Week as a unit of time." .
+<http://example.org/week1> rdf:type ex:Week ;
+    rdfs:label "Week 1" .

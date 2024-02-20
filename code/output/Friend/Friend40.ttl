@@ -1,0 +1,7 @@
+@prefix : <http://example.org#> .
+:Person a rdfs:Class .
+:hasFriend a rdf:Property ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+:Friend a rdfs:Class ;
+    rdfs:subClassOf :Person .

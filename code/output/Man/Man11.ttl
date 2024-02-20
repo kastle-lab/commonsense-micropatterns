@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix man: <http://example.org/man#> .
+man:Human a owl:Class ;
+  rdfs:comment "A human being" ;
+  rdfs:label "Human" .
+man:Man a owl:Class ;
+  rdfs:subClassOf man:Human ;
+  rdfs:comment "A male human being" ;
+  rdfs:label "Man" .
+man:Woman a owl:Class ;
+  rdfs:subClassOf man:Human ;
+  rdfs:comment "A female human being" ;
+  rdfs:label "Woman" .
+man:age a owl:DatatypeProperty ;
+  rdfs:domain man:Human ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The age of a person" ;
+  rdfs:label "Age" .
+man:hasName a owl:DatatypeProperty ;
+  rdfs:domain man:Human ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of a person" ;
+  rdfs:label "Name" .
+man:hasOccupation a owl:DatatypeProperty ;
+  rdfs:domain man:Human ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The job or profession of a person" ;
+  rdfs:label "Occupation" .
+man:isMarriedTo a owl:ObjectProperty ;
+  rdfs:domain man:Human ;
+  rdfs:range man:Human ;
+  rdfs:comment "Indicates when a person is married to another person" ;
+  rdfs:label "Married to" .
+man:hasChild a owl:ObjectProperty ;
+  rdfs:domain man:Human ;
+  rdfs:range man:Human ;
+  rdfs:comment "Indicates when a person has a child" ;
+  rdfs:label "Has Child" .
+man:John a man:Man ;
+  man:hasName "John Doe" ;
+  man:age 30 ;
+  man:hasOccupation "Engineer" .
+man:Jane a man:Woman ;
+  man:hasName "Jane Doe" ;
+  man:age 28 ;
+  man:hasOccupation "Doctor" ;
+  man:isMarriedTo man:John .
+man:John man:hasChild man:Jane .

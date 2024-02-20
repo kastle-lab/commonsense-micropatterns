@@ -1,0 +1,22 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix point: <http://www.example.com/point#> .
+point:Point rdf:type rdfs:Class .
+point:hasXCoordinate rdf:type rdf:Property;
+     rdfs:domain point:Point;
+     rdfs:range xsd:double .
+point:hasYCoordinate rdf:type rdf:Property;
+     rdfs:domain point:Point;
+     rdfs:range xsd:double .
+     point:locatedInPlane rdf:type rdf:Property;
+     rdfs:domain point:Point;
+     rdfs:range point:Plane .
+point:Plane rdf:type rdfs:Class .
+point:hasPoint rdf:type rdf:Property;
+     rdfs:domain point:Plane;
+     rdfs:range point:Point .
+point:isOrigin rdf:type rdf:Property;
+     rdfs:domain point:Point;
+     rdfs:range xsd:boolean .

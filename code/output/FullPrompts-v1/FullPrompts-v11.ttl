@@ -1,0 +1,32 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix db:    <http://dbpedia.org/resource/> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+# Define the classesdbo:Person a rdfs:Class ;
+# Define the propertiesdbo:birthdate a rdf:Property ;
+  rdfs:domain dbo:Person ;
+  rdfs:range xsd:date .
+dbo:children a rdf:Property ;
+  rdfs:domain dbo:Person ;
+  rdfs:range dbo:Person .
+dbo:deathdate a rdf:Property ;
+  rdfs:domain dbo:Person ;
+  rdfs:range xsd:date .
+dbo:name a rdf:Property ;
+  rdfs:domain dbo:Person ;
+  rdfs:range xsd:string .
+dbo:spouse a rdf:Property ;
+  rdfs:domain dbo:Person ;
+  rdfs:range dbo:Person .
+# Sample datadb:John_Doe a dbo:Person ;
+  dbo:name "John Doe"^^xsd:string ;
+  dbo:birthdate "1980-01-01"^^xsd:date ;
+  dbo:deathdate "2050-01-01"^^xsd:date ;
+  dbo:children db:Jane_Doe ;
+  dbo:spouse db:Jane_Doe .
+db:Jane_Doe a dbo:Person ;
+  dbo:name "Jane Doe"^^xsd:string ;
+  dbo:birthdate "1980-01-02"^^xsd:date ;
+  dbo:deathdate "2049-01-01"^^xsd:date ;
+  dbo:spouse db:John_Doe .

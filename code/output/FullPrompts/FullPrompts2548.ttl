@@ -1,0 +1,29 @@
+@prefix issue: <http://example.org/issue#> .
+issue:Report a rdf:Class;
+    rdfs:label "Problem Report"@en;
+    rdfs:comment "Issue or bug report submitted by a user"@en .
+  issue:hasIssue rdfs:subPropertyOf rdf:Property;
+    rdfs:label "has issue"@en ;
+    rdfs:domain issue:Report ;
+    rdfs:range xsd:string .
+issue:hasPriority rdfs:subPropertyOf rdf:Property;
+    rdfs:label "has priority"@en ;
+    rdfs:domain issue:Report ;
+    rdfs:range xsd:string .
+issue:hasStatus rdfs:subPropertyOf rdf:Property;
+    rdfs:label "has status"@en ;
+    rdfs:domain issue:Report ;
+    rdfs:range xsd:string .
+issue:isOpen a rdf:Property;
+    rdfs:label "is open"@en ;
+    rdfs:domain issue:Report ;
+    rdfs:range xsd:boolean .
+issue:isAssigned a rdf:Property;
+    rdfs:label "is assigned"@en ;
+    rdfs:domain issue:Report ;
+    rdfs:range xsd:boolean .
+issue:assignedTo a rdf:Class;
+    rdfs:label "Assigned to"@en;
+    rdfs:comment "The person or team to whom the issue is assigned."@en ;
+    rdfs:domain issue:Report ;
+    rdfs:range xsd:string .

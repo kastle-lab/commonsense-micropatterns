@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Story rdf:type owl:Class .
+ex:title rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Story ;
+    rdfs:range xsd:string .
+ex:hasCharacter rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Story ;
+    rdfs:range ex:Character .
+ex:Character rdf:type owl:Class .
+ex:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Character ;
+    rdfs:range xsd:string .
+ex:Story1 rdf:type ex:Story ;
+    ex:title "The Great Adventure" .
+ex:Character1 rdf:type ex:Character ;
+    ex:hasName "John Doe" .
+ex:Story1 ex:hasCharacter ex:Character1 .

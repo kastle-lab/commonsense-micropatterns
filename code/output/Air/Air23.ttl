@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://www.example.org/ontology/air#> .
+air:Air rdfs:label "Air" .
+air:composition rdfs:label "Air Composition" ;
+               rdfs:domain air:Air ;
+               rdfs:range xsd:String .
+air:temperature rdfs:label "Air Temperature" ;
+                rdfs:domain air:Air ;
+                rdfs:range xsd:float .
+# Example of an instance of air with specific properties<http://www.example.org/ontology/air#sample1> rdf:type air:Air ;
+                                             air:composition "78% Nitrogen, 21% Oxygen, 1% other gases" ;
+                                             air:temperature "20.0"^^xsd:float .

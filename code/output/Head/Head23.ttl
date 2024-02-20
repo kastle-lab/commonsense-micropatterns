@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/HeadOntology#> .
+:Head rdf:type rdfs:Class ;
+rdfs:subClassOf :BodyPart ;
+rdfs:label "Head"@en ;
+rdfs:comment "The upper part of the human body or the front part of an animal where the eyes, nose, east and mouth are."@en .
+:hasEyes rdf:type rdf:Property ;
+rdfs:domain :Head ;
+rdfs:range :Eye ;
+rdfs:label "has eyes"@en ;
+rdfs:comment "The head has eyes as a part of it."@en .
+:hasNose rdf:type rdf:Property ;
+rdfs:domain :Head ;
+rdfs:range :Nose ;
+rdfs:label "has nose"@en ;
+rdfs:comment "The head has a nose as a part of it."@en .
+:hasMouth rdf:type rdf:Property ;
+rdfs:domain :Head ;
+rdfs:range :Mouth ;
+rdfs:label "has mouth"@en ;
+rdfs:comment "The head has a mouth as a part of it."@en .

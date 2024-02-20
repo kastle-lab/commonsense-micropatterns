@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix example: <http://www.example.org/> .
+example:Woman rdf:type owl:Class ;
+              rdfs:label "Woman"@en ;
+              rdfs:subClassOf example:Human .
+example:Female rdf:type owl:Class ;
+               rdfs:label "Female"@en ;
+               owl:equivalentClass example:Woman .
+example:hasChild rdf:type owl:ObjectProperty ;
+                 rdfs:domain example:Woman ;
+                 rdfs:range example:Human ;
+                 rdfs:label "has child"@en .
+example:hasBirthDate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain example:Woman ;
+                     rdfs:range xsd:date ;
+                     rdfs:label "has birth date"@en .
+example:Mother rdf:type owl:Class ;
+               rdfs:subClassOf example:Woman ;
+               rdfs:label "Mother"@en .
+               example:FemaleDoctor rdf:type owl:Class;
+                      rdfs:subClassOf example:Woman,                                      example:Doctor ;
+                      rdfs:label "Female Doctor"@en .

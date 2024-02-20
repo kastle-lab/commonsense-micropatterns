@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix backOnto: <http://www.example.org/backOntology#> .
+#Class hierarchybackOnto:Back rdf:type owl:Class .
+backOnto:BackPart rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:Back .
+backOnto:UpperBack rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:BackPart .
+backOnto:LowerBack rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:BackPart .
+backOnto:MiddleBack rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:BackPart .
+backOnto:Spine rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:Back .
+backOnto:Muscle rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:Back .
+backOnto:Vertebra rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:Spine .
+backOnto:Disc rdf:type owl:Class ;
+    rdfs:subClassOf backOnto:Spine .
+#PropertiesbackOnto:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:domain backOnto:Back ;
+    rdfs:range backOnto:BackPart .
+backOnto:hasSymptom rdf:type owl:DatatypeProperty ;
+    rdfs:domain backOnto:Back ;
+    rdfs:range xsd:string .
+#InstancesbackOnto:HumanBack rdf:type backOnto:Back ;
+    backOnto:hasPart backOnto:HumanSpine ;
+    backOnto:hasSymptom "No pain"^^xsd:string .
+backOnto:HumanSpine rdf:type backOnto:Spine ;
+    backOnto:hasPart backOnto:CervicalVertebrae, backOnto:LumbarVertebrae, backOnto:ThoracicVertebrae .
+#Cervical (neck), thoracic (middle), and lumbar (lower) are sub-parts of the spine.backOnto:CervicalVertebrae rdf:type backOnto:Vertebra .
+backOnto:ThoracicVertebrae rdf:type backOnto:Vertebra .
+backOnto:LumbarVertebrae rdf:type backOnto:Vertebra .

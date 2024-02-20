@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/> .
+:Change a rdfs:Class ;
+  rdfs:label "Change" ;
+  rdfs:comment "Represents the concept of change or alteration in any context or domain" ;
+  rdfs:subClassOf rdfs:Resource .
+:hasInitiator a rdf:Property ;
+  rdfs:label "has initiator" ;
+  rdfs:comment "The property representing what initiates or triggers the change" ;
+  rdfs:domain :Change ;
+  rdfs:range rdfs:Resource .
+:hasResult a rdf:Property ;
+  rdfs:label "has result" ;
+  rdfs:comment "The property representing the result or outcome of the change" ;
+  rdfs:domain :Change ;
+  rdfs:range rdfs:Resource .
+:hasContext a rdf:Property ;
+  rdfs:label "has context" ;
+  rdfs:comment "The property representing the context in which the change occurs" ;
+  rdfs:domain :Change ;
+  rdfs:range rdfs:Resource .
+:occursAt a rdf:Property ;
+  rdfs:label "occurs at" ;
+  rdfs:comment "The property pointing to when or where the change occurs" ;
+  rdfs:domain :Change ;
+  rdfs:range rdfs:Resource .

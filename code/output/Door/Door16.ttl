@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix door: <http://example.org/door#> .
+door:     rdf:type owl:Ontology ;
+    dct:title "Door Ontology"@en ;
+    dct:description "An ontology that describes the properties and relations of doors"@en .
+door:Door     rdf:type owl:Class ;
+    rdfs:label "Door"@en ;
+    rdfs:comment "A door is a solid or light construction element used for closing off an entrance, typically found in buildings, rooms or vehicles."@en .
+door:hasMaterial     rdf:type owl:ObjectProperty ;
+    rdfs:label "has material"@en ;
+    rdfs:comment "The material the door is made of"@en ;
+    rdfs:range door:Material ;
+    rdfs:domain door:Door .
+door:Material     rdf:type owl:Class ;
+    rdfs:label "Material"@en ;
+    rdfs:comment "Different types of materials used in making a door."@en .
+door:hasColor     rdf:type owl:DatatypeProperty ;
+    rdfs:label "has color"@en ;
+    rdfs:comment "The color of the door"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain door:Door .
+door:hasDimension     rdf:type owl:DatatypeProperty ;
+    rdfs:label "has dimension"@en ;
+    rdfs:comment "The dimension of the door"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain door:Door .

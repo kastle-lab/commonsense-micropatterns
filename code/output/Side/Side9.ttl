@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/side#> .
+:Side rdf:type owl:Class ;
+:Polygon rdf:type owl:Class ;
+         rdfs:subClassOf :Shape ;
+         rdfs:comment "A flat shape with multiple straight edges".
+:Shape rdf:type owl:Class ;
+        rdfs:comment "An outline of a body or figure" .
+:hasSide rdf:type owl:ObjectProperty ;
+         rdfs:domain :Polygon ;
+         rdfs:range :Side ;
+         rdfs:comment "Defines the side of a Polygon".
+:numOfSides rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Polygon ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "Displays the number of sides a Polygon has".
+:SideLength rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Side ;
+            rdfs:range xsd:double ;
+            rdfs:comment "Describes the length of a side".
+:Triangle rdf:type owl:Class ;
+          rdfs:subClassOf :Polygon ;
+          :numOfSides "3"^^xsd:integer .
+:Square rdf:type owl:Class ;
+        rdfs:subClassOf :Polygon ;
+        :numOfSides "4"^^xsd:integer .

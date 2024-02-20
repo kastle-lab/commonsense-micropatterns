@@ -1,0 +1,40 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Classesex:Education a owl:Class .
+ex:Student a owl:Class .
+ex:Teacher a owl:Class .
+ex:Subject a owl:Class .
+ex:Institution a owl:Class .
+# Subclassesex:PrimaryEducation a owl:Class ;
+  rdfs:subClassOf ex:Education .
+ex:SecondaryEducation a owl:Class ;
+  rdfs:subClassOf ex:Education .
+ex:HigherEducation a owl:Class ;
+  rdfs:subClassOf ex:Education .
+# Propertiesex:studies a owl:ObjectProperty ;
+  rdfs:domain ex:Student ;
+  rdfs:range ex:Subject .
+ex:taughtBy a owl:ObjectProperty ;
+  rdfs:domain ex:Subject ;
+  rdfs:range ex:Teacher .
+ex:attends a owl:ObjectProperty ;
+  rdfs:domain ex:Student ;
+  rdfs:range ex:Institution .
+ex:teachesAt a owl:ObjectProperty ;
+  rdfs:domain ex:Teacher ;
+  rdfs:range ex:Institution .
+  # Data Propertiesex:hasStudentID a owl:DatatypeProperty ;
+  rdfs:domain ex:Student ;
+  rdfs:range xsd:string .
+ex:hasName a owl:DatatypeProperty ;
+  rdfs:domain [ owl:unionOf (ex:Student ex:Teacher ex:Subject ex:Institution) ];
+  rdfs:range xsd:string .
+ex:hasStartDate a owl:DatatypeProperty ;
+  rdfs:domain ex:Education ;
+  rdfs:range xsd:date .
+ex:hasEndDate a owl:DatatypeProperty ;
+  rdfs:domain ex:Education ;
+  rdfs:range xsd:date .

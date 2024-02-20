@@ -1,0 +1,30 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hand: <http://www.example.com/hand#> .
+hand:Hand rdf:type owl:Class ;
+    rdfs:label "Hand"@en ;
+    rdfs:comment "The part of the human body at the end of the arm"@en ;
+    rdfs:subClassOf rdfs:Thing .
+hand:finger rdf:type owl:Class ;
+    rdfs:label "Finger"@en ;
+    rdfs:comment "A part of the hand typically used for grasping and manipulation"@en ;
+    rdfs:subClassOf hand:Hand .
+hand:thumb rdf:type owl:Class ;
+    rdfs:label "Thumb"@en ;
+    rdfs:comment "The short, thick first digit of the human hand"@en ;
+    rdfs:subClassOf hand:finger .
+hand:palm rdf:type owl:Class ;
+    rdfs:label "Palm"@en ;
+    rdfs:comment "The inner part of the hand from the wrist to the base of the fingers"@en ;
+    rdfs:subClassOf hand:Hand .
+hand:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:label "has part"@en ;
+    rdfs:comment "Used to indicate that one class has a part that is of another class"@en ;
+    rdfs:domain hand:Hand ;
+    rdfs:range hand:Hand .
+hand:fingerCount rdf:type owl:DatatypeProperty ;
+    rdfs:label "finger count"@en ;
+    rdfs:comment "Used to indicate the number of fingers on a hand"@en ;
+    rdfs:domain hand:Hand ;
+    rdfs:range xsd:integer .

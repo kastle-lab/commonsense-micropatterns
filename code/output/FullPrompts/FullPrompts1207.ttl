@@ -1,0 +1,11 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:system a owl:Class ;
+    rdfs:label "System"@en ;
+    rdfs:comment "A class representing a system."@en :hasComponent a owl:ObjectProperty;
+    rdfs:label "has component"@en;
+    rdfs:domain :system;
+    rdfs:range :systemComponent.:systemComponent a owl:Class ;
+    rdfs:label "System component"@en ;
+    rdfs:comment "A class representing a component of a system."@en .

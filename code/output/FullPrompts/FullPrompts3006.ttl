@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Member rdf:type rdfs:Class ;
+    rdfs:label "Member"@en ;
+    rdfs:comment "A member of an organization or group"@en .
+ex:hasMember rdf:type rdf:Property ;
+    rdfs:label "has member"@en ;
+    rdfs:comment "The subject has the object as a member"@en ;
+    rdfs:domain ex:Organization ;
+    rdfs:range ex:Member .
+ex:memberOf rdf:type rdf:Property ;
+    rdfs:label "is member of"@en ;
+    rdfs:comment "The subject is a member of the object"@en ;
+    rdfs:domain ex:Member ;
+    rdfs:range ex:Organization .
+ex:Membership rdf:type rdfs:Class ;
+    rdfs:label "Membership"@en ;
+    rdfs:comment "A membership in an organization or group"@en ;
+    rdfs:subClassOf rdf:Statement ;
+    rdf:subject rdfs:range ex:Member ;
+    rdf:predicate rdf:type ex:memberOf ;
+     rdf:object rdfs:range ex:Organization .

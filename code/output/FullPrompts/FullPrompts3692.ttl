@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix f: <http://example.com/final#> .
+f:Result    a owl:Class ;
+    rdfs:label "Result"^^xsd:string ;
+    rdfs:comment "A representation of the result of any process or experiment."@en ;
+    rdfs:subClassOf [         a owl:Restriction ;
+        owl:onProperty f:hasScore ;
+        owl:allValuesFrom xsd:float    ] ,    [         a owl:Restriction ;
+        owl:onProperty f:hasOutcome ;
+        owl:allValuesFrom xsd:string    ] .
+f:hasScore    a owl:DatatypeProperty ;
+    rdfs:label "hasScore"^^xsd:string ;
+    rdfs:comment "Relates a result with the score obtained."@en ;
+    rdfs:domain f:Result ;
+    rdfs:range xsd:float .
+f:hasOutcome    a owl:DatatypeProperty ;
+    rdfs:label "hasOutcome"^^xsd:string ;
+    rdfs:comment "Relates a result with its outcome."@en ;
+    rdfs:domain f:Result ;
+    rdfs:range xsd:string .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix area: <http://example.com/area#> .
+# Class declarationsarea:Area rdf:type owl:Class ;
+    rdfs:label "Area" ;
+    rdfs:comment "Class representing an area" .
+area:SquareMeter rdf:type owl:Class ;
+    rdfs:subClassOf area:Area ;
+    rdfs:label "Square Meter" ;
+    rdfs:comment "Class representing square meter, a unit of area" .
+area:SquareKilometer rdf:type owl:Class ;
+    rdfs:subClassOf area:Area ;
+    rdfs:label "Square Kilometer" ;
+    rdfs:comment "Class representing square kilometer, a unit of area" .
+area:SquareFoot rdf:type owl:Class ;
+    rdfs:subClassOf area:Area ;
+    rdfs:label "Square Foot" ;
+    rdfs:comment "Class representing square foot, a unit of area" .
+# Object and Data property declarationsarea:hasValue rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:float ;
+    rdfs:domain area:Area ;
+    rdfs:label "has value" ;
+    rdfs:comment "Property representing value of the area" .
+area:hasUnit rdf:type owl:ObjectProperty ;
+    rdfs:range area:Area ;
+    rdfs:domain area:Area ;
+    rdfs:label "has unit" ;
+    rdfs:comment "Property representing unit of the area" .

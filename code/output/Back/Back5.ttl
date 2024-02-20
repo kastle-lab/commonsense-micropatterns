@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix back: <http://example.org/back#> .
+back:Back a rdfs:Class ;
+    rdfs:comment "The back part of something" .
+back:upperBack a rdfs:Class ;
+    rdfs:comment "The upper back part of something" ;
+    rdfs:subClassOf back:Back .
+back:middleBack a rdfs:Class ;
+    rdfs:comment "The middle back part of something" ;
+    rdfs:subClassOf back:Back .
+back:lowerBack a rdfs:Class ;
+    rdfs:comment "The lower back part of something" ;
+    rdfs:subClassOf back:Back .
+back:Spine a rdfs:Class ;
+    rdfs:comment "Spinal part of the back" ;
+    rdfs:subClassOf back:Back .
+back:painLevel a rdf:Property ;
+    rdfs:domain back:Back ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Level of pain or discomfort in the back, measured as an integer" .
+back:associatedCondition a rdf:Property ;
+    rdfs:domain back:Back ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "Medical condition associated with the back" .
+back:treatmentPlan a rdf:Property ;
+    rdfs:domain back:Back ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "Plan or procedure for treating back-related conditions" .

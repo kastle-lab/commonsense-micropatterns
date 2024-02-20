@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.example.com/> .
+:Government  rdf:type rdfs:Class .
+:hasDepartment  rdf:type rdf:Property ;
+  rdfs:domain :Government ;
+  rdfs:range :Department .
+:Department  rdf:type rdfs:Class .
+:Country  rdf:type rdf:Property ;
+  rdfs:range :Government.:hasHead  rdf:type rdf:Property ;
+  rdfs:domain :Government ;
+  rdfs:range :HeadOfState.:HeadOfState  rdf:type rdfs:Class .

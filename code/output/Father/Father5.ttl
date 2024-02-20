@@ -1,0 +1,22 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+rel:fatherOf a rdfs:Class ;
+    rdfs:label "Father" ;
+    rdfs:comment "A man in relation to his natural child or children." .
+rel:fatherOf rdfs:subClassOf foaf:Person ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person .
+foaf:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A person." .
+rel:hasFather a rdf:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range rel:fatherOf ;
+    rdfs:label "has father" ;
+    rdfs:comment "A property indicating a person's father." .
+rel:isFatherOf a rdf:Property ;
+    rdfs:domain rel:fatherOf ;
+    rdfs:range foaf:Person ;
+    rdfs:label "is father of" ;
+    rdfs:comment "A property indicating someone a person is the father of." .

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix issue: <http://example.org/ontology/issue#> .
+issue:Issue rdf:type rdfs:Class ;
+    rdfs:label "Issue" ;
+    rdfs:comment "A matter or situation regarded as unresolved or needing to be dealt with" .
+issue:hasSeverity rdf:type rdf:Property ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The seriousness of the issue" ;
+    rdfs:label "hasSeverity" .
+    issue:hasStatus rdf:type rdf:Property ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Current status of the issue" ;
+    rdfs:label "hasStatus" .
+issue:hasResponsible rdf:type rdf:Property ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Person or entity responsible for the issue" ;
+    rdfs:label "hasResponsible" .
+issue:hasDeadline rdf:type rdf:Property ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Deadline for resolving the issue" ;
+    rdfs:label "hasDeadline" .
+issue:hasDateCreated rdf:type rdf:Property ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Date this issue was created" ;
+    rdfs:label "hasDateCreated" .
+issue:isRelatedTo rdf:type rdf:Property ;
+    rdfs:domain issue:Issue ;
+    rdfs:range issue:Issue ;
+    rdfs:comment "Other issues related to this one" ;
+    rdfs:label "isRelatedTo" .

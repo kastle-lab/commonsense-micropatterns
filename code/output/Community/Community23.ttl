@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+# Define 'Community'ex:Community rdf:type rdfs:Class .
+ex:hasLocation rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Community ;
+    rdfs:range ex:Location .
+ex:hasMember rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Community ;
+    rdfs:range ex:Person .
+ex:Location rdf:type rdfs:Class .
+ex:Person rdf:type rdfs:Class .
+# Example instancesex:SampleCommunity rdf:type ex:Community ;
+    ex:hasLocation ex:SampleLocation ;
+    ex:hasMember ex:SampleMember .
+ex:SampleLocation rdf:type ex:Location .
+ex:SampleMember rdf:type ex:Person .

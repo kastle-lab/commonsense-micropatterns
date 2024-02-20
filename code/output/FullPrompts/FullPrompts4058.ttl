@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/> .
+:Teacher a rdfs:Class ;
+  rdfs:label "Teacher"@en ;
+  rdfs:comment "A person who helps others to acquire knowledge, competences or values."@en .
+:teaches a rdf:Property ;
+  rdfs:label "teaches"@en ;
+  rdfs:comment "The action of imparting knowledge or skills."@en ;
+  rdfs:domain :Teacher ;
+  rdfs:range :Subject .
+:Subject a rdfs:Class ;
+  rdfs:label "Subject"@en ;
+  rdfs:comment "A topic or issue of interest that is taught."@en .
+:JohnDoe a :Teacher ;
+  :teaches :Mathematics .
+:Mathematics a :Subject ;
+  rdfs:label "Mathematics"@en ;
+  rdfs:comment "The abstract science of number, quantity, and space."@en .

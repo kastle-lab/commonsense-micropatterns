@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix month: <http://www.example.org/ontology/month#> .
+month:Month rdf:type owl:Class ;
+    rdfs:comment "Represents a month in a year"@en ;
+    rdfs:label "Month"@en .
+month:January rdf:type month:Month ;
+    rdfs:comment "The first month of the year"@en ;
+    rdfs:label "January"@en .
+month:February rdf:type month:Month ;
+    rdfs:comment "The second month of the year"@en ;
+    rdfs:label "February"@en .
+month:March rdf:type month:Month ;
+    rdfs:comment "The third month of the year"@en ;
+    rdfs:label "March"@en .
+month:April rdf:type month:Month ;
+    rdfs:comment "The fourth month of the year"@en ;
+    rdfs:label "April"@en .
+month:May rdf:type month:Month ;
+    rdfs:comment "The fifth month of the year"@en ;
+    rdfs:label "May"@en .
+month:June rdf:type month:Month ;
+    rdfs:comment "The sixth month of the year"@en ;
+    rdfs:label "June"@en .
+month:July rdf:type month:Month ;
+    rdfs:comment "The seventh month of the year"@en ;
+    rdfs:label "July"@en .
+month:August rdf:type month:Month ;
+    rdfs:comment "The eighth month of the year"@en ;
+    rdfs:label "August"@en .
+month:September rdf:type month:Month ;
+    rdfs:comment "The ninth month of the year"@en ;
+    rdfs:label "September"@en .
+month:October rdf:type month:Month ;
+    rdfs:comment "The tenth month of the year"@en ;
+    rdfs:label "October"@en .
+month:November rdf:type month:Month ;
+    rdfs:comment "The eleventh month of the year"@en ;
+    rdfs:label "November"@en .
+month:December rdf:type month:Month ;
+    rdfs:comment "The twelfth month of the year"@en ;
+    rdfs:label "December"@en .

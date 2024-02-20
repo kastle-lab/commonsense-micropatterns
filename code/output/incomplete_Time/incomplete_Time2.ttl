@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix time: <http://www.example.org/ontology/time#> .
+# Classestime:Time rdf:type owl:Class .
+time:Instant rdf:type owl:Class ;
+    rdfs:subClassOf time:Time .
+time:Interval rdf:type owl:Class ;
+    rdfs:subClassOf time:Time .
+time:Duration rdf:type owl:Class ;
+    rdfs:subClassOf time:Time .
+# Propertiestime:hasBeginning rdf:type owl:DatatypeProperty ;
+    rdfs:range time:Instant ;
+    rdfs:domain time:Interval .
+    time:hasEnd rdf:type owl:DatatypeProperty ;
+    rdfs:range time:Instant ;
+    rdfs:domain time:Interval .
+time:hasDuration rdf:type owl:DatatypeProperty ;
+    rdfs:range time:Duration ;
+    rdfs:domain time:Interval .
+# Part relationstime:isPartOf rdf:type owl:TransitiveProperty, owl:SymmetricProperty ;
+    rdfs:range time:Time ;
+    rdfs:domain time:Time .

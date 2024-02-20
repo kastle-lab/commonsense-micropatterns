@@ -1,0 +1,24 @@
+@prefix : <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Teacher a rdfs:Class ;
+  rdfs:comment "The class of all teachers." .
+:teachesSubject a rdf:Property ;
+  rdfs:domain :Teacher ;
+  rdfs:range :Subject ;
+  rdfs:comment "The subject that the teacher teaches." .
+:hasStudent a rdf:Property ;
+  rdfs:domain :Teacher ;
+  rdfs:range :Student ;
+  rdfs:comment "The student that the teacher teaches." .
+:worksIn a rdf:Property ;
+  rdfs:domain :Teacher ;
+  rdfs:range :School ;
+  rdfs:comment "The school where the teacher works." .
+:Subject a rdfs:Class ;
+  rdfs:comment "The class of all subjects." .
+:Student a rdfs:Class ;
+  rdfs:comment "The class of all students." .
+:School a rdfs:Class ;
+  rdfs:comment "The class of all schools." .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix power: <http://www.example.com/power#> .
+power:    rdf:type owl:Ontology ;
+    rdfs:comment "An ontology dedicated to the Power field"@en .
+power:Power    rdf:type owl:Class ;
+    rdfs:label "Power"@en ;
+    rdfs:comment "Class representing power in general"@en .
+power:MechanicalPower    rdf:type owl:Class ;
+    rdfs:subClassOf power:Power ;
+    rdfs:label "Mechanical Power"@en ;
+    rdfs:comment "Power used or produced by mechanical systems"@en .
+power:ElectricalPower    rdf:type owl:Class ;
+    rdfs:subClassOf power:Power ;
+    rdfs:label "Electrical Power"@en ;
+    rdfs:comment "Power used or produced by electrical systems"@en .
+power:hasUnit    rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:domain power:Power ;
+    rdfs:label "has unit"@en ;
+    rdfs:comment "The unit of measurement for the power"@en .
+power:hasValue    rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain power:Power ;
+    rdfs:label "has value"@en ;
+    rdfs:comment "The value or amount of the power"@en .

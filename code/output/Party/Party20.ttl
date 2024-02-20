@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix party: <http://example.com/party#> .
+party:Party a rdfs:Class;
+    rdfs:comment "A party which can be a group of people or an organization"@en;
+    rdfs:label "Party"@en .
+party:member a rdf:Property;
+    rdfs:comment "An entity that is a member of the party"@en;
+    rdfs:label "Member"@en ;
+    rdfs:domain party:Party;
+    rdfs:range foaf:Person .
+party:name a rdf:Property;
+    rdfs:comment "The name of the party"@en;
+    rdfs:label "Party name"@en ;
+    rdfs:domain party:Party;
+    rdfs:range rdfs:Literal .

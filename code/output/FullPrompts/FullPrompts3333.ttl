@@ -1,0 +1,7 @@
+@prefix : <http://www.example.com/humanBody#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Back rdf:type rdfs:Class ;
+rdfs:label "Back"@en ;
+rdfs:comment "Part of the human body that extends from the neck to the lower end of the spine"@en ;
+rdfs:subClassOf :BodyPart .

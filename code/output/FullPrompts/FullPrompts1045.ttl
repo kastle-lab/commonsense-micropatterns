@@ -1,0 +1,35 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <http://www.example.org/ontology/money#> .
+my:Currency a rdfs:Class;
+    rdfs:comment "The currency in which the money value is represented.".
+my:Value a rdfs:Class;
+    rdfs:comment "The numerical value of the money instance.".
+my:Money a rdfs:Class ;
+    rdfs:label "Money" ;
+    rdfs:comment "Class representing Money. Includes value and currency as properties." ;
+    rdfs:subClassOf owl:Thing;
+    rdfs:subClassOf [ a owl:Restriction ;
+ owl:onProperty my:hasValue ;
+ owl:allValuesFrom my:Value ] ;
+    rdfs:subClassOf [ a owl:RestrictedProperty ;
+ owl:onProperty my:hasCurrency ;
+ owl:allValuesFrom my:Currency ] .
+my:hasCurrency a owl:ObjectProperty ;
+    rdfs:label "hasCurrency" ;
+    rdfs:comment "Relates a Money instance to its currency." ;
+    rdfs:domain my:Money ;
+    rdfs:range my:Currency .
+my:hasValue a owl:DatatypeProperty ;
+    rdfs:label "hasValue" ;
+    rdfs:comment "Relates a Money instance to its value." ;
+    rdfs:domain my:Money ;
+    rdfs:range xsd:decimal .
+my:myCurrency a my:Currency ;
+    rdfs:comment "An instance of currency.".
+my:myValue a my:Value ;
+    rdfs:comment "An instance of value." xsd:decimal "100.00" .
+my:myMoney a my:Money;
+    my:hasCurrency my:myCurrency ;
+    my:hasValue my:myValue .

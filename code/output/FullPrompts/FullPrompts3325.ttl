@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.org/ontology/back> .
+<#Back>  rdf:type owl:Class ;
+  rdfs:label "Back"@en ;
+  rdfs:comment "A part of a human body that extends from the neck to the lower end of the spine"@en .
+<#Spine>  rdf:type owl:Class ;
+  rdfs:label "Spine"@en ;
+  rdfs:subClassOf <#Back> ;
+  rdfs:comment "The series of vertebrae extending from the skull to the small of the back"@en .
+<#Muscle>  rdf:type owl:Class ;
+  rdfs:label "Back Muscle"@en ;
+  rdfs:subClassOf <#Back> ;
+  rdfs:comment "Any of the muscles in the human back"@en .
+<#Injury>  rdf:type owl:Class ;
+  rdfs:label "Back Injury"@en ;
+  rdfs:comment "Any sort of injury to the back part of the human body"@en .
+<#Pain>  rdf:type owl:Class ;
+  rdfs:label "Back Pain"@en ;
+  rdfs:comment "Pain felt in the back that usually originates from the muscles, nerves, bones, joints or other structures in the spine"@en .
+<#Posture>  rdf:type owl:Class ;
+  rdfs:label "Back Posture"@en ;
+  rdfs:comment "The position in which someone holds their body when standing or sitting"@en .

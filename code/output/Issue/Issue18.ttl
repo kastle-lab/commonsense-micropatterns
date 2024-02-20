@@ -1,0 +1,36 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Issue rdf:type rdfs:Class ;
+    rdfs:label "Issue"@en ;
+    rdfs:comment "A matter of concern or a problem"@en .
+:hasName rdf:type rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "The name of a thing"@en ;
+    rdfs:domain :Issue;
+    rdfs:range xsd:string .
+:hasDescription rdf:type rdf:Property ;
+    rdfs:label "has description"@en;
+    rdfs:comment "Details or overview of a thing"@en;
+    rdfs:domain :Issue ;
+    rdfs:range xsd:string .
+:hasCreatedDate rdf:type rdf:Property ;
+    rdfs:label "has created date"@en ;
+    rdfs:comment "The date when an Issue was created"@en ;
+    rdfs:domain :Issue ;
+    rdfs:range xsd:date .
+:hasStatus rdf:type rdf:Property ;
+    rdfs:label "has status"@en ;
+    rdfs:comment "Status of an issue"@en ;
+    rdfs:domain :Issue ;
+    rdfs:range :IssueStatus .
+:IssueStatus rdf:type rdfs:Class ;
+    rdfs:label "Issue Status"@en ;
+    rdfs:comment "Different possible statuses an issue can have"@en .
+:Open rdf:type :IssueStatus ;
+    rdfs:label "Open"@en .
+:Resolved rdf:type :IssueStatus ;
+    rdfs:label "Resolved"@en .
+:Closed rdf:type :IssueStatus ;
+    rdfs:label "Closed"@en .

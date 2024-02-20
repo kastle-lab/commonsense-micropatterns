@@ -1,0 +1,20 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/> .
+:Reason a rdfs:Class ;
+    rdfs:comment "A class representing the concept of reason" ;
+    rdfs:label "Reason" .
+    :hasReason a rdf:Property ;
+    rdfs:domain :Entity ;
+    rdfs:range :Reason ;
+    rdfs:comment "Relating an entity with a reason" ;
+    rdfs:label "has reason" .
+    :Entity a rdfs:Class ;
+    rdfs:comment "A class representing any entity that can have a reason" ;
+    rdfs:label "Entity" .
+:Entity1 a :Entity ;
+    :hasReason :Reason1 .
+:Reason1 a :Reason ;
+    rdfs:label "The reason for Entity1"^^xsd:string .
+This simple ontology defines an `:Entity` that can have a `:Reason`, which is specified with the `:hasReason` property. One instance of each (`:Entity1` and `:Reason1`) are defined, with `:Reason1` being the reason for `:Entity1`.

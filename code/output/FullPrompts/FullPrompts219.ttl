@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://www.example.org/way#> .
+way:Path rdf:type rdfs:Class ;
+    rdfs:label "Path"@en ;
+    rdfs:comment "A route or track between one place and another, or the direction in which something is moving."@en .
+way:Road rdf:type rdfs:Class ;
+    rdfs:label "Road"@en ;
+    rdfs:comment "A widely used, hard and typically smooth surface for travel, forming part of the built environment."@en ;
+    rdfs:subClassOf way:Path .
+way:Trail rdf:type rdfs:Class ;
+    rdfs:label "Trail"@en ;
+    rdfs:comment "A path through countryside, used especially for walking or riding."@en ;
+    rdfs:subClassOf way:Path .
+way:Waterway rdf:type rdfs:Class ;
+    rdfs:label "Waterway"@en ;
+    rdfs:comment "A river, canal or other route for travel by water."@en ;
+    rdfs:subClassOf way:Path .
+way:Airway rdf:type rdfs:Class ;
+    rdfs:label "Airway"@en ;
+    rdfs:comment "A recognized route followed by aircrafts."@en ;
+    rdfs:subClassOf way:Path .
+way:DepartFrom rdf:type rdf:Property ;
+    rdfs:label "depart from"@en ;
+    rdfs:comment "The starting point of a way."@en ;
+    rdfs:domain way:Path ;
+    rdfs:range xsd:string .
+way:ArriveAt rdf:type rdf:Property ;
+    rdfs:label "arrive at"@en ;
+    rdfs:comment "The target endpoint of a way."@en ;
+    rdfs:domain way:Path ;
+    rdfs:range xsd:string .
+way:CoveredBy rdf:type rdf:Property ;
+    rdfs:label "covered by"@en ;
+    rdfs:comment "The type of terrain a path or way is taking place on."@en ;
+    rdfs:domain way:Path ;
+    rdfs:range xsd:string .
+way:UsedFor rdf:type rdf:Property ;
+    rdfs:label "used for"@en ;
+    rdfs:comment "The typical usage of a path or way."@en ;
+    rdfs:domain way:Path ;
+    rdfs:range xsd:string .

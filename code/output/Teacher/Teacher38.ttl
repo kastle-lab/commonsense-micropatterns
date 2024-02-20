@@ -1,0 +1,3 @@
+@prefix ex: <http://example.com/> .
+ex:John a ex:Teacher .
+ex:John ex:provides ex:Education .

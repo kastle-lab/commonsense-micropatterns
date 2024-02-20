@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/> .
+ex:Father rdf:type owl:Class ;
+          rdfs:subClassOf ex:Human ;
+          rdfs:label "Father"@en ;
+          rdfs:comment "A male parent"@en .
+ex:isFatherOf rdf:type owl:ObjectProperty ;
+              rdfs:domain ex:Father ;
+              rdfs:range ex:Human ;
+              rdfs:label "is father of"@en ;
+              rdfs:comment "A property indicating a paternal relationship"@en .

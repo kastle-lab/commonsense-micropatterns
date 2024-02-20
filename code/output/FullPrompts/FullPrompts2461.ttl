@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Job rdf:type rdf:Class .
+ex:title rdf:type rdf:Property ;
+         rdfs:domain ex:Job ;
+         rdfs:range xsd:string .
+         ex:employer rdf:type rdf:Property ;
+            rdfs:domain ex:Job ;
+            rdfs:range xsd:string .
+            ex:location rdf:type rdf:Property ;
+            rdfs:domain ex:Job ;
+            rdfs:range xsd:string .
+ex:salary rdf:type rdf:Property ;
+          rdfs:domain ex:Job ;
+          rdfs:range xsd:float .
+ex:description rdf:type rdf:Property ;
+               rdfs:domain ex:Job ;
+               rdfs:range xsd:string .

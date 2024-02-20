@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+#Class Definitionex:Office a rdfs:Class ;
+  rdfs:label "Office" ;
+  rdfs:comment "An office is a location where administrative work is carried out" .
+#Property Definitionsex:hasLocation a rdf:Property ;
+  rdfs:label "has location" ;
+  rdfs:domain ex:Office ;
+  rdfs:range xsd:string .
+ex:hasEmployee a rdf:Property ;
+  rdfs:label "has employee" ;
+  rdfs:domain ex:Office ;
+  rdfs:range ex:Employee .
+ex:Employee a rdfs:Class ;
+  rdfs:label "Employee" ;
+  rdfs:comment "An individual who works part-time or full-time under a contract of employment" .
+#Instance of Officeex:Office1 a ex:Office ;
+  ex:hasLocation "123 Main Street" ;
+  ex:hasEmployee ex:Employee1 .
+#Instance of Employeeex:Employee1 a ex:Employee ;
+  rdfs:label "John Doe" .

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix name: <http://example.org/name#> .
+name:Name a rdfs:Class ;
+    rdfs:label "Name" ;
+    rdfs:comment "A name used to identify an entity" .
+name:firstName a rdf:Property ;
+    rdfs:label "first name" ;
+    rdfs:comment "The first name of an entity" ;
+    rdfs:range xsd:string ;
+    rdfs:domain name:Name .
+name:lastName a rdf:Property ;
+    rdfs:label "last name" ;
+    rdfs:comment "The last name of an entity" ;
+    rdfs:range xsd:string ;
+    rdfs:domain name:Name .
+name:middleName a rdf:Property ;
+    rdfs:label "middle name" ;
+    rdfs:comment "The middle name of an entity" ;
+    rdfs:range xsd:string ;
+    rdfs:domain name:Name .

@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edu: <http://example.com/education#> .
+# Class definitionsedu:Education a rdfs:Class .
+edu:Course a rdfs:Class ;
+  rdfs:subClassOf edu:Education .
+edu:Degree a rdfs:Class ;
+  rdfs:subClassOf edu:Education .
+edu:Student a rdfs:Class .
+edu:Teacher a rdfs:Class .
+edu:University a rdfs:Class .
+# Property definitionsedu:enrolledIn a rdf:Property ;
+  rdfs:range edu:Course ;
+  rdfs:domain edu:Student .
+edu:attends a rdf:Property ;
+  rdfs:range edu:University ;
+  rdfs:domain edu:Student .
+edu:teaches a rdf:Property ;
+  rdfs:range edu:Course ;
+  rdfs:domain edu:Teacher .
+edu:worksAt a rdf:Property ;
+  rdfs:range edu:University ;
+  rdfs:domain edu:Teacher .
+edu:offeredAt a rdf:Property ;
+  rdfs:range edu:University ;
+  rdfs:domain edu:Course .
+edu:partOf a rdf:Property ;
+  rdfs:range edu:Degree ;
+  rdfs:domain edu:Course .
+# Degree typeedu:Bachelors a edu:Degree .
+edu:Masters a edu:Degree .
+edu:Doctorate a edu:Degree .

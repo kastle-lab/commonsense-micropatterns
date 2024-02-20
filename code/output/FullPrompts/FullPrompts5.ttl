@@ -1,0 +1,16 @@
+@prefix : <http://www.example.com/ontology#>@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix owl: <http://www.w3.org/2002/07/owl#>@prefix xsd: <http://www.w3.org/2001/XMLSchema#>: a owl:Ontology ;
+rdfs:comment "A basic ontology about Couch"@en.:Couch a owl:Class ;
+rdfs:comment "The class of couches"@en ;
+rdfs:subClassOf :Furniture .
+:Furniture a owl:Class ;
+rdfs:comment "The class of furniture"@en .
+:hasCushiona owl:ObjectProperty ;
+rdfs:comment "A relationship between a couch and its cushions"@en ;
+rdfs:domain :Couch ;
+rdfs:range :Cushion .
+:hasColor a owl:DatatypeProperty ;
+rdfs:comment "The color of a furniture"@en ;
+rdfs:domain :Furniture ;
+rdfs:range xsd:string .
+:Cushion a owl:Class ;
+rdfs:comment "The class of cushions"@en .

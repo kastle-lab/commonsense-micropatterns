@@ -1,0 +1,48 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:World a owl:Class ;
+    rdfs:label "World"@en ;
+    rdfs:comment "This is the World class representing our world, in general (Earth)"@en ;
+    rdfs:subClassOf owl:Thing ;
+    .
+:Country a owl:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "Country is a class representing a nation within the World"@en ;
+    rdfs:subClassOf :World ;
+    .
+:City a owl:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "City is a class representing a city inside a Country"@en ;
+    rdfs:subClassOf :Country ;
+    .
+:Population a owl:DatatypeProperty ;
+    rdfs:label "population"@en ;
+    rdfs:comment "The population refers to the total number of individuals in a certain area"@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:integer ;
+    .
+:Location a owl:DatatypeProperty ;
+    rdfs:label "location"@en ;
+    rdfs:comment "The location refers to the geographical coordinates of a Country or City"@en ;
+    rdfs:domain [:Country ;
+ :City] ;
+    rdfs:range xsd:string ;
+    .
+:Capital a owl:ObjectProperty ;
+    rdfs:label "capital"@en ;
+    rdfs:comment "The capital refers to the city which is the seat of government of a Country"@en ;
+    rdfs:domain :Country ;
+    rdfs:range :City ;
+    .
+:China a :Country ;
+    rdfs:label "China"@en ;
+    :Population "1408"@^^xsd:integer ;
+    :Location "East Asia"@en ;
+    .
+:Beijing a :City ;
+    rdfs:label "Beijing"@en ;
+    :Location "Eastern China"@en ;
+    .
+:China :Capital :Beijing .

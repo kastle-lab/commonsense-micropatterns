@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix example: <http://www.example.org/> .
+example:Area rdf:type rdfs:Class .
+example:hasArea rdf:type rdf:Property ;
+    rdfs:domain example:PhysicalEntity ;
+    rdfs:range example:Area .
+example:SquareMeters rdf:type rdfs:DataType .
+example:PhysicalEntity rdf:type rdfs:Class ;
+    rdfs:subClassOf example:Entity .
+example:Entity rdf:type rdfs:Class .
+ example:Area rdf:type rdfs:Class ;
+    rdfs:subClassOf example:PhysicalEntity .
+example:AreaValue rdf:type rdf:Property ;
+    rdfs:domain example:Area ;
+    rdfs:range xsd:decimal .
+ example:AreaUnit rdf:type rdf:Property ;
+    rdfs:domain example:Area ;
+    rdfs:range example:SquareMeters .

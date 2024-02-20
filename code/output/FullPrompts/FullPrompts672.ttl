@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix place: <http://www.example.org/place#> .
+# Class Placeplace:Place rdf:type rdfs:Class ;
+      rdfs:label "Place" ;
+      rdfs:comment "Concept of a Place." .
+# Sub Class Cityplace:City rdf:type rdfs:Class ;
+      rdfs:label "City" ;
+      rdfs:subClassOf place:Place ;
+      rdfs:comment "Concept of a City, a subtype of Place." .
+# Sub Class Countryplace:Country rdf:type rdfs:Class ;
+      rdfs:label "Country" ;
+      rdfs:subClassOf place:Place ;
+      rdfs:comment "Concept of a Country, a subtype of Place." .
+# Property locatedInplace:locatedIn rdf:type rdf:Property ;
+        rdfs:label "located in" ;
+        rdfs:domain place:Place ;
+        rdfs:range place:Place ;
+        rdfs:comment "Expresses that a place is located in another place." .
+# Property hasPopulationplace:hasPopulation rdf:type rdf:Property ;
+        rdfs:label "has population" ;
+        rdfs:domain place:Place ;
+        rdfs:range xsd:integer ;
+        rdfs:comment "Expresses the population of a place." .

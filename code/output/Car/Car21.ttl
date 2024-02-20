@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix car: <http://www.example.org/car#> .
+car:Car rdf:type rdfs:Class ;
+    rdfs:label "Car"@en ;
+    rdfs:comment "A road vehicle, typically with four wheels, powered by an internal combustion engine or electric motor and able to carry a small number of people."@en .
+car:hasManufacturer rdf:type owl:ObjectProperty ;
+    rdfs:label "has manufacturer"@en ;
+    rdfs:domain car:Car ;
+    rdfs:range car:Manufacturer .
+car:Manufacturer rdf:type owl:Class ;
+    rdfs:label "Manufacturer"@en ;
+    rdfs:comment "A company that makes cars."@en .
+car:hasModel rdf:type owl:DatatypeProperty ;
+    rdfs:label "has model"@en ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:string .
+car:hasYear rdf:type owl:DatatypeProperty ;
+    rdfs:label "has year"@en ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:integer .

@@ -1,0 +1,17 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com#> .
+ex:Place a rdfs:Class ;
+      rdfs:label "Place" ;
+      rdfs:comment "A location or site" .
+      ex:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:domain ex:Place ;
+    rdfs:range rdfs:Literal .
+ex:country a rdf:Property ;
+    rdfs:label "country" ;
+    rdfs:domain ex:Place ;
+    rdfs:range rdfs:Literal .
+ex:city a rdf:Property ;
+    rdfs:label "city" ;
+    rdfs:domain ex:Place ;
+    rdfs:range rdfs:Literal .

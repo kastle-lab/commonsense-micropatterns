@@ -1,0 +1,26 @@
+@prefix : <http://example.org/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Room a rdfs:Class ;
+  rdfs:label "Room"@en ;
+  rdfs:comment "A room is a distinct area within a building, enclosed by walls and typically has specific functions."@en .
+:hasRoomType a rdfs:Property ;
+  rdfs:label "has room type"@en ;
+  rdfs:comment "The type of the room e.g. kitchen, bedroom, etc."@en ;
+  rdfs:domain :Room ;
+  rdfs:range xsd:string .
+:hasRoomSize a rdfs:Property ;
+  rdfs:label "has room size"@en ;
+  rdfs:comment "The size of the room."@en ;
+  rdfs:domain :Room ;
+  rdfs:range xsd:string .
+  :hasRoomNumber a rdfs:Property ;
+  rdfs:label "has room number"@en ;
+  rdfs:comment "The room number."@en ;
+  rdfs:domain :Room ;
+  rdfs:range xsd:string .
+:hasRoomCapacity a rdfs:Property ;
+  rdfs:label "has room capacity"@en ;
+  rdfs:comment "Maximum number of people that room can accommodate."@en ;
+  rdfs:domain :Room ;
+  rdfs:range xsd:integer .

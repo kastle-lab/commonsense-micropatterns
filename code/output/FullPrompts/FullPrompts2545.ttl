@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix issue: <http://www.example.com/issue#> .
+issue:Issue rdf:type owl:Class ;
+    rdfs:label "Issue"@en ;
+    rdfs:comment "A matter of concern or problem to be dealt with."@en .
+issue:issueID rdf:type owl:DatatypeProperty ;
+    rdfs:label "issue id"@en ;
+    rdfs:comment "identifies the issue uniquely in the system"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string .
+issue:issueTitle rdf:type owl:ObjectProperty ;
+    rdfs:label "issue title"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string .
+issue:issueDescription rdf:type owl:DatatypeProperty ;
+    rdfs:label "issue description"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string .
+issue:issueStatus rdf:type owl:DatatypeProperty ;
+    rdfs:label "issue status"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string .
+issue:issuePriority rdf:type owl:DatatypeProperty ;
+    rdfs:label "issue priority"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string .
+issue:issueType rdf:type owl:DatatypeProperty ;
+    rdfs:label "issue type"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string .
+    issue:assignedTo rdf:type owl:ObjectProperty ;
+    rdfs:domain issue:Issue ;
+    rdfs:range issue:Person .
+issue:Person rdf:type owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "The person to whom the issue is assigned."@en .
+issue:personName rdf:type owl:DatatypeProperty ;
+    rdfs:label "person name"@en ;
+    rdfs:domain issue:Person ;
+    rdfs:range xsd:string .
+issue:personEmail rdf:type owl:DatatypeProperty ;
+    rdfs:label "person email"@en ;
+    rdfs:domain issue:Person ;
+    rdfs:range xsd:string .

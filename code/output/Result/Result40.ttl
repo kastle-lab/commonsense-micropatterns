@@ -1,0 +1,12 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Result a rdfs:Class .
+ex:status a rdf:Property;
+    rdfs:domain ex:Result;
+    rdfs:range xsd:string .
+ex:description a rdf:Property;
+    rdfs:domain ex:Result;
+    rdfs:range xsd:string .
+ex:timestamp a rdf:Property;
+    rdfs:domain ex:Result;
+    rdfs:range xsd:dateTime .

@@ -1,0 +1,11 @@
+@prefix : <http://example.com/>@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>#Class definitions:Service  rdf:type  rdfs:Class .
+#Individual definitions:PaintingService rdf:type :Service .
+#Property Definitions:offersService rdf:type rdf:Property ;
+               rdfs:domain    :Organization ;
+               rdfs:range     :Service      .
+:servicePrice  rdf:type rdf:Property ;
+               rdfs:domain    :Service ;
+               rdfs:range     xsd:decimal  .
+#Sample usage:MyCompany  rdf:type       :Organization ;
+            :offersService :PaintingService .
+ :PaintingService :servicePrice "500.00"^^xsd:decimal .

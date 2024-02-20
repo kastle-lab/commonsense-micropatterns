@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.geonames.org/ontology#> .
+<http://example.org#Country> rdf:type owl:Class ;
+  rdfs:comment "A region identified as a distinct entity in political geography" ;
+  rdfs:subClassOf owl:Thing .
+<http://example.org#CapitalCity> rdf:type owl:Class ;
+  rdfs:comment "The municipality exercising primary status in a country, state, province, or other administrative region" ;
+  rdfs:subClassOf owl:Thing .
+<http://example.org#hasCapital> rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://example.org#Country> ;
+  rdfs:range <http://example.org#CapitalCity> ;
+  rdfs:subPropertyOf owl:topObjectProperty .
+<http://example.org#Population> rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://example.org#Country> ;
+  rdfs:range xsd:integer ;
+  rdfs:subPropertyOf owl:topDataProperty .
+<http://example.org#Currency> rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://example.org#Country> ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty .
+  <http://example.org#Language> rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://example.org#Country> ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty .
+  <http://example.org#hasBorderWith> rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://example.org#Country> ;
+  rdfs:range <http://example.org#Country> ;
+  rdfs:subPropertyOf owl:topObjectProperty .

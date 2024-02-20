@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix side: <http://www.example.org/side#> .
+side:Side a rdfs:Class ;
+  rdfs:comment "This represents a side in a generic sense. It could be a side in geometrical figure, a side of an object, or a side in a competitive context" ;
+  rdfs:label "Side"@en .
+side:hasLength a rdf:Property ;
+  rdfs:comment "The length of a side, applicable if the side belongs to a geometrical figure." ;
+  rdfs:label "has length"@en ;
+  rdfs:domain side:Side ;
+  rdfs:range xsd:float .
+side:hasOpponent a rdf:Property ;
+  rdfs:comment "The opponent of a side, applicable in a competitive or comparative context. It is a self reference as opponent is also a side." ;
+  rdfs:label "has opponent"@en ;
+  rdfs:domain side:Side ;
+  rdfs:range side:Side .
+side:belongsToObject a rdf:Property ;
+  rdfs:comment "The object that a side belongs to, for example a cube." ;
+  rdfs:label "belongs to object"@en ;
+  rdfs:domain side:Side ;
+  rdfs:range rdfs:Class .

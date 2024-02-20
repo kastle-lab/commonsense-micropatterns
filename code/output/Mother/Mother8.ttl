@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fam: <http://example.org/family#> .
+fam:Mother rdf:type owl:Class ;
+           rdfs:subClassOf fam:Woman ;
+           rdfs:comment "A female parent of a child or children."@en ;
+           rdfs:label "Mother"@en .
+                fam:hasMother rdf:type owl:ObjectProperty ;
+              rdfs:range fam:Mother ;
+              rdfs:domain fam:Person ;
+              rdfs:label "has mother"@en ;
+              rdfs:comment "The mother of the person."@en .
+fam:isMotherOf rdf:type owl:ObjectProperty ;
+               rdfs:domain fam:Mother ;
+               rdfs:range fam:Person ;
+               rdfs:label "is mother of"@en ;
+               rdfs:comment "The child or children of the mother."@en .

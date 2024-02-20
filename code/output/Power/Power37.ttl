@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.org/power#> .
+:ElectricalPower a owl:Class ;
+  rdfs:label "Electrical Power"@en ;
+  rdfs:comment "The rate at which electrical energy is transferred by an electric circuit"@en .
+:PhysicalPower a owl:Class ;
+  rdfs:label "Physical Power"@en ;
+  rdfs:comment "The amount of work performed per unit of time"@en .
+  :SocialPower a owl:Class ;
+  rdfs:label "Social Power"@en ;
+  rdfs:comment "Ability to influence or control behaviors of people"@en .
+:hasPower a owl:ObjectProperty ;
+  rdfs:range :ElectricalPower, :PhysicalPower, :SocialPower ;
+  rdfs:domain :Human, :Machine ;
+  rdfs:label "has power"@en ;
+  rdfs:comment "Relates an entity to the power it has" .
+  :Human a owl:Class ;
+  rdfs:label "Human"@en .
+:Machine a owl:Class ;
+  rdfs:label "Machine"@en .

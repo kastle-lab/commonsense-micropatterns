@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix result: <http://www.example.com/result#> .
+result:Result    rdf:type rdfs:Class ;
+    rdfs:label "Result" ;
+    rdfs:comment "A result of an event, calculation, experiment, procedure or survey" .
+result:value    rdf:type rdfs:Datatype ;
+    rdfs:subPropertyOf rdfs:literal ;
+    rdfs:label "value" ;
+    rdfs:comment "The output or outcome of a specific action" ;
+    rdfs:domain result:Result ;
+    rdfs:range xsd:string .
+result:score    rdf:type rdfs:Datatype ;
+    rdfs:subPropertyOf rdfs:literal ;
+    rdfs:label "score" ;
+    rdfs:comment "A specific type of value, typically numeric and often used in competitions or assessments" ;
+    rdfs:domain result:Result ;
+    rdfs:range xsd:integer .
+result:source    rdf:type rdfs:Property ;
+    rdfs:subPropertyOf rdf:resource ;
+    rdfs:label "source" ;
+    rdfs:comment "The origin of a result, such as a specific procedure, calculation, event or survey" ;
+    rdfs:domain result:Result ;
+    rdfs:range rdfs:Resource .

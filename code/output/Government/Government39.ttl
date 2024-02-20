@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gov: <http://example.org/gov#> .
+gov:Government rdf:type owl:Class ;
+    rdfs:label "Government"^^xsd:string ;
+    rdfs:comment "The collective group of people that exercises executive authority in a state."^^xsd:string .
+gov:providesService rdf:type owl:ObjectProperty ;
+    rdfs:label "provides service"^^xsd:string ;
+    rdfs:domain gov:Government ;
+    rdfs:range gov:PublicService ;
+    rdfs:comment "A relation between government and the public services it provides."^^xsd:string .
+gov:PublicService rdf:type owl:Class ;
+    rdfs:label "Public Service"^^xsd:string ;
+    rdfs:comment "Services provided by government to its citizens."^^xsd:string .

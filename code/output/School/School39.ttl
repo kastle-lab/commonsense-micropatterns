@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/school#> .
+ex:School    rdf:type rdfs:Class ;
+    rdfs:label "School"@en ;
+    rdfs:comment "A place where children go to learn"@en .
+ex:hasPrincipal    rdf:type rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range ex:Principal ;
+    rdfs:label "has principal"@en ;
+    rdfs:comment "The principal of the school"@en .
+ex:hasStudent    rdf:type rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range ex:Student ;
+    rdfs:label "has student"@en ;
+    rdfs:comment "The students that attend the school"@en .
+ex:hasTeacher    rdf:type rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range ex:Teacher ;
+    rdfs:label "has teacher"@en ;
+    rdfs:comment "The teachers who work at the school"@en .
+ex:Principal      rdf:type rdfs:Class ;
+    rdfs:label "Principal"@en ;
+    rdfs:comment "The head of a school"@en .
+ex:Student    rdf:type rdfs:Class ;
+    rdfs:label "Student"@en ;
+    rdfs:comment "A person who is learning at a school"@en .
+ex:Teacher    rdf:type rdfs:Class ;
+    rdfs:label "Teacher"@en ;
+    rdfs:comment "A person who teaches in a school"@en .

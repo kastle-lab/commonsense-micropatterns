@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix country: <http://www.example.com/country#> .
+country:Country rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a country" ;
+    rdfs:label "Country"@en .
+country:hasName rdf:type rdf:Property ;
+    rdfs:domain country:Country ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The property defining the name of a country" ;
+    rdfs:label "hasName"@en .
+country:hasPopulation rdf:type rdf:Property ;
+    rdfs:domain country:Country ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The property defining the population of a country" ;
+    rdfs:label "hasPopulation"@en .
+country:hasArea rdf:type rdf:Property ;
+    rdfs:domain country:Country ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The property defining the surface area of a country (in square kilometers)" ;
+    rdfs:label "hasArea"@en .
+country:hasCapital rdf:type rdf:Property ;
+    rdfs:domain country:Country ;
+    rdfs:range country:City ;
+    rdfs:comment "The property defining the capital city of a country" ;
+    rdfs:label "hasCapital"@en .
+country:City rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a city" ;
+    rdfs:label "City"@en .
+country:isLocatedIn rdf:type rdf:Property ;
+    rdfs:domain country:City ;
+    rdfs:range country:Country ;
+    rdfs:comment "The property defining the country where a city is located" ;
+    rdfs:label "isLocatedIn"@en .

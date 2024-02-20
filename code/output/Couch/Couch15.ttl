@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix couch: <http://example.org/couch#> .
+couch:Couch a rdfs:Class ;
+  rdfs:comment "A couch or sofa is a piece of furniture for seating two or more people in the form of a bench, with armrests, which is partially or entirely upholstered, and often fitted with springs and tailored cushions."@en ;
+  rdfs:label "Couch"@en .
+couch:hasMaterial a rdf:Property ;
+  rdfs:domain couch:Couch ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The type of material that the couch is made of."@en ;
+  rdfs:label "has material"@en .
+couch:hasColor a rdf:Property ;
+  rdfs:domain couch:Couch ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The color of the couch."@en ;
+  rdfs:label "has color"@en .
+couch:hasBrand a rdf:Property ;
+  rdfs:domain couch:Couch ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The brand of the couch."@en ;
+  rdfs:label "has brand"@en .
+couch:hasSize a rdf:Property ;
+  rdfs:domain couch:Couch ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The size of the couch."@en ;
+  rdfs:label "has size"@en .
+couch:hasStyle a rdf:Property ;
+  rdfs:domain couch:Couch ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The style of the couch."@en ;
+  rdfs:label "has style"@en .

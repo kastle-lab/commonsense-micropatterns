@@ -1,0 +1,22 @@
+@prefix : <http://www.example.org/friends#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Friend a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:label "Friend" ;
+  rdfs:comment "A class representing a friend" .
+:hasFriend a owl:ObjectProperty ;
+  rdfs:domain :Person ;
+  rdfs:range :Person ;
+  rdfs:label "has friend" ;
+  rdfs:comment "A property representing that a person has another person as a friend" .
+:Person a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:label "Person" ;
+  rdfs:comment "A class representing a person" .
+:isFriendOf a owl:ObjectProperty ;
+  rdfs:domain :Person ;
+  rdfs:range :Person ;
+  rdfs:label "is friend of" ;
+  rdfs:comment "A property representing that a person is a friend of another person" .

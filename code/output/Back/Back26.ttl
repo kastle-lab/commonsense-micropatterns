@@ -1,0 +1,18 @@
+@prefix : <http://www.semanticweb.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Back rdf:type owl:Class ;
+      rdfs:subClassOf :BodyPart ;
+      rdfs:label "Back"@en ;
+      rdfs:comment "The rear part of the human body, extending from the neck to the lower end of the spine"@en .
+#A fictive definition of a disease which can affect the back:HerniatedDisc rdfs:subClassOf :Disease ;
+               rdfs:label "Herniated disc"@en ;
+               rdfs:comment "A condition which can affect the back, causing back pain and numbness"@en ;
+               :affects :Back .
+#Defining a Physician who specializes in treating back problems:OrthopedicSurgeon rdf:type owl:Class ;
+                   rdfs:subClassOf :Physician ;
+                   rdfs:label "Orthopedic Surgeon"@en ;
+                   rdfs:comment "A doctor who specializes in diagnosing and treating diseases and injuries involving the musculoskeletal system"@en ;
+                   :canTreat :HerniatedDisc, :Back .

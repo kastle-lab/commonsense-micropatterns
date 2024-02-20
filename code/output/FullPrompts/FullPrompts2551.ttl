@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/ontology/issue#> .
+:Issue rdf:type rdfs:Class ;
+       rdfs:label "Issue" ;
+       rdfs:comment "A topic or problem that needs attention or discussion" .
+:IssueID rdf:type rdf:Property ;
+         rdfs:range xsd:string ;
+         rdfs:domain :Issue ;
+         rdfs:label "has issue identifier" ;
+         rdfs:comment "A unique identifier for the issue" .
+:IssueTitle rdf:type rdf:Property ;
+            rdfs:range xsd:string ;
+            rdfs:domain :Issue ;
+            rdfs:label "has issue title" ;
+            rdfs:comment "The title or main topic of the issue" .
+:IssueDescription rdf:type rdf:Property ;
+                  rdfs:range xsd:string ;
+                  rdfs:domain :Issue ;
+                  rdfs:label "has issue description" ;
+                  rdfs:comment "Detailed information about the issue" .
+:IssueDate rdf:type rdf:Property ;
+           rdfs:range xsd:date ;
+           rdfs:domain :Issue ;
+           rdfs:label "has issue date" ;
+           rdfs:comment "Date when the issue was raised or recorded" .
+:IssueStatus rdf:type rdf:Property ;
+             rdfs:range :IssueStatusEnum ;
+             rdfs:domain :Issue ;
+             rdfs:label "has issue status" ;
+             rdfs:comment "The current status of the issue" .
+:IssueStatusEnum rdf:type rdfs:Class ;
+                 rdfs:label "Status" ;
+                 rdfs:subClassOf rdfs:Resource ;
+                 rdfs:comment "An enumeration of possible issue statuses" .
+:Open rdf:type :IssueStatusEnum ;
+      rdfs:label "Open" ;
+      rdfs:comment "The issue is currently open and needs attention" .
+:InProgress rdf:type :IssueStatusEnum ;
+            rdfs:label "In Progress" ;
+            rdfs:comment "Work has started on the issue" .
+:Resolved rdf:type :IssueStatusEnum ;
+          rdfs:label "Resolved" ;
+          rdfs:comment "The issue has been resolved" .
+:Closed rdf:type :IssueStatusEnum ;
+        rdfs:label "Closed" ;
+        rdfs:comment "The issue is closed and no further action is necessary" .

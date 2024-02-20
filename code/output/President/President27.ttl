@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:President rdf:type rdfs:Class ;
+    rdfs:label "President" ;
+    rdfs:comment "Head of state or head of government in a presidential system." .
+ex:presidesOver rdf:type rdf:Property ;
+    rdfs:domain ex:President ;
+    rdfs:range ex:Country ;
+    rdfs:label "presides over" ;
+    rdfs:comment "The country a president presides over." .
+ex:hasTerm rdf:type rdf:Property ;
+    rdfs:domain ex:President ;
+    rdfs:range ex:Term ;
+    rdfs:label "has term" ;
+    rdfs:comment "The period during which a president is in office." .
+ex:Term rdf:type rdfs:Class ;
+    rdfs:label "Term" ;
+    rdfs:comment "A fixed period of time during which someone holds a position." .
+ex:Country rdf:type rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government, occupying a particular territory." .

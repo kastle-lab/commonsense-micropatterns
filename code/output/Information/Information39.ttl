@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/ontology#> .
+ex:Information    a owl:Class ;
+    rdfs:label "Information" ;
+    rdfs:comment "Class representing information" .
+ex:provides    a owl:ObjectProperty ;
+    rdfs:label "provides" ;
+    rdfs:comment "Property representing the action of providing information" ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Information .
+ex:Entity     a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "Class representing the entity that provides information" .

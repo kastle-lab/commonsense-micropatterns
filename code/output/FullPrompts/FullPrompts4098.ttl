@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix force: <http://www.example.org/ontology/force#> .
+force:    rdf:type rdfs:Class ;
+    rdfs:label "Force" ;
+    rdfs:comment "The concept of Force in Physics." .
+force:Newton    rdf:type rdf:Property ;
+    rdfs:label "Newton" ;
+    rdfs:comment "The SI unit of Force." ;
+    rdfs:domain force: ;
+    rdfs:range xsd:float .
+force:Direction    rdf:type rdf:Property ;
+    rdfs:label "Direction" ;
+    rdfs:comment "The direction of the force." ;
+    rdfs:domain force: ;
+    rdfs:range rdfs:Literal .

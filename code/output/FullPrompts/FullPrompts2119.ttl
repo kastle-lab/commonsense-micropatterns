@@ -1,0 +1,35 @@
+ttl file extension and parsed by a Turtle/RDF reader program:
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+ex:Person a rdfs:Class ;
+  rdfs:subClassOf foaf:Person .
+ex:Name a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+ex:Age a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:integer .
+ex:Nationality a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+ex:EmailAddress a rdf:Property ;
+  rdfs:subPropertyOf foaf:mbox ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+ex:JobPosition a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+ex:JohnDoe a ex:Person ;
+  ex:Name "John Doe"^^xsd:string ;
+  ex:Age 30^^xsd:integer ;
+  ex:Nationality "American"^^xsd:string ;
+  ex:EmailAddress "johndoe@example.com"^^xsd:string ;
+  ex:JobPosition "Developer"^^xsd:string .
+ex:JaneDoe a ex:Person ;
+  ex:Name "Jane Doe"^^xsd:string ;
+  ex:Age 28^^xsd:integer ;
+  ex:Nationality "American"^^xsd:string ;
+  ex:EmailAddress "janedoe@example.com"^^xsd:string ;
+  ex:JobPosition "Designer"^^xsd:string .

@@ -1,0 +1,4 @@
+ The format will look something like this:
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/ns#> .
+ex:Jill a ex:Girl .

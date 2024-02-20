@@ -1,0 +1,36 @@
+@PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@PREFIX owl: <http://www.w3.org/2002/07/owl#> .
+@PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> .
+@PREFIX side: <http://www.example.org/side#> .
+side:Side rdf:type owl:Class ;
+    rdfs:label "Side" ;
+    rdfs:comment "An aspect or part of something" .
+side:Right rdf:type side:Side ;
+    rdfs:label "Right" ;
+    rdfs:comment "The right aspect or part of something." .
+side:Left rdf:type side:Side ;
+    rdfs:label "Left" ;
+    rdfs:comment "The left part or aspect of something." .
+side:Top rdf:type side:Side ;
+    rdfs:label "Top" ;
+    rdfs:comment "The top part or aspect of something." .
+side:Bottom rdf:type side:Side ;
+    rdfs:label "Bottom" ;
+    rdfs:comment "The bottom part or aspect of something." .
+side:Front rdf:type side:Side ;
+    rdfs:label "Front" ;
+    rdfs:comment "The front part or aspect of something." .
+side:Back rdf:type side:Side ;
+    rdfs:label "Back" ;
+    rdfs:comment "The back part or aspect of something." .
+side:Shape rdf:type owl:Class ;
+    rdfs:label "Shape" ;
+    rdfs:comment "A shape or a form that has sides." .
+side:hasSide rdf:type owl:ObjectProperty ;
+    rdfs:domain side:Shape ;
+    rdfs:range side:Side ;
+    rdfs:label "Has Side" ;
+    rdfs:comment "A relationship showing that a shape has sides." .
+side:Rectangle rdf:type side:Shape ;
+    side:hasSide side:Top, side:Bottom, side:Left, side:Right .

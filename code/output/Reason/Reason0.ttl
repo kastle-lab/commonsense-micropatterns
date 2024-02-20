@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix reason: <http://example.com/reason#> .
+# Classesreason:Reason rdf:type owl:Class ;
+    rdfs:comment "A cause, explanation, or justification for an action or event" ;
+    rdfs:subClassOf owl:Thing .
+reason:Fact rdf:type owl:Class ;
+    rdfs:comment "A piece of information used as evidence or as part of a report or news article" ;
+    rdfs:subClassOf reason:Reason .
+reason:Argument rdf:type owl:Class ;
+    rdfs:comment "A reason or set of reasons given with the aim of persuading others that an action or idea is right or wrong" ;
+    rdfs:subClassOf reason:Reason .
+# Propertiesreason:hasSupport rdf:type owl:ObjectProperty ;
+    rdfs:comment "Relates a reason to a supporting fact or argument" ;
+    rdfs:domain reason:Reason ;
+    rdfs:range reason:Fact .
+reason:hasOpposition rdf:type owl:ObjectProperty ;
+    rdfs:comment "Relates a reason to a contradicting fact or argument" ;
+    rdfs:domain reason:Reason ;
+    rdfs:range reason:Argument .
+# Example:JohnDoe rdf:type owl:NamedIndividual ,    reason:Argument ;
+    reason:hasSupport :DoeFact1 ;
+    reason:hasOpposition :ContradictingArg1 .
+:DoeFact1 rdf:type owl:NamedIndividual ,    reason:Fact .
+:ContradictingArg1 rdf:type owl:NamedIndividual ,    reason:Argument .

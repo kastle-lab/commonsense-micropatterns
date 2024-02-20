@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/> .
+:Year a rdfs:Class .
+:hasYear a rdf:Property ;
+    rdfs:domain :Event ;
+    rdfs:range :Year ;
+    rdfs:label "has year"@en ;
+    rdfs:comment "The year the event occurred."@en .
+:Year rdfs:label "Year"@en ;
+    rdfs:comment "A specific year in the Gregorian calendar."@en ;
+    rdfs:subClassOf xsd:gYear .

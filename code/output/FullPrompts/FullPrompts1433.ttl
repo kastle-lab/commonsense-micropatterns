@@ -1,0 +1,32 @@
+@prefix : <http://www.example.org/home#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Home a rdfs:Class ;
+  rdfs:label "Home"@en ;
+  rdfs:comment "The place where one resides."@en .
+:House a rdfs:Class ;
+  rdfs:label "House"@en ;
+  rdfs:comment "A building for people to live in."@en ;
+  rdfs:subClassOf :Home .
+:Apartment a rdfs:Class ;
+  rdfs:label "Apartment"@en ;
+  rdfs:comment "A set of rooms for people to live in that is part of a larger building."@en ;
+  rdfs:subClassOf :Home .
+:Resident a rdfs:Class ;
+  rdfs:label "Resident"@en ;
+  rdfs:comment "Person who lives in a particular place."@en .
+:hasResident a rdfs:Property ;
+  rdfs:label "has resident"@en ;
+  rdfs:comment "The property that establishes a relationship between a home and its residents."@en ;
+  rdfs:range :Resident ;
+  rdfs:domain :Home .
+:hasAddress a rdfs:Property ;
+  rdfs:label "has address"@en ;
+  rdfs:comment "The property that establishes a relationship between a home and its location address."@en ;
+  rdfs:range xsd:string ;
+  rdfs:domain :Home .
+:NumberOfRooms a rdfs:Property ;
+  rdfs:label "number of rooms"@en ;
+  rdfs:comment "The property that shows number of rooms in a home."@en ;
+  rdfs:range xsd:integer ;
+  rdfs:domain :Home .

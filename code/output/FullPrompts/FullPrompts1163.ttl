@@ -1,0 +1,21 @@
+@prefix : <http://www.example.org/water#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Water a rdfs:Class ;
+    rdfs:label "Water" ;
+    rdfs:comment "A liquid substance that covers most of the Earth's surface" .
+:hasTemperature a rdfs:Property ;
+    rdfs:domain :Water ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has temperature" ;
+    rdfs:comment "The property that describes the temperature of the water" .
+:hasComposition a rdfs:Property ;
+    rdfs:domain :Water ;
+    rdfs:range :ChemicalCompound ;
+    rdfs:label "has composition" ;
+    rdfs:comment "The property that describes the chemical composition of the water" .
+:ChemicalCompound a rdfs:Class ;
+    rdfs:label "Chemical Compound" ;
+    rdfs:comment "A chemical compound or substance consists of a fixed ratio of molecules or atoms" .
+:H2O a :ChemicalCompound ;
+    rdfs:label "H2O" ;
+    rdfs:comment "H2O is the chemical formula for water, meaning each molecule of water consists of two hydrogen atoms bonded to a single oxygen atom" .

@@ -1,0 +1,13 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+<http://example.com/ontology/Night> a owl:Class ;
+    rdfs:label "Night"@en ;
+    rdfs:subClassOf time:TemporalEntity ;
+    rdfs:comment "The period of the day from dusk to dawn when it is dark outside"@en .
+ <http://example.com/instance/Night1> a <http://example.com/ontology/Night> ;
+  rdfs:label "Night of 1st January 2022"@en ;
+  time:hasBeginning [     time:inXSDDateTime "2022-01-01T19:00:00"^^xsd:dateTime    ];
+  time:hasEnd [     time:inXSDDateTime "2022-01-02T06:00:00"^^xsd:dateTime    ].

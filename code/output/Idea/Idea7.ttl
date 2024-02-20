@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix idea: <http://www.example.org/idea#> .
+# Idea classidea:Idea rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:comment "Entity representing an idea" ;
+  rdfs:label "Idea"@en .
+# Creator classidea:Creator rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:comment "Entity representing the creator of an idea" ;
+  rdfs:label "Creator"@en .
+# Property of ideaidea:hasCreator rdf:type owl:ObjectProperty ;
+  rdfs:domain idea:Idea ;
+  rdfs:range idea:Creator ;
+  rdfs:comment "Property linking an idea to its creator" ;
+  rdfs:label "has creator"@en .
+# Property of ideaidea:hasDescription rdf:type owl:DatatypeProperty ;
+  rdfs:domain idea:Idea ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Property linking an idea to its description" ;
+  rdfs:label "has description"@en .
+# Property of ideaidea:hasName rdf:type owl:DatatypeProperty ;
+  rdfs:domain idea:Idea ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Property linking an idea to its name" ;
+  rdfs:label "has name"@en .
+# Property of creatoridea:hasName rdf:type owl:DatatypeProperty ;
+  rdfs:domain idea:Creator ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Property linking a creator to its name" ;
+  rdfs:label "has name"@en .

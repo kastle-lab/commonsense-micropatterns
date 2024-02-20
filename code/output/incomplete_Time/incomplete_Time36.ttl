@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:Instant rdf:type owl:Class ;
+    rdfs:comment "A position or point in time" ;
+    rdfs:subClassOf rdfs:Resource .
+time:Interval rdf:type owl:Class ;
+    rdfs:comment "A duration or extent in time, defined by two instants" ;
+    rdfs:subClassOf rdfs:Resource .
+time:DateTimeDescription rdf:type owl:Class ;
+    rdfs:comment "Description of a date and time" ;
+    rdfs:subClassOf rdfs:Resource .
+time:hasBeginning rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant ;
+    rdfs:comment "The beginning of a time interval" .
+time:hasEnd rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant ;
+    rdfs:comment "The end of a time interval".
+time:inXSDDateTime rdf:type owl:DatatypeProperty ;
+    rdfs:domain time:DateTimeDescription ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Date and time in xsd:dateTime format".

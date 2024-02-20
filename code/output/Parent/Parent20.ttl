@@ -1,0 +1,19 @@
+@prefix : <http://example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Parent a owl:Class ;
+    rdfs:label "Parent"@en ;
+    rdfs:comment "A class representing parent entities"@en ;
+    rdfs:subClassOf :Person .
+:hasParent a owl:ObjectProperty ;
+    rdfs:label "has parent"@en ;
+    rdfs:comment "Predicate to indicate the parent of an individual"@en ;
+    rdfs:domain :Person ;
+    rdfs:range :Parent .
+:isParentOf a owl:ObjectProperty ;
+    rdfs:label "is parent of"@en ;
+    rdfs:comment "Predicate to indicate whom an individual is the parent of"@en ;
+    rdfs:domain :Parent ;
+    rdfs:range :Person .

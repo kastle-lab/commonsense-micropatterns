@@ -1,0 +1,17 @@
+
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Result rdf:type rdfs:Class .
+ex:hasStudent rdf:type rdf:Property ;
+    rdfs:range ex:Student ;
+    rdfs:domain ex:Result .
+ex:hasCourse rdf:type rdf:Property ;
+    rdfs:range ex:Course ;
+    rdfs:domain ex:Result .
+ex:hasGrade rdf:type rdf:Property ;
+    rdfs:range ex:Grade ;
+    rdfs:domain ex:Result .
+ex:Student rdf:type rdfs:Class .
+ex:Course rdf:type rdfs:Class .
+ex:Grade rdf:type rdfs:Class .

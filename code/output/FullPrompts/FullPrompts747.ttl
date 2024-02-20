@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix case: <http://www.myontology.com/case#> .
+case:Case a rdfs:Class ;
+  rdfs:comment "A general class representing a Case" .
+case:id a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:domain case:Case ;
+  rdfs:comment "The unique identifier of a case." .
+case:title a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:domain case:Case ;
+  rdfs:comment "The title of a case." .
+case:description a rdf:Property ;
+  rdfs:range xsd:string ;
+  rdfs:domain case:Case ;
+  rdfs:comment "The detailed description of a case." .
+case:status a rdf:Property ;
+  rdfs:range case:CaseStatus ;
+  rdfs:domain case:Case ;
+  rdfs:comment "The status of a case." .
+case:CaseStatus a rdfs:Class ;
+  rdfs:comment "Representing the status of a case" .
+case:Open a case:CaseStatus ;
+  rdfs:comment "Represents a case is open." .
+case:Closed a case:CaseStatus ;
+  rdfs:comment "Represents a case is closed." .
+case:Investigation a rdf:Property ;
+  rdfs:range case:Investigation ;
+  rdfs:domain case:Case ;
+  rdfs:comment "The investigation associated with a case." .
+case:Investigation a rdfs:Class ;
+  rdfs:comment "A class representing an Investigation." .
+case:investigator a rdf:Property ;
+  rdfs:range case:Investigator ;
+  rdfs:domain case:Investigation ;
+  rdfs:comment "The person or team investigating the case." .
+case:Investigator a rdfs:Class ;
+  rdfs:comment "A class representing an Investigator." ;
+  rdfs:label "Investigator" .
+case:investigationStartDate a rdf:Property ;
+  rdfs:range xsd:date ;
+  rdfs:domain case:Investigation ;
+  rdfs:comment "The date when the investigation started." .
+case:investigationEndDate a rdf:Property ;
+  rdfs:range xsd:date ;
+  rdfs:domain case:Investigation ;
+  rdfs:comment "The date when the investigation ended." .

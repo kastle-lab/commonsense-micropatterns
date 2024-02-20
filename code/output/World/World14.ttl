@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ex:World rdf:type rdf:Class .
+ex:Continent rdf:type rdf:Class .
+ex:Country rdf:type rdf:Class .
+ex:City rdf:type rdf:Class .
+ex:Ocean rdf:type rdf:Class .
+ex:Mountain rdf:type rdf:Class .
+ex:River rdf:type rdf:Class .
+ex:isLocatedIn rdf:type rdf:Property ;
+    rdf:domain ex:City ;
+    rdf:range ex:Country .
+ex:isPartOf rdf:type rdf:Property ;
+    rdf:domain ex:Country ;
+    rdf:range ex:Continent. ex:contains rdf:type rdf:Property ;
+    rdf:domain ex:World ;
+    rdf:range [ rdf:unionOf ( ex:Continent ex:Ocean ex:Country ex:City ex:Mountain ex:River ) ] .
+ex:isAdjacentTo rdf:type rdf:Property ;
+    rdf:domain [ rdf:unionOf ( ex:Country ex:City ex:Mountain ex:River ex:Ocean ) ] ;
+    rdf:range [ rdf:unionOf ( ex:Country ex:City ex:Mountain ex:River ex:Ocean ) ] .

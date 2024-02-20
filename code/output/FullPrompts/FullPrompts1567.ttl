@@ -1,0 +1,17 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://example.com/> .
+ex:Room a rdfs:Class ;
+    rdfs:subClassOf schema:Place ;
+    rdfs:label "Room"@en ;
+    rdfs:comment "A room within a building, which can be part of any other larger structure"@en .
+ex:hasRoom a rdfs:Property ;
+    rdfs:domain schema:Place ;
+    rdfs:range ex:Room ;
+    rdfs:label "has room"@en ;
+    rdfs:comment "A property indicating a room within a particular place"@en .
+ex:roomNumber a rdfs:Property ;
+    rdfs:domain ex:Room ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "room number"@en ;
+    rdfs:comment "The number or identifier assigned to a particular room"@en .

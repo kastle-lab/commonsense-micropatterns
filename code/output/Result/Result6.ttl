@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix result: <http://example.org/result#> .
+result:Result  rdf:type rdfs:Class ;
+  rdfs:label "Result"@en ;
+  rdfs:comment "A result or outcome of an action, process, or experiment."@en .
+result:hasValue  rdf:type rdf:Property ;
+  rdfs:label "has value"@en ;
+  rdfs:comment "The value or end result."@en ;
+  rdfs:domain result:Result ;
+  rdfs:range xsd:string .
+result:isResultOf  rdf:type rdf:Property ;
+  rdfs:label "is result of"@en ;
+  rdfs:comment "The action, process, or experiment that led to the result."@en ;
+  rdfs:domain result:Result ;
+  rdfs:range xsd:string .
+result:hasTime  rdf:type rdf:Property ;
+  rdfs:label "has time"@en ;
+  rdfs:comment "The time or duration when the result was obtained."@en ;
+  rdfs:domain result:Result ;
+  rdfs:range xsd:dateTime .
+result:hasScore  rdf:type rdf:Property ;
+  rdfs:label "has score"@en ;
+  rdfs:comment "The score or grading that the result obtained."@en ;
+  rdfs:domain result:Result ;
+  rdfs:range xsd:float .

@@ -1,0 +1,25 @@
+@prefix : <http://www.example.com/back#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Back rdf:type owl:Class .
+:UpperBack rdf:type owl:Class ;
+           rdfs:subClassOf :Back .
+:MiddleBack rdf:type owl:Class ;
+            rdfs:subClassOf :Back .
+:LowerBack rdf:type owl:Class ;
+           rdfs:subClassOf :Back .
+:Spine rdf:type owl:Class ;
+       rdfs:subClassOf :Back .
+         :backpain rdf:type owl:Class ;
+          rdfs:subClassOf :Disease .
+          :hasPart rdf:type owl:ObjectProperty ;
+         rdfs:range :Back ;
+         rdfs:domain :HumanBody .
+:suffersFrom rdf:type owl:ObjectProperty ;
+             rdfs:range :backpain ;
+             rdfs:domain :Human .
+:Disease rdf:type owl:Class .
+:HumanBody rdf:type owl:Class .
+:Human rdf:type owl:Class .

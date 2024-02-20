@@ -1,0 +1,24 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix side: <http://example.org/side#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+side:     a rdfs:Class ;
+    rdfs:label "Side"@en ;
+    rdfs:comment "A side is a distinct part or aspect of something"@en .
+side:left    a side: ;
+    rdfs:label "Left side"@en ;
+    rdfs:comment "The left part or aspect of something"@en .
+side:right    a side: ;
+    rdfs:label "Right side"@en ;
+    rdfs:comment "The right part or aspect of something"@en .
+side:top    a side: ;
+    rdfs:label "Top side"@en ;
+    rdfs:comment "The top part or aspect of something"@en .
+side:bottom    a side: ;
+    rdfs:label "Bottom side"@en ;
+    rdfs:comment "The bottom part or aspect of something"@en .
+side:front    a side: ;
+    rdfs:label "Front side"@en ;
+    rdfs:comment "The front part or aspect of something"@en .
+side:back    a side: ;
+    rdfs:label "Back side"@en ;
+    rdfs:comment "The back part or aspect of something"@en .

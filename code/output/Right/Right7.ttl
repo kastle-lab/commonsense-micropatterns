@@ -1,0 +1,23 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix right: <http://example.org/right/> .
+right:     rdf:type rdfs:Class ;
+    rdfs:label "Right"@en ;
+    rdfs:comment "A class representing the concept of right, as in right/left direction or right/wrong morality."@en .
+right:Direction    rdf:type rdfs:Class ;
+    rdfs:subClassOf right: ;
+    rdfs:label "Right Direction"@en ;
+    rdfs:comment "The concept of right as a direction."@en .
+right:Morality    rdf:type rdfs:Class ;
+    rdfs:subClassOf right: ;
+    rdfs:label "Right Morality"@en ;
+    rdfs:comment "The concept of right as something morally good, just, or acceptable."@en .
+right:Legal    rdf:type rdfs:Class ;
+    rdfs:subClassOf right: ;
+    rdfs:label "Right Legal"@en ;
+    rdfs:comment "The concept of right as legal or lawfully recognized rights."@en .
+right:Human     rdf:type rdfs:Class ;
+    rdfs:subClassOf right:Legal ;
+    rdfs:label "Human Right"@en ;
+    rdfs:comment "The concept of human rights, which are the basic rights and freedoms to which all individuals are entitled."@en .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gov: <http://www.example.com/government#> .
+gov:Government a rdfs:Class ;
+  rdfs:label "Government" .
+gov:Country a rdfs:Class ;
+  rdfs:label "Country" ;
+  rdfs:subClassOf gov:Government .
+gov:State a rdfs:Class ;
+  rdfs:label "State" ;
+  rdfs:subClassOf gov:Government .
+gov:City a rdfs:Class ;
+  rdfs:label "City" ;
+  rdfs:subClassOf gov:Government .
+gov:hasGovernment a rdf:Property ;
+  rdfs:label "has government" ;
+  rdfs:domain gov:Country ;
+  rdfs:range gov:Government .
+gov:hasState a rdf:Property ;
+  rdfs:label "has state" ;
+  rdfs:domain gov:Country ;
+  rdfs:range gov:State .
+gov:hasCity a rdf:Property ;
+  rdfs:label "has city" ;
+  rdfs:domain gov:State ;
+  rdfs:range gov:City .

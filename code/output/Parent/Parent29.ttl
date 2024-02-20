@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Parent a rdfs:Class ;
+rdfs:label "Parent"@en ;
+rdfs:comment "A class to represent a Parent in ontology"@en .
+ex:hasChild a rdf:Property ;
+rdfs:domain ex:Parent ;
+rdfs:range ex:Human ;
+rdfs:label "has child"@en ;
+rdfs:comment "A property that links a parent to his or her child."@en .
+ex:Human a rdfs:Class ;
+rdfs:label "Human"@en ;
+rdfs:comment "A class to represent a Human being in ontology."@en .

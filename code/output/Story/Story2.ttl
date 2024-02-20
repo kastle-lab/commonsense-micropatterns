@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sto: <http://example.org/story#> .
+# Classessto:Story rdf:type owl:Class ;
+          rdfs:label "Story" ;
+          rdfs:comment "A narrative or a tale in the context of literature, film, theater, or music" .
+sto:Character rdf:type owl:Class ;
+              rdfs:label "Character" ;
+              rdfs:comment "A person, animal, being, creature, or thing participating in the action on the story" .
+sto:Author rdf:type owl:Class ;
+           rdfs:label "Author" ;
+           rdfs:comment "The creator or writer of the story" .
+sto:Genre rdf:type owl:Class ;
+          rdfs:label "Genre" ;
+          rdfs:comment "The category or type of story" .
+# Object Properties          sto:hasCharacter rdf:type owl:ObjectProperty ;
+                 rdfs:domain sto:Story ;
+                 rdfs:range sto:Character ;
+                 rdfs:label "has character" ;
+                 rdfs:comment "Relates a story to a character that participates in it" .
+sto:hasAuthor rdf:type owl:ObjectProperty ;
+              rdfs:domain sto:Story ;
+              rdfs:range sto:Author ;
+              rdfs:label "has author" ;
+              rdfs:comment "Relates a story to its author" .
+sto:belongsToGenre rdf:type owl:ObjectProperty ;
+                   rdfs:domain sto:Story ;
+                   rdfs:range sto:Genre ;
+                   rdfs:label "belongs to genre" ;
+                   rdfs:comment "Relates a story to its genre" .
+# Data propertiessto:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain sto:Story ;
+          rdfs:range xsd:string ;
+          rdfs:label "title" ;
+          rdfs:comment "Relates a story to its title" .
+sto:publicationDate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain sto:Story ;
+                    rdfs:range xsd:date ;
+                    rdfs:label "publication date" ;
+                    rdfs:comment "Relates a story to its publication date" .

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+# Define the classesex:Idea a owl:Class ;
+    rdfs:label "Idea" ;
+    rdfs:comment "A mental concept or plan" .
+# Define the propertiesex:isIdeaOf a owl:ObjectProperty ;
+    rdfs:label "is idea of" ;
+    rdfs:domain ex:Idea ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Relates an Idea to the person who thought of it" .
+ex:hasIdea a owl:ObjectProperty ;
+    rdfs:label "has idea" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Idea ;
+    rdfs:comment "Relates a Person to the idea they thought of" .
+# Define a sample instance of an Ideaex:Idea1 a ex:Idea ;
+    ex:isIdeaOf ex:Person1 .
+# Define a sample instance of a Person having an Ideaex:Person1 a ex:Person ;
+    ex:hasIdea ex:Idea1 .

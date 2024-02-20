@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.org/day#> .
+# Class definitionsday:Day rdf:type rdfs:Class ;
+    rdfs:comment "Class representing a single day."@en .
+day:Weekday rdf:type rdfs:Class ;
+    rdfs:comment "Class representing a weekday, e.g., Monday, Tuesday, etc."@en .
+day:Weekend rdf:type rdfs:Class ;
+    rdfs:comment "Class representing a day in the weekend, e.g., Saturday, Sunday."@en .
+# Subclass relationsday:Weekday rdfs:subClassOf day:Day ;
+    rdfs:comment "A weekday is a subclass of day."@en .
+    day:Weekend rdfs:subClassOf day:Day ;
+    rdfs:comment "A weekend day is a subclass of day."@en .
+# Property definitionsday:hasDate rdf:type rdf:Property ;
+    rdfs:domain day:Day ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Property specifying the date of a day."@en .
+day:hasName rdf:type rdf:Property ;
+    rdfs:domain day:Day ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Property specifying the name of a day."@en .
+# Instance definitionsday:Monday rdf:type day:Weekday ;
+    rdfs:label "Monday"@en ;
+    day:hasName "Monday" ;
+    day:hasDate "2022-04-11"^^xsd:date .
+day:Tuesday rdf:type day:Weekday ;
+    rdfs:label "Tuesday"@en ;
+    day:hasName "Tuesday" ;
+    day:hasDate "2022-04-12"^^xsd:date .
+day:Saturday rdf:type day:Weekend ;
+    rdfs:label "Saturday"@en ;
+    day:hasName "Saturday" ;
+    day:hasDate "2022-04-16"^^xsd:date .

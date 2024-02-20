@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.@prefix life: <http://www.example.org/life#>.life:Life rdf:type rdfs:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:comment "The condition of living or the state of being alive"@en .
+life:HumanLife rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Life ;
+    rdfs:label "Human life"@en ;
+    rdfs:comment "The lifespan of a human being"@en .
+life:NonHumanLife rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Life ;
+    rdfs:label "Non-human life"@en ;
+    rdfs:comment "The life of non-human organisms"@en .
+life:Birth rdf:type rdfs:Class ;
+    rdfs:label "Birth"@en ;
+    rdfs:comment "The beginning or start of a life"@en .
+life:Death rdf:type rdfs:Class ;
+    rdfs:label "Death"@en ;
+    rdfs:comment "The end of a life"@en .
+life:hasBeginning rdf:type rdf:Property ;
+    rdfs:domain life:Life ;
+    rdfs:range life:Birth ;
+    rdfs:label "has beginning"@en ;
+    rdfs:comment "The life has a beginning event, a birth"@en .
+life:hasEnd rdf:type rdf:Property ;
+    rdfs:domain life:Life ;
+    rdfs:range life:Death ;
+    rdfs:label "has end"@en ;
+    rdfs:comment "The life has an end event, a death"@en .

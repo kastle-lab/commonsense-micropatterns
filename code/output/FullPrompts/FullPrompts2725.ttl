@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/house#> .
+:House a rdfs:Class ;
+  rdfs:label "House"@en ;
+  rdfs:comment "A building for human habitation"@en ;
+  rdfs:subClassOf :Building .
+:hasRooms a rdf:Property ;
+  rdfs:label "has rooms"@en ;
+  rdfs:comment "The property that represents the rooms a house has"@en ;
+  rdfs:domain :House ;
+  rdfs:range xsd:integer .
+  :hasBathrooms a rdf:Property ;
+  rdfs:label "has bathrooms"@en ;
+  rdfs:comment "The property that represents the bathrooms a house has"@en ;
+  rdfs:domain :House ;
+  rdfs:range xsd:integer .
+:hasGarage a rdf:Property ;
+  rdfs:label "has garage"@en ;
+  rdfs:comment "The property that represents whether a house has a garage"@en ;
+  rdfs:domain :House ;
+  rdfs:range rdf:res:TrueFalse .
+:address a rdf:Property ;
+  rdfs:label "address"@en ;
+  rdfs:comment "The property that represents the address of a house"@en ;
+  rdfs:domain :House ;
+  rdfs:range xsd:string .
+  :Building a rdfs:Class ;
+  rdfs:label "Building"@en ;
+  rdfs:comment "A structure with a roof and walls"@en .

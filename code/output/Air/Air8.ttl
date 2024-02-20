@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://example.org/air#> .
+air:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology representing the concept of air." .
+air:Air     rdf:type owl:Class ;
+    rdfs:comment "The class of air." .
+air:isComposedOf     rdf:type owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range air:Gas ;
+    rdfs:comment "A relation indicating the gases that make up air.".
+air:Gas    rdf:type owl:Class ;
+    rdfs:comment "The class of gases which can be found in air." .
+air:Nitrogen     rdf:type air:Gas ;
+    rdfs:comment "The most common gas in air." .
+air:Oxygen     rdf:type air:Gas ;
+    rdfs:comment "The second most common gas in air, vital for life." .
+air:CarbonDioxide     rdf:type air:Gas ;
+    rdfs:comment "A trace gas in air." .
+    air:isConditioned    rdf:type owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range air:AirCondition ;
+    rdfs:comment "A relation indicating that the air is conditioned.".
+air:AirCondition    rdf:type owl:Class ;
+    rdfs:comment "The condition of air." .
+air:Dry    rdf:type air:AirCondition ;
+    rdfs:comment "A state of air having low moisture content." .
+    air:Humid    rdf:type air:AirCondition ;
+    rdfs:comment "A state of air having high moisture content." .

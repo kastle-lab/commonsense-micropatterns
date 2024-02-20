@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix week: <http://example.org/week#> .
+week:Week rdf:type rdfs:Class ;
+      rdfs:label "Week"@en ;
+      rdfs:comment "A period of seven days"@en .
+week:Day rdf:type rdfs:Class ;
+      rdfs:subClassOf week:Week ;
+      rdfs:label "Day"@en ;
+      rdfs:comment "A period of 24 hours"@en .
+week:hasDay rdf:type rdf:Property ;
+      rdfs:domain week:Week ;
+      rdfs:range week:Day ;
+      rdfs:label "has day"@en ;
+      rdfs:comment "A week has seven days"@en .
+week:isDayOf rdf:type rdf:Property ;
+      rdfs:domain week:Day ;
+      rdfs:range week:Week ;
+      rdfs:label "is day of"@en ;
+      rdfs:comment "A day is part of a week"@en .
+week:Monday rdf:type week:Day ;
+      rdfs:label "Monday"@en ;
+      rdfs:comment "The second day of the week"@en .
+week:Tuesday rdf:type week:Day ;
+      rdfs:label "Tuesday"@en ;
+      rdfs:comment "The third day of the week"@en .
+week:Wednesday rdf:type week:Day ;
+      rdfs:label "Wednesday"@en ;
+      rdfs:comment "The fourth day of the week"@en .
+week:Thursday rdf:type week:Day ;
+      rdfs:label "Thursday"@en ;
+      rdfs:comment "The fifth day of the week"@en .
+week:Friday rdf:type week:Day ;
+      rdfs:label "Friday"@en ;
+      rdfs:comment "The sixth day of the week"@en .
+week:Saturday rdf:type week:Day ;
+      rdfs:label "Saturday"@en ;
+      rdfs:comment "The seventh day of the week"@en .
+week:Sunday rdf:type week:Day ;
+      rdfs:label "Sunday"@en ;
+      rdfs:comment "The first day of the week"@en .

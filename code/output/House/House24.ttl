@@ -1,0 +1,20 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:House a rdfs:Class ;
+  rdfs:comment "A house is a building for people to live in."@en ;
+  rdfs:label "House"@en .
+ex:hasBedrooms a rdf:Property ;
+  rdfs:domain ex:House ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The number of bedrooms in a house."@en ;
+  rdfs:label "hasBedrooms"@en .
+ex:hasBathrooms a rdf:Property ;
+  rdfs:domain ex:House ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The number of bathrooms in a house."@en ;
+  rdfs:label "hasBathrooms"@en .
+ex:hasSqft a rdf:Property ;
+  rdfs:domain ex:House ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The square footage of a house."@en ;
+  rdfs:label "hasSqft"@en .

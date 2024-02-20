@@ -1,0 +1,17 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Game a rdfs:Class ;
+  rdfs:label "Game"@en ;
+  rdfs:comment "A category for all types of games"@en .
+  :VideoGame a rdfs:Class ;
+  rdfs:subClassOf :Game ;
+  rdfs:label "Video Game"@en ;
+  rdfs:comment "A video game, digital game, or electronic game"@en .
+:BoardGame a rdfs:Class ;
+  rdfs:subClassOf :Game ;
+  rdfs:label "Board Game"@en ;
+  rdfs:comment "A game that involves counters or pieces moved on a pre-marked surface or board"@en .
+:CardGame a rdfs:Class ;
+  rdfs:subClassOf :Game ;
+  rdfs:label "Card Game"@en ;
+  rdfs:comment "A game using playing cards as the primary device"@en .

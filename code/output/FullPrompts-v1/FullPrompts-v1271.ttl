@@ -1,0 +1,4 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix ex: <http://example.org/>ex:World rdf:type rdfs:Class ;
+    rdfs:comment "The entity representing the whole of planet Earth, or any other distinct planetary body in the universe." ;
+    rdfs:label "World" ;
+    rdfs:subClassOf ex:PlanetaryBody .

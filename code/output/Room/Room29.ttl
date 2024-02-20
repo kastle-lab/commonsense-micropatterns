@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Room a rdfs:Class ;
+  rdfs:label "Room"@en ;
+  rdfs:comment "A distinct area within a building or structure, particularly designated for a certain function or purpose."@en ;
+  rdfs:subClassOf :PhysicalSpace .
+:hasWindow a rdf:Property ;
+  rdfs:domain :Room ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "has window"@en ;
+  rdfs:comment "Indicates whether a room has a window or not."@en .
+  :capacity a rdf:Property ;
+  rdfs:domain :Room ;
+  rdfs:range xsd:integer ;
+  rdfs:label "capacity"@en ;
+  rdfs:comment "Defines the maximum number of people a room can accommodate comfortably."@en .

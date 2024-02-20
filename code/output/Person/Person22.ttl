@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Person   rdf:type rdfs:Class ;
+  rdfs:label "Person"@en ;
+  rdfs:comment "An individual human being"@en ;
+  rdfs:subClassOf foaf:Person ;
+.:hasName   rdf:type rdf:Property ;
+  rdfs:label "has name"@en ;
+  rdfs:comment "A name that a Person goes by"@en ;
+  rdfs:domain :Person ;
+  rdfs:range xsd:string ;
+.:hasAge   rdf:type rdf:Property ;
+  rdfs:label "has age"@en ;
+  rdfs:comment "The age of a Person"@en ;
+  rdfs:domain :Person ;
+  rdfs:range xsd:int ;
+.:isBornIn  rdf:type rdf:Property ;
+  rdfs:label "is born in"@en ;
+  rdfs:comment "The place where a Person is born"@en ;
+  rdfs:domain :Person ;
+.

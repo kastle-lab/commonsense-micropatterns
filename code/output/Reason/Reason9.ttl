@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix reason: <http://www.example.org/ontology/reason#> .
+reason:    rdf:type owl:Ontology ;
+    rdfs:comment "An ontology defining different aspects of reason" ;
+    rdfs:label "Reason ontology" .
+reason:Reason :    rdf:type owl:Class ;
+    rdfs:label "Reason" ;
+    rdfs:comment "The power of the mind to think, understand, and form judgments logically" .
+reason:isUsedIn :    rdf:type owl:ObjectProperty ;
+    rdfs:label "is used in" ;
+    rdfs:comment "Describes fields or areas where reason is applied" ;
+    rdfs:domain reason:Reason ;
+    rdfs:range reason:ApplicationArea .
+reason:ApplicationArea :    rdf:type owl:Class ;
+    rdfs:label "Application Area" ;
+    rdfs:comment "An area or field where reason is applied" .
+reason:arguedBy :    rdf:type owl:ObjectProperty ;
+    rdfs:label "argued by" ;
+    rdfs:comment "The person or entity that uses reason for arguments" ;
+    rdfs:domain reason:Reason ;
+    rdfs:range reason:Arguer .
+reason:Arguer :    rdf:type owl:Class ;
+    rdfs:label "Arguer" ;
+    rdfs:comment "A person or entity that uses reason for arguments" .
+reason:Outcome :    rdf:type owl:Class ;
+    rdfs:label "Outcome" ;
+    rdfs:comment "The result of reasoning" .
+reason:resultsIn :    rdf:type owl:ObjectProperty ;
+    rdfs:label "results in" ;
+    rdfs:comment "Describes the outcome that was achieved by reasoning" ;
+    rdfs:domain reason:Reason ;
+    rdfs:range reason:Outcome .

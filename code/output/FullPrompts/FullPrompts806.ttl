@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gov: <http://www.example.org/government#> .
+gov:Government rdf:type rdfs:Class .
+gov:department rdf:type rdf:Property ;
+    rdfs:domain gov:Government ;
+    rdfs:range gov:Department .
+gov:Department rdf:type rdfs:Class .
+gov:official rdf:type rdf:Property ;
+    rdfs:domain gov:Government ;
+    rdfs:range gov:Official .
+gov:Official rdf:type rdfs:Class .
+gov:country rdf:type rdf:Property ;
+    rdfs:domain gov:Government ;
+    rdfs:range xsd:string .
+    gov:established rdf:type rdf:Property ;
+    rdfs:domain gov:Government ;
+    rdfs:range xsd:date .
+    gov:diff rdf:type rdfs:Class ;
+    rdfs:label "Directorate of Intelligence and Federal Research" ;
+    rdfs:subClassOf gov:Department .
+gov:director rdf:type rdf:Property ;
+    rdfs:domain gov:diff ;
+    rdfs:range gov:Official .

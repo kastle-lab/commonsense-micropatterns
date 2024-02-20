@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Year rdf:type rdfs:Class .
+ex:hasYear rdf:type rdf:Property ;
+    rdfs:range xsd:integer ;
+    rdfs:domain ex:Entity .
+ex:Entity rdf:type rdfs:Class ;
+    rdfs:subClassOf [ rdf:type rdfs:Restriction ;
+                      rdf:onProperty ex:hasYear ;
+                      rdf:cardinality "1"^^xsd:nonNegativeInteger                    ] .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://example.org/way#> .
+way:Way rdf:type owl:Class ;
+    rdfs:comment "Represents the concept of 'Way' or 'Path' in a generic sense" ;
+    rdfs:label "Way"^^xsd:string .
+way:hasStartingPoint rdf:type owl:ObjectProperty ;
+    rdfs:domain way:Way ;
+    rdfs:range way:Point ;
+    rdfs:comment "The starting point of the way" ;
+    rdfs:label "has starting point" .
+way:hasEndPoint rdf:type owl:ObjectProperty ;
+    rdfs:domain way:Way ;
+    rdfs:range way:Point ;
+    rdfs:comment "The end point of the way" ;
+    rdfs:label "has end point" .
+way:Point rdf:type owl:Class ;
+    rdfs:comment "Represents a specific point in space" ;
+    rdfs:label "Point" .
+way:coordinates rdf:type owl:DatatypeProperty ;
+    rdfs:domain way:Point ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Geographic coordinates of the point" ;
+    rdfs:label "coordinates" .

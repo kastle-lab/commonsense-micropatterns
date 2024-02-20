@@ -1,0 +1,17 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:minute a rdfs:Class ;
+    rdfs:label "Minute"@en ;
+    rdfs:subClassOf time:TemporalUnit ;
+    rdfs:comment "A unit of time, defined as 60 seconds"@en .
+    time:hasTemporalDuration a rdf:Property ;
+    rdfs:label "has temporal duration"@en ;
+    rdfs:comment "Relates an entity to a temporal duration"@en ;
+    rdfs:domain :Event ;
+    rdfs:range time:TemporalDuration .
+    :myEvent a :Event ;
+    time:hasTemporalDuration :myDuration .
+:myDuration a time:TemporalDuration ;
+    time:numericDuration 15 ;
+    time:unitType time:minute ;
+    rdfs:label "15 minutes"@en .

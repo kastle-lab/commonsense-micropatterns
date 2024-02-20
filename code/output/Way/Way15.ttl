@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://example.org/ontology/way#> .
+way:Way rdf:type rdfs:Class ;
+    rdfs:label "Way"^^xsd:string ;
+    rdfs:comment "It represents a route or method for travel or doing something."^^xsd:string .
+way:hasStartPoint rdf:type rdf:Property ;
+    rdfs:domain way:Way ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "has a starting point"^^xsd:string ;
+    rdfs:comment "Starting point of a way or route."^^xsd:string .
+way:hasEndPoint rdf:type rdf:Property ;
+    rdfs:domain way:Way ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "has an ending point"^^xsd:string ;
+    rdfs:comment "Ending point of a way or route."^^xsd:string .
+way:hasDirection rdf:type rdf:Property ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:string ;
+    rdfs:label "has a direction"^^xsd:string ;
+    rdfs:comment "Direction of a way."^^xsd:string .
+way:hasLength rdf:type rdf:Property ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:float ;
+    rdfs:label "has a length"^^xsd:string ;
+    rdfs:comment "Length of a way."^^xsd:string .

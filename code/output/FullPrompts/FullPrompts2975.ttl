@@ -1,0 +1,5 @@
+@prefix : <http://example.org/> .
+:End a owl:Class .
+:hasEnd a owl:ObjectProperty ;
+    rdfs:domain :Entity ;
+    rdfs:range :End .

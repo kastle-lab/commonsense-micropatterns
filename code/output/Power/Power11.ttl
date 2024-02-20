@@ -1,0 +1,28 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix op: <http://www.example.com/ontology/power#> .
+op:Power a owl:Class ;
+  rdfs:label "Power" ;
+  rdfs:comment "Power in various contexts, such as physical power, political power, etc." .
+op:PhysicalPower a owl:Class ;
+  rdfs:subClassOf op:Power ;
+  rdfs:label "Physical power" ;
+  rdfs:comment "Physical power, expressed as energy over time." .
+op:PoliticalPower a owl:Class ;
+  rdfs:subClassOf op:Power ;
+  rdfs:label "Political power" ;
+  rdfs:comment "Political power, representing influence over others." .
+op:hasPower a owl:ObjectProperty ;
+  rdfs:domain op:Individual ;
+  rdfs:range op:Power ;
+  rdfs:label "has power" ;
+  rdfs:comment "A property indicating that an individual or group has some form of power." .
+op:Individual a owl:Class ;
+  rdfs:label "Individual" ;
+  rdfs:comment "An individual or group that can hold some form of power." .
+op:amountOfPower a owl:DatatypeProperty ;
+  rdfs:domain op:PhysicalPower ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "amount of power" ;
+  rdfs:comment "The quantitative measure of physical power." .

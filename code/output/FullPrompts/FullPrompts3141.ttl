@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:President rdf:type rdfs:Class .
+:President rdfs:subClassOf :Person .
+:President rdfs:comment "A person who holds the office of head of state, typically in a republic."@en .
+:hasPresident rdf:type rdf:Property ;
+        rdfs:domain :Country ;
+        rdfs:range :President ;
+        rdfs:comment "Property which represents the relation between a country and its president."@en.:servedAsPresident rdf:type rdf:Property ;
+         rdfs:domain :Person ;
+         rdfs:range :President ;
+         rdfs:subPropertyOf :hasRole ;
+         rdfs:comment "Property which represents the relation between a person and the office they held as president."@en.:termStart rdf:type rdf:Property ;
+       rdfs:domain :President ;
+       rdfs:range xsd:date ;
+       rdfs:comment "Property representing the date a president began their term."@en .
+:termEnd rdf:type rdf:Property ;
+     rdfs:domain :President ;
+     rdfs:range xsd:date ;
+     rdfs:comment "Property representing the date a president ended their term."@en .

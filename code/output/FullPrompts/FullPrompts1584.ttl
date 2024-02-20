@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+schema:Mother a rdfs:Class ;
+  rdfs:label "Mother"@en ;
+  rdfs:subClassOf schema:Person ;
+  rdfs:comment "A woman in relation to her child or children."@en .
+dbo:child a rdfs:Property ;
+  rdfs:label "child "@en ;
+  rdfs:domain schema:Mother ;
+  rdfs:range schema:Person ;
+  rdfs:comment "A child of the mother."@en .
+dbo:biologicalMother a rdfs:Property ;
+  rdfs:label "biological mother"@en ;
+  rdfs:domain schema:Person ;
+  rdfs:range schema:Mother ;
+  rdfs:comment "The woman who gave birth to the child. Not necessarily the caretaker."@en .
+  dbo:adoptiveMother a rdfs:Property ;
+  rdfs:label "adoptive mother"@en ;
+  rdfs:domain schema:Person ;
+  rdfs:range schema:Mother ;
+  rdfs:comment "The woman who has legally adopted the child."@en .
+dbo:surrogateMother a rdfs:Property ;
+  rdfs:label "surrogate mother"@en ;
+  rdfs:domain schema:Person ;
+  rdfs:range schema:Mother ;
+  rdfs:comment "The woman who became pregnant with the child through a surrogacy arrangement."@en .

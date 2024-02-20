@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oo: <http://www.example.org/office-ontology/> .
+oo:Office a rdfs:Class ;
+  rdfs:label "Office" ;
+  rdfs:comment "Place for professional or administrative work" .
+oo:isPartOf a rdf:Property ;
+  rdfs:label "is part of" ;
+  rdfs:domain oo:Office ;
+  rdfs:range oo:Building .
+oo:hasEmployee a rdf:Property ;
+  rdfs:label "has employee" ;
+  rdfs:domain oo:Office ;
+  rdfs:range oo:Employee .
+oo:Employee a rdfs:Class ;
+  rdfs:label "Employee" ;
+  rdfs:comment "Individual who works part-time or full-time under a contract of employment" .
+oo:Building a rdfs:Class ;
+  rdfs:label "Building" ;
+  rdfs:comment "A structure with a roof and walls" .
+oo:hasEquipment a rdf:Property ;
+  rdfs:label "has equipment" ;
+  rdfs:domain oo:Office ;
+  rdfs:range oo:Equipment .
+oo:Equipment a rdfs:Class ;
+  rdfs:label "Equipment" ;
+  rdfs:comment "Items necessary for the operation of the office" .
+  oo:hasOfficeNumber a rdf:Property ;
+  rdfs:label "has office number" ;
+  rdfs:domain oo:Office ;
+  rdfs:range rdfs:Literal .

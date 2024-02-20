@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/money#> .
+# Classes:Money  a rdfs:Class ;
+    rdfs:comment "Money in general" ;
+    rdfs:label "Money" .
+:Currency  a rdfs:Class ;
+    rdfs:comment "Specific type of money recognized in certain country or group of countries" ;
+    rdfs:label "Currency" .
+    :PhysicalMoney a rdfs:Class ;
+    rdfs:subClassOf :Money ;
+    rdfs:comment "Physical money, like coins and paper money" ;
+    rdfs:label "Physical Money" .
+:DigitalMoney a rdfs:Class ;
+    rdfs:subClassOf :Money ;
+    rdfs:comment "Digital or electronic form of money" ;
+    rdfs:label "Digital Money" .
+:Cryptocurrency a rdfs:Class ;
+    rdfs:subClassOf :DigitalMoney ;
+    rdfs:comment "Decentralized digital or virtual form of currency" ;
+    rdfs:label "Cryptocurrency" .
+# Properties:hasCurrency a rdf:Property ;
+    rdfs:range :Currency ;
+    rdfs:domain :Money ;
+    rdfs:comment "Specifying the currency type of the money" ;
+    rdfs:label "hasCurrency" .
+:hasValue a rdf:Property ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain :Money ;
+    rdfs:comment "The money's value or amount" ;
+    rdfs:label "hasValue" .
+:isLegalTender a rdf:Property ;
+    rdfs:range xsd:boolean ;
+    rdfs:domain :Money ;
+    rdfs:comment "Specifies if the money is legally recognized by the state for financial transactions" ;
+    rdfs:label "isLegalTender" .

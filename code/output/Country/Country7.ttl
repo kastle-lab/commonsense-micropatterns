@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ontology: <http://www.ontologies.example.com/country#> .
+ontology:Country rdf:type rdfs:Class ;
+rdfs:label "Country"@en ;
+rdfs:comment "A representation of a Country."@en .
+ontology:name rdf:type rdf:Property ;
+rdfs:label "name"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:string .
+ontology:population rdf:type rdf:Property ;
+rdfs:label "population"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:integer .
+ontology:capital rdf:type rdf:Property ;
+rdfs:label "capital"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:string .
+ontology:continent rdf:type rdf:Property ;
+rdfs:label "continent"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:string .
+ontology:area rdf:type rdf:Property ;
+rdfs:label "area"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:float .
+ontology:currency rdf:type rdf:Property ;
+rdfs:label "currency"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:string .
+ontology:callingCode rdf:type rdf:Property ;
+rdfs:label "calling code"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:string .
+ontology:officialLanguage rdf:type rdf:Property ;
+rdfs:label "official language"@en ;
+rdfs:domain ontology:Country ;
+rdfs:range xsd:string .

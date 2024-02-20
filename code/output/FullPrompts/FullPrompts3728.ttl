@@ -1,0 +1,29 @@
+@prefix ex: <http://www.example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Change a rdfs:Class ;
+    rdfs:comment "The abstract concept of change or alteration" ;
+    rdfs:label "Change" .
+ex:changeType a rdfs:Class ;
+    rdfs:subClassOf ex:Change ;
+    rdfs:comment "Type or category of change" ;
+    rdfs:label "Change Type" .
+ex:changeAgent a rdfs:Class ;
+    rdfs:comment "The cause or instigator of change" ;
+    rdfs:label "Change Agent" .
+ex:changeOccurrence a rdfs:Class ;
+    rdfs:subClassOf ex:Change ;
+    rdfs:comment "An occurrence of a specific change" ;
+    rdfs:label "Change Occurrence" .
+ex:changeTime a rdfs:DataType ;
+    rdfs:comment "The time or period in which a change occurs" ;
+    rdfs:label "Change Time" ;
+    rdfs:range xsd:dateTime .
+ex:changeType rdfs:domain ex:Change ;
+              rdfs:range ex:changeType .
+ex:changeAgent rdfs:domain ex:Change ;
+               rdfs:range ex:changeAgent .
+ex:changeOccurrence rdfs:domain ex:Change ;
+                   rdfs:range ex:changeOccurrence .
+ex:changeTime rdfs:domain ex:Change ;
+              rdfs:range ex:changeTime .

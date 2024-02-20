@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix school: <http://www.example.org/school/> .
+school:School rdf:type rdfs:Class .
+school:hasName rdf:type rdf:Property ;
+    rdfs:domain school:School ;
+    rdfs:range xsd:string .
+school:hasLocation rdf:type rdf:Property ;
+    rdfs:domain school:School ;
+    rdfs:range xsd:string .
+school:hasNumberOfStudents rdf:type rdf:Property ;
+    rdfs:domain school:School ;
+    rdfs:range xsd:integer .
+school:teachesSubject rdf:type rdf:Property ;
+    rdfs:domain school:School ;
+    rdfs:range school:Subject.school:Subject rdf:type rdfs:Class .
+school:Teacher rdf:type rdfs:Class .
+school:teaches rdf:type rdf:Property ;
+    rdfs:domain school:Teacher ;
+    rdfs:range school:Subject.school:Student rdf:type rdfs:Class.school:studies rdf:type rdf:Property ;
+    rdfs:domain school:Student ;
+    rdfs:range school:Subject.

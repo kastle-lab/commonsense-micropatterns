@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/right/> .
+# Class Declaration:Right a rdfs:Class ;
+ rdfs:label "Right"@en .
+:MoralRight a rdfs:Class ;
+ rdfs:subClassOf :Right ;
+ rdfs:label "Moral Right"@en .
+:LegalRight a rdfs:Class ;
+ rdfs:subClassOf :Right ;
+ rdfs:label "Legal Right"@en .
+# Property Declaration:grantedTo a rdfs:Property ;
+ rdfs:label "Granted To"@en ;
+rdfs:domain :Right ;
+rdfs:range :Person .
+:justifiedBy a rdfs:Property ;
+ rdfs:label "Justified By"@en ;
+rdfs:domain :Right ;
+rdfs:range :LawOrRule .
+:Person a rdfs:Class ;
+rdfs:label "Person"@en .
+:LawOrRule a rdfs:Class ;
+rdfs:label "Law or Rule"@en .

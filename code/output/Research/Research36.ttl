@@ -1,0 +1,27 @@
+@prefix : <http://www.example.org/ontologies/research#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:Research a rdf:Class ;
+    rdfs:label "Research"@en ;
+    rdfs:subClassOf rdf:Resource .
+:Researcher a rdf:Class ;
+    rdfs:label "Researcher"@en ;
+    rdfs:subClassOf rdf:Resource .
+:FieldOfStudy a rdf:Class ;
+    rdfs:label "Field of Study"@en ;
+    rdfs:subClassOf rdf:Resource .
+:ResearchMethod a rdf:Class ;
+    rdfs:label "Research Method"@en ;
+    rdfs:subClassOf rdf:Resource .
+:conducts a rdf:Property ;
+    rdfs:label "conducts"@en ;
+    rdfs:domain :Researcher ;
+    rdfs:range :Research .
+:inField a rdf:Property ;
+    rdfs:label "in field"@en ;
+    rdfs:domain :Research ;
+    rdfs:range :FieldOfStudy .
+:usesMethod a rdf:Property ;
+    rdfs:label "uses method"@en ;
+    rdfs:domain :Research ;
+    rdfs:range :ResearchMethod .

@@ -1,0 +1,5 @@
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Sofa a owl:Class .
+ex:providesComfort a owl:ObjectProperty ;
+   rdfs:range ex:Comfort ;
+   rdfs:domain ex:Sofa .

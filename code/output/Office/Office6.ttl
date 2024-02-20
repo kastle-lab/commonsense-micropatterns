@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix office: <http://example.org/office#> .
+office:Office a rdfs:Class ;
+  rdfs:comment "A place in which business, clerical, or professional activities are conducted."^^xsd:string ;
+  rdfs:label "Office"^^xsd:string .
+office:Furniture a rdfs:Class ;
+  rdfs:comment "Large movable equipment, such as tables and chairs, used to make a house, office, or other space suitable for living or working."^^xsd:string ;
+  rdfs:label "Furniture"^^xsd:string .
+office:Employee a rdfs:Class ;
+  rdfs:comment "A person employed for wages or salary, especially at non-executive level."^^xsd:string ;
+  rdfs:label "Employee"^^xsd:string .
+office:hasFurniture a rdf:Property ;
+  rdfs:comment "The furniture property relates an office to its furniture."^^xsd:string ;
+  rdfs:domain office:Office ;
+  rdfs:range office:Furniture ;
+  rdfs:label "has furniture"^^xsd:string .
+office:hasEmployee a rdf:Property ;
+  rdfs:comment "The hasEmployee property relates an office to its employees."^^xsd:string ;
+  rdfs:domain office:Office ;
+  rdfs:range office:Employee ;
+  rdfs:label "has employee"^^xsd:string .
+office:useFurniture a rdf:Property ;
+  rdfs:comment "The useFurniture property relates an employee to the furniture they use."^^xsd:string ;
+  rdfs:domain office:Employee ;
+  rdfs:range office:Furniture ;
+  rdfs:label "uses furniture"^^xsd:string .

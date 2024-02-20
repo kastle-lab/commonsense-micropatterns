@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Back rdf:type rdfs:Class ;
+    rdfs:label "Back"@en ;
+    rdfs:comment "Part of body that extends from the neck to the lower end of the spine"@en .
+ex:spine rdf:type rdfs:Class ;
+    rdfs:label "Spine"@en ;
+    rdfs:subClassOf ex:Back ;
+    rdfs:comment "Long, thin, part of the vertebral column, extending from the base of the neck to the tailbone"@en .
+ex:Back_Condition rdf:type rdfs:Class ;
+    rdfs:label "Back Condition"@en ;
+    rdfs:comment "Medical condition pertaining to the back"@en .
+ex:hasCondition rdf:type rdf:Property ;
+    rdfs:label "has condition"@en ;
+    rdfs:range ex:Back_Condition ;
+    rdfs:domain ex:Back ;
+    rdfs:comment "Property that maps from a back to its medical conditions"@en .
+    ex:Muscle rdf:type rdfs:Class ;
+    rdfs:label "Muscle"@en ;
+    rdfs:subClassOf ex:Back ;
+    rdfs:comment "Tissue composed of fibers, function is to produce force and motion"@en.

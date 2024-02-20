@@ -1,0 +1,18 @@
+@prefix ex: <http://example.com/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Defines a class 'State' ex:State a rdfs:Class .
+# Defines a property 'hasName'ex:hasName a rdf:Property ;
+    rdfs:domain ex:State ;
+    rdfs:range rdfs:Literal .
+# Defines a property 'hasPopulation'ex:hasPopulation a rdf:Property ;
+     rdfs:domain ex:State ;
+    rdfs:range rdfs:Literal .
+# Defines a property 'hasCapital'ex:hasCapital a rdf:Property ;
+    rdfs:domain ex:State ;
+    rdfs:range ex:City .
+# Defines a class 'City'ex:City a rdfs:Class .
+ # Defines a property 'isInCountry'ex:isInCountry a rdf:Property ;
+    rdfs:domain ex:State ;
+    rdfs:range ex:Country .
+# Defines a class 'Country'ex:Country a rdfs:Class .

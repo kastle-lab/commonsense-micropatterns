@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Reason a rdfs:Class .
+ex:LogicalReason a ex:Reason ;
+    rdfs:subClassOf ex:Reason .
+ex:EmotionalReason a ex:Reason ;
+    rdfs:subClassOf ex:Reason .
+ex:hasReason a rdf:Property ;
+    rdfs:domain ex:Action ;
+    rdfs:range ex:Reason .
+ex:Action a rdfs:Class .
+ex:act1 a ex:Action ;
+    ex:hasReason ex:reason1 .
+ex:reason1 a ex:LogicalReason ;
+    rdfs:label "Economic improvement"^^xsd:string .
+ex:act2 a ex:Action ;
+    ex:hasReason ex:reason2 .
+ex:reason2 a ex:EmotionalReason ;
+    rdfs:label "Emotional satisfaction"^^xsd:string .

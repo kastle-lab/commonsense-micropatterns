@@ -1,0 +1,22 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fact: <http://www.example.com/ontology/fact#> .
+fact:Fact rdf:type rdfs:Class ;
+    rdfs:comment "A piece of information presented as having objective reality" ;
+    rdfs:label "Fact" .
+fact:source rdf:type rdf:Property ;
+    rdfs:domain fact:Fact ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The original source where the fact was obtained from" ;
+    rdfs:label "source" .
+fact:isVerified rdf:type rdf:Property ;
+    rdfs:domain fact:Fact ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Indicates whether or not the fact has been verified" ;
+    rdfs:label "isVerified" .
+fact:subject rdf:type rdf:Property ;
+    rdfs:domain fact:Fact ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The subject matter that the fact is about" ;
+    rdfs:label "subject" .

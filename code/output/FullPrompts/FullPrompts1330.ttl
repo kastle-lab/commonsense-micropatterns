@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix work: <http://example.org/Vocabulary#> .
+# Defining the class "Work"work:Work a rdfs:Class ;
+    rdfs:label "Work"@en ;
+    rdfs:comment "The class of all works"@en .
+# Defining the properties of the class "Work"work:hasWorkName a rdf:Property ;
+    rdfs:label "has work name"@en ;
+    rdfs:domain work:Work ;
+    rdfs:range rdf:Literal .
+work:isDoneBy a rdf:Property ;
+    rdfs:label "is done by"@en ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Person .
+work:hasWorkType a rdf:Property ;
+    rdfs:label "has work type"@en ;
+    rdfs:domain work:Work ;
+    rdfs:range work:WorkType .
+# Define the additional classes usedwork:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "The class of all persons"@en .
+work:WorkType a rdfs:Class ;
+    rdfs:label "Work Type"@en ;
+    rdfs:comment "The class of all types of work"@en .

@@ -1,0 +1,27 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/rights#> .
+ex:Right a rdfs:Class ;
+  rdfs:comment "A class that defines the notion of rights" .
+ex:HumanRight a rdfs:Class ;
+  rdfs:subClassOf ex:Right .
+ex:CivilRight a rdfs:Class ;
+  rdfs:subClassOf ex:Right .
+ex:RightToEducation a rdf:Property ;
+  rdfs:domain ex:HumanRight ;
+  rdfs:range xsd:boolean .
+ex:FreedomOfSpeech a rdf:Property ;
+  rdfs:domain ex:CivilRight ;
+  rdfs:range xsd:boolean .
+ex:rightHolder a rdf:Property ;
+  rdfs:domain ex:Right ;
+  rdfs:range ex:Person .
+ex:Person a rdfs:Class ;
+  rdfs:comment "A class that defines the notion of person" .
+ex:JohnDoe a ex:Person ;
+  ex:RightToEducation true ;
+  ex:FreedomOfSpeech true .
+ex:JaneDoe a ex:Person ;
+  ex:RightToEducation true ;
+  ex:FreedomOfSpeech false .

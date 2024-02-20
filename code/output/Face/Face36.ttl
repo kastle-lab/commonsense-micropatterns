@@ -1,0 +1,8 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+dbo:Face a rdfs:Class ;
+    rdfs:label "Face"@en .
+   ex:John a dbo:Person ;
+   dbo:hasPart ex:JohnsFace .
+   ex:JohnsFace a dbo:Face .

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Define 'President' as a class:President    rdf:type owl:Class ;
+    rdfs:label "President"@en ;
+    rdfs:comment "A person who holds the office of head of state in a country"@en .
+# Define 'servesAsPresident' property that can link a person to a country:servesAsPresident    rdf:type owl:ObjectProperty ;
+    rdfs:label "serves as President"@en ;
+    rdfs:domain :Person ;
+    rdfs:range :Country ;
+    rdfs:comment "Property that connects a person to a nation where the person serves as the president"@en .
+  # Define 'termStart' property to represent term start date of a President:termStart    rdf:type owl:DatatypeProperty ;
+    rdfs:label "start of term"@en ;
+    rdfs:range xsd:dateTime ;
+    rdfs:domain :President ;
+    rdfs:comment "The date that the president's term starts"@en .
+# Define 'termEnd' property to represent term end date of a President:termEnd    rdf:type owl:DatatypeProperty ;
+    rdfs:label "end of term"@en ;
+    rdfs:range xsd:dateTime ;
+    rdfs:domain :President ;
+    rdfs:comment "The date that the president's term ends"@en .

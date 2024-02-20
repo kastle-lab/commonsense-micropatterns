@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix level: <http://example.org/level/> .
+level:Level a rdfs:Class ;
+    rdfs:label "Level"@en ;
+    rdfs:comment "A classification indicating the relative importance or competency of a particular attribute or object"@en .
+level:beginner a level:Level ;
+    rdfs:label "Beginner"@en ;
+    rdfs:comment "A level indicating limited or introductory experience or knowledge"@en .
+level:intermediate a level:Level ;
+    rdfs:label "Intermediate"@en ;
+    rdfs:comment "A level indicating some degree of experience or knowledge, but not yet advanced"@en .
+level:advanced a level:Level ;
+    rdfs:label "Advanced"@en ;
+    rdfs:comment "A level indicating significant experience or knowledge"@en .
+level:hasLevel a rdf:Property ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:range level:Level ;
+    rdfs:label "has level"@en ;
+    rdfs:comment "A property indicating the level of a particular resource"@en .
+level:isLevelOf a rdf:Property ;
+    rdfs:domain level:Level ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "is level of"@en ;
+    rdfs:comment "A property indicating the resource that a particular level applies to"@en .

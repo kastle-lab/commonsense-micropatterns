@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/exampleOntology#> .
+ex:Country a rdfs:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A class representing a Country."@en .
+ex:hasName a rdf:Property ;
+    rdfs:label "hasName"@en ;
+    rdfs:comment "A property representing the name of the Country."@en ;
+    rdfs:domain ex:Country ;
+    rdfs:range xsd:string .
+ex:hasPopulation a rdf:Property ;
+    rdfs:label "hasPopulation"@en ;
+    rdfs:comment "A property representing the population of the Country."@en ;
+    rdfs:domain ex:Country ;
+    rdfs:range xsd:integer .

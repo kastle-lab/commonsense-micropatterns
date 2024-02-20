@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Class definitionsex:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government, occupying a particular territory." .
+    ex:City a rdfs:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A large town." .
+ex:State a rdfs:Class ;
+    rdfs:label "State" ;
+    rdfs:comment "A nation or territory considered as an organized political community under one government." .
+    # Property definitionsex:hasState a rdf:Property ;
+    rdfs:label "has state" ;
+    rdfs:comment "Property linking country to its states." ;
+    rdfs:domain ex:Country ;
+    rdfs:range ex:State .
+ex:hasCity a rdf:Property ;
+    rdfs:label "has city" ;
+    rdfs:comment "Property linking country or state to its cities." ;
+    rdfs:domain ex:Country, ex:State ;
+    rdfs:range ex:City .
+ex:hasCapital a rdf:Property ;
+    rdfs:label "has capital" ;
+    rdfs:comment "Property linking country to its capital city." ;
+    rdfs:domain ex:Country ;
+    rdfs:range ex:City .
+ex:hasPopulation a rdf:Property ;
+    rdfs:label "has population" ;
+    rdfs:comment "Property linking country to its population." ;
+    rdfs:domain ex:Country ;
+    rdfs:range rdfs:Literal .

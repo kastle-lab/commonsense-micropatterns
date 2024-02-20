@@ -1,0 +1,30 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/reason#> .
+:Reason a owl:Class ;
+  rdfs:label "Reason"@en ;
+  rdfs:comment "The base for an argument or a decision, explanation or justification"@en .
+:HasReason a owl:ObjectProperty ;
+  rdfs:label "has reason"@en ;
+  rdfs:comment "Relates an entity with a reason"@en ;
+  rdfs:domain owl:Thing ;
+  rdfs:range :Reason .
+:Argument a owl:Class ;
+  rdfs:label "Argument"@en ;
+  rdfs:subClassOf [ a owl:Restriction ;
+    owl:onProperty :HasReason ;
+    owl:someValuesFrom :Reason  ] .
+:Decision a owl:Class ;
+  rdfs:label "Decision"@en ;
+  rdfs:comment "An entity resulted from reasoning"@en ;
+  rdfs:subClassOf [ a owl:Restriction ;
+    owl:onProperty :HasReason ;
+    owl:someValuesFrom :Reason  ] .
+:Statement a owl:Class ;
+  rdfs:label "Statement"@en ;
+  rdfs:comment "A representation of an articulated reasoning"@en ;
+  rdfs:subClassOf [ a owl:Restriction ;
+    owl:onProperty :HasReason ;
+    owl:someValuesFrom :Reason  ] .

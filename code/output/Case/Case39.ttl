@@ -1,0 +1,20 @@
+@prefix : <http://example.org/case#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Case a rdfs:Class ;
+  rdfs:label "Case"@en ;
+  rdfs:comment "A particular instance or situation to be studied or analyzed."@en ;
+  rdfs:subClassOf :Situation .
+  :hasCaseStatus a rdfs:Property ;
+  rdfs:label "has case status"@en ;
+  rdfs:domain :Case ;
+  rdfs:range :CaseStatus .
+  :CaseStatus a rdfs:Class ;
+  rdfs:label "Case status"@en ;
+  rdfs:comment "Current state of a case."@en ;
+  rdfs:subClassOf :Status .
+  :Open a :CaseStatus ;
+  rdfs:label "Open"@en ;
+  rdfs:comment "The case is currently active and under investigation."@en .
+:Closed a :CaseStatus ;
+  rdfs:label "Closed"@en ;
+  rdfs:comment "The case is resolved and no longer active."@en .

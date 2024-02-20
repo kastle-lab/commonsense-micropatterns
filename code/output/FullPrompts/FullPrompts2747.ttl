@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix serviceOnt: <http://www.example.org/service-ontology#> .
+serviceOnt:Service a rdfs:Class ;
+    rdfs:label "Service"^^xsd:string ;
+    rdfs:comment "A service provided to customers by a company or organization"^^xsd:string .
+serviceOnt:name a rdf:Property ;
+    rdfs:label "has name"^^xsd:string ;
+    rdfs:domain serviceOnt:Service ;
+    rdfs:range xsd:string .
+serviceOnt:type a rdf:Property ;
+    rdfs:label "has type"^^xsd:string ;
+    rdfs:domain serviceOnt:Service ;
+    rdfs:range serviceOnt:ServiceType .
+serviceOnt:ServiceType a rdfs:Class ;
+    rdfs:label "Service type"^^xsd:string ;
+    rdfs:comment "The type or category of a service"^^xsd:string .
+serviceOnt:Provider a rdfs:Class ;
+    rdfs:label "Service provider"^^xsd:string ;
+    rdfs:comment "The organization or company that provides the service"^^xsd:string .
+serviceOnt:providesService a rdf:Property ;
+    rdfs:label "provides service"^^xsd:string ;
+    rdfs:domain serviceOnt:Provider ;
+    rdfs:range serviceOnt:Service .
+serviceOnt:Customer a rdfs:Class ;
+    rdfs:label "Customer"^^xsd:string ;
+    rdfs:comment "The individual or organization that uses the service"^^xsd:string .
+serviceOnt:usesService a rdf:Property ;
+    rdfs:label "uses service"^^xsd:string ;
+    rdfs:domain serviceOnt:Customer ;
+    rdfs:range serviceOnt:Service .
+serviceOnt:Price a rdfs:Class ;
+    rdfs:label "Price"^^xsd:string ;
+    rdfs:comment "The cost of a service"^^xsd:string .
+serviceOnt:hasPrice a rdf:Property ;
+    rdfs:label "has price"^^xsd:string ;
+    rdfs:domain serviceOnt:Service ;
+    rdfs:range serviceOnt:Price .

@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vocab: <http://example.org/vocab#> .
+vocab:Sofa rdf:type rdfs:Class .
+vocab:material rdf:type rdf:Property ;
+  rdfs:domain vocab:Sofa .
+  vocab:color rdf:type rdf:Property ;
+  rdfs:domain vocab:Sofa .
+vocab:size rdf:type rdf:Property ;
+  rdfs:domain vocab:Sofa .
+vocab:manufacturer rdf:type rdf:Property ;
+  rdfs:domain vocab:Sofa .
+vocab:price rdf:type rdf:Property ;
+  rdfs:domain vocab:Sofa .
+vocab:design rdf:type rdf:Property ;
+  rdfs:domain vocab:Sofa .

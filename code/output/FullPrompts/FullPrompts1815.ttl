@@ -1,0 +1,20 @@
+ It includes information about two types of power: "ElectricalPower" and "MechanicalPower".
+ The ontology is defined in the Turtle language.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix power: <http://www.powerontology.org/entities#> .
+power: a owl:Ontology ;
+    rdfs:comment "An ontology for describing different types of power"@en .
+power:Power a rdfs:Class ;
+    rdfs:label "Power"@en ;
+    rdfs:comment "The ability to do something or act in a particular way"@en .
+power:ElectricalPower a rdfs:Class ;
+    rdfs:label "Electrical Power"@en ;
+    rdfs:comment "The rate at which electrical energy is transferred by an electric circuit"@en ;
+    rdfs:subClassOf power:Power .
+power:MechanicalPower a rdfs:Class ;
+    rdfs:label "Mechanical Power"@en ;
+    rdfs:comment "The rate at which work is done or energy is transferred in mechanical systems"@en ;
+    rdfs:subClassOf power:Power .

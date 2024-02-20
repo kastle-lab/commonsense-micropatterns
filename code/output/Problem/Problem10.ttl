@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prob: <http://www.example.org/problem#> .
+prob:Problem rdf:type owl:Class ;
+    rdfs:label "Problem" ;
+    rdfs:comment "A class representing problems which can be in various domains." .
+prob:hasSolution rdf:type owl:ObjectProperty ;
+    rdfs:label "has solution" ;
+    rdfs:comment "Represent the relationship between a problem and its possible solution(s)." ;
+    rdfs:domain prob:Problem ;
+    rdfs:range prob:Solution .
+prob:Solution rdf:type owl:Class ;
+    rdfs:label "Solution" ;
+    rdfs:comment "A class indicating possible solutions to a problem." .
+prob:hasDifficulty rdf:type owl:DatatypeProperty ;
+    rdfs:label "has difficulty" ;
+    rdfs:comment "Represent the difficulty of a problem, which could be subjective and varies." ;
+    rdfs:domain prob:Problem ;
+    rdfs:range rdf:langString .
+prob:belongsToDomain rdf:type owl:ObjectProperty ;
+    rdfs:label "belongs to domain" ;
+    rdfs:comment "Indicates the domain to which a problem belongs." ;
+    rdfs:domain prob:Problem ;
+    rdfs:range prob:Domain .
+prob:Domain rdf:type owl:Class ;
+    rdfs:label "Domain" ;
+    rdfs:comment "A class representing the domain that a problem can have." .

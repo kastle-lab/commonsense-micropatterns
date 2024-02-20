@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix house: <http://example.org/house#> .
+house:House rdf:type owl:Class ;
+    rdfs:comment "Class representing a house" ;
+    rdfs:label "House"@en .
+house:owner rdf:type owl:DatatypeProperty ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The owner of the house" ;
+    rdfs:label "owner"@en .
+house:hasRoom rdf:type owl:ObjectProperty ;
+    rdfs:domain house:House ;
+    rdfs:range house:Room ;
+    rdfs:comment "The house has this room" ;
+    rdfs:label "has room"@en .
+house:Room rdf:type owl:Class ;
+    rdfs:comment "Class representing a room in the house" ;
+    rdfs:label "Room"@en .
+house:roomType rdf:type owl:DatatypeProperty ;
+    rdfs:domain house:Room ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The type of the room" ;
+    rdfs:label "room type"@en .
+house:area rdf:type owl:DatatypeProperty ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The area of the house in square meters." ;
+    rdfs:label "area"@en .
+house:address rdf:type owl:DatatypeProperty ;
+    rdfs:domain house:House ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The address of the house." ;
+    rdfs:label "address"@en .

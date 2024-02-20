@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix study: <http://example.org/study#> .
+study:Study rdf:type rdfs:Class .
+study:Subject rdf:type rdfs:Class .
+study:hasSubject rdf:type rdf:Property;
+    rdfs:domain study:Study;
+    rdfs:range study:Subject .
+study:Course rdf:type rdfs:Class .
+study:isPartOf rdf:type rdf:Property;
+    rdfs:domain study:Subject;
+    rdfs:range study:Course.study:Reference rdf:type rdfs:Class .
+study:hasReference rdf:type rdf:Property;
+    rdfs:domain study:Study;
+    rdfs:range study:Reference .
+study:Professor rdf:type rdfs:Class.study:lecturedBy rdf:type rdf:Property;
+    rdfs:domain study:Course;
+    rdfs:range study:Professor.study:Student rdf:type rdfs:Class.study:studiedBy rdf:type rdf:Property;
+    rdfs:domain study:Course;
+    rdfs:range study:Student.

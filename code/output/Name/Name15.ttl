@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix name: <http://example.org/ontology/name#> .
+name:    rdf:type rdfs:Class ;
+    rdfs:label "Name"@en ;
+    rdfs:comment "Class definition of Name"@en .
+name:firstName:    rdf:type rdfs:Datatype ;
+    rdfs:label "First name"@en ;
+    rdfs:subClassOf xsd:string ;
+    rdfs:comment "A person's given name"@en .
+name:lastName:    rdf:type rdfs:Datatype ;
+    rdfs:label "Last name"@en ;
+    rdfs:subClassOf xsd:string ;
+    rdfs:comment "A person's surname"@en .
+name:middleName:    rdf:type rdfs:Datatype ;
+    rdfs:label "Middle name"@en ;
+    rdfs:subClassOf xsd:string ;
+    rdfs:comment "A person's middle name"@en .

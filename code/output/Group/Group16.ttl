@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix grp: <http://example.org/group#> .
+grp:Group rdf:type rdfs:Class ;
+  rdfs:comment "A class representing a group" ;
+  rdfs:subClassOf rdfs:Resource .
+grp:hasMember rdf:type rdf:Property ;
+  rdfs:comment "Property representing membership of a group" ;
+  rdfs:domain grp:Group ;
+  rdfs:range rdfs:Resource .
+grp:name rdf:type rdf:Property ;
+  rdfs:comment "Property representing a group's name" ;
+  rdfs:domain grp:Group ;
+  rdfs:range xsd:string .
+grp:hasGroupSize rdf:type rdf:Property ;
+  rdfs:comment "Property representing the size of a group" ;
+  rdfs:domain grp:Group ;
+  rdfs:range xsd:integer .
+grp:GroupType rdf:type rdfs:Class ;
+  rdfs:comment "A class representing types of group" ;
+  rdfs:subClassOf rdfs:Resource .
+grp:ofType rdf:type rdf:Property ;
+  rdfs:comment "Property indicating the type of a group" ;
+  rdfs:domain grp:Group ;
+  rdfs:range grp:GroupType .
+ grp:hasLeader rdf:type rdf:Property ;
+  rdfs:comment "Property indicating the leader of a group" ;
+  rdfs:domain grp:Group ;
+  rdfs:range rdfs:Resource .

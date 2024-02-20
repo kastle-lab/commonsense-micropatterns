@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.org/day#> .
+day:Day rdfs:subClassOf rdfs:Resource .
+day:Day rdfs:comment "The period of time each complete rotation of the earth makes with respect to the sun."@en ;
+day:hasDate a rdf:Property ;
+  rdfs:domain day:Day ;
+  rdfs:range xsd:date ;
+  rdfs:comment "The date of a day"@en ;
+  rdfs:label "hasDate"@en .
+day:hasDayOfWeek a rdf:Property ;
+  rdfs:domain day:Day ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The day of a week"@en ;
+  rdfs:label "hasDayOfWeek"@en .
+day:isWeekend a rdf:Property ;
+  rdfs:domain day:Day ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "True if the day is a weekend"@en ;
+  rdfs:label "isWeekend"@en .
+day:isPublicHoliday a rdf:Property ;
+  rdfs:domain day:Day ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "True if the day is a public holiday"@en ;
+  rdfs:label "isPublicHoliday"@en .
+day:isBusinessDay a rdf:Property ;
+  rdfs:domain day:Day ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "True if the day is a business day"@en ;
+  rdfs:label "isBusinessDay"@en .

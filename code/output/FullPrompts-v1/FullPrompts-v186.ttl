@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix way: <http://www.example.org/way#> .
+way:Way rdf:type rdfs:Class ;
+rdfs:label "Way"@en ;
+rdfs:comment "A method, route, direction, or manner of doing something"@en .
+way:direction rdf:type owl:ObjectProperty ;
+rdfs:label "direction"@en ;
+rdfs:domain way:Way ;
+rdfs:range way:Direction .
+way:method rdf:type owl:ObjectProperty ;
+rdfs:label "method"@en ;
+rdfs:domain way:Way ;
+rdfs:range way:Method .
+way:Method rdf:type rdfs:Class ;
+rdfs:label "Method"@en ;
+rdfs:comment "A particular procedure for accomplishing or approaching something"@en .
+way:Direction rdf:type rdfs:Class ;
+rdfs:label "Direction"@en ;
+rdfs:comment "A course along which someone or something moves"@en .
+way:Route rdf:type rdfs:Class ;
+rdfs:label "Route"@en ;
+rdfs:comment "A way or course taken in getting from a starting point to a destination"@en .
+way:route rdf:type owl:ObjectProperty ;
+rdfs:label "route"@en ;
+rdfs:domain way:Way ;
+rdfs:range way:Route .

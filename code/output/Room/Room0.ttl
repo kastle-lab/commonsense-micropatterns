@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix room: <http://example.com/room#> .
+room:     rdf:type rdfs:Class ;
+    rdfs:label "Room"@en ;
+    rdfs:comment "Class representing a room or rooms"@en .
+room:hasRoomNumber    rdf:type rdf:Property ;
+    rdfs:domain room: ;
+    rdfs:range xsd:string ;
+    rdfs:label "has room number"@en ;
+    rdfs:comment "The room number of the room"@en .
+room:hasSize    rdf:type rdf:Property ;
+    rdfs:domain room: ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has size"@en ;
+    rdfs:comment "The size of the room in square meters"@en .
+room:hasWindows    rdf:type rdf:Property ;
+    rdfs:domain room: ;
+    rdfs:range xsd:int ;
+    rdfs:label "has windows"@en ;
+    rdfs:comment "The number of windows in the room"@en .
+room:isInBuilding    rdf:type rdf:Property ;
+    rdfs:domain room: ;
+    rdfs:range :Building ;
+    rdfs:label "is in building"@en ;
+    rdfs:comment "The building in which the room is located"@en .
+room:isOccupied    rdf:type rdf:Property ;
+    rdfs:domain room: ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "is occupied"@en ;
+    rdfs:comment "Indicates whether the room is currently occupied"@en .

@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kind: <http://example.org/kind#> .
+kind:Kind rdf:type rdfs:Class ;
+    rdfs:comment "The general concept of being a type or sort of thing"@en ;
+    rdfs:label "Kind"@en .
+kind:Animal rdf:type kind:Kind ;
+    rdfs:comment "Animals are a kind of living organisms"@en ;
+    rdfs:label "Animal"@en .
+kind:Plant rdf:type kind:Kind ;
+    rdfs:comment "Plants are a kind of living organisms that perform photosynthesis"@en ;
+    rdfs:label "Plant"@en .
+kind:Mineral rdf:type kind:Kind ;
+    rdfs:comment "Minerals are a kind of naturally-occurring inorganic solid"@en ;
+    rdfs:label "Mineral"@en .

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Hour rdf:type rdfs:Class ;
+  rdfs:label "Hour"@en .
+ex:hasHour rdf:type rdf:Property ;
+  rdfs:label "has hour"@en ;
+  rdfs:domain ex:Time ;
+  rdfs:range ex:Hour .
+ex:Time rdf:type rdfs:Class ;
+  rdfs:label "Time"@en .
+ex:SpecificTime rdf:type ex:Title ;
+  ex:hasHour "12"^^xsd:integer .
+ex:isPartOf rdf:type rdf:Property ;
+  rdfs:label "is part of"@en ;
+  rdfs:domain ex:Hour ;
+  rdfs:range ex:Day .
+ex:Day rdf:type rdfs:Class ;
+  rdfs:label "Day"@en .
+ex:SpecificHour rdf:type ex:Hour ;
+  ex:isPartOf "Monday" .

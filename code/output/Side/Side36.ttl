@@ -1,0 +1,5 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Side rdf:type rdfs:Class .
+ex:leftSide rdf:type ex:Side .
+ex:rightSide rdf:type ex:Side .

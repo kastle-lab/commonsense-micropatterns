@@ -1,0 +1,54 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix home: <http://example.com/home#> .
+home:     a dbo:Place ;
+    rdfs:label "Home"@en ;
+    rdfs:comment "A place where an individual or family resides"@en .
+home:Room     a rdfs:Class ;
+    rdfs:label "Room"@en ;
+    rdfs:comment "A distinct area within a home, such as a bedroom or kitchen"@en ;
+    rdfs:subClassOf home: .
+home:Bedroom     a rdfs:Class ;
+    rdfs:label "Bedroom"@en ;
+    rdfs:comment "A room for sleeping in"@en ;
+    rdfs:subClassOf home:Room .
+home:Kitchen     a rdfs:Class ;
+    rdfs:label "Kitchen"@en ;
+    rdfs:comment "A room used for cooking and food preparation"@en ;
+    rdfs:subClassOf home:Room .
+home:Bathroom     a rdfs:Class ;
+    rdfs:label "Bathroom"@en ;
+    rdfs:comment "A room containing a bathtub or a shower and usually also a washbasin and a toilet"@en ;
+    rdfs:subClassOf home:Room .
+home:Furniture     a rdfs:Class ;
+    rdfs:label "Furniture"@en ;
+    rdfs:comment "Items that can be moved and used to make a house, office, or other area ready for living or working"@en .
+  home:Bed     a rdfs:Class ;
+    rdfs:label "Bed"@en ;
+    rdfs:comment "A piece of furniture for sleep or rest, typically a framework with a mattress"@en ;
+    rdfs:subClassOf home:Furniture .
+home:Table     a rdfs:Class ;
+    rdfs:label "Table"@en ;
+    rdfs:comment "A piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or working"@en ;
+    rdfs:subClassOf home:Furniture .
+home:Person    a dbo:Person ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human being regarded as an individual"@en .
+home:hasRoom    a owl:ObjectProperty ;
+    rdfs:domain home: ;
+    rdfs:range home:Room ;
+    rdfs:label "has room"@en ;
+    rdfs:comment "Relates a home to its rooms"@en .
+home:hasFurniture     a owl:ObjectProperty ;
+    rdfs:domain home:Room ;
+    rdfs:range home:Furniture ;
+    rdfs:label "has furniture"@en ;
+    rdfs:comment "Relates a room to its furniture"@en .
+home:residesIn     a owl:ObjectProperty ;
+     rdfs:domain home:Person ;
+     rdfs:range home: ;
+     rdfs:label "resides in"@en ;
+     rdfs:comment "Relates a person to the home they live in"@en .

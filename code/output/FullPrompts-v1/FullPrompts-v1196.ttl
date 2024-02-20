@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/thing_ontology#> .
+:Thing a rdfs:Class ;
+    rdfs:label "Thing"@en ;
+    rdfs:comment "Class that represents a Thing in our ontology."@en ;
+    rdfs:subClassOf rdfs:Resource .

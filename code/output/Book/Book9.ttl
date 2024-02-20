@@ -1,0 +1,37 @@
+@prefix : <http://www.example.com/book#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Book a rdfs:Class ;
+    rdfs:label "Book" ;
+    rdfs:comment "A written or printed work consisting of pages glued or sewn together along one side and bound in covers." .
+:hasTitle a rdfs:Property ;
+    rdfs:label "has title" ;
+    rdfs:comment "Title of the book" ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:string .
+:hasAuthor a rdfs:Property ;
+    rdfs:label "has author" ;
+    rdfs:comment "Author of the book" ;
+    rdfs:domain :Book ;
+    rdfs:range :Author .
+:Author a rdfs:Class ;
+    rdfs:label "Author" ;
+    rdfs:comment "The writer of a book, article, or report." .
+:hasISBN a rdfs:Property ;
+    rdfs:label "has ISBN" ;
+    rdfs:comment "International Standard Book Number of the book" ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:string .
+:hasPublicationYear a rdfs:Property ;
+    rdfs:label "has publication year" ;
+    rdfs:comment "The year when the book was published" ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:date .
+:hasPublisher a rdfs:Property ;
+    rdfs:label "has publisher" ;
+    rdfs:comment "The publisher of the book" ;
+    rdfs:domain :Book ;
+    rdfs:range :Publisher .
+:Publisher a rdfs:Class ;
+    rdfs:label "Publisher" ;
+    rdfs:comment "The company or person that prepares and issues books, journals, music, or other works for sale." .

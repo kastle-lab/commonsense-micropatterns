@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix game: <http://example.org/game#> .
+game:Game rdf:type rdfs:Class ;
+    rdfs:label "Game"@en ;
+    rdfs:comment "A class representing games."@en ;
+    rdfs:subClassOf rdfs:Resource .
+game:VideoGame rdf:type rdfs:Class ;
+    rdfs:label "Video Game"@en ;
+    rdfs:comment "A game played by electronically manipulating images produced by a computer program on a television screen or other display screen."@en ;
+    rdfs:subClassOf game:Game .
+game:BoardGame rdf:type rdfs:Class ;
+    rdfs:label "Board Game"@en ;
+    rdfs:comment "A game played on a specifically designed board"@en ;
+    rdfs:subClassOf game:Game .
+game:CardGame rdf:type rdfs:Class ;
+    rdfs:label "Card Game"@en ;
+    rdfs:comment "A game using playing cards as the primary device"@en ;
+    rdfs:subClassOf game:Game .
+game:name rdf:type owl:DatatypeProperty ;
+    rdfs:domain game:Game ;
+    rdfs:range xsd:string ;
+    rdfs:label "name"@en ;
+    rdfs:comment "Denotes the name of the game."@en .
+game:hasPlayer rdf:type owl:ObjectProperty ;
+    rdfs:domain game:Game ;
+    rdfs:range game:Player ;
+    rdfs:label "has player"@en ;
+    rdfs:comment "Relates a game to its players."@en .
+game:Player rdf:type rdfs:Class ;
+    rdfs:label "Player"@en ;
+    rdfs:comment "Represents a person who plays a game."@en .
+game:playerName rdf:type owl:DatatypeProperty ;
+    rdfs:domain game:Player ;
+    rdfs:range xsd:string ;
+    rdfs:label "player name"@en ;
+    rdfs:comment "The name of the player."@en .

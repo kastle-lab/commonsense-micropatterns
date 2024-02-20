@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Month a rdfs:Class .
+ex:January a ex:Month .
+ex:February a ex:Month .
+ex:March a ex:Month .
+ex:April a ex:Month .
+ex:May a ex:Month .
+ex:June a ex:Month .
+ex:July a ex:Month .
+ex:August a ex:Month .
+ex:September a ex:Month .
+ex:October a ex:Month .
+ex:November a ex:Month.ex:December a ex:Month.

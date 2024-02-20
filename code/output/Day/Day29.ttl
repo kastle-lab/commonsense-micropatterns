@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Day a rdfs:Class ;
+    rdfs:label "Day" ;
+    rdfs:comment "Representation of a day within a specific context or instance" .
+ex:hasDay a rdf:Property ;
+    rdfs:label "has day" ;
+    rdfs:comment "Relates an entity to the day of the week" ;
+    rdfs:range xsd:string ;
+    rdfs:domain ex:Day .
+ ex:Monday a ex:Day ;
+    rdfs:label "Monday" ;
+    rdfs:comment "First day of the week" .

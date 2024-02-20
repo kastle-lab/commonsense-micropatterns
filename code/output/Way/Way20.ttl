@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/#> .
+:Way a rdfs:Class ;
+    rdfs:label "Way" ;
+    rdfs:comment "A route or path from one place to another." .
+:hasStartPoint a rdf:Property ;
+    rdfs:domain :Way ;
+    rdfs:range :Point ;
+    rdfs:label "has start point" ;
+    rdfs:comment "The initial point of a way." .
+:hasEndPoint a rdf:Property ;
+    rdfs:domain :Way ;
+    rdfs:range :Point ;
+    rdfs:label "has end point" ;
+    rdfs:comment "The final point of a way." .
+:Point a rdfs:Class ;
+    rdfs:label "Point" ;
+    rdfs:comment "A position or place in a space." .

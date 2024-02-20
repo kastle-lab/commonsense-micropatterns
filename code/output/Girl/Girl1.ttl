@@ -1,0 +1,14 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+_:Girl a schema:Person;
+    schema:gender "Female"^^xsd:string;
+    schema:additionalType schema:Child._:Schoolgirl a schema:Person;
+    schema:gender "Female"^^xsd:string;
+    schema:additionalType schema:Student._:TeenageGirl a schema:Person;
+    schema:gender "Female"^^xsd:string;
+    schema:age "13-19"^^xsd:string._:GirlScout a schema:Person;
+    schema:gender "Female"^^xsd:string;
+    schema:memberOf _:ScoutGroup._:ScoutGroup a schema:Organization;
+    schema:name "Girl Scouts"^^xsd:string._:BabyGirl a schema:Person;
+    schema:gender "Female"^^xsd:string;
+    schema:additionalType schema:Infant.

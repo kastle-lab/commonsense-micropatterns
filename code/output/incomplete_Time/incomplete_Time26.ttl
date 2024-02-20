@@ -1,0 +1,28 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+<http://www.example.org/ontology/time#>  a owl:Ontology ;
+  rdfs:comment "An ontology of time"@en .
+time:Instant  a owl:Class ;
+  rdfs:comment "A point in time"@en .
+time:Interval  a owl:Class ;
+  rdfs:comment "A period of time"@en ;
+  rdfs:subClassOf time:TemporalEntity .
+time:TemporalEntity  a owl:Class ;
+  rdfs:comment "An entity that exists in time"@en .
+time:hasTime  a owl:ObjectProperty ;
+  rdfs:domain time:TemporalEntity ;
+  rdfs:range time:Instant .
+time:hasBeginning  a owl:ObjectProperty ;
+  rdfs:domain time:Interval ;
+  rdfs:range time:Instant .
+time:hasEnd  a owl:ObjectProperty ;
+  rdfs:domain time:Interval ;
+  rdfs:range time:Instant .
+time:duration  a owl:DatatypeProperty ;
+  rdfs:domain time:Interval ;
+  rdfs:range xsd:duration .
+time:inDateTime  a owl:DatatypeProperty ;
+  rdfs:domain time:Instant ;
+  rdfs:range xsd:dateTime .

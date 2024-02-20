@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix group: <http://example.org/group#> .
+group:Group rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a group."@en ;
+    rdfs:label "Group"@en .
+group:groupName rdf:type rdf:Property ;
+    rdfs:comment "The name of the group."@en ;
+    rdfs:label "Group Name"@en ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:string .
+group:groupSize rdf:type rdf:Property ;
+    rdfs:comment "The size of the group."@en ;
+    rdfs:label "Group Size"@en ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:integer .
+group:groupMember rdf:type rdf:Property ;
+    rdfs:comment "A member of the group."@en ;
+    rdfs:label "Group Member"@en ;
+    rdfs:domain group:Group ;
+    rdfs:range group:Member .
+group:Member rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a member."@en ;
+    rdfs:label "Member"@en .
+group:memberName rdf:type rdf:Property ;
+    rdfs:comment "The name of the member."@en ;
+    rdfs:label "Member Name"@en ;
+    rdfs:domain group:Member ;
+    rdfs:range xsd:string .

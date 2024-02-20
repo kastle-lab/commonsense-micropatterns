@@ -1,0 +1,19 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Define classes for Student and Courseex:Student rdfs:subClassOf rdfs:Resource .
+ex:Course rdfs:subClassOf rdfs:Resource .
+# Define properties for studentName, studentID and attendsCourseex:studentName rdf:type rdf:Property ;
+   rdfs:domain ex:Student ;
+   rdfs:range rdf:Literal .
+ex:studentID rdf:type rdf:Property ;
+   rdfs:domain ex:Student ;
+   rdfs:range rdf:Literal .
+ex:attendsCourse rdf:type rdf:Property ;
+   rdfs:domain ex:Student ;
+   rdfs:range ex:Course .
+# An individual (studentJohn) is an instance of Class Student# studentJohn has properties studentName and studentID, attendsCourse ex:math101ex:studentJohn rdf:type ex:Student ;
+     ex:studentName "John Doe" ;
+     ex:studentID "JD123" ;
+     ex:attendsCourse ex:math101 .
+# A course (math101) is an instance of Class Courseex:math101 rdf:type ex:Course .

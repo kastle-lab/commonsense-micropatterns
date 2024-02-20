@@ -1,0 +1,40 @@
+`@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix game: <http://example.com/game#> .
+game:Game  rdf:type rdfs:Class ;
+  rdfs:comment "The class of all games" .
+game:hasName  rdf:type rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the game" .
+game:hasGenre  rdf:type rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range game:Genre ;
+  rdfs:comment "The genre of the game" .
+game:hasPlayer  rdf:type rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range game:Player ;
+  rdfs:comment "The player of the game" .
+game:Genre  rdf:type rdfs:Class ;
+  rdfs:comment "The class of all game genres" .
+game:Player  rdf:type rdfs:Class ;
+  rdfs:comment "The class of all game players" .
+game:hasAgeRating  rdf:type rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range game:AgeRating ;
+  rdfs:comment "The age rating of the game" .
+game:AgeRating  rdf:type rdfs:Class ;
+  rdfs:comment "The class of all age ratings for games" .
+game:isSinglePlayer  rdf:type rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Indicates whether the game is single player" .
+# You can also define individuals and instances of classes like so:game:Action  rdf:type game:Genre ;
+  rdfs:label "Action" .
+game:Minecraft  rdf:type game:Game ;
+  game:hasName "Minecraft" ;
+  game:hasGenre game:Action ;
+  game:isSinglePlayer "true"^^xsd:boolean .
+`  In this ontology, we define the concept of a 'Game', with properties such as 'hasName', 'hasGenre', 'hasPlayer', 'hasAgeRating' and 'isSinglePlayer'. The classes 'Genre', 'Player' and 'AgeRating' are defined as well. We have also instantiated a few examples with the 'Action' genre and a game called 'Minecraft'.

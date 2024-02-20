@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Family a owl:Class ;
+    rdfs:subClassOf :SocietalGroup ;
+    rdfs:label "Family"@en ;
+    rdfs:comment "A group of people related by blood, marriage, or adoption"@en .
+:hasMember a owl:ObjectProperty ;
+    rdfs:domain :Family ;
+    rdfs:range :Person ;
+    rdfs:label "has member"@en ;
+    rdfs:comment "A relationship representing that a person is a member of a family"@en .
+:Person a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human individual"@en .

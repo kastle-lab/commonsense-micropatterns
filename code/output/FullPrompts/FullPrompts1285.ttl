@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Question a rdfs:Class ;
+  rdfs:label "Question" ;
+  rdfs:comment "Class representing a question.It has properties such as question text and answer."ex:hasQuestionText a rdf:Property ;
+  rdfs:label "hasQuestionText" ;
+  rdfs:comment "Property representing the text of the question. It is a datatype property as it links a question instance to a literal (text)." ;
+  rdfs:domain ex:Question ;
+  rdfs:range rdfs:Literal .
+ex:hasAnswer a rdf:Property ;
+  rdfs:label "hasAnswer" ;
+  rdfs:comment "Property represents the answer to the question. It could either be a datatype property (textual answer) or an object property (links to answer entity)" ;
+  rdfs:domain ex:Question ;
+  rdfs:range rdfs:Resource .
+# Instance of a Questionex:Question1 a ex:Question ;
+  ex:hasQuestionText "What's the capital of France?" ;
+  ex:hasAnswer "Paris" .

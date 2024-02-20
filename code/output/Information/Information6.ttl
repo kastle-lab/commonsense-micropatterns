@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix info: <http://www.example.org/info#> .
+info:     a owl:Ontology ;
+    rdfs:comment "An ontology about Information" .
+info:Information    a rdfs:Class ;
+    rdfs:label "Information" ;
+    rdfs:comment "Concept that entails data, knowledge or any type of valued content." .
+info:Data    a rdfs:Class ;
+     rdfs:subClassOf info:Information ;
+    rdfs:comment "Representation of information in a formalized manner suitable for communication, interpretation, or processing." .
+info:Knowledge    a rdfs:Class ;
+     rdfs:subClassOf info:Information ;
+    rdfs:comment "Awareness or understanding of facts, information, descriptions, or skills." .
+info:hasSource    a rdf:Property ;
+    rdfs:domain info:Information ;
+    rdfs:range info:Source ;
+    rdfs:label "has Source" ;
+    rdfs:comment "Source or origin of Information." .
+info:Source    a rdfs:Class ;
+    rdfs:label "Source" ;
+    rdfs:comment "Place, person, or thing from where the Information originates, can be a book, website, etc." .
+info:hasFormat    a rdf:Property ;
+    rdfs:domain info:Information ;
+    rdfs:range info:Format ;
+    rdfs:label "has format" ;
+    rdfs:comment "the Medium through which Information is present. can be a book, digital file, etc." .
+info:Format    a rdfs:Class ;
+    rdfs:label "Format" ;
+    rdfs:comment "The medium in which information is stored or represented." .

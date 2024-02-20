@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sofa: <http://www.example.com/sofa#> .
+sofa:Sofa rdf:type owl:Class ;
+         rdfs:label "Sofa" ;
+         rdfs:comment "A large, comfortable piece of furniture for sitting" .
+sofa:hasColor rdf:type owl:DatatypeProperty ;
+         rdfs:label "has color" ;
+         rdfs:comment "The color of the sofa" ;
+         rdfs:domain sofa:Sofa ;
+         rdfs:range xsd:string .
+sofa:hasMaterial rdf:type owl:ObjectProperty ;
+         rdfs:label "has material" ;
+         rdfs:comment "The material the sofa is made of" ;
+         rdfs:domain sofa:Sofa ;
+         rdfs:range sofa:Material .
+sofa:Material rdf:type owl:Class ;
+         rdfs:label "Material" ;
+         rdfs:comment "The type material from which a sofa is made" .
+sofa:leather rdf:type sofa:Material ;
+         rdfs:label "Leather" .
+sofa:fabric rdf:type sofa:Material ;
+         rdfs:label "Fabric" .
+sofa:hasSize rdf:type owl:DatatypeProperty ;
+         rdfs:label "has size" ;
+         rdfs:comment "The size of the sofa" ;
+         rdfs:domain sofa:Sofa ;
+         rdfs:range xsd:nonNegativeInteger .
+sofa:hasStyle rdf:type owl:ObjectProperty ;
+         rdfs:label "has style" ;
+         rdfs:comment "The style of the sofa" ;
+         rdfs:domain sofa:Sofa ;
+         rdfs:range sofa:Style .
+sofa:Style rdf:type owl:Class ;
+         rdfs:label "Style" ;
+         rdfs:comment "The style of a sofa" .
+sofa:modern rdf:type sofa:Style ;
+         rdfs:label "Modern" .
+sofa:classic rdf:type sofa:Style ;
+         rdfs:label "Classic" .

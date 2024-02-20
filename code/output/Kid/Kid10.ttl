@@ -1,0 +1,30 @@
+@base <http://example.org/> .
+@prefix kid: <http://example.org/kid#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+kid: a owl:Class ;
+        rdfs:label "Kid"^^xsd:string ;
+        rdfs:comment "Represents a kid or children"^^xsd:string .
+kid:hasName a owl:DatatypeProperty ;
+          rdfs:label "has name"^^xsd:string ;
+          rdfs:comment "Represents the name of the kid"^^xsd:string ;
+          rdfs:domain kid: ;
+          rdfs:range xsd:string .
+kid:age a owl:DatatypeProperty ;
+        rdfs:label "age"^^xsd:string ;
+        rdfs:comment "Represents the age of the kid"^^xsd:string ;
+        rdfs:domain kid: ;
+        rdfs:range xsd:integer .
+        kid:hasSibling a owl:ObjectProperty ;
+             rdfs:label "has sibling"^^xsd:string ;
+             rdfs:comment "Represents a relationship between two kids who are siblings"^^xsd:string ;
+             rdfs:domain kid: ;
+             rdfs:range kid: .
+kid:attendsSchool a owl:ObjectProperty ;
+                  rdfs:label "attends school"^^xsd:string ;
+                  rdfs:comment "Represents the school which the kid attends"^^xsd:string ;
+                  rdfs:domain kid: .
+                  kid:School a owl:Class ;
+             rdfs:label "School"^^xsd:string ;
+             rdfs:comment "Represents a school or educational institution"^^xsd:string .

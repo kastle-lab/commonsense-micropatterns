@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Place a rdfs:Class ;
+  rdfs:comment "A location or space" ;
+  rdfs:subClassOf owl:Thing .
+  ex:name a owl:DatatypeProperty ;
+  rdfs:domain ex:Place ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the place" .
+    ex:address a owl:DatatypeProperty ;
+  rdfs:domain ex:Place ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The address of the place" .
+    ex:Place ex:hasPart ex:Place;
+  rdfs:comment "The place may include other places, e.g., a country includes cities" .
+ex:Place ex:isLocatedIn ex:Place;
+  rdfs:comment "The place is located within another place, e.g., a city is located in a country" .

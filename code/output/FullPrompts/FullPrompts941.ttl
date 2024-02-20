@@ -1,0 +1,33 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prob: <http://www.example.org/problem#> .
+prob:Problem a rdfs:Class ;
+    rdfs:label "Problem" ;
+    rdfs:comment "A representation of a problem or issue needing to be solved." .
+prob:isTypeOf a rdf:Property ;
+    rdfs:domain prob:Problem ;
+    rdfs:range prob:ProblemType ;
+    rdfs:label "is type of" ;
+    rdfs:comment "The type of problem, e.g. mathematical, technical, theoretical, etc." .
+prob:hasDifficulty a rdf:Property ;
+    rdfs:domain prob:Problem ;
+    rdfs:range xsd:string ;
+    rdfs:label "has difficulty" ;
+    rdfs:comment "The difficulty level of the problem." .
+prob:hasSolution a rdf:Property ;
+    rdfs:domain prob:Problem ;
+    rdfs:range prob:Solution ;
+    rdfs:label "has solution" ;
+    rdfs:comment "The solution to the problem." .
+prob:ProblemType a rdfs:Class ;
+    rdfs:label "Problem Type" ;
+    rdfs:comment "The type or category of a problem." .
+prob:Solution a rdfs:Class ;
+    rdfs:label "Solution" ;
+    rdfs:comment "A solution or resolution to a given problem." .
+prob:hasDescription a rdf:Property ;
+    rdfs:domain prob:Solution ;
+    rdfs:range xsd:string ;
+    rdfs:label "has description" ;
+    rdfs:comment "The description of how the solution resolves the problem." .

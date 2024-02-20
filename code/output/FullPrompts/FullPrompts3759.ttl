@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix morning: <http://www.example.org/morning#> .
+morning:Mornings     rdf:type rdfs:Class ;
+    rdfs:label "Mornings"@en ;
+    rdfs:comment "The period of time from sunrise to noon"@en.morning:Routine     rdf:type rdfs:Class ;
+    rdfs:label "Routine"@en ;
+    rdfs:comment "A fixed procedure carried out regularly in the morning"@en.morning:Sunrise     rdf:type rdfs:Class ;
+    rdfs:label "Sunrise"@en ;
+    rdfs:comment "The instant at which the upper edge of the sun appears over the eastern horizon"@en.morning:Breakfast     rdf:type rdfs:Class ;
+    rdfs:label "Breakfast"@en ;
+    rdfs:comment "The first meal of the day, usually eaten in the morning"@en .
+morning:Alarm     rdf:type rdfs:Class ;
+    rdfs:label "Alarm"@en ;
+    rdfs:comment "A device that makes a loud sound as a signal to wake up"@en .
+morning:Early     rdf:type rdfs:Class ;
+    rdfs:label "Early"@en ;
+    rdfs:comment "Happening or done before the usual or expected time"@en .
+morning:hasRoutine     rdf:type rdf:Property ;
+    rdfs:domain morning:Mornings ;
+    rdfs:range morning:Routine ;
+    rdfs:label "has routine"@en ;
+    rdfs:comment "The routine that happens in the morning"@en .
+morning:hasBreakfast     rdf:type rdf:Property ;
+    rdfs:domain morning:Mornings ;
+    rdfs:range morning:Breakfast ;
+    rdfs:label "has breakfast"@en ;
+    rdfs:comment "The breakfast that happens in the morning"@en .
+morning:startsWith     rdf:type rdf:Property ;
+    rdfs:domain morning:Mornings ;
+    rdfs:range morning:Sunrise ;
+    rdfs:label "starts with"@en ;
+    rdfs:comment "The morning starts with sunrise"@en .
+morning:hasAlarm     rdf:type rdf:Property ;
+    rdfs:domain morning:Routine ;
+    rdfs:range morning:Alarm ;
+    rdfs:label "has alarm"@en ;
+    rdfs:comment "The routine has an alarm to wake up"@en .
+ morning:isEarly     rdf:type rdf:Property ;
+    rdfs:domain morning:Mornings ;
+    rdfs:range morning:Early ;
+    rdfs:label "is early"@en ;
+    rdfs:comment "The morning is considered early"@en .

@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix week: <http://example.org/week#> .
+week: a owl:Ontology ;
+  rdfs:label "Ontology of Week" ;
+  rdfs:comment "An ontology that describes the concept of a week and its components." .
+week:Week a owl:Class ;
+  rdfs:label "Week" ;
+  rdfs:subClassOf time:TemporalUnit ;
+  rdfs:comment "A class representing a week, a temporal unit of seven days." .
+week:Day a owl:Class ;
+  rdfs:label "Day" ;
+  rdfs:subClassOf time:TemporalUnit ;
+  rdfs:comment "A class representing a day, a unit of time defined as 24 hours." .
+week:hasDay a owl:ObjectProperty ;
+  rdfs:label "has day" ;
+  rdfs:domain week:Week ;
+  rdfs:range week:Day ;
+  rdfs:comment "The property that connects a week with its days." .
+week:dayName a owl:DatatypeProperty ;
+  rdfs:label "day name" ;
+  rdfs:domain week:Day ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The property that gives a day its name (e.g., Monday, Tuesday, etc.)." .
+  week:dayNumber a owl:DatatypeProperty ;
+  rdfs:label "day number" ;
+  rdfs:domain week:Day ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The property that assigns a number to a day within the week (e.g., 1 for Monday, 2 for Tuesday, etc.)." .
