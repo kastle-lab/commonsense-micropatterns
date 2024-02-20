@@ -1,0 +1,21 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/door#> .
+:Door a rdfs:Class ;
+    rdfs:comment "An entryway or exit, usually on buildings."@en .
+:WoodenDoor a rdfs:Class ;
+    rdfs:subClassOf :Door ;
+    rdfs:comment "A door made of wood."@en.:SteelDoor a rdfs:Class ;
+    rdfs:subClassOf :Door ;
+    rdfs:comment "A door made of steel."@en.:hasColor a rdf:Property ;
+    rdfs:domain :Door ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The color of the door."@en.:hasLock a rdf:Property ;
+    rdfs:domain :Door ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Whether the door has a lock or not."@en.:hasSize a rdf:Property ;
+    rdfs:domain :Door ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The size or dimensions of the door."@en.:isInternal a rdf:Property ;
+     rdfs:domain :Door ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Whether the door is internal (inside a building) or external (leading outside, such as a front or back door)."@en.

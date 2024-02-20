@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Group a rdfs:Class ;
+    rdfs:label "Group"@en ;
+    rdfs:comment "A collection of two or more individuals involved in persistent social interaction."@en ;
+    rdfs:subClassOf rdfs:Resource ;
+.ex:groupName a rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of the group"@en ;
+    rdfs:domain ex:Group ;
+    rdfs:range xsd:string ;
+.ex:groupSize a rdf:Property ;
+    rdfs:label "size"@en ;
+    rdfs:comment "The total count of individuals within a group"@en ;
+    rdfs:domain ex:Group ;
+    rdfs:range xsd:integer ;
+.ex:Member a rdfs:Class ;
+    rdfs:label "Member"@en ;
+    rdfs:comment "An individual who is part of a group"@en ;
+    rdfs:subClassOf rdfs:Resource ;
+.ex:memberOf a rdf:Property ;
+    rdfs:label "is a member of"@en ;
+    rdfs:comment "A relation indicating that a certain person is part of a group"@en ;
+    rdfs:domain ex:Member ;
+    rdfs:range ex:Group ;
+.

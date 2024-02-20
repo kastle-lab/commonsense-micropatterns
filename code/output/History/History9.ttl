@@ -1,0 +1,42 @@
+@prefix hist: <http://www.history.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+hist:HistoricalEvent    rdf:type owl:Class ;
+    rdfs:comment "An important event in history" ;
+    rdfs:label "Historical event" .
+hist:HistoricalPeriod    rdf:type owl:Class ;
+    rdfs:comment "A specific time period in history" ;
+    rdfs:label "Historical period" .
+hist:Country    rdf:type owl:Class ;
+    rdfs:comment "A nation with its own government" ;
+    rdfs:label "Country" .
+hist:Person    rdf:type owl:Class ;
+    rdfs:comment "A human" ;
+    rdfs:label "Person" .
+hist:birthDate    rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The date a person was born" ;
+    rdfs:label "Birth date" ;
+    rdfs:range xsd:date ;
+    rdfs:domain hist:Person .
+hist:deathDate    rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The date a person died" ;
+    rdfs:label "Death date" ;
+    rdfs:range xsd:date ;
+    rdfs:domain hist:Person .
+hist:heldIn    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The location where the event took place" ;
+    rdfs:label "Held in" ;
+    rdfs:domain hist:HistoricalEvent ;
+    rdfs:range hist:Country .
+hist:tookPlaceDuring    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The historical period during which the event took place" ;
+    rdfs:label "Took place during" ;
+    rdfs:domain hist:HistoricalEvent ;
+    rdfs:range hist:HistoricalPeriod .
+hist:influentialPerson    rdf:type owl:ObjectProperty ;
+    rdfs:comment "A person who had significant impact on the event or time period" ;
+    rdfs:label "Influential person" ;
+    rdfs:range hist:Person ;
+    rdfs:domain owl:Class .

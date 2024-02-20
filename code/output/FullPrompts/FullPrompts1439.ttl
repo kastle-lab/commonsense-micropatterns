@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Home rdf:type owl:Class ;
+  rdfs:subClassOf :PhysicalPlace ;
+  rdfs:label "Home"@en ;
+  rdfs:comment "A home is a place where a person or a family lives and feels safe and comfortable"@en .
+:hasHome rdf:type owl:ObjectProperty ;
+  rdfs:domain :Person ;
+  rdfs:range :Home ;
+  rdfs:label "has home"@en ;
+  rdfs:comment "Relates a person to his or her home"@en .
+:address rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Home ;
+  rdfs:range xsd:string ;
+  rdfs:label "address"@en ;
+  rdfs:comment "The detailed address of the home"@en .

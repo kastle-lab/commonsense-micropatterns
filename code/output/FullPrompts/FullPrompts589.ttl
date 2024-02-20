@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eye: <http://example.org/eye#> .
+eye:    rdf:type rdfs:Class ;
+   rdfs:comment "Eye is a part of the body that allows us to see"^^xsd:string ;
+   rdfs:label "Eye"^^xsd:string .
+eye:color    rdf:type rdfs:Property ;
+   rdfs:comment "Color of the eye"^^xsd:string ;
+   rdfs:label "Color"^^xsd:string ;
+   rdfs:domain eye: ;
+   rdfs:range xsd:string .
+eye:shape    rdf:type rdfs:Property ;
+   rdfs:comment "Shape of the eye"^^xsd:string ;
+   rdfs:label "Shape"^^xsd:string ;
+   rdfs:domain eye: ;
+   rdfs:range xsd:string .
+eye:size    rdf:type rdfs:Property ;
+   rdfs:comment "Size of the eye"^^xsd:string ;
+   rdfs:label "Size"^^xsd:string ;
+   rdfs:domain eye: ;
+   rdfs:range xsd:string .
+ eye:vision_quality   rdf:type rdfs:Property ;
+   rdfs:comment "Quality of vision"^^xsd:string ;
+   rdfs:label "Vision Quality"^^xsd:string ;
+   rdfs:domain eye: ;
+   rdfs:range xsd:string .

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Loveseat rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Furniture ;
+    rdfs:label "Loveseat" ;
+    rdfs:comment "A small sofa designed to seat two people" .
+ex:hasMaterial rdf:type rdf:Property ;
+    rdfs:label "has material" ;
+    rdfs:comment "The material from which a piece of furniture is made" ;
+    rdfs:domain ex:Furniture ;
+    rdfs:range ex:Material .
+ex:hasColour rdf:type rdf:Property ;
+    rdfs:label "has colour" ;
+    rdfs:comment "The colour of a piece of furniture" ;
+    rdfs:domain ex:Furniture ;
+    rdfs:range ex:Colour .
+ex:Manufacturer rdf:type rdfs:Class ;
+    rdfs:label "Manufacturer" .
+ex:hasManufacturer rdf:type rdf:Property ;
+    rdfs:label "has manufacturer" ;
+    rdfs:comment "The entity that produced a piece of furniture" ;
+    rdfs:domain ex:Furniture ;
+    rdfs:range ex:Manufacturer .
+ex:hasStyle rdf:type rdf:Property ;
+    rdfs:label "has style" ;
+    rdfs:comment "The style or design of a piece of furniture" ;
+    rdfs:domain ex:Furniture ;
+    rdfs:range ex:Style .
+ex:Sofa rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Furniture ;
+    rdfs:label "Sofa" ;
+    rdfs:comment "A large piece of furniture that can seat several people" .
+    ex:hasSize rdf:type rdf:Property ;
+    rdfs:label "has size" ;
+    rdfs:comment "The size of a piece of furniture" ;
+    rdfs:domain ex:Furniture ;
+    rdfs:range ex:Size .

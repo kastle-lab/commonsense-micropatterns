@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com/> .
+ex:Child rdf:type owl:Class ;
+    rdfs:subClassOf ex:Human ;
+    rdfs:comment "A child is a young human below the legal age of adulthood"@en ;
+    rdfs:label "Child"@en .
+ex:hasChild rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Human ;
+    rdfs:range ex:Child ;
+    rdfs:comment "Relates a human to their child"@en ;
+    rdfs:label "has child"@en .
+ex:isChildOf rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:Human ;
+    owl:inverseOf ex:hasChild ;
+    rdfs:comment "Relates a child to their parent"@en ;
+    rdfs:label "is child of"@en .

@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:Minute a rdfs:Class ;
+  rdfs:label "Minute" ;
+  rdfs:subClassOf time:TemporalUnit ;
+  rdfs:comment "Unit of temporal measure equal to 60 seconds or 1/60 of an hour."@en .
+:example1 a time:TemporalEntity ;
+  time:unitType time:Minute ;
+  time:numericDuration "15"^^xsd:integer ;
+  rdfs:comment "An example of a duration of 15 minutes"@en .

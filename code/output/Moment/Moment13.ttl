@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix moment: <http://example.org/moments/> .
+# Class Definitions:TimeInstant a rdfs:Class ;
+    rdfs:label "Time Instant"@en ;
+    rdfs:comment "A specific point in time"@en .
+:Action a rdfs:Class ;
+    rdfs:label "Action"@en ;
+    rdfs:comment "An action or event that occurs at a specific time instant"@en .
+:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A person who partakes in the action"@en .
+# Property Definitions:atTime a rdf:Property ;
+    rdfs:label "at time"@en ;
+    rdfs:comment "The time at which the action took place"@en ;
+    rdfs:domain :Action ;
+    rdfs:range :TimeInstant .
+:performedBy a rdf:Property ;
+    rdfs:label "performed by"@en ;
+    rdfs:comment "The person who performed the action"@en ;
+    rdfs:domain :Action ;
+    rdfs:range :Person .
+# Example Data:moment1 a :TimeInstant ;
+    :time "2022-08-05T12:04:41Z"^^xsd:dateTime .
+:action1 a :Action ;
+    :atTime :moment1 ;
+    :performedBy :John .
+:John a :Person ;
+    rdfs:label "John" .

@@ -1,0 +1,10 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Hand rdf:type rdfs:Class;
+rdfs:label "Hand"@en;
+rdfs:comment "The terminal part of the human arm located below the forearm, used for grasping and holding"@en .
+ ex:Finger rdf:type rdfs:Class;
+rdfs:subClassOf ex:Hand;
+rdfs:label "Finger"@en;
+rdfs:comment "Each of the digits of the hand, typically attached to the palm"@en .

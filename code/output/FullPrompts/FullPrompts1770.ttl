@@ -1,0 +1,10 @@
+# Defining individualsfamily:Mother a family:Person ;
+    family:name "Alice" .
+family:Father a family:Person ;
+    family:name "Bob" .
+family:Child a family:Person ;
+    family:name "Charlie" .
+# Defining relationshipsfamily:Mother family:spouse family:Father ;
+    family:parentOf family:Child .
+family:Father family:spouse family:Mother ;
+    family:parentOf family:Child .

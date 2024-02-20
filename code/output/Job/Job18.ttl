@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix job: <http://example.org/job#> .
+job:Job rdf:type rdfs:Class ;
+  rdfs:label "Job"@en ;
+  rdfs:comment "A position of employment."@en .
+job:hasTitle rdf:type rdf:Property ;
+  rdfs:label "has title"@en ;
+  rdfs:comment "The title of the job."@en ;
+  rdfs:domain job:Job ;
+  rdfs:range xsd:string .
+job:hasEmployer rdf:type rdf:Property ;
+  rdfs:label "has employer"@en ;
+  rdfs:comment "The entity that employs for the job."@en ;
+  rdfs:domain job:Job ;
+  rdfs:range rdfs:Resource .
+job:hasSalary rdf:type rdf:Property ;
+  rdfs:label "has salary"@en ;
+  rdfs:comment "The amount of money that the job pays."@en ;
+  rdfs:domain job:Job ;
+  rdfs:range xsd:float .

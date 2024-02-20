@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Month a rdfs:Class ;
+  rdfs:label "Month"@en ;
+  rdfs:comment "A specific period of time in a year"@en .
+  :hasMonth a rdf:Property ;
+  rdfs:label "has month"@en ;
+  rdfs:domain :Year ;
+  rdfs:range :Month ;
+  rdfs:comment "Relates a year to its specific months" .

@@ -1,0 +1,9 @@
+:Work a rdfs:Class ;
+rdfs:label "Work"@en ;
+rdfs:comment "A activity or task carried out for a particular purpose or result"@en.:Person a rdfs:Class ;
+rdfs:label "Person"@en ;
+rdfs:comment "An individual human being"@en.:providesWork a rdf:Property ;
+rdfs:domain :Person ;
+rdfs:range :Work ;
+rdfs:label "provides work"@en ;
+rdfs:comment "The person carries out a work or provides a work output"@en .

@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/> .
+ex:Night a owl:Class ;
+    rdfs:label "Night" ;
+    rdfs:comment "The period from sunset to sunrise." .
+ex:startTime a owl:DatatypeProperty ;
+    rdfs:label "Start time" ;
+    rdfs:comment "The start time of the night." ;
+    rdfs:domain ex:Night ;
+    rdfs:range xsd:dateTime .
+ex:endTime a owl:DatatypeProperty ;
+    rdfs:label "End time" ;
+    rdfs:comment "The end time of the night." ;
+    rdfs:domain ex:Night ;
+    rdfs:range xsd:dateTime .

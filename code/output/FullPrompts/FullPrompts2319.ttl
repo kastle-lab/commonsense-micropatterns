@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lot: <http://example.org/ontology/lot#> .
+lot:Lot rdf:type rdfs:Class ;
+  rdfs:label "Lot"@en ;
+  rdfs:comment "A parcel or piece of land owned or set to be owned by an individual or group"@en .
+lot:identifier rdf:type rdf:Property ;
+  rdfs:label "identifier"@en ;
+  rdfs:comment "Unique identifier of a lot"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range xsd:string .
+lot:area rdf:type rdf:Property ;
+  rdfs:label "area"@en ;
+  rdfs:comment "Area of a lot in square meters"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range xsd:decimal .
+lot:owner rdf:type rdf:Property ;
+  rdfs:label "owner"@en ;
+  rdfs:comment "Owner of a lot"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range rdfs:Resource .
+ lot:location rdf:type rdf:Property ;
+  rdfs:label "location"@en ;
+  rdfs:comment "Geographical location of a lot"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range rdfs:Resource .

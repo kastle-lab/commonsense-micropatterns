@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/story#> .
+:Story rdf:type rdfs:Class ;
+       rdfs:label "Story" ;
+       rdfs:comment "A narrative, either true or fictitious, in prose or verse, designed to interest, amuse, or instruct the hearer or reader;
+ tale." .
+:hasTitle rdf:type rdf:Property ;
+          rdfs:label "has title" ;
+          rdfs:domain :Story ;
+          rdfs:range xsd:string .
+:hasAuthor rdf:type rdf:Property ;
+           rdfs:label "has author" ;
+           rdfs:domain :Story ;
+           rdfs:range :Author .
+:Author rdf:type rdfs:Class ;
+        rdfs:label "Author" ;
+        rdfs:comment "The creator or originator of a piece of narrative, such as a book or story." .
+:hasGenre rdf:type rdf:Property ;
+          rdfs:label "has genre" ;
+          rdfs:domain :Story ;
+          rdfs:range :Genre .
+:Genre rdf:type rdfs:Class ;
+       rdfs:label "Genre" ;
+       rdfs:comment "A category of artistic composition, as in music or literature, characterized by similarities in form, style, or subject matter." .
+:hasCharacter rdf:type rdf:Property ;
+              rdfs:label "has character" ;
+              rdfs:domain :Story ;
+              rdfs:range :Character .
+:Character rdf:type rdfs:Class ;
+           rdfs:label "Character" ;
+           rdfs:comment "A person in a novel, play, or movie." .
+:hasSetting rdf:type rdf:Property ;
+            rdfs:label "has setting" ;
+            rdfs:domain :Story ;
+            rdfs:range :Setting .
+:Setting rdf:type rdfs:Class ;
+         rdfs:label "Setting" ;
+         rdfs:comment "The place or type of surroundings where something is positioned or where an event takes place." .

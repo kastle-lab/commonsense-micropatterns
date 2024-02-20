@@ -1,0 +1,25 @@
+@prefix : <http://example.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+: a owl:Ontology ;
+  rdfs:comment "Ontology of Name Entities"@en .
+:NameEntity a owl:Class ;
+  rdfs:label "NameEntity"@en ;
+  rdfs:comment "Entity which has a name"@en ;
+  rdfs:subClassOf owl:Thing .
+:hasName a owl:DatatypeProperty ;
+  rdfs:label "has name"@en ;
+  rdfs:comment "relates an entity to its name"@en ;
+  rdfs:domain :NameEntity ;
+  rdfs:range xsd:string .
+:hasFirstName a :hasName ;
+  rdfs:label "has first name"@en ;
+  rdfs:comment "relates an entity to its first name"@en .
+:hasLastName a :hasName ;
+  rdfs:label "has last name"@en ;
+  rdfs:comment "relates an entity to its last name"@en .
+:hasMiddleName a :hasName ;
+  rdfs:label "has middle name"@en ;
+  rdfs:comment "relates an entity to its middle name"@en .

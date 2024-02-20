@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/ontology#> .
+:Face rdf:type owl:Class ;
+      rdfs:label "Face"^^xsd:string ;
+      rdfs:comment "A class representing the notion of a face"^^xsd:string ;
+      rdfs:subClassOf :BodyPart .
+:hasEye rdf:type owl:ObjectProperty ;
+        rdfs:label "has eye"^^xsd:string ;
+        rdfs:comment "A property relating a face to its eyes"^^xsd:string ;
+        rdfs:domain :Face ;
+        rdfs:range :Eye .
+:hasNose rdf:type owl:ObjectProperty ;
+         rdfs:label "has nose"^^xsd:string ;
+         rdfs:comment "A property relating a face to its nose"^^xsd:string ;
+         rdfs:domain :Face ;
+         rdfs:range :Nose .
+:hasMouth rdf:type owl:ObjectProperty ;
+          rdfs:label "has mouth"^^xsd:string ;
+          rdfs:comment "A property relating a face to its mouth"^^xsd:string ;
+          rdfs:domain :Face ;
+          rdfs:range :Mouth .
+  :Eye rdf:type owl:Class .
+:Nose rdf:type owl:Class .
+:Mouth rdf:type owl:Class .
+This Turtle/RDF format represents ontology for 'Face' in which a face is a subclass of BodyPart. The ontology specifies that a face can have eyes, a nose, and a mouth. Each of these elements (eyes, nose, mouth) are also represented as Class Objects.

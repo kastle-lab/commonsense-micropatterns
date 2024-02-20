@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix furniture: <http://example.org/furniture/> .
+furniture:Loveseat rdf:type owl:Class ;
+    rdfs:label "Loveseat"^^xsd:string ;
+    rdfs:subClassOf furniture:Furniture ;
+    rdfs:comment "A small sofa designed to seat two people, also known as a double chair."@en .
+furniture:Furniture rdf:type owl:Class ;
+    rdfs:label "Furniture"^^xsd:string ;
+    rdfs:comment "Objects that support various human activities such as seating, eating, and sleeping."@en .

@@ -1,0 +1,29 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "An individual human being"@en .
+:hasName a rdfs:Property ;
+    rdfs:domain :Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "The name of a Person"@en .
+:hasBirthdate a rdfs:Property ;
+    rdfs:domain :Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has birthdate"@en ;
+    rdfs:comment "The birthdate of a Person"@en .
+:hasGender a rdfs:Property ;
+    rdfs:domain :Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has gender"@en ;
+    rdfs:comment "The gender of a Person"@en .
+:PersonA a :Person ;
+    :hasName "John Doe" ;
+    :hasBirthdate "1990-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    :hasGender "Male" .
+:PersonB a :Person ;
+    :hasName "Jane Doe" ;
+    :hasBirthdate "1992-12-31"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    :hasGender "Female" .

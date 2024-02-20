@@ -1,0 +1,24 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix law: <http://example.org/law#> .
+law:Law rdf:type rdfs:Class ;
+rdfs:comment "A legal rule established by authority or agreement" .
+law:hasTitle rdf:type rdf:Property ;
+  rdfs:domain law:Law ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The title of the law" .
+law:hasNumber rdf:type rdf:Property ;
+  rdfs:domain law:Law ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The number of the law" .
+law:hasJurisdiction rdf:type rdf:Property ;
+  rdfs:domain law:Law ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "The jurisdiction where the law is applied" .
+  law:hasContent rdf:type rdf:Property ;
+  rdfs:domain law:Law ;
+  rdfs:range rdf:XMLLiteral ;
+  rdfs:comment "The content or text of the law" .
+law:hasEnactmentDate rdf:type rdf:Property ;
+  rdfs:domain law:Law ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The date when the law was enacted" .

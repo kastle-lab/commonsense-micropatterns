@@ -1,0 +1,22 @@
+@prefix : <http://example.org/># Classes:Person a owl:Class .
+:Membership a owl:Class .
+:Organisation a owl:Class .
+# Properties:hasMember a owl:ObjectProperty ;
+    owl:domain :Organisation ;
+    owl:range :Person .
+:hasMembership a owl:ObjectProperty ;
+    owl:domain :Person ;
+    owl:range :Membership .
+:memberOf a owl:ObjectProperty ;
+    owl:domain :Membership ;
+    owl:range :Organisation .
+# Inverse properties:isMemberOf a owl:ObjectProperty ;
+    owl:inverseOf :hasMember .
+:hasAsMember a owl:ObjectProperty ;
+    owl:inverseOf :memberOf .
+# Individuals:JohnDoe a :Person ;
+    :hasMembership :Membership1 .
+:Membership1 a :Membership ;
+    :memberOf :ClubXYZ .
+:ClubXYZ a :Organisation ;
+    :hasMember :JohnDoe .

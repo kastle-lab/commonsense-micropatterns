@@ -1,0 +1,18 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Change a rdf:Class ;
+      rdfs:label "Change"@en ;
+      rdfs:comment "A class representing change or modification"@en ;
+      rdfs:subClassOf ex:Event .
+ex:hasChange a rdf:Property ;
+      rdfs:label "has change"@en ;
+      rdfs:domain ex:Object ;
+      rdfs:range ex:Change .
+ex:ChangeStartDate a rdf:Property ;
+      rdfs:label "Change start date"@en ;
+      rdfs:domain ex:Change ;
+      rdfs:range xsd:dateTime .
+ex:ChangeEndDate a rdf:Property ;
+      rdfs:label "Change end date"@en ;
+      rdfs:domain ex:Change ;
+      rdfs:range xsd:dateTime .

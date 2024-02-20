@@ -1,0 +1,14 @@
+@prefix : <http://example.org/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Right a owl:Class ;
+    rdfs:label "Right" ;
+    rdfs:comment "A class representing a certain privilege or entitlement" .
+:providesRight a owl:ObjectProperty ;
+    rdfs:domain :Entity ;
+    rdfs:range :Right ;
+    rdfs:label "providesRight" ;
+    rdfs:comment "A property representing the act of giving or providing a right" .
+:Entity a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "A class representing any individual or organization that can provide rights" .

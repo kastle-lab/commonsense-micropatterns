@@ -1,0 +1,24 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org#> .
+:Morning  rdf:type owl:Class ;
+  rdfs:comment "Represents the period of time from sunrise to noon."@en ;
+  rdfs:label "Morning"@en ;
+  rdfs:subClassOf :DayPart .
+:Sunrise  rdf:type owl:Class ;
+  rdfs:comment "Represents the first appearance of the sun in the sky in the morning."@en ;
+  rdfs:label "Sunrise"@en ;
+  rdfs:subClassOf :Morning .
+:EarlyMorning   rdf:type owl:Class ;
+  rdfs:comment "Represents the first part of the morning right after the sunrise."@en ;
+  rdfs:label "Early Morning"@en ;
+  rdfs:subClassOf :Morning .
+:LateMorning   rdf:type owl:Class ;
+  rdfs:comment "Represents the last part of the morning just before noon."@en ;
+  rdfs:label "Late Morning"@en ;
+  rdfs:subClassOf :Morning .
+:DayPart    rdf:type owl:Class ;
+  rdfs:comment "A portion of the day."@en ;
+  rdfs:label "Day Part"@en .

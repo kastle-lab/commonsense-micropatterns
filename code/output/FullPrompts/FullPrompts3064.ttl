@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+:Community a rdfs:Class ;
+  rdfs:label "Community" ;
+  rdfs:comment "Represents a group of individuals sharing common interests or goals" ;
+  rdfs:subClassOf foaf:Group .
+:hasMember a rdf:Property ;
+  rdfs:label "has member" ;
+  rdfs:comment "Relation between a community and its members" ;
+  rdfs:domain :Community ;
+  rdfs:range foaf:Person .
+:hasCommonInterest a rdf:Property ;
+  rdfs:label "has common interest" ;
+  rdfs:comment "Relation between a community and its common interests or goals" ;
+  rdfs:domain :Community ;
+  rdfs:range rdfs:Resource .

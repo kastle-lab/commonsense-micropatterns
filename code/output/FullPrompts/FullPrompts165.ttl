@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+# Defining the class 'Year' :Year rdf:type owl:Class ;
+      rdfs:label "Year"@en ;
+            rdfs:comment "Representation of a Year"@en ;
+            rdfs:subClassOf xsd:gYear .
+# Defining properties of 'Year'      :hasYear rdf:type owl:DatatypeProperty ;
+         rdfs:label "has year"@en ;
+         rdfs:comment "The specific year of an event or object"@en ;
+         rdfs:range xsd:gYear ;
+         rdfs:domain owl:Thing .
+                        :inDecade rdf:type owl:ObjectProperty ;
+          rdfs:label "in decade"@en ;
+          rdfs:comment "Decade in which the year falls"@en ;
+          rdfs:range :Decade ;
+          rdfs:domain :Year .
+:inCentury rdf:type owl:ObjectProperty ;
+           rdfs:label "in century"@en ;
+           rdfs:comment "Century in which the year falls"@en ;
+           rdfs:range :Century ;
+           rdfs:domain :Year .
+# Additional classes for properties of 'Year' :Decade rdf:type owl:Class ;
+        rdfs:label "Decade"@en ;
+        rdfs:comment "A period of ten years"@en .
+        :Century rdf:type owl:Class ;
+         rdfs:label "Century"@en ;
+         rdfs:comment "A period of one hundred years"@en .

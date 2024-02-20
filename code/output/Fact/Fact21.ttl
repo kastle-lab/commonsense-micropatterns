@@ -1,0 +1,18 @@
+@prefix : <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Fact a rdf:Class ;
+  rdfs:comment "A proposition that can be proven true or false."^^rdf:XMLLiteral ;
+  rdfs:label "Fact"^^rdf:XMLLiteral .
+:hasSubject a rdf:Property ;
+  rdfs:comment "The subject of a fact."^^rdf:XMLLiteral ;
+  rdfs:label "hasSubject"^^rdf:XMLLiteral ;
+  rdfs:domain :Fact .
+:hasPredicate a rdf:Property ;
+  rdfs:comment "The predicate of a fact."^^rdf:XMLLiteral ;
+  rdfs:label "hasPredicate"^^rdf:XMLLiteral ;
+  rdfs:domain :Fact .
+:hasObject a rdf:Property ;
+  rdfs:comment "The object of a fact."^^rdf:XMLLiteral ;
+  rdfs:label "hasObject"^^rdf:XMLLiteral ;
+  rdfs:domain :Fact .

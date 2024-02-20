@@ -1,0 +1,5 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:World a rdfs:Class ;
+        rdfs:label "World" ;
+        rdfs:comment "The world as a whole and everything in it".

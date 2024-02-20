@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/ontology/parent#> .
+:Parent a rdfs:Class ;
+    rdfs:label "Parent"@en ;
+    rdfs:comment "The class of individuals who are parents."@en .
+:hasChild a rdf:Property ;
+    rdfs:label "hasChild"@en ;
+    rdfs:comment "The property that relates a parent to their child."@en ;
+    rdfs:domain :Parent ;
+    rdfs:range :Person .
+:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "The class of all people or individuals."@en .
+:isChildOf a rdf:Property ;
+    rdfs:label "isChildOf"@en ;
+    rdfs:comment "The property that relates a person to their parent."@en ;
+    rdfs:domain :Person ;
+    rdfs:range :Parent .
+:hasParent a rdf:Property ;
+    rdfs:label "hasParent"@en ;
+    rdfs:comment "The property that relates a person to their parent."@en ;
+    rdfs:domain :Person ;
+    rdfs:range :Parent .
+:isParentOf a rdf:Property ;
+    rdfs:label "isParentOf"@en ;
+    rdfs:comment "The property that relates a parent to their child."@en ;
+    rdfs:domain :Parent ;
+    rdfs:range :Person .

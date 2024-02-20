@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix others: <http://example.org/others#> .
+others:Others rdf:type rdfs:Class ;
+others:Individual a rdfs:Class ;
+    rdfs:subClassOf others:Others ;
+    rdfs:comment "An individual other than the subject" ;
+    rdfs:label "Individual" .
+others:Group a rdfs:Class ;
+    rdfs:subClassOf others:Others ;
+    rdfs:comment "A group other than the subject's group" ;
+    rdfs:label "Group" .
+others:relationship a rdf:Property ;
+    rdfs:domain others:Others ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Describes the relationship with the other" ;
+    rdfs:label "Relationship" .
+others:interaction a rdf:Property ;
+    rdfs:domain others:Others ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Describes the interaction of the subject with the other" ;
+    rdfs:label "Interaction" .

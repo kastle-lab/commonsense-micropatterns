@@ -1,0 +1,43 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.backontology.com#> .
+:Back a rdfs:Class ;
+    rdfs:label "Back" ;
+    rdfs:comment "Class representing the Back".
+:Muscle a rdfs:Class ;
+    rdfs:label "Muscle" ;
+    rdfs:comment "Class representing Muscle".
+:Bones a rdfs:Class ;
+    rdfs:label "Bones" ;
+    rdfs:comment "Class representing Bones".
+:Injury a rdfs:Class ;
+    rdfs:label "Injury" ;
+    rdfs:comment "Class representing injuries related to Back".
+:BackPain a rdfs:Class ;
+    rdfs:subClassOf :Injury ;
+    rdfs:label "Back Pain" ;
+    rdfs:comment "Subclass of Injury representing Back Pain".
+:hasMuscle a rdf:Property ;
+    rdfs:domain :Back ;
+    rdfs:range :Muscle ;
+    rdfs:label "has Muscle" ;
+    rdfs:comment "Property linking Back class with Muscle class".
+:hasBone a rdf:Property ;
+    rdfs:domain :Back ;
+    rdfs:range :Bones ;
+    rdfs:label "has Bones" ;
+    rdfs:comment "Property linking Back class with Bones class".
+:suffersFrom a rdf:Property ;
+    rdfs:domain :Back ;
+    rdfs:range :Injury ;
+    rdfs:label "suffers from" ;
+     rdfs:comment "Property linking Back class with a subclass of Injury".
+    :SpinalCord a rdfs:Class ;
+    rdfs:label "Spinal Cord" ;
+    rdfs:comment "Class representing Spinal Cord".
+    :hasSpinalCord a rdf:Property ;
+    rdfs:domain :Back ;
+    rdfs:range :SpinalCord ;
+    rdfs:label "has Spinal Cord" ;
+    rdfs:comment "Property linking Back class with Spinal Cord class".

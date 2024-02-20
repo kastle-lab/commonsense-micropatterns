@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:MechanicService        rdf:type rdfs:Class ;
+    rdfs:label "Mechanic service" ;
+    rdfs:comment "Service offered by mechanics for vehicle repair and maintenance." .
+ex:offeredBy    rdf:type rdf:Property ;
+    rdfs:domain ex:MechanicService ;
+    rdfs:range ex:Mechanic ;
+    rdfs:label "offered by" ;
+    rdfs:comment "The mechanic who offers the service." .
+ex:cost    rdf:type rdf:Property ;
+    rdfs:domain ex:MechanicService ;
+    rdfs:range xsd:float ;
+    rdfs:label "cost" ;
+    rdfs:comment "Cost of the mechanic service." .
+ex:serviceDescription    rdf:type rdf:Property ;
+    rdfs:domain ex:MechanicService ;
+    rdfs:range xsd:string ;
+    rdfs:label "service description" ;
+    rdfs:comment "Description of the mechanic service." .

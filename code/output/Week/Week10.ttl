@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix WeekOntology: <http://example.org/week#> .
+WeekOntology:Week    rdf:type owl:Class ;
+    rdfs:subClassOf rdfs:Resource ;
+    rdfs:label "Week" ;
+    rdfs:comment "Class representing a week." .
+WeekOntology:hasDay    rdf:type owl:ObjectProperty ;
+    rdfs:domain WeekOntology:Week ;
+    rdfs:range WeekOntology:Day ;
+    rdfs:label "has day" ;
+    rdfs:comment "Property linking a week to its days." .
+WeekOntology:Day    rdf:type owl:Class ;
+    rdfs:subClassOf rdfs:Resource ;
+    rdfs:label "Day" ;
+    rdfs:comment "Class representing a day of the week." .
+WeekOntology:Monday    rdf:type WeekOntology:Day ;
+    rdfs:label "Monday" ;
+    rdfs:comment "The first day of the week." .
+WeekOntology:Tuesday    rdf:type WeekOntology:Day ;
+    rdfs:label "Tuesday" ;
+    rdfs:comment "The second day of the week." .
+WeekOntology:Wednesday    rdf:type WeekOntology:Day ;
+    rdfs:label "Wednesday" ;
+    rdfs:comment "The third day of the week." .
+WeekOntology:Thursday    rdf:type WeekOntology:Day ;
+    rdfs:label "Thursday" ;
+    rdfs:comment "The fourth day of the week." .
+WeekOntology:Friday    rdf:type WeekOntology:Day ;
+    rdfs:label "Friday" ;
+    rdfs:comment "The fifth day of the week." .
+WeekOntology:Saturday    rdf:type WeekOntology:Day ;
+    rdfs:label "Saturday" ;
+    rdfs:comment "The sixth day of the week." .
+WeekOntology:Sunday    rdf:type WeekOntology:Day ;
+    rdfs:label "Sunday" ;
+    rdfs:comment "The seventh day of the week." .

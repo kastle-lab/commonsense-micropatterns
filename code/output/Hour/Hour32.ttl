@@ -1,0 +1,5 @@
+@prefix ex: <http://example.com/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+ex:hour a time:UnitOfMeasure ;
+    time:numericDuration "1"^^xsd:decimal ;
+    time:unitType time:unitHour .

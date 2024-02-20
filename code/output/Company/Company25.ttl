@@ -1,0 +1,33 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.com/> .
+:Company a owl:Class ;
+  rdfs:label "Company" ;
+  rdfs:comment "A business organization that provides goods or services for profit" ;
+  rdfs:subClassOf :BusinessEntity ;
+  rdfs:seeAlso <http://dbpedia.org/page/Company> .
+:name a owl:DatatypeProperty ;
+  rdfs:domain :Company ;
+  rdfs:range xsd:string ;
+  rdfs:label "name" ;
+  rdfs:comment "The name of the company" .
+:headquarters a owl:ObjectProperty ;
+  rdfs:domain :Company ;
+  rdfs:range :Location ;
+  rdfs:label "headquarters" ;
+  rdfs:comment "The location of the company headquarters" .
+:employee a owl:ObjectProperty ;
+  rdfs:domain :Company ;
+  rdfs:range :Person ;
+  rdfs:label "employee" ;
+  rdfs:comment "A person who works for the company" .
+  :industry a owl:DatatypeProperty ;
+  rdfs:domain :Company ;
+  rdfs:range xsd:string ;
+  rdfs:label "industry" ;
+  rdfs:comment "The industry the company operates in" .
+:FruitCo a :Company ;
+  :name "FruitCo" ;
+  :headquarters :Location1 ;
+  :employee :Person1, :Person2 ;
+  :industry "Technology" .

@@ -1,0 +1,6 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/ontology#> .
+:House a rdfs:Class ;
+  rdfs:label "House"@en ;
+  rdfs:comment "A building for human habitation, especially one that is lived in by a family or small group of people."@en .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <http://www.myontology.com/#> .
+my:Party rdf:type rdfs:Class .
+my:BirthdayParty rdf:type rdfs:Class ;
+rdfs:subClassOf my:Party .
+my:DinnerParty rdf:type rdfs:Class ;
+rdfs:subClassOf my:Party .
+my:CocktailParty rdf:type rdfs:Class ;
+rdfs:subClassOf my:Party .
+my:date rdf:type rdf:Property ;
+rdfs:domain my:Party ;
+rdfs:range xsd:dateTime .
+my:location rdf:type rdf:Property ;
+rdfs:domain my:Party ;
+rdfs:range rdfs:Resource .
+my:guest rdf:type rdf:Property ;
+rdfs:domain my:Party ;
+rdfs:range rdfs:Resource .
+my:music rdf:type rdf:Property ;
+rdfs:domain my:Party ;
+rdfs:range xsd:string .
+my:theme rdf:type rdf:Property ;
+rdfs:domain my:Party ;
+rdfs:range xsd:string .

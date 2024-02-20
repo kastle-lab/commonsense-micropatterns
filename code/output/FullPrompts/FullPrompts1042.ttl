@@ -1,0 +1,18 @@
+@prefix ex: <http://example.com/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Money a owl:Class ;
+    rdfs:label "Money" ;
+    rdfs:subClassOf rdfs:Literal ;
+    rdfs:comment "The object that represents a value or currency."@en .
+ex:hasValue a owl:DatatypeProperty ;
+    rdfs:label "has value" ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain ex:Money ;
+    rdfs:comment "The numerical value of a money."@en .
+ex:hasCurrency a owl:DatatypeProperty ;
+    rdfs:label "has currency" ;
+    rdfs:range xsd:string ;
+    rdfs:domain ex:Money ;
+    rdfs:comment "The currency of a money."@en .

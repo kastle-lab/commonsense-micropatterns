@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:Year rdf:type owl:Class ;
+      rdfs:comment "A class representing a year, a unit of time primarily used to measure a period of about 365 days."@en ;
+      rdfs:label "Year"@en .
+:hasYear rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Event ;
+         rdfs:range xsd:gYear ;
+         rdfs:label "has year"@en ;
+         rdfs:comment "The year when the event occurred."@en .
+:isLeapYear rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Year ;

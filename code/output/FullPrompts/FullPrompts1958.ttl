@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix health: <http://example.org/health#> .
+health:Patient a rdfs:Class ;
+    rdfs:label "Patient" ;
+    rdfs:comment "An individual receiving healthcare services" .
+health:Doctor a rdfs:Class ;
+    rdfs:label "Doctor" ;
+    rdfs:comment "A professional who provides healthcare services" .
+health:Illness a rdfs:Class ;
+    rdfs:label "Illness" ;
+    rdfs:comment "A disease or period of sickness affecting the body or mind" .
+health:Hospital a rdfs:Class ;
+    rdfs:label "Hospital" ;
+    rdfs:comment "An institution providing medical and surgical treatment".
+  health:hasDoctor rdf:type rdf:Property ;
+    rdfs:domain health:Patient ;
+    rdfs:range health:Doctor ;
+    rdfs:label "has doctor" ;
+    rdfs:comment "Refers to the doctor of a patient" .
+health:hasIllness rdf:type rdf:Property ;
+    rdfs:domain health:Patient ;
+    rdfs:range health:Illness ;
+    rdfs:label "has illness" ;
+    rdfs:comment "Refers to the illness of a patient" .
+health:worksAt rdf:type rdf:Property ;
+    rdfs:domain health:Doctor ;
+    rdfs:range health:Hospital ;
+    rdfs:label "works at" ;
+    rdfs:comment "Refers to the hospital where a doctor works" .

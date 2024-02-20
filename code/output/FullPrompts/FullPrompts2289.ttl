@@ -1,0 +1,21 @@
+@prefix ex: <http://www.example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Month rdf:type rdfs:Class ;
+  rdfs:comment "A class representing a month in the Gregorian calendar" ;
+  rdfs:label "Month" .
+ex:January rdf:type ex:Month ;
+  rdfs:comment "The first month of the year in the Gregorian calendar" ;
+  rdfs:label "January" .
+ex:February rdf:type ex:Month ;
+  rdfs:comment "The second month of the year in the Gregorian calendar" ;
+  rdfs:label "February" .
+# .
+.. And so on for the other months .
+..ex:hasMonth rdf:type rdf:Property ;
+  rdfs:domain ex:Year ;
+  rdfs:range ex:Month ;
+  rdfs:comment "The property that connects a Year to its Months" ;
+  rdfs:label "hasMonth" .

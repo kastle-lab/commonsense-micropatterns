@@ -1,0 +1,17 @@
+ It outlines a very simplified pattern for the concept of Life. The pattern presents Life being related to Plants, Animals and Humans. This is just an example. It could be made more elaborate and detailed depending on the specific requirements.
+@prefix : <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Life a rdfs:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:subClassOf [ a rdfs:Class ] ;
+    rdfs:comment "This class represents the concept of Life"@en .
+:Plant a :Life ;
+    rdfs:label "Plant"@en ;
+    rdfs:comment "A plant is a type of life form"@en .
+:Animal a :Life ;
+    rdfs:label "Animal"@en ;
+    rdfs:comment "An animal is a type of life form"@en .
+:Human a :Life ;
+    rdfs:label "Human"@en ;
+    rdfs:comment "A human is a type of life form"@en .

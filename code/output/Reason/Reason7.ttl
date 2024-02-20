@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rsn: <http://example.org/reason#> .
+rsn:Reason a rdfs:Class ;
+    rdfs:label "Reason" ;
+    rdfs:comment "A cause, explanation, or justification for an action or event" .
+rsn:LogicalReason a rdfs:Class ;
+    rdfs:subClassOf rsn:Reason ;
+    rdfs:label "Logical Reason" ;
+    rdfs:comment "Reasoning conducted or assessed according to strict principles of validity" .
+rsn:EmotionalReason a rdfs:Class ;
+    rdfs:subClassOf rsn:Reason ;
+    rdfs:label "Emotional Reason" ;
+    rdfs:comment "Reasoning guided by or based on a person's feelings or emotions" .
+rsn:PracticalReason a rdfs:Class ;
+    rdfs:subClassOf rsn:Reason ;
+    rdfs:label "Practical Reason" ;
+    rdfs:comment "Reasoning that is focused on taking action, or reasoning about what should be done, usually in contrast to theoretical reasoning" .
+rsn:contains a rdf:Property ;
+    rdfs:label "contains" ;
+    rdfs:comment "A property that defines something that a reason contains or involves" ;
+    rdfs:domain rsn:Reason ;
+    rdfs:range xsd:string .
+rsn:causedBy a rdf:Property ;
+    rdfs:label "caused by" ;
+    rdfs:comment "A property that defines what caused the reason" ;
+    rdfs:domain rsn:Reason ;
+    rdfs:range xsd:string .
+rsn:leadsTo a rdf:Property ;
+    rdfs:label "leads to" ;
+    rdfs:comment "A property that defines what the reason leads to" ;
+    rdfs:domain rsn:Reason ;
+    rdfs:range xsd:string .

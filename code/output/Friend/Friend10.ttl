@@ -1,0 +1,29 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix friend: <http://example.org/friend/> .
+friend:Friend rdf:type rdfs:Class ;
+    rdfs:label "Friend" ;
+    rdfs:comment "A person attached to another by feelings of affection or personal regard." ;
+    rdfs:subclassOf foaf:Person .
+friend:hasFriend rdf:type rdf:Property ;
+    rdfs:label "has friend" ;
+    rdfs:comment "A relationship indicating that a person has a friend." ;
+    rdfs:domain friend:Friend ;
+    rdfs:range friend:Friend .
+friend:knownSince rdf:type rdf:Property ;
+    rdfs:label "known since" ;
+    rdfs:comment "Indicate the start date of the friendship." ;
+    rdfs:domain friend:Friend ;
+    rdfs:range xsd:date .
+friend:commonInterest rdf:type rdf:Property ;
+    rdfs:label "common interest" ;
+    rdfs:comment "An interest shared by friends" ;
+    rdfs:domain friend:Friend ;
+    rdfs:range xsd:string .
+friend:placeMet rdf:type rdf:Property ;
+    rdfs:label "place met" ;
+    rdfs:comment "Location at which the friends met for the first time." ;
+    rdfs:domain friend:Friend ;
+    rdfs:range xsd:string .

@@ -1,0 +1,21 @@
+@prefix : <http://example.org/health#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Person rdf:type rdfs:Class .
+:hasHealthRecord rdf:type rdf:Property ;
+    rdfs:domain :Person ;
+    rdfs:range :HealthRecord .
+:HealthRecord rdf:type rdfs:Class ;
+    rdfs:label "Health record"@en ;
+    rdfs:comment "A health record pertaining to a Person"@en .
+:hasDiagnosis rdf:type rdf:Property ;
+    rdfs:domain :HealthRecord ;
+    rdfs:range :Diagnosis .
+:Diagnosis rdf:type rdfs:Class ;
+    rdfs:label "Diagnosis"@en ;
+    rdfs:comment "A medical diagnosis"@en .
+:JohnDoe a :Person ;
+    :hasHealthRecord [        a :HealthRecord ;
+        :hasDiagnosis [            a :Diagnosis ;
+            rdfs:label "High Blood Pressure"@en        ]    ] .

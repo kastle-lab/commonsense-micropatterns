@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Government rdf:type rdfs:Class .
+ex:Branch rdf:type rdfs:Class .
+ex:Executive rdf:type ex:Branch .
+ex:Legislative rdf:type ex:Branch .
+ex:Judicial rdf:type ex:Branch .
+ex:headOf rdf:type rdf:Property ;
+    rdfs:domain ex:Government ;
+    rdfs:range ex:Executive .
+    ex:consistsOf rdf:type rdf:Property ;
+    rdfs:domain ex:Government ;
+    rdfs:range ex:Branch .

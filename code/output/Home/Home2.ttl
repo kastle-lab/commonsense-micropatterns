@@ -1,0 +1,41 @@
+@prefix : <http://example.com/home#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Home a rdfs:Class ;
+      rdfs:label "Home" ;
+      rdfs:comment "The concept of a home or household" .
+:hasRoom a rdf:Property ;
+         rdfs:domain :Home ;
+         rdfs:range :Room ;
+         rdfs:label "has room" ;
+         rdfs:comment "A home contains one or more rooms" .
+:Room a rdfs:Class ;
+      rdfs:label "Room" ;
+      rdfs:comment "A room within a home" .
+      :Bedroom a :Room ;
+         rdfs:label "Bedroom" ;
+         rdfs:comment "A room intended for sleeping in" .
+         :Kitchen a :Room ;
+         rdfs:label "Kitchen" ;
+         rdfs:comment "A room intended for cooking or food preparation" .
+:Bathroom a :Room ;
+         rdfs:label "Bathroom" ;
+         rdfs:comment "A room intended for bathing and personal cleanliness" .
+:LivingRoom a :Room ;
+            rdfs:label "Living Room" ;
+            rdfs:comment "A room in a house for general and informal everyday use" .
+:hasAddress a rdf:Property ;
+           rdfs:domain :Home ;
+           rdfs:range xsd:string ;
+           rdfs:label "has address" ;
+           rdfs:comment "Physical location of the home" .
+:hasOwner a rdf:Property ;
+         rdfs:domain :Home ;
+         rdfs:range :Person ;
+         rdfs:label "has owner" ;
+         rdfs:comment "The person who owns the home" .
+:Person a rdfs:Class ;
+        rdfs:label "Person" ;
+        rdfs:comment "A human individual" .

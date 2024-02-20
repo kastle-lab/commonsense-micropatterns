@@ -1,0 +1,25 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/body#> .
+:Body a rdfs:Class ;
+  rdfs:comment "The physical structure of an organism, including its bones, muscles, skin and organs."@en ;
+  rdfs:label "Body"@en .
+:MuscularSystem a rdfs:Class ;
+  rdfs:subClassOf :Body ;
+  rdfs:label "Muscular system"@en ;
+  rdfs:comment "The complete network of muscles in the body of an organism."@en .
+:SkeletalSystem a rdfs:Class ;
+  rdfs:subClassOf :Body ;
+  rdfs:label "Skeletal system"@en ;
+  rdfs:comment "The entire structure of bones and joints in the body of an organism."@en.:NervousSystem a rdfs:Class ;
+  rdfs:subClassOf :Body ;
+  rdfs:label "Nervous system"@en ;
+  rdfs:comment "The network of nerve cells and fibers in the body of an organism."@en.:Organ a rdfs:Class ;
+  rdfs:subClassOf :Body ;
+  rdfs:label "Organ"@en ;
+  rdfs:comment "A self-contained part of an organism that performs a specific function."@en.:Body  rdfs:subClassOf     :MuscularSystem,    :SkeletalSystem,    :NervousSystem,    :Organ .
+:bodyPartHasFunction a rdfs:Property ;
+  rdfs:domain :Body ;
+  rdfs:range xsd:string ;
+  rdfs:label "body part has function"@en ;
+  rdfs:comment "A property indicating the function of a specific body part."@en.

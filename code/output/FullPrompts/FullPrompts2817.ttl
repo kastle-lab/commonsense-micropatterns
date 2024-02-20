@@ -1,0 +1,14 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+:Person a rdfs:Class .
+:hasFriend a rdf:Property ;
+           rdfs:domain :Person ;
+           rdfs:range :Person ;
+           rdfs:label "has friend"@en ;
+           rdfs:comment "A person has another person as a friend."@en .
+:John a :Person ;
+      foaf:name "John" ;
+      :hasFriend :Mary .
+:Mary a :Person ;
+      foaf:name "Mary" .

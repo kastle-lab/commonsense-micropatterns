@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.com/ontology#> .
+:Country a rdfs:Class ;
+  rdfs:comment "A nation with its own government and economy" ;
+  rdfs:label "Country" ;
+  rdfs:subClassOf rdfs:Resource .
+:hasName a rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The official name of the country" ;
+  rdfs:label "Name" .
+:hasCapital a rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range :City ;
+  rdfs:comment "The capital city of the country" ;
+  rdfs:label "Capital" .
+:City a rdfs:Class ;
+  rdfs:label "City" ;
+  rdfs:subClassOf rdfs:Resource .
+:hasPopulation a rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The total population of the country" ;
+  rdfs:label "Population" .
+:hasOfficialLanguage a rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range :Language ;
+  rdfs:comment "The official language(s) of the country" ;
+  rdfs:label "Official Language" .
+:Language a rdfs:Class ;
+  rdfs:label "Language" ;
+  rdfs:subClassOf rdfs:Resource .
+:hasCurrency a rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range :Currency ;
+  rdfs:comment "The currency used in the country" ;
+  rdfs:label "Currency" .
+:Currency a rdfs:Class ;
+  rdfs:label "Currency" ;
+  rdfs:subClassOf rdfs:Resource .

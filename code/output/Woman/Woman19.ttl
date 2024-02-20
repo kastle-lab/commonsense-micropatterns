@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <http://www.example.org/ontology#woman> .
+my:    rdf:type rdfs:Class ;
+    rdfs:comment "A human individual who identifies as female, usually based on biological sex."^^xsd:string ;
+    rdfs:label "Woman"^^xsd:string .
+my:hasName    rdf:type rdf:Property ;
+    rdfs:domain my: ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the woman."^^xsd:string ;
+    rdfs:label "hasName"^^xsd:string .
+my:hasAge    rdf:type rdf:Property ;
+    rdfs:domain my: ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The age of the woman in years."^^xsd:string ;
+    rdfs:label "hasAge"^^xsd:string .
+my:hasNationality    rdf:type rdf:Property ;
+    rdfs:domain my: ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The country of citizenship of the woman."^^xsd:string ;
+    rdfs:label "hasNationality"^^xsd:string .

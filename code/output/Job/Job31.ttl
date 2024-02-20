@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vocab: <http://myVocab.org/#> .
+vocab:Job rdf:type rdf:Class .
+vocab:hasTitle rdf:type rdf:Property ;
+  rdf:domain vocab:Job ;
+  rdf:range xsd:string .
+vocab:hasSalary rdf:type rdf:Property ;
+  rdf:domain vocab:Job ;
+  rdf:range xsd:decimal .
+vocab:requiresExperience rdf:type rdf:Property ;
+  rdf:domain vocab:Job ;
+  rdf:range xsd:boolean .
+vocab:SoftwareEngineer rdf:type vocab:Job ;
+  vocab:hasTitle "Software Engineer"^^xsd:string ;
+  vocab:hasSalary "50000"^^xsd:decimal ;
+  vocab:requiresExperience "true"^^xsd:boolean .

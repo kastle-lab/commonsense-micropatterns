@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:   rdf:type owl:Ontology ;
+   rdfs:label "Time Ontology" ;
+   rdfs:comment "An ontology for describing temporal concepts" .
+time:Instant   rdf:type rdfs:Class ;
+   rdfs:label "Instant" ;
+   rdfs:comment "A point in time." .
+time:Interval   rdf:type rdfs:Class ;
+   rdfs:label "Interval" ;
+   rdfs:comment "A range in time." .
+time:DateTime   rdf:type rdfs:DataType ;
+   rdfs:label "DateTime" ;
+   rdfs:comment "A specific date and time." .
+time:inXSDDateTime   rdf:type rdf:Property ;
+   rdfs:label "inXSDDateTime" ;
+   rdfs:comment "A property relating an instant to a DateTime literal." ;
+   rdfs:domain time:Instant ;
+   rdfs:range time:DateTime .
+time:hasDateTimeDescription   rdf:type rdf:Property ;
+   rdfs:label "hasDateTimeDescription" ;
+   rdfs:comment "A property relating a temporal entity to a DateTime Description." ;
+   rdfs:domain time:Interval ;
+   rdfs:range time:DateTime .
+time:before   rdf:type rdf:Property ;
+   rdfs:label "before" ;
+   rdfs:comment "A property relating an instant or interval to another that ends before the beginning of the former." ;
+   rdfs:domain [ rdf:type owl:Class ;
+ owl:unionOf (time:Instant time:Interval) ] ;
+   rdfs:range [ rdf:type owl:Class ;
+ owl:unionOf (time:Instant time:Interval) ] .
+time:after   rdf:type rdf:Property ;
+   rdfs:label "after" ;
+   rdfs:comment "A property relating an instant or interval to another that begins after the end of the former." ;
+   rdfs:domain [ rdf:type owl:Class ;
+ owl:unionOf (time:Instant time:Interval) ] ;
+   rdfs:range [ rdf:type owl:Class ;
+ owl:unionOf (time:Instant time:Interval) ] .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix work: <http://example.com/work#> .
+work:Work rdf:type owl:Class ;
+   rdfs:comment "Representation of Work or tasks" ;
+   rdfs:subClassOf rdfs:Resource .
+work:Employee rdf:type owl:Class ;
+   rdfs:comment "Person who performs a Work" ;
+   rdfs:subClassOf rdfs:Resource .
+work:jobTitle rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Title or name of the Work" .
+work:hasEmployee rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Employee ;
+    rdfs:comment "Link a Work to an Employee who performs it" .
+work:employeeName rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Employee ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Name of the Employee" .
+  work:employeeID rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Employee ;
+    rdfs:range xsd:int ;
+    rdfs:comment "Identifier of the Employee" .

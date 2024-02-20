@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.org/money#> .
+ex:Money rdf:type rdfs:Class .
+ex:hasCurrency rdf:type rdf:Property ;
+    rdfs:domain ex:Money ;
+    rdfs:range ex:Currency .
+ex:hasAmount rdf:type rdf:Property ;
+    rdfs:domain ex:Money ;
+    rdfs:range xsd:decimal .
+ex:Currency rdf:type rdfs:Class .
+# Instancesex:USD rdf:type ex:Currency ;
+    rdfs:label "US Dollar" .
+ex:myWallet rdf:type ex:Money ;
+    ex:hasCurrency ex:USD ;
+    ex:hasAmount "100.00"^^xsd:decimal .

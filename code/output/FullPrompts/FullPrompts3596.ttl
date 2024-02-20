@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.@prefix war: <http://example.com/war#> .
+war:War     rdf:type owl:Class ;
+    rdfs:comment "This represents the war entity in general."@en .
+war:Conflict    rdf:type owl:Class;
+    rdfs:comment "A conflict in a war"@en ;
+    rdfs:subClassOf war:War .
+war:Battle    rdf:type owl:Class ;
+    rdfs:comment "A specific battle in a conflict"@en ;
+    rdfs:subClassOf war:Conflict .
+war:hasParticipant    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The entity participating in the war"@en ;
+    rdfs:domain war:War ;
+    rdfs:range war:Entity .
+    war:Country    rdf:type owl:Class ;
+    rdfs:comment "A country engaged in a war."@en ;
+    rdfs:subClassOf war:Entity .
+war:hasOutcome    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The outcome of a war or battle"@en ;
+    rdfs:domain war:War ;
+    rdfs:range war:Outcome .
+war:Outcome     rdf:type owl:Class ;
+    rdfs:comment "Represents possible outcomes of a war (Victory, Defeat, Draw, Ongoing)."@en .
+war:Victory    rdf:type owl:Class ;
+    rdfs:comment "A possible outcome of a war where a party wins"@en ;
+    rdfs:subClassOf war:Outcome.war:Defeat    rdf:type owl:Class ;
+    rdfs:comment "A possible outcome of a war where a party loses"@en ;
+    rdfs:subClassOf war:Outcome.war:Draw    rdf:type owl:Class ;
+    rdfs:comment "A possible outcome of a war with no winner or loser"@en ;
+    rdfs:subClassOf war:Outcome.    war:Ongoing    rdf:type owl:Class ;
+    rdfs:comment "A possible outcome of a war that is currently being fought"@en ;
+    rdfs:subClassOf war:Outcome.war:hasLocation    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The location where a war or battle is being fought"@en ;
+    rdfs:domain war:War ;
+    rdfs:range war:Location.war:Location     rdf:type owl:Class ;
+    rdfs:comment "Represents the geographical location of a war or battle."@en.

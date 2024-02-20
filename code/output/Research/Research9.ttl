@@ -1,0 +1,36 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix research: <http://example.org/research#> .
+<http://example.org/research> rdf:type owl:Ontology ;
+    rdfs:comment "An RDF(S)/OWL ontology of academic research"@en .
+research:Research rdf:type owl:Class ;
+    rdfs:label "Research" ;
+    rdfs:comment "Academic research."@en .
+research:Researcher rdf:type owl:Class ;
+    rdfs:label "Researcher" ;
+    rdfs:comment "Any person who conducts a study."@en .
+research:Field rdf:type owl:Class ;
+    rdfs:label "Field" ;
+    rdfs:comment "A specific area of academic study."@en .
+research:conducts rdf:type owl:ObjectProperty ;
+    rdfs:domain research:Researcher ;
+    rdfs:range research:Research ;
+    rdfs:label "conducts" ;
+    rdfs:comment "Relates a researcher to a research they conduct."@en .
+research:inField rdf:type owl:ObjectProperty ;
+    rdfs:domain research:Research ;
+    rdfs:range research:Field ;
+    rdfs:label "inField" ;
+    rdfs:comment "Relates a research to a field in which the research is done."@en .
+research:Field rdfs:subClassOf [  rdf:type owl:Restriction ;
+  owl:onProperty research:inField ;
+  owl:allValuesFrom research:Research] .
+research:Research rdf:type owl:Class ;
+    owl:equivalentClass [      rdf:type owl:Restriction ;
+      owl:onProperty research:conducts ;
+      owl:someValuesFrom research:Researcher    ] .
+    research:Researcher rdfs:subClassOf [  rdf:type owl:Restriction ;
+  owl:onProperty research:conducts ;
+  owl:allValuesFrom research:Research] .

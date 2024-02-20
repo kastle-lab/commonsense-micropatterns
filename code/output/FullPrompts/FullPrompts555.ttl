@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Child a rdfs:Class ;
+    rdfs:label "Child"@en ;
+    rdfs:comment "An individual who is the direct offspring of a parent"@en .
+ex:Parent a rdfs:Class ;
+    rdfs:label "Parent"@en ;
+    rdfs:comment "An individual who has direct offspring"@en .
+ex:hasChild a rdf:Property ;
+    rdfs:label "has child"@en ;
+    rdfs:domain ex:Parent ;
+    rdfs:range ex:Child .
+ex:hasParent a rdf:Property ;
+    rdfs:label "has parent"@en ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:Parent .

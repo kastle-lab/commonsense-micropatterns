@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.com/ontology#> .
+# Define "Element" as a classex:Element a rdfs:Class .
+# Define "Air" as a subclass of "Element"ex:Air rdfs:subClassOf ex:Element .
+# Define properties for "Air"ex:isComposedOf a rdf:Property .
+ex:isFundamental a rdf:Property .
+# Define instances of "Air"ex:EarthAir a ex:Air ;
+    ex:isComposedOf "Nitrogen, Oxygen, Argon, Carbon Dioxide" ;
+    ex:isFundamental "False" .

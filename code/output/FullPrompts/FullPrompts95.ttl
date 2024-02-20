@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix furniture: <http://www.example.org/furniture#> .
+furniture:Loveseat rdf:type rdfs:Class ;
+    rdfs:subClassOf furniture:Furniture ;
+    rdfs:label "Loveseat"@en ;
+    rdfs:comment "A type of sofa that is designed to seat two people, typically referred as a Loveseat. A type of Furniture."@en .
+furniture:hasMaterial rdf:type rdf:Property ;
+    rdfs:label "has material" ;
+    rdfs:comment "The material used to manufacture the love seat." ;
+    rdfs:domain furniture:Loveseat ;
+    rdfs:range xsd:string .
+furniture:hasColor rdf:type rdf:Property ;
+    rdfs:label "has color" ;
+    rdfs:comment "The color of the love seat." ;
+    rdfs:domain furniture:Loveseat ;
+    rdfs:range xsd:string .
+furniture:hasStyle rdf:type rdf:Property ;
+    rdfs:label "has style" ;
+    rdfs:comment "The style of the love seat (modern, traditional, etc.)." ;
+    rdfs:domain furniture:Loveseat ;
+    rdfs:range xsd:string .
+furniture:isPartOfCollection rdf:type rdf:Property ;
+    rdfs:label "is part of collection" ;
+    rdfs:comment "Specifies the furniture collection the love seat belongs to." ;
+    rdfs:domain furniture:Loveseat ;
+    rdfs:range xsd:string .

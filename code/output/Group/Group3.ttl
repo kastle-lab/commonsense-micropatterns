@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix group: <http://example.org/group#> .
+group:Group rdf:type rdfs:Class ;
+    rdfs:label "Group"@en ;
+    rdfs:comment "Class representing a group of entities"@en .
+group:hasMember rdf:type rdf:Property ;
+    rdfs:label "has member"@en ;
+    rdfs:comment "Property representing membership in a group"@en ;
+    rdfs:domain group:Group ;
+    rdfs:range rdfs:Resource .
+group:name rdf:type rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:comment "Property representing the name of a group"@en ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:string .
+group:description rdf:type rdf:Property ;
+    rdfs:label "description"@en ;
+    rdfs:comment "Property representing the description of a group"@en ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:string .
+group:GroupSize rdf:type rdf:Property ;
+    rdfs:label "Group Size"@en ;
+    rdfs:comment "Property representing the total no of members in a group"@en ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:integer.group:memberName rdf:type rdf:Property ;
+    rdfs:label "member name"@en ;
+    rdfs:comment "Property representing the name of a member in a group"@en ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:range xsd:string .

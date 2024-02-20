@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix person: <http://example.com/person#> .
+# Class definitionperson:Person rdf:type rdfs:Class ;
+rdfs:comment "The class of all people" .
+# Property definitionsperson:name rdf:type rdf:Property ;
+rdfs:domain person:Person ;
+rdfs:range xsd:string ;
+rdfs:comment "The name of a person" .
+person:age rdf:type rdf:Property ;
+rdfs:domain person:Person ;
+rdfs:range xsd:integer ;
+rdfs:comment "The age of a person" .
+person:gender rdf:type rdf:Property ;
+rdfs:domain person:Person ;
+rdfs:range xsd:string ;
+rdfs:comment "The gender of a person" .
+person:address rdf:type rdf:Property ;
+rdfs:domain person:Person ;
+rdfs:range xsd:string ;
+rdfs:comment "The address of a person" .
+# Example individualperson:JohnDoe rdf:type person:Person ;
+person:name "John Doe" ;
+person:age 30 ;
+person:gender "Male" ;
+person:address "123 Main St, Anytown, USA" .

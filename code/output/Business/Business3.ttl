@@ -1,0 +1,25 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix business: <http://example.com/business#> .
+business:Business rdf:type rdfs:Class .
+business:Employee rdf:type rdfs:Class ;
+business:Manager rdf:type rdfs:Class ;
+  rdfs:subClassOf business:Employee .
+  business:HasEmployee rdf:type rdf:Property ;
+  rdfs:domain business:Business ;
+  rdfs:range business:Employee .
+  business:WorksFor rdf:type rdf:Property ;
+  rdfs:domain business:Employee ;
+  rdfs:range business:Business .
+business:CompanyName rdf:type rdf:Property ;
+  rdfs:domain business:Business ;
+  rdfs:range xsd:string .
+# Individual businesses business:DeltaInc rdf:type business:Business ;
+  business:CompanyName "Delta Inc." .
+business:GammaCorp rdf:type business:Business ;
+  business:CompanyName "Gamma Corp." .
+# Individual employeesbusiness:JohnDoe rdf:type business:Employee ;
+  business:WorksFor business:DeltaInc .
+business:JaneSmith rdf:type business:Manager ;
+  business:WorksFor business:GammaCorp .

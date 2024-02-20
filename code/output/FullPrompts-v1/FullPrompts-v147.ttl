@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/year#> .
+:Year rdf:type owl:Class ;
+  rdfs:label "Year"@en ;
+  rdfs:comment "A class representing calendar years"@en ;
+  rdfs:subClassOf xsd:integer ;
+  .
+:hasYear rdf:type owl:DatatypeProperty ;
+  rdfs:label "has year"@en ;
+  rdfs:comment "Relates an entity to a calendar year"@en ;
+  rdfs:domain [ rdf:type owl:Class ] ;
+  rdfs:range :Year ;
+  .
+:isYearOf rdf:type owl:InverseFunctionalProperty ;
+  rdfs:label "is the year of"@en ;
+  rdfs:comment "Inverse of hasYear property"@en ;
+  owl:inverseOf :hasYear ;
+  .
+  :since rdf:type owl:TransitiveProperty ;
+  rdfs:label "since"@en ;
+  rdfs:comment "Relates a year to all preceding years"@en ;
+  rdfs:domain :Year ;
+  rdfs:range :Year ;
+  .
+:until rdf:type owl:TransitiveProperty ;
+  rdfs:label "until"@en ;
+  rdfs:comment "Relates a year to all following years"@en ;
+  rdfs:domain :Year ;
+  rdfs:range :Year ;
+  .
+  :inDecade rdf:type owl:ObjectProperty ;
+  rdfs:label "in decade"@en ;
+  rdfs:comment "Relates a year to the decade it belongs to"@en ;
+  rdfs:domain :Year ;
+  rdfs:range :Decade ;
+  .
+:Decade rdf:type owl:Class ;
+  rdfs:label "Decade"@en ;
+  rdfs:comment "A class representing decades"@en ;
+  .

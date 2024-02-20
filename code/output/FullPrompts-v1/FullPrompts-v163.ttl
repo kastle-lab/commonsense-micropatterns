@@ -1,0 +1,15 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Year a rdfs:Class ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "A specific year in the Gregorian calendar"@en .
+ex:hasYear a rdf:Property ;
+    rdfs:label "has year"@en ;
+    rdfs:domain ex:Event ;
+    rdfs:range ex:Year ;
+    rdfs:comment "The specific year an event occurred"@en .
+ex:Event a rdfs:Class ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "Any occurrence or significant happening"@en .
+ex:event1 a ex:Event ;
+    ex:hasYear "2022"^^xsd:gYear .

@@ -1,0 +1,18 @@
+@prefix : <http://example.org/man#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Man a owl:Class ;
+  rdfs:label "Man"@en ;
+  rdfs:comment "A male human being"@en .
+  :hasName a owl:DatatypeProperty ;
+  rdfs:label "has name"@en ;
+  rdfs:domain :Man ;
+  rdfs:range xsd:string .
+:hasAge a owl:DatatypeProperty ;
+  rdfs:label "has age"@en ;
+  rdfs:domain :Man ;
+  rdfs:range xsd:integer .
+:John a :Man ;
+  :hasName "John" ;
+  :hasAge 30 .

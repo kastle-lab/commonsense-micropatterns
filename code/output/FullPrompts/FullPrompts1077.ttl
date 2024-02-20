@@ -1,0 +1,31 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/story#> .
+:Story a owl:Class ;
+:hasTitle a owl:DatatypeProperty ;
+    rdfs:domain :Story ;
+    rdfs:range xsd:string ;
+    :hasAuthor a owl:ObjectProperty ;
+     rdfs:domain :Story ;
+     rdfs:range :Person ;
+     :Person a owl:Class ;
+     rdfs:label "Person"@en ;
+     :hasCharacter a owl:ObjectProperty ;
+     rdfs:domain :Story ;
+     rdfs:range :Character ;
+     :Character a owl:Class ;
+     rdfs:label "Character"@en ;
+     :hasGenre a owl:ObjectProperty ;
+     rdfs:domain :Story ;
+     rdfs:range :Genre ;
+     :Genre a owl:Class ;
+rdfs:label "Genre"@en ;
+ :hasSetting a owl:ObjectProperty ;
+    rdfs:domain :Story ;
+    rdfs:range :Setting ;
+:Setting a owl:Class ;
+    rdfs:label "Setting"@en ;
+:hasPublishedDate a owl:DatatypeProperty ;
+    rdfs:domain :Story ;
+    rdfs:range xsd:date ;

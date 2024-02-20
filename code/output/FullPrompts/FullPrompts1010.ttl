@@ -1,0 +1,13 @@
+:Fact a rdf:Class ;
+      rdfs:label "Fact" ;
+      rdfs:comment "Class representing a factual information" .
+      :hasFact a rdf:Property ;
+         rdfs:label "has fact" ;
+         rdfs:comment "Property representing that something has a particular fact associated." ;
+         rdfs:domain :Entity ;
+         rdfs:range :Fact .
+         :FactValue a rdf:Property ;
+           rdfs:label "fact value" ;
+           rdfs:comment "Represents the value of a particular fact." ;
+           rdfs:domain :Fact ;
+           rdfs:range rdfs:Literal .

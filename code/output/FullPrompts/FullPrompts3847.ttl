@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix res: <http://example.org/research#> .
+# Classes res:Research a rdfs:Class ;
+   rdfs:comment "Class representing the concept of research in general." .
+res:QualitativeResearch a rdfs:Class ;
+  rdfs:subClassOf res:Research ;
+  rdfs:comment "Subset of research that is qualitative in nature." .
+res:QuantitativeResearch a rdfs:Class ;
+  rdfs:subClassOf res:Research ;
+  rdfs:comment "Subset of research that is quantitative in nature." .
+res:Researcher a rdfs:Class ;
+  rdfs:comment "Class representing individuals conducting research." .
+res:Institution a rdfs:Class ;
+  rdfs:comment "Class representing institutions conducting or supporting research activities.".
+# Propertiesres:specializesIn a rdf:Property ;
+  rdfs:domain res:Researcher ;
+  rdfs:range res:Research ;
+  rdfs:comment "Property linking researchers to their specific research field." .
+res:conducts a rdf:Property ;
+  rdfs:domain res:Researcher ;
+  rdfs:range res:Research ;
+  rdfs:comment "Property linking researchers to their conducted research." .
+res:supports a rdf:Property ;
+  rdfs:domain res:Institution ;
+  rdfs:range res:Research ;
+  rdfs:comment "Property linking institutions to the research they support." .
+res:publishedIn a rdf:Property ;
+  rdfs:domain res:Research ;
+  rdfs:range res:Institution ;
+  rdfs:comment "Property linking research outputs to the institution they are published in." .

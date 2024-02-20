@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prob: <http://www.example.org/problem#> .
+prob:Problem a rdfs:Class ;
+    rdfs:label "Problem" ;
+    rdfs:comment "An issue or difficulty that needs to be solved" .
+prob:solution a rdfs:Class ;
+    rdfs:label "Solution" ;
+    rdfs:comment "A method or process to resolve a problem" .
+prob:hasSolution a rdf:Property ;
+     rdfs:label "has Solution" ;
+    rdfs:comment "The property linking a problem to its solution" ;
+    rdfs:range prob:Solution ;
+    rdfs:domain prob:Problem .
+prob:isSolutionOf a rdf:Property ;
+    rdfs:label "is Solution of" ;
+    rdfs:comment "The property linking a solution to its problem" ;
+    rdfs:domain prob:Solution ;
+    rdfs:range prob:Problem .
+prob:isComplex a rdf:Property ;
+    rdfs:label "is Complex" ;
+    rdfs:comment "The property indicating if a problem is complex" ;
+    rdfs:domain prob:Problem ;
+    rdfs:range xsd:boolean .
+prob:timeToSolve a rdf:Property ;
+    rdfs:label "Time to Solve" ;
+    rdfs:comment "Estimated time required to solve the problem" ;
+    rdfs:domain prob:Problem ;
+    rdfs:range xsd:time .

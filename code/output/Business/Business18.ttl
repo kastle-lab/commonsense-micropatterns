@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix business: <http://example.org/business#> .
+business:Business rdf:type owl:Class ;
+    rdfs:comment "A category representing a business or firm" .
+business:hasOwner rdf:type owl:ObjectProperty ;
+    rdfs:range business:Owner ;
+    rdfs:domain business:Business ;
+    rdfs:comment "Property linking a business to its owner" .
+business:Owner rdf:type owl:Class ;
+    rdfs:comment "Individual or entity that owns a business" .
+business:Employee rdf:type owl:Class ;
+    rdfs:comment "Individual who works for a business" .
+business:hasEmployee rdf:type owl:ObjectProperty ;
+    rdfs:range business:Employee ;
+    rdfs:domain business:Business ;
+    rdfs:comment "Property linking a business to its employees" .
+business:Product rdf:type owl:Class ;
+    rdfs:comment "Goods or services offered by a business" .
+business:offersProduct rdf:type owl:ObjectProperty ;
+    rdfs:range business:Product ;
+    rdfs:domain business:Business ;
+    rdfs:comment "Property linking a business to the goods or services it offers" .
+business:Location rdf:type owl:Class ;
+    rdfs:comment "Physical location of a business" .
+business:hasLocation rdf:type owl:ObjectProperty ;
+    rdfs:range business:Location ;
+    rdfs:domain business:Business ;
+    rdfs:comment "Property linking a business to its physical location".
+business:revenue rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain business:Business ;
+    rdfs:comment "Property representing a business's revenue" .
+business:name rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:domain business:Business ;
+    rdfs:comment "Property representing a business's name" .
+    business:establishedDate rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:date ;
+    rdfs:domain business:Business ;
+    rdfs:comment "Property representing a business's established date" .

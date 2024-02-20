@@ -1,0 +1,31 @@
+@prefix edu: <http://example.org/edu#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+edu:Education    a rdfs:Class ;
+    rdfs:label "Education" ;
+    rdfs:comment "This class represents the concept of education in general." .
+edu:HighSchool    a edu:Education ;
+    rdfs:label "High school" ;
+    rdfs:comment "This subclass represents the secondary school level." .
+edu:University    a edu:Education ;
+    rdfs:label "University" ;
+    rdfs:comment "This subclass represents the highest level of formal education." .
+    edu:course    a rdfs:Property ;
+    rdfs:domain edu:Education ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "course" ;
+    rdfs:comment "This property represents the courses in education." .
+    edu:student    a rdfs:Property ;
+    rdfs:domain edu:Education ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "student" ;
+    rdfs:comment "This property represents the students receiving education." .
+edu:teacher    a rdfs:Property ;
+    rdfs:domain edu:Education ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "teacher" ;
+    rdfs:comment "This property represents the teachers providing education." .
+edu:school    a rdfs:Property ;
+    rdfs:domain edu:Education ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "school" ;
+    rdfs:comment "This property represents the schools providing education." .

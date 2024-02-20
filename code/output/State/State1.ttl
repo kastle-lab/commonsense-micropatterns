@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com#> .
+ex:State a rdfs:Class ;
+          rdfs:label "State"@en ;
+          rdfs:comment "A unit of territory in a federation, usually with its own government."@en .
+ex:hasName a rdf:Property ;
+           rdfs:domain ex:State ;
+           rdfs:range xsd:string ;
+           rdfs:label "has Name"@en ;
+           rdfs:comment "The name of the state."@en .
+ex:hasPopulation a rdf:Property ;
+                 rdfs:domain ex:State ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "has Population"@en ;
+                 rdfs:comment "The total number of people in the state."@en .
+ex:hasCapital a rdf:Property ;
+               rdfs:domain ex:State ;
+               rdfs:range xsd:string ;
+               rdfs:label "has Capital"@en ;
+               rdfs:comment "The capital city of the state."@en .
+ex:isPartOf a rdf:Property ;
+             rdfs:domain ex:State ;
+             rdfs:range ex:Country ;
+             rdfs:label "is Part Of"@en ;
+             rdfs:comment "The country where the state resides."@en .
+ex:Country a rdfs:Class ;
+           rdfs:label "Country"@en ;
+           rdfs:comment "A nation with its own government, occupying a particular territory."@en .

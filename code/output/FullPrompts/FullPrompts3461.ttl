@@ -1,0 +1,9 @@
+:UnknownItems a owl:Class ;
+     rdfs:label "Unknown Items" ;
+     rdfs:subClassOf :Others .
+:HomemadeItems a owl:Class ;
+     rdfs:label "Homemade Items" ;
+     rdfs:subClassOf :Others .
+ :MiscellaneousItems a owl:Class ;
+     rdfs:label "Miscellaneous Items" ;
+     rdfs:subClassOf :Others .

@@ -1,0 +1,9 @@
+@prefix : <http://example.org/> .
+:Way a rdfs:Class ;
+rdfs:label "Way"@en ;
+rdfs:comment "A class representing ways or methods of doing things."@en .
+:provides a rdf:Property ;
+rdfs:label "provides"@en ;
+rdfs:domain :Way ;
+rdfs:range :Thing ;
+rdfs:comment "A property indicating what a particular way provides or results in."@en .

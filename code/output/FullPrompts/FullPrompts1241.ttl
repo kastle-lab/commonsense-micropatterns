@@ -1,0 +1,26 @@
+@prefix ex: <http://example.com/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Program a owl:Class ;
+  rdfs:label "Software Program" .
+ex:hasName a owl:ObjectProperty ;
+  rdfs:label "has name" ;
+  rdfs:domain ex:Program ;
+  rdfs:range rdf:PlainLiteral .
+ex:hasVersion a owl:ObjectProperty ;
+  rdfs:label "has version" ;
+  rdfs:domain ex:Program ;
+  rdfs:range rdf:PlainLiteral .
+ex:hasDeveloper a owl:ObjectProperty ;
+  rdfs:label "has developer" ;
+  rdfs:domain ex:Program ;
+  rdfs:range ex:Developer .
+ex:Developer a owl:Class ;
+  rdfs:label "Software Developer" .
+ex:Program_1 a ex:Program ;
+  ex:hasName "Example Program" ;
+  ex:hasVersion "1.0" ;
+  ex:hasDeveloper ex:Developer_1 .
+ex:Developer_1 a ex:Developer ;
+  ex:hasName "Example Developer" .

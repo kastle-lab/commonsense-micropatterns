@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kind: <http://example.org/kind#> .
+kind:Kind  rdf:type rdfs:Class ;
+  rdfs:comment "The class of all kinds or types."@en ;
+  rdfs:label "Kind"@en .
+ kind:hasName  rdf:type rdf:Property ;
+  rdfs:comment "The name of the kind or type."@en ;
+  rdfs:label "has name"@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range xsd:string .
+kind:hasProperty   rdf:type rdf:Property ;
+   rdfs:comment "A property that describes the kind or type."@en ;
+  rdfs:label "has property"@en ;
+  rdfs:domain kind:Kind ;
+  rdfs:range xsd:string .

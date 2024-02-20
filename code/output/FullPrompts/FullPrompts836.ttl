@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/schema#> .
+ex:Company rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a company." .
+ex:name rdf:type rdf:Property ;
+    rdfs:domain ex:Company ;
+    rdfs:range rdf:Literal ;
+    rdfs:comment "The name of the company." .
+    ex:hasEmployee rdf:type rdf:Property ;
+    rdfs:domain ex:Company ;
+    rdfs:range ex:Person ;
+    rdfs:comment "A property defining an association between a company and its employees." .
+    ex:locatedIn rdf:type rdf:Property ;
+    rdfs:domain ex:Company ;
+    rdfs:range ex:Location ;
+    rdfs:comment "A property defining where a company is located." .

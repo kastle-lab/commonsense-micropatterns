@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+dbpedia:Woman a rdf:Class ;
+    rdfs:label "Woman"@en ;
+    rdfs:comment "A female human adult."@en ;
+    rdfs:subClassOf dbpedia:Human .
+dbpedia:hasGender a rdf:Property ;
+    rdfs:label "has gender"@en ;
+    rdfs:comment "The gender of the person or character."@en ;
+    rdfs:domain dbpedia:Human ;
+    rdfs:range xsd:string .
+dbpedia:Woman rdf:type dbpedia:hasGender ;
+    rdfs:label "female"@en .

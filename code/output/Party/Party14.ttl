@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix party: <http://example.org/party#> .
+party:Party rdf:type rdfs:Class .
+party:location rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string .
+party:date rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:date .
+party:host rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string .
+party:guest rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string.party:theme rdf:type rdf:Property ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string.party:Party rdfs:subClassOf rdfs:Resource .
+party:birthdayParty rdf:type party:Party ;
+    rdfs:subClassOf party:Party.party:weddingParty rdf:type party:Party ;
+    rdfs:subClassOf party:Party.party:corporateParty rdf:type party:Party ;
+    rdfs:subClassOf party:Party .

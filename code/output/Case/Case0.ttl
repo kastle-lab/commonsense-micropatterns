@@ -1,0 +1,32 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix case: <http://www.example.org/case#> .
+case:Case rdf:type rdfs:Class ;
+    rdfs:label "Case" ;
+    rdfs:comment "An abstract concept that represents a case in any domain or context." .
+case:hasCaseId rdf:type rdf:Property ;
+    rdfs:label "hasCaseId" ;
+    rdfs:comment "Property that links a Case with its unique identifier." ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:string .
+case:hasCaseStatus rdf:type rdf:Property ;
+    rdfs:label "hasCaseStatus" ;
+    rdfs:comment "Property that links a Case with its current status." ;
+    rdfs:domain case:Case ;
+    rdfs:range case:CaseStatus .
+case:hasCaseDate rdf:type rdf:Property ;
+    rdfs:label "hasCaseDate" ;
+    rdfs:comment "Property that links a Case with the date it was created." ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:date .
+case:CaseStatus rdf:type rdfs:Class ;
+    rdfs:label "Case Status" ;
+    rdfs:comment "A category that represents the current status of a case." .
+case:Open rdf:type case:CaseStatus ;
+    rdfs:label "Open" ;
+    rdfs:comment "Represents a case that is currently open." .
+case:Closed rdf:type case:CaseStatus ;
+    rdfs:label "Closed" ;
+    rdfs:comment "Represents a case that is currently closed." .

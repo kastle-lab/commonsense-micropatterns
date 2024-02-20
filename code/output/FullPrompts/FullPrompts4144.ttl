@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.com/schema#> .
+# Define our concepts (classes)ex:Education a rdfs:Class ;
+  rdfs:label "Education"@en ;
+  rdfs:comment "An educational experience or attainment"@en .
+ex:Course a rdfs:Class ;
+  rdfs:label "Course"@en ;
+  rdfs:comment "An individual course of study"@en ;
+  rdfs:subClassOf ex:Education .
+ex:Degree a rdfs:Class ;
+  rdfs:label "Degree"@en ;
+  rdfs:comment "An academic degree"@en ;
+  rdfs:subClassOf ex:Education .
+# Define properties for our objectsex:hasCourse a rdf:Property ;
+  rdfs:label "has course"@en ;
+  rdfs:comment "The course studied by an individual"@en ;
+  rdfs:domain ex:Education ;
+  rdfs:range ex:Course .
+ex:hasDegree a rdf:Property ;
+  rdfs:label "has degree"@en ;
+  rdfs:comment "The academic degree received by an individual"@en ;
+  rdfs:domain ex:Education ;
+  rdfs:range ex:Degree .
+ex:title a rdf:Property ;
+  rdfs:label "title"@en ;
+  rdfs:comment "The title of the course or degree"@en ;
+  rdfs:range xsd:string .
+ex:startDate a rdf:Property ;
+  rdfs:label "start date"@en ;
+  rdfs:comment "The date the course or degree program started"@en ;
+  rdfs:range xsd:date .
+ex:endDate a rdf:Property ;
+  rdfs:label "end date"@en ;
+  rdfs:comment "The date the course or degree program ended"@en ;
+  rdfs:range xsd:date .

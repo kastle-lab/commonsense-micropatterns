@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix body: <http://example.org/ontology/body#> .
+# Define the Body classbody:Body rdf:type rdfs:Class ;
+          rdfs:label "Body" ;
+          rdfs:comment "The physical structure of a person or an animal, including the bones, flesh, and organs." .
+# Define related sub-classesbody:Head rdf:type rdfs:Class ;
+           rdfs:subClassOf body:Body ;
+           rdfs:label "Head" ;
+           rdfs:comment "The upper part of the human or animal body, where the eyes, nose, and mouth are." .
+body:Arm rdf:type rdfs:Class ;
+          rdfs:subClassOf body:Body ;
+          rdfs:label "Arm" ;
+          rdfs:comment "Either of the two long parts of the upper body that are attached to the shoulders and have the hands at the end." .
+body:Leg rdf:type rdfs:Class ;
+          rdfs:subClassOf body:Body ;
+          rdfs:label "Leg" ;
+          rdfs:comment "Either of the two long parts of the lower body that are attached to the feet." .

@@ -1,0 +1,35 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix com: <http://example.com/community#> .
+com:Community rdf:type owl:Class .
+com:Member rdf:type owl:Class ;
+    rdfs:subClassOf com:Person .
+    com:Person rdf:type owl:Class ;
+    rdfs:comment "A person in the community." .
+com:Event rdf:type owl:Class ;
+    rdfs:comment "An event in the community." .
+com:Group  rdf:type owl:Class ;
+    rdfs:subClassOf com:Community ;
+    rdfs:comment "A group in the community." .
+com:hasMember rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Community ;
+    rdfs:range  com:Member ;
+    rdfs:label  "has member" ;
+    rdfs:comment "Relates a community to a member." .
+com:hasEvent rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Community ;
+    rdfs:range  com:Event ;
+    rdfs:label  "has event" ;
+    rdfs:comment "Relates a community to an event." .
+com:memberOf rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Member ;
+    rdfs:range  com:Community ;
+    rdfs:label  "is a member of" ;
+    rdfs:comment "Relates a member to a community." .
+com:attendsEvent rdf:type owl:ObjectProperty ;
+    rdfs:domain com:Member ;
+    rdfs:range  com:Event ;
+    rdfs:label  "attends event" ;
+    rdfs:comment "Relates a member to an event they are attending." .

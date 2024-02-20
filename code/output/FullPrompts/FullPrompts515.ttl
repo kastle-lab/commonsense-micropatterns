@@ -1,0 +1,4 @@
+ Here is a basic example in Turtle format:
+@base <http://example.org/> .
+@prefix ex: <http://example.org/> .
+ex:Car ex:hasPart ex:Wheel.

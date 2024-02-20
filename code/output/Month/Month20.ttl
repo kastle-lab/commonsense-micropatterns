@@ -1,0 +1,14 @@
+@prefix : <http://example.org/monthOntology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Month a rdfs:Class ;
+    rdfs:label "Month" ;
+    rdfs:comment "Represents a month in a year" .
+:January a :Month ;
+    rdfs:label "January" ;
+    rdfs:comment "The first month of the year" .
+:February a :Month ;
+    rdfs:label "February" ;
+    rdfs:comment "The second month of the year" .
+:March a :Month ;
+    rdfs:label "March" ;
+    rdfs:comment "The third month of the year" .

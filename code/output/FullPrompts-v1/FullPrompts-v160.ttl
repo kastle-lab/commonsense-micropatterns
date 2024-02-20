@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Year a rdfs:Class ;
+  rdfs:label "Year"@en ;
+  rdfs:comment "A period of 365-366 days, in the Gregorian calendar, divided into 12 months, and marked by the Earth's orbit around the sun."@en ;
+  rdfs:subClassOf xsd:gYear .

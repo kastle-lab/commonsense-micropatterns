@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http://www.example.com/work#> .
+work:Work  rdf:type rdfs:Class .
+work:fullTime  rdf:type rdfs:Class ;
+  rdfs:subClassOf work:Work .
+work:partTime   rdf:type rdfs:Class ;
+  rdfs:subClassOf work:Work .
+ work:jobTitle  rdf:type rdf:Property ;
+  rdfs:domain work:Work ;
+  rdfs:range xsd:string .
+work:employer  rdf:type rdf:Property ;
+  rdfs:domain work:Work ;
+  rdfs:range xsd:string .
+work:employee    rdf:type rdf:Property ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:string .
+work:startDate  rdf:type rdf:Property ;
+  rdfs:domain work:Work ;
+  rdfs:range xsd:date .
+work:endDate  rdf:type rdf:Property ;
+  rdfs:domain work:Work ;
+  rdfs:range xsd:date .
+ work:Job1  rdf:type work:fullTime ;
+  work:jobTitle "Software Developer" ;
+  work:employer "TechCompany Ltd." ;
+  work:employee "John Doe" ;
+  work:startDate "2021-01-01"^^xsd:date ;
+  work:endDate " "^^xsd:date .
+ work:Job2  rdf:type work:partTime ;
+  work:jobTitle "Data Analyst" ;
+  work:employer "Analytics Ltd." ;
+  work:employee "Jane Doe" ;
+  work:startDate "2020-05-01"^^xsd:date ;
+  work:endDate "2022-01-31"^^xsd:date .

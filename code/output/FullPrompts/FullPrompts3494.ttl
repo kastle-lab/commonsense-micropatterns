@@ -1,0 +1,16 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Level a rdfs:Class ;
+    rdfs:label "Level"@en ;
+    rdfs:comment "A class representing levels in a system or hierarchy."@en ;
+    rdfs:subClassOf rdfs:Resource .
+:hasLevel a rdf:Property ;
+    rdfs:label "has level"@en ;
+    rdfs:comment "A property representing an entity's level within a system or hierarchy."@en ;
+    rdfs:domain :Entity ;
+    rdfs:range :Level .
+:Entity a rdfs:Class ;
+    rdfs:label "Entity"@en ;
+    rdfs:comment "A class representing entities that have levels."@en ;
+    rdfs:subClassOf rdfs:Resource .

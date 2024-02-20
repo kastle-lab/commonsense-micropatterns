@@ -1,0 +1,23 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/vocab/> .
+ex:Education a rdfs:Class ;
+rdfs:subClassOf [    a owl:Restriction ;
+    owl:onProperty foaf:member ;
+    owl:someValuesFrom ex:Course] .
+ex:Course a rdfs:Class ;
+rdfs:subClassOf [    a owl:Restriction ;
+    owl:onProperty foaf:member ;
+    owl:someValuesFrom ex:Subject] ;
+rdfs:subClassOf [    a owl:Restriction ;
+    owl:onProperty foaf:member ;
+    owl:someValuesFrom ex:Teacher] .
+ex:Subject a rdfs:Class .
+ex:Teacher a rdfs:Class .
+ex:student a rdfs:Class ;
+rdfs:subClassOf [    a owl:Restriction ;
+    owl:onProperty ex:enrolledIn ;
+    owl:someValuesFrom ex:Course] .
+ex:enrolledIn a rdf:Property rdfs:subClassOf [    a owl:Restriction ;
+    owl:onProperty ex:assessment ;
+    owl:allValuesFrom ex:Grade] .
+ex:Grade a rdfs:Class .

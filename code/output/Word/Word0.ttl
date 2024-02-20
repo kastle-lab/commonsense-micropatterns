@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix word: <http://www.example.org/word#> .
+word:Word rdf:type owl:Class ;
+    rdfs:comment "A class representing a word in general context."^^xsd:string ;
+    rdfs:label "Word"^^xsd:string .
+word:hasSpelling rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The spelling of a word."^^xsd:string ;
+    rdfs:label "has spelling"^^xsd:string ;
+    rdfs:domain word:Word ;
+    rdfs:range xsd:string .
+word:hasMeaning rdf:type owl:ObjectProperty ;
+    rdfs:comment "The meaning associated with a word."^^xsd:string ;
+    rdfs:label "has meaning"^^xsd:string ;
+    rdfs:domain word:Word ;
+    rdfs:range word:Meaning .
+word:Meaning rdf:type owl:Class ;
+    rdfs:comment "A class representing the meaning of a word."^^xsd:string ;
+    rdfs:label "Meaning"^^xsd:string .
+word:isPartOfSpeech rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The part of speech category that a word falls under."^^xsd:string ;
+    rdfs:label "is part of speech"^^xsd:string ;
+    rdfs:domain word:Word ;
+    rdfs:range xsd:string .
+word:Language rdf:type owl:Class ;
+    rdfs:comment "A class representing a language."^^xsd:string ;
+    rdfs:label "Language"^^xsd:string .
+    word:isInLanguage rdf:type owl:ObjectProperty ;
+    rdfs:comment "The language a word is used in."^^xsd:string ;
+    rdfs:label "is in language"^^xsd:string ;
+    rdfs:domain word:Word ;
+    rdfs:range word:Language .

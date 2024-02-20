@@ -1,0 +1,12 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:timePointA a ex:TimePoint ;
+    ex:hour "09"^^xsd:integer .
+ex:TimePoint a rdfs:Class ;
+    rdfs:label "Time Point"@en ;
+    rdfs:comment "A certain point in time, represented by an hour"@en .
+ex:hour a rdf:Property ;
+    rdfs:label "hour"@en ;
+    rdfs:comment "The hour of a given time point"@en ;
+    rdfs:domain ex:TimePoint ;
+    rdfs:range xsd:integer .

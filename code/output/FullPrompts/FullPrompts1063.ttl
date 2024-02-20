@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Story rdf:type owl:Class ;
+    rdfs:subClassOf rdfs:Resource ;
+    rdfs:label "Story" ;
+    rdfs:comment "A structured narrative or account of events" .
+:hasTitle rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:domain :Story ;
+    rdfs:label "hasTitle" ;
+    rdfs:comment "The title of the story" .
+:hasAuthor rdf:type owl:ObjectProperty ;
+    rdfs:range :Person ;
+    rdfs:domain :Story ;
+    rdfs:label "hasAuthor" ;
+    rdfs:comment "The author of the story" .
+:hasSetting rdf:type owl:ObjectProperty ;
+    rdfs:range :Place ;
+    rdfs:domain :Story ;
+    rdfs:label "hasSetting" ;
+    rdfs:comment "The setting of the story" .
+:hasCharacter rdf:type owl:ObjectProperty ;
+    rdfs:range :Character ;
+    rdfs:domain :Story ;
+    rdfs:label "hasCharacter" ;
+    rdfs:comment "A character in the story" .
+:Person rdf:type owl:Class ;
+    rdfs:subClassOf rdfs:Resource ;
+    rdfs:label "Person" ;
+    rdfs:comment "A person, usually as the author of a story" .
+:Place rdf:type owl:Class ;
+    rdfs:subClassOf rdfs:Resource ;
+    rdfs:label "Place" ;
+    rdfs:comment "A setting or location in the story" .
+:Character rdf:type owl:Class ;
+    rdfs:subClassOf rdfs:Resource ;
+    rdfs:label "Character" ;
+    rdfs:comment "A character or entity that plays a role in a story" .

@@ -1,0 +1,23 @@
+@prefix : <http://www.example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Fact     a rdfs:Class ;
+    rdfs:label "Fact"@en ;
+    rdfs:comment "Represents a factual statement or claim"@en ;
+    rdfs:subClassOf rdfs:Resource .
+:hasSubject    a rdf:Property ;
+    rdfs:label "has subject"@en ;
+    rdfs:comment "Designates the subject of a fact"@en ;
+    rdfs:domain :Fact ;
+    rdfs:range rdfs:Resource .
+:hasObject    a rdf:Property ;
+    rdfs:label "has object"@en ;
+    rdfs:comment "Designates the object of a fact"@en ;
+    rdfs:domain :Fact ;
+    rdfs:range rdfs:Resource .
+:hasValue    a rdf:Property ;
+    rdfs:label "has value"@en ;
+    rdfs:comment "Designates the value or truth of a fact"@en ;
+    rdfs:domain :Fact ;
+    rdfs:range xsd:boolean .

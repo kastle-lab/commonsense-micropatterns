@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com#> .
+ex:Power rdf:type rdfs:Class ;
+    rdfs:label "Power" ;
+    rdfs:comment "A measure of one's ability to control or influence something" .
+ex:PoliticalPower rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Power ;
+    rdfs:label "Political Power" ;
+    rdfs:comment "Power used in the context of political relations, such as government and citizens" .
+ex:EconomicPower rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Power ;
+    rdfs:label "Economic Power" ;
+    rdfs:comment "Power used in economic contexts, such as corporations and markets" .
+ex:MilitaryPower rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Power ;
+    rdfs:label "Military Power" ;
+    rdfs:comment "Power defined by military strength and strategic capabilities" .
+ex:SuperPower rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Power ;
+    rdfs:label "Super Power" ;
+    rdfs:comment "Extraordinary abilities beyond the capabilities of normal entities" .
+ex:PowerSource rdf:type rdfs:Class ;
+    rdfs:label "Power Source" ;
+    rdfs:comment "The origin or source from which power is derived" .
+ex:hasPower rdf:type rdf:Property ;
+    rdfs:label "has Power" ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Power .
+ex:derivedFrom rdf:type rdf:Property ;
+    rdfs:label "derived from" ;
+    rdfs:domain ex:Power ;
+    rdfs:range ex:PowerSource .

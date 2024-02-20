@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/ontology#> .
+ex:Moment rdf:type rdfs:Class ;
+    rdfs:comment "A point in time" .
+ex:time rdf:type rdf:Property ;
+    rdfs:domain ex:Moment ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The specified time of a moment" .
+ex:hasMoment rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Moment ;
+    rdfs:comment "Property that connects a person with a specific moment" .
+ex:isMomentOf rdf:type rdf:Property ;
+    rdfs:domain ex:Moment ;
+    rdfs:range ex:Event ;
+    rdfs:comment "Property that connects a moment with a specific event" .
+ex:inLocation rdf:type rdf:Property ;
+    rdfs:domain ex:Moment ;
+    rdfs:range ex:Location ;
+    rdfs:comment "Property that connects a moment with a specific location" .
+ex:Person rdf:type rdfs:Class ;
+    rdfs:comment "Representation of a human being" .
+ex:Event rdf:type rdfs:Class ;
+    rdfs:comment "An occurrence or happening" .
+ex:Location rdf:type rdfs:Class ;
+    rdfs:comment "A place where a moment could occur" .

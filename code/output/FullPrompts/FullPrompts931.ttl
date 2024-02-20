@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+dbo:Group a rdfs:Class ;
+    rdfs:label "Group"@en ;
+    rdfs:comment "A collection of individuals or entities"@en ;
+.dbo:hasMember a rdf:Property ;
+    rdfs:label "has member"@en ;
+    rdfs:comment "A property relating a group to its members"@en ;
+    rdfs:domain dbo:Group ;
+    rdfs:range dbo:Person ;
+.dbo:GroupSize a rdf:Property ;
+    rdfs:label "group size"@en ;
+    rdfs:comment "The number of members in a group"@en ;
+    rdfs:domain dbo:Group ;
+    rdfs:range xsd:integer ;
+.

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/thing#> .
+# Thing Ontology :Thing rdf:type owl:Class ;
+  rdfs:label "Thing" ;
+  rdfs:comment "A universal entity in the universe i.e everything is a thing" ;
+  owl:axiom [    a owl:Axiom ;
+    owl:propertyChainAxiom ( :partOf :isMadeOf ) ;
+    owl:annotatedTarget :Thing ;
+    owl:annotatedSource :Thing ;
+    owl:annotatedProperty owl:equivalentClass   ] ;
+  rdfs:subClassOf owl:Thing .
+:isMadeOf rdf:type owl:ObjectProperty ;
+  rdfs:domain :Thing ;
+  rdfs:range :Thing ;
+  rdfs:label "is made of" ;
+  rdfs:comment "Relates a thing to what it is made of, which is also a thing." .
+:partOf rdf:type owl:ObjectProperty ;
+  rdfs:domain :Thing ;
+  rdfs:range :Thing ;
+  rdfs:label "part of" ;
+  rdfs:comment "Relates a thing to what it is part of, which is also a thing." .

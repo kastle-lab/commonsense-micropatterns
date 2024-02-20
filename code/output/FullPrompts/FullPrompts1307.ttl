@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http://example.org/work#> .
+<http://example.org/work>    rdf:type owl:Ontology ;
+    rdfs:comment "An ontology surrounding the concept of Work" ;
+    rdfs:label "Work Ontology" .
+work:Work    rdf:type owl:Class ;
+    rdfs:label "Work" ;
+    rdfs:comment "This class describes all types of work or professional activities" .
+work:Employee    rdf:type owl:Class ;
+    rdfs:label "Employee" ;
+    rdfs:comment "An individual who performs work for a wage or salary" .
+work:Employer    rdf:type owl:Class ;
+    rdfs:label "Employer" ;
+    rdfs:comment "An individual or entity that hires and pays employees for their work" .
+work:JobTitle    rdf:type owl:Class ;
+    rdfs:label "Job Title" ;
+    rdfs:comment "The formal designation of a worker's role in an organization" .
+work:hasJob    rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Employee ;
+    rdfs:range work:Work ;
+    rdfs:label "has job" ;
+    rdfs:comment "Relates an individual to the work they perform" .
+work:employs    rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Employer ;
+    rdfs:range work:Employee ;
+    rdfs:label "employs" ;
+    rdfs:comment "Relates an employer to the individual they employ" .
+work:jobTitle    rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:string ;
+    rdfs:label "job title" ;
+    rdfs:comment "The title of a specific Job or Work" .

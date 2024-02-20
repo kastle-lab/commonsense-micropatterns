@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://example.org/people#> .
+ont:Person a rdfs:Class;
+          rdfs:label "Person";
+          rdfs:comment "Class representing person".
+          ont:hasName a rdf:Property;
+            rdfs:label "has name";
+            rdfs:comment "Property representing person's name";
+            rdfs:domain ont:Person;
+            rdfs:range xsd:string.            ont:hasAge a rdf:Property;
+           rdfs:label "has age";
+           rdfs:comment "Property representing person's age";
+           rdfs:domain ont:Person;
+           rdfs:range xsd:int.ont:isMarried a rdf:Property;
+              rdfs:label "is married to";
+              rdfs:comment "Property representing marriage between individuals";
+              rdfs:domain ont:Person;
+              rdfs:range ont:Person.ont:Person rdfs:subClassOf ont:LivingBeing.ont:LivingBeing a rdfs:Class;
+                rdfs:label "Living being";
+                rdfs:comment "Class representing any living being".
+  ont:hasGender a rdf:Property;
+              rdfs:label "has gender";
+              rdfs:comment "Property representing person's gender";
+              rdfs:domain ont:Person;
+              rdfs:range ont:Gender.ont:Gender a rdfs:Class;
+           rdfs:label "Gender";
+           rdfs:comment "Class representing person's gender".
+ont:Male a rdfs:Class;
+         rdfs:subClassOf ont:Gender;
+         rdfs:label "Male".
+         ont:Female a rdfs:Class;
+           rdfs:subClassOf ont:Gender;
+           rdfs:label "Female".
+ont:NonBinary a rdfs:Class;
+              rdfs:subClassOf ont:Gender;
+              rdfs:label "Non-Binary".

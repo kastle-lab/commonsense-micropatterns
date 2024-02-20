@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org#> .
+:Child a owl:Class ;
+    rdfs:label "Child" ;
+    rdfs:subclassOf [        a owl:Restriction ;
+        owl:onProperty :isChildOf ;
+        owl:someValuesFrom :Parent    ] .
+:isChildOf rdf:type owl:ObjectProperty ;
+    rdfs:domain :Child ;
+    rdfs:range :Parent ;
+    rdfs:label "is child of" .
+:Parent a owl:Class ;
+    rdfs:label "Parent" .

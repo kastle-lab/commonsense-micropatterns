@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix childOnt: <http://example.org/childOntology#> .
+childOnt:Child rdf:type owl:Class ;
+  rdfs:label "Child"@en ;
+  rdfs:comment "A human who is not yet an adult."@en .
+childOnt:hasAge rdf:type owl:DatatypeProperty ;
+  rdfs:domain childOnt:Child ;
+  rdfs:range xsd:integer ;
+  rdfs:label "has age"@en ;
+  rdfs:comment "The age of the child in years."@en .
+childOnt:hasName rdf:type owl:DatatypeProperty ;
+  rdfs:domain childOnt:Child ;
+  rdfs:range xsd:string ;
+  rdfs:label "has name"@en ;
+  rdfs:comment "The name of the child."@en .
+childOnt:hasParent rdf:type owl:ObjectProperty ;
+  rdfs:domain childOnt:Child ;
+  rdfs:range childOnt:Parent ;
+  rdfs:label "has parent"@en ;
+  rdfs:comment "The parent of the child."@en .
+childOnt:Parent rdf:type owl:Class ;
+  rdfs:label "Parent"@en ;
+  rdfs:comment "A human who has a child."@en .
+childOnt:livesAt rdf:type owl:ObjectProperty ;
+  rdfs:domain childOnt:Child ;
+  rdfs:range childOnt:Address ;
+  rdfs:label "lives at"@en ;
+  rdfs:comment "The address where the child lives."@en .
+childOnt:Address rdf:type owl:Class ;
+  rdfs:label "Address"@en ;
+  rdfs:comment "The place of residence."@en .

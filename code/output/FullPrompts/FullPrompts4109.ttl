@@ -1,0 +1,4 @@
+@prefix : <http://example.org/> .
+:force a :AbstractConcept .
+:force :hasAttribute :vector .
+:force :hasAttribute :magnitude .

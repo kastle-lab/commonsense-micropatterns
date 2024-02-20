@@ -1,0 +1,4 @@
+@prefix : <http://example.org/> .
+:Law a rdf:Class .
+:LawInstance a :Law ;
+:provides :Resource .

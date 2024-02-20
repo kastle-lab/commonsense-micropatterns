@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.org/> .
+ex:Girl a owl:Class ;
+  rdfs:subClassOf schema:Person ;
+  rdfs:comment "A girl is a female human who is child or young" ;
+  rdfs:label "Girl" .
+ex:Gender a owl:Class ;
+  rdfs:subClassOf foaf:gender ;
+  rdfs:label "Gender" .
+ex:isGirl a owl:ObjectProperty ;
+  rdfs:domain schema:Person ;
+  rdfs:range ex:Girl ;
+  rdfs:label "is a girl" .
+ex:hasGender a owl:DatatypeProperty ;
+  rdfs:subPropertyOf foaf:gender ;
+  rdfs:domain schema:Person ;
+  rdfs:range ex:Gender ;
+  rdfs:label "has gender" .

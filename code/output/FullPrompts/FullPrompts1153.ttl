@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix water: <http://www.example.org/water#> .
+water: a owl:Ontology ;
+water:Water a owl:Class ;
+  rdfs:label "Water"@en ;
+  rdfs:comment "H2O, the substance that covers most of the earth's surface and is vital for all known forms of life"@en ;
+  rdfs:subClassOf rdfs:Resource .
+water:isDrinkable a owl:DatatypeProperty ;
+  rdfs:domain water:Water ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "is drinkable"@en ;
+  rdfs:comment "Indicates if the water is pure enough to be drunk without causing harm"@en .
+water:isSaltWater a owl:DatatypeProperty ;
+  rdfs:domain water:Water ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "is saltwater"@en ;
+  rdfs:comment "Indicates if the water is saltwater"@en .
+water:isFreshWater a owl:DatatypeProperty ;
+  rdfs:domain water:Water ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "is freshwater"@en ;
+  rdfs:comment "Indicates if the water is freshwater"@en .
+water:temperature a owl:DatatypeProperty ;
+  rdfs:domain water:Water ;
+  rdfs:range xsd:float ;
+  rdfs:label "temperature"@en ;
+  rdfs:comment "The temperature of the water in degrees Celsius"@en .
+water:source a owl:ObjectProperty ;
+  rdfs:domain water:Water ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "source"@en ;
+  rdfs:comment "The source of the water, such as a body of water or a water supply system"@en .

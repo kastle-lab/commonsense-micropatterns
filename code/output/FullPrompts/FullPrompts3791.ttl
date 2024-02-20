@@ -1,0 +1,2 @@
+@prefix ex: <http://www.example.com#> .
+ex:Morning a owl:Class .

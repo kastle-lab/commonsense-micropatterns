@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/#> .
+ex:Member rdfs:Class ;
+  rdfs:label "Member" ;
+  rdfs:comment "Class for describing a member".
+# A member has an IDex:hasID rdf:Property ;
+  rdfs:label "has ID" ;
+  rdfs:comment "The property that describes the ID of a member" ;
+  rdfs:domain ex:Member ;
+  rdfs:range xsd:string .
+# A member has a nameex:hasName rdf:Property ;
+  rdfs:label "has name" ;
+  rdfs:comment "The property that describes the name of a member" ;
+  rdfs:domain ex:Member ;
+  rdfs:range xsd:string .
+# A member can belong to a groupex:memberOf rdf:Property ;
+  rdfs:label "is member of" ;
+  rdfs:comment "The property that describes the group a member belongs to" ;
+  rdfs:domain ex:Member ;
+  rdfs:range ex:Group .
+#Let's instantiate an instance of a memberex:member1 rdf:type ex:Member ;
+  ex:hasID "123456" ;
+  ex:hasName "John Doe" ;
+  ex:memberOf ex:group1 .
+   #Group definition ex:Group rdfs:Class ;
+  rdfs:label "group" ;
+  rdfs:comment "Class for describing a group" .
+ #Let's instantiate a group ex:group1 rdf:type ex:Group .

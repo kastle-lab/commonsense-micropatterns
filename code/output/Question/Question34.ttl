@@ -1,0 +1,18 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/> .
+ex:Question a rdfs:Class ;
+    rdfs:comment "A class representing a question."@en .
+ex:hasQuestion a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Question ;
+    rdfs:comment "A property representing that a person has a question."@en .
+ex:person1 ex:hasQuestion ex:question1 .
+ex:question1 a ex:Question ;
+    rdfs:label "What is the capital of France?"@en ;
+    ex:hasAnswer "Paris"@en .
+ex:hasAnswer a rdf:Property ;
+    rdfs:domain ex:Question ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A property representing the answer to a question."@en .

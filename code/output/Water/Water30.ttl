@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.com/ontology#> .
+ex:Water  rdf:type rdfs:Class ;
+  rdfs:comment "Class representing the concept of Water" .
+ex:hasPh  rdf:type rdf:Property ;
+  rdfs:domain ex:Water ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "Property representing the pH value of water" .
+ex:hasTemperature  rdf:type rdf:Property ;
+  rdfs:domain ex:Water ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "Property representing the temperature of water" .

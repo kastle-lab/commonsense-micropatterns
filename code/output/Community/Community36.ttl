@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.com#> .
+:Community rdf:type rdfs:Class ;
+           rdfs:comment "A group of individuals living in the same area or having a particular characteristic in common." .
+     :hasMember rdf:type rdf:Property ;
+           rdfs:range :Person ;
+           rdfs:domain :Community ;
+           rdfs:comment "Indicates the members of a particular community." .
+           :hasName rdf:type rdf:Property ;
+         rdfs:range rdfs:Literal ;
+         rdfs:domain :Community ;
+         rdfs:comment "The name of the community." .
+  :Person rdf:type rdfs:Class ;
+        rdfs:comment "An individual or member of a community." .
+:Person1 rdf:type :Person ;
+         :hasName "John Doe" .
+:Community1 rdf:type :Community ;
+            :hasName "Sample Community" ;
+            :hasMember :Person1 .

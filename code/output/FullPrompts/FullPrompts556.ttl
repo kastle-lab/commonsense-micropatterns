@@ -1,0 +1,8 @@
+@base <http://example.org/> .
+@prefix schema: <http://schema.org/> .
+:John_a schema:parent :Jane_b .
+:Jane_b schema:child :John_a .
+:John_a a schema:Person .
+:John_a schema:name "John" .
+:Jane_b a schema:Person .
+:Jane_b schema:name "Jane" .

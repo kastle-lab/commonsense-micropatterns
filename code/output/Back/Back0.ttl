@@ -1,0 +1,54 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix back: <http://www.example.org/backontology#> .
+back:Back a rdfs:Class ;
+    rdfs:label "Back"@en ;
+    rdfs:comment "Region of body that lies behind the chest and abdomen"@en .
+back:HumanBody a rdfs:Class ;
+    rdfs:label "Human Body"@en ;
+    rdfs:comment "The entirety of structures of a human being"@en ;
+    rdfs:subClassOf owl:Thing ;
+    back:hasPart back:Back .
+back:SpinalCord a rdfs:Class ;
+    rdfs:label "Spinal Cord"@en ;
+    rdfs:comment "Bundle of nerve fibers extending from brain"@en ;
+    rdfs:subClassOf back:Back .
+back:Muscle a rdfs:Class ;
+    rdfs:label "Muscle"@en ;
+    rdfs:comment "Soft tissue that can contract and produce movement or maintain position"@en ;
+    rdfs:subClassOf back:Back .
+back:Vertebra a rdfs:Class ;
+    rdfs:label "Vertebra"@en ;
+    rdfs:comment "Bones that form the spinal column"@en ;
+    rdfs:subClassOf back:Back .
+back:hasPart a rdf:Property ;
+    rdfs:label "has Part"@en ;
+    rdfs:comment "Indicates that a thing has a part"@en ;
+    rdfs:domain back:HumanBody ;
+    rdfs:range back:Back .
+    back:Spine a rdfs:Class ;
+    rdfs:label "Spine"@en ;
+    rdfs:comment "The backbone or spine which includes the vertebral column that surrounds and protects the spinal cord"@en ;
+    rdfs:subClassOf back:Back .
+    back:LowerBack a rdfs:Class ;
+    rdfs:label "Lower Back"@en ;
+    rdfs:comment "The area of the back extending from the bottom of the ribs to the top of the legs"@en ;
+    rdfs:subClassOf back:Back .
+back:UpperBack a rdfs:Class ;
+    rdfs:label "Upper Back"@en ;
+    rdfs:comment "Region of the back ranging from the base of the neck to the bottom of the rib cage"@en ;
+    rdfs:subClassOf back:Back .
+back:LumbarRegion a rdfs:Class ;
+    rdfs:label "Lumbar Region"@en ;
+    rdfs:comment "The area of the spine between the diaphragm and the sacrum"@en ;
+    rdfs:subClassOf back:LowerBack .
+back:CervicalRegion a rdfs:Class ;
+    rdfs:label "Cervical Region"@en ;
+    rdfs:comment "Uppermost part of the spine"@en ;
+    rdfs:subClassOf back:UpperBack .
+back:ThoracicRegion a rdfs:Class ;
+    rdfs:label "Thoracic Region"@en ;
+    rdfs:comment "Middle part of the spine"@en ;
+    rdfs:subClassOf back:UpperBack .

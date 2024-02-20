@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix morning: <http://www.example.org/morning#> .
+morning:Morning    rdf:type rdfs:Class ;
+    rdfs:label "Morning"@en .
+morning:hasActivity    rdf:type owl:ObjectProperty ;
+    rdfs:label "has activity"@en ;
+    rdfs:domain morning:Morning ;
+    rdfs:range morning:Activity .
+morning:Activity    rdf:type rdfs:Class ;
+    rdfs:label "Activity"@en .
+morning:hasStartTime    rdf:type owl:DatatypeProperty ;
+    rdfs:label "has start time"@en ;
+    rdfs:domain morning:Morning ;
+    rdfs:range xsd:time .
+morning:hasEndTime    rdf:type owl:DatatypeProperty ;
+    rdfs:label "has end time"@en ;
+    rdfs:domain morning:Morning ;
+    rdfs:range xsd:time .
+morning:hasMeal    rdf:type owl:ObjectProperty ;
+    rdfs:label "has meal"@en ;
+    rdfs:domain morning:Morning ;
+    rdfs:range morning:Meal .
+morning:Meal    rdf:type rdfs:Class ;
+    rdfs:label "Meal"@en .
+morning:isPartOfDay    rdf:type owl:ObjectProperty ;
+    rdfs:label "is part of day"@en ;
+    rdfs:domain morning:Morning ;
+    rdfs:range morning:Day .
+morning:Day    rdf:type rdfs:Class ;
+    rdfs:label "Day"@en .

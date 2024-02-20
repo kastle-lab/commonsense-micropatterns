@@ -1,0 +1,13 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Year a rdfs:Class ;
+    rdfs:comment "A year in the Gregorian calendar."@en ;
+    rdfs:label "Year"@en .
+ex:hasYear a rdf:Property ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Year ;
+    rdfs:label "has year"@en ;
+    rdfs:comment "Relates an entity to a year."@en .
+ex:Entity a rdfs:Class ;
+    rdfs:label "Entity"@en ;
+    rdfs:comment "A thing with distinct and independent existence."@en .

@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix head: <http://example.org/head/> .
+#Class definitionshead:Head rdf:type rdfs:Class .
+head:HumanHead rdf:type rdfs:Class .
+head:AnimalHead rdf:type rdfs:Class .
+#Subclass relationshead:HumanHead rdfs:subClassOf head:Head .
+head:AnimalHead rdfs:subClassOf head:Head .
+#Property definitionshead:hasHair rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range xsd:boolean .
+head:hasHorns rdf:type rdf:Property ;
+    rdfs:domain head:AnimalHead ;
+    rdfs:range xsd:boolean .
+head:hasBrain rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range xsd:boolean .
+ #Individual instanceshead:Joe rdf:type head:HumanHead ;
+    head:hasHair "true"^^xsd:boolean ;
+    head:hasBrain "true"^^xsd:boolean .
+head:LionKing rdf:type head:AnimalHead ;
+    head:hasHair "true"^^xsd:boolean ;
+    head:hasHorns "false"^^xsd:boolean ;
+    head:hasBrain "true"^^xsd:boolean .

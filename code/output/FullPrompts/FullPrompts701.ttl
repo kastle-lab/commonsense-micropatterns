@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix week: <http://example.org/week#> .
+week:Week rdf:type rdfs:Class ;
+    rdfs:comment "A week in a calendar" .
+week:hasDay rdf:type rdf:Property;
+    rdfs:range week:Day ;
+    rdfs:domain week:Week ;
+    rdfs:comment "Relates a week to its days" .
+week:Day rdf:type rdfs:Class ;
+    rdfs:comment "The days in a week" .
+week:Monday rdf:type week:Day ;
+    rdfs:comment "Monday" .
+  week:Tuesday rdf:type week:Day ;
+    rdfs:comment "Tuesday" .
+week:Wednesday rdf:type week:Day ;
+    rdfs:comment "Wednesday" .
+week:Thursday rdf:type week:Day ;
+    rdfs:comment "Thursday" .
+week:Friday rdf:type week:Day ;
+    rdfs:comment "Friday" .
+week:Saturday rdf:type week:Day ;
+    rdfs:comment "Saturday" .
+week:Sunday rdf:type week:Day ;
+    rdfs:comment "Sunday" .
+week:hasSequence rdf:type rdf:Property;
+    rdfs:domain week:Day ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Defines the sequence of the day in a week" .
+week:Monday week:hasSequence "1"^^xsd:integer .
+week:Tuesday week:hasSequence "2"^^xsd:integer .
+week:Wednesday week:hasSequence "3"^^xsd:integer .
+week:Thursday week:hasSequence "4"^^xsd:integer .
+week:Friday week:hasSequence "5"^^xsd:integer .
+week:Saturday week:hasSequence "6"^^xsd:integer .
+week:Sunday week:hasSequence "7"^^xsd:integer .

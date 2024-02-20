@@ -1,0 +1,34 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix history: <http://www.example.org/history#> .
+# Classeshistory:HistoricalEvent a rdfs:Class ;
+    rdfs:label "Historical Event" ;
+    rdfs:comment "An event that happened in the past" .
+history:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A person who played a significant role in history" .
+history:Location a rdfs:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "A physical location where a historical event occurred" .
+history:Artifact a rdfs:Class ;
+    rdfs:label "Artifact" ;
+    rdfs:comment "An object from the past that has been preserved and is significant or valuable" .
+# Propertieshistory:occurredAt a rdfs:Property ;
+    rdfs:label "occurred at" ;
+    rdfs:comment "The location where a historical event occurred" ;
+    rdfs:domain history:HistoricalEvent ;
+    rdfs:range history:Location .
+history:involvedPerson a rdfs:Property ;
+    rdfs:label "involved person" ;
+    rdfs:comment "A person who was involved in a historical event" ;
+    rdfs:domain history:HistoricalEvent ;
+    rdfs:range history:Person .
+history:producedArtifact a rdfs:Property ;
+    rdfs:label "produced artifact" ;
+    rdfs:domain history:HistoricalEvent ;
+    rdfs:range history:Artifact .
+history:hasDate a rdfs:Property ;
+    rdfs:label "has date" ;
+    rdfs:comment "The date when a historical event occurred" ;
+    rdfs:domain history:HistoricalEvent ;
+    rdfs:range xsd:date .

@@ -1,0 +1,23 @@
+  rdfs:label "Level";
+  rdfs:comment "The term level refers to layers, stages, or degrees in a hierarchy or other structured set of relationships.".
+:Difficulty_Level  rdf:type rdfs:Class;
+  rdfs:subClassOf :Level;
+  rdfs:label "Difficulty Level";
+  rdfs:comment "Some sort of challenge or task can be distinguished based on the degree of difficulty".
+:Education_Level  rdf:type rdfs:Class;
+  rdfs:subClassOf :Level;
+  rdfs:label "Education Level";
+  rdfs:comment "Education level refers to the highest degree of school a person has completed".
+:Sea_Level  rdf:type rdfs:Class;
+  rdfs:subClassOf :Level;
+  rdfs:label "Sea Level";
+  rdfs:comment "Sea level is the average level of the ocean's surface and is used as a standard for measuring land elevation and water depths".
+:hasLevel  rdf:type rdf:Property;
+  rdfs:label "has level";
+  rdfs:comment "A property indicating the level of something in a specific context";
+  rdfs:domain rdfs:Resource;
+  rdfs:range :Level.:isLevelOf  rdf:type rdf:Property;
+  rdfs:label "is level of";
+  rdfs:comment "A property indicating what something is the level of";
+  rdfs:domain :Level;
+  rdfs:range rdfs:Resource.

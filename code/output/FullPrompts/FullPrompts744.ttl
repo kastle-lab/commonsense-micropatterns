@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix case: <http://example.com/ontology/case#> .
+case:Case rdf:type rdfs:Class ;
+    rdfs:label "Case"@en ;
+    rdfs:comment "A generic representation of a case, which might refer to a case study, law case, or any scenario that requires analysis or investigation."@en .
+case:hasCaseId rdf:type rdf:Property ;
+    rdfs:label "has case id"@en ;
+    rdfs:comment "The identification number or reference for the case."@en ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:string .
+case:isRelatedTo rdf:type rdf:Property ;
+    rdfs:label "is related to"@en ;
+    rdfs:comment "Indicates if a case has a relationship with other case(s)."@en ;
+    rdfs:domain case:Case ;
+    rdfs:range case:Case .
+case:caseStatus rdf:type rdf:Property ;
+    rdfs:label "case status"@en ;
+    rdfs:comment "The current status of the case (open, closed, pending, etc.)."@en ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:string .
+case:assignedTo rdf:type rdf:Property ;
+    rdfs:label "assigned to"@en ;
+    rdfs:comment "The individual or entity to whom the case is assigned for investigation or analysis."@en ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:string .

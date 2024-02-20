@@ -1,0 +1,45 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix number: <http://example.org/ontology/number#> .
+number:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology for Number"@en .
+number:Number     rdf:type owl:Class ;
+    rdfs:label "Number" ;
+    rdfs:comment "The class of all numbers" .
+number:NaturalNumber     rdf:type owl:Class ;
+    owl:subClassOf number:Number ;
+    rdfs:label "Natural number" ;
+    rdfs:comment "The class of all natural numbers" .
+number:Integer     rdf:type owl:Class ;
+    owl:subClassOf number:Number ;
+    rdfs:label "Integer" ;
+    rdfs:comment "The class of all integers" .
+number:PositiveNumber     rdf:type owl:Class ;
+    owl:subClassOf number:Number ;
+    rdfs:label "Positive number" ;
+    rdfs:comment "The class of all positive numbers" .
+number:Fraction     rdf:type owl:Class ;
+    owl:subClassOf number:Number ;
+    rdfs:label "Fraction" ;
+    rdfs:comment "The class of all fractions" .
+number:Decimal     rdf:type owl:Class ;
+    owl:subClassOf number:Number ;
+    rdfs:label "Decimal" ;
+    rdfs:comment "The class of all decimal numbers" .
+number:isDivisibleBy     rdf:type owl:ObjectProperty ;
+    rdfs:label "is divisible by" ;
+    rdfs:domain number:Number ;
+    rdfs:range number:Number ;
+    rdfs:comment "Relation between two numbers where the first number is divisible by the second number" .
+number:greaterThan     rdf:type owl:ObjectProperty ;
+    rdfs:label "greater than" ;
+    rdfs:domain number:Number ;
+    rdfs:range number:Number ;
+    rdfs:comment "Relation between two numbers where the first number is greater than the second number" .
+number:lessThan     rdf:type owl:ObjectProperty ;
+    rdfs:label "less than" ;
+    rdfs:domain number:Number ;
+    rdfs:range number:Number ;
+    rdfs:comment "Relation between two numbers where the first number is less than the second number" .

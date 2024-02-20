@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Education rdf:type rdfs:Class .
+ex:hasEducation rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Education .
+ex:Person rdf:type rdfs:Class .
+ex:p1 rdf:type ex:Person ;
+    ex:hasEducation ex:e1 .
+ex:e1 rdf:type ex:Education ;
+    ex:degree "PhD" ;
+    ex:school "University of XYZ" ;
+    ex:field "Artificial Intelligence" ;
+    ex:year 2022 .

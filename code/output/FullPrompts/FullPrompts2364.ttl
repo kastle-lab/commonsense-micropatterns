@@ -1,0 +1,19 @@
+@prefix : <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+# Class definition for Right:Right rdf:type rdfs:Class ;
+  rdfs:comment "A legal right or privilege" .
+# Data property for right name:right_name rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Right ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The name of the right or privilege" .
+# Object property for right holder:right_holder rdf:type owl:ObjectProperty ;
+  rdfs:domain :Right ;
+  rdfs:range :Person ;
+  # Or an appropriate class for the holder  rdfs:comment "The holder of the right or privilege" .
+# Example individual of a Right:FreeSpeechRight rdf:type :Right ;
+  :right_name "Free Speech" ;
+  :right_holder :JohnDoe .
+# Example individual of a Person:JohnDoe rdf:type :Person ;
+  # Or an appropriate class for the holder  rdfs:label "John Doe" .

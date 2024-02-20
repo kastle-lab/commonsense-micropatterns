@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.com#> .
+:Result rdf:type rdfs:Class .
+:hasResult rdf:type rdf:Property ;
+    rdfs:domain :Action ;
+    rdfs:range :Result ;
+    rdfs:comment "Represents the result or outcome of a specific action" .
+:Action rdf:type rdfs:Class ;
+    rdfs:comment "Represents a specific action that could have a possible result or outcome" .
+:quantitativeResult rdf:type rdf:Property ;
+    rdfs:subPropertyOf :hasResult ;
+    rdfs:range :QuantitativeResult ;
+    rdfs:comment "Represents a quantitative or measurable outcome of an action" .
+:QualitativeResult rdf:type rdf:Property ;
+    rdfs:subPropertyOf :hasResult ;
+    rdfs:range :QualitativeResult ;
+    rdfs:comment "Represents a qualitative or non-measurable outcome of an action" .
+:QuantitativeResult rdf:type rdfs:Class ;
+    rdfs:comment "Represents measurable results or outcomes of an action" .
+:QualitativeResult rdf:type rdfs:Class ;
+    rdfs:comment "Represents non-measurable results or outcomes of an action" .

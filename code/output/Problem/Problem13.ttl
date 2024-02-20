@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prob: <http://example.org/problem#> .
+prob:Problem a owl:Class ;
+    rdfs:label "Problem"@en ;
+    rdfs:comment "The class of all problems or issues that need to be solved."@en .
+prob:hasSolution a owl:ObjectProperty ;
+    rdfs:label "has solution"@en ;
+    rdfs:comment "The property that links a problem to its solutions."@en ;
+    rdfs:domain prob:Problem ;
+    rdfs:range prob:Solution .
+prob:Solution a owl:Class ;
+    rdfs:label "Solution"@en ;
+    rdfs:comment "A class for all possible solutions to problems."@en .
+prob:description a owl:DatatypeProperty ;
+    rdfs:label "description"@en ;
+    rdfs:comment "The property that gives a description of the problem or solution."@en ;
+    rdfs:range xsd:string .

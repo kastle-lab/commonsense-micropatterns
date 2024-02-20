@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix kid: <http://example.org/kid#> .
+# Class hierarchieskid:Kid rdf:type rdfs:Class .
+kid:Boy rdfs:subClassOf kid:Kid .
+kid:Girl rdfs:subClassOf kid:Kid .
+kid:Toy rdf:type rdfs:Class .
+kid:Book rdfs:subClassOf kid:Toy .
+kid:Game rdfs:subClassOf kid:Toy .
+kid:School rdf:type rdfs:Class .
+kid:Home rdfs:subClassOf kid:School .
+#Object propertieskid:hasToy rdf:type rdf:Property ;
+    rdfs:domain kid:Kid ;
+    rdfs:range kid:Toy .
+kid:attends rdf:type rdf:Property ;
+    rdfs:domain kid:Kid ;
+    rdfs:range kid:School .
+#Data propertieskid:age rdf:type rdf:Property ;
+    rdfs:domain kid:Kid ;
+    rdfs:range rdfs:Literal .
+kid:name rdf:type rdf:Property ;
+    rdfs:domain kid:Kid ;
+    rdfs:range rdfs:Literal .

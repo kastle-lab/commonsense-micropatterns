@@ -1,0 +1,11 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Work rdf:type rdfs:Class .
+ex:work1 rdf:type ex:Work ;
+    ex:hasTitle "Example Work"^^xsd:string ;
+    ex:hasStartDate "2020-01-01"^^xsd:date ;
+    ex:hasEndDate "2020-12-31"^^xsd:date ;
+    ex:isPerformedBy ex:employee1 .
+ex:employee1 rdf:type ex:Employee ;
+    ex:hasName "John Doe"^^xsd:string .

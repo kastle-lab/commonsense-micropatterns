@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Student a rdfs:Class ;
+    rdfs:subClassOf ex:Person ;
+    rdfs:label "Student"@en .
+ex:studies a rdf:Property ;
+    rdfs:domain ex:Student ;
+    rdfs:range ex:Subject ;
+    rdfs:label "studies"@en .
+ex:enrolledIn a rdf:Property ;
+    rdfs:domain ex:Student ;
+    rdfs:range ex:Course ;
+    rdfs:label "enrolled in"@en .
+ex:hasStudentID a rdf:Property ;
+    rdfs:domain ex:Student ;
+    rdfs:range xsd:string ;
+    rdfs:label "has student ID"@en .

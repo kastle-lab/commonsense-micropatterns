@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+<http://example.com/school1>    rdf:type schema:School ;
+    schema:name "Example High School"^^xsd:string ;
+    schema:numberOfStudents "1500"^^xsd:integer ;
+    schema:location <http://example.com/location1> .
+<http://example.com/location1>    rdf:type schema:Place ;
+    schema:address "123 Main St, Example City, EX 12345"^^xsd:string ;
+    schema:geo schem:geo1 .
+<http://example.com/geo1>    rdf:type schema:GeoCoordinates ;
+    schema:latitude "40.6892"^^xsd:float ;
+    schema:longitude "-74.0445"^^xsd:float .

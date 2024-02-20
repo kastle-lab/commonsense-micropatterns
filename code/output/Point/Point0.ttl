@@ -1,0 +1,26 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix point: <http://www.example.com/point#> .
+point: a rdfs:Class ;
+   rdfs:label "Point" ;
+   rdfs:comment "A location in space defined by its coordinates" .
+point:x_coordinate a rdfs:Property ;
+   rdfs:label "x coordinate" ;
+   rdfs:comment "The x coordinate of a point" ;
+   rdfs:domain point: ;
+   rdfs:range rdfs:Literal .
+point:y_coordinate a rdfs:Property ;
+   rdfs:label "y coordinate" ;
+   rdfs:comment "The y coordinate of a point" ;
+   rdfs:domain point: ;
+   rdfs:range rdfs:Literal .
+point:in_Cartesian_coordinate_system a rdfs:Property ;
+   rdfs:label "in Cartesian coordinate system" ;
+   rdfs:comment "The point is in Cartesian coordinate system" ;
+   rdfs:domain point: ;
+   rdfs:range geo:CartesianCS .
+point:in_Geographic_coordinate_system a rdfs:Property ;
+   rdfs:label "in Geographic coordinate system" ;
+   rdfs:comment "The point is in Geographic coordinate system" ;
+   rdfs:domain point: ;
+   rdfs:range geo:SphericalCS .

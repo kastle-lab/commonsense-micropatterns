@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix couch: <http://example.org/couch#> .
+couch:Couch rdf:type owl:Class ;
+  rdfs:label "Couch"@en ;
+  rdfs:comment "A large piece of furniture for seating"@en .
+couch:hasColor rdf:type owl:DatatypeProperty ;
+  rdfs:domain couch:Couch ;
+  rdfs:range xsd:string ;
+  rdfs:label "hasColor"@en ;
+  rdfs:comment "The color of the couch"@en .
+couch:hasUpholsteryMaterial rdf:type owl:DatatypeProperty ;
+  rdfs:domain couch:Couch ;
+  rdfs:range xsd:string ;
+  rdfs:label "hasUpholsteryMaterial"@en ;
+  rdfs:comment "The upholstry material of the couch"@en .
+couch:hasDimensions rdf:type owl:DatatypeProperty ;
+  rdfs:domain couch:Couch ;
+  rdfs:range xsd:string ;
+  rdfs:label "hasSize"@en ;
+  rdfs:comment "The dimensions of the couch"@en .
+couch:hasBrand rdf:type owl:DatatypeProperty ;
+  rdfs:domain couch:Couch ;
+  rdfs:range xsd:string ;
+  rdfs:label "hasBrand"@en ;
+  rdfs:comment "The brand of the couch"@en .
+couch:hasPrice rdf:type owl:DatatypeProperty ;
+  rdfs:domain couch:Couch ;
+  rdfs:range xsd:float ;
+  rdfs:label "hasPrice"@en ;
+  rdfs:comment "The price of the couch"@en .

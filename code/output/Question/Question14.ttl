@@ -1,0 +1,28 @@
+@prefix : <http://www.example.com/ontology/question#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+: a owl:Ontology ;
+  rdfs:comment "An ontology for questions"@en .
+:Question a owl:Class ;
+  rdfs:comment "The class of questions"@en ;
+  rdfs:label "Question"@en .
+:hasContent a owl:DatatypeProperty ;
+  rdfs:comment "The textual content of a question"@en ;
+  rdfs:label "has content"@en ;
+  rdfs:domain :Question ;
+  rdfs:range xsd: string .
+:hasAnswer a owl:ObjectProperty ;
+  rdfs:comment "The answer or potential answers to a question"@en ;
+  rdfs:label "has answer"@en ;
+  rdfs:domain :Question ;
+  rdfs:range :Answer .
+:Answer a owl:Class ;
+  rdfs:comment "The class of answers"@en ;
+  rdfs:label "Answer"@en .
+:hasText a owl:DatatypeProperty ;
+  rdfs:comment "The textual content of an answer"@en ;
+  rdfs:label "has text"@en ;
+  rdfs:domain :Answer ;
+  rdfs:range xsd: string .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix num: <http://www.example.org/number#> .
+num:Number rdf:type owl:Class ;
+           rdfs:label "Number" ;
+           rdfs:comment "An abstract object used to describe quantity" .
+num:Integer rdfs:subClassOf num:Number ;
+            rdfs:label "Integer" ;
+            rdfs:comment "A number that can be written without a fractional component" .
+num:RealNumber rdfs:subClassOf num:Number ;
+               rdfs:label "Real Number" ;
+               rdfs:comment "A value that represents a quantity along a continuous line" .
+num:PositiveInteger rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty num:hasValue ;
+                                         owl:allValuesFrom xsd:positiveInteger ] ;
+                   rdfs:subClassOf num:Integer ;
+                   rdfs:label "Positive Integer" ;
+                   rdfs:comment "An integer that is greater than zero" .
+num:NegativeInteger rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty num:hasValue ;
+                                         owl:allValuesFrom xsd:negativeInteger ] ;
+                   rdfs:subClassOf num:Integer ;
+                   rdfs:label "Negative Integer" ;
+                   rdfs:comment "An integer that is less than zero" .
+num:hasValue rdf:type owl:DatatypeProperty ;
+             rdfs:label "has value" ;
+             rdfs:comment "Link between a number instance and its value" .

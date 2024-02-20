@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+:Line a rdfs:Class ;
+  rdfs:label "Line" ;
+  rdfs:comment "A geometric entity that is straight, infinite and unidirectional." .
+  :hasStartPoint a rdf:Property ;
+  rdfs:domain :Line ;
+  rdfs:range :Point .
+:hasEndPoint a rdf:Property ;
+  rdfs:domain :Line ;
+  rdfs:range :Point .
+:Point a rdfs:Class ;
+  rdfs:label "Point" ;
+  rdfs:comment "A geometric entity that has a position but no spatial extent." .
+  :hasXCoordinate a rdf:Property ;
+  rdfs:domain :Point ;
+  rdfs:range xsd:decimal .
+:hasYCoordinate a rdf:Property ;
+  rdfs:domain :Point ;
+  rdfs:range xsd:decimal .

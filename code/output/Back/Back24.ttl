@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix back: <http://example.org/back#> .
+back:Back a rdfs:Class ;
+    rdfs:label "Back" ;
+    rdfs:comment "A class that represents the concept of 'Back' or 'Rear' in a spatial or conceptual sense.".
+back:hasLocation a rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain back:Back ;
+    rdfs:comment "A property that indicates the location of 'Back' in a given context." .
+back:isBackOf a rdf:Property ;
+    rdfs:range back:Back ;
+    rdfs:comment "A property that indicates what 'Back' is behind or is the rear of." .
+back:isOppositeOf a rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain back:Back ;
+    rdfs:comment "A property that indicates what is opposite of 'Back'." .

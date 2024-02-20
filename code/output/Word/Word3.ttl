@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix word: <http://example.org/word#> .
+word: has rdf:type rdf:Property ;
+  rdfs:label "has" ;
+  rdfs:domain word:Context ;
+  rdfs:range word:Word .
+word:Word rdfs:label "Word" ;
+  rdfs:subClassOf rdfs:Resource ;
+  rdfs:comment "The class of string of characters that are used to compose sentences and address meanings" .
+word:Context rdfs:label "Context" ;
+  rdfs:subClassOf rdfs:Resource ;
+  rdfs:comment "The class of information that help to frame and understand words meanings" .
+word:englishWord rdf:type word:Word ;
+  rdfs:label "englishWord" ;
+  rdfs:comment "The class of words that are in the English language" .
+word:spanishWord rdf:type word:Word ;
+  rdfs:label "spanishWord" ;
+  rdfs:comment "The class of words that are in the Spanish language" .
+word:definitions rdf:type rdf:Property ;
+  rdfs:label "definitions" ;
+  rdfs:domain word:Word ;
+  rdfs:range word:Context .
+word:translations rdf:type rdf:Property ;
+  rdfs:label "translations" ;
+  rdfs:domain word:Word ;
+  rdfs:range word:Word .

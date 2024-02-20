@@ -1,0 +1,36 @@
+@prefix ex: <http://example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Classesex:Office rdf:type rdfs:Class ;
+  rdfs:comment "A place where people work" .
+ex:Employee rdf:type rdfs:Class ;
+  rdfs:comment "An individual who works in an office." .
+ex:Manager rdf:type rdfs:Class ;
+  rdfs:comment "An employee who has other employees reporting to him/her." ;
+  rdfs:subClassOf ex:Employee .
+ex:Department rdf:type rdfs:Class ;
+  rdfs:comment "A division within the office that specializes in certain duties" .
+ex:Equipment rdf:type rdfs:Class ;
+  rdfs:comment "Items that are used in the office for work." .
+# Propertiesex:hasEmployee rdf:type rdf:Property ;
+  rdfs:comment "Property linking an office to its employees." ;
+  rdfs:domain ex:Office ;
+  rdfs:range ex:Employee .
+ex:manages rdf:type rdf:Property ;
+  rdfs:comment "Property linking a manager to his/her supervised employees." ;
+  rdfs:domain ex:Manager ;
+  rdfs:range ex:Employee .
+ex:worksInDepartment rdf:type rdf:Property ;
+  rdfs:comment "Property linking an employee to his/her department." ;
+  rdfs:domain ex:Employee ;
+  rdfs:range ex:Department .
+ex:usesEquipment rdf:type rdf:Property ;
+  rdfs:comment "Property linking an employee to equipment they use." ;
+  rdfs:domain ex:Employee ;
+  rdfs:range ex:Equipment .
+ ex:belongsToOffice rdf:type rdf:Property ;
+  rdfs:comment "Property linking a department to its corresponding office." ;
+  rdfs:domain ex:Department ;
+  rdfs:range ex:Office .

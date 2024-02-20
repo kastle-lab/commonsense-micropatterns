@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix man: <http://example.org/man#> .
+man:Man a rdfs:Class ;
+    rdfs:label "Man" ;
+    rdfs:comment "Representation of a male human being" .
+man:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "Represents the name of a man" ;
+    rdfs:domain man:Man ;
+    rdfs:range xsd:string .
+man:age a rdf:Property ;
+    rdfs:label "age" ;
+    rdfs:comment "Represents the age of a man" ;
+    rdfs:domain man:Man ;
+    rdfs:range xsd:integer .
+man:hasFather a rdf:Property ;
+    rdfs:label "has father" ;
+    rdfs:comment "Represents the father of a man" ;
+    rdfs:domain man:Man ;
+    rdfs:range man:Man .
+man:hasMother a rdf:Property ;
+    rdfs:label "has mother" ;
+    rdfs:comment "Represents the mother of a man" ;
+    rdfs:domain man:Man ;
+    rdfs:range man:Woman .
+man:Woman a rdfs:Class ;
+    rdfs:label "Woman" ;
+    rdfs:comment "Representation of a female human being" .
+man:John a man:Man ;
+    man:name "John" ;
+    man:age 30 .
+man:Robert a man:Man ;
+    man:name "Robert" ;
+    man:age 50 .
+man:John man:hasFather man:Robert .

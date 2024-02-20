@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kind: <http://example.org/kind/> .
+kind:Kind a rdfs:Class .
+kind:isKindOf a rdf:Property ;
+    rdfs:domain kind:Kind ;
+    rdfs:range kind:Kind .
+kind:nature a kind:Kind ;
+    rdfs:comment "The inherent or natural quality of something" .
+kind:mankind a kind:Kind ;
+    rdfs:comment "Human beings considered collectively" .
+kind:kindness a kind:Kind ;
+    rdfs:comment "The quality of being friendly, generous, and considerate" .
+kind:unkind a kind:Kind ;
+    rdfs:comment "No being friendly, generous, and considerate;
+ harsh" .
+kind:kindness kind:isKindOf kind:nature .
+kind:unkind kind:isKindOf kind:nature .
+kind:mankind kind:isKindOf kind:nature .

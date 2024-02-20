@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix furn: <http://www.example.org/furniture#> .
+furn:Couch rdf:type rdfs:Class ;
+           rdfs:comment "Class representing couches."@en .
+furn:hasMaterial rdf:type rdf:Property ;
+                 rdfs:comment "Material of which a furniture item is made."@en ;
+                 rdfs:domain furn:Couch ;
+                 rdfs:range xsd:string .
+furn:hasColor rdf:type rdf:Property ;
+              rdfs:comment "Color of a furniture item."@en ;
+              rdfs:domain furn:Couch ;
+              rdfs:range xsd:string .
+furn:hasDimensions rdf:type rdf:Property ;
+                   rdfs:comment "Dimensions of a furniture item, in a typical order length x width x height."@en ;
+                   rdfs:domain furn:Couch ;
+                   rdfs:range xsd:string .
+furn:isUpholstered rdf:type rdf:Property ;
+                   rdfs:comment "Indicates whether a couch is upholstered or not."@en ;
+                   rdfs:domain furn:Couch ;
+                   rdfs:range xsd:boolean .
+furn:hasSeatDepth rdf:type rdf:Property ;
+                  rdfs:comment "The depth of the seat of a couch, from front to back."@en ;
+                  rdfs:domain furn:Couch ;
+                  rdfs:range xsd:float .

@@ -1,0 +1,15 @@
+@base <http://example.com/car> .
+@prefix type: <http://example.com/car/type#> .
+@prefix brand: <http://example.com/car/brand#> .
+<http://example.com/car#type> rdf:type owl:Class ;
+                            rdfs:label "Car Type" .
+<http://example.com/car#brand> rdf:type owl:Class ;
+                             rdfs:label "Car Brand" .
+type:Sports rdf:type owl:NamedIndividual,                           <http://example.com/car#type> ;
+                           rdfs:label "Sports" .
+type:Sedan rdf:type owl:NamedIndividual,                          <http://example.com/car#type> ;
+                          rdfs:label "Sedan" .
+brand:Toyota rdf:type owl:NamedIndividual,                           <http://example.com/car#brand> ;
+                           rdfs:label "Toyota" .
+brand:Ferrari rdf:type owl:NamedIndividual,                            <http://example.com/car#brand> ;
+                            rdfs:label "Ferrari" .

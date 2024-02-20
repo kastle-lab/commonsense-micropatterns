@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Study1 rdf:type ex:Study ;
+          ex:studyName "Name of the study" ;
+          ex:studySubject ex:studySubject1 ;
+          ex:studyResult "Result of the study" ;
+          ex:studyStartDate "Start date of the study"^^<http://www.w3.org/2001/XMLSchema#date> ;
+          ex:studyEndDate "End date of the study"^^<http://www.w3.org/2001/XMLSchema#date> .
+ex:studySubject1 rdf:type ex:Subject ;
+                 rdfs:label "Study Subject" .
+                 ex:Study rdfs:subClassOf rdfs:Class .
+ex:Subject rdfs:subClassOf rdfs:Class .

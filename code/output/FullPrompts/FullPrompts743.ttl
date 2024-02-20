@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix case: <http://example.com/case#> .
+case:  rdf:type owl:Ontology ;
+  rdfs:label "Case ontology"@en ;
+  rdfs:comment "An ontology for describing cases in various fields"@en .
+case:Case  rdf:type owl:Class ;
+  rdfs:label "Case"@en ;
+  rdfs:comment "A case in a specific domain"@en .
+  case:hasIdentifier  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has identifier"@en ;
+  rdfs:comment "The identifier of the case"@en ;
+  rdfs:domain case:Case ;
+  rdfs:range xsd:string .
+ case:hasStatus  rdf:type owl:ObjectProperty ;
+  rdfs:label "has status"@en ;
+  rdfs:comment "The current status of the case"@en ;
+  rdfs:domain case:Case ;
+  rdfs:range case:CaseStatus .
+  case:CaseStatus  rdf:type owl:Class ;
+  rdfs:label "Case status"@en ;
+  rdfs:comment "The possible statuses a case can have"@en .
+  case:isOpen  rdf:type case:CaseStatus ;
+  rdfs:label "Is open"@en ;
+  rdfs:comment "The case is currently open"@en .
+  case:isClosed  rdf:type case:CaseStatus ;
+  rdfs:label "Is closed"@en ;
+  rdfs:comment "The case is currently closed"@en .
+case:hasRelatedCase  rdf:type owl:ObjectProperty ;
+  rdfs:label "has related case" ;
+  rdfs:comment "A case that is related to the current case" ;
+  rdfs:domain case:Case ;
+  rdfs:range case:Case .
+case:involves  rdf:type owl:ObjectProperty ;
+  rdfs:label "involves entity"@en ;
+  rdfs:comment "An entity involved in the case"@en ;
+  rdfs:domain case:Case ;
+  rdfs:range case:Entity .
+case:Entity  rdf:type owl:Class ;
+  rdfs:label "Entity"@en ;
+  rdfs:comment "An individual, organization, or other entity involved in a case"@en .
+  case:hasEntityRole  rdf:type owl:ObjectProperty ;
+  rdfs:label "has entity role"@en ;
+  rdfs:comment "The role of an entity in a case"@en ;
+  rdfs:domain case:Entity ;
+  rdfs:range case:EntityRole .
+  case:EntityRole  rdf:type owl:Class ;
+  rdfs:label "Entity role"@en ;
+  rdfs:comment "The possible roles an entity can have in a case"@en .

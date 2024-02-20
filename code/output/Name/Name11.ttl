@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix name: <http://example.com/ontology/name#> .
+name:Name rdf:type rdfs:Class ;
+name:hasFirstName rdf:type rdf:Property ;
+                  rdfs:domain name:Name ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "has first name"@en ;
+                  rdfs:comment "The first name of a person."@en .
+name:hasLastName rdf:type rdf:Property ;
+                 rdfs:domain name:Name ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "has last name"@en ;
+                 rdfs:comment "The last name of a person."@en .
+name:hasMiddleName rdf:type rdf:Property ;
+                   rdfs:domain name:Name ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has middle name"@en ;
+                   rdfs:comment "The middle name of a person."@en .
+name:preferredName rdf:type rdf:Property ;
+                   rdfs:domain name:Name ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "preferred name"@en ;
+                   rdfs:comment "The name a person prefers to be called by."@en .

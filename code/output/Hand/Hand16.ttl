@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/hand#> .
+:Hand rdf:type owl:Class ;
+  rdfs:label "Hand" ;
+  rdfs:subclassOf :BodyPart .
+:hasPart rdf:type owl:ObjectProperty ;
+  rdfs:domain :Hand ;
+  rdfs:range :Finger .
+:Finger rdf:type owl:Class ;
+  rdfs:label "Finger" ;
+  rdfs:subclassOf :BodyPart .
+:Thumb rdf:type owl:Class ;
+  rdfs:label "Thumb" ;
+  rdfs:subclassOf :Finger .
+:IndexFinger rdf:type owl:Class ;
+  rdfs:label "Index Finger" ;
+  rdfs:subclassOf :Finger .
+:MiddleFinger rdf:type owl:Class ;
+  rdfs:label "Middle Finger" ;
+  rdfs:subclassOf :Finger .
+:RingFinger rdf:type owl:Class ;
+  rdfs:label "Ring Finger" ;
+  rdfs:subclassOf :Finger .
+:LittleFinger rdf:type owl:Class ;
+  rdfs:label "Little Finger" ;
+  rdfs:subclassOf :Finger .
+:BodyPart rdf:type owl:Class ;
+  rdfs:label "Body Part" .

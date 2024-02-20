@@ -1,0 +1,42 @@
+@prefix : <http://example.org/time#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+: has a rdf:type rdfs:Class ;
+    rdfs:label "Time"@en .
+:year a rdf:type rdfs:Datatype ;
+    rdfs:label "Year"@en ;
+    rdfs:subClassOf : .
+:month a rdf:type rdfs:Datatype ;
+    rdfs:label "Month"@en ;
+    rdfs:subClassOf : .
+:day a rdf:type rdfs:Datatype ;
+    rdfs:label "Day"@en ;
+    rdfs:subClassOf : .
+:hour a rdf:type rdfs:Datatype ;
+    rdfs:label "Hour"@en ;
+    rdfs:subClassOf : .
+:minute a rdf:type rdfs:Datatype ;
+    rdfs:label "Minute"@en ;
+    rdfs:subClassOf : .
+:second a rdf:type rdfs:Datatype ;
+    rdfs:label "Second"@en ;
+    rdfs:subClassOf : .
+:hasYear a rdf:type rdf:Property ;
+    rdfs:domain : ;
+    rdfs:range :year .
+:hasMonth a rdf:type rdf:Property ;
+    rdfs:domain : ;
+    rdfs:range :month .
+:hasDay a rdf:type rdf:Property ;
+    rdfs:domain : ;
+    rdfs:range :day .
+:hasHour a rdf:type rdf:Property ;
+    rdfs:domain : ;
+    rdfs:range :hour .
+:hasMinute a rdf:type rdf:Property ;
+    rdfs:domain : ;
+    rdfs:range :minute .
+:hasSecond a rdf:type rdf:Property ;
+    rdfs:domain : ;
+    rdfs:range :second .

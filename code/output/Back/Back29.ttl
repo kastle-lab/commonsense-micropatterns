@@ -1,0 +1,24 @@
+@prefix : <http://www.example.org/backOntology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Back a rdfs:Class ;
+    rdfs:comment "The Back of a human body." ;
+    rdfs:label "Back".
+:UpperBack a rdfs:Class ;
+    rdfs:subClassOf :Back ;
+    rdfs:comment "The upper portion of the back" ;
+    rdfs:label "Upper Back".
+:LowerBack a rdfs:Class ;
+    rdfs:subClassOf :Back ;
+    rdfs:comment "The lower portion of the back" ;
+    rdfs:label "Lower Back".
+:hasMuscle a rdf:Property ;
+    rdfs:domain :Back ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Property to indicate the muscle of a specific back area" ;
+    rdfs:label "Has Muscle".
+:hasSpine a rdf:Property ;
+    rdfs:domain :Back ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Property to indicate whether the back part has a spine or not" ;
+    rdfs:label "Has Spine".

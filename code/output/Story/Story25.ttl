@@ -1,0 +1,18 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix :        <http://example.com/story#> .
+:Story rdf:type rdfs:Class ;
+       rdfs:comment "Class representing a story" .
+:title rdf:type rdf:Property ;
+       rdfs:comment "Title of the story" ;
+       rdfs:domain :Story ;
+       rdfs:range rdfs:Literal .
+:author rdf:type rdf:Property ;
+        rdfs:comment "Author of the story" ;
+        rdfs:domain :Story ;
+        rdfs:range rdfs:Literal .
+:charactarizes rdf:type rdf:Property ;
+               rdfs:comment "Characterizes the object in the story" ;
+               rdfs:domain :Story .
+:Object rdf:type rdfs:Class ;
+        comment "An object that the story characterizes" .

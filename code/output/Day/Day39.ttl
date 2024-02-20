@@ -1,0 +1,5 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/vocab#> .
+ex:Day a rdfs:Class ;
+    rdfs:comment "Represents a Day in a week or month" ;
+    rdfs:label "Day"^^xsd:string .

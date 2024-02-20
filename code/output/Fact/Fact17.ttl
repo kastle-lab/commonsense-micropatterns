@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fact: <http://example.org/fact#> .
+fact:Fact  rdf:type rdfs:Class ;
+  rdfs:comment "A representation of a concrete piece of information or known truth." ;
+  rdfs:label "Fact" .
+fact:isVerified  rdf:type rdf:Property ;
+  rdfs:domain fact:Fact ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Indicates whether the fact has been verified as true or false." ;
+  rdfs:label "is verified" .
+fact:source  rdf:type rdf:Property ;
+  rdfs:domain fact:Fact ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "The original source where the fact was obtained or referenced from." ;
+  rdfs:label "source" .
+fact:relatedTo  rdf:type rdf:Property ;
+  rdfs:domain fact:Fact ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "Indicates the events, entities or concepts that this fact is related to." ;
+  rdfs:label "related to" .
+fact:dateVerified  rdf:type rdf:Property ;
+  rdfs:domain fact:Fact ;
+  rdfs:range xsd:date ;
+  rdfs:comment "The date when the fact was verified." ;
+  rdfs:label "date verified" .

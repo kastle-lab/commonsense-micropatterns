@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.example.com/time#> .
+# Classestime:Time rdf:type owl:Class .
+time:Second rdf:type owl:Class .
+time:Minute rdf:type owl:Class .
+time:Hour rdf:type owl:Class .
+time:Day rdf:type owl:Class .
+time:Month rdf:type owl:Class .
+time:Year rdf:type owl:Class .
+time:Calendar rdf:type owl:Class .
+# Object propertiestime:hasSecond rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Minute;
+    rdfs:range time:Second .
+time:hasMinute rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Hour ;
+    rdfs:range time:Minute .
+time:hasHour rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Day ;
+    rdfs:range time:Hour .
+time:hasDay rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Month ;
+    rdfs:range time:Day .
+time:hasMonth rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Year ;
+    rdfs:range time:Month .
+time:hasYear rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Calendar ;
+    rdfs:range time:Year .
+# Datatype propertiestime:number rdf:type owl:DatatypeProperty ;
+    rdfs:domain time:Time ;
+    rdfs:range xsd:integer .
+# The actual data:january01 rdf:type time:Day ;
+    time:hasHour :hour0, :hour1 ;
+    time:number 1 .
+:hour0 rdf:type time:Hour ;
+    time:hasMinute :minute0, :minute30 ;
+    time:number 0 .
+:minute0 rdf:type time:Minute ;
+    time:hasSecond :second0 ;
+    time:number 0 .
+:second0 rdf:type time:Second ;
+    time:number 0 .

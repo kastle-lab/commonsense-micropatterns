@@ -1,0 +1,9 @@
+ The ontology is created using the Turtle (Terse RDF Triple Language) format which is a format for representing RDF (Resource Description Framework) data.
+@prefix : <http://example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.org/> .
+:John a foaf:Person ;
+    foaf:name "John"^^xsd:string ;
+    foaf:age "30"^^xsd:int ;
+    foaf:isMarried "true"^^xsd:boolean .

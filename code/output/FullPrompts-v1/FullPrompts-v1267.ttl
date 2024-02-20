@@ -1,0 +1,10 @@
+:World a owl:Class .
+:hasCountry a owl:ObjectProperty ;
+             rdfs:range :Country ;
+             rdfs:domain :World .
+:Country a owl:Class .
+ :hasCity a owl:ObjectProperty ;
+          rdfs:range :City ;
+          rdfs:domain :Country .
+:City a owl:Class ;
+       rdfs:label "City" .

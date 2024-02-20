@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix office: <http://www.example.com/office#> .
+office:Office a rdfs:Class ;
+  rdfs:label "Office"@en ;
+  rdfs:comment "A place where professional or clerical duties are performed."@en .
+  office:hasEmployee a rdf:Property ;
+  rdfs:label "has Employee"@en ;
+  rdfs:comment "Property that links office to its employees."@en ;
+  rdfs:domain office:Office ;
+  rdfs:range office:Employee .
+office:hasDepartment a rdf:Property ;
+  rdfs:label "has Department"@en ;
+  rdfs:comment "Property that links office to its departments."@en ;
+  rdfs:domain office:Office ;
+  rdfs:range office:Department .
+office:Employee a rdfs:Class ;
+  rdfs:label "Employee"@en ;
+  rdfs:comment "An individual who works part-time or full-time under a contract of employment, whether oral or written."@en .
+office:Department a rdfs:Class ;
+  rdfs:label "Department"@en ;
+  rdfs:comment "A specialized functional area within an office."@en .
+  office:includes a rdf:Property ;
+  rdfs:label "includes"@en ;
+  rdfs:comment "Property that shows what the office includes, such as facilities."@en ;
+  rdfs:domain office:Office ;
+  rdfs:range office:Facility .
+office:Facility a rdfs:Class ;
+  rdfs:label "Facility"@en ;
+  rdfs:comment "Something designed, built, installed, etc., to serve a specific function affording a convenience or service."@en .

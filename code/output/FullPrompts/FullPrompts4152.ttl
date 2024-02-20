@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix edu: <http://example.org/education#> .
+edu:Education a rdfs:Class ;
+    rdfs:label "Education" ;
+    rdfs:comment "The process of receiving or giving systematic instruction, especially at a school or university." .
+edu:provides a rdf:Property ;
+    rdfs:label "provides" ;
+    rdfs:comment "The entity that provides the education." ;
+    rdfs:domain edu:Entity ;
+    rdfs:range edu:Education .

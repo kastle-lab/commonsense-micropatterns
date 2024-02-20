@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/couch#> .
+:couch rdf:type rdfs:Class .
+:cushion rdf:type rdfs:Class .
+:material rdf:type rdf:Property ;
+    rdfs:range :materialType ;
+    rdfs:domain :couch .
+:color rdf:type rdf:Property ;
+    rdfs:range :colorType ;
+    rdfs:domain :couch .
+:hasCushion rdf:type rdf:Property ;
+    rdfs:range :cushion ;
+    rdfs:domain :couch .
+:size rdf:type rdf:Property ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain :couch .
+:materialType rdf:type rdfs:Class .
+:colorType rdf:type rdfs:Class .
+:materialType rdfs:subClassOf xsd:string .
+:colorType rdfs:subClassOf xsd:string .
+ :Leather rdf:type :materialType .
+:Cotton rdf:type :materialType .
+:Red rdf:type :colorType .
+:Blue rdf:type :colorType .
+ :couch1 rdf:type :couch ;
+    :material :Leather ;
+    :color :Red ;
+    :hasCushion :cushion1 ;
+    :size "3"^^xsd:decimal .
+ :cushion1 rdf:type :cushion .

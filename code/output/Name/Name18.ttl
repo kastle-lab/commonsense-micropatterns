@@ -1,0 +1,39 @@
+@prefix ns: <http://www.example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ns:Name     a owl:Class ;
+    rdfs:label "Name"@en ;
+    rdfs:comment "A class to represent a name"@en ;
+    rdfs:subClassOf owl:Thing .
+ns:GivenName     a owl:Class ;
+    rdfs:label "Given Name"@en ;
+    rdfs:comment "A class to represent a given (first) name"@en ;
+    rdfs:subClassOf ns:Name .
+ns:MiddleName     a owl:Class ;
+    rdfs:label "Middle Name"@en ;
+    rdfs:comment "A class to represent a middle name"@en ;
+    rdfs:subClassOf ns:Name .
+ns:FamilyName     a owl:Class ;
+    rdfs:label "Family Name"@en ;
+    rdfs:comment "A class to represent a family (last) name"@en ;
+    rdfs:subClassOf ns:Name .
+ns:displayName     a owl:DatatypeProperty ;
+    rdfs:label "display Name"@en ;
+    rdfs:comment "A property to represent a complete name for display purpose"@en ;
+    rdfs:domain ns:Name ;
+    rdfs:range xsd:string .
+ns:hasGivenName    a owl:ObjectProperty ;
+    rdfs:label "has Given Name"@en ;
+    rdfs:comment "A property to link a person to their given name"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range ns:GivenName .
+ns:hasMiddleName    a owl:ObjectProperty ;
+    rdfs:label "has Middle Name"@en ;
+    rdfs:comment "A property to link a person to their middle name"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range ns:MiddleName .
+ns:hasFamilyName    a owl:ObjectProperty ;
+    rdfs:label "has Family Name"@en ;
+    rdfs:comment "A property to link a person to their family name"@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range ns:FamilyName .

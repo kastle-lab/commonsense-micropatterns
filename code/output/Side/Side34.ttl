@@ -1,0 +1,19 @@
+@prefix : <http://example.com#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Side a rdfs:Class ;
+    rdfs:label "Side"@en ;
+    rdfs:comment "A positional location or direction"@en .
+:hasSide a rdfs:Property ;
+    rdfs:domain :Shape ;
+    rdfs:range :Side ;
+    rdfs:label "has side"@en ;
+    rdfs:comment "A property that links a shape with its side(s)"@en .
+:Shape a rdfs:Class ;
+    rdfs:label "Shape"@en ;
+    rdfs:comment "An abstract geometric entity"@en .
+:Square a :Shape ;
+    rdfs:label "Square"@en ;
+    :hasSide :FourSides .
+:FourSides a :Side ;
+    rdfs:label "Four Sides"@en .

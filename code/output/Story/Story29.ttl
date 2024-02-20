@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Story rdfs:subClassOf rdfs:Class .
+ex:title rdf:type rdf:Property ;
+         rdfs:domain ex:Story ;
+         rdfs:range xsd:string .
+ex:content rdf:type rdf:Property ;
+          rdfs:domain ex:Story ;
+          rdfs:range xsd:string .
+ex:author rdf:type rdf:Property ;
+         rdfs:domain ex:Story ;
+         rdfs:range ex:Person .
+ex:Person rdfs:subClassOf rdfs:Class .
+ex:name rdf:type rdf:Property ;
+       rdfs:domain ex:Person ;
+       rdfs:range xsd:string .
+ex:birthDate rdf:type rdf:Property ;
+            rdfs:domain ex:Person ;
+            rdfs:range xsd:date .
+# Example of usageex:story1 rdf:type ex:Story ;
+         ex:title "The Two Towers" ;
+         ex:content "Some content here..." ;
+         ex:author ex:person1 .
+ex:person1 rdf:type ex:Person ;
+          ex:name "J. R. R. Tolkien" ;
+          ex:birthDate "1892-01-03"^^xsd:date .

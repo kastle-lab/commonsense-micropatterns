@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix case: <http://example.org/ontology/case#> .
+case:Case a owl:Class ;
+    rdfs:label "Case"@en ;
+    rdfs:comment "An instance, occurrence, or change of condition, state, or entity."@en ;
+    rdfs:subClassOf owl:Thing ;
+    .
+case:hasID a owl:DatatypeProperty ;
+    rdfs:label "has ID"@en ;
+    rdfs:comment "The unique identifier of the case."@en ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:string ;
+    .
+case:hasDescription a owl:DatatypeProperty ;
+    rdfs:label "has description"@en ;
+    rdfs:comment "A brief summary or general nature of the case."@en ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:string ;
+    .

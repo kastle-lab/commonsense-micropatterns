@@ -1,0 +1,32 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.myOntologies.com/city#> .
+:City a rdfs:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A large human settlement containing a significant amount of infrastructure, population, and governance." .
+:hasPopulation a rdfs:Property ;
+    rdfs:label "has population" ;
+    rdfs:comment "Defines the total number of population living in a city." ;
+    rdfs:domain :City ;
+    rdfs:range xsd:integer .
+:hasName a rdfs:Property ;
+    rdfs:label "has name" ;
+    rdfs:comment "Defines the official name of a city." ;
+    rdfs:domain :City ;
+    rdfs:range xsd:string .
+:isCapitalOf a rdfs:Property ;
+    rdfs:label "is capital of" ;
+    rdfs:comment "Specifies if the city is a capital of a country or state." ;
+    rdfs:domain :City ;
+    rdfs:range :Country .
+:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A distinct territorial body or political entity." .
+:State a rdfs:Class ;
+    rdfs:subClassOf :Country ;
+    rdfs:label "State" ;
+    rdfs:comment "A politically distinct subdivision within a country." .
+:hasArea a rdfs:Property ;
+    rdfs:label "has area" ;
+    rdfs:comment "Specifies the total geographical area of a city." ;
+    rdfs:domain :City ;
+    rdfs:range xsd:decimal .

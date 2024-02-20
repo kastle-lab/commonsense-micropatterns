@@ -1,0 +1,39 @@
+@prefix : <http://www.example.com/ontology/world#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+: a rdfs:Ontology ;
+  rdfs:label "World Ontology"@en ;
+  rdfs:comment "An ontology describing concepts related to the world"@en .
+:Country a rdfs:Class ;
+  rdfs:label "Country"@en ;
+  rdfs:comment "A nation with its own government, occupying a particular territory"@en .
+:City a rdfs:Class ;
+  rdfs:label "City"@en ;
+  rdfs:comment "A large town or a populated area of a country"@en .
+:CityWithin rdfs:SubPropertyOf rdf:Property ;
+  rdfs:domain :City ;
+  rdfs:range :Country ;
+  rdfs:label "city within"@en ;
+  rdfs:comment "A city that is within a certain country"@en .
+:Population a rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range xsd:integer ;
+  rdfs:label "Population"@en ;
+  rdfs:comment "The number of people living in a country"@en .
+:Continent a rdfs:Class ;
+  rdfs:label "Continent"@en ;
+  rdfs:comment "A principal division of the Earth's surface"@en .
+:CountryWithin rdfs:SubPropertyOf rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range :Continent ;
+  rdfs:label "country within"@en ;
+  rdfs:comment "A country that is within a certain continent"@en .
+:Language a rdfs:Class ;
+  rdfs:label "Language"@en ;
+  rdfs:comment "A system of communication used by a particular country or community"@en .
+:OfficialLanguage a rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range :Language ;
+  rdfs:label "Official language"@en ;
+  rdfs:comment "The language recognised as the 'official' language of a country"@en .

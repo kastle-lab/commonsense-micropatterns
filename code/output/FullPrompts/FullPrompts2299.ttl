@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:January a ex:Month .
+ex:February a ex:Month .
+ex:March a ex:Month .
+ex:Month a rdfs:Class .

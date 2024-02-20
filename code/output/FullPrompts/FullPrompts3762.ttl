@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix morning: <http://www.example.org/morning#> .
+morning:Morning rdf:type owl:Class ;
+     rdfs:label "Morning" ;
+     rdfs:comment "Part of the day starting from midnight to midday." .
+morning:hasPart rdf:type owl:ObjectProperty ;
+     rdfs:label "has part" ;
+     rdfs:domain morning:Morning ;
+     rdfs:range morning:MorningActivity .
+morning:time rdf:type owl:DatatypeProperty ;
+    rdfs:label "time" ;
+    rdfs:domain morning:Morning ;
+    rdfs:range xsd:time .
+morning:MorningActivity rdf:type owl:Class ;
+     rdfs:label "Morning Activity" ;
+     rdfs:comment "Activities typically done in the morning part of the day." .
+morning:includes rdf:type owl:ObjectProperty ;
+     rdfs:label "includes" ;
+     rdfs:domain morning:MorningActivity ;
+     rdfs:range rdf:Resource .
+morning:Breakfast rdf:type owl:Class ;
+     rdfs:subClassOf morning:MorningActivity ;
+     rdfs:label "Breakfast" ;
+     rdfs:comment "First meal of the day, typically consumed in the morning." .
+morning:Exercise rdf:type owl:Class ;
+     rdfs:subClassOf morning:MorningActivity ;
+     rdfs:label "Morning Exercise" ;
+     rdfs:comment "Physical activity typically done in the morning." .

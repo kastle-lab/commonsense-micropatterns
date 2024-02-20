@@ -1,0 +1,19 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Teacher     rdf:type owl:Class ;
+    rdfs:subClassOf ex:Person ;
+    rdfs:label "Teacher"@en ;
+    rdfs:comment "A person who teaches, especially in a school."@en ;
+    rdfs:seeAlso <http://dbpedia.org/page/Teacher> .
+ex:teachesSubject     rdf:type owl:ObjectProperty ;
+    rdfs:label "teaches subject"@en ;
+    rdfs:comment "The subject that the teacher teaches"@en ;
+    rdfs:domain ex:Teacher ;
+    rdfs:range ex:Subject .
+ex:worksIn     rdf:type owl:ObjectProperty ;
+    rdfs:label "works in"@en ;
+    rdfs:comment "The school or institution where the teacher works"@en ;
+    rdfs:domain ex:Teacher ;
+    rdfs:range ex:School .

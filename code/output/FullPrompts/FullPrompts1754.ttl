@@ -1,0 +1,41 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fam: <http://example.org/family/> .
+#Family Classfam:Family a rdfs:Class ;
+    rdfs:label "Family" ;
+    rdfs:comment "A group of people related by blood or marriage" .
+#Person Classfam:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "An individual human being" .
+#Propertiesfam:hasMember a rdf:Property ;
+    rdfs:label "has member" ;
+    rdfs:domain fam:Family ;
+    rdfs:range fam:Person .
+fam:hasFather a rdf:Property ;
+    rdfs:label "has father" ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+fam:hasMother a rdf:Property ;
+    rdfs:label "has mother" ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+fam:hasSibling a rdf:Property ;
+    rdfs:label "has sibling" ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+fam:hasChild a rdf:Property ;
+    rdfs:label "has child" ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+fam:isMarriedTo a rdf:Property ;
+    rdfs:label "is married to" ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+#Constraintsfam:Person rdfs:subClassOf [ a owl:Restriction ;
+    owl:onProperty fam:hasFather ;
+    owl:maxCardinality 1 ] .
+    fam:Person rdfs:subClassOf [ a owl:Restriction ;
+    owl:onProperty fam:hasMother ;
+    owl:maxCardinality 1 ] .
+fam:Person rdfs:subClassOf [ a owl:Restriction ;
+    owl:onProperty fam:isMarriedTo ;
+    owl:maxCardinality 1 ] .

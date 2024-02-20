@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+:Point a rdfs:Class ;
+    rdfs:subClassOf geo:SpatialThing ;
+    rdfs:label "Point"@en ;
+    rdfs:comment "A point in space identified by its coordinates"@en ;
+    rdfs:isDefinedBy <http://example.com/ontology#Point> .
+    :hasX a rdf:Property ;
+    rdfs:domain :Point ;
+    rdfs:range rdf:decimal ;
+    rdfs:label "has X"@en ;
+    rdfs:comment "The X coordinate of this Point"@en ;
+    rdfs:isDefinedBy <http://example.com/ontology#hasX> .
+    :hasY a rdf:Property ;
+    rdfs:domain :Point ;
+    rdfs:range rdf:decimal ;
+    rdfs:label "has Y"@en ;
+    rdfs:comment "The Y coordinate of this Point"@en ;
+    rdfs:isDefinedBy <http://example.com/ontology#hasY> .

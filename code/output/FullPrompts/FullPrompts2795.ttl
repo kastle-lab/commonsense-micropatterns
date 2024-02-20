@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fr: <http://www.example.org/friends#> .
+fr:Friend a rdfs:Class ;
+  rdfs:label "Friend"@en ;
+  rdfs:comment "An entity that represents a Friend."@en .
+fr:knows a rdf:Property ;
+  rdfs:label "knows"@en ;
+  rdfs:comment "A relationship between two friends"@en ;
+  rdfs:domain fr:Person ;
+  rdfs:range fr:Friend .
+fr:hasKnownSince a rdf:Property ;
+  rdfs:label "has known since"@en ;
+  rdfs:comment "The date that the friendship started."@en ;
+  rdfs:domain fr:Person ;
+  rdfs:range xsd:date .
+fr:sharesInterestWith a rdf:Property ;
+  rdfs:label "shares interest with"@en ;
+  rdfs:comment "A shared interest, hobby, or activity with the friend"@en ;
+  rdfs:domain fr:Person ;
+  rdfs:range fr:Interest .
+fr:Person a rdfs:Class ;
+  rdfs:label "Person"@en ;
+  rdfs:comment "An entity that represents a Person."@en .
+fr:Interest a rdfs:Class ;
+  rdfs:label "Interest"@en ;
+  rdfs:comment "An entity that represents a Interest, hobby, or activity."@en .

@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.com/program#> .
+:Program rdf:type rdfs:Class ;
+         rdfs:label "Program" ;
+         rdfs:comment "A planned series of events or procedures" .
+:ProgramCode rdf:type rdfs:Class ;
+            rdfs:label "Program Code" ;
+            rdfs:comment "The code representation of a program" ;
+            rdfs:subClassOf :Program .
+:Algorithm rdf:type rdfs:Class ;
+           rdfs:label "Algorithm" ;
+           rdfs:comment "A process or set of rules followed in calculations or problem-solving" ;
+           rdfs:subClassOf :Program .
+:hasProgramCode rdf:type rdf:Property ;
+                rdfs:label "has program code" ;
+                rdfs:comment "The property that associates a program with its code" ;
+                rdfs:range :ProgramCode ;
+                rdfs:domain :Program .
+:hasAlgorithm rdf:type rdf:Property ;
+              rdfs:label "has algorithm" ;
+              rdfs:comment "The property that associates a program with its algorithm" ;
+              rdfs:range :Algorithm ;
+              rdfs:domain :Program .
+:name rdf:type rdf:Property ;
+      rdfs:label "name" ;
+      rdfs:comment "The name of something" ;
+      rdfs:range xsd:string ;
+      rdfs:domain :Program .

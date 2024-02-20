@@ -1,0 +1,28 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com/> .
+#Class declarationex:Other a owl:Class ;
+    rdfs:comment "An ontology to encompass others"@en ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Other"@en ;
+    .
+#Property definitionsex:hasIdentity a owl:DatatypeProperty ;
+    rdfs:comment "The identity of the other"@en ;
+    rdfs:domain ex:Other ;
+    rdfs:range xsd:string ;
+    .
+ex:hasRole a owl:ObjectProperty ;
+    rdfs:comment "The role of the other"@en ;
+    rdfs:domain ex:Other ;
+    rdfs:range owl:Thing ;
+    .
+#Class instancesex:Other1 a ex:Other ;
+    ex:hasIdentity "ABC123"@en ;
+    ex:hasRole ex:Role1 ;
+    .
+ex:Role1 a owl:Thing ;
+    rdfs:comment "A specific role"@en ;
+    rdfs:label "Role1"@en ;
+    .

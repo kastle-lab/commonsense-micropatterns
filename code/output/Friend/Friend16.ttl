@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fr: <http://www.example.org/friend#> .
+fr:Person rdf:type owl:Class .
+fr:hasFriend rdf:type owl:ObjectProperty ;
+    rdfs:domain fr:Person ;
+    rdfs:range fr:Person ;
+    rdfs:label "has friend"@en ;
+    rdfs:comment "A property that illustrates friendship between two individuals"@en .
+fr:name rdf:type owl:DatatypeProperty ;
+    rdfs:domain fr:Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of a person"@en .
+fr:age rdf:type owl:DatatypeProperty ;
+    rdfs:domain fr:Person ;
+    rdfs:range xsd:integer ;
+    rdfs:label "age"@en ;
+    rdfs:comment "The age of a person"@en .

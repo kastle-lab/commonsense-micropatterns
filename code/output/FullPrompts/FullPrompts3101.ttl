@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Concept a rdfs:Class ;
+    rdfs:label "Concept" ;
+    rdfs:comment "A Concept in the domain" .
+ex:DerivedConcept1 rdfs:subClassOf ex:Concept ;
+    rdfs:label "DerivedConcept1" ;
+    rdfs:comment "A concept derived from a more general concept in the domain" .
+ex:Name rdf:type ex:Concept ;
+    rdfs:label "Name" ;
+    rdfs:comment "The name of something as a concept in the domain" .

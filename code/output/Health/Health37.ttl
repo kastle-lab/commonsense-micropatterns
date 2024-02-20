@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix health: <http://www.example.com/health#> .
+health:Disease rdf:type rdfs:Class ;
+    rdfs:label "Disease" ;
+    rdfs:comment "Disease is an abnormal condition affecting the body of an organism" .
+    health:Symptom rdf:type rdfs:Class ;
+    rdfs:label "Symptom" ;
+    rdfs:comment "Symptoms are signs or signals of disease or disorder".
+health:hasSymptom rdf:type rdf:Property;
+    rdfs:label "has symptom";
+    rdfs:domain health:Disease;
+    rdfs:range health:Symptom;
+    rdfs:comment "Relates a disease to its symptoms".
+health:Treatment rdf:type rdfs:Class;
+    rdfs:label "Treatment";
+    rdfs:comment "Medical treatment is a procedure used to cure, manage or prevent a disease".
+health:hasTreatment rdf:type rdf:Property;
+    rdfs:label "has treatment";
+    rdfs:domain health:Disease;
+    rdfs:range health:Treatment;
+    rdfs:comment "Relates a disease to its treatment".
+    health:HealthCareProfessional rdf:type rdfs:Class;
+    rdfs:label "HealthCareProfessional";
+    rdfs:comment "Healthcare professional is a person who is qualified and licensed to provide health care services".

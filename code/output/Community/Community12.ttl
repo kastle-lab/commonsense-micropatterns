@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix comm: <http://example.org/community#> .
+# Classescomm:Community rdf:type owl:Class ;
+    rdfs:comment "A group of people living in the same place or having a particular characteristic in common"@en ;
+    rdfs:subClassOf owl:Thing .
+    comm:Person rdf:type owl:Class ;
+    rdfs:comment "An individual person who can be part of a community"@en ;
+    rdfs:subClassOf owl:Thing .
+comm:Event rdf:type owl:Class ;
+    rdfs:comment "An occurrence within a community such as meetings, celebrations etc."@en ;
+    rdfs:subClassOf owl:Thing .
+    # Object Propertiescomm:hasMember rdf:type owl:ObjectProperty ;
+    rdfs:domain comm:Community ;
+    rdfs:range comm:Person ;
+    rdfs:comment "A relation that denotes a person is a member of a community"@en .
+comm:hasEvent rdf:type owl:ObjectProperty ;
+    rdfs:domain comm:Community ;
+    rdfs:range comm:Event ;
+    rdfs:comment "A relation that denotes a community has an event"@en .
+comm:participatesIn rdf:type owl:ObjectProperty ;
+    rdfs:domain comm:Person ;
+    rdfs:range comm:Event ;
+    rdfs:comment "A relation that denotes a person participates in an event"@en .
+# Data Propertiescomm:communityName rdf:type owl:DatatypeProperty ;
+    rdfs:domain comm:Community ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A property that indicates the name of the community"@en .
+comm:personName rdf:type owl:DatatypeProperty ;
+    rdfs:domain comm:Person ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A property that indicates the name of the person"@en .
+comm:eventName rdf:type owl:DatatypeProperty ;
+    rdfs:domain comm:Event ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A property that indicates the name of the event"@en .
+# Individual Examplescomm:TechCommunity rdf:type comm:Community ;
+    comm:communityName "Tech Community"@en .
+comm:Liam rdf:type comm:Person ;
+    comm:personName "Liam"@en ;
+comm:TechMeetup rdf:type comm:Event ;
+    comm:eventName "Tech Meetup"@en .
+# Relation Examplescomm:TechCommunity comm:hasMember comm:Liam .
+comm:TechCommunity comm:hasEvent comm:TechMeetup .
+comm:Liam comm:participatesIn comm:TechMeetup .

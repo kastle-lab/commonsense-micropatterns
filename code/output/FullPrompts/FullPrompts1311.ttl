@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http://www.example.org/work#> .
+work:Work rdf:type owl:Class ;
+    rdfs:label "Work" ;
+    rdfs:comment "Different types of work or jobs" .
+work:hasEmployee rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Employee ;
+    rdfs:label "has employee" ;
+    rdfs:comment "The employee who is doing the work" .
+work:Employee rdf:type owl:Class ;
+    rdfs:label "Employee" ;
+    rdfs:comment "Individual who works for a company or organization" .
+work:hasPosition rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Employee ;
+    rdfs:range work:Position ;
+    rdfs:label "has position" ;
+    rdfs:comment "The position or job title of the employee" .
+work:Position rdf:type owl:Class ;
+    rdfs:label "Position" ;
+    rdfs:comment "The specific role or title that an employee holds" .
+work:hasSalary rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Position ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has salary" ;
+    rdfs:comment "The salary for a specific position" .
+work:hasDuration rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:duration ;
+    rdfs:label "has duration" ;
+    rdfs:comment "The duration of the work" .

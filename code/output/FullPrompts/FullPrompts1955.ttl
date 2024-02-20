@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix health: <http://www.example.org/health#> .
+health:Health rdf:type rdfs:Class .
+health:PhysicalHealth rdf:type rdfs:Class ;
+  rdfs:subClassOf health:Health .
+health:MentalHealth rdf:type rdfs:Class ;
+  rdfs:subClassOf health:Health .
+  health:Diseases rdf:type rdfs:Class ;
+   rdfs:subClassOf health:Health .
+ health:Patient rdf:type rdfs:Class .
+health:hasHealthStatus rdf:type rdf:Property ;
+  rdfs:domain health:Patient ;
+  rdfs:range health:Health .
+health:hasPhysicalHealthStatus rdf:type rdf:Property ;
+  rdfs:domain health:Patient ;
+  rdfs:range health:PhysicalHealth ;
+  rdfs:subPropertyOf health:hasHealthStatus .
+health:hasMentalHealthStatus rdf:type rdf:Property ;
+  rdfs:domain health:Patient ;
+  rdfs:range health:MentalHealth ;
+  rdfs:subPropertyOf health:hasHealthStatus .
+health:hasDisease rdf:type rdf:Property ;
+  rdfs:domain health:Patient ;
+  rdfs:range health:Diseases ;
+  rdfs:subPropertyOf health:hasHealthStatus .
+  health:ChronicDiseases rdf:type rdfs:Class ;
+  rdfs:subClassOf health:Diseases .
+  health:AcuteDiseases rdf:type rdfs:Class ;
+  rdfs:subClassOf health:Diseases .
+  health:Doctor rdf:type rdfs:Class .
+  health:diagnoses rdf:type rdf:Property ;
+  rdfs:domain health:Doctor ;
+  rdfs:range health:Diseases .

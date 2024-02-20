@@ -1,0 +1,40 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix line: <http://www.example.org/ontology/line#> .
+line:Line a rdfs:Class ;
+  rdfs:comment "A concept class that represents a line in two-dimensional or three-dimensional space" ;
+  rdfs:label "Line" .
+line:hasStartPoint a owl:ObjectProperty ;
+  rdfs:comment "The starting point of a line" ;
+  rdfs:label "hasStartPoint" ;
+  rdfs:domain line:Line ;
+  rdfs:range line:Point .
+line:hasEndPoint a owl:ObjectProperty ;
+  rdfs:comment "The end point of a line" ;
+  rdfs:label "hasEndPoint" ;
+  rdfs:domain line:Line ;
+  rdfs:range line:Point .
+line:hasLength a owl:DatatypeProperty ;
+  rdfs:comment "The length of a line" ;
+  rdfs:label "hasLength" ;
+  rdfs:domain line:Line ;
+  rdfs:range xsd:double .
+line:Point a rdfs:Class ;
+  rdfs:comment "A class representing a point in space" ;
+  rdfs:label "Point" .
+line:hasXCoordinate a owl:DatatypeProperty ;
+  rdfs:comment "The x-coordinate of a point" ;
+  rdfs:label "hasXCoordinate" ;
+  rdfs:domain line:Point ;
+  rdfs:range xsd:double .
+line:hasYCoordinate a owl:DatatypeProperty ;
+  rdfs:comment "The y-coordinate of a point" ;
+  rdfs:label "hasYCoordinate" ;
+  rdfs:domain line:Point ;
+  rdfs:range xsd:double .
+line:hasZCoordinate a owl:DatatypeProperty ;
+  rdfs:comment "The Z-coordinate of a point" ;
+  rdfs:label "hasZCoordinate" ;
+  rdfs:domain line:Point ;
+  rdfs:range xsd:double .

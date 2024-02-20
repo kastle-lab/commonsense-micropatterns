@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix area: <http://www.area.org/ontology/1.0#> .
+area:Area rdf:type owl:Class ;
+          rdfs:comment "Class representing the concept of area"^^xsd:string ;
+          rdfs:label "Area"^^xsd:string .
+area:hasUnit rdf:type owl:ObjectProperty ;
+            rdfs:domain area:Area ;
+            rdfs:range area:AreaUnit ;
+            rdfs:comment "Property linking an area with its unit"^^xsd:string ;
+            rdfs:label "has unit"^^xsd:string .
+area:AreaUnit rdf:type owl:Class ;
+             rdfs:comment "Class representing the unit of area"^^xsd:string ;
+             rdfs:label "Area Unit"^^xsd:string .
+area:squareMeter rdf:type area:AreaUnit ;
+                rdfs:label "square meter"^^xsd:string ;
+                rdfs:comment "Standard unit of area in the International System of Units (SI)"^^xsd:string .
+area:squareKilometer rdf:type area:AreaUnit ;
+                     rdfs:label "square kilometer"^^xsd:string ;
+                     rdfs:comment "Unit of area equal to a square that is one kilometer on each side."^^xsd:string .
+area:hectare rdf:type area:AreaUnit ;
+             rdfs:label "hectare"^^xsd:string ;
+             rdfs:comment "Unit of area equal to a square that is one hundred meters on each side."^^xsd:string .

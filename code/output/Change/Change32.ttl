@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.org/change#> .
+<#Change>    rdf:type owl:Class ;
+    rdfs:comment "A class representing change or transformation" ;
+    rdfs:label "Change" .
+<#hasChangeStart>    rdf:type owl:ObjectProperty ;
+    rdfs:domain <#Change> ;
+    rdfs:range <#State> ;
+    rdfs:comment "A property representing the state at the beginning of a change" ;
+    rdfs:label "has change start" .
+<#hasChangeEnd>    rdf:type owl:ObjectProperty ;
+    rdfs:domain <#Change> ;
+    rdfs:range <#State> ;
+    rdfs:comment "A property representing the state at the end of a change" ;
+    rdfs:label "has change end" .
+    <#State>    rdf:type owl:Class ;
+    rdfs:comment "A class representing a state or condition" ;
+    rdfs:label "State" .

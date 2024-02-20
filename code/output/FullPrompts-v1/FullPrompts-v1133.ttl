@@ -1,0 +1,40 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.org/day/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+day: a rdfs:Class ;
+    rdfs:label "Day"@en .
+day:partOfWeek a rdfs:Class ;
+    rdfs:label "Part of week"@en ;
+    rdfs:subClassOf day: ;
+    rdfs:comment "Represents a day as part of a week"@en .
+day:partOfMonth a rdfs:Class ;
+    rdfs:label "Part of month"@en ;
+    rdfs:subClassOf day: ;
+    rdfs:comment "Represents a day as part of a month"@en .
+day:partOfYear a rdfs:Class ;
+    rdfs:label "Part of year"@en ;
+    rdfs:subClassOf day: ;
+    rdfs:comment "Represents a day as part of a year"@en .
+day:daylight a rdfs:Class ;
+    rdfs:label "Daylight"@en ;
+    rdfs:subClassOf day: ;
+    rdfs:comment "Represents the period of daylight during a day"@en .
+day:weekday a rdfs:Class ;
+    rdfs:label "Weekday"@en ;
+    rdfs:subClassOf day:partOfWeek ;
+    rdfs:comment "Represents a weekday"@en .
+day:weekend a rdfs:Class ;
+    rdfs:label "Weekend"@en ;
+    rdfs:subClassOf day:partOfWeek ;
+    rdfs:comment "Represents a weekend day"@en .
+day:sunrise a rdfs:Property ;
+    rdfs:label "Sunrise"@en ;
+    rdfs:domain day:daylight ;
+    rdfs:range xsd:time ;
+    rdfs:comment "Represents the sunrise time of a day"@en .
+day:sunset a rdfs:Property ;
+    rdfs:label "Sunset"@en ;
+    rdfs:domain day:daylight ;
+    rdfs:range xsd:time ;
+    rdfs:comment "Represents the sunset time of a day"@en .

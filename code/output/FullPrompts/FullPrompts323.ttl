@@ -1,0 +1,36 @@
+@prefix ex: <http://example.com/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Man a owl:Class ;
+    rdfs:label "Man" ;
+    rdfs:subClassOf ex:HomoSapiens .
+ex:hasAge a owl:DatatypeProperty ;
+    rdfs:domain ex:Man ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has age" .
+ex:hasHeight a owl:DatatypeProperty ;
+    rdfs:domain ex:Man ;
+    rdfs:range xsd:float ;
+    rdfs:label "has height" .
+ex:hasWeight a owl:DatatypeProperty ;
+    rdfs:domain ex:Man ;
+    rdfs:range xsd:float ;
+    rdfs:label "has weight" .
+ex:livesIn a owl:ObjectProperty ;
+    rdfs:domain ex:Man ;
+    rdfs:range ex:Location ;
+    rdfs:label "lives in" .
+ex:Location a owl:Class ;
+    rdfs:label "Location" .
+ex:worksAs a owl:ObjectProperty ;
+    rdfs:domain ex:Man ;
+    rdfs:range ex:Job ;
+    rdfs:label "works as" .
+ex:Job a owl:Class ;
+    rdfs:label "Job" .
+ex:hasEducation a owl:ObjectProperty ;
+    rdfs:domain ex:Man ;
+    rdfs:range ex:Education ;
+    rdfs:label "has education".
+ex:Education a owl:Class ;
+rdfs:label "Education" .

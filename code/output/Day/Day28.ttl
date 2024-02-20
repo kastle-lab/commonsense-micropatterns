@@ -1,0 +1,4 @@
+@prefix time: <http://www.w3.org/2006/time#> .
+_:day a time:TemporalUnit ;
+      time:unitType time:unitDay ;
+      time:numericDuration "1"^^xsd:decimal .

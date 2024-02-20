@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix end: <http://example.com/end#> .
+end:End    rdf:type rdfs:Class ;
+    rdfs:comment "The end of something" .
+end:of    rdf:type rdf:Property ;
+    rdfs:domain end:End ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "Links to the thing that is ending" .
+end:date    rdf:type rdf:Property ;
+    rdfs:domain end:End ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The date when something ends" .
+end:cause    rdf:type rdf:Property ;
+    rdfs:domain end:End ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The cause of the end" .
+end:consequence     rdf:type rdf:Property ;
+    rdfs:domain end:End ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The consequence of the end" .

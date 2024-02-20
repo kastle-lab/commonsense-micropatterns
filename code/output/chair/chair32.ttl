@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vocab: <http://example.org/vocab#> .
+vocab:Chair a rdfs:Class ;
+  rdfs:label "Chair"@en ;
+  rdfs:comment "A piece of furniture with a raised surface supported by legs, commonly used to seat a single person."@en .
+vocab:hasMaterial a rdf:Property ;
+  rdfs:domain vocab:Chair ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "has material"@en ;
+  rdfs:comment "The type of material that the chair is made of."@en .
+vocab:hasColor a rdf:Property ;
+  rdfs:domain vocab:Chair ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "has color"@en ;
+  rdfs:comment "The color of the chair."@en .
+vocab:isFor a rdf:Property ;
+  rdfs:domain vocab:Chair ;
+  rdfs:range foaf:Person ;
+  rdfs:label "is for"@en ;
+  rdfs:comment "The chair is intended to be used by a person."@en .

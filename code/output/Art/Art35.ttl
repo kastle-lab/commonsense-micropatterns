@@ -1,0 +1,7 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<http://example.com/Art> rdf:type rdfs:Class .
+<http://example.com/Painting> rdf:type rdfs:Class ;
+                             rdfs:subClassOf <http://example.com/Art> .
+<http://example.com/Sculpture> rdf:type rdfs:Class ;
+                               rdfs:subClassOf <http://example.com/Art> .

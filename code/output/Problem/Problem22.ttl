@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://example.org/ontology#Problem> rdf:type owl:Class .
+<http://example.org/ontology#hasProblem> rdf:type owl:InverseFunctionalProperty ;
+    rdfs:domain [ rdf:type owl:Class ] ;
+    rdfs:range <http://example.org/ontology#Problem> .
+<http://example.org/ontology#problemDescription> rdf:type owl:DatatypeProperty ;
+    rdfs:domain <http://example.org/ontology#Problem> ;
+    rdfs:range xsd:string .
+<http://example.org/ontology#problemSolution> rdf:type owl:ObjectProperty ;
+    rdfs:domain <http://example.org/ontology#Problem> ;
+    rdfs:range [ rdf:type owl:Class ] .

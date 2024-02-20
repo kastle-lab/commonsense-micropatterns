@@ -1,0 +1,2 @@
+@prefix ex: <http://example.org#> .
+ex:John a ex:Man .

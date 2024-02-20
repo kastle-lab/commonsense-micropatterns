@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com#> .
+ex:Eye rdf:type rdfs:Class ;
+      rdfs:label "Eye"@en ;
+      rdfs:comment "The sensory organ used for vision"@en .
+ex:hasEye rdf:type rdf:Property ;
+         rdfs:label "has eye"@en ;
+         rdfs:comment "Relates an organism to its eye"@en ;
+         rdfs:domain ex:Organism ;
+         rdfs:range ex:Eye .
+ex:Organism rdf:type rdfs:Class ;
+           rdfs:label "Organism"@en ;
+           rdfs:comment "A complex structure of interdependent and subordinate elements whose relations and properties are largely determined by their function in the whole"@en .

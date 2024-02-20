@@ -1,0 +1,20 @@
+
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:week1 rdf:type ex:Week ;
+    ex:hasDay ex:monday, ex:tuesday, ex:wednesday, ex:thursday, ex:friday, ex:saturday, ex:sunday .
+ex:monday rdf:type ex:Day ;
+ rdfs:label "Monday" .
+ex:tuesday rdf:type ex:Day ;
+ rdfs:label "Tuesday" .
+ex:wednesday rdf:type ex:Day ;
+ rdfs:label "Wednesday" .
+ex:thursday rdf:type ex:Day ;
+ rdfs:label "Thursday" .
+ex:friday rdf:type ex:Day ;
+ rdfs:label "Friday" .
+ex:saturday rdf:type ex:Day ;
+ rdfs:label "Saturday" .
+ex:sunday rdf:type ex:Day ;
+ rdfs:label "Sunday" .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix svc: <http://example.org/service#> .
+svc:Service rdf:type owl:Class ;
+rdfs:subClassOf owl:Thing ;
+rdfs:comment "A class representing services, which can be any activity or benefit that one party can offer to another."@en .
+svc:serviceName rdf:type owl:DatatypeProperty ;
+rdfs:domain svc:Service ;
+rdfs:range xsd:string ;
+rdfs:comment "The name of the service."@en .
+svc:serviceProvider rdf:type owl:ObjectProperty ;
+rdfs:domain svc:Service ;
+rdfs:range svc:ServiceProvider ;
+rdfs:comment "The provider of the service."@en .
+svc:ServiceProvider rdf:type owl:Class ;
+rdfs:subClassOf owl:Thing ;
+rdfs:comment "A class representing service providers."@en .
+svc:providerName rdf:type owl:DatatypeProperty ;
+rdfs:domain svc:ServiceProvider ;
+rdfs:range xsd:string ;
+rdfs:comment "The name of the service provider."@en .
+svc:providesService rdf:type owl:ObjectProperty ;
+rdfs:domain svc:ServiceProvider ;
+rdfs:range svc:Service ;
+rdfs:comment "Relates a service provider and a service that it provides."@en .

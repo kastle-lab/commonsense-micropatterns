@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix res: <http://www.example.org/ontology/research#> .
+res:Research a rdfs:Class ;
+    rdfs:comment "A domain of study or investigation" .
+res:Researcher a rdfs:Class ;
+    rdfs:comment "A person who conducts research" ;
+    rdfs:subClassOf res:Person .
+res:ResearchTopic a rdfs:Class ;
+    rdfs:comment "A subject or theme of a research project" .
+res:ResearchPaper a rdfs:Class ;
+    rdfs:comment "A written output of a research project" .
+res:FieldOfStudy a rdfs:Class ;
+    rdfs:comment "An academic discipline of a research project" .
+res:conducts a rdf:Property ;
+    rdfs:domain res:Researcher ;
+    rdfs:range res:Research ;
+    rdfs:comment "The research conducted by a researcher" .
+res:hasResearcher a rdf:Property ;
+    rdf:type owl:InverseFunctionalProperty ;
+    rdfs:domain res:Research ;
+    rdfs:range res:Researcher ;
+    rdfs:comment "The researcher conducting a research project" .
+res:hasTopic a rdf:Property ;
+    rdfs:domain res:Research ;
+    rdfs:range res:ResearchTopic ;
+    rdfs:comment "The topic of a research project" .
+res:publishedIn a rdf:Property ;
+    rdfs:domain res:ResearchPaper ;
+    rdfs:range res:Journal ;
+    rdfs:comment "The journal where a research paper is published" .
+res:isWrittenBy a rdf:Property ;
+    rdf:type owl:InverseFunctionalProperty ;
+    rdfs:domain res:ResearchPaper ;
+    rdfs:range res:Researcher ;
+    rdfs:comment "The researcher who writes a research paper" .
+res:belongsTo a rdf:Property ;
+    rdfs:domain res:Research ;
+    rdfs:range res:FieldOfStudy ;
+    rdfs:comment "The field of study that a research project belongs to" .

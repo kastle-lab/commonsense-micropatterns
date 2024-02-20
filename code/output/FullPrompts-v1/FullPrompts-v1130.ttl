@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ @prefix : <http://example.org/day#> .
+ :Day a rdfs:Class ;
+      rdfs:label "Day" ;
+     rdfs:comment "Represent Day in a week" .
+ :hasName a rdf:Property ;
+     rdfs:domain :Day ;
+     rdfs:range rdfs:Literal ;
+     rdfs:label "hasName" ;
+     rdfs:comment "The name of the day" .
+ :hasOrder a rdf:Property ;
+     rdfs:domain :Day ;
+     rdfs:range rdf:Integer ;
+     rdfs:label "hasOrder" ;
+     rdfs:comment "The order of the day in the week, starting from 1 (for Sunday)" .
+ :Monday a :Day ;
+     :hasName "Monday" ;
+     :hasOrder 2 .
+:Tuesday a :Day ;
+     :hasName "Tuesday" ;
+     :hasOrder 3 .
+:Wednesday a :Day ;
+     :hasName "Wednesday" ;
+     :hasOrder 4 .
+:Thursday a :Day ;
+     :hasName "Thursday" ;
+     :hasOrder 5 .
+:Friday a :Day ;
+     :hasName "Friday" ;
+     :hasOrder 6 .
+:Saturday a :Day ;
+     :hasName "Saturday" ;
+     :hasOrder 7 .
+:Sunday a :Day ;
+     :hasName "Sunday" ;
+     :hasOrder 1 .

@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://www.example.org/way#> .
+way:   rdf:type owl:Ontology ;
+  rdfs:comment "Ontology of the concept Way"@en .
+way:Way   rdf:type owl:Class ;
+  rdfs:label "Way"@en ;
+  rdfs:comment "Abstract representation of a way, path, route or means to achieve something or to reach a destination."@en .
+way:Direction  rdf:type owl:Class ;
+  rdfs:label "Direction"@en ;
+  rdfs:comment "Representation of the orientation or course taken by a way."@en ;
+  rdfs:subClassOf way:Way .
+way:Journey   rdf:type owl:Class ;
+  rdfs:label "Journey"@en ;
+  rdfs:comment "Specific series of paths or routes taken as part of a way to a destination."@en ;
+  rdfs:subClassOf way:Way .
+  way:Guide   rdf:type owl:Class ;
+  rdfs:label "Guide"@en ;
+  rdfs:comment "Entity that helps anyone to determine the best way or the path that should be taken."@en .
+way:guide   rdf:type owl:ObjectProperty ;
+  rdfs:label "guide"@en ;
+  rdfs:comment "Relation to represent the guide of a way."@en ;
+  rdfs:domain way:Way ;
+  rdfs:range way:Guide .
+way:hasDirection   rdf:type owl:DatatypeProperty ;
+  rdfs:label "hasDirection"@en ;
+  rdfs:comment "Relation to represent the direction a specific way is heading to."@en ;
+  rdfs:domain way:Way ;
+  rdfs:range xsd:string .
+  way:hasJourney   rdf:type owl:DatatypeProperty ;
+  rdfs:label "hasJourney"@en ;
+  rdfs:comment "Relation to depict the journey of a specific way."@en ;
+  rdfs:domain way:Way ;
+  rdfs:range xsd:string .

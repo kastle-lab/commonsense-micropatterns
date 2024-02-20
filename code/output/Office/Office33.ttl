@@ -1,0 +1,12 @@
+@prefix ex: <http://example.org/>.@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.# Declare office as a classex:Office rdf:type rdfs:Class .
+# Declare office propertiesex:hasLocation rdf:type rdf:Property ;
+    rdfs:domain ex:Office ;
+    rdfs:range rdfs:Literal .
+ex:hasEmployee rdf:type rdf:Property ;
+    rdfs:domain ex:Office ;
+    rdfs:range ex:Employee .
+# Declare an instance of officeex:Office1 rdf:type ex:Office ;
+    ex:hasLocation "123 Main Street" ;
+    ex:hasEmployee ex:Employee1 .
+# Declare employee class and an instanceex:Employee rdf:type rdfs:Class .
+ex:Employee1 rdf:type ex:Employee .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix history: <http://example.com/history#> .
+history:History    rdf:type rdfs:Class ;
+    rdfs:comment "This class represents the discipline that records and interprets past events." .
+history:HistoricalEvent    rdf:type rdfs:Class ;
+    rdfs:subClassOf history:History ;
+    rdfs:comment "This class represents an event that has taken place in the past." ;
+history:HistoricalFigure    rdf:type rdfs:Class ;
+    rdfs:subClassOf history:History ;
+    rdfs:comment "This class represents a person who has had a significant impact on history." ;
+history:BirthDate    rdf:type rdf:Property ;
+    rdfs:domain history:HistoricalFigure ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The birth date of a historical figure." ;
+history:DeathDate    rdf:type rdf:Property ;
+    rdfs:domain history:HistoricalFigure ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The death date of a historical figure." ;
+history:involvedIn    rdf:type rdf:Property ;
+    rdfs:domain history:HistoricalFigure ;
+    rdfs:range history:HistoricalEvent ;
+    rdfs:comment "A relation connecting a historical figure to the historical events they were involved in." ;
+history:occurredOn    rdf:type rdf:Property ;
+    rdfs:domain history:HistoricalEvent ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The date a historical event occurred." .

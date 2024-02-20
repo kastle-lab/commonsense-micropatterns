@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.com/day#> .
+day:Day a rdfs:Class ;
+    rdfs:label "Day"@en ;
+    rdfs:comment "The time of light between one night and the next in which a location experiences general illumination from the Sun."@en .
+day:hasMorning a rdf:Property ;
+    rdfs:label "has morning"@en ;
+    rdfs:range day:Morning ;
+    rdfs:domain day:Day .
+day:hasAfternoon a rdf:Property ;
+    rdfs:label "has afternoon"@en ;
+    rdfs:range day:Afternoon ;
+    rdfs:domain day:Day .
+day:hasEvening a rdf:Property ;
+    rdfs:label "has evening"@en ;
+    rdfs:range day:Evening ;
+    rdfs:domain day:Day .
+day:Morning a rdfs:Class ;
+    rdfs:label "Morning"@en ;
+    rdfs:comment "The period of time from sunrise to noon."@en .
+day:Afternoon a rdfs:Class ;
+    rdfs:label "Afternoon"@en ;
+    rdfs:comment "The period of time from noon to evening."@en .
+day:Evening a rdfs:Class ;
+    rdfs:label "Evening"@en ;
+    rdfs:comment "The period of time from sunset to bedtime."@en .
+day:hasTemperature a rdf:Property ;
+    rdfs:label "has temperature"@en ;
+    rdfs:range xsd:float ;
+    rdfs:domain day:Day .
+day:hasWeather a rdf:Property ;
+    rdfs:label "has weather"@en ;
+    rdfs:range day:Weather ;
+    rdfs:domain day:Day .
+day:Weather a rdfs:Class ;
+    rdfs:label "Weather"@en ;
+    rdfs:comment "The state of the atmosphere at a given time and place with respect to heat, cloudiness, moisture, pressure, etc."@en .
+day:hasDate a rdf:Property ;
+    rdfs:label "has date"@en ;
+    rdfs:range xsd:date ;
+    rdfs:domain day:Day .

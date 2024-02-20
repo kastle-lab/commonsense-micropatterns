@@ -1,0 +1,6 @@
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Moment a rdfs:Class ;
+    rdfs:comment "A specific point in time"^^xsd:string ;
+    rdfs:label "Moment"^^xsd:string .

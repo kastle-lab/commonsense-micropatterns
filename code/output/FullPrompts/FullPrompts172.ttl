@@ -1,0 +1,37 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Year a rdfs:Class ;
+  rdfs:label "Year" ;
+  rdfs:comment "A year is a period of 365 or 366 days, in the Gregorian calendar, divided into 12 months, and is a unit of time used by humans in which to measure durations and ages." .
+ex:hasMonth a rdf:Property ;
+  rdfs:label "hasMonth" ;
+  rdfs:comment "A property that links a year to its 12 constituent months" ;
+  rdfs:domain ex:Year ;
+  rdfs:range ex:Month .
+ex:Month a rdfs:Class ;
+  rdfs:label "Month" ;
+  rdfs:comment "A month is a unit of time, used with calendars, which is approximately as long as a natural period related to the motion of the Moon.".
+ex:hasDay rdfs:Property ;
+  rdfs:label "hasDay" ;
+  rdfs:comment "A property that links a month to its constituent days. Depending on the month, this can be between 28 and 31." ;
+  rdfs:domain ex:Month ;
+  rdfs:range ex:Day .
+ex:Day a rdfs:Class ;
+  rdfs:label "Day" ;
+  rdfs:comment "A day is approximately the period of time during which the Earth completes one rotation with respect to the Sun.".
+ex:Year2022 a ex:Year ;
+  rdfs:label "2022" ;
+  ex:hasMonth ex:January2022 .
+ex:January2022 a ex:Month ;
+  rdfs:label "January" ;
+  ex:hasDay ex:January12022 .
+ex:January12022 a ex:Day ;
+  rdfs:label "January 1, 2022" .
+  ex:isLeapYear a rdf:Property ;
+  rdfs:label "isLeapYear" ;
+  rdfs:comment "A property that indicates whether a given year is a leap year, which has an additional day - February 29" ;
+  rdfs:domain ex:Year ;
+  rdfs:range xsd:boolean .

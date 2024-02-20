@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/> .
+ex:Point  rdf:type owl:Class ;
+  rdfs:comment "A position in space, represented by coordinates."@en ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:label "Point"@en .
+ex:hasXCoordinate  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The X coordinate of a point."@en ;
+  rdfs:domain ex:Point ;
+  rdfs:range xsd:float ;
+  rdfs:label "has X coordinate"@en .
+ex:hasYCoordinate  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The Y coordinate of a point."@en ;
+  rdfs:domain ex:Point ;
+  rdfs:range xsd:float ;
+  rdfs:label "has Y coordinate"@en .
+ # Example of useex:Point1  rdf:type ex:Point ;
+  ex:hasXCoordinate "10.0"^^xsd:float ;
+  ex:hasYCoordinate "20.0"^^xsd:float .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+dbo:Door rdf:type rdfs:Class ;
+    rdfs:label "Door"@en ;
+    rdfs:comment "A hinged barrier or rigid plane used to block off, close off, or cover an entrance or opening"@en ;
+    rdfs:subClassOf dbr:Architectural_Element .
+dbo:hasMaterial rdf:type rdf:Property ;
+    rdfs:label "has material"@en ;
+    rdfs:comment "The material from which a door is made"@en ;
+    rdfs:range dbo:Material ;
+    rdfs:domain dbo:Door .
+dbo:hasColor rdf:type rdf:Property ;
+    rdfs:label "has color"@en ;
+    rdfs:comment "The color of a door"@en ;
+    rdfs:range dbr:Color ;
+    rdfs:domain dbo:Door .
+dbo:isEntranceTo rdf:type rdf:Property ;
+    rdfs:label "is entrance to"@en ;
+    rdfs:comment "The room, building, or space a door provides access to"@en ;
+    rdfs:range dbo:Place ;
+    rdfs:domain dbo:Door .
+dbo:Door     dbo:hasMaterial dbr:Wood ;
+    dbo:hasColor dbr:Red ;
+    dbo:isEntranceTo dbr:Living_Room .

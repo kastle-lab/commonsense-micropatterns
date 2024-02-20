@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix door: <http://example.com/door#> .
+door:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology for door" .
+door:Door     rdf:type rdfs:Class ;
+    rdfs:comment "Class representing a door" ;
+    rdfs:label "Door" .
+door:material    rdf:type owl:DatatypeProperty ;
+    rdfs:domain door:Door ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The material of the door" ;
+    rdfs:label "material" .
+door:color    rdf:type owl:DatatypeProperty ;
+    rdfs:domain door:Door ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The color of the door" ;
+    rdfs:label "color" .
+door:manufacturer    rdf:type owl:DatatypeProperty ;
+    rdfs:domain door:Door ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The manufacturer of the door" ;
+    rdfs:label "manufacturer" .
+door:isBarrier    rdf:type owl:DatatypeProperty ;
+    rdfs:domain door:Door ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Whether the door can block passage when closed" ;
+    rdfs:label "isBarrier" .
+door:hasLock    rdf:type owl:DatatypeProperty ;
+    rdfs:domain door:Door ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Whether the door has a lock" ;
+    rdfs:label "hasLock" .

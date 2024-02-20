@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix place: <http://example.org/place#> .
+place:Place rdf:type rdfs:Class ;
+  rdfs:comment "A location or area."@en .
+place:name rdf:type rdf:Property ;
+  rdfs:comment "The name of a place."@en ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:string .
+place:latitude rdf:type rdf:Property ;
+  rdfs:comment "The latitude of a place."@en ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:decimal .
+place:longitude rdf:type rdf:Property ;
+  rdfs:comment "The longitude of a place."@en ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:decimal .
+place:Country rdf:type rdfs:Class ;
+  rdfs:subClassOf place:Place ;
+  rdfs:comment "A country, a distinct region in geography."@en .
+place:city rdf:type rdfs:Class ;
+  rdfs:subClassOf place:Place ;
+  rdfs:comment "A city, a large and permanent human settlement."@en .
+place:countryOf rdf:type rdf:Property ;
+  rdfs:domain place:city ;
+  rdfs:range place:Country ;
+  rdfs:comment "The country in which a city is located."@en .
+place:population rdf:type rdf:Property ;
+  rdfs:domain place:Place ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The population of a place."@en .

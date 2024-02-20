@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/day#> .
+:Day a owl:Class ;
+  rdfs:label "Day" ;
+  rdfs:comment "Day representation in calendar terminology" .
+:hasDate a owl:DatatypeProperty ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:date ;
+  rdfs:label "has date" ;
+  rdfs:comment "Property for the specific date of the day" .
+:hasDayOfWeek a owl:ObjectProperty ;
+  rdfs:domain :Day ;
+  rdfs:range :DayOfWeek ;
+  rdfs:label "has day of week" ;
+  rdfs:comment "Property that indicates the day of the week of the specific day" .
+:DayOfWeek a owl:Class ;
+  rdfs:label "Day of Week" ;
+  rdfs:comment "Day of the week representation" .
+:Monday a :DayOfWeek ;
+  rdfs:label "Monday" ;
+  rdfs:comment "Monday representation as a specific day of the week" .
+# .

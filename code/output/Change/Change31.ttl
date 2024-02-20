@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ev: <http://www.example.org/event/> .
+@prefix chg: <http://www.example.org/Change/> .
+# Class definitionschg:Change rdf:type rdfs:Class .
+chg:ChangeEvent rdf:type rdfs:Class .
+# Property definitionschg:hasChange rdf:type rdf:Property ;
+    rdfs:domain chg:ChangeEvent ;
+    rdfs:range chg:Change .
+chg:hasStartTime rdf:type rdf:Property ;
+    rdfs:domain chg:ChangeEvent ;
+    rdfs:range xsd:dateTime .
+chg:hasEndTime rdf:type rdf:Property ;
+    rdfs:domain chg:ChangeEvent ;
+    rdfs:range xsd:dateTime .
+# Change type chg:ChangeType rdf:type rdfs:Class ;
+     rdfs:subClassOf chg:Change ;
+    rdfs:comment "Type of the change" .
+# Event of change ev:EventChange rdf:type rdfs:Class ;
+     rdfs:subClassOf ev:ChangeEvent ;
+    rdfs:comment "Event causes the change" .
+ev:startDate rdf:type rdf:Property ;
+    rdfs:domain ev:EventChange ;
+    rdfs:range xsd:dateTime .
+ev:endDate rdf:type rdf:Property ;
+    rdfs:domain ev:EventChange ;
+    rdfs:range xsd:dateTime .

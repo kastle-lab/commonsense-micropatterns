@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix home: <http://example.org/home#> .
+@prefix object: <http://example.org/object#> .
+# Defining classeshome:Home a rdfs:Class .
+object:Location a rdfs:Class .
+object:Room a rdfs:Class .
+# Defining propertieshome:hasLocation a rdf:Property ;
+  rdfs:range object:Location ;
+  rdfs:domain home:Home .
+home:hasRoom a rdf:Property ;
+  rdfs:range object:Room ;
+  rdfs:domain home:Home .

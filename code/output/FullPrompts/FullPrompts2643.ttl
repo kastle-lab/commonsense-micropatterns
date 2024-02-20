@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix kind: <http://example.org/kind#> .
+kind:Kind a rdfs:Class ;
+    rdfs:comment "The class of all kinds."@en .
+kind:HumanKind a kind:Kind ;
+    rdfs:comment "The human kind."@en .
+kind:AnimalKind a kind:Kind ;
+    rdfs:comment "The animal kind."@en .
+kind:PlantKind a kind:Kind ;
+    rdfs:comment "The plant kind."@en .
+kind:Property a rdfs:Class ;
+    rdfs:comment "The class of all properties."@en .
+kind:hasProperty a rdf:Property ;
+    rdfs:domain kind:Kind ;
+    rdfs:range kind:Property ;
+    rdfs:comment "The property that links a kind to its properties."@en .

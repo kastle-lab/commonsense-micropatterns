@@ -1,0 +1,42 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/day#> .
+:Day a rdfs:Class ;
+  rdfs:comment "The period of time each planet rotates once on its axis." .
+:hasDate a rdfs:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:date ;
+  rdfs:comment "An property indicating the specific calendar date of the day." .
+:hasDayOfWeek a rdfs:Property ;
+  rdfs:domain :Day ;
+  rdfs:range :DayOfWeek ;
+  rdfs:comment "A property indicating the day of the week." .
+:DayOfWeek a rdfs:Class ;
+  rdfs:comment "The category for all seven days of the week." .
+:Monday a :DayOfWeek ;
+  rdfs:label "Monday" .
+:Tuesday a :DayOfWeek ;
+  rdfs:label "Tuesday" .
+:Wednesday a :DayOfWeek ;
+  rdfs:label "Wednesday" .
+:Thursday a :DayOfWeek ;
+  rdfs:label "Thursday" .
+:Friday a :DayOfWeek ;
+  rdfs:label "Friday" .
+:Saturday a :DayOfWeek ;
+  rdfs:label "Saturday" .
+:Sunday a :DayOfWeek ;
+  rdfs:label "Sunday" .
+:hasPartOfDay a rdfs:Property ;
+  rdfs:domain :Day ;
+  rdfs:range :PartOfDay ;
+  rdfs:comment "A property indicating the specific part of the day." .
+:PartOfDay a rdfs:Class ;
+  rdfs:comment "The category for all parts of the day." .
+:Morning a :PartOfDay ;
+  rdfs:label "Morning" .
+:Afternoon a :PartOfDay ;
+  rdfs:label "Afternoon" .
+:Evening a :PartOfDay ;
+  rdfs:label "Evening" .
+:Night a :PartOfDay ;
+  rdfs:label "Night" .

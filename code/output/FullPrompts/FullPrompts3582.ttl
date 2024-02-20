@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix art: <http://example.org/art#> .
+art:Art a owl:Class ;
+    rdfs:label "Art" ;
+    rdfs:comment "Represents art in general" .
+art:Artist a owl:Class ;
+    rdfs:label "Artist" ;
+    rdfs:comment "Represents creator of the art" .
+art:WorkOfArt a owl:Class ;
+    rdfs:label "Work of Art" ;
+    rdfs:comment "Represents specific work of art" ;
+    rdfs:subClassOf art:Art .
+art:createdBy a owl:ObjectProperty ;
+    rdfs:label "created by" ;
+    rdfs:comment "Links a work of art to its creator" ;
+    rdfs:domain art:WorkOfArt ;
+    rdfs:range art:Artist .
+art:hasTitle a owl:DatatypeProperty ;
+    rdfs:label "has title" ;
+    rdfs:comment "Links a work of art to its title" ;
+    rdfs:domain art:WorkOfArt ;
+    rdfs:range xsd:string .

@@ -1,0 +1,1 @@
+ex:Entity ex:hasPower ex:Power .

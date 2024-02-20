@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix place: <http://www.example.org/place#> .
+place:    a rdfs:Class ;
+    rdfs:comment "The class of all places" ;
+    rdfs:label "Place" .
+place:name    a rdf:Property ;
+    rdfs:comment "The name of the place" ;
+    rdfs:label "Name" ;
+    rdfs:domain place: ;
+    rdfs:range xsd:string .
+place:hasLocation    a rdf:Property ;
+    rdfs:comment "The specific location of the place" ;
+    rdfs:label "Has Location" ;
+    rdfs:domain place: ;
+    rdfs:range xsd:string .
+place:hasType    a rdf:Property ;
+    rdfs:comment "The type of the place (e.g., city, country, etc.)" ;
+    rdfs:label "Has Type" ;
+    rdfs:domain place: ;
+    rdfs:range place:Type .
+place:Type    a rdfs:Class ;
+    rdfs:comment "The class of all types of places" ;
+    rdfs:label "Type" .
+place:Country    a place:Type ;
+    rdfs:comment "The type of place that is a country" ;
+    rdfs:label "Country" .
+place:City    a place:Type ;
+    rdfs:comment "The type of place that is a city" ;
+    rdfs:label "City" .

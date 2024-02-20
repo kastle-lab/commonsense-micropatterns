@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix kind: <http://example.com/kind#> .
+kind:Kind       rdf:type rdfs:Class ;
+      rdfs:label "Kind" ;
+      rdfs:comment "The concept of kinds or categories of things or concepts." .
+kind:hasType       rdf:type rdf:Property ;
+      rdfs:label "has type" ;
+      rdfs:domain kind:Kind ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "The specific type (or category) something belongs to within its kind." .
+kind:hasCharacteristic       rdf:type rdf:Property ;
+      rdfs:label "has characteristic" ;
+      rdfs:domain kind:Kind ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "A general characteristic or attribute common to all members of a kind" .
+      kind:hasExample      rdf:type rdf:Property ;
+      rdfs:label "has example" ;
+      rdfs:domain kind:Kind ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "An instance or member of a kind" .

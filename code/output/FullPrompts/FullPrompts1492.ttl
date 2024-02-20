@@ -1,0 +1,13 @@
+ It includes minimal details - such as the school's name and its principal.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:School a rdfs:Class .
+ex:hasName a rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range xsd:string .
+ex:hasPrincipal a rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range xsd:string .
+ex:mySchool a ex:School ;
+    ex:hasName "My School"^^xsd:string ;
+    ex:hasPrincipal "Mr. Smith"^^xsd:string .

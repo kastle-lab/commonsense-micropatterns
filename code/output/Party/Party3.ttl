@@ -1,0 +1,36 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/party#> .
+:Party a rdfs:Class ;
+      rdfs:label "Party"@en ;
+      rdfs:comment "An event at which people gather together to celebrate something or just to have fun"@en .
+:Guest a rdfs:Class ;
+       rdfs:comment "A person who is invited to a party"@en .
+:Host a rdfs:Class ;
+      rdfs:comment "A person who holds or organizes a party"@en .
+:Location a rdfs:Class ;
+          rdfs:comment "The place where the party is held"@en .
+:date a rdfs:Property ;
+       rdfs:domain :Party ;
+       rdfs:range xsd:date ;
+       rdfs:comment "The date of the party"@en .
+:time a rdfs:Property ;
+       rdfs:domain :Party ;
+       rdfs:range xsd:time ;
+       rdfs:comment "The time of the party"@en .
+:hasGuest a rdfs:Property ;
+          rdfs:domain :Party ;
+          rdfs:range :Guest ;
+          rdfs:comment "The party has guests"@en .
+:hasHost a rdfs:Property ;
+         rdfs:domain :Party ;
+         rdfs:range :Host ;
+         rdfs:comment "The party has a host"@en .
+:atLocation a rdfs:Property ;
+            rdfs:domain :Party ;
+            rdfs:range :Location ;
+            rdfs:comment "The party is at this location"@en .
+:Guest    rdfs:subClassOf        [ a rdfs:Class ;
+          rdfs:comment "A participant in the party"@en        ] .
+:Host    rdfs:subClassOf        [ a rdfs:Class ;
+          rdfs:comment "A organizer of the party"@en        ] .

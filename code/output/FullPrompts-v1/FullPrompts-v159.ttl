@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix yr: <http://example.com/ontology/year#> .
+yr:Year rdf:type rdfs:Class ;
+rdfs:comment "The class of all years" .
+yr:hasNumber rdf:type rdf:Property ;
+rdfs:domain yr:Year ;
+rdfs:range xsd:integer ;
+rdfs:comment "The integer value of a year" .
+yr:hasMonth rdf:type rdf:Property ;
+rdfs:domain yr:Year ;
+rdfs:range yr:Month ;
+rdfs:comment "The months contained in a year" .
+yr:Month rdf:type rdfs:Class ;
+rdfs:comment "The class of all months" .
+yr:hasName rdf:type rdf:Property ;
+rdfs:domain yr:Month ;
+rdfs:range xsd:string ;
+rdfs:comment "The name of a month" .
+yr:hasDay rdf:type rdf:Property ;
+rdfs:domain yr:Month ;
+rdfs:range yr:Day ;
+rdfs:comment "The days contained in a month" .
+yr:Day rdf:type rdfs:Class ;
+rdfs:comment "The class of all days" .
+yr:hasDayNumber rdf:type rdf:Property ;
+rdfs:domain yr:Day ;
+rdfs:range xsd:integer ;
+rdfs:comment "The integer value of a day" .

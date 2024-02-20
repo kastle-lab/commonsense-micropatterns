@@ -1,0 +1,4 @@
+@prefix ex: <http://example.org/> .
+_:side a ex:Side ;
+    ex:leftSide ex:Object1 ;
+    ex:rightSide ex:Object2 .

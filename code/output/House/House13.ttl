@@ -1,0 +1,34 @@
+@prefix : <http://www.example.org/houseOntology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:House a rdfs:Class ;
+    rdfs:label "House"@en ;
+    rdfs:comment "Concept of a House in the ontology"@en .
+:hasAddress a rdfs:Property ;
+    rdfs:domain :House ;
+    rdfs:range xsd:string ;
+    rdfs:label "has address"@en ;
+    rdfs:comment "The address of the house"@en .
+:numberOfRooms a rdfs:Property ;
+    rdfs:domain :House ;
+    rdfs:range xsd:integer ;
+    rdfs:label "number of rooms"@en ;
+    rdfs:comment "The number of rooms in the house"@en .
+:hasOwner a rdfs:Property ;
+    rdfs:domain :House ;
+    rdfs:range :Person ;
+    rdfs:label "has owner"@en ;
+    rdfs:comment "The owner of the house"@en .
+:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "Concept of a Person in the ontology"@en .
+:name a rdfs:Property ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The person's name"@en .
+:age a rdfs:Property ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:integer ;
+    rdfs:label "age"@en ;
+    rdfs:comment "The person's age"@en .

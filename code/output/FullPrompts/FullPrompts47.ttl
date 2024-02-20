@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix furn: <http://www.furniture.org#> .
+furn:Sofa rdf:type rdfs:Class ;
+    rdfs:label "Sofa"@en ;
+    rdfs:subClassOf furn:Furniture ;
+    rdfs:comment "A type of Furniture intended for comfortable seating, typically for two or more individuals"@en .
+furn:hasMaterial rdf:type rdf:Property ;
+    rdfs:label "has material"@en ;
+    rdfs:domain furn:Sofa ;
+    rdfs:range furn:Material ;
+    rdfs:comment "The material which the sofa is made up of"@en .
+furn:hasColor rdf:type rdf:Property ;
+    rdfs:label "has color"@en ;
+    rdfs:domain furn:Sofa ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The color of the sofa"@en .
+furn:hasStyle rdf:type rdf:Property ;
+    rdfs:label "has style"@en ;
+    rdfs:domain furn:Sofa ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The style of the sofa."@en .
+furn:hasSize rdf:type rdf:Property ;
+    rdfs:label "has size"@en ;
+    rdfs:domain furn:Sofa ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Size of the sofa."@en .
+furn:Manufacturer rdf:type owl:Class ;
+    rdfs:label "Manufacturer"@en ;
+    rdfs:subClassOf xsd:string .
+furn:manufacturedBy rdf:type rdf:Property ;
+    rdfs:label "manufactured by"@en ;
+    rdfs:domain furn:Sofa ;
+    rdfs:range furn:Manufacturer ;
+    rdfs:comment "The manufacturer company of the sofa."@en .
+furn:Material rdf:type owl:Class ;
+    rdfs:label "Material"@en ;
+    rdfs:subClassOf xsd:string ;
+    rdfs:comment "Material used in the manufacturing of sofa."@en .

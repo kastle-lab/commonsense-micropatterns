@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/mother#> .
+ex:Mother rdf:type owl:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:comment "A female human who has given birth to a child or who has a child for whom she has the legal and moral responsibility."@en ;
+    rdfs:label "Mother"@en .
+ex:hasMother rdf:type owl:ObjectProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range ex:Mother ;
+    rdfs:comment "The mother of a person."@en ;
+    rdfs:label "has mother"@en .
+ex:hasChild rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Mother ;
+    rdfs:range foaf:Person ;
+    rdfs:comment "The child of a mother."@en ;
+    rdfs:label "has child"@en .
+ex:hasSpouse rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Mother ;
+    rdfs:range foaf:Person ;
+    rdfs:comment "The spouse of a mother."@en ;
+    rdfs:label "has spouse"@en .
+ex:isMotherOf rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Mother ;
+    rdfs:range foaf:Person ;
+    rdfs:comment "The person of whom one is the mother."@en ;
+    rdfs:label "is mother of"@en .
+ex:isDaughterOf rdf:type owl:ObjectProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range ex:Mother ;
+    rdfs:comment "The mother of whom one is the daughter."@en ;
+    rdfs:label "is daughter of"@en .
+ex:isSonOf rdf:type owl:ObjectProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range ex:Mother ;
+    rdfs:comment "The mother of whom one is the son."@en ;
+    rdfs:label "is son of"@en .

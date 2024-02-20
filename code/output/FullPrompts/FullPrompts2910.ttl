@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix line: <http://www.example.org/line#> .
+line:Line a rdfs:Class ;
+    rdfs:label "Line"@en ;
+    rdfs:comment "A continuous extent of length, a line"@en .
+line:length a rdf:Property ;
+    rdfs:label "hasLength"@en ;
+    rdfs:comment "The length of the line"@en ;
+    rdfs:domain line:Line ;
+    rdfs:range xsd:float .
+line:isStraight a rdf:Property ;
+    rdfs:label "isStraight"@en ;
+    rdfs:comment "Indicates whether a line is straight or not"@en ;
+    rdfs:domain line:Line ;
+    rdfs:range xsd:boolean .
+line:hasPoint a rdf:Property ;
+    rdfs:label "hasPoint"@en ;
+    rdfs:comment "The point(s) that belongs to the line"@en ;
+    rdfs:domain line:Line ;
+    rdfs:range line:Point .
+line:Point a rdfs:Class ;
+    rdfs:label "Point"@en ;
+    rdfs:comment "An exact position or location on a plane surface"@en .
+line:hasXCoordinate a rdf:Property ;
+    rdfs:label "hasXCoordinate"@en ;
+    rdfs:comment "The x-coordinate of the point"@en ;
+    rdfs:domain line:Point ;
+    rdfs:range xsd:float .
+line:hasYCoordinate a rdf:Property ;
+    rdfs:label "hasYCoordinate"@en ;
+    rdfs:comment "The y-coordinate of the point"@en ;
+    rdfs:domain line:Point ;
+    rdfs:range xsd:float .

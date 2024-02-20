@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pr: <http://www.example.org/problem#> .
+# Define the concept of Problempr:Problem rdf:type owl:Class ;
+  rdfs:label "Problem"@en ;
+  rdfs:comment "A concept representing a problem that requires a solution."@en .
+# Define the property hasSolutionpr:hasSolution rdf:type owl:ObjectProperty ;
+  rdfs:label "has solution"@en ;
+  rdfs:comment "A relation between a problem and its possible solutions."@en ;
+  rdfs:domain pr:Problem ;
+  rdfs:range pr:Solution .
+# Define the concept of Solutionpr:Solution rdf:type owl:Class ;
+  rdfs:label "Solution"@en ;
+  rdfs:comment "A concept representing a solution to a problem."@en .
+ # Define the property sinceWhenpr:sinceWhen rdf:type owl:DatatypeProperty ;
+  rdfs:label "since when"@en ;
+  rdfs:comment "The start of the problem."@en ;
+  rdfs:domain pr:Problem ;
+  rdfs:range xsd:dateTime .
+# Define the property descriptionpr:description rdf:type owl:DatatypeProperty ;
+  rdfs:label "description"@en ;
+  rdfs:comment "The description of the problem."@en ;
+  rdfs:domain pr:Problem ;
+  rdfs:range xsd:string .

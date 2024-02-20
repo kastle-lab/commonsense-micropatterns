@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Declaration of Number class@prefix num: <http://example.org/ontology/number#> .
+num:Number a rdfs:Class ;
+rdfs:label "Number"@en ;
+# Declaration of NaturalNumber subclassnum:NaturalNumber a rdfs:Class ;
+rdfs:subClassOf num:Number ;
+rdfs:label "Natural Number"@en ;
+# Declaration of Integer subclassnum:Integer a rdfs:Class ;
+rdfs:subClassOf num:Number ;
+rdfs:label "Integer"@en ;
+# Declaration of RealNumber subclassnum:RealNumber a rdfs:Class ;
+rdfs:subClassOf num:Number ;
+rdfs:label "Real Number"@en ;
+# Declaration of ComplexNumber subclassnum:ComplexNumber a rdfs:Class ;
+rdfs:subClassOf num:Number ;
+rdfs:label "Complex Number"@en ;
+.# Declaration of properties# Property to represent the value of a numbernum:value a rdf:Property ;
+rdfs:domain num:Number ;
+rdfs:range rdfs:Literal ;
+rdfs:label "value"@en ;
+rdfs:comment "Represents the value of a Number"@en .

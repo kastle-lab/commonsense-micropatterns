@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix friend: <http://example.org/friend#> .
+friend:Friend a rdfs:Class .
+friend:hasName a rdf:Property ;
+    rdfs:domain friend:Friend ;
+    rdfs:range xsd:string .
+friend:hasAge a rdf:Property ;
+    rdfs:domain friend:Friend ;
+    rdfs:range xsd:int .
+friend:isFriendWith a rdf:Property ;
+    rdfs:domain friend:Friend ;
+    rdfs:range friend:Friend .
+ friend:hasAddress a rdf:Property ;
+    rdfs:domain friend:Friend ;
+    rdfs:range rdf:Resource. friend:hasPhoneNumber a rdf:Property ;
+    rdfs:domain friend:Friend ;
+    rdfs:range xsd:string .

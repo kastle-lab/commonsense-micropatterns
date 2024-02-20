@@ -1,0 +1,15 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Education a rdfs:Class .
+# Defining subclasses of Educationex:PrimaryEducation a rdfs:Class ;
+  rdfs:subClassOf ex:Education .
+  ex:SecondaryEducation a rdfs:Class ;
+  rdfs:subClassOf ex:Education .
+ ex:HigherEducation a rdfs:Class ;
+  rdfs:subClassOf ex:Education .
+ex:Student a rdf:Class .
+ex:studiesIn a rdf:Property ;
+  rdf:domain ex:Person ;
+  rdf:range ex:Education .
+# Sample dataex:John a ex:Person ;
+  ex:studiesIn ex:HigherEducation .

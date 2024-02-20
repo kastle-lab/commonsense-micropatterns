@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:pureWater rdf:type rdfs:Class ;
+           rdfs:subClassOf :Water.:saltWater rdf:type rdfs:Class ;
+           rdfs:subClassOf :Water.:Water rdf:type rdfs:Class ;
+        rdfs:label "Water"@en ;
+        rdfs:comment "H2O, a transparent fluid which forms the world's streams, lakes, oceans and rain"@en.:BoilingPoint rdf:type rdf:Property ;
+              rdfs:domain :Water ;
+              rdfs:range xsd:float ;
+              rdfs:label "Boiling point"@en ;
+              rdfs:comment "Temperature at which a liquid boils and turns into vapor"@en.:FreezingPoint rdf:type rdf:Property ;
+               rdfs:domain :Water ;
+               rdfs:range xsd:float ;
+               rdfs:label "Freezing point"@en ;
+               rdfs:comment "Temperature at which a liquid turns into a solid when cooled"@en.:pureWater :BoilingPoint "100.0"^^xsd:float ;
+           :FreezingPoint "0.0"^^xsd:float .
+:saltWater :BoilingPoint "102.0"^^xsd:float ;
+           :FreezingPoint "-2.0"^^xsd:float .

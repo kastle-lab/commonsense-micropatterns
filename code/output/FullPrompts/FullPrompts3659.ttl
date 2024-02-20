@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix party: <http://example.org/party/> .
+party:Party a rdfs:Class ;
+    rdfs:label "Party" ;
+    rdfs:comment "An event where people gather together for fun, enjoyment or celebration." .
+party:location a rdf:Property ;
+    rdfs:label "location" ;
+    rdfs:comment "The location or place where the party is held." ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string .
+party:date a rdf:Property ;
+    rdfs:label "date" ;
+    rdfs:comment "The date when the party is happening." ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:date .
+party:theme a rdf:Property ;
+    rdfs:label "theme" ;
+    rdfs:comment "The theme or concept of the party." ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string .
+party:attendee a rdf:Property ;
+    rdfs:label "attendee" ;
+    rdfs:comment "A person who attends or participates in the party." ;
+    rdfs:domain party:Party ;
+    rdfs:range xsd:string .

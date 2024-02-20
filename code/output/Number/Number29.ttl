@@ -1,0 +1,10 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:pi a xsd:decimal ;
+    ex:value "3.14159"^^xsd:decimal .
+    ex:two a xsd:integer ;
+    ex:value "2"^^xsd:integer .
+  ex:threeA a xsd:positiveInteger ;
+    ex:value "3"^^xsd:positiveInteger .
+ex:negativeOne a xsd:negativeInteger ;
+    ex:value "-1"^^xsd:negativeInteger .

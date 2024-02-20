@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Teacher    a rdfs:Class ;
+    rdfs:comment "Represent the entity of a teacher" ;
+    rdfs:label "Teacher" .
+ex:hasFirstName    a rdfs:Property ;
+    rdfs:domain ex:Teacher ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "First name of the teacher" ;
+    rdfs:label "hasFirstName" .
+ex:hasLastName    a rdfs:Property ;
+    rdfs:domain ex:Teacher ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Last name of the teacher" ;
+    rdfs:label "hasLastName" .
+ex:teachesSubject    a rdfs:Property ;
+    rdfs:domain ex:Teacher ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Subject that the teacher teaches" ;
+    rdfs:label "teachesSubject" .

@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/> .
+ex:Party a rdfs:Class ;
+    rdfs:comment "A class representing any sort of party or social gathering."@en .
+ex:Provide a rdf:Property ;
+    rdfs:domain ex:Party ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "A property representing the action of providing something at a party."@en .

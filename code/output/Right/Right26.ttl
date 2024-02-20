@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix right: <http://www.example.org/right#> .
+# 'Right' as a Classright:Right     rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a Right" .
+# 'hasRight' as a Property that relates a Person to a Rightright:hasRight     rdf:type rdf:Property ;
+    rdfs:domain right:Person ;
+    rdfs:range right:Right ;
+    rdfs:comment "Property indicating that a Person has a Right" .
+# 'grantedBy' as a Property that relates a Right to an Authorityright:grantedBy     rdf:type rdf:Property ;
+    rdfs:domain right:Right ;
+    rdfs:range right:Authority ;
+    rdfs:comment "Property indicating that a Right is granted by an Authority" .
+# 'Person' as a Classright:Person     rdf:type rdfs:Class ;
+    rdfs:comment "A class representing a Person" .
+# 'Authority' as a Classright:Authority     rdf:type rdfs:Class ;
+    rdfs:comment "A class representing an Authority" .

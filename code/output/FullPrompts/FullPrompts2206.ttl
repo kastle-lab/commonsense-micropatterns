@@ -1,0 +1,14 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org#> .
+ex:Student rdf:type owl:Class .
+ ex:hasID rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Student ;
+    rdfs:range xsd:string .
+ex:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Student ;
+    rdfs:range xsd:string .
+ex:enrolledIn rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Student ;
+    rdfs:range ex:Course.

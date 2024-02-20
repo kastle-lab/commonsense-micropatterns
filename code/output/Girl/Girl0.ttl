@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix girl: <http://example.org/girl#> .
+girl:Girl rdf:type rdfs:Class ;
+rdfs:comment "A class representing all girl individuals."@en ;
+rdfs:label "Girl"@en .
+girl:hasAge rdf:type rdf:Property ;
+rdfs:domain girl:Girl ;
+rdfs:range xsd:integer ;
+rdfs:comment "The age of a girl."@en ;
+rdfs:label "hasAge"@en .
+girl:hasName rdf:type rdf:Property ;
+rdfs:domain girl:Girl ;
+rdfs:range xsd:string ;
+rdfs:comment "The name of a girl."@en ;
+rdfs:label "hasName"@en .
+girl:attendsSchool rdf:type rdf:Property ;
+rdfs:domain girl:Girl ;
+rdfs:range xsd:boolean ;
+rdfs:comment "Indicating whether or not the girl attends school."@en ;
+rdfs:label "attendsSchool"@en .
+girl:livesIn rdf:type rdf:Property ;
+rdfs:domain girl:Girl ;
+rdfs:range xsd:string ;
+rdfs:comment "The location where the girl lives."@en ;
+rdfs:label "livesIn"@en .

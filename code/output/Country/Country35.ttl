@@ -1,0 +1,25 @@
+@prefix ex: <http://example.org/> .
+ex:Country a rdfs:Class ;
+  rdfs:label "Country"@en ;
+  rdfs:comment "A nation with its own government, occupying a particular territory."@en ;
+  rdfs:subClassOf ex:GeographicalEntity .
+ex:hasName a rdf:Property ;
+  rdfs:label "has name"@en ;
+  rdfs:comment "The official or commonly recognized name of the country."@en ;
+  rdfs:domain ex:Country ;
+  rdfs:range xsd:string .
+ex:hasPopulation a rdf:Property ;
+  rdfs:label "has population"@en ;
+  rdfs:comment "The number of people living in the country."@en ;
+  rdfs:domain ex:Country ;
+  rdfs:range xsd:integer .
+ex:hasArea a rdf:Property ;
+  rdfs:label "has area"@en ;
+  rdfs:comment "The total surface area of the country, usually measured in square kilometers."@en ;
+  rdfs:domain ex:Country ;
+  rdfs:range xsd:decimal .
+ex:hasCapital a rdf:Property ;
+    rdfs:label "has capital"@en ;
+    rdfs:comment "The city that serves as the seat of government of a country."@en ;
+    rdfs:domain ex:Country ;
+    rdfs:range ex:City .

@@ -1,0 +1,20 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+:Jane     a foaf:Person ;
+    foaf:gender "female" ;
+    dbo:age 12 ;
+     schema:child ;
+:horse_riding     a schema:Sport ;
+    schema:Participant :Jane .
+    :girl     a dbo:AgeGroup ;
+    dbo:age 0 ;
+    dbo:ageLimit 17 ;
+    schema:gender "female" ;
+            :school     a dbo:EducationalInstitution ;
+    dbo:EducationalInstitution :Jane .
+    :toy     a schema:Product ;
+    schema:Audience :OnlineShopping ;
+    schema:keywords "girl",                   "toys" .
+:pink     a schema:Color ;
+    schema:associatedWith :girl .

@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix back: <http://example.org/back#> .
+back:Back rdf:type rdfs:Class ;
+       rdfs:label "Back" ;
+       rdfs:comment "The back part of something or someone" .
+back:hasPart rdf:type rdf:Property ;
+       rdfs:domain back:Back ;
+       rdfs:label "hasPart" ;
+       rdfs:comment "A relation between a Back and some part of it" .
+back:Spine rdf:type rdfs:Class ;
+       rdfs:subClassOf back:Back ;
+       rdfs:comment "The spine is a part of back" ;
+       rdfs:label "Spine" .
+back:Muscles rdf:type rdfs:Class ;
+       rdfs:subClassOf back:Back ;
+       rdfs:comment "The muscles are part of back" ;
+       rdfs:label "Muscles" .
+back:Injury rdf:type rdfs:Class ;
+       rdfs:label "Injury" ;
+       rdfs:comment "An injury that can be sustained by the back" .
+back:hasInjury rdf:type rdf:Property ;
+       rdfs:domain back:Back ;
+       rdfs:range back:Injury ;
+       rdfs:label "hasInjury" ;
+       rdfs:comment "A relation between a Back and an Injury it can have" .
+back:Pain rdf:type rdfs:Class ;
+       rdfs:label "Pain" ;
+       rdfs:comment "The sensation of discomfort in the back" .
+back:hasPain rdf:type rdf:Property ;
+       rdfs:domain back:Back ;
+       rdfs:range back:Pain ;
+       rdfs:label "hasPain" ;
+       rdfs:comment "A relation between a Back and a Pain it can have" .
+back:Disc rdf:type rdfs:Class ;
+       rdfs:subClassOf back:Back ;
+       rdfs:label "Disc" ;
+       rdfs:comment "The disc is a part of spine on the back" .
+     back:Vertebra rdf:type rdfs:Class ;
+       rdfs:subClassOf back:Spine ;
+       rdfs:label "Vertebra" ;
+       rdfs:comment "The individual bony segments that make up the spinal column".

@@ -1,0 +1,15 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix power: <http://example.org/power#> .
+power:Power rdf:type rdfs:Class ;
+rdfs:label "Power"@en ;
+rdfs:comment "A class representing the concept of Power"@en .
+power:hasUnit rdf:type rdf:Property ;
+rdfs:range power:Unit ;
+rdfs:domain power:Power ;
+rdfs:label "has unit"@en ;
+rdfs:comment "Relates an instance of Power to its unit"@en .
+power:Unit rdf:type rdfs:Class ;
+rdfs:label "Unit"@en ;
+rdfs:comment "A class representing units of Power"@en.

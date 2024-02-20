@@ -1,0 +1,7 @@
+ To keep things simple, we will not specify actual time values in this general pattern. Here is a potential representation:
+@prefix ex: <http://example.org/> .
+ @prefix time: <http://www.w3.org/2006/time#> .
+ex:Morning a time:TemporalEntity ;
+    time:hasBeginning ex:MorningStart ;
+    time:hasEnd ex:MorningEnd ;
+    ex:partOfDay ex:Day .

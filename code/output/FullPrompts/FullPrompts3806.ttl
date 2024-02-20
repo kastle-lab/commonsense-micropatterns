@@ -1,0 +1,24 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org#> .
+ex:Reason a owl:Class ;
+    rdfs:comment "A class representing reason or set of reasons given in support of an idea, action or theory."@en ;
+    rdfs:label "Reason"@en .
+ex:hasReason a rdf:Property ;
+    rdfs:comment "A property indicating the reason supporting an idea, action or theory."@en ;
+    rdfs:domain ex:IdeaOrActionOrTheory ;
+    rdfs:range ex:Reason ;
+    rdfs:label "has reason"@en .
+ex:providesReason a rdf:Property ;
+    rdfs:comment "A property indicating the provision of reason for an idea, action or theory."@en ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Reason ;
+    rdfs:label "provides reason"@en .
+ex:IdeaOrActionOrTheory a owl:Class ;
+    rdfs:comment "A class representing an idea, action or theory that can have reasons."@en ;
+    rdfs:label "Idea or Action or Theory"@en .
+ex:Entity a owl:Class ;
+    rdfs:comment "A class representing any entity capable of providing reason."@en ;
+    rdfs:label "Entity"@en .

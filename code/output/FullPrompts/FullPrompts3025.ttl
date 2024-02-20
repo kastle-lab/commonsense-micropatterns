@@ -1,0 +1,10 @@
+ Note that the actual representation may depend on your specific application and may require more detailed information.Here is a basic sample:
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://example.org/> .
+ex:JohnDoe a schema:Person ;
+    schema:name "John Doe" ;
+    schema:memberOf ex:SomeGroup .
+  ex:SomeGroup a schema:Organization ;
+    schema:name "Some Group" ;
+    schema:member ex:JohnDoe .

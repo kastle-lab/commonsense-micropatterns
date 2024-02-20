@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Year a rdfs:Class ;
+    rdfs:subClassOf xsd:integer ;
+    rdfs:comment "The class of years" ;
+    rdfs:label "Year" .

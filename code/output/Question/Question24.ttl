@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Question a rdfs:Class ;
+    rdfs:label "Question" ;
+    rdfs:comment "Representation of Question in ontology" .
+ex:hasQuestion a rdf:Property ;
+    rdfs:domain ex:User ;
+    rdfs:range ex:Question ;
+    rdfs:label "has question" ;
+    rdfs:comment "Property linking User with a Question they asked." .
+ex:User a rdfs:Class ;
+    rdfs:label "User" ;
+    rdfs:comment "Representation of User in ontology" .

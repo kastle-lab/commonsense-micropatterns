@@ -1,0 +1,30 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:     rdf:type owl:Ontology ;
+    rdfs:comment "Ontology of the World"^^xsd:string ;
+    rdfs:label "World"^^xsd:string .
+:World     rdf:type owl:Class ;
+    rdfs:label "World"^^xsd:string ;
+    rdfs:comment "The entirety of planet Earth and all its aspects."^^xsd:string .
+:Continent     rdf:type owl:Class ;
+    rdfs:label "Continent"^^xsd:string ;
+    rdfs:comment "One of the seven large land masses on the Earth."^^xsd:string .
+:Country     rdf:type owl:Class ;
+    rdfs:label "Country"^^xsd:string ;
+    rdfs:comment "A nation with its own government, occupying a particular territory."^^xsd:string .
+:City     rdf:type owl:Class ;
+    rdfs:label "City"^^xsd:string ;
+    rdfs:comment "A large town or a significant economic, political, or cultural center for a country or region."^^xsd:string .
+:isPartOf     rdf:type owl:ObjectProperty ;
+    rdfs:domain :City ;
+    rdfs:range :Country ;
+    rdfs:label "is part of"^^xsd:string ;
+    rdfs:comment "Indicates that a city is part of a country."^^xsd:string .
+:contains    rdf:type owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :City ;
+    rdfs:label "contains"^^xsd:string ;
+    rdfs:comment "Indicates that a country contains a city."^^xsd:string .

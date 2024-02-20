@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ont: <http://example.com/art#> .
+ont:Art a rdfs:Class ;
+    rdfs:label "Art"@en ;
+    rdfs:comment "A broad category encompassing all forms of human creative expression"@en .
+ont:visualArt a rdfs:Class ;
+    rdfs:subClassOf ont:Art ;
+    rdfs:label "Visual Art"@en ;
+    rdfs:comment "Art forms that involve visual perception, such as painting, sculpture, photography, etc."@en .
+ont:painting a rdfs:Class ;
+    rdfs:subClassOf ont:visualArt ;
+    rdfs:label "Painting"@en .
+ont:sculpture a rdfs:Class ;
+    rdfs:subClassOf ont:visualArt ;
+    rdfs:label "Sculpture"@en .
+ont:performingArt a rdfs:Class ;
+    rdfs:subClassOf ont:Art ;
+    rdfs:label "Performing Art"@en ;
+    rdfs:comment "Art forms where the artist uses their voice, body or inanimate objects to convey artistic expression, such as music, dance, theatre, etc."@en .
+ont:music a rdfs:Class ;
+    rdfs:subClassOf ont:performingArt ;
+    rdfs:label "Music"@en .
+ont:dance a rdfs:Class ;
+    rdfs:subClassOf ont:performingArt ;
+    rdfs:label "Dance"@en .
+ont:Artist a rdfs:Class ;
+    rdfs:label "Artist"@en ;
+    rdfs:comment "A person who creates art"@en .
+ont:artwork a rdfs:Class ;
+    rdfs:label "Artwork"@en ;
+    rdfs:comment "A work of art created by an artist"@en .
+ont:creates rdfs:Property ;
+    rdfs:domain ont:Artist ;
+    rdfs:range ont:artwork ;
+    rdfs:label "creates"@en ;
+    rdfs:comment "The creative action performed by an artist in producing an artwork"@en .

@@ -1,0 +1,36 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix office: <http://example.com/office#> .
+office: a owl:Ontology ;
+        rdfs:label "office ontology"@en .
+office:Office a owl:Class ;
+        rdfs:label "Office"@en ;
+        rdfs:subClassOf owl:Thing .
+office:Employee a owl:Class ;
+         rdfs:label "Employee"@en ;
+         rdfs:subClassOf owl:Thing .
+office:Desk a owl:Class ;
+         rdfs:label "Desk"@en ;
+         rdfs:subClassOf owl:Thing .
+office:Chair a owl:Class ;
+         rdfs:label "Chair"@en ;
+         rdfs:subClassOf owl:Thing .
+office:Computer a owl:Class ;
+         rdfs:label "Computer"@en ;
+         rdfs:subClassOf owl:Thing .
+office:hasWorkstation a owl:ObjectProperty ;
+        rdfs:label "has workstation"@en ;
+        rdfs:domain office:Employee ;
+        rdfs:range office:Desk .
+office:hasEmployee a owl:ObjectProperty ;
+        rdfs:label "has employee"@en ;
+        rdfs:domain office:Office ;
+        rdfs:range office:Employee .
+office:hasChair a owl:ObjectProperty ;
+        rdfs:label "has chair"@en ;
+        rdfs:domain office:Desk ;
+        rdfs:range office:Chair .
+office:hasComputer a owl:ObjectProperty ;
+        rdfs:label "has computer"@en ;
+        rdfs:domain office:Desk ;
+        rdfs:range office:Computer .

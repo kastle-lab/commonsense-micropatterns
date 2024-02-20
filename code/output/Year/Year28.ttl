@@ -1,0 +1,17 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Year a rdfs:Class ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "The class of all years."@en .
+ex:hasYear a rdf:Property ;
+    rdfs:label "has year"@en ;
+    rdfs:domain ex:TimePeriod ;
+    rdfs:range ex:Year .
+ex:TimePeriod a rdfs:Class ;
+    rdfs:label "Time period"@en .
+ ex:yearValue a rdf:Datatype ;
+    rdfs:label "year value"@en ;
+    rdfs:subClassOf xsd:integer .
+ ex:Year rdfs:subClassOf [    a rdf:Restriction ;
+    rdf:onProperty ex:yearValue ;
+    rdf:allValuesFrom xsd:integer ;
+] .

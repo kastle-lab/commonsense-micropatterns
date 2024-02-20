@@ -1,0 +1,31 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix manOnto: <http://example.org/man#> .
+manOnto:Man a rdfs:Class ;
+  rdfs:label "Man"@en ;
+  rdfs:comment "A representation of a male human being"@en .
+manOnto:name a rdf:Property ;
+  rdfs:label "name"@en ;
+  rdfs:comment "Name of the man"@en ;
+  rdfs:range xsd:string ;
+  rdfs:domain manOnto:Man .
+manOnto:age a rdf:Property ;
+  rdfs:label "age"@en ;
+  rdfs:comment "Age of the man"@en ;
+  rdfs:range xsd:integer ;
+  rdfs:domain manOnto:Man .
+manOnto:worksAt a rdf:Property ;
+  rdfs:label "works at"@en ;
+  rdfs:comment "Place where the man works"@en ;
+  rdfs:range xsd:string ;
+  rdfs:domain manOnto:Man .
+manOnto:livesIn a rdf:Property ;
+  rdfs:label "lives in"@en ;
+  rdfs:comment "Place where the man lives"@en ;
+  rdfs:range xsd:string ;
+  rdfs:domain manOnto:Man .
+manOnto:hasMaritalStatus a rdf:Property ;
+  rdfs:label "marital status"@en ;
+  rdfs:comment "Marital status of the man"@en ;
+  rdfs:range xsd:string ;
+  rdfs:domain manOnto:Man .

@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kid: <http://www.example.org/kid#> .
+kid:Kid rdf:type rdfs:Class ;
+  rdfs:label "Kid" ;
+  rdfs:comment "This is the class for all kids" .
+kid:hasName rdf:type rdf:Property ;
+  rdfs:label "has name" ;
+  rdfs:comment "The name of the kid" ;
+  rdfs:domain kid:Kid ;
+  rdfs:range xsd:string .
+kid:hasAge rdf:type rdf:Property ;
+  rdfs:label "has age" ;
+  rdfs:comment "The age of the kid" ;
+  rdfs:domain kid:Kid ;
+  rdfs:range xsd:integer .
+kid:hasGender rdf:type rdf:Property ;
+  rdfs:label "has gender" ;
+  rdfs:comment "The gender of the kid" ;
+  rdfs:domain kid:Kid ;
+  rdfs:range xsd:string .
+kid:attendsSchool rdf:type rdf:Property ;
+  rdfs:label "attends school" ;
+  rdfs:comment "The school the kid attends" ;
+  rdfs:domain kid:Kid ;
+  rdfs:range xsd:string .
+kid:Kid001 rdf:type kid:Kid;
+  kid:hasName "John" ;
+  kid:hasAge 10 ;
+  kid:hasGender "Male" ;
+  kid:attendsSchool "ABC Elementary School" .

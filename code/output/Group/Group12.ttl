@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix group: <http://www.example.com/group#> .
+group:Group rdf:type owl:Class;
+    rdfs:label "Group"@en;
+    rdfs:comment "A multiple of people or things considered together"@en.group:member rdf:type owl:ObjectProperty;
+    rdfs:label "has member"@en;
+    rdfs:comment "The member of a group"@en;
+    rdfs:domain group:Group;
+    rdfs:range group:Person.  group:size rdf:type owl:DatatypeProperty;
+    rdfs:label "has size"@en;
+    rdfs:comment "The size of a group"@en;
+    rdfs:domain group:Group;
+    rdfs:range xsd:int.group:Person rdf:type owl:Class;
+    rdfs:label "Person"@en;
+    rdfs:comment "A person who can be a member of a group"@en.group:name rdf:type owl:DatatypeProperty;
+    rdfs:label "has name"@en;
+    rdfs:comment "The name of a person or a group"@en;
+    rdfs:domain owl:Thing;
+    rdfs:range xsd:string.group:age rdf:type owl:DatatypeProperty;
+    rdfs:label "has age"@en;
+    rdfs:comment "The age of a person"@en;
+    rdfs:domain group:Person;
+    rdfs:range xsd:int.group:purpose rdf:type owl:DatatypeProperty;
+    rdfs:label "has purpose"@en;
+    rdfs:comment "The purpose of a group"@en;
+    rdfs:domain group:Group;
+    rdfs:range xsd:string.

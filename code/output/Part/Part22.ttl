@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org#> .
+:Part a owl:Class ;
+      rdfs:label "Part"@en ;
+      rdfs:comment "Represents a part of something"@en .
+:isPartOf a owl:ObjectProperty ;
+          rdfs:domain :Part ;
+          rdfs:range :Whole ;
+          rdfs:label "is part of"@en ;
+          rdfs:comment "Connects a part to its whole"@en .
+:hasPart a owl:ObjectProperty ;
+         rdfs:domain :Whole ;
+         rdfs:range :Part ;
+         rdfs:label "has part"@en ;
+         rdfs:comment "Connects a whole to its parts"@en .
+         :Whole a owl:Class ;
+       rdfs:label "Whole"@en ;
+       rdfs:comment "Represents a whole that is made up of parts"@en .

@@ -1,0 +1,7 @@
+@prefix : <http://example.org/> .
+:City a :Place .
+:Country a :Place .
+:City  :hasName "San Francisco"^^xsd:string ;
+  :hasPopulation "883305"^^xsd:integer .
+:Country  :hasName "United States"^^xsd:string;
+  :hasPopulation "331002651"^^xsd:integer .

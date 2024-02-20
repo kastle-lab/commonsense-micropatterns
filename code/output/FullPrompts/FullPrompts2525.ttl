@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://www.example.org/ontology#> .
+# Class Definitionsont:Business rdf:type rdfs:Class ;
+    rdfs:label "Business"@en ;
+    rdfs:comment "A commercial entity engaged in economic activity"@en .
+ont:ContactInfo rdf:type rdfs:Class ;
+    rdfs:label "Contact Information"@en ;
+    rdfs:comment "Information used to reach a Business"@en .
+ont:Address rdf:type rdfs:Class ;
+    rdfs:label "Address"@en ;
+    rdfs:comment "Physical location of a Business"@en .
+# Property Definitionsont:hasName rdf:type rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "The name of the Business"@en ;
+    rdfs:domain ont:Business ;
+    rdfs:range xsd:string .
+ont:hasContactInfo rdf:type rdf:Property ;
+    rdfs:label "has contact info"@en ;
+    rdfs:comment "The contact information of the Business"@en ;
+    rdfs:domain ont:Business ;
+    rdfs:range ont:ContactInfo .
+ont:hasAddress rdf:type rdf:Property ;
+    rdfs:label "has address"@en ;
+    rdfs:comment "The address of the Business"@en ;
+    rdfs:domain ont:Business ;
+    rdfs:range ont:Address .
+# Individual Instancesont:business1 rdf:type ont:Business ;
+    ont:hasName "Example Business Inc." ;
+    ont:hasContactInfo ont:contact1 ;
+    ont:hasAddress ont:address1 .
+ont:contact1 rdf:type ont:ContactInfo ;
+    rdfs:label "+1234567890" .
+ont:address1 rdf:type ont:Address ;
+    rdfs:label "123 Main St, City, Country" .

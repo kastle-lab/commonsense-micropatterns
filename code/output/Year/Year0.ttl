@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix year: <http://www.example.org/year#> .
+# Class definitionsyear:Year rdf:type rdfs:Class ;
+rdfs:label "Year"@en ;
+rdfs:comment "A year in the Gregorian calendar"@en .
+# Property definitionsyear:hasMonth rdf:type rdf:Property ;
+rdfs:label "has month"@en ;
+rdfs:comment "The year has these months"@en ;
+rdfs:domain year:Year ;
+rdfs:range xsd:string .
+year:hasQuarter rdf:type rdf:Property ;
+rdfs:label "has quarter"@en ;
+rdfs:comment "The year has these quarters"@en ;
+rdfs:domain year:Year ;
+rdfs:range xsd:string .
+year:isLeapYear rdf:type rdf:Property ;
+rdfs:label "is leap year"@en ;
+rdfs:comment "Indicates whether the year is a leap year or not"@en ;
+rdfs:domain year:Year ;
+rdfs:range xsd:boolean .
+year:inDecade rdf:type rdf:Property ;
+rdfs:label "in decade"@en ;
+rdfs:comment "Indicates which decade the year falls in"@en ;
+rdfs:domain year:Year ;
+rdfs:range xsd:string .
+year:inCentury rdf:type rdf:Property ;
+rdfs:label "in century"@en ;
+rdfs:comment "Indicates which century the year falls in"@en ;
+rdfs:domain year:Year ;
+rdfs:range xsd:string .

@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/ontology#> .
+:Line rdf:type rdfs:Class .
+:hasStartPoint rdf:type rdf:Property ;
+    rdfs:domain :Line ;
+    rdfs:range :Point .
+:hasEndPoint rdf:type rdf:Property ;
+    rdfs:domain :Line ;
+    rdfs:range :Point .
+:Point rdf:type rdfs:Class ;
+    rdfs:subClassOf rdfs:Datatype ;
+    rdfs:subClassOf [        rdf:type rdfs:Datatype ;
+        rdf:onProperty :x ;
+        rdf:allValuesFrom xsd:float    ];
+    rdfs:subClassOf [        rdf:type rdfs:Datatype ;
+        rdf:onProperty :y ;
+        rdf:allValuesFrom xsd:float    ].:x rdf:type rdf:Property ;
+    rdfs:domain :Point ;
+    rdfs:range xsd:float .
+:y rdf:type rdf:Property ;
+    rdfs:domain :Point ;
+    rdfs:range xsd:float .

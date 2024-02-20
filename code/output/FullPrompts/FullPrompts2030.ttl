@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix car: <http://www.example.org/car#> .
+car:    a owl:Ontology ;
+    rdfs:comment "Ontology of the Car concept"^^xsd:string ;
+    rdfs:label "Car ontology"^^xsd:string .
+car:Car    a owl:Class ;
+    rdfs:comment "The class of Cars"^^xsd:string ;
+    rdfs:label "Car"^^xsd:string .
+car:hasModel    a owl:DatatypeProperty ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:string ;
+    rdfs:label "has model"^^xsd:string ;
+    rdfs:comment "The car model"^^xsd:string .
+car:hasColor    a owl:DatatypeProperty ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:string ;
+    rdfs:label "has color"^^xsd:string ;
+    rdfs:comment "The car color"^^xsd:string .
+car:hasManufacturer    a owl:DatatypeProperty ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:string ;
+    rdfs:label "has manufacturer"^^xsd:string ;
+    rdfs:comment "The car manufacturer"^^xsd:string .
+car:hasRegistrationYear    a owl:DatatypeProperty ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has registration year"^^xsd:string ;
+    rdfs:comment "The car registration year"^^xsd:string .

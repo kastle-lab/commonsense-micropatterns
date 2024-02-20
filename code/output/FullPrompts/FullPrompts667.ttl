@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.geonames.org/ontology#> .
+geo:Place rdf:type rdfs:Class .
+geo:city rdf:type geo:Place ;
+    rdfs:label "City"@en .
+geo:country rdf:type geo:Place ;
+    rdfs:label "Country"@en .
+geo:continent rdf:type geo:Place ;
+    rdfs:label "Continent"@en .
+geo:region rdf:type geo:Place ;
+    rdfs:label "Region"@en .
+geo:hasPopulation rdf:type rdf:Property ;
+    rdfs:domain geo:Place ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has population"@en .
+geo:hasArea rdf:type rdf:Property ;
+    rdfs:domain geo:Place ;
+    rdfs:range xsd:float ;
+    rdfs:label "has area"@en .
+geo:isLocatedIn rdf:type rdf:Property ;
+    rdfs:domain geo:Place ;
+    rdfs:range geo:Place ;
+    rdfs:label "is located in"@en .
+geo:hasName rdf:type rdf:Property ;
+    rdfs:domain geo:Place ;
+    rdfs:range xsd:string ;
+    rdfs:label "has name"@en .

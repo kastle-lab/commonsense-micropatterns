@@ -1,0 +1,12 @@
+@prefix : <http://example.org/> .
+:Community a owl:Class .
+:name a owl:DatatypeProperty ;
+     rdfs:domain :Community ;
+     rdfs:range xsd:string .
+    :description a owl:DatatypeProperty ;
+     rdfs:domain :Community ;
+     rdfs:range xsd:string .
+:hasMember a owl:ObjectProperty ;
+     rdfs:domain :Community ;
+     rdfs:range :Person .
+:Person a owl:Class .

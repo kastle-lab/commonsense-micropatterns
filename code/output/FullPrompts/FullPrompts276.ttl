@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com#> .
+ex:Day a rdfs:Class .
+ex:someDay a ex:Day ;
+    ex:hasName "Monday"^^xsd:string ;
+    ex:isPartOfWeek ex:someWeek .

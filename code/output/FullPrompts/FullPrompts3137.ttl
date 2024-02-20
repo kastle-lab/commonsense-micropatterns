@@ -1,0 +1,10 @@
+@prefix : <http://example.org/ontology#> .
+:BarackObama a :Person, :President ;
+  :hasFirstName "Barack" ;
+  :hasLastName "Obama" ;
+  :termStart "2009" ;
+  :termEnd "2017" .
+:President a owl:Class ;
+  rdfs:subClassOf :Person ;
+  :termStart xsd:date ;
+  :termEnd xsd:date .

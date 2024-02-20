@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix research: <http://example.org/research#> .
+research:Research a rdfs:Class ;
+  rdfs:label "Research"@en ;
+  rdfs:comment "Represents a Research activity or project"@en .
+research:researchTopic a rdf:Property ;
+  rdfs:label "research topic"@en ;
+  rdfs:comment "Defines the topic of a research."@en ;
+  rdfs:domain research:Research ;
+  rdfs:range xsd:string .
+research:researcher a rdf:Property ;
+  rdfs:label "researcher"@en ;
+  rdfs:comment "Defines the researcher involved in a research."@en ;
+  rdfs:domain research:Research ;
+  rdfs:range xsd:string .
+research:publication a rdf:Property ;
+  rdfs:label "publication"@en ;
+  rdfs:comment "Defines the research publication, if any."@en ;
+  rdfs:domain research:Research ;
+  rdfs:range xsd:string .
+research:funding a rdf:Property ;
+  rdfs:label "funding"@en ;
+  rdfs:comment "Defines the funding source for a research."@en ;
+  rdfs:domain research:Research ;
+  rdfs:range xsd:string .
+research:institution a rdf:Property ;
+  rdfs:label "institution"@en ;
+  rdfs:comment "Defines the institution hosting the research."@en ;
+  rdfs:domain research:Research ;
+  rdfs:range xsd:string .
+research:Researcher a rdfs:Class ;
+  rdfs:label "Researcher"@en ;
+  rdfs:comment "Represents a person who conducts research"@en .
+research:Institution a rdfs:Class ;
+  rdfs:label "Institution"@en ;
+  rdfs:comment "Represents an educational or research institution"@en .
+research:Publication a rdfs:Class ;
+  rdfs:label "Publication"@en ;
+  rdfs:comment "Represents a document or book where research findings are published"@en .
+research:Funding a rdfs:Class ;
+  rdfs:label "Funding"@en ;
+  rdfs:comment "Represents financial support for a research"@en .
+research:Topic a rdfs:Class ;
+  rdfs:label "Topic"@en ;
+  rdfs:comment "Represents the subject area of a research"@en .

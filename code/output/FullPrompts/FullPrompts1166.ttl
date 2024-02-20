@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Water rdf:type rdfs:Class ;
+rdfs:label "Water"@en ;
+rdfs:comment "H2O, a vital and common substance on Earth"@en ;
+rdfs:subClassOf ex:Substance .
+ex:hasTemperature rdf:type rdf:Property ;
+rdfs:domain ex:Water ;
+rdfs:range xsd:float ;
+rdfs:label "has temperature"@en ;
+rdfs:comment "The property that holds the temperature of water"@en .
+ex:isPotable rdf:type rdf:Property ;
+rdfs:domain ex:Water ;
+rdfs:range xsd:boolean ;
+rdfs:label "is potable"@en ;
+rdfs:comment "The property that indicates if water is safe to drink"@en .
+ex:WaterSource rdf:type rdfs:Class ;
+rdfs:label "Water source"@en ;
+rdfs:comment "A source from which water can be obtained"@en ;
+rdfs:subClassOf ex:Location .
+ex:isSourceOf rdf:type rdf:Property ;
+rdfs:domain ex:WaterSource ;
+rdfs:range ex:Water ;
+rdfs:label "is source of"@en ;
+rdfs:comment "The property that indicates a location is a source of water"@en .

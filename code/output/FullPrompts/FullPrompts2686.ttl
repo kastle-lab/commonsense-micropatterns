@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+:Head a owl:Class ;
+    rdfs:label "Head" ;
+    rdfs:comment "A class representing a head" .
+:isPartOfBody a rdf:Property ;
+    rdfs:label "is part of body" ;
+    rdfs:comment "A property indicating that something is a part of the body" ;
+    rdfs:domain :Head ;
+    rdfs:range :Body .
+:hasBrain a rdf:Property ;
+    rdfs:label "has brain" ;
+    rdfs:comment "A property indicating that a head has a brain" ;
+    rdfs:domain :Head ;
+    rdfs:range :Brain .
+:hasEars a rdf:Property ;
+    rdfs:label "has ears" ;
+    rdfs:comment "A property indicating that a head has ears" ;
+    rdfs:domain :Head ;
+    rdfs:range :Ears .
+:Brain a owl:Class ;
+    rdfs:label "Brain" ;
+    rdfs:comment "A class representing a brain" .
+:Ears a owl:Class ;
+    rdfs:label "Ears" ;
+    rdfs:comment "A class representing ears" .
+:Body a owl:Class ;
+    rdfs:label "Body" ;
+    rdfs:comment "A class representing a body" .

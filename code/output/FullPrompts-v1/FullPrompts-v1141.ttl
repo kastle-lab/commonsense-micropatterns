@@ -1,0 +1,26 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.org/day#> .
+day:Day a rdfs:Class ;
+    rdfs:label "Day"@en ;
+    rdfs:comment "Class representing a day"@en .
+day:hasDate a rdfs:Property ;
+    rdfs:label "has date"@en ;
+    rdfs:domain day:Day ;
+    rdfs:range xsd:date ;
+    rdfs:comment "Property representing the date of the day"@en .
+day:hasName a rdfs:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:domain day:Day ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Property representing the name of the day"@en .
+day:hasDayOfWeek a rdfs:Property ;
+    rdfs:label "has day of week"@en ;
+    rdfs:domain day:Day ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Property representing the day of the week"@en .
+day:hasTemperature a rdfs:Property ;
+    rdfs:label "has temperature"@en ;
+    rdfs:domain day:Day ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Property representing the temperature of the day"@en .

@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/city#> .
+ex:City rdf:type owl:Class .
+ex:name rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:City ;
+    rdfs:range xsd:string .
+    ex:population rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:City ;
+    rdfs:range xsd:nonNegativeInteger .
+ ex:country rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:City ;
+    rdfs:range ex:Country .
+ex:Country rdf:type owl:Class .

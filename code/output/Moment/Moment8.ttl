@@ -1,0 +1,45 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix moment: <http://example.org/moments/> .
+#Class definitionsmoment:Moment     a rdfs:Class ;
+    rdfs:label "Moment" ;
+    rdfs:comment "A distinct portion of time" .
+moment:PersonalMoment     a rdfs:Class ;
+    rdfs:label "Personal Moment" ;
+    rdfs:subClassOf moment:Moment ;
+    rdfs:comment "A moment of personal significance" .
+moment:HistoricalMoment     a rdfs:Class ;
+    rdfs:label "Historical Moment" ;
+    rdfs:subClassOf moment:Moment ;
+    rdfs:comment "A moment of historical significance" .
+#Property definitionsmoment:hasTime     a rdf:Property ;
+    rdfs:domain moment:Moment ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has time" ;
+    rdfs:comment "The specific time associated with a moment" .
+moment:hasDuration     a rdf:Property ;
+    rdfs:domain moment:Moment ;
+    rdfs:range xsd:duration ;
+    rdfs:label "has duration" ;
+    rdfs:comment "The duration of a moment" .
+ moment:hasDescription     a rdf:Property ;
+    rdfs:domain moment:Moment ;
+    rdfs:range xsd:string ;
+    rdfs:label "has description" ;
+    rdfs:comment "A textual description of a moment" .
+ moment:hasLocation     a rdf:Property ;
+    rdfs:domain moment:Moment ;
+    rdfs:range xsd:string ;
+    rdfs:label "has location" ;
+    rdfs:comment "Location where a moment took place" .
+ moment:associatedWith     a rdf:Property ;
+    rdfs:domain moment:PersonalMoment ;
+    rdfs:range xsd:string ;
+    rdfs:label "associated with" ;
+    rdfs:comment "A person, entity or event associated with a personal moment" .
+ moment:hasSignificance     a rdf:Property ;
+    rdfs:domain moment:HistoricalMoment ;
+    rdfs:range xsd:string ;
+    rdfs:label "has significance" ;
+    rdfs:comment "Significance of a historical moment" .

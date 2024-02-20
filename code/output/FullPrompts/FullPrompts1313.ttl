@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix work: <http://www.example.org/ontology/work#> .
+work:Work rdf:type rdfs:Class ;
+          rdfs:label "Work"@en ;
+          rdfs:comment "Universal class for all kind of work activities"@en .
+work:Employee rdf:type rdfs:Class ;
+               rdfs:subClassOf work:Work ;
+             rdfs:label "Employee"@en ;
+             rdfs:comment "An individual who performs work for an employer"@en .
+work:Employer rdf:type rdfs:Class ;
+               rdfs:subClassOf work:Work ;
+             rdfs:label "Employer"@en ;
+             rdfs:comment "An entity that hires employees to perform work"@en .
+work:hasEmployee rdf:type rdf:Property ;
+                   rdfs:label "has employee"@en ;
+                 rdfs:comment "A relationship between an employer and its employee"@en ;
+                 rdfs:domain work:Employer ;
+                 rdfs:range work:Employee .
+work:performWork rdf:type rdf:Property ;
+                   rdfs:label "performs work"@en ;
+                 rdfs:comment "A relationship indicating the employee performs work for the employer"@en ;
+                 rdfs:domain work:Employee ;
+                 rdfs:range work:Employer .
+work:salary rdf:type rdf:Property ;
+              rdfs:label "salary"@en ;
+            rdfs:comment "The remuneration an employee receives for their work"@en ;
+            rdfs:domain work:Employee ;
+            rdf:range xsd:decimal .

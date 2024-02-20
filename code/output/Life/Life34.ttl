@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xl: <http://www.example.org/ns/life#> .
+# Class Declarationsxl:Life a rdfs:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:comment "A universal phenomena in terms of biological existence."@en .
+xl:AnimalLife a rdfs:Class ;
+    rdfs:label "Animal Life"@en ;
+    rdfs:comment "A classification of life that includes complex multi-cellular organisms that have a well defined shape and usually limited growth, can move voluntarily, actively acquire food and digest it internally, and have sensory and nervous systems that allow them to respond rapidly to stimuli."@en ;
+    rdfs:subClassOf xl:Life .
+xl:PlantLife a rdfs:Class ;
+    rdfs:label "Plant Life"@en ;
+    rdfs:comment "A classification of life that comprises multicellular organisms predominantly photosynthetic eukaryotes of the kingdom Plantae. They form the clade Viridiplantae that includes the flowering plants, conifers and other gymnosperms, ferns and their allies, hornworts, liverworts, mosses and the green algae, and excludes the red and brown algae."@en ;
+    rdfs:subClassOf xl:Life .
+# Property Declarationsxl:hasLifeSpan a rdf:Property ;
+    rdfs:label "has Life Span"@en ;
+    rdfs:comment "A property showing the average duration of life of a species."@en ;
+    rdfs:domain xl:Life ;
+    rdfs:range xsd:integer .
+xl:hasHabitat a rdf:Property ;
+    rdfs:label "has Habitat"@en ;
+    rdfs:comment "A property pointing to the natural home or environment of an animal, plant, or other organism."@en ;
+    rdfs:domain xl:Life .

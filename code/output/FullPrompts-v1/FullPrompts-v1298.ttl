@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://example.com/life#> .
+life:Life a rdfs:Class;
+      rdfs:comment "Base class for any form of life"@en;
+      rdfs:label "Life"@en .
+life:Human a rdfs:Class;
+      rdfs:label "Human"@en ;
+      rdfs:subClassOf life:Life .
+life:Animal a rdfs:Class ;
+      rdfs:label "Animal"@en ;
+      rdfs:subClassOf life:Life .
+life:Plant a rdfs:Class ;
+      rdfs:label "Plant"@en ;
+      rdfs:subClassOf life:Life .
+life:Microorganism a rdfs:Class ;
+      rdfs:label "Microorganism"@en ;
+      rdfs:subClassOf life:Life .
+life:hasLifeSpan a rdf:Property ;
+      rdfs:domain life:Life ;
+      rdfs:range xsd:decimal ;
+      rdfs:label "has life span"@en ;
+      rdfs:comment "Denotes the typical lifespan of a life form"@en .
+life:isCarnivorous a rdf:Property ;
+      rdfs:domain life:Animal ;
+      rdfs:range xsd:boolean ;
+      rdfs:label "is carnivorous"@en ;
+      rdfs:comment "Denotes if an animal is carnivorous"@en .
+life:isHerbivorous a rdf:Property ;
+      rdfs:domain life:Animal ;
+      rdfs:range xsd:boolean ;
+      rdfs:label "is herbivorous"@en ;
+      rdfs:comment "Denotes if an animal is herbivorous"@en .
+life:canPhotosynthesize a rdf:Property ;
+      rdfs:domain life:Plant ;
+      rdfs:range xsd:boolean ;
+      rdfs:label "can photosynthesize"@en ;
+      rdfs:comment "Denotes if a plant can photosynthesize"@en .

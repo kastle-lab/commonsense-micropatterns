@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Company a rdfs:Class ;
+    rdfs:label "Company" ;
+    rdfs:comment "This represents a Company or a business entity" .
+ex:hasName a rdf:Property ;
+    rdfs:label "hasName" ;
+    rdfs:comment "Represents name of the Company" ;
+    rdfs:domain ex:Company ;
+    rdfs:range xsd:string .
+ex:hasCEO a rdf:Property ;
+    rdfs:label "hasCEO" ;
+    rdfs:comment "Represents CEO of the Company" ;
+    rdfs:domain ex:Company ;
+    rdfs:range ex:Person .
+ex:hasEmployeeCount a rdf:Property ;
+    rdfs:label "hasEmployeeCount" ;
+    rdfs:domain ex:Company ;
+    rdfs:range xsd:integer .
+ex:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "This represent a Person, the CEO of a Company in this context" .
+ex:hasFullName a rdf:Property ;
+    rdfs:label "hasFullName" ;
+    rdfs:comment "Represents full name of the Person, the CEO in this context" ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string .

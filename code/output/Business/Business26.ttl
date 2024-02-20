@@ -1,0 +1,23 @@
+@prefix ex: <http://example.com/business#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:business    a rdfs:Class ;
+    rdfs:comment "The class of all businesses" .
+    ex:hasName    a rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain ex:business ;
+    rdfs:comment "The name of a business" .
+ex:hasOwner    a rdf:Property ;
+    rdfs:range ex:Owner ;
+    rdfs:domain ex:business ;
+    rdfs:comment "The owner of a business" .
+        ex:Owner     a rdfs:Class ;
+    rdfs:comment "The class of all business owners" .
+    ex:ownerName    a rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain ex:Owner ;
+    rdfs:comment "The name of a business owner" .
+ex:Business1    a ex:business ;
+    ex:hasName "Example Business" ;
+    ex:hasOwner ex:Owner1 .
+ex:Owner1    a ex:Owner ;
+    ex:ownerName "John Doe" .

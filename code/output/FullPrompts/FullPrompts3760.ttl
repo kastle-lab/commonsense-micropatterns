@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix morning: <http://www.example.org/morning#> .
+morning:    rdf:type rdfs:Class ;
+    rdfs:label "Morning" ;
+    rdfs:comment "The first part of the day, following night and before afternoon" .
+morning:breakfast    rdf:type rdfs:Class ;
+    rdfs:label "Breakfast" ;
+    rdfs:comment "The first meal of the day, often eaten in the morning" ;
+    rdfs:subClassOf morning: .
+morning:sunrise    rdf:type time:Instant ;
+    rdfs:label "Sunrise" ;
+    rdfs:comment "The instant at which the upper edge of the Sun becomes visible over the eastern horizon, in the morning" ;
+    rdfs:subClassOf morning: .
+ morning:early_bird    rdf:type rdfs:Class ;
+    rdfs:label "Early bird" ;
+    rdfs:comment "A person who usually gets up early in the morning and goes to bed early in the evening" ;
+    rdfs:subClassOf morning: .
+morning:alarmClock    rdf:type rdfs:Class ;
+    rdfs:label "Alarm Clock" ;
+    rdfs:comment "A clock with a facility for sounding at a time set in advance, used to wake someone up" ;
+    rdfs:subClassOf morning: .
+morning: isPartOfDay    rdf:type rdf:Property ;
+    rdfs:label "is part of day" ;
+    rdfs:domain morning: ;
+    rdfs:range xsd:string .

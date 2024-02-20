@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix force: <http://www.example.org/force#> .
+force: physicalQuantity  rdf:type rdfs:Class ;
+  rdfs:comment "A physical quantity that can be quantified."@en .
+force: Force  rdf:type rdfs:Class ;
+  rdfs:subClassOf force:physicalQuantity ;
+  rdfs:comment "A force is a physical quantity which causes or tends to cause motion or changes the state of an object."@en .
+force:hasMagnitude  rdf:type rdf:Property ;
+  rdfs:domain force:Force ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "The magnitude of a force."@en .
+force:hasDirection  rdf:type rdf:Property ;
+  rdfs:domain force:Force ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The direction in which the force is applied."@en .
+force:hasUnit  rdf:type rdf:Property ;
+  rdfs:domain force:Force ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The unit in which the force is being measured."@en .
+force:actsOn  rdf:type rdf:Property ;
+  rdfs:domain force:Force ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "The object on which the force acts or is applied."@en .

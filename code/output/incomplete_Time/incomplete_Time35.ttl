@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.example.org/time#> .
+time:Time    rdf:type rdfs:Class ;
+    rdfs:label "Time" ;
+    rdfs:comment "Representation of time which can be broken up into days, hours, minutes or seconds" .
+time:hasUnit    rdf:type rdf:Property ;
+    rdfs:label "hasUnit" ;
+    rdfs:range time:TimeUnit ;
+    rdfs:domain time:Time ;
+    rdfs:comment "Property to represent the unit of time for a specific interval" .
+time:TimeUnit    rdf:type rdfs:Class ;
+    rdfs:label "Time Unit" ;
+    rdfs:subClassOf time:Time ;
+    rdfs:comment "Units used to represent time e.g. days, hours, minutes and seconds" .
+time:hour    rdf:type time:TimeUnit ;
+    rdfs:label "hour" .
+time:minute    rdf:type time:TimeUnit ;
+    rdfs:label "minute" .
+time:second    rdf:type time:TimeUnit ;
+    rdfs:label "second" .
+time:day    rdf:type time:TimeUnit ;
+    rdfs:label "day" .
+time:quantity    rdf:type rdf:Property ;
+    rdfs:label "quantity" ;
+    rdfs:domain time:Time ;
+    rdfs:range xsd:int ;
+    rdfs:comment "Property to denote the number quantity for a time entity" .

@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/#> .
+ex:Friend a rdfs:Class ;
+  rdfs:comment "Class representing a Friend"^^xsd:string .
+ex:hasFirstName a rdfs:Property ;
+  rdfs:domain ex:Friend ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The first name of the Friend"^^xsd:string .
+ex:hasLastName a rdfs:Property ;
+  rdfs:domain ex:Friend ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The last name of the Friend"^^xsd:string .
+ex:hasAge a rdfs:Property ;
+  rdfs:domain ex:Friend ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The age of the Friend"^^xsd:string .
+ex:knows a rdfs:Property ;
+  rdfs:domain ex:Friend ;
+  rdfs:range ex:Friend ;
+  rdfs:comment "Relationship between two friends"^^xsd:string .

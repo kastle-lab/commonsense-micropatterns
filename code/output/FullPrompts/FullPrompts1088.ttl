@@ -1,0 +1,10 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix book: <http://example.com/book/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+book:1 rdf:type book:Story ;
+  dc:title "A Tale of Two Cities" ;
+  dc:creator "Charles Dickens" .
+book:2 rdf:type book:Story ;
+  dc:title "Pride and Prejudice" ;
+  dc:creator "Jane Austen" .

@@ -1,0 +1,7 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.example.org/TeamOntology#> .
+:Team rdf:type rdf:Class .
+:hasMember rdf:type rdf:Property ;
+    rdf:domain :Team ;
+    rdf:range :Person .
+    :Person rdf:type rdf:Class .

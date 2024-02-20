@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/uni-ontology#> .
+:<Student> rdf:type rdf:Class .
+ :<Student1> rdf:type :<Student> ;
+:hasName "John Doe"^^xsd:string ;
+ :hasAge "21"^^xsd:integer ;
+:studiesIn "Computer Science"^^xsd:string ;
+:memberOf :<ComputerScienceClub> .
+:<Student2> rdf:type :<Student> ;
+:hasName "Jane Doe"^^xsd:string ;
+ :hasAge "22"^^xsd:integer ;
+:studiesIn "Biology"^^xsd:string ;
+:memberOf :<BiologyClub> .
+:<ComputerScienceClub> rdf:type rdf:Class .
+ :<BiologyClub> rdf:type rdf:Class .

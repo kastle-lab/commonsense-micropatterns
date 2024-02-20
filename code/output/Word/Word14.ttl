@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix word: <http://example.org/word#> .
+word:Word rdf:type rdfs:Class ;
+rdfs:comment "This represents a word" .
+word:hasSpelling rdf:type rdf:Property ;
+    rdfs:comment "The spelling of a word" ;
+    rdfs:range xsd:string ;
+    rdfs:domain word:Word .
+word:hasPartOfSpeech rdf:type rdf:Property ;
+    rdfs:comment "The part of speech of a word" ;
+    rdfs:domain word:Word .
+word:hasDefinition rdf:type rdf:Property ;
+    rdfs:comment "The definition of a word" ;
+    rdfs:range xsd:string ;
+    rdfs:domain word:Word .
+word:hasSynonym rdf:type rdf:Property ;
+    rdfs:comment "The synonym of a word" ;
+    rdfs:range word:Word ;
+    rdfs:domain word:Word .
+word:hasAntonym rdf:type rdf:Property ;
+    rdfs:comment "The antonym of a word" ;
+    rdfs:range word:Word ;
+    rdfs:domain word:Word .
+word:hasOrigin rdf:type rdf:Property ;
+    rdfs:comment "The origin of a word" ;
+    rdfs:range xsd:string ;
+    rdfs:domain word:Word .
+word:Verb rdf:type rdfs:Class ;
+    rdfs:comment "This represents a verb, which is a type of word" ;
+    rdfs:subClassOf word:Word .
+word:Noun rdf:type rdfs:Class ;
+    rdfs:comment "This represents a noun, which is a type of word" ;
+    rdfs:subClassOf word:Word .
+word:Adjective rdf:type rdfs:Class ;
+    rdfs:comment "This represents an adjective, which is a type of word" ;
+    rdfs:subClassOf word:Word .

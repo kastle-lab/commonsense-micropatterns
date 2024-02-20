@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix war: <http://example.org/war#> .
+war:War rdf:type rdfs:Class .
+# Properties of a Warwar:hasBelligerent rdf:type rdf:Property ;
+  rdfs:domain war:War ;
+  rdfs:range war:Belligerent .
+war:hasStartDate rdf:type rdf:Property ;
+  rdfs:domain war:War ;
+  rdfs:range xsd:date .
+war:hasEndDate rdf:type rdf:Property ;
+  rdfs:domain war:War ;
+  rdfs:range xsd:date .
+    war:hasLocation rdf:type rdf:Property ;
+  rdfs:domain war:War ;
+  rdfs:range war:Location .
+# Belligerent class and its propertieswar:Belligerent rdf:type rdfs:Class .
+war:hasName rdf:type rdf:Property ;
+  rdfs:domain war:Belligerent ;
+  rdfs:range xsd:string .
+# Location class and its propertieswar:Location rdf:type rdfs:Class .
+war:hasName rdf:type rdf:Property ;
+  rdfs:domain war:Location ;
+  rdfs:range xsd:string .
+  war:hasLatitude rdf:type rdf:Property ;
+  rdfs:domain war:Location ;
+  rdfs:range xsd:float .
+war:hasLongitude rdf:type rdf:Property ;
+  rdfs:domain war:Location ;
+  rdfs:range xsd:float .

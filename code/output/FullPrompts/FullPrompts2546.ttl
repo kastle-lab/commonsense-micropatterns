@@ -1,0 +1,42 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix issue: <http://example.org/issue#> .
+issue:Issue a owl:Class ;
+    rdfs:label "Issue"@en ;
+    rdfs:comment "A matter of concern that can be discussed, debated or responded to."@en .
+issue:description a owl:DatatypeProperty ;
+    rdfs:label "description"@en ;
+    rdfs:comment "Brief about the issue"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:string .
+issue:status a owl:ObjectProperty ;
+    rdfs:label "status"@en ;
+    rdfs:comment "Current condition of the issue"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range issue:Status .
+issue:Status a owl:Class ;
+    rdfs:label "Status"@en ;
+    rdfs:comment "Status of an issue, such as open, closed, in progress, etc."@en .
+issue:assignedTo a owl:ObjectProperty ;
+    rdfs:label "assigned to"@en ;
+    rdfs:comment "The person or team responsible for the issue"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range issue:User .
+issue:User a owl:Class ;
+    rdfs:label "User"@en ;
+    rdfs:comment "A person or team who can be assigned to an issue"@en .
+issue:id a owl:DatatypeProperty ;
+    rdfs:label "id"@en ;
+    rdfs:comment "Unique identifier of the issue"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range xsd:integer .
+issue:priority a owl:ObjectProperty ;
+    rdfs:label "priority"@en ;
+    rdfs:comment "Priority of an issue, such as low, medium, high"@en ;
+    rdfs:domain issue:Issue ;
+    rdfs:range issue:Priority .
+issue:Priority a owl:Class ;
+    rdfs:label "Priority"@en ;
+    rdfs:comment "Level of importance of an issue"@en .

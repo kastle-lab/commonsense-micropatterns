@@ -1,0 +1,44 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/day#> .
+:Day a rdfs:Class ;
+  rdfs:label "Day" ;
+  rdfs:comment "A full 24-hour cycle in terms of time" .
+:hasDayOfWeek a rdf:Property ;
+  rdfs:label "has day of week" ;
+  rdfs:comment "The specific day of a week" ;
+  rdfs:range :DayOfWeek ;
+  rdfs:domain :Day .
+:DayOfWeek a rdfs:Class ;
+  rdfs:label "Day of week" ;
+  rdfs:subClassOf :Day .
+:hasPartOfDay a rdf:Property ;
+  rdfs:label "has part of day" ;
+  rdfs:comment "The specific part of a day, such as morning, afternoon, evening, or night" ;
+  rdfs:range :PartOfDay ;
+  rdfs:domain :Day .
+:PartOfDay a rdfs:Class ;
+  rdfs:label "Part of day" ;
+  rdfs:subClassOf :Day .
+:hasDaylightHours a rdf:Property ;
+  rdfs:label "has daylight hours" ;
+  rdfs:comment "The period of a day when it is light out, from sunrise to sunset" ;
+  rdfs:range xsd:integer ;
+  rdfs:domain :Day .
+:hasTemperature a rdf:Property ;
+  rdfs:label "has temperature" ;
+  rdfs:comment "The temperature at some point during the day" ;
+  rdfs:range xsd:float ;
+  rdfs:domain :Day .
+:Monday a :DayOfWeek ;
+  rdfs:label "Monday" .
+:Tuesday a :DayOfWeek ;
+  rdfs:label "Tuesday" .
+:Morning a :PartOfDay ;
+  rdfs:label "Morning" .
+:Afternoon a :PartOfDay ;
+  rdfs:label "Afternoon" .
+:ExampleDay a :Day ;
+  :hasDayOfWeek :Monday ;
+  :hasPartOfDay :Morning ;
+  :hasDaylightHours 12 ;
+  :hasTemperature 20.5 .

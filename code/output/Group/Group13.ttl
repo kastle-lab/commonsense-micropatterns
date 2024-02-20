@@ -1,0 +1,24 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Group a owl:Class ;
+  rdfs:label "Group" .
+ex:GroupMember a owl:Class ;
+  rdfs:label "Group Member" ;
+  rdfs:subClassOf ex:Group .
+ex:member a owl:ObjectProperty ;
+  rdfs:domain ex:Group ;
+  rdfs:range ex:GroupMember ;
+  rdfs:label "has member" .
+ex:GroupLeader a owl:Class ;
+  rdfs:label "Group Leader" ;
+  rdfs:subClassOf ex:GroupMember .
+ex:leader a owl:ObjectProperty ;
+  rdfs:domain ex:Group ;
+  rdfs:range ex:GroupLeader ;
+  rdfs:label "has leader" .
+ex:groupName a owl:DatatypeProperty ;
+  rdfs:domain ex:Group ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "has name" .

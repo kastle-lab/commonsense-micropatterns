@@ -1,0 +1,13 @@
+@prefix ex: <http://example.org/> .
+ex:Point a rdfs:Class ;
+    rdfs:comment "A point in a geometric context" ;
+    rdfs:subClassOf rdfs:Resource ;
+    rdfs:label "Point" .
+ ex:hasX a rdf:Property ;
+     rdfs:domain ex:Point ;
+     rdfs:range xsd:float ;
+     rdfs:label "hasX" .
+ ex:hasY a rdf:Property ;
+     rdfs:domain ex:Point ;
+     rdfs:range xsd:float ;
+     rdfs:label "hasY" .

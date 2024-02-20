@@ -1,0 +1,14 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Class definitionex:Friend rdf:type rdfs:Class .
+# Property definitionsex:hasFriend rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Friend .
+ex:knowsSince rdf:type rdf:Property ;
+    rdfs:domain ex:Friend ;
+    rdfs:range rdf:Date .
+# Instance definitionsex:PersonA rdf:type ex:Person .
+ex:PersonB rdf:type ex:Friend .
+# Relationsex:PersonA ex:hasFriend ex:PersonB .
+ex:PersonA ex:knowsSince "2020-01-01"^^rdf:Date .

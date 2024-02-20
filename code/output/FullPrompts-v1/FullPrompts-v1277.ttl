@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ex: <http://example.org#> .
+ex:World rdf:type rdfs:Class ;
+     rdfs:label "World"@en ;
+     rdfs:comment "Concept referring to the Earth, or the sum of all planets and other objects in the universe."@en ;
+     dct:subject <http://id.loc.gov/authorities/subjects/sh85146239> ;
+     dct:spatial geo:Point .

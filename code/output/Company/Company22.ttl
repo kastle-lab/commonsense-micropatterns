@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/> .
+ex:Company rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Company"@en ;
+    rdfs:comment "A commercial institution engaged in some form of business activity."@en .
+ex:companyName rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Company ;
+    rdfs:range xsd:string ;
+    rdfs:label "company name"@en ;
+    rdfs:comment "The official, legal name of a company."@en .
+ex:hasEmployee rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Company ;
+    rdfs:range ex:Person ;
+    rdfs:label "has employee"@en ;
+    rdfs:comment "Connects a company to a person who works for that company."@en .
+ex:isLocatedIn rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Company ;
+    rdfs:range ex:Location ;
+    rdfs:label "is located in"@en ;
+    rdfs:comment "Connects a company to the location of its headquarters or main business address."@en .

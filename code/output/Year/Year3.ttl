@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix year: <http://example.org/ontology/year#> .
+year:Year a rdfs:Class ;
+  rdfs:label "Year"@en ;
+  rdfs:comment "Class representing a year in the Gregorian calendar"@en .
+year:hasMonth a rdf:Property ;
+  rdfs:label "has month"@en ;
+  rdfs:comment "Property indicating a month of a year"@en ;
+  rdfs:domain year:Year ;
+  rdfs:range year:Month .
+year:Month a rdfs:Class ;
+  rdfs:label "Month"@en ;
+  rdfs:comment "Class representing a month in a year"@en .
+  year:hasDay a rdf:Property ;
+  rdfs:label "has day"@en ;
+  rdfs:comment "Property indicating a day of a month"@en ;
+  rdfs:domain year:Month ;
+  rdfs:range xsd:gDay .
+year:isLeap a rdf:Property ;
+  rdfs:label "is leap"@en ;
+  rdfs:comment "Property indicating whether a year is a leap year"@en ;
+  rdfs:domain year:Year ;
+  rdfs:range xsd:boolean .
+  year:Day a rdfs:Class ;
+  rdfs:label "Day"@en ;
+  rdfs:comment "Class representing a day in a month"@en .

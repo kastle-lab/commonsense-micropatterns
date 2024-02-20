@@ -1,0 +1,33 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@base <http://example.org/TimeOntology/> .
+<#TimeInstant> a owl:Class ;
+    rdfs:subClassOf time:TemporalEntity ;
+    rdfs:label "Time Instant" ;
+    rdfs:comment "A specific point in time."@en .
+<#TimeInterval> a owl:Class ;
+    rdfs:subClassOf time:TemporalEntity ;
+    rdfs:label "Time Interval" ;
+    rdfs:comment "A duration of time."@en .
+<#hasBeginning> a owl:ObjectProperty ;
+    rdfs:domain <#TimeInterval> ;
+    rdfs:range <#TimeInstant> ;
+    rdfs:label "has beginning" ;
+    rdfs:comment "An interval of time has a beginning instant."@en .
+<#hasEnd> a owl:ObjectProperty ;
+    rdfs:domain <#TimeInterval> ;
+    rdfs:range <#TimeInstant> ;
+    rdfs:label "has end" ;
+    rdfs:comment "An interval of time has an end instant."@en .
+<#inDateTime> a owl:DatatypeProperty ;
+    rdfs:domain <#TimeInstant> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "in date time" ;
+    rdfs:comment "A time instant in date time representation."@en .
+<#duration> a owl:DatatypeProperty ;
+    rdfs:domain <#TimeInterval> ;
+    rdfs:range xsd:duration ;
+    rdfs:label "duration" ;
+    rdfs:comment "The duration of a time interval."@en .

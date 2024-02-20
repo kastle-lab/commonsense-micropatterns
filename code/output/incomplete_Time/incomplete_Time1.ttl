@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.timeontology.org#> .
+time:Time rdfs:subClassOf rdfs:Resource ;
+    rdfs:comment "The class of times or durations."@en .
+time:Instant rdfs:subClassOf time:Time ;
+    rdfs:comment "A point in time."@en .
+time:Interval rdfs:subClassOf time:Time ;
+    rdfs:comment "An extent of time determined by two instants."@en .
+    time:DateTime rdfs:subClassOf time:Instant ;
+    rdfs:comment "An instant of time that is connected with a calendar system."@en .
+time:Duration rdfs:subClassOf time:Time ;
+    rdfs:comment "A duration or length of time."@en .
+time:inDateTime rdfs:domain time:Time ;
+    rdfs:range time:DateTime ;
+    rdf:type rdf:Property ;
+    rdfs:comment "Property connecting time with a DateTime."@en .
+    time:inXSDDateTime rdfs:domain time:DateTime ;
+    rdfs:range xsd:dateTime ;
+    rdf:type rdf:Property ;
+    rdfs:comment "Property connecting DateTime with xsd:dateTime."@en .
+time:hasBeginning rdfs:domain time:Interval ;
+    rdfs:range time:Instant ;
+    rdf:type rdf:Property ;
+    rdfs:comment "Property indicating the beginning instant of a time interval."@en .
+time:hasEnd rdfs:domain time:Interval ;
+    rdfs:range time:Instant ;
+    rdf:type rdf:Property ;
+    rdfs:comment "Property indicating the ending instant of a time interval."@en .
+time:hasDuration rdfs:domain time:Interval ;
+    rdfs:range time:Duration ;
+    rdf:type rdf:Property ;
+    rdfs:comment "Property indicating the duration of a time interval."@en .
+time:isFollowedBy rdfs:domain time:Instant ;
+    rdfs:range time:Instant ;
+    rdf:type rdf:Property ;
+    owl:inverseOf time:isPrecededBy ;
+    rdfs:comment "Property indicating one instant is followed by another."@en .
+time:isPrecededBy rdfs:domain time:Instant ;
+    rdfs:range time:Instant ;
+    rdf:type rdf:Property ;
+    owl:inverseOf time:isFollowedBy ;
+    rdfs:comment "Property indicating one instant is preceded by another."@en .

@@ -1,0 +1,7 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:World a owl:Class ;
+    rdfs:label "World" ;
+    rdfs:comment "The general physical environment and life of humanity" ;
+    rdfs:subClassOf ex:Environment .

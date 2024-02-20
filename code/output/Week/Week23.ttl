@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix example: <http://www.example.org/> .
+example:Week a rdfs:Class ;
+    rdfs:subClassOf time:TemporalUnit .
+example:Monday a time:DayOfWeek ;
+    rdfs:label "Monday" ;
+    time:dayOfWeekInWeek 1 ;
+    time:dayOfWeekInMonth 1 .
+#... repeat above block for other days of the week...example:Week1 a example:Week ;
+    time:year "2022"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+    time:month "1"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+    time:week "1"^^<http://www.w3.org/2001/XMLSchema#gWeek> ;
+    time:days example:Monday, example:Tuesday, example:Wednesday, example:Thursday, example:Friday, example:Saturday, example:Sunday .

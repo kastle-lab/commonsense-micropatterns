@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix study: <http://example.org/study#> .
+study:Study rdf:type rdfs:Class ;
+  rdfs:label "Study" ;
+  rdfs:comment "The activity of devoting time and attention to acquire knowledge" .
+study:Student rdf:type rdfs:Class ;
+  rdfs:label "Student" ;
+  rdfs:comment "An individual who is participating in a study" ;
+  rdfs:subClassOf study:Study .
+study:Subject rdf:type rdfs:Class ;
+  rdfs:label "Subject" ;
+  rdfs:comment "The topic on which the study is focused" ;
+  rdfs:subClassOf study:Study .
+study:Course rdf:type rdfs:Class ;
+  rdfs:label "Course" ;
+  rdfs:comment "Organized study of a subject over a period of time" ;
+  rdfs:subClassOf study:Study .
+study:LearningMaterial rdf:type rdfs:Class ;
+  rdfs:label "LearningMaterial" ;
+  rdfs:comment "Resources used in the study to facilitate the understanding of a subject" ;
+  rdfs:subClassOf study:Study .
+study:isStudying rdf:type rdf:Property ;
+  rdfs:domain study:Student ;
+  rdfs:range study:Subject ;
+  rdfs:label "is studying" .
+study:isCourseOf rdf:type rdf:Property ;
+  rdfs:domain study:Subject ;
+  rdfs:range study:Course ;
+  rdfs:label "is a course of" .
+study:uses rdf:type rdf:Property ;
+  rdfs:domain study:Study ;
+  rdfs:range study:LearningMaterial ;
+  rdfs:label "uses" .
+study:StudiesSubject rdf:type owl:ObjectProperty ;
+  rdfs:label "studiesSubject" ;
+  owl:inverseOf study:isStudying .
+study:CourseSubject rdf:type owl:ObjectProperty ;
+  rdfs:label "courseSubject" ;
+  owl:inverseOf study:isCourseOf.

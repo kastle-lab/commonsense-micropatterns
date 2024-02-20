@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix family: <http://www.example.com/familyOntology#> .
+family:Family rdfs:subClassOf rdf:Thing.family:Person rdfs:subClassOf rdf:Thing .
+family:hasChild rdfs:domain family:Person ;
+                 rdfs:range family:Person.family:hasParent rdfs:domain family:Person ;
+                 rdfs:range family:Person.family:hasSibling rdfs:domain family:Person ;
+                  rdfs:range family:Person.family:hasSpouse rdfs:domain family:Person;
+                 rdfs:range family:Person.family:name rdfs:domain family:Person ;
+            rdfs:range xsd:string.family:age rdfs:domain family:Person ;
+           rdfs:range xsd:integer.family:gender rdfs:domain family:Person ;
+              rdfs:range xsd:string.family:Person a rdfs:Class ;
+              rdfs:label "Person"@en ;
+              rdfs:comment "A person in the family."@en ;
+              rdfs:subClassOf family:Family.family:Family a rdfs:Class ;
+               rdfs:label "Family"@en ;
+               rdfs:comment "A family unit."@en.

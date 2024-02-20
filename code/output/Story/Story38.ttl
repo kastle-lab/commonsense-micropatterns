@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns: <http://example.org/story#> .
+ns:Story a rdfs:Class ;
+    rdfs:label "Story" ;
+    rdfs:comment "A narration of a chain of events told or written in prose or verse" .
+    ns:hasAuthor rdf:type rdf:Property ;
+    rdfs:label "has author" ;
+    rdfs:comment "The property that relates a story with its author" ;
+    rdfs:domain ns:Story ;
+    rdfs:range ns:Author .
+  ns:hasTitle rdf:type rdf:Property ;
+    rdfs:label "has title" ;
+    rdfs:comment "The property that relates a story with its title" ;
+    rdfs:domain ns:Story ;
+    rdfs:range rdfs:Literal .
+  ns:hasCharacter rdf:type rdf:Property ;
+    rdfs:label "has character" ;
+    rdfs:comment "The property that relates a story with its characters" ;
+    rdfs:domain ns:Story ;
+    rdfs:range ns:Character .
+  ns:hasTheme rdf:type rdf:Property ;
+    rdfs:label "has theme" ;
+    rdfs:comment "The property that relates a story with its theme" ;
+    rdfs:domain ns:Story ;
+    rdfs:range ns:Theme .
+ns:Author a rdfs:Class ;
+    rdfs:label "Author" ;
+    rdfs:comment "An individual who writes a story" .
+ns:Character a rdfs:Class ;
+    rdfs:label "Character" ;
+    rdfs:comment "A person, animal, being, creature, or thing in a story" .
+ns:Theme a rdfs:Class ;
+    rdfs:label "Theme" ;
+    rdfs:comment "The central topic or message of a story" .

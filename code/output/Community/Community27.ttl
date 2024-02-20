@@ -1,0 +1,35 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/community#> .
+:Community a rdfs:Class ;
+    rdfs:label "Community"@en ;
+    rdfs:comment "A group of people living in the same place or having a particular characteristic in common."@en .
+    :Member a rdfs:Class ;
+    rdfs:label "Member"@en ;
+    rdfs:comment "An individual that is part of a community."@en .
+:hasMember a owl:ObjectProperty ;
+    rdfs:label "has member"@en ;
+    rdfs:comment "Relates a community to its members."@en ;
+    rdfs:domain :Community ;
+    rdfs:range :Member .
+:belongsTo a owl:ObjectProperty ;
+    rdfs:label "belongs to"@en ;
+    rdfs:comment "Relates a member to a community they belong to."@en ;
+    rdfs:domain :Member ;
+    rdfs:range :Community .
+:hasCommonInterest a owl:ObjectProperty ;
+    rdfs:label "has common interest"@en ;
+     rdfs:comment "Relates a community to common interest of its members."@en ;
+    rdfs:domain :Community ;
+    rdfs:range xsd:string .
+:CommunityName a owl:DatatypeProperty ;
+    rdfs:label "community name"@en ;
+    rdfs:comment "The name of the community."@en ;
+    rdfs:domain :Community ;
+    rdfs:range xsd:string .
+:MemberName a owl:DatatypeProperty ;
+    rdfs:label "member name"@en ;
+    rdfs:comment "The name of the member."@en ;
+    rdfs:domain :Member ;
+    rdfs:range xsd:string .

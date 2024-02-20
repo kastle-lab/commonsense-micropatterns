@@ -1,0 +1,23 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/#> .
+:Year rdf:type rdfs:Class ;
+    rdfs:subClassOf xsd:integer ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "Annotated Year"@en .
+:isLeapYear rdf:type rdf:Property ;
+    rdfs:domain :Year ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "is leap year"@en ;
+    rdfs:comment "Determines if the year is a leap year"@en .
+   :hasSeason rdf:type rdf:Property ;
+    rdfs:domain :Year ;
+    rdfs:range :Season ;
+    rdfs:label "has season"@en ;
+    rdfs:comment "Joining property between Year and Season"@en .
+:Season rdf:type rdfs:Class ;
+    rdfs:label "Season"@en ;
+    rdfs:comment "Four periods of the year: Spring, Summer, Autumn and Winter"@en .
+:Spring rdf:type :Season ;

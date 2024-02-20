@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+## Classes# General class for all living things.ex:LivingThing rdf:type rdfs:Class .
+# Specific types of living things.ex:Animal rdf:type rdfs:Class ;
+           rdfs:subClassOf ex:LivingThing .
+ex:Plant rdf:type rdfs:Class ;
+          rdfs:subClassOf ex:LivingThing .
+## Properties# Represents the process of life.ex:hasLifeProcess rdf:type owl:ObjectProperty ;
+                  rdfs:domain ex:LivingThing ;
+                  rdfs:range ex:LifeProcess .
+# Specific life processes.ex:reproduction rdf:type owl:Class ;
+                rdfs:subClassOf ex:LifeProcess .
+ex:growth rdf:type owl:Class ;
+          rdfs:subClassOf ex:LifeProcess .
+ex:respiration rdf:type owl:Class ;
+               rdfs:subClassOf ex:LifeProcess .
+## Instances# Examples of specific animals.ex:Lion rdf:type ex:Animal .
+ex:Rose rdf:type ex:Plant .
+# Assign life processes to each instance.ex:Lion ex:hasLifeProcess ex:reproduction .
+ex:Lion ex:hasLifeProcess ex:growth .
+ex:Lion ex:hasLifeProcess ex:respiration .
+ex:Rose ex:hasLifeProcess ex:reproduction .
+ex:Rose ex:hasLifeProcess ex:growth .
+ex:Rose ex:hasLifeProcess ex:respiration .

@@ -1,0 +1,42 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org/issue#> .
+:Issue rdf:type rdfs:Class ;
+    rdfs:label "Issue"@en ;
+    rdfs:comment "A matter or problem regarded as requiring discussion or settlement"@en .
+:IssueIdentifier rdf:type rdfs:Datatype ;
+    rdfs:label "Issue Identifier"@en ;
+    rdfs:comment "Unique ID assigned to an issue for identification"@en ;
+    rdfs:range xsd:string .
+:IssueTitle rdf:type rdfs:Datatype ;
+    rdfs:label "Issue Title"@en ;
+    rdfs:comment "Title or headline of the issue"@en ;
+    rdfs:range xsd:string .
+:IssueDescription rdf:type rdfs:Datatype ;
+    rdfs:label "Issue Description"@en ;
+    rdfs:comment "Detailed depiction of the issue"@en ;
+    rdfs:range xsd:string .
+    :IssueStatus rdf:type rdfs:Datatype ;
+    rdfs:label "Issue Status"@en ;
+    rdfs:comment "Current state or condition of the issue"@en ;
+    rdfs:range xsd:string .
+:IssueDateCreated rdf:type rdfs:Datatype ;
+    rdfs:label "Issue Date Created"@en ;
+    rdfs:comment "Date when the issue was firstly created"@en ;
+    rdfs:range xsd:dateTime .
+    :hasIssueIdentifier rdf:type rdf:Property ;
+    rdfs:domain :Issue ;
+    rdfs:range :IssueIdentifier .
+:hasIssueTitle rdf:type rdf:Property ;
+    rdfs:domain :Issue ;
+    rdfs:range :IssueTitle .
+:hasIssueDescription rdf:type rdf:Property ;
+    rdfs:domain :Issue ;
+    rdfs:range :IssueDescription .
+:hasIssueStatus rdf:type rdf:Property ;
+    rdfs:domain :Issue ;
+    rdfs:range :IssueStatus .
+:hasIssueDateCreated rdf:type rdf:Property ;
+    rdfs:domain :Issue ;
+    rdfs:range :IssueDateCreated .

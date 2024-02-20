@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/ontology#> .
+:Door    rdf:type rdfs:Class ;
+    rdfs:label "Door"@en ;
+    rdfs:comment "A hinged, sliding, or revolving barrier at the entrance to a building, room, or vehicle, or in the framework of a cupboard."@en ;
+    rdfs:subClassOf :ArchitecturalElement .
+:hasMaterial    rdf:type rdf:Property ;
+    rdfs:label "has material"@en ;
+    rdfs:comment "The material a door is made of."@en ;
+    rdfs:domain :Door ;
+    rdfs:range :Material .
+:hasColor    rdf:type rdf:Property ;
+    rdfs:label "has color"@en ;
+    rdfs:comment "The color of a door."@en ;
+    rdfs:domain :Door ;
+    rdfs:range xsd:string .
+:hasDimension    rdf:type rdf:Property ;
+    rdfs:label "has dimension"@en ;
+    rdfs:comment "The size or dimensions of the door."@en ;
+    rdfs:domain :Door ;
+    rdfs:range :Dimension .
+:Dimension    rdf:type rdfs:Class ;
+    rdfs:label "Dimension"@en ;
+    rdfs:comment "Specification of distance between the sides of an object."@en .
+:Material    rdf:type rdfs:Class ;
+    rdfs:label "Material"@en ;
+    rdfs:comment "The matter from which a thing is or can be made."@en .
+:ArchitecturalElement    rdf:type rdfs:Class ;
+    rdfs:label "Architectural Element"@en ;
+    rdfs:comment "A constituent part of a building or structure."@en .

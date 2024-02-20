@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix team: <http://www.example.org/team#> .
+team:Team rdf:type rdfs:Class ;
+    rdfs:label "Team" ;
+    rdfs:comment "Class representing a team" .
+    team:hasMember rdf:type rdf:Property ;
+    rdfs:label "has Member" ;
+    rdfs:comment "Property representing the members of a team" ;
+    rdfs:domain team:Team ;
+    rdfs:range team:Member .
+    team:Member rdf:type rdfs:Class ;
+    rdfs:label "Member" ;
+    rdfs:comment "Class representing a member of a team" .
+    team:hasRole rdf:type rdf:Property ;
+    rdfs:label "has Role" ;
+    rdfs:comment "Property representing the role of a member in a team" ;
+    rdfs:domain team:Member ;
+    rdfs:range team:Role .
+    team:Role rdf:type rdfs:Class ;
+    rdfs:label "Role" ;
+    rdfs:comment "Class representing a role in a team" .
+team:hasName rdf:type rdf:Property ;
+    rdfs:label "has Name" ;
+    rdfs:comment "Property representing the name of a Team, Member or Role" ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:range xsd:string .

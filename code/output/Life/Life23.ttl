@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/> .
+:LIFE a rdfs:Class ;
+    rdfs:label "Life" ;
+    rdfs:comment "A category for all living beings or organisms." .
+:HUMAN a rdfs:Class ;
+    rdfs:subClassOf :LIFE ;
+    rdfs:label "Human" ;
+    rdfs:comment "A representation of human beings, a subtype of all life." .
+:John a :HUMAN ;
+    :hasAge 26 ;
+    :hasGender :Male .
+:hasAge a rdf:Property ;
+    rdfs:comment "Age of an individual." ;
+    rdfs:domain :HUMAN ;
+    rdfs:range xsd:integer .
+:hasGender a rdf:Property ;
+    rdfs:comment "Gender of an individual." ;
+    rdfs:domain :HUMAN ;
+    rdfs:range :Gender .
+:Gender a rdfs:Class ;
+    rdfs:label "Gender" .
+:Male a :Gender ;
+    rdfs:label "Male" .

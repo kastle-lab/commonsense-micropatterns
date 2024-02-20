@@ -1,0 +1,33 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/back#> .
+:Back a rdfs:Class ;
+  rdfs:label "Back" ;
+  rdfs:comment "The body part on the opposite of the chest, between the neck and the tail in humans or animals" .
+:Spine a rdfs:Class ;
+  rdfs:subClassOf :Back ;
+  rdfs:label "Spine" ;
+  rdfs:comment "The column of bone and tissue extending from the base of the skull and enclosing the spinal cord, a part of back" .
+:Muscles a rdfs:Class ;
+  rdfs:subClassOf :Back ;
+  rdfs:label "Muscles" ;
+  rdfs:comment "Tissues in the back that can contract, producing movement or maintaining the position of parts of the body" .
+:Nerves a rdfs:Class ;
+  rdfs:subClassOf :Back ;
+  rdfs:label "Nerves" ;
+  rdfs:comment "A bundle of fibers that transmits impulses of sensation to the brain or spinal cord, and impulses from these to the muscles and organs" .
+:BackPain a rdfs:Class ;
+  rdfs:subClassOf :Back ;
+  rdfs:label "Back Pain" ;
+  rdfs:comment "Pain felt in the back that may come from the spine, muscles, nerves, or other structures in the back" .
+:BackInjury a rdfs:Class ;
+  rdfs:subClassOf :Back ;
+  rdfs:label "Back Injury" ;
+  rdfs:comment "Any type of harm or damage to the backbone or any part of the back" .
+:UpperBack a rdfs:Class ;
+  rdfs:subClassOf :Back ;
+  rdfs:label "Upper Back" ;
+  rdfs:comment "The region of the back ranging from the base of the neck to the bottom of the rib cage" .
+:LowerBack a rdfs:Class ;
+  rdfs:subClassOf :Back ;
+  rdfs:label "Lower Back" ;
+  rdfs:comment "The region of the back extending from the bottom of the rib cage to the tailbone" .

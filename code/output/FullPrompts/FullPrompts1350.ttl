@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.example.com/ontology/time#> .
+@prefix astro: <http://www.example.com/ontology/astro#> .
+time:Night rdf:type owl:Class ;
+    rdfs:subClassOf time:PeriodOfDay ;
+    rdfs:label "Night" ;
+    rdfs:comment "The period of time from sunset to sunrise when it is dark" .
+time:PeriodOfDay rdf:type owl:Class ;
+    rdfs:label "Period of Day" ;
+    rdfs:comment "Different periods during a 24-hour day" .
+astro:Sunset rdf:type owl:Class ;
+    rdfs:label "Sunset" ;
+    rdfs:comment "The time in the evening when the sun disappears or daylight fades" .
+astro:Sunrise rdf:type owl:Class ;
+    rdfs:label "Sunrise" ;
+    rdfs:comment "The time in the morning when the sun appears or daylight begins" .
+time:hasStart rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Night ;
+    rdfs:range astro:Sunset ;
+    rdfs:label "has start" ;
+    rdfs:comment "Indicates the starting point of the night" .
+time:hasEnd rdf:type owl:ObjectProperty ;
+    rdfs:domain time:Night ;
+    rdfs:range astro:Sunrise ;
+    rdfs:label "has end" ;
+    rdfs:comment "Indicates the ending point of the night" .

@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix govt: <http://www.example.com/government#> .
+govt:Government a rdfs:Class ;
+    rdfs:comment "A governmental system for a nation or state" ;
+    rdfs:label "Government" .
+govt:Department a rdfs:Class ;
+    rdfs:comment "A sector within the governmental system" ;
+    rdfs:label "Department" .
+govt:departmentOf a rdf:Property ;
+    rdfs:domain govt:Government ;
+    rdfs:range govt:Department ;
+    rdfs:comment "Links a government to its departments" ;
+    rdfs:label "department of" .
+govt:Position a rdfs:Class ;
+    rdfs:comment "A specific role or job within a department" ;
+    rdfs:label "Position" .
+govt:positionIn a rdf:Property ;
+    rdfs:domain govt:Department ;
+    rdfs:range govt:Position ;
+    rdfs:comment "Links a department to its positions" ;
+    rdfs:label "position in" .
+govt:Official a rdfs:Class ;
+    rdfs:comment "An individual elected or appointed to a government position" ;
+    rdfs:label "Official" .
+govt:holdsPosition a rdf:Property ;
+    rdfs:domain govt:Official ;
+    rdfs:range govt:Position ;
+    rdfs:comment "Links an official to the position they hold" ;
+    rdfs:label "holds position" .

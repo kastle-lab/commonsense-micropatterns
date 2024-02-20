@@ -1,0 +1,28 @@
+@prefix : <http://www.example.org/thing#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Thing a rdfs:Class ;
+    rdfs:label "Thing"@en ;
+    rdfs:comment "A conceptual entity that can be real, virtual, abstract or physical."@en ;
+.:hasName a owl:DatatypeProperty ;
+    rdfs:domain :Thing ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the thing."@en ;
+.:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain :Thing ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A description of the thing."@en ;
+.:PhysicalThing rdfs:subClassOf :Thing ;
+    rdfs:label "Physical Thing"@en ;
+    rdfs:comment "A thing that is physical and can be interacted with materially."@en ;
+.:AbstractThing rdfs:subClassOf :Thing ;
+    rdfs:label "Abstract Thing"@en ;
+    rdfs:comment "A thing that is abstract and cannot be interacted with materially."@en ;
+.:CreatedThing rdfs:subClassOf :Thing ;
+    rdfs:label "Created Thing"@en ;
+    rdfs:comment "A thing that was created or made by an agent."@en ;
+.:NaturalThing rdfs:subClassOf :Thing ;
+    rdfs:label "Natural Thing"@en ;
+    rdfs:comment "A thing that was not made or created by an agent, but exists naturally."@en ;
+.

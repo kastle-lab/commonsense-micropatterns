@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Day a rdfs:Class ;
+    rdfs:label "Day" ;
+    rdfs:comment "A class to represent a day" .
+ex:dayOfWeek a rdf:Property ;
+    rdfs:domain ex:Day ;
+    rdfs:range xsd:string ;
+    rdfs:label "dayOfWeek" ;
+    rdfs:comment "Property to represent the day of the week" .
+ex:dayOfMonth a rdf:Property ;
+    rdfs:domain ex:Day ;
+    rdfs:range xsd:int ;
+    rdfs:label "dayOfMonth" ;
+    rdfs:comment "Property to represent the day of the month, represented as an integer" .
+ex:dayOfYear a rdf:Property ;
+    rdfs:domain ex:Day ;
+    rdfs:range xsd:int ;
+    rdfs:label "dayOfYear" ;
+    rdfs:comment "Property to represent the day of the year, represented as an integer" .

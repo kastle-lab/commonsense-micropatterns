@@ -1,0 +1,28 @@
+@prefix : <http://www.systems.org/systems#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:System a rdf:Class ;
+  rdfs:label "System"@en ;
+  rdfs:comment "A network of elements that work together to achieve a common goal."@en .
+:Subsystem a rdf:Class ;
+  rdfs:label "Subsystem"@en ;
+  rdfs:comment "A system that is a component of a larger system."@en ;
+  rdfs:subClassOf :System .
+:HasSubsystem a rdf:Property ;
+  rdfs:label "has subsystem"@en ;
+  rdfs:domain :System ;
+  rdfs:range :Subsystem .
+  :Element a rdf:Class ;
+  rdfs:label "Element"@en ;
+  rdfs:comment "An individual part of a system that contributes to the overall function."@en .
+:HasElement a rdf:Property ;
+  rdfs:label "has element"@en ;
+  rdfs:domain :System ;
+  rdfs:range :Element .
+:Function a rdf:Class ;
+  rdfs:label "Function"@en ;
+  rdfs:comment "The role or purpose delivered by a system or its elements."@en .
+:DeliversFunction a rdf:Property ;
+  rdfs:label "delivers function"@en ;
+  rdfs:domain :System ;
+  rdfs:range :Function .

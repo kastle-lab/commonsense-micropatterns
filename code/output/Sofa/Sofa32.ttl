@@ -1,0 +1,7 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Sofa a rdfs:Class ;
+  rdfs:label "Sofa" ;
+  rdfs:comment "A piece of furniture for seating two or three people in the form of a bench, with armrests, that is partially or entirely upholstered, and often fitted with springs and tailored cushions." .

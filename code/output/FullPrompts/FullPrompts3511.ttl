@@ -1,0 +1,15 @@
+@prefix ex: <http://example.com/levels#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Level a owl:Class .
+ex:name a owl:DatatypeProperty ;
+  rdfs:domain ex:Level ;
+  rdfs:range xsd:string .
+ex:value a owl:DatatypeProperty ;
+  rdfs:domain ex:Level ;
+  rdfs:range xsd:integer .
+ex:level1 a ex:Level ;
+  ex:name "Level One"^^xsd:string ;
+  ex:value 1^^xsd:integer .
+ex:level2 a ex:Level ;
+  ex:name "Level Two"^^xsd:string ;
+  ex:value 2^^xsd:integer .

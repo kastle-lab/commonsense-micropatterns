@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/chair#> .
+# Define the class Chairex:Chair rdf:type rdfs:Class .
+# Define properties that a chair might haveex:hasMaterial rdf:type rdf:Property ;
+                rdfs:domain ex:Chair ;
+               rdfs:range rdfs:Literal .
+               ex:hasColor rdf:type rdf:Property ;
+             rdfs:domain ex:Chair ;
+            rdfs:range rdfs:Literal .
+ex:hasStyle rdf:type rdf:Property ;
+            rdfs:domain ex:Chair ;
+            rdfs:range rdfs:Literal .
+ex:hasManufacturer rdf:type rdf:Property ;
+                   rdfs:domain ex:Chair ;
+                   rdfs:range rdfs:Literal .
+ex:hasWeightLimit rdf:type rdf:Property ;
+                  rdfs:domain ex:Chair ;
+                  rdfs:range rdfs:Literal .
+# Creating an instance of Chairex:chair1 rdf:type ex:Chair ;
+          ex:hasMaterial "Wood" ;
+          ex:hasColor "Brown" ;
+          ex:hasStyle "Modern" ;
+          ex:hasManufacturer "IKEA" ;
+          ex:hasWeightLimit "100 kg" .

@@ -1,0 +1,18 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.org/> .
+ex:Car a rdfs:Class .
+ex:model a rdf:Property ;
+   rdfs:domain ex:Car ;
+   rdfs:range xsd:string .
+   ex:year a rdf:Property ;
+   rdfs:domain ex:Car ;
+   rdfs:range xsd:integer .
+ex:color a rdf:Property ;
+   rdfs:domain ex:Car ;
+   rdfs:range xsd:string .
+   ex:manufacturer a rdf:Property ;
+   rdfs:domain ex:Car ;
+   rdfs:range ex:Manufacturer .
+   ex:Manufacturer a rdfs:Class .

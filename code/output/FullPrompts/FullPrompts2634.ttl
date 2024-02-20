@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kind: <http://www.example.org/kind#> .
+kind:Kind rdf:type owl:Class ;
+          rdfs:label "Kind" ;
+          rdfs:comment "Representation of kinds" .
+kind:hasKind rdf:type owl:ObjectProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range kind:Kind ;
+             rdfs:label "has kind" ;
+             rdfs:comment "Relates an entity to its kind, or category" .
+kind:isKindOf rdf:type owl:ObjectProperty ;
+              rdfs:domain kind:Kind ;
+              rdfs:range owl:Thing ;
+              rdfs:label "is kind of" ;
+              rdfs:comment "Inverse of 'has kind', relates a kind to its instances" .
+kind:hasSubKind rdf:type owl:TransitiveProperty ;
+                rdfs:domain kind:Kind ;
+                rdfs:range kind:Kind ;
+                rdfs:subPropertyOf rdfs:subClassOf ;
+                rdfs:label "has sub-kind" ;
+                rdfs:comment "Relates a kind with its sub-kinds" .
+kind:isSubKindOf rdf:type owl:TransitiveProperty ;
+                 rdfs:domain kind:Kind ;
+                 rdfs:range kind:Kind ;
+                 rdfs:subPropertyOf rdfs:subClassOf ;
+                 rdfs:label "is sub-kind of" ;
+                 rdfs:comment "Inverse of 'has sub-kind', relates a sub-kind to its super-kinds" .

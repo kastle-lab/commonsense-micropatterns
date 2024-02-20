@@ -1,0 +1,3 @@
+:John a :Student ;
+    :study :Biology .
+:Biology a :Subject .

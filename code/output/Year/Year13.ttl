@@ -1,0 +1,18 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/#> .
+ex:year rdf:type owl:Class ;
+ex:hasYear rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Calendar ;
+    rdfs:range ex:Year ;
+    rdfs:comment "Link a calendar to a year" ;
+    rdfs:label "has year" .
+ex:Calendar rdf:type owl:Class ;
+    rdfs:comment "A representation of time, including a year" ;
+    rdfs:label "Calendar" .
+ex:yearInCentury rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Year ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The year within the century, e.g., 20 for the year 2020" ;
+    rdfs:label "year in century" .
+ex:Year2020 a ex:Year ;
+    ex:yearInCentury 20 .

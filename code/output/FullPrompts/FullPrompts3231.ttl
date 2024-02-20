@@ -1,0 +1,11 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/ontology#> .
+:Minute     rdf:type rdfs:Class ;
+    rdfs:label "Minute"@en ;
+    rdfs:comment "Unit of time"@en ;
+    rdfs:subClassOf :UnitOfTime ;
+.:UnitOfTime     rdf:type rdfs:Class ;
+    rdfs:label "Unit Of Time"@en ;
+    rdfs:comment "A measure of duration"@en ;
+.

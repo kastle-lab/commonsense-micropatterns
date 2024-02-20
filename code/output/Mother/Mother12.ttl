@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/mother#> .
+:Mother rdf:type rdfs:Class ;
+        rdfs:label "Mother"@en ;
+        rdfs:comment "A female parent of a child or offspring"@en .
+        :Child rdf:type rdfs:Class ;
+       rdfs:label "Child"@en ;
+       rdfs:comment "A person in relation to his or her parent" .
+:hasMother rdf:type rdf:Property ;
+           rdfs:domain :Child ;
+           rdfs:range :Mother ;
+           rdfs:label "has mother"@en ;
+           rdfs:comment "The property that indicates a mother of a child"@en .
+            :givesBirthTo rdf:type rdf:Property ;
+              rdfs:domain :Mother ;
+              rdfs:range :Child ;
+              rdfs:label "gives birth to"@en ;
+              rdfs:comment "The property that indicates a child that a mother has given birth to"@en .
+              :Name rdf:type rdf:Property ;
+      rdfs:domain [:Mother :Child] ;
+      rdfs:range xsd:string ;
+      rdfs:label "has name"@en ;
+      rdfs:comment "The property that provides the name of the mother or child"@en .

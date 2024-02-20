@@ -1,0 +1,15 @@
+@prefix : <http://www.example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:President rdf:type owl:Class ;
+    rdfs:label "President"@en ;
+    rdfs:comment "A head of state or head of government"@en ;
+    rdfs:subClassOf :Politician .
+:hasPresident rdf:type owl:ObjectProperty ;
+    rdfs:label "has president"@en ;
+    rdfs:domain :Country ;
+    rdfs:range :President .
+:Country rdf:type owl:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A nation with its own government, occupying a particular territory"@en .

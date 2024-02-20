@@ -1,0 +1,27 @@
+@base <http://example.org/> .
+@prefix year: <http://example.org/year#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+year:Year a rdfs:Class ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "Class representing a year" .
+year:hasMonth a rdfs:Property ;
+    rdfs:domain year:Year ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has month"@en ;
+    rdfs:comment "Property representing the number of months in a year" .
+year:beginningOfYear a rdfs:Property ;
+    rdfs:domain year:Year ;
+    rdfs:range xsd:date ;
+    rdfs:label "beginning of year"@en ;
+    rdfs:comment "The date when the year starts" .
+year:endOfYear a rdfs:Property ;
+    rdfs:domain year:Year ;
+    rdfs:range xsd:date ;
+    rdfs:label "end of year"@en ;
+    rdfs:comment "The date when the year ends" .
+year:hasLeapYear a rdfs:Property ;
+    rdfs:domain year:Year ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "has leap year"@en ;
+    rdfs:comment "Property representing if the year is a leap year or not" .

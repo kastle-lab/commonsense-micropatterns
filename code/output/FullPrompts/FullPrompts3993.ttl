@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://example.org/air#> .
+air:   rdf:type rdfs:Class ;
+  rdfs:comment "The class that represents air."@en .
+air:Oxygen   rdf:type rdfs:Class ;
+  rdfs:subClassOf air: ;
+  rdfs:comment "The class that represents oxygen, a component of air."@en .
+air:Nitrogen   rdf:type rdfs:Class ;
+  rdfs:subClassOf air: ;
+  rdfs:comment "The class that represents nitrogen, a component of air."@en .
+air:CarbonDioxide   rdf:type rdfs:Class ;
+  rdfs:subClassOf air: ;
+  rdfs:comment "The class that represents carbon dioxide, a component of air."@en .
+air:pollutant   rdf:type rdf:Property ;
+  rdfs:domain air: ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "A property that denotes a pollutant in the air."@en .
+air:temperature   rdf:type rdf:Property ;
+  rdfs:domain air: ;
+  rdfs:range xsd:float ;
+  rdfs:comment "A property that denotes the temperature of the air."@en .
+air:pressure   rdf:type rdf:Property ;
+  rdfs:domain air: ;
+  rdfs:range xsd:float ;
+  rdfs:comment "A property that denotes the pressure of the air."@en .
+air:humidity   rdf:type rdf:Property ;
+  rdfs:domain air: ;
+  rdfs:range xsd:float ;
+  rdfs:comment "A property that denotes the humidity of the air."@en .

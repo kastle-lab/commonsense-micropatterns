@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix moment: <http://www.example.com/moment#> .
+# Class Definitionsmoment:Moment rdf:type rdfs:Class ;
+    rdfs:label "Moment" ;
+    rdfs:comment "A certain point in time." .
+moment:PhysicalEvent rdf:type rdfs:Class ;
+    rdfs:label "PhysicalEvent" ;
+    rdfs:comment "An event that occurs at a specific moment." .
+moment:EmotionalExperience rdf:type rdfs:Class ;
+    rdfs:label "EmotionalExperience" ;
+    rdfs:comment "An emotional experience that occurs at a specific moment." .
+# Property Definitionsmoment:occursAt rdf:type rdf:Property ;
+    rdfs:label "occurs at" ;
+    rdfs:comment "Relates a moment to the time it occurs at." ;
+    rdfs:domain moment:Moment ;
+    rdfs:range xsd:dateTime .
+moment:hasEvent rdf:type rdf:Property ;
+    rdfs:label "has event" ;
+    rdfs:comment "Relates a moment to an event that occurs at it." ;
+    rdfs:domain moment:Moment ;
+    rdfs:range moment:PhysicalEvent .
+moment:hasExperience rdf:type rdf:Property ;
+    rdfs:label "has experience" ;
+    rdfs:comment "Relates a moment to an emotional experience tied to it." ;
+    rdfs:domain moment:Moment ;
+    rdfs:range moment:EmotionalExperience .

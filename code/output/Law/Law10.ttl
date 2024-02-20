@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix law: <http://www.example.com/law#> .
+law:LegalRule rdf:type rdfs:Class ;
+    rdfs:label "Legal Rule" ;
+    rdfs:comment "A law or regulation enacted by a government authority" .
+law:CriminalLaw rdf:type rdfs:Class ;
+    rdfs:subClassOf law:LegalRule ;
+    rdfs:label "Criminal Law" ;
+    rdfs:comment "Law related to crime" .
+law:CivilLaw rdf:type rdfs:Class ;
+    rdfs:subClassOf law:LegalRule ;
+    rdfs:label "Civil Law" ;
+    rdfs:comment "Law related to civil matters or disputes between individuals" .
+law:Lawyer rdf:type rdfs:Class ;
+    rdfs:label "Lawyer" ;
+    rdfs:comment "A professional who practices law and represents clients" .
+law:practices rdf:type rdf:Property ;
+    rdfs:label "practices" ;
+    rdfs:comment "The law a lawyer specializes in" ;
+    rdfs:domain law:Lawyer ;
+    rdfs:range law:LegalRule .
+law:CourtCase rdf:type rdfs:Class ;
+    rdfs:label "Court Case" ;
+    rdfs:comment "A legal dispute between parties resolved by a court" .
+law:involves rdf:type rdf:Property ;
+    rdfs:label "involves" ;
+    rdfs:comment "The legal rule involved in a case" ;
+    rdfs:domain law:CourtCase ;
+    rdfs:range law:LegalRule .

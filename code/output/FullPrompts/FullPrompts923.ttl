@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/group#> .
+:Group a rdfs:Class ;
+  rdfs:label "Group" ;
+  rdfs:comment "A class representing a Group of individuals." .
+:Member a rdfs:Class ;
+  rdfs:label "Member" ;
+  rdfs:comment "A class representing a Member of a Group." .
+:hasMember a rdf:Property ;
+  rdfs:label "has member" ;
+  rdfs:comment "A property linking a Group to its Members." ;
+  rdfs:domain :Group ;
+  rdfs:range :Member .
+:Role a rdfs:Class ;
+  rdfs:label "Role" ;
+  rdfs:comment "A class representing the role a Member in a Group." .
+:hasRole a rdf:Property ;
+  rdfs:label "has role" ;
+  rdfs:comment "A property linking a Member to their Role." ;
+  rdfs:domain :Member ;
+  rdfs:range :Role .

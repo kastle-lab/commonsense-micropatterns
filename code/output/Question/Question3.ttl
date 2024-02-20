@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix question: <http://example.com/question#> .
+question:QuestionEntity rdf:type owl:Class ;
+  rdfs:comment "A class representing a question."@en ;
+  rdfs:label "Question"@en .
+question:hasText rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The text of the question"@en ;
+  rdfs:label "hasText"@en ;
+  rdfs:domain question:QuestionEntity ;
+  rdfs:range xsd:string .
+question:hasAnswer rdf:type owl:ObjectProperty ;
+  rdfs:comment "The answer to the question"@en ;
+  rdfs:label "hasAnswer"@en ;
+  rdfs:domain question:QuestionEntity ;
+  rdfs:range question:AnswerEntity .
+question:AnswerEntity rdf:type owl:Class ;
+  rdfs:comment "A class representing an answer."@en ;
+  rdfs:label "Answer"@en .
+question:hasAnswerText rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The text of the answer"@en ;
+  rdfs:label "hasAnswerText"@en ;
+  rdfs:domain question:AnswerEntity ;
+  rdfs:range xsd:string .
+question:QuestionCategory rdf:type owl:Class ;
+  rdfs:comment "A class representing a category of questions."@en ;
+  rdfs:label "QuestionCategory"@en .
+question:hasCategory rdf:type owl:ObjectProperty ;
+  rdfs:comment "The category to which the question belongs"@en ;
+  rdfs:label "hasCategory"@en ;
+  rdfs:domain question:QuestionEntity ;
+  rdfs:range question:QuestionCategory .

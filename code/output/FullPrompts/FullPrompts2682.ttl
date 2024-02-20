@@ -1,0 +1,28 @@
+@prefix : <http://www.example.org/head#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Head rdf:type owl:Class .
+:hasPart rdf:type owl:ObjectProperty ;
+  rdf:domain :Head ;
+  rdf:range :HeadPart .
+:HeadPart rdf:type owl:Class .
+:Brain rdf:type owl:NamedIndividual, :HeadPart .
+:Nose rdf:type owl:NamedIndividual, :HeadPart .
+:Mouth rdf:type owl:NamedIndividual, :HeadPart .
+ :Eyes rdf:type owl:NamedIndividual, :HeadPart .
+ :Forehead rdf:type owl:NamedIndividual, :HeadPart .
+ :hasFacialFeature rdf:type owl:ObjectProperty ;
+  rdf:domain :Head ;
+  rdf:range :FacialFeature .
+:FacialFeature rdf:type owl:Class .
+:Eyebrows rdf:type owl:NamedIndividual, :FacialFeature .
+:EyeLashes rdf:type owl:NamedIndividual, :FacialFeature .
+:Cheekbones rdf:type owl:NamedIndividual, :FacialFeature .
+ :Lips rdf:type owl:NamedIndividual, :FacialFeature .
+ :hasHair rdf:type owl:DatatypeProperty ;
+  rdf:domain :Head ;
+  rdf:range xsd:boolean .
+:hasBrain rdf:type owl:ObjectProperty ;
+  rdf:domain :Head ;
+  rdf:range :Brain .

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sideOnt: <http://www.myontology.com/side#> .
+sideOnt:Side a rdfs:Class ;
+    rdfs:label "Side"@en ;
+    rdfs:comment "The concept of side or direction"@en .
+# Subclass of SidesideOnt:Left a rdfs:Class ;
+    rdfs:subClassOf sideOnt:Side ;
+    rdfs:label "Left"@en ;
+    rdfs:comment "The concept of left side "@en .
+# Subclass of SidesideOnt:Right a rdfs:Class ;
+    rdfs:subClassOf sideOnt:Side ;
+    rdfs:label "Right"@en ;
+    rdfs:comment "The concept of right side"@en .
+# Subclass of SidesideOnt:Top a rdfs:Class ;
+    rdfs:subClassOf sideOnt:Side ;
+    rdfs:label "Top"@en ;
+    rdfs:comment "The concept of top or upside"@en .
+# Subclass of SidesideOnt:Bottom a rdfs:Class ;
+    rdfs:subClassOf sideOnt:Side ;
+    rdfs:label "Bottom"@en ;
+    rdfs:comment "The concept of bottom or downside"@en .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://example.org/air#> .
+# Classes air:Air     rdf:type owl:Class ;
+    rdfs:comment "Air is the general name for the mixture of gases that makes up the Earth's atmosphere."@en ;
+    rdfs:subClassOf owl:Thing .
+air:NaturalAir     rdf:type owl:Class ;
+    rdfs:comment "Natural air is air in its natural state, with no artificial additives or changes."@en ;
+    rdfs:subClassOf air:Air .
+air:PollutedAir     rdf:type owl:Class ;
+    rdfs:comment "Polluted air contains contaminants or substances harmful or poisonous to organisms."@en ;
+    rdfs:subClassOf air:Air .
+# Propertiesair:contains     rdf:type owl:ObjectProperty ;
+    rdfs:comment "The property that defines what an air consists of."@en ;
+    rdfs:domain air:Air ;
+    rdfs:range air:Component .
+air:quality     rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The property that describes the quality of air."@en ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:string .
+# Individualsair:Oxygen    rdf:type air:Component ;
+    rdfs:comment "One of the gases that makes up the air we breathe in"@en .
+air:Nitrogen    rdf:type air:Component ;
+    rdfs:comment "The most abundant gas in the Earth's atmosphere"@en .

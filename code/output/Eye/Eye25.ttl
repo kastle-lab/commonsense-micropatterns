@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Eye rdf:type owl:Class ;
+  rdfs:subClassOf ex:BodyPart ;
+  rdfs:label "Eye"@en ;
+  rdfs:comment "A organ of the body that allows to see."@en .
+ex:color rdf:type owl:DatatypeProperty ;
+  rdfs:domain ex:Eye ;
+  rdfs:range xsd:string ;
+  rdfs:label "color"@en ;
+  rdfs:comment "The color of the eye."@en .
+ex:function rdf:type owl:DatatypeProperty ;
+  rdfs:domain ex:Eye ;
+  rdfs:range xsd:string ;
+  rdfs:label "function"@en ;
+  rdfs:comment "The function of the eye."@en .

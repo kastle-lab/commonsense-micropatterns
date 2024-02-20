@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/family-ontology#> .
+:Parent rdf:type owl:Class .
+:hasChild rdf:type owl:ObjectProperty ;
+     rdfs:domain :Parent ;
+     rdfs:range :Child .
+:hasParent rdf:type owl:ObjectProperty ;
+     rdfs:domain :Child ;
+     rdfs:range :Parent .
+:hasSpouse rdf:type owl:ObjectProperty ;
+     rdfs:domain :Parent ;
+     rdfs:range :Parent .
+:Mother rdfs:subClassOf :Parent ;
+    rdfs:subClassOf       [ rdf:type owl:Restriction ;
+         owl:onProperty :hasChild ;
+         owl:someValuesFrom :Child      ] .
+:Father rdfs:subClassOf :Parent ;
+    rdfs:subClassOf       [ rdf:type owl:Restriction ;
+         owl:onProperty :hasChild ;
+         owl:someValuesFrom :Child      ] .
+:Child rdf:type owl:Class .
+  :Child rdfs:subClassOf       [ rdf:type owl:Restriction ;
+         owl:onProperty :hasParent ;
+         owl:someValuesFrom :Parent       ] .

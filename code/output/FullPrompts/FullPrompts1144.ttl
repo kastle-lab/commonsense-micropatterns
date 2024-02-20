@@ -1,0 +1,38 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix water: <http://www.example.org/water/> .
+@prefix : <http://www.example.org/water-ontology#> .
+# Class of Water:Water a owl:Class ;
+        rdfs:comment "The class of water substances"@en ;
+        rdfs:label "Water"@en .
+# Property of hasTemperature:hasTemperature a owl:DatatypeProperty ;
+        rdfs:domain :Water ;
+        rdfs:range xsd:double ;
+        rdfs:comment "The temperature of water in degrees Celsius"@en ;
+        rdfs:label "has temperature"@en .
+          # Property of haspH:haspH a owl:DatatypeProperty ;
+        rdfs:domain :Water ;
+        rdfs:range xsd:double ;
+        rdfs:comment "The pH value of water"@en ;
+        rdfs:label "has pH"@en .
+          # Property of hasSource:hassource a owl:ObjectProperty ;
+        rdfs:domain :Water ;
+        rdfs:range :WaterSource ;
+        rdfs:comment "The source from which the water originated"@en ;
+        rdfs:label "has source"@en .
+# Instances of Water:TapWater a :Water ;
+        :hasTemperature "20.0"^^xsd:float ;
+        :haspH "7.0"^^xsd:float ;
+        :hassource :MunicipalSupply .
+          :BottledWater a :Water ;
+        :hasTemperature "15.0"^^xsd:float ;
+        :haspH "7.5"^^xsd:float ;
+        :hassource :NaturalSpring .
+# Class of Water Source:WaterSource a owl:Class ;
+        rdfs:comment "The class of sources from which water can originate"@en ;
+        rdfs:label "Water Source"@en .
+# Instances of Water Source:MunicipalSupply a :WaterSource ;
+        rdfs:comment "Water supplied by municipal authorities"@en ;
+        rdfs:label "Municipal Supply"@en .
+:NaturalSpring a :WaterSource ;
+        rdfs:comment "Water originated from a natural spring"@en ;
+        rdfs:label "Natural Spring"@en .

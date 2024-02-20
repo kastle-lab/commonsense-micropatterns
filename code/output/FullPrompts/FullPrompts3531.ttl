@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix office: <http://www.example.com/office#> .
+office:Office a rdfs:Class ;
+  rdfs:label "Office"@en .
+office:Employee a rdfs:Class ;
+  rdfs:label "Employee"@en ;
+  rdfs:subClassOf office:Office .
+office:Room a rdfs:Class ;
+  rdfs:label "Room"@en ;
+  rdfs:subClassOf office:Office .
+office:Desk a rdfs:Class ;
+  rdfs:label "Desk"@en ;
+  rdfs:subClassOf office:Room .
+office:hasEmployee a rdf:Property ;
+  rdfs:domain office:Office ;
+  rdfs:range office:Employee ;
+  rdfs:label "has employee"@en .
+office:hasRoom a rdf:Property ;
+  rdfs:domain office:Office ;
+  rdfs:range office:Room ;
+  rdfs:label "has room"@en .
+office:hasDesk a rdf:Property ;
+  rdfs:domain office:Room ;
+  rdfs:range office:Desk ;
+  rdfs:label "has desk"@en .
+office:Employee  rdfs:comment "An individual who works in an office."@en .
+office:Room  rdfs:comment "A physical place in an office where work is done."@en .
+office:Desk  rdfs:comment "A piece of furniture in a room where work is done."@en .

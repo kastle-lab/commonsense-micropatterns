@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fact: <http://www.example.org/fact#> .
+fact:Fact     a rdfs:Class ;
+    rdfs:label "Fact" ;
+    rdfs:comment "An event or thing known to have happened or existed." .
+fact:source    a rdfs:Property ;
+    rdfs:label "source" ;
+    rdfs:comment "The origin from where the fact is derived or obtained." ;
+    rdfs:domain fact:Fact .
+fact:verificationStatus    a rdfs:Property ;
+    rdfs:label "verification status" ;
+    rdfs:comment "The state signifying whether a fact has been checked for truth and accuracy." ;
+    rdfs:domain fact:Fact .
+fact:hasEvidence     a rdfs:Property ;
+    rdfs:label "has evidence" ;
+    rdfs:comment "Relates a fact to the evidence supporting its truth." ;
+    rdfs:domain fact:Fact .
+fact:Evidence     a rdfs:Class ;
+    rdfs:label "Evidence" ;
+    rdfs:comment "Information or objects that support the truth or existence of a fact." .
+fact:Fact    rdfs:subClassOf fact:hasEvidence .

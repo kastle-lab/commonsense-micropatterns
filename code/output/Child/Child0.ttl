@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+# Concept of a Childex:Child rdf:type owl:Class .
+# Child has a Nameex:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Child ;
+    rdfs:range xsd:string .
+# Child has a Ageex:hasAge rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Child ;
+    rdfs:range xsd:integer .
+# Child has a Genderex:hasGender rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Child ;
+    rdfs:range xsd:string .
+# Child has Parentex:hasParent rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:Parent .
+# Parent is a classex:Parent rdf:type owl:Class .
+# Parent has a Nameex:ParentHasName rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Parent ;
+    rdfs:range xsd:string .

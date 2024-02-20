@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix serv: <http://example.org/service#> .
+serv:Service rdf:type owl:Class ;
+    rdfs:comment "An abstract representation of a service" ;
+    rdfs:subClassOf owl:Thing .
+serv:hasServiceProvider rdf:type owl:ObjectProperty ;
+    rdfs:comment "The provider of the service" ;
+    rdfs:domain serv:Service ;
+    rdfs:range serv:ServiceProvider .
+serv:hasServiceConsumer rdf:type owl:ObjectProperty ;
+    rdfs:comment "Consumer or user of the service" ;
+    rdfs:domain serv:Service ;
+    rdfs:range serv:ServiceConsumer .
+serv:hasServiceDuration rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The duration for which the service is provided" ;
+    rdfs:domain serv:Service ;
+    rdfs:range xsd:duration .
+serv:ServiceProvider rdf:type owl:Class ;
+    rdfs:comment "A provider that provides a service" ;
+    rdfs:subClassOf owl:Thing .
+serv:ServiceConsumer rdf:type owl:Class ;
+    rdfs:comment "A consumer that uses a service" ;
+    rdfs:subClassOf owl:Thing .

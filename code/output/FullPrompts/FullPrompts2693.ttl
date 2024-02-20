@@ -1,0 +1,15 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.com/ontology#> .
+:Head rdf:type rdfs:Class .
+:hasHead rdf:type owl:ObjectProperty ;
+  rdfs:domain :Person ;
+  rdfs:range :Head .
+:eyes rdf:type :PartOfHead ;
+  rdfs:domain :Head ;
+  rdfs:range :Eye .
+:Eye rdf:type rdfs:Class .
+:PartOfHead rdf:type owl:ObjectProperty .
+:Person rdf:type rdfs:Class .

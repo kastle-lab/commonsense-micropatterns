@@ -1,0 +1,21 @@
+@prefix : <http://example.org/onto#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Furniture a rdfs:Class .
+:Sofa a rdfs:Class ;
+     rdfs:subClassOf :Furniture .
+     :hasColor a rdf:Property ;
+    rdfs:domain :Furniture ;
+    rdfs:range xsd:string .
+:typeOfMaterial a rdf:Property ;
+    rdfs:domain :Furniture ;
+    rdfs:range xsd:string .
+    :hasSeats a rdf:Property ;
+    rdfs:domain :Sofa ;
+    rdfs:range xsd:integer .
+    :sofa1 a :Sofa ;
+    :hasColor "Brown" ;
+    :typeOfMaterial "Leather" ;
+    :hasSeats 4 .

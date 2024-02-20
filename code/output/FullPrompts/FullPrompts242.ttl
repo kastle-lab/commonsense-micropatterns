@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Method a rdf:Class ;
+  rdfs:label "Method"@en ;
+  rdfs:comment "A way of doing something"@en .
+ex:cookMethod a ex:Method ;
+  rdfs:label "Cooking method"@en .
+ex:bake a ex:cookMethod ;
+  rdfs:label "Baking"@en ;
+  rdfs:comment "A cooking method that involves dry heat in an oven"@en .
+ex:fry a ex:cookMethod ;
+  rdfs:label "Frying"@en ;
+  rdfs:comment "A cooking method that involves cooking food in hot oil or fat"@en .

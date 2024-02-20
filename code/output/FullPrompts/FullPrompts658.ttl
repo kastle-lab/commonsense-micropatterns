@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix place: <http://example.org/place#> .
+place:Place a rdfs:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:comment "A location. It can be a geographic location (like a town or a country), a physical location (like a building or a park), or a digital location (like a URL)."@en .
+place:Town a rdfs:Class ;
+    rdfs:subClassOf place:Place ;
+    rdfs:label "Town"@en ;
+    rdfs:comment "An urban area that is smaller than a city."@en .
+place:Country a rdfs:Class ;
+    rdfs:subClassOf place:Place ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A nation with its own government, occupying a particular territory."@en .
+place:Building a rdfs:Class ;
+    rdfs:subClassOf place:Place ;
+    rdfs:label "Building"@en ;
+    rdfs:comment "A structure with a roof and walls, such as a house or factory."@en .
+place:name a rdf:Property ;
+    rdfs:domain place:Place ;
+    rdfs:label "name"@en ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the place."@en .
+place:hasLocation a rdf:Property ;
+    rdfs:domain place:Place ;
+    rdfs:label "has location"@en ;
+    rdfs:range place:Place ;
+    rdfs:comment "A property that expresses that a place is located within another place."@en .

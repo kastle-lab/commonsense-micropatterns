@@ -1,0 +1,17 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/ontology/#> .
+:Girl rdf:type rdfs:Class ;
+   rdfs:label "Girl"@en ;
+      rdfs:comment "A human female child"@en ;
+   rdfs:subClassOf :Human .
+:age rdf:type owl:DatatypeProperty ;
+   rdfs:label "age"@en ;
+   rdfs:range xsd:integer ;
+   rdfs:domain :Girl .
+:hasParent rdf:type owl:ObjectProperty ;
+      rdfs:label "has parent"@en ;
+      rdfs:range :Adult ;
+      rdfs:domain :Girl .

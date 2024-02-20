@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix game: <http://www.example.org/game/> .
+game:     rdf:type rdfs:Class ;
+    rdfs:label "Game"@en ;
+    rdfs:comment "An class representing a game in general."@en .
+game:name    rdf:type rdf:Property ;
+    rdfs:domain game: ;
+    rdfs:range xsd:string ;
+    rdfs:label "game name"@en ;
+    rdfs:comment "The name of the game."@en .
+game:developer    rdf:type rdf:Property ;
+    rdfs:domain game: ;
+    rdfs:range xsd:string ;
+    rdfs:label "game developer"@en ;
+    rdfs:comment "The developer of the game."@en .
+game:platform    rdf:type rdf:Property ;
+    rdfs:domain game: ;
+    rdfs:range xsd:string ;
+    rdfs:label "game platform"@en ;
+    rdfs:comment "The platform the game is available on."@en .
+    game:genre    rdf:type rdf:Property ;
+    rdfs:domain game: ;
+    rdfs:range xsd:string ;
+    rdfs:label "game genre"@en ;
+    rdfs:comment "The genre of the game."@en .
+game:releaseDate    rdf:type rdf:Property ;
+    rdfs:domain game: ;
+    rdfs:range xsd:date ;
+    rdfs:label "game release date"@en ;
+    rdfs:comment "The release date of the game."@en .

@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com#> .
+:MinuteOfTime a rdfs:Class ;
+    rdfs:label "Minute of Time" ;
+    rdfs:comment "A unit of time equal to 60 seconds or 1/60th of an hour." .
+:HourOfTime a rdfs:Class ;
+    rdfs:label "Hour of Time";
+    rdfs:comment "A unit of time equal to 60 minutes or 1/24th of a day." .
+:hasMinute a rdf:Property ;
+    rdfs:label "has minute" ;
+    rdfs:domain :HourOfTime ;
+    rdfs:range :MinuteOfTime ;
+    rdfs:comment "Property that associates an hour with its 60 constituting minutes." .
+:partOfHour a rdf:Property ;
+    rdfs:label "is part of hour" ;
+    rdfs:domain :MinuteOfTime ;
+    rdfs:range :HourOfTime ;
+    rdfs:comment "Property that associates a minute with the hour it belongs to." .

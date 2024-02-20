@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:System a rdfs:Class .
+ex:hasComponent a rdf:Property ;
+    rdfs:domain ex:System ;
+    rdfs:range ex:Component .
+ex:Component a rdfs:Class ;
+    rdfs:subClassOf ex:System .
+ex:CPU a ex:Component ;
+    rdfs:label "CPU" .
+ex:RAM a ex:Component ;
+    rdfs:label "RAM" .
+ex:HardDrive a ex:Component ;
+    rdfs:label "Hard Drive" .
+ex:computerSystem1 a ex:System;
+    ex:hasComponent ex:CPU ;
+    ex:hasComponent ex:RAM ;
+    ex:hasComponent ex:HardDrive .

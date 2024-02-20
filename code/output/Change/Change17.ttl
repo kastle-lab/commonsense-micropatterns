@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix change: <http://example.org/change#> .
+change:Change a rdfs:Class ;
+    rdfs:label "Change" ;
+    rdfs:comment "A class representing the concept of Change - assumed to be a kind of action that includes alteration or transformation of an object or a system."@en .
+change:type a rdf:Property ;
+    rdfs:domain change:Change ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "type" ;
+    rdfs:comment "Type of change, ex: Physical, Mental, Environmental, etc."@en .
+change:hasInitiator a rdf:Property ;
+    rdfs:domain change:Change ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "has initiator" ;
+    rdfs:comment "The entity that initiates the change."@en .
+change:hasAffectedObject a rdf:Property ;
+    rdfs:domain change:Change ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "has affected object" ;
+    rdfs:comment "The entity that is affected by the change."@en .
+change:hasStartTime a rdf:Property ;
+    rdfs:domain change:Change ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has start time" ;
+    rdfs:comment "The time at which the change starts."@en .
+change:hasEndTime a rdf:Property ;
+    rdfs:domain change:Change ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has end time" ;
+    rdfs:comment "The time at which the change ends."@en .

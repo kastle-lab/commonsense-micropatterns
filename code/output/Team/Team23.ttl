@@ -1,0 +1,20 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<http://example.com/team1> rdf:type foaf:Group ;
+    foaf:name "Team One" ;
+    foaf:member <http://example.com/person1>,                <http://example.com/person2>,                <http://example.com/person3> .
+<http://example.com/person1> rdf:type foaf:Person ;
+    foaf:name "Person A" ;
+    foaf:holdsAccount <http://example.com/role1> .
+<http://example.com/person2> rdf:type foaf:Person ;
+    foaf:name "Person B" ;
+    foaf:holdsAccount <http://example.com/role2> .
+<http://example.com/person3> rdf:type foaf:Person ;
+    foaf:name "Person C" ;
+    foaf:holdsAccount <http://example.com/role3> .
+<http://example.com/role1> rdf:type foaf:OnlineAccount ;
+    foaf:accountName "Role 1".
+<http://example.com/role2> rdf:type foaf:OnlineAccount ;
+    foaf:accountName "Role 2".
+<http://example.com/role3> rdf:type foaf:OnlineAccount ;
+    foaf:accountName "Role 3".

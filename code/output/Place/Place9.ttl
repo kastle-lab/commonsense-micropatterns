@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix place: <http://www.example.org/place#> .
+place:Place rdf:type owl:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:comment "A location, which may be physical or virtual"@en .
+place:City rdf:type owl:Class ;
+    rdfs:subClassOf place:Place ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A large and permanent human settlement"@en .
+place:Country rdf:type owl:Class ;
+    rdfs:subClassOf place:Place ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A region that is identified as a distinct entity in political geography"@en .
+place:hasLocation rdf:type owl:ObjectProperty ;
+    rdfs:label "has location"@en ;
+    rdfs:comment "Relates a Place to its specific geographical coordinates"@en ;
+    rdfs:domain place:Place ;
+    rdfs:range place:GeographicalCoordinates.place:isLocatedIn rdf:type owl:ObjectProperty ;
+    rdfs:label "is located in"@en ;
+    rdfs:comment "Relates a Place to the larger Place that contains it"@en ;
+    rdfs:domain place:Place ;
+    rdfs:range place:Place.place:GeographicalCoordinates rdf:type owl:Class ;
+    rdfs:label "Geographical coordinates"@en ;
+    rdfs:comment "A point's geographical coordinates expressed in latitude and longitude"@en .
+place:latitude rdf:type owl:DatatypeProperty ;
+    rdfs:label "latitude"@en ;
+    rdfs:comment "The latitude of a geographical coordinates"@en ;
+    rdfs:domain place:GeographicalCoordinates ;
+    rdfs:range xsd:decimal.place:longitude rdf:type owl:DatatypeProperty ;
+    rdfs:label "longitude"@en ;
+    rdfs:comment "The longitude of a geographical coordinates"@en ;
+    rdfs:domain place:GeographicalCoordinates ;
+    rdfs:range xsd:decimal.

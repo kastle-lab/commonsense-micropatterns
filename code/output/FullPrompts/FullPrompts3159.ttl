@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Team rdf:type rdfs:Class ;
+    rdfs:label "Team"@en ;
+    rdfs:comment "A group of individuals who cooperate to achieve a common goal."@en .
+ex:hasMember rdf:type rdf:Property ;
+    rdfs:label "has member"@en ;
+    rdfs:comment "Relates a team to a person who is a member of the team."@en ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Person .
+ex:hasCoach rdf:type rdf:Property ;
+    rdfs:label "has coach"@en ;
+    rdfs:comment "Relates a team to its coach."@en ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Person .
+ex:playsSport rdf:type rdf:Property ;
+    rdfs:label "plays sport"@en ;
+    rdfs:comment "Relates a team to the sport it plays."@en ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Sport .
+ex:Person rdf:type rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "An individual person."@en .
+ex:Sport rdf:type rdfs:Class ;
+    rdfs:label "Sport"@en ;
+    rdfs:comment "A type of sport."@en .

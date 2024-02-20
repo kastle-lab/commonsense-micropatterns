@@ -1,0 +1,27 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix car: <http://example.org/car#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+car:Car a rdfs:Class ;
+    rdfs:label "Car"@en ;
+    rdfs:comment "A motor vehicle with four wheels;
+ usually propelled by an internal combustion engine"@en .
+car:hasModel a rdf:Property ;
+    rdfs:label "has model"@en ;
+    rdfs:comment "The model of the car"@en ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:string .
+car:hasManufacturer a rdf:Property ;
+    rdfs:label "has manufacturer"@en ;
+    rdfs:comment "The manufacturer of the car"@en ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:string .
+car:hasProductionYear a rdf:Property ;
+    rdfs:label "has production year"@en ;
+    rdfs:comment "The year the car was produced"@en ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:integer .
+car:hasColor a rdf:Property ;
+    rdfs:label "has color"@en ;
+    rdfs:comment "The color of the car"@en ;
+    rdfs:domain car:Car ;
+    rdfs:range xsd:string .

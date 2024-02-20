@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lot: <http://example.com/lot#> .
+lot:Lot rdfs:subClassOf rdfs:Resource .
+lot:hasArea    rdf:type rdf:Property ;
+    rdfs:domain lot:Lot ;
+    rdfs:range xsd:decimal .
+    lot:hasAddress    rdf:type rdf:Property ;
+    rdfs:domain lot:Lot ;
+    rdfs:range rdfs:Literal .
+    lot:isVacant    rdf:type rdf:Property ;
+    rdfs:domain lot:Lot ;
+    rdfs:range xsd:boolean .

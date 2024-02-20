@@ -1,0 +1,5 @@
+@prefix ex: <http://example.org/> .
+ex:Face a owl:Class .
+ex:hasFace a owl:ObjectProperty ;
+        rdfs:domain ex:Person ;
+        rdfs:range ex:Face .

@@ -1,0 +1,32 @@
+ We use RDF, RDFS, and OWL vocabularies for defining the concepts.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.com#> .
+:Place     rdf:type rdfs:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A class representing a physical location or geographical entity" .
+:hasName     rdf:type owl:DatatypeProperty ;
+    rdfs:label "has name" ;
+    rdfs:comment "The name of the place" ;
+    rdfs:domain :Place ;
+    rdfs:range xsd:string .
+:hasLocation     rdf:type owl:ObjectProperty ;
+    rdfs:label "has location" ;
+    rdfs:comment "The specific geographical coordinate of a place" ;
+    rdfs:domain :Place ;
+    rdfs:range :Coordinate .
+:Coordinate     rdf:type rdfs:Class ;
+    rdfs:label "Coordinate" ;
+    rdfs:comment "A class representing a geographic coordinate system, typically including latitude and longitude" .
+:hasLatitude     rdf:type owl:DatatypeProperty ;
+    rdfs:label "has latitude" ;
+    rdfs:comment "The latitude of a coordinate" ;
+    rdfs:domain :Coordinate ;
+    rdfs:range xsd:decimal .
+:hasLongitude     rdf:type owl:DatatypeProperty ;
+    rdfs:label "has longitude" ;
+    rdfs:comment "The longitude of a coordinate" ;
+    rdfs:domain :Coordinate ;
+    rdfs:range xsd:decimal .

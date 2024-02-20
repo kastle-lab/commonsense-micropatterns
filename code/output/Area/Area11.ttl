@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Area a rdfs:Class ;
+    rdfs:label "Area" ;
+    rdfs:comment "The Class of all areas" .
+ex:length a rdf:Property ;
+    rdfs:domain ex:Area ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "length" ;
+    rdfs:comment "The lengths of an area" .
+ex:width a rdf:Property ;
+    rdfs:domain ex:Area ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "width" ;
+    rdfs:comment "The widths of an area" .
+ex:AreaOfSquare a ex:Area ;
+    ex:length "5.2"^^xsd:decimal ;
+    ex:width "5.2"^^xsd:decimal .
+ex:AreaOfRectangle a ex:Area ;
+    ex:length "10.6"^^xsd:decimal ;
+    ex:width "7.3"^^xsd:decimal .

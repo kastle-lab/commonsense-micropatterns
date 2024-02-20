@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.org/ontology/Word> .
+<#Word> rdf:type owl:Class ;
+  rdfs:label "Word" ;
+  rdfs:comment "A unit of human language." .
+<#Spelling> rdf:type owl:DatatypeProperty ;
+  rdfs:label "spelling" ;
+  rdfs:comment "The letters that make up a word in a written language." ;
+  rdfs:domain <#Word> ;
+  rdfs:range xsd:string .
+<#Length> rdf:type owl:DatatypeProperty ;
+  rdfs:label "length" ;
+  rdfs:comment "The number of letters in a word." ;
+  rdfs:domain <#Word> ;
+  rdfs:range xsd:integer .
+<#PartOfSpeech> rdf:type owl:ObjectProperty ;
+  rdfs:label "part of speech" ;
+  rdfs:comment "The function of a word in a sentence." ;
+  rdfs:domain <#Word> ;
+  rdfs:range <#PartOfSpeechClass> .
+<#PartOfSpeechClass> rdf:type owl:Class ;
+  rdfs:label "Part of Speech" ;
+  rdfs:comment "The grammatical categories into which words can be put." .
+<#PartOfSpeechClass/Noun> rdf:type <#PartOfSpeechClass> ;
+  rdfs:label "Noun" ;
+  rdfs:comment "A word that represents a person, place, thing, or idea." .
+<#PartOfSpeechClass/Verb> rdf:type <#PartOfSpeechClass> ;
+  rdfs:label "Verb" ;
+  rdfs:comment "A word that represents an action or a state of being." .

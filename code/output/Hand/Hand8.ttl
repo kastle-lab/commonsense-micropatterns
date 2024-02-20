@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ont: <http://www.example.org/ontology#> .
+ont:Hand rdf:type owl:Class ;
+    rdfs:subClassOf ont:BodyPart ;
+    rdfs:label "Hand"@en ;
+    rdfs:comment "A part of a person's body that is used to grasp, hold, or manipulate objects."@en .
+ont:hasFingers rdf:type owl:DatatypeProperty ;
+    rdfs:domain ont:Hand ;
+    rdfs:range xsd:nonNegativeInteger ;
+    rdfs:label "has fingers"@en ;
+    rdfs:comment "A property indicating the number of fingers on a hand."@en .
+ont:hasThumb rdf:type owl:DatatypeProperty ;
+    rdfs:domain ont:Hand ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "has thumb"@en ;
+    rdfs:comment "A property indicating whether a hand has a thumb."@en .
+ont:CanGrasp rdf:type owl:ObjectProperty ;
+    rdfs:domain ont:Hand ;
+    rdfs:range ont:Object ;
+    rdfs:label "can grasp"@en ;
+    rdfs:comment "A property indicating whether a hand can grasp an object."@en .

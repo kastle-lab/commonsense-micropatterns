@@ -1,0 +1,5 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<http://example.org/ontology/way> a rdfs:Class ;
+    rdfs:label "Way"@en ;
+    rdfs:comment "A method, style, or manner of doing something or the direction from which someone comes or go"@en .

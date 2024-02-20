@@ -1,0 +1,25 @@
+@prefix : <http://example.com/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Way a rdfs:Class ;
+    rdfs:label "Way"@en ;
+    rdfs:comment "A path or route that can be used to go from one place to another"@en.:Way hasProperty :isPath .
+:Way hasProperty :isRoute .
+:isPath a owl:ObjectProperty ;
+    rdfs:range :Way ;
+    rdfs:domain :Way ;
+    rdfs:label "is path"@en ;
+    rdfs:comment "Indicates if an instance of Way serves as a path."@en.:isRoute a owl:ObjectProperty ;
+    rdfs:range :Way ;
+    rdfs:domain :Way;
+    rdfs:label "is route"@en;
+    rdfs:comment "Indicates if an instance of Way serves as a route."@en.:Journey a rdfs:Class ;
+    rdfs:label "Journey"@en ;
+    rdfs:comment "An act of traveling from one place to another"@en ;
+    rdfs:subClassOf :Way .
+:Way partOf :Journey.:wayID a owl:DatatypeProperty ;
+    rdfs:domain :Way ;
+    rdfs:range xsd:string ;
+    rdfs:label "way identifier"@en ;
+    rdfs:comment "A unique identifier for a Way."@en.

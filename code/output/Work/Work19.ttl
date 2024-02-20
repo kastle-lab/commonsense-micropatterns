@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http://www.example.org/work#> .
+work:Job a rdfs:Class ;
+    rdfs:label "Job"@en ;
+    rdfs:comment "A type of work that an individual has."@en .
+work:Employer a rdfs:Class ;
+    rdfs:label "Employer"@en ;
+    rdfs:comment "An entity that employs people."@en .
+work:Employee a rdfs:Class ;
+    rdfs:label "Employee"@en ;
+    rdfs:comment "An individual who is employed by an employer."@en .
+work:hasJob a rdf:Property ;
+    rdfs:domain work:Employee ;
+    rdfs:range work:Job ;
+    rdfs:comment "Indicates the job that an employee has."@en .
+work:employs a rdf:Property ;
+    rdfs:domain work:Employer ;
+    rdfs:range work:Employee ;
+    rdfs:comment "Indicates the individuals that an employer employs."@en .
+work:hasEmployer a rdf:Property ;
+    rdfs:domain work:Employee ;
+    rdfs:range work:Employer ;
+    rdfs:comment "Indicates the employer of an employee."@en .
+work:hasEmployee a rdf:Property ;
+    rdfs:domain work:Employer ;
+    rdfs:range work:Employee ;
+    rdfs:comment "Indicates the employees of an employer."@en .

@@ -1,0 +1,29 @@
+@prefix : <http://example.org/hoursOntology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+: a owl:Ontology ;
+    rdfs:comment "An ontology describing hours in a day"@en .
+:Hour rdf:type rdfs:Class ;
+    rdfs:comment "Represents an hour in a day"@en ;
+    rdfs:subClassOf rdfs:Resource .
+:hasNumber rdf:type rdf:Property ;
+    rdfs:comment "Property representing the numerical value of the hour"@en ;
+    rdfs:domain :Hour ;
+    rdfs:range xsd:int .
+:isPartOfDay rdf:type rdf:Property ;
+    rdfs:comment "Property indicating what part of the day an hour belongs to. Can be: Morning, Afternoon, Evening, Night"@en ;
+    rdfs:domain :Hour ;
+    rdfs:range :PartOfDay .
+:PartOfDay rdf:type rdfs:Class ;
+    rdfs:comment "Represents a part of the day. Can be: Morning, Afternoon, Evening, Night"@en ;
+    rdfs:subClassOf rdfs:Resource .
+:Morning rdf:type :PartOfDay ;
+    rdfs:comment "The morning part of the day"@en .
+:Afternoon rdf:type :PartOfDay ;
+    rdfs:comment "The afternoon part of the day"@en .
+:Evening rdf:type :PartOfDay ;
+    rdfs:comment "The evening part of the day"@en .
+:Night rdf:type :PartOfDay ;
+    rdfs:comment "The night part of the day"@en .

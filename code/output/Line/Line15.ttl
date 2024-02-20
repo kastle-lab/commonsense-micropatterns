@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix line: <http://www.example.org/ontology/line#> .
+line:Line a rdfs:Class ;
+    rdfs:label "Line" ;
+    rdfs:comment "A straight one-dimensional figure with no thickness and extends infinitely in both directions." .
+line:startPoint a rdf:Property ;
+    rdfs:label "has start point" ;
+    rdfs:comment "The starting point of a line." ;
+    rdfs:domain line:Line ;
+    rdfs:range line:Point .
+line:endPoint a rdf:Property ;
+    rdfs:label "has end point" ;
+    rdfs:comment "The ending point of a line." ;
+    rdfs:domain line:Line ;
+    rdfs:range line:Point .
+line:Point a rdfs:Class ;
+    rdfs:label "Point" ;
+    rdfs:comment "A basic concept in geometry. A point is an exact location." .
+line:hasXYCoordinates a rdf:Property ;
+    rdfs:label "has XY coordinates" ;
+    rdfs:domain line:Point ;
+    rdfs:range xsd:string .

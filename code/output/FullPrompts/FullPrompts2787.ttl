@@ -1,0 +1,19 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Service a rdfs:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:comment "A generic concept of a service provided by an entity"@en .
+ex:ServiceProvider a rdfs:Class ;
+    rdfs:label "Service Provider"@en ;
+    rdfs:comment "An entity that provides a service"@en .
+ex:provides a rdf:Property ;
+    rdfs:domain ex:ServiceProvider ;
+    rdfs:range ex:Service ;
+    rdfs:label "provides"@en ;
+    rdfs:comment "Indicates that a Service Provider provides a specific Service"@en .
+ex:ServiceProvider1 a ex:ServiceProvider ;
+    ex:provides ex:Service1 .
+    ex:Service1 a ex:Service .

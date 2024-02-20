@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix body: <http://www.example.org/body#> .
+body:Body rdf:type owl:Class ;
+    rdfs:label "Body"@en ;
+    rdfs:comment "Physical human body"@en .
+body:Head rdf:type owl:Class ;
+    rdfs:subClassOf body:Body ;
+    rdfs:label "Head"@en ;
+    rdfs:comment "Upper part of the human body"@en .
+    body:Torso rdf:type owl:Class ;
+    rdfs:subClassOf body:Body ;
+    rdfs:label "Torso"@en ;
+    rdfs:comment "The midsection or main part of the human body"@en .
+    body:LowerExtremity rdf:type owl:Class ;
+    rdfs:subClassOf body:Body ;
+    rdfs:label "Lower Extremity"@en ;
+    rdfs:comment "The lower limb of the human body, including the hip, thigh, knee, lower leg, ankle, and foot"@en .
+    body:UpperExtremity rdf:type owl:Class ;
+    rdfs:subClassOf body:Body ;
+    rdfs:label "Upper Extremity"@en ;
+    rdfs:comment "The upper limb of the human body, including the shoulder, upper arm, elbow, forearm, wrist, and hand"@en .
+body:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:domain body:Body ;
+    rdfs:range body:Body ;
+    rdfs:label "has part"@en ;
+    rdfs:comment "Indicates that a certain body part is a part of another body part"@en .
+body:Head body:hasPart body:Brain .
+body:Head body:hasPart body:Eyes .
+body:Torso body:hasPart body:Heart .
+body:UpperExtremity body:hasPart body:Hands .
+body:LowerExtremity body:hasPart body:Foot .

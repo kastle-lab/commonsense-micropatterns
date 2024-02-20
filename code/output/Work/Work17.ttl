@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+<http://example.com/ontology/Work>  rdf:type owl:Ontology ;
+  rdfs:comment "Ontology for the domain of Work" .
+schema:JobPosting  rdf:type rdfs:Class ;
+  rdfs:subClassOf schema:Work ;
+  rdfs:comment "A listing that describes a job opening" .
+  schema:Employee  rdf:type rdfs:Class ;
+  rdfs:subClassOf schema:Work ;
+  rdfs:comment "An individual who provides work to a organization" .
+schema:Employer  rdf:type rdfs:Class ;
+  rdfs:subClassOf schema:Work ;
+  rdfs:comment "An organization or individual that hires employees" .
+schema:Organization  rdf:type rdfs:Class ;
+  rdfs:subClassOf schema:Work ;
+  rdfs:comment "An organized body of people with a common function" .
+schema:hasJobPosting  rdf:type owl:ObjectProperty ;
+  rdfs:domain schema:Organization ;
+  rdfs:range schema:JobPosting ;
+  rdfs:comment "A property indicating job postings of an organization" .
+schema:employedBy  rdf:type owl:ObjectProperty ;
+  rdfs:domain schema:Employee ;
+  rdfs:range schema:Organization ;
+  rdfs:comment "A property indicating the organization that an employee works for" .
+schema:employs  rdf:type owl:ObjectProperty ;
+  rdfs:domain schema:Employer ;
+  rdfs:range schema:Employee ;
+  rdfs:comment "A property indicating the employees who work for an employer" .

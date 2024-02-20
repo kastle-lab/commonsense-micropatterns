@@ -1,0 +1,26 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:Minute a rdfs:Class ;
+    rdfs:label "Minute"@en ;
+    rdfs:subClassOf time:TemporalUnit ;
+    rdfs:comment "Unit of temporal duration"@en ;
+    rdfs:seeAlso time:TemporalUnit .
+time:hasDurationDescription a rdf:Property ;
+    rdfs:label "has duration description"@en ;
+    rdfs:comment "Relationship between a temporal entity and its description"@en ;
+    rdfs:domain time:TemporalEntity ;
+    rdfs:range time:DurationDescription .
+    time:DurationDescription a rdfs:Class ;
+    rdfs:label "Duration Description"@en ;
+    rdfs:comment "Description of duration of a temporal entity"@en ;
+    rdfs:subClassOf time:TemporalEntity .
+time:hasNumericValue a rdf:Property ;
+    rdfs:label "has numeric value"@en ;
+    rdfs:comment "Numeric value of a duration"@en ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain time:DurationDescription .
+time:hasTimeUnit a rdf:Property ;
+    rdfs:label "has time unit"@en ;
+    rdfs:comment "Unit of time of a duration"@en ;
+    rdfs:range time:TemporalUnit ;
+    rdfs:domain time:DurationDescription .

@@ -1,0 +1,33 @@
+@prefix way: <http://example.org/way#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+way:    rdf:type rdfs:Class ;
+    rdfs:label "Way"@en ;
+    rdfs:comment "The concept of Way in various contexts"@en .
+way:PathWay    rdf:type rdfs:Class ;
+    rdfs:subClassOf way: ;
+    rdfs:label "PathWay"@en ;
+    rdfs:comment "A way in the context of transportation or traveling"@en .
+    way:ModeOfThinking    rdf:type rdfs:Class ;
+    rdfs:subClassOf way: ;
+    rdfs:label "ModeOfThinking"@en ;
+    rdfs:comment "A way in the context of thinking or perception"@en .
+way:Method    rdf:type rdfs:Class ;
+    rdfs:subClassOf way: ;
+    rdfs:label "Method"@en ;
+    rdfs:comment "A way in the context of executing or doing something"@en .
+    way:length    rdf:type rdf:Property ;
+    rdfs:domain way:PathWay ;
+    rdfs:range xsd:float ;
+    rdfs:label "length"@en ;
+    rdfs:comment "The length of the way or route"@en .
+    way:complexity    rdf:type rdf:Property ;
+    rdfs:domain way:ModeOfThinking ;
+    rdfs:range xsd:string ;
+    rdfs:label "complexity"@en ;
+    rdfs:comment "The complexity of a perception or thinking process"@en .
+way:efficiency    rdf:type rdf:Property ;
+    rdfs:domain way:Method ;
+    rdfs:range xsd:float ;
+    rdfs:label "efficiency"@en ;
+    rdfs:comment "The efficiency of a method or process"@en .

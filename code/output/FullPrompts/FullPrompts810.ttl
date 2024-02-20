@@ -1,0 +1,29 @@
+@prefix : <http://example.org/> .
+:government a :Government ;
+  :governmentName "Government Name" ;
+  :hasDivision :executive, :legislative, :judicial ;
+  :hasLeaders :president, :vicePresident, :cabinet .
+:executive a :Division ;
+  :divisionName "Executive" ;
+  :hasResponsibility "Enforcing laws" ;
+  :isHeadedBy :president .
+  :legislative a :Division ;
+  :divisionName "Legislative" ;
+  :hasResponsibility "Making laws" ;
+  :isHeadedBy :congress, :senate .
+:judicial a :Division ;
+  :divisionName "Judicial" ;
+  :hasResponsibility "Interpreting laws" ;
+  :isHeadedBy :supremeCourt .
+:president a :Leader ;
+  :leaderName "President's Name" .
+  :vicePresident a :Leader ;
+  :leaderName "Vice President's Name" .
+  :cabinet a :Leader ;
+  :leaderName "Cabinet's Name" .
+:congress a :Leader ;
+  :leaderName "Congress's Name" .
+ :senate a :Leader ;
+  :leaderName "Senate's Name" .
+  :supremeCourt a :Leader ;
+  :leaderName "Supreme Court's Name" .

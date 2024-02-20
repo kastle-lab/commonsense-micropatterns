@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/country#> .
+:Country a rdfs:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A class to represent countries."@en .
+:hasPopulation a rdf:Property ;
+    rdfs:label "has population"@en ;
+    rdfs:comment "The total number of people that live in a country."@en ;
+    rdfs:domain :Country ;
+    rdfs:range rdf:nonNegativeInteger .
+:hasCapital a rdf:Property ;
+    rdfs:label "has capital"@en ;
+    rdfs:comment "The city that is the seat of government of a country."@en ;
+    rdfs:domain :Country .
+:hasCurrency a rdf:Property ;
+    rdfs:label "has currency"@en ;
+    rdfs:comment "The type of money that a country uses."@en ;
+    rdfs:domain :Country .

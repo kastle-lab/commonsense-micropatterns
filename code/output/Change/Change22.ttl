@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/> .
+:Change rdf:type owl:Class ;
+    rdfs:label "Change" ;
+    rdfs:comment "Represent the concept of change or transformation" .
+:hasChange rdf:type owl:ObjectProperty ;
+    rdfs:label "has change" ;
+    rdfs:comment "Property representing the change or transformation that occurs" ;
+    rdfs:domain :Entity ;
+    rdfs:range :Change .
+:Entity rdf:type owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "Something that undergoes a change or transformation" .

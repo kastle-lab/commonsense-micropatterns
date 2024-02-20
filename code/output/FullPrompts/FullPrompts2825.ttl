@@ -1,0 +1,5 @@
+@prefix : <http://example.org/friends/> .
+:John a :Person ;
+    :friendOf :Alex .
+:Alex a :Person ;
+    :friendOf :John .

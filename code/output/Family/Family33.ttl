@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix family: <http://example.org/family#> .
+family:Family rdf:type rdfs:Class .
+family:hasMember rdf:type rdf:Property ;
+    rdfs:domain family:Family ;
+    rdfs:range family:Person .
+family:Person rdf:type rdfs:Class ;
+    rdfs:subClassOf [        rdf:type owl:Restriction ;
+        owl:onProperty family:isMemberOf ;
+        owl:someValuesFrom family:Family    ] .
+family:isMemberOf rdf:type rdf:Property ;
+    rdfs:domain family:Person ;
+    rdfs:range family:Family .
+ family:hasParent rdf:type rdf:Property ;
+    rdfs:domain family:Person ;
+    rdfs:range family:Person .
+family:hasChild rdf:type rdf:Property ;
+    rdfs:domain family:Person ;
+    rdfs:range family:Person .

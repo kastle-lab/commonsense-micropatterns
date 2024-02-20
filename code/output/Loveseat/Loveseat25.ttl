@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ ex:Loveseat a rdfs:Class ;
+  rdfs:label "Loveseat"@en ;
+  rdfs:comment "A type of sofa designed to seat two people, often in a comfortable or intimate arrangement."@en .

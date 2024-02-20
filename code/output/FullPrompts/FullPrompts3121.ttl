@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:President rdf:type rdfs:Class .
+ex:servedAs rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:President .
+ex:countryLead rdf:type rdf:Property ;
+    rdfs:domain ex:President ;
+    rdfs:range ex:Country .
+    ex:firstLady rdf:type rdf:Property ;
+    rdfs:domain ex:President ;
+    rdfs:range ex:FirstLady .
+ex:termStart rdf:type rdf:Property ;
+    rdfs:domain ex:President ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The start of President's term."@en .
+ex:termEnd rdf:type rdf:Property ;
+    rdfs:domain ex:President ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The end of President's term."@en .

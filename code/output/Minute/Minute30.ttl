@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix ex: <http://www.example.com/time#> .
+ex:Minute a rdfs:Class ;
+            rdfs:label "Minute"@en ;
+           rdfs:subClassOf time:TemporalUnit ;
+           rdfs:comment "A unit of time that is equal to 60 seconds or 1/60th of an hour."@en .
+           ex:TimeEntity a rdfs:Class ;
+              rdfs:label "Time Entity"@en ;
+              rdfs:comment "An entity representing a time" .
+ex:hasDuration a rdf:Property ;
+             rdfs:domain ex:TimeEntity ;
+             rdfs:range ex:Minute ;
+             rdfs:label "has duration"@en ;
+             rdfs:comment "The duration of the Time Entity in terms of minutes."@en .
+ex:TimeEntity1 a ex:TimeEntity ;
+               ex:hasDuration "45"^^xsd:integer .

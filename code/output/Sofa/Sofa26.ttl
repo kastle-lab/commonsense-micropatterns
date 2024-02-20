@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Sofa rdf:type rdfs:Class .
+ex:color rdf:type rdf:Property ;
+  rdfs:domain ex:Sofa ;
+  rdfs:range xsd:string .
+ ex:material rdf:type rdf:Property ;
+  rdfs:domain ex:Sofa ;
+  rdfs:range xsd:string .
+ex:numberOfSeats rdf:type rdf:Property ;
+  rdfs:domain ex:Sofa ;
+  rdfs:range xsd:integer .
+ex:brand rdf:type rdf:Property ;
+  rdfs:domain ex:Sofa ;
+  rdfs:range xsd:string .
+ex:weight rdf:type rdf:Property ;
+  rdfs:domain ex:Sofa ;
+  rdfs:range xsd:decimal .
+ ex:price rdf:type rdf:Property ;
+  rdfs:domain ex:Sofa ;
+  rdfs:range xsd:decimal .

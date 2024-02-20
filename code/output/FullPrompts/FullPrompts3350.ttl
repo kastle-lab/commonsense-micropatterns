@@ -1,0 +1,7 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/back-provide#> .
+ex:Provider rdf:type rdf:Class .
+ex:Resource rdf:type rdf:Class .
+ex:provides rdf:type rdf:Property ;
+    rdf:domain ex:Provider ;
+    rdf:range ex:Resource .

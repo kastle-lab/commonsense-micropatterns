@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/home#> .
+:Home a rdfs:Class .
+:hasRooms a rdf:Property ;
+    rdfs:label "has rooms"@en ;
+    rdfs:domain :Home ;
+    rdfs:range :Room .
+:hasResidents a rdf:Property ;
+    rdfs:label "has residents"@en ;
+    rdfs:domain :Home ;
+    rdfs:range :Resident .
+:Resident a rdfs:Class .
+:livesIn a rdf:Property ;
+    rdfs:inverseOf :hasResidents ;
+    rdfs:domain :Resident ;
+    rdfs:range :Home .
+:Room a rdfs:Class .
+:locatedIn a rdf:Property ;
+    rdfs:inverseOf :hasRooms ;
+    rdfs:domain :Room ;
+    rdfs:range :Home .
+ :hasArea a rdf:Property ;
+    rdfs:label "has area"@en ;
+    rdfs:domain :Room ;
+    rdfs:range rdfs:Literal .
+:Address a rdfs:Class ;
+    rdfs:domain :Home ;
+    rdfs:range rdfs:Literal .
+:hasAddress a rdf:Property ;
+    rdfs:label "has address"@en ;
+    rdfs:domain :Home ;
+    rdfs:range :Address .

@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Class definitionex:President    rdf:type rdfs:Class ;
+    rdfs:comment "A person who holds the office of head of state in a presidential republic or who serves as the chief executive officer in other organizations." .
+# Property definitionex:hasPresident    rdf:type rdf:Property ;
+    rdfs:domain ex:Country ;
+    rdfs:range ex:President ;
+    rdfs:comment "A property that relates a country to its president." .
+# For example, individual representationex:BarackObama    rdf:type ex:President ;
+    rdfs:label "Barack Obama" .
+ex:USA    rdf:type ex:Country ;
+    rdfs:label "United States of America" ;
+    ex:hasPresident ex:BarackObama .

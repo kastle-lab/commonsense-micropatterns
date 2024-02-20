@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix airOntology: <http://www.example.com/airOntology#> .
+airOntology:{  airOntology:Air rdf:type rdfs:Class ;
+    rdfs:label "Air"@en ;
+    rdfs:comment "The invisible gaseous substance surrounding the earth, a mixture mainly of oxygen and nitrogen."@en .
+    airOntology:pollution rdf:type rdfs:Class ;
+    rdfs:label "Air Pollution"@en ;
+    rdfs:comment "Contamination of air by smoke and harmful gases."@en .
+  airOntology:quality rdf:type rdfs:Class ;
+    rdfs:label "Air Quality"@en ;
+    rdfs:comment "The degree to which the ambient air is pollution-free, assessed by measuring a number of indicators of pollution. It refers to the condition of the air in our surroundings."@en .
+  airOntology:composition rdf:type rdfs:Property ;
+    rdfs:label "Contains" ;
+    rdfs:comment "The chemical constituents present in air."@en ;
+    rdfs:domain airOntology:Air ;
+    rdfs:range xsd:string .
+  airOntology:effects rdf:type rdfs:Property ;
+    rdfs:label "Has effects" ;
+    rdfs:comment "The impacts or effects of air properties."@en ;
+    rdfs:domain airOntology:Air ;
+    rdfs:range airOntology:AirEffects .
+  airOntology:AirEffects rdf:type rdfs:Class ;
+    rdfs:label "Effects of Air" ;
+    rdfs:comment "A class representing different effects caused by air substances, including health and environmental effects."@en .
+  }

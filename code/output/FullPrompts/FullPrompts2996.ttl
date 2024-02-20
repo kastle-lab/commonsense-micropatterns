@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix member: <http://example.org/member/> .
+# Class Definitionsmember:Member rdf:type rdfs:Class ;
+     rdfs:label "Member" ;
+     rdfs:comment "A person who belongs to a group or an organization" .
+member:Organization rdf:type rdfs:Class ;
+     rdfs:label "Organization" ;
+     rdfs:comment "An organized group of people with a particular purpose, such as a business or government department" .
+                          member:Group rdf:type rdfs:Class ;
+     rdfs:label "Group" ;
+     rdfs:comment "A collection of individuals or entities" .
+                          # Property Definitions                          member:memberOf rdf:type owl:ObjectProperty ;
+     rdfs:label "member of" ;
+     rdfs:domain member:Member ;
+     rdfs:range member:Organization ;
+     rdfs:comment "The organization or group the person is a member of" .
+member:hasMember rdf:type owl:ObjectProperty ;
+     rdfs:label "has member" ;
+     rdfs:domain member:Organization ;
+     rdfs:range member:Member ;
+     rdfs:comment "The member that belongs to this organization or group" .
+# Data for specific individuals              member:Bob a member:Member ;
+     member:memberOf member:ChessClub .
+member:ChessClub a member:Organization ;
+     member:hasMember member:Bob .

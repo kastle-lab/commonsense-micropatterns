@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+law:Law rdf:type rdfs:Class ;
+    rdfs:comment "An enacted law or a legal act." .
+law:Case rdf:type rdfs:Class ;
+    rdfs:comment "A legal case or a lawsuit." .
+law:Statute rdf:type rdfs:Class ;
+    rdfs:comment "A formal written enactment by a legislative body." ;
+    rdf:subClassOf law:Law .
+law:Regulation rdf:type rdfs:Class ;
+    rdfs:comment "A rule or directive made and maintained by an authority." ;
+    rdf:subClassOf law:Law .
+law:isApplicableTo rdf:type rdf:Property ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Case ;
+    rdfs:comment "Represents the relationship between a law and a case to which it is applicable." .
+ law:hasCaseNumber rdf:type rdf:Property ;
+    rdfs:domain law:Case ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Represents the case number of a legal case or a lawsuit." .
+law:EnactingBody rdf:type rdfs:Class ;
+    rdfs:comment "A legislative body responsible for enacting a law" .
+law:hasEnactingBody rdf:type rdf:Property ;
+    rdfs:domain law:Law ;
+    rdfs:range law:EnactingBody ;
+    rdfs:comment "Represents the legislative body which enacted a law." .

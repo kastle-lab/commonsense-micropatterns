@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/> .
+:Hand rdf:type owl:Class ;
+    rdfs:label "Hand"@en ;
+    rdfs:subClassOf :BodyPart ;
+    rdfs:comment "Body part that is located at the end of the arm in humans"@en ;
+    :hasFingers :Finger.:Finger rdf:type owl:Class ;
+    rdfs:label "Finger"@en ;
+    rdfs:subClassOf :Hand ;
+    rdfs:comment "Each of the long, thin, separate parts of the hand, attached to the palm and used for holding and manipulating objects."@en.:BodyPart rdf:type owl:Class ;
+    rdfs:label "BodyPart"@en ;
+    rdfs:comment "Any part of an organism such as an organ or extremity"@en.:hasFingers rdf:type owl:ObjectProperty ;
+    rdfs:label "hasFingers"@en ;
+    rdfs:domain :Hand ;
+    rdfs:range :Finger ;
+    rdfs:comment "Relates a hand to its fingers"@en .

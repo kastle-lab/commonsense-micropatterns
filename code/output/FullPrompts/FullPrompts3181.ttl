@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:teamA rdf:type ex:Team ;
+    ex:hasName "Team A"^^xsd:string ;
+    ex:hasMember ex:player1, ex:player2, ex:player3 .
+ex:teamB rdf:type ex:Team ;
+    ex:hasName "Team B"^^xsd:string ;
+    ex:hasMember ex:player4, ex:player5 .
+ex:player1 rdf:type ex:Player ;
+    ex:hasName "Player 1"^^xsd:string .
+ex:player2 rdf:type ex:Player ;
+    ex:hasName "Player 2"^^xsd:string .
+ex:player3 rdf:type ex:Player ;
+    ex:hasName "Player 3"^^xsd:string .
+ex:player4 rdf:type ex:Player ;
+    ex:hasName "Player 4"^^xsd:string .
+ex:player5 rdf:type ex:Player ;
+    ex:hasName "Player 5"^^xsd:string .

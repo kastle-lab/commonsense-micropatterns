@@ -1,0 +1,24 @@
+@prefix ex: <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:System rdf:type rdfs:Class .
+ex:hardware rdf:type rdfs:Class .
+ex:software rdf:type rdfs:Class .
+ex:operatingSystem rdf:type ex:software .
+ex:applicationSoftware rdf:type ex:software .
+ex:hasHardware ex:system rdf:type rdf:Property ;
+                    rdfs:range ex:hardware ;
+                     rdfs:domain ex:system .
+ex:hasSoftware ex:system rdf:type rdf:Property ;
+                    rdfs:range ex:software ;
+                     rdfs:domain ex:system .
+ex:runsOn ex:software rdf:type rdf:Property ;
+             rdfs:range ex:hardware ;
+             rdfs:domain ex:software .
+ex:hasOS ex:system rdf:type rdf:Property ;
+              rdfs:range ex:operatingSystem ;
+               rdfs:domain ex:system .
+ex:hasApplicationSoftware ex:system rdf:type rdf:Property ;
+                          rdfs:range ex:applicationSoftware ;
+                           rdfs:domain ex:system .

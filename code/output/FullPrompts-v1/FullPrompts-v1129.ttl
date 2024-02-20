@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/day#> .
+:Day rdf:type owl:Class ;
+     rdfs:label "Day" ;
+     rdfs:comment "A class representing a day in general." .
+:hasDate rdf:type owl:DatatypeProperty ;
+         rdfs:label "hasDate" ;
+         rdfs:comment "The property that indicates the date of the day." ;
+         rdfs:domain :Day ;
+         rdfs:range xsd:date .
+:hasTemperature rdf:type owl:DatatypeProperty ;
+                rdfs:label "hasTemperature" ;
+                rdfs:comment "The property that indicates average temperature of the day." ;
+                rdfs:domain :Day ;
+                rdfs:range xsd:float .
+:hasWeatherCondition rdf:type owl:DatatypeProperty ;
+                     rdfs:label "hasWeatherCondition" ;
+                     rdfs:comment "The property that indicates weather condition of the day." ;
+                     rdfs:domain :Day ;
+                     rdfs:range xsd:string .

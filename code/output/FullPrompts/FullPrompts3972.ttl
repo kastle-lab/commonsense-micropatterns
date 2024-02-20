@@ -1,0 +1,21 @@
+@prefix : <http://ontology.example.com#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Defining "Moment" as a class : Moment rdf:type rdfs:Class .
+: Moment rdfs:label "Moment"@en .
+    : Moment rdfs:comment "A particular point in time"@en .
+# Defining "hasMoment" as a property: hasMoment rdf:type rdf:Property .
+: hasMoment rdfs:label "has moment"@en .
+: hasMoment rdfs:comment "Relates an entity to a moment it is associated with"@en .
+: hasMoment rdfs:domain :Entity .
+: hasMoment rdfs:range :Moment .
+# Defining "hasDateTime": hasDateTime rdf:type rdf:Property .
+: hasDateTime rdfs:label "has date time"@en .
+: hasDateTime rdfs:comment "Indicates the date and time of a moment"@en .
+: hasDateTime rdfs:domain :Moment .
+: hasDateTime rdfs:range rdfs:Literal .
+# Defining "hasTimeZone" : hasTimeZone rdf:type rdf:Property .
+: hasTimeZone rdfs:label "has time zone"@en .
+    : hasTimeZone rdfs:comment "Indicates the time zone of a moment"@en .
+: hasTimeZone rdfs:domain :Moment .
+: hasTimeZone rdfs:range rdfs:Literal .

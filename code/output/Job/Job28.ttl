@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix job: <http://example.org/job#> .
+job:Job rdfs:subClassOf owl:Thing ;
+        rdfs:label "Job"@en ;
+        rdfs:comment "An individual's role in society, often a task or duty performed for compensation"@en ;
+        rdfs:seeAlso <http://en.wikipedia.org/wiki/Job> .
+        job:hasTitle rdf:type owl:DatatypeProperty ;
+             rdfs:domain job:Job ;
+             rdfs:range xsd:string ;
+             rdfs:label "has title"@en ;
+             rdfs:comment "The title of the job"@en .
+             job:hasSalary rdf:type owl:DatatypeProperty ;
+              rdfs:domain job:Job ;
+              rdfs:range xsd:decimal ;
+              rdfs:label "has salary"@en ;
+              rdfs:comment "The salary of the job"@en .
+job:belongsToIndustry rdf:type owl:ObjectProperty ;
+                      rdfs:domain job:Job ;
+                      rdfs:range job:Industry ;
+                      rdfs:label "belongs to industry"@en ;
+                      rdfs:comment "The industry the job belongs to"@en .
+job:Industry rdfs:subClassOf owl:Thing ;
+             rdfs:label "Industry"@en ;
+             rdfs:comment "A specific realm of economic production"@en ;
+             rdfs:seeAlso <http://en.wikipedia.org/wiki/Industry> .

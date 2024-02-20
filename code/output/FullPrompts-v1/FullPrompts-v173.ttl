@@ -1,0 +1,11 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Year a rdfs:Class ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "Indicating calendar years"@en ;
+    rdfs:subClassOf xsd:integer .
+ex:Year2021 a ex:Year ;
+    rdfs:label "2021"@en ;
+    rdfs:comment "The year 2021"@en ;
+     ex:value "2021"^^xsd:integer .

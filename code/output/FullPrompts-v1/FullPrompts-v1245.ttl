@@ -1,0 +1,29 @@
+@prefix schema: <http://schema.org/> .
+# Defining some categories (classes or types) related to the world.:Earth a schema:Place ;
+  schema:name "Earth" ;
+  schema:description "The third planet in the solar system where all known life exists." .
+:Asia a schema:Continent ;
+  schema:name "Asia" ;
+  schema:geoWithin :Earth ;
+  schema:description "The largest continent on Earth, located primarily in the Eastern and Northern Hemispheres." .
+:Europe a schema:Continent ;
+  schema:name "Europe" ;
+  schema:geoWithin :Earth ;
+  schema:description "A continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere." .
+:Germany a schema:Country ;
+  schema:name "Germany" ;
+  schema:geoWithin :Europe ;
+  schema:description "A country in Central Europe." .
+# Defining some relationships (properties) related to the world.:MountEverest a schema:Mountain ;
+  schema:name "Mount Everest" ;
+  schema:geoWithin :Asia ;
+  schema:highestElevation 8848 ;
+  schema:description "The world's highest mountain, located in the Himalayas." .
+:RiverDanube a schema:River ;
+  schema:name "Danube River" ;
+  schema:geoWithin :Europe ;
+  schema:description "The second longest river in Europe." .
+:Berlin a schema:City ;
+  schema:name "Berlin" ;
+  schema:geoWithin :Germany ;
+  schema:description "The capital city of Germany." .

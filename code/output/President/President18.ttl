@@ -1,0 +1,27 @@
+@prefix : <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+      :President     rdf:type rdfs:Class ;
+    rdfs:label "President"@en ;
+    rdfs:comment "The head of a republic, typically representative of the people and elected by them"@en .
+:hasName     rdf:type rdf:Property ;
+    rdfs:domain :President ;
+    rdfs:range xsd:string ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "The name of the president"@en .
+:hasCountry     rdf:type rdf:Property ;
+    rdfs:domain :President ;
+    rdfs:range xsd:string ;
+    rdfs:label "has country"@en ;
+    rdfs:comment "The country of the president"@en .
+:hasTerm     rdf:type rdf:Property ;
+    rdfs:domain :President ;
+    rdfs:range xsd:string ;
+    rdfs:label "has term"@en ;
+    rdfs:comment "The term of the President"@en .
+:bornOn     rdf:type rdf:Property ;
+    rdfs:domain :President ;
+    rdfs:range xsd:date ;
+    rdfs:label "Born on"@en ;
+    rdfs:comment "The birth date of the president"@en .

@@ -1,0 +1,42 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/Day#> .
+:Day a owl:Class ;
+  rdfs:label "Day" ;
+  rdfs:comment "A period of 24 hours starting from 12:00 AM".
+  :startsAt a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:time ;
+  rdfs:label "starts at" ;
+  rdfs:comment "The time a day starts at".
+  :endsAt a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:time ;
+  rdfs:label "ends at" ;
+  rdfs:comment "The time a day ends at".
+  :hasDaylight a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "has daylight" ;
+  rdfs:comment "The day has a period of daylight".
+  :hasTemperature a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:float ;
+  rdfs:label "has temperature" ;
+  rdfs:comment "The average temperature during the day".
+  :hasHumidity a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:float ;
+  rdfs:label "has humidity" ;
+  rdfs:comment "The average humidity during the day".
+:hasSunrise a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:time ;
+  rdfs:label "has sunrise" ;
+  rdfs:comment "The time of sunrise during the day".
+  :hasSunset a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:time ;
+  rdfs:label "has sunset" ;
+  rdfs:comment "The time of sunset during the day".

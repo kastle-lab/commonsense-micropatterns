@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ont: <http://example.org/chair-ontology#> .
+ont:Chair rdf:type rdfs:Class ;
+rdfs:label "Chair"@en ;
+rdfs:comment "A seat typically having four legs and a back for one person"@en .
+ont:hasMaterial rdf:type rdf:Property ;
+rdfs:label "has material"@en ;
+rdfs:comment "The material that the chair is made from"@en ;
+rdfs:domain ont:Chair ;
+rdfs:range rdfs:Resource .
+ont:hasStyle rdf:type rdf:Property ;
+rdfs:label "has style"@en ;
+rdfs:comment "The style of the chair"@en ;
+rdfs:domain ont:Chair ;
+rdfs:range rdfs:Resource .
+ont:hasColor rdf:type rdf:Property ;
+rdfs:label "has color"@en ;
+rdfs:comment "The color of the chair"@en ;
+rdfs:domain ont:Chair ;
+rdfs:range xsd:string .
+ont:hasSize rdf:type rdf:Property ;
+rdfs:label "has size"@en ;
+rdfs:comment "The size of the chair"@en ;
+rdfs:domain ont:Chair ;
+rdfs:range xsd:string .
+ont:isFor rdf:type rdf:Property ;
+rdfs:label "is for"@en ;
+rdfs:comment "The intended user of the chair"@en ;
+rdfs:domain ont:Chair ;
+rdfs:range rdfs:Resource .

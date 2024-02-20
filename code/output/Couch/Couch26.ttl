@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix furniture: <http://example.com/furniture#> .
+furniture:Couch a owl:Class ;
+    rdfs:subClassOf furniture:Furniture ;
+    rdfs:label "Couch"@en ;
+    rdfs:comment "A piece of furniture for seating multiple people"@en .
+furniture:hasMaterial a owl:ObjectProperty ;
+    rdfs:domain furniture:Couch ;
+    rdfs:range furniture:Material ;
+    rdfs:label "has material"@en ;
+    rdfs:comment "The material a couch is made from"@en .
+furniture:hasColor a owl:DatatypeProperty ;
+    rdfs:domain furniture:Couch ;
+    rdfs:range xsd:string ;
+    rdfs:label "has color"@en ;
+    rdfs:comment "The color of the couch"@en .
+furniture:hasUpholstery a owl:ObjectProperty ;
+    rdfs:domain furniture:Couch ;
+    rdfs:range furniture:Upholstery ;
+    rdfs:label "has upholstery"@en ;
+    rdfs:comment "The upholstery used for the couch"@en .

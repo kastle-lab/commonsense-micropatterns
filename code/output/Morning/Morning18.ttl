@@ -1,0 +1,13 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.com/ontology#> .
+:Morning    a owl:Class ;
+    rdfs:label "Morning" ;
+    rdfs:comment "A period of time from sunrise to noon in the daily cycles." .
+:hasStartTime     a owl:DatatypeProperty ;
+    rdfs:label "has start time" ;
+    rdfs:domain :Morning ;
+    rdfs:range xsd:dateTime .
+:hasEndTime     a owl:DatatypeProperty ;
+    rdfs:label "has end time" ;
+    rdfs:domain :Morning ;
+    rdfs:range xsd:dateTime .

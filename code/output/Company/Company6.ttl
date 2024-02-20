@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Company a rdfs:Class ;
+  rdfs:comment "A class representing a company or a business entity."@en .
+ex:name a rdf:Property ;
+  rdfs:comment "The name of the company."@en ;
+  rdfs:domain ex:Company ;
+  rdfs:range xsd:string .
+ex:industry a rdf:Property ;
+  rdfs:comment "The industry in which the company operates."@en ;
+  rdfs:domain ex:Company ;
+  rdfs:range xsd:string .
+ex:location a rdf:Property ;
+  rdfs:comment "The location where the company is headquartered."@en ;
+  rdfs:domain ex:Company ;
+  rdfs:range xsd:string .
+ex:employeeCount a rdf:Property ;
+  rdfs:comment "The number of employees working in the company."@en ;
+  rdfs:domain ex:Company ;
+  rdfs:range xsd:integer .
+ex:CEO a rdf:Property ;
+  rdfs:comment "The Chief Executive Officer of the company."@en ;
+  rdfs:domain ex:Company ;
+  rdfs:range ex:Person .
+ex:Person a rdfs:Class ;
+  rdfs:comment "A class representing a person."@en .
+ex:personName a rdf:Property ;
+  rdfs:comment "The name of the person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+ex:personAge a rdf:Property ;
+  rdfs:comment "The age of the person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:integer .
+ex:personNationality a rdf:Property ;
+  rdfs:comment "The nationality of the person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .

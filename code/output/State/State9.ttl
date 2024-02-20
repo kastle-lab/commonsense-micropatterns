@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/ex#> .
+ex:State  a rdfs:Class ;
+  rdfs:label "State"^^xsd:string ;
+  rdfs:comment "A political division of a country, which has its own government"^^xsd:string .
+ex:hasName  a rdf:Property ;
+  rdfs:label "has name"^^xsd:string ;
+  rdfs:domain ex:State ;
+  rdfs:range xsd:string .
+ex:hasPopulation  a rdf:Property ;
+  rdfs:label "has population"^^xsd:string ;
+  rdfs:domain ex:State ;
+  rdfs:range xsd:integer .
+ex:hasCapital  a rdf:Property ;
+  rdfs:label "has capital"^^xsd:string ;
+  rdfs:domain ex:State ;
+  rdfs:range ex:City .
+ex:isPartOf  a rdf:Property ;
+  rdfs:label "is part of"^^xsd:string ;
+  rdfs:domain ex:State ;
+  rdfs:range ex:Country .
+ex:Country  a rdfs:Class ;
+  rdfs:label "Country"^^xsd:string ;
+  rdfs:comment "A nation with its own government, occupying a particular territory"^^xsd:string .
+ex:City  a rdfs:Class ;
+  rdfs:label "City"^^xsd:string ;
+  rdfs:comment "A large human settlement, which can serve as the capital of a state"^^xsd:string .

@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lot: <http://example.org/lot#> .
+lot:Lot rdf:type rdfs:Class ;
+  rdfs:label "Lot"@en ;
+  rdfs:comment "A lot is a designated area, usually in a parking lot or a real estate subdivision"@en .
+lot:hasSize rdf:type rdf:Property ;
+  rdfs:label "has size"@en ;
+  rdfs:comment "The size of a specific lot, could be in square footage or other area measurement"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range xsd:decimal .
+lot:hasLocation rdf:type rdf:Property ;
+  rdfs:label "has location"@en ;
+  rdfs:comment "The geographical location of a specific lot"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range xsd:string .
+lot:hasPrice rdf:type rdf:Property ;
+  rdfs:label "has price"@en ;
+  rdfs:comment "The rental or selling price of a specific lot"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range xsd:decimal .
+lot:isAvailable rdf:type rdf:Property ;
+  rdfs:label "is available"@en ;
+  rdfs:comment "A condition that identifies if a specific lot is available or not"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range xsd:boolean .
+lot:isDeveloped rdf:type rdf:Property ;
+  rdfs:label "is developed"@en ;
+  rdfs:comment "A condition that identifies if a specific lot is developed for purpose like residential or commercial"@en ;
+  rdfs:domain lot:Lot ;
+  rdfs:range xsd:boolean .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix power: <http://example.org/power#> .
+power:PowerConcept    a rdfs:Class ;
+    rdfs:label "Power Concept" ;
+    rdfs:comment "Class of all Power Concepts" .
+power:ElectricalPower    a rdfs:Class ;
+    rdfs:label "Electrical Power" ;
+    rdfs:subClassOf power:PowerConcept ;
+    rdfs:comment "Class of all electrical power concepts" .
+power:MechanicalPower    a rdfs:Class ;
+    rdfs:label "Mechanical Power" ;
+    rdfs:subClassOf power:PowerConcept ;
+    rdfs:comment "Class of all mechanical power concepts" .
+power:hasMagnitude    a rdf:Property ;
+    rdfs:label "has magnitude" ;
+    rdfs:domain power:PowerConcept ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Property for the magnitude of power" .
+power:hasUnit    a rdf:Property ;
+    rdfs:label "has unit" ;
+    rdfs:domain power:PowerConcept ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "Property for the unit of power" .
+power:isUsedIn    a rdf:Property ;
+    rdfs:label "is used in" ;
+    rdfs:domain power:PowerConcept ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "Property for the equipment or resource that uses the power concept" .

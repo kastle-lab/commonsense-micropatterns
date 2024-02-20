@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix comp: <http://www.example.com/company#> .
+comp:Company a rdfs:Class ;
+    rdfs:comment "A business corporation or firm" .
+comp:hasEmployee a rdf:Property ;
+    rdfs:domain comp:Company ;
+    rdfs:range comp:Employee ;
+    rdfs:comment "The company's employee" .
+comp:Employee a rdfs:Class ;
+    rdfs:comment "A person who works for the company" .
+comp:hasName a rdf:Property ;
+    rdfs:domain comp:Company ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the company" .
+comp:hasLocation a rdf:Property ;
+    rdfs:domain comp:Company ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The location of the company" .
+comp:hasRevenue a rdf:Property ;
+    rdfs:domain comp:Company ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The revenue of the company" .
+comp:hasCEO a rdf:Property ;
+    rdfs:domain comp:Company ;
+    rdfs:range comp:CEO ;
+    rdfs:comment "The CEO of the company" .
+comp:CEO a rdfs:Class ;
+    rdfs:comment "A person who is the highest-ranking executive in the company" .
+comp:CEO rdfs:subClassOf comp:Employee .

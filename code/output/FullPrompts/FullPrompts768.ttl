@@ -1,0 +1,24 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix case: <http://example.com/case#> .
+case:Case a rdfs:Class ;
+   rdfs:label "Case"@en ;
+   rdfs:comment "A case or instance of something to be examined, decided, or resolved."@en .
+case:hasCaseID a rdf:Property ;
+   rdfs:label "has Case ID"@en ;
+   rdfs:comment "The ID that is unique for each case."@en ;
+   rdfs:domain case:Case ;
+   rdfs:range xsd:string .
+case:hasCaseName a rdf:Property ;
+   rdfs:label "has Case Name"@en ;
+   rdfs:comment "The name of the case"@en ;
+   rdfs:domain case:Case ;
+   rdfs:range xsd:string .
+case:hasCaseStatus a rdf:Property ;
+   rdfs:label "has Case Status"@en ;
+   rdfs:comment "The status of the case. For example: Open, Closed, Pending etc."@en ;
+   rdfs:domain case:Case ;
+   rdfs:range case:CaseStatus .
+case:CaseStatus a rdfs:Class ;
+   rdfs:label "Case Status"@en ;
+   rdfs:comment "The status of a case."@en .

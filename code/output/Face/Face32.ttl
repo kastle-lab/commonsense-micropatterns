@@ -1,0 +1,13 @@
+ Here is a simple Turtle/RDF format representation.
+@prefix ex: <http://example.com/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Face a rdfs:Class .
+ex:hasEyes a rdf:Property ;
+   rdfs:domain ex:Face ;
+   rdfs:range ex:Eyes .
+ex:hasNose a rdf:Property ;
+   rdfs:domain ex:Face ;
+   rdfs:range ex:Nose .
+   ex:hasMouth a rdf:Property ;
+   rdfs:domain ex:Face ;
+   rdfs:range ex:Mouth .

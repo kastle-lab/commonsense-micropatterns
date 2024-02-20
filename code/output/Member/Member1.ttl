@@ -1,0 +1,25 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Member a rdfs:Class ;
+  rdfs:comment "A class representing a member of a group or organization" ;
+  rdfs:label "Member" .
+ex:memberID a rdf:Property ;
+  rdfs:domain ex:Member ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "Represents the unique ID of a member" ;
+  rdfs:label "memberID" .
+ex:memberName a rdf:Property ;
+  rdfs:domain ex:Member ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Represents the name of a member" ;
+  rdfs:label "memberName" .
+ex:memberOf a rdf:Property ;
+  rdfs:domain ex:Member ;
+  rdfs:range ex:Organization ;
+  rdfs:comment "Represents the organization a member belongs to" ;
+  rdfs:label "memberOf" .
+ex:Organization a rdfs:Class ;
+  rdfs:comment "A class representing an organization or group" ;
+  rdfs:label "Organization" .

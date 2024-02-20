@@ -1,0 +1,2 @@
+_:person    a foaf:Person ;
+    foaf:name "John Doe" .

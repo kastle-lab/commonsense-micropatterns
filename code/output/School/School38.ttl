@@ -1,0 +1,5 @@
+@prefix ex: <http://example.org#> .
+ex:School a rdfs:Class .
+ex:provides a rdf:Property ;
+    rdfs:domain ex:School ;
+    rdfs:range rdfs:Resource .

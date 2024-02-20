@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qa: <http://example.org/ontology/questionAnswering#> .
+qa:Question a rdfs:Class ;
+    rdfs:comment "A class representing a question."@en ;
+    rdfs:label "Question"@en .
+qa:hasQuestionText a rdf:Property ;
+    rdfs:comment "Representing the text of the question."@en ;
+    rdfs:label "has question text"@en ;
+    rdfs:domain qa:Question ;
+    rdfs:range xsd:string .
+qa:hasQuestionType a rdf:Property ;
+    rdfs:comment "Representing the type of the question."@en ;
+    rdfs:label "has question type"@en ;
+    rdfs:domain qa:Question ;
+    rdfs:subPropertyOf rdf:type .
+qa:QuestionType a rdfs:Class ;
+    rdfs:comment "A class representing a type of question."@en ;
+    rdfs:label "Question Type"@en .
+qa:QuestionType rdfs:subClassOf owl:Thing ;
+    owl:oneOf (qa:FactoidQuestion qa:YesNoQuestion qa:ListQuestion). qa:FactoidQuestion a qa:QuestionType ;
+    rdfs:label "Factoid question"@en .
+qa:YesNoQuestion a qa:QuestionType ;
+    rdfs:label "Yes/no question"@en .
+qa:ListQuestion a qa:QuestionType ;
+    rdfs:label "List question"@en .

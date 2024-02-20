@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.com/> .
+ex:Place a rdfs:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A location or area" .
+ex:hasAddress a rdf:Property ;
+    rdfs:domain ex:Place ;
+    rdfs:range ex:Address .
+ex:Address a rdfs:Class ;
+    rdfs:label "Address" ;
+    rdfs:comment "The specific location details for a place" .
+ex:StreetAddress a rdf:Property ;
+    rdfs:domain ex:Address ;
+    rdfs:range rdf:string .
+ex:City a rdf:Property ;
+    rdfs:domain ex:Address ;
+    rdfs:range rdf:string .
+ex:Country a rdf:Property ;
+    rdfs:domain ex:Address ;
+    rdfs:range rdf:string .

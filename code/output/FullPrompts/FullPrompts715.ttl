@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix my: <http://example.com/ontology#> .
+# Define ontology (IRI, preambles, etc.)<http://example.com/weekontology> rdf:type owl:Ontology ;
+    rdfs:label "Week Ontology" ;
+# Define classesmy:Week rdf:type rdfs:Class ;
+    rdfs:label "Week" ;
+# Define object properties my:hasDay rdf:type owl:ObjectProperty ;
+    rdfs:label "has day" ;
+    rdfs:domain my:Week ;
+    rdfs:range time:Day ;
+my:partOfWeek rdf:type owl:ObjectProperty ;
+    rdfs:label "part of week" ;
+    rdfs:domain time:Day ;
+    rdfs:range my:Week ;
+# Define Data propertiesmy:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:label "has name" ;
+    rdfs:domain my:Week ;
+    rdfs:range xsd:string ;
+# Define week instancesmy:Week1 rdf:type my:Week ;
+    my:hasName "First week of year" ;
+    my:hasDay time:Monday, time:Tuesday, time:Wednesday, time:Thursday, time:Friday, time:Saturday, time:Sunday ;
+my:Week2 rdf:type my:Week ;
+    my:hasName "Second week of year" ;
+    my:hasDay time:Monday, time:Tuesday, time:Wednesday, time:Thursday, time:Friday, time:Saturday, time:Sunday .

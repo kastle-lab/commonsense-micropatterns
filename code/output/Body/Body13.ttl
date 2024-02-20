@@ -1,0 +1,5 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bodyOnt: <http://example.org/BodyOntology#> .
+bodyOnt:Body rdf:type rdfs:Class .
+bodyOnt:Head rdf:type rdfs:Class ;

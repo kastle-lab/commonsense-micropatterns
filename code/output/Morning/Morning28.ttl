@@ -1,0 +1,5 @@
+@prefix ont: <http://www.ontologyexample.org#> .
+ont:Morning a owl:Class ;
+    rdfs:label "Morning"@en ;
+    rdfs:comment "The period of time from sunrise to noon"@en ;
+    rdfs:subClassOf ont:PartOfDay .

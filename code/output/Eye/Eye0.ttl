@@ -1,0 +1,41 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eye: <http://www.ontology.com/eye#> .
+eye:Eye a owl:Class ;
+    rdfs:label "Eye"@en ;
+    rdfs:comment "The organ of sight in humans and animals"@en .
+eye:Cornea a owl:Class ;
+    rdfs:subClassOf eye:Eye ;
+    rdfs:label "Cornea"@en ;
+    rdfs:comment "The transparent front part of the eye that covers the iris, pupil, and anterior chamber"@en .
+eye:Retina a owl:Class ;
+    rdfs:subClassOf eye:Eye ;
+    rdfs:label "Retina"@en ;
+    rdfs:comment "The light-sensitive layer of tissue, lining the inner surface of the eye"@en .
+eye:Color a owl:Class ;
+    rdfs:label "Eye colors"@en ;
+    rdfs:comment "The color of the iris"@en .
+eye:hasColor a rdf:Property;
+    rdfs:label "has color"@en ;
+    rdfs:comment "A property that defines the color of the iris"@en ;
+    rdfs:domain eye:Eye ;
+    rdfs:range eye:Color .
+eye:BlueColor a owl:Class ;
+    rdfs:subClassOf eye:Color ;
+    rdfs:label "Blue"@en ;
+    rdfs:comment "Blue color of the iris"@en .
+eye:GreenColor a owl:Class ;
+    rdfs:subClassOf eye:Color ;
+    rdfs:label "Green"@en ;
+    rdfs:comment "Green color of the iris"@en .
+eye:hasDisease a rdf:Property;
+    rdfs:label "has disease"@en ;
+    rdfs:comment "A property that defines if the eye has a disease"@en ;
+    rdfs:domain eye:Eye .
+eye:Glaucoma a owl:Class ;
+    rdfs:label "Glaucoma"@en ;
+    rdfs:comment "A disease that causes damage to the eye's optic nerve and can result in vision loss and blindness"@en .
+eye:Cataract a owl:Class ;
+    rdfs:label "Cataract"@en ;
+    rdfs:comment "A clouding of the lens in the eye that affects vision"@en .

@@ -1,0 +1,8 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/people#> .
+:Guy a :Person ;
+     :gender "Male"^^xsd:string ;
+     :age "32"^^xsd:integer ;
+     :fullName "Guy Fawkes"^^xsd:string ;
+     :birthPlace :London ;
+     :occupation :Activist .

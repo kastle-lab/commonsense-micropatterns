@@ -1,0 +1,9 @@
+@prefix ex: <http://example.org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Team a rdfs:Class .
+ex:team1 a ex:Team ;
+  ex:name "FC Example"^^xsd:string;
+  ex:hasMember ex:player1, ex:player2.ex:player1 a ex:Player;
+  ex:name "Player One"^^xsd:string.ex:player2 a ex:Player;
+  ex:name "Player Two"^^xsd:string.

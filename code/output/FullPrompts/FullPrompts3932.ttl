@@ -1,0 +1,27 @@
+ This represents a very simple ontology and it can be enhanced based on the specific relations, properties, and classes you need.Assuming that Guy, in this context, refers to a person, and the relevant features are `name`, `age` and `gender`.
+@prefix : <http://example.org/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Person a rdfs:Class ;
+        rdfs:label "Person"@en ;
+        rdfs:comment "The class of all persons."@en .
+:name a rdf:Property ;
+      rdfs:label "name"@en ;
+      rdfs:comment "The name of the person."@en ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:string .
+:age a rdf:Property ;
+     rdfs:label "age"@en ;
+     rdfs:comment "The age of the person."@en ;
+     rdfs:domain :Person ;
+     rdfs:range xsd:integer .
+:gender a rdf:Property ;
+        rdfs:label "gender"@en ;
+        rdfs:comment "The gender of the person"@en ;
+        rdfs:domain :Person ;
+        rdfs:range xsd:string .
+:Guy a :Person ;
+     :name "Guy"^^xsd:string ;
+     :age 30^^xsd:integer ;
+     :gender "Male"^^xsd:string .

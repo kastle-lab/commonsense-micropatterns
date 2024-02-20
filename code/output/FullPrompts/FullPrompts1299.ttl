@@ -1,0 +1,30 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http:/example.org/work#> .
+# Defining Classeswork:Work rdf:type owl:Class .
+work:Employment rdf:type owl:Class .
+work:Location rdf:type owl:Class .
+work:Role rdf:type owl:Class .
+# Defining Subclasseswork:FullTime rdf:type owl:Class ;
+    rdfs:subClassOf work:Employment .
+work:PartTime rdf:type owl:Class ;
+    rdfs:subClassOf work:Employment .
+# Defining Propertieswork:hasRole rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Role .
+work:atLocation rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Location .
+work:hasEmploymentType rdf:type owl:ObjectProperty ;
+    rdfs:domain work:Work ;
+    rdfs:range work:Employment .
+work:name rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Location ;
+    rdfs:range xsd:string .
+work:description rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Role ;
+    rdfs:range xsd:string .
+work:hoursPerWeek rdf:type owl:DatatypeProperty ;
+    rdfs:domain work:Employment ;
+    rdfs:range xsd:decimal .

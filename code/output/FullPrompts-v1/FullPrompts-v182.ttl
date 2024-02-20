@@ -1,0 +1,3 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:yearA ex:hasYear "2022"^^xsd:gYear .

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix life: <http://example.org/life#> .
+life:Life rdfs:subClassOf owl:Thing .
+life:Life rdfs:label "Life"@en ;
+          rdfs:comment "The biological state of living organisms"@en .
+life:Organism rdfs:subClassOf life:Life ;
+             rdfs:label "Organism"@en ;
+             rdfs:comment "Single living entity"@en .
+life:Species rdfs:subClassOf life:Life ;
+            rdfs:label "Species"@en ;
+            rdfs:comment "Group of living organisms capable of interbreeding"@en .
+            life:hasOrganism rdf:type owl:ObjectProperty ;
+                rdfs:label "has organism"@en ;
+                rdfs:comment "Link between Life and Organism"@en ;
+                rdfs:domain life:Life ;
+                rdfs:range life:Organism .
+life:hasSpecies rdf:type owl:ObjectProperty ;
+               rdfs:label "has species"@en ;
+               rdfs:comment "Link between Life and Species"@en ;
+               rdfs:domain life:Life ;
+               rdfs:range life:Species .

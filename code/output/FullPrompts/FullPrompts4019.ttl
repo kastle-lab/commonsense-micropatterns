@@ -1,0 +1,15 @@
+    rdfs:subClassOf ex:Matter ;
+    rdfs:label "Air" ;
+    rdfs:comment "A substance that forms the Earth's atmosphere" .
+    ex:Matter rdf:type owl:Class ;
+    rdfs:label "Matter" ;
+    rdfs:comment "Anything that has mass and occupies space" .
+ex:hasComponent rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Air ;
+    rdfs:range ex:Gas ;
+    rdfs:label "has component" ;
+    rdfs:comment "Relates an instance of Air to its components, which are Gases" .
+ex:Gas rdf:type owl:Class ;
+    rdfs:subClassOf ex:Matter ;
+    rdfs:label "Gas" ;
+    rdfs:comment "One of the fundamental states of matter with no fixed shape and low density" .

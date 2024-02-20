@@ -1,0 +1,39 @@
+# Set the business prefix@prefix business: <http://example.org/business/> .
+# Set the rdf prefix@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+# Set the rdfs prefix@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Set the owl prefix@prefix owl: <http://www.w3.org/2002/07/owl#> .
+# Define the Business classbusiness:Business rdf:type rdfs:Class ;
+    rdfs:label "Business"@en ;
+    rdfs:comment "An organisation or economic system where goods and services are exchanged"@en .
+# Define the Employee classbusiness:Employee rdf:type rdfs:Class ;
+    rdfs:label "Employee"@en ;
+    rdfs:comment "A person who is hired to provide services to a company on a regular basis"@en .
+# Define the Employer classbusiness:Employer rdf:type rdfs:Class ;
+    rdfs:label "Employer"@en ;
+    rdfs:comment "A person or organization that employs people"@en .
+# Define the Product classbusiness:Product rdf:type rdfs:Class ;
+    rdfs:label "Product"@en ;
+    rdfs:comment "A thing or person that is the result of an action or process"@en .
+# Define the Service classbusiness:Service rdf:type rdfs:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:comment "The action of helping or doing work for someone"@en .
+# Define the worksFor propertybusiness:worksFor rdf:type rdf:Property ;
+    rdfs:label "works for"@en ;
+    rdfs:comment "The business that an employee works for"@en ;
+    rdfs:domain business:Employee ;
+    rdfs:range business:Business .
+# Define the employs propertybusiness:employs rdf:type rdf:Property ;
+    rdfs:label "employs"@en ;
+    rdfs:comment "The employee of a business"@en ;
+    rdfs:domain business:Business ;
+    rdfs:range business:Employee .
+# Define the offersProduct propertybusiness:offersProduct rdf:type rdf:Property ;
+    rdfs:label "offers product"@en ;
+    rdfs:comment "The product that a business offers"@en ;
+    rdfs:domain business:Business ;
+    rdfs:range business:Product .
+# Define the offersService propertybusiness:offersService rdf:type rdf:Property ;
+    rdfs:label "offers service"@en ;
+    rdfs:comment "The service that a business offers"@en ;
+    rdfs:domain business:Business ;
+    rdfs:range business:Service .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix result: <http://example.com/result#> .
+result:Result a rdfs:Class ;
+    rdfs:label "Result"^^xsd:string ;
+    rdfs:comment "The outcome or conclusion of a process or action."^^xsd:string .
+result:hasValue a rdf:Property ;
+    rdfs:domain result:Result ;
+    rdfs:range xsd:string ;
+    rdfs:label "has value"^^xsd:string ;
+    rdfs:comment "The value or outcome of the result."^^xsd:string .
+result:belongsTo a rdf:Property ;
+    rdfs:domain result:Result ;
+    rdfs:range result:Action ;
+    rdfs:label "belongs to"^^xsd:string ;
+    rdfs:comment "The action that this result belongs to."^^xsd:string .
+result:Action a rdfs:Class ;
+    rdfs:label "Action"^^xsd:string ;
+    rdfs:comment "The process or act that leads to a result."^^xsd:string .
+result:hasStartTime a rdf:Property ;
+    rdfs:domain result:Action ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has start time"^^xsd:string ;
+    rdfs:comment "The start time of the action."^^xsd:string .
+result:hasEndTime a rdf:Property ;
+    rdfs:domain result:Action ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has end time"^^xsd:string ;
+    rdfs:comment "The end time of the action."^^xsd:string .

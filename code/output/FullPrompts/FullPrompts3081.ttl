@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ns: <http://www.example.org/ns#> .
+ns:Name a rdfs:Class ;
+   rdfs:label "Name"@en ;
+   rdfs:comment "A name used to identify a person, place, thing, event, or idea."@en ;
+   rdfs:subClassOf rdfs:Literal ;
+   ns:firstName a rdf:Property ;
+      rdfs:label "first name"@en ;
+      rdfs:range xsd:string ;
+      rdfs:domain ns:Name ;
+   ns:lastName a rdf:Property ;
+      rdfs:label "last name"@en ;
+      rdfs:range xsd:string ;
+      rdfs:domain ns:Name .
+ns:middleName a rdf:Property ;
+   rdfs:label "middle name"@en ;
+   rdfs:range xsd:string ;
+   rdfs:domain ns:Name .

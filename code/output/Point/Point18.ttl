@@ -1,0 +1,20 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.example.org/geo#> .
+geo:Point a rdfs:Class ;
+  rdfs:label "Point"@en ;
+  rdfs:comment "A point in a two-dimensional plane or a three-dimensional space."@en .
+geo:xCor a rdf:Property ;
+  rdfs:label "x coordinate"@en ;
+  rdfs:comment "The x coordinate of a point in a two-dimensional plane or a three-dimensional space."@en ;
+  rdfs:domain geo:Point ;
+  rdfs:range xsd:decimal .
+geo:yCor a rdf:Property ;
+  rdfs:label "y coordinate"@en ;
+  rdfs:comment "The y coordinate of a point in a two-dimensional plane or a three-dimensional space."@en ;
+  rdfs:domain geo:Point ;
+  rdfs:range xsd:decimal .
+  geo:zCor a rdf:Property ;
+  rdfs:label "z coordinate"@en ;
+  rdfs:comment "The z coordinate of a point in a three-dimensional space, if applicable."@en ;
+  rdfs:domain geo:Point ;
+  rdfs:range xsd:decimal .

@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix art: <http://example.com/art#> .
+art:Art a rdfs:Class ;
+    rdfs:comment "The concept of Art" .
+art:Artist a rdfs:Class ;
+    rdfs:comment "The concept of Artist" .
+art:hasArtist a rdf:Property ;
+    rdfs:domain art:Art ;
+    rdfs:range art:Artist ;
+    rdfs:comment "The Art has an Artist" .
+art:hasTitle a rdf:Property ;
+    rdfs:domain art:Art ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The Art has a Title" .
+art:hasYear a rdf:Property ;
+    rdfs:domain art:Art ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The Art has a Year" .
+art:hasStyle a rdf:Property ;
+    rdfs:domain art:Art ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The Art has a Style" .
+art:Artist rdfs:subClassOf art:Person .
+art:Person a rdfs:Class ;
+    rdfs:comment "The concept of Person" .
+art:hasName a rdf:Property ;
+    rdfs:domain art:Person ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The Person has a Name" .

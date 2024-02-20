@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://example.com/right-ontology#> .
+ont:Right rdf:type owl:Class ;
+    rdfs:comment "A basic human right." .
+ont:LegalRight rdf:type owl:Class ;
+    rdfs:subClassOf ont:Right ;
+    rdfs:comment "A right that is recognised by a legal system." .
+ont:MoralRight rdf:type owl:Class ;
+    rdfs:subClassOf ont:Right ;
+    rdfs:comment "A right that is based on moral principles." .
+    ont:RightToLife rdf:type owl:Class ;
+    rdfs:subClassOf ont:MoralRight ;
+    rdfs:subClassOf ont:LegalRight ;
+    rdfs:comment "The right to not be killed by another human being." .
+ ont:RightToFreedom rdf:type owl:Class ;
+    rdfs:subClassOf ont:MoralRight ;
+    rdfs:subClassOf ont:LegalRight ;
+    rdfs:comment "The right to act without restriction from within (one's ability or judgement) and externally (by law or physical circumstances)." .
+ ont:RightToEquality rdf:type owl:Class ;
+    rdfs:subClassOf ont:MoralRight ;
+    rdfs:subClassOf ont:LegalRight ;
+    rdfs:comment "The right to be treated equally, without discrimination." .
+ ont:RightToSpeech rdf:type owl:Class ;
+    rdfs:subClassOf ont:MoralRight ;
+    rdfs:subClassOf ont:LegalRight ;
+    rdfs:comment "The right to express one's opinions freely." .
+ ont:RightToPrivacy rdf:type owl:Class ;
+    rdfs:subClassOf ont:MoralRight ;
+    rdfs:subClassOf ont:LegalRight ;
+    rdfs:comment "The right to be left alone and live life free from unwanted intrusions." .

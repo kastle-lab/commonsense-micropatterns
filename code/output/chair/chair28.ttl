@@ -1,0 +1,6 @@
+@prefix : <http://example.org/stuff/1.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ :Chair a rdfs:Class ;
+  rdfs:label "Chair"@en ;
+  rdfs:comment "A piece of furniture designed to accommodate one sitting or reclining person, providing support for the back and often the arms"@en ;
+  rdfs:subClassOf :Furniture .

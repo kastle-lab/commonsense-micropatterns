@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bus: <http://example.com/business#> .
+bus:Business a owl:Class .
+bus:Entrepreneur a owl:Class .
+bus:Product a owl:Class.bus:businessId a owl:DatatypeProperty ;
+  rdfs:domain bus:Business ;
+  rdfs:range xsd:string .
+bus:businessName a owl:DatatypeProperty ;
+  rdfs:domain bus:Business ;
+  rdfs:range xsd:string .
+bus:owns a owl:ObjectProperty ;
+  rdfs:domain bus:Entrepreneur ;
+  rdfs:range bus:Business .
+bus:produces a owl:ObjectProperty ;
+  rdfs:domain bus:Business ;
+  rdfs:range bus:Product .
+bus:Bus_01 a bus:Business ;
+  bus:businessId "125" ;
+  bus:businessName "Creative solutions" .
+bus:Entrepreneur_01 a bus:Entrepreneur ;
+  bus:owns bus:Bus_01 .
+bus:Product_01 a bus:Product.bus:Bus_01 bus:produces bus:Product_01.

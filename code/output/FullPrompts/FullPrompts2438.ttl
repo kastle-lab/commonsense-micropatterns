@@ -1,0 +1,25 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix job: <http://www.example.org/job#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+job:Job a rdfs:Class .
+job:hasTitle a rdf:Property ;
+  rdfs:domain job:Job ;
+  rdfs:range xsd:string .
+job:hasSalary a rdf:Property ;
+  rdfs:domain job:Job ;
+  rdfs:range xsd:decimal .
+job:hasLocation a rdf:Property ;
+  rdfs:domain job:Job ;
+  rdfs:range xsd:string .
+job:requiresExperienceIn a rdf:Property ;
+  rdfs:domain job:Job ;
+  rdfs:range xsd:string .
+job:requiresEducationLevel a rdf:Property ;
+  rdfs:domain job:Job ;
+  rdfs:range xsd:string .
+job:SoftwareEngineer a job:Job ;
+  job:hasTitle "Software Engineer" ;
+  job:hasSalary "100000.0" ;
+  job:hasLocation "San Francisco, USA" ;
+  job:requiresExperienceIn "Java, JavaScript" ;
+  job:requiresEducationLevel "Bachelor's Degree in Computer Science" .

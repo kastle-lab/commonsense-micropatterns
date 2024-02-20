@@ -1,0 +1,18 @@
+@prefix : <http://example.org/business#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Company a rdfs:Class ;
+    rdfs:label "Company" ;
+    rdfs:comment "Entity that represents a commercial institution" .
+:Employee a rdfs:Class ;
+    rdfs:label "Employee" ;
+    rdfs:comment "Individual who works under a contract of employment" .
+    :employs a rdfs:Property ;
+    rdfs:label "employs" ;
+    rdfs:comment "Factor that relates a company with its employees" ;
+    rdfs:domain :Company ;
+    rdfs:range :Employee .
+:IBM a :Company ;
+    rdfs:label "IBM" .
+:JohnDoe a :Employee ;
+    rdfs:label "John Doe" .
+:IBM :employs :JohnDoe .

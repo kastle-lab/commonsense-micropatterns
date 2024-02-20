@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/ontology#> .
+:Child a rdfs:Class ;
+    rdfs:label "Child" ;
+    rdfs:comment "A young human being below the age of full physical development." .
+:hasParent a owl:ObjectProperty ;
+    rdfs:label "has parent" ;
+    rdfs:comment "The property that relates a child to their parent." ;
+    rdfs:domain :Child ;
+    rdfs:range :Person .
+:hasName a owl:DatatypeProperty ;
+    rdfs:label "has name" ;
+    rdfs:comment "The property that relates an individual to their full given name." ;
+    rdfs:domain :Child ;
+    rdfs:range xsd:string .
+:hasAge a owl:DatatypeProperty ;
+    rdfs:label "has age" ;
+    rdfs:comment "The property that relates an individual to their age." ;
+    rdfs:domain :Child ;
+    rdfs:range xsd:integer .
+:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A human being, whether an adult or child." .

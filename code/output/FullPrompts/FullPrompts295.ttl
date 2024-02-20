@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix thing: <http://example.org/thing#> .
+thing:Thing a owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:comment "Objects, creatures or anything that exists, that can be thought of or that can be the object of an action." .
+thing:PhysicalThing a owl:Class ;
+    rdfs:subClassOf thing:Thing ;
+    rdfs:label "Physical Thing" ;
+    rdfs:comment "Things that exist in the physical world, that have a physical presence." .
+thing:AbstractThing a owl:Class ;
+    rdfs:subClassOf thing:Thing ;
+    rdfs:label "Abstract Thing" ;
+    rdfs:comment "Things that exist in the abstract, such as ideas, concepts, or relationships that do not have a physical presence." .
+thing:LivingThing a owl:Class ;
+    rdfs:subClassOf thing:PhysicalThing ;
+    rdfs:label "Living Thing" ;
+    rdfs:comment "Things that are alive and functioning, which includes animals, plants, fungi, and microorganisms." .
+thing:NonLivingThing a owl:Class ;
+    rdfs:subClassOf thing:PhysicalThing ;
+    rdfs:label "Non-living Thing" ;
+    rdfs:comment "Things that are not alive, such as rocks, water, and man-made objects." .
+thing:Animal a owl:Class ;
+    rdfs:subClassOf thing:LivingThing ;
+    rdfs:label "Animal" ;
+    rdfs:comment "A living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli." .
+thing:Plant a owl:Class ;
+    rdfs:subClassOf thing:LivingThing ;
+    rdfs:label "Plant" ;
+    rdfs:comment "A living organism of the kind exemplified by trees, shrubs, herbs, grasses, ferns, and mosses, typically growing in a permanent site and absorbing water and inorganic substances through its roots." .

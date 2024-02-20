@@ -1,0 +1,7 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Story1 rdf:type ex:Story .
+ex:Story1 dct:title "Title of the Story" .
+ex:Story1 dct:creator "Author Name" .
+ex:Story1 dct:description "A brief summary of the story" .

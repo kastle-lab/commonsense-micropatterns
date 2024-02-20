@@ -1,0 +1,22 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/#> .
+ex:Teacher  a rdfs:Class ;
+  rdfs:label "Teacher"^^xsd:string ;
+  rdfs:subClassOf ex:Human .
+  ex:teachesSubject  a rdf:Property ;
+  rdfs:domain ex:Teacher ;
+  rdfs:range ex:AcademicSubject ;
+  rdfs:comment "The subject that the teacher teaches"^^xsd:string .
+  ex:worksIn  a rdf:Property ;
+  rdfs:domain ex:Teacher ;
+  rdfs:range ex:School ;
+  rdfs:comment "The school where the teacher works"^^xsd:string .
+  ex:AcademicSubject  a rdfs:Class ;
+  rdfs:label "Academic Subject"^^xsd:string ;
+  rdfs:comment "The subject taught in a school or university"^^xsd:string .
+  ex:School  a rdfs:Class ;
+  rdfs:label "School"^^xsd:string ;
+  rdfs:comment "A place where education is given"^^xsd:string .
+  ex:Human  a rdfs:Class ;
+  rdfs:label "Human"^^xsd:string ;
+  rdfs:comment "A human being"^^xsd:string .

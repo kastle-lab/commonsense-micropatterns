@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix war: <http://example.org/ontology/war/>### Declaration of Classes ###war:War rdf:type owl:Class .
+war:Battle rdf:type owl:Class .
+war:Weapon rdf:type owl:Class .
+war:Soldier rdf:type owl:Class .
+war:Treaty rdf:type owl:Class .
+war:Strategy rdf:type owl:Class .
+### Declaration of Object Properties ###war:hasPart rdf:type owl:ObjectProperty ;
+      rdfs:domain war:War ;
+      rdfs:range war:Battle .
+war:uses rdf:type owl:ObjectProperty ;
+    rdfs:domain war:Battle ;
+    rdfs:range war:Weapon .
+war:involves rdf:type owl:ObjectProperty ;
+    rdfs:domain war:Battle ;
+    rdfs:range war:Soldier .
+war:endsWith rdf:type owl:ObjectProperty ;
+    rdfs:domain war:War ;
+    rdfs:range war:Treaty .
+war:applies rdf:type owl:ObjectProperty ;
+    rdfs:domain war:War ;
+    rdfs:range war:Strategy .
+   ### Declaration of Datatype Properties ###war:name rdf:type owl:DatatypeProperty ;
+    rdfs:domain war:War ;
+    rdfs:range xsd:string .
+war:year rdf:type owl:DatatypeProperty ;
+    rdfs:domain war:War ;
+    rdfs:range xsd:integer .
+war:location rdf:type owl:DatatypeProperty ;
+     rdfs:domain war:Battle ;
+    rdfs:range xsd:string .
+### Declaration of Individuals ###war:WorldWarII rdf:type war:War ;
+    war:name "World War II"^^xsd:string ;
+    war:year "1939"^^xsd:integer .
+war:Normandy rdf:type war:Battle ;
+    war:location "Normandy, France"^^xsd:string ;
+    war:uses war:Tanks ;
+    war:involves war:USASoldiers .
+war:Tanks rdf:type war:Weapon .
+war:USASoldiers rdf:type war:Soldier .
+war:Potsdam rdf:type war:Treaty .
+war:Blitzkrieg rdf:type war:Strategy .
+war:WorldWarII war:hasPart war:Normandy, war:Potsdam, war:Blitzkrieg .

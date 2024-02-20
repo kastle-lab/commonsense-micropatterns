@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix force: <http://www.example.org/force#> .
+force:Force a rdfs:Class ;
+    rdfs:comment "Physical interaction that changes the motion of an object."@en ;
+    rdfs:label "Force"@en .
+force:GravitationalForce a rdfs:Class ;
+    rdfs:comment "Force of attraction that acts between any two masses."@en ;
+    rdfs:subClassOf force:Force ;
+    rdfs:label "Gravitational Force"@en .
+force:FrictionalForce a rdfs:Class ;
+    rdfs:comment "Force that resists the sliding or rolling of one solid object over another."@en ;
+    rdfs:subClassOf force:Force ;
+    rdfs:label "Frictional Force"@en .
+force:MagneticForce a rdfs:Class ;
+    rdfs:comment "Force exerted between magnetic fields."@en ;
+    rdfs:subClassOf force:Force ;
+    rdfs:label "Magnetic Force"@en .
+force:ElectricForce a rdfs:Class ;
+    rdfs:comment "Force between charged objects."@en ;
+    rdfs:subClassOf force:Force ;
+    rdfs:label "Electric Force"@en .
+force:appliedOn a rdf:Property ;
+    rdfs:domain force:Force ;
+    rdfs:range owl:Thing ;
+    rdfs:label "Applied on"@en ;
+    rdfs:comment "Item that the force is applied on"@en .
+force:measuredIn a rdf:Property ;
+    rdfs:domain force:Force ;
+    rdfs:range xsd:string ;
+    rdfs:label "Measured in"@en ;
+    rdfs:comment "Unit that the force is measured in"@en .
+force:magnitude a rdf:Property ;
+    rdfs:domain force:Force ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Magnitude"@en ;
+    rdfs:comment "Magnitude of the force"@en .

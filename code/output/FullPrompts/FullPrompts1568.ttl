@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix room: <http://example.org/room/> .
+room:Room a rdfs:Class ;
+  rdfs:label "Room"@en ;
+  rdfs:comment "A space that is or may be occupied"@en .
+room:type a rdf:Property ;
+  rdfs:label "type"@en ;
+  rdfs:comment "The type of the room"@en ;
+  rdfs:domain room:Room ;
+  rdfs:range xsd:string .
+room:capacity a rdf:Property ;
+  rdfs:label "capacity"@en ;
+  rdfs:comment "The capacity of the room in terms of the number of people"@en ;
+  rdfs:domain room:Room ;
+  rdfs:range xsd:integer .
+<http://example.org/room/101> a room:Room ;
+  room:type "Conference Room" ;
+  room:capacity 10 .

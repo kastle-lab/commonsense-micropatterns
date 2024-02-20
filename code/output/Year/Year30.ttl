@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/ontology/> .
+:Year a rdfs:Class ;
+    rdfs:label "Year"@en ;
+    rdfs:comment "A concept unit representing a period of approximately 365 days"@en ;
+    rdfs:subClassOf :TimePeriod .
+:hasYear a rdf:Property ;
+    rdfs:label "has year"@en ;
+    rdfs:comment "Relates an entity to a specific year"@en ;
+    rdfs:range :Year ;
+    rdfs:domain :Entity .

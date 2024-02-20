@@ -1,0 +1,28 @@
+@prefix ex: <http://example.org/art#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Art rdf:type rdfs:Class .
+ex:Painting rdf:type rdfs:Class ;
+           rdfs:subClassOf ex:Art .
+ex:Sculpture rdf:type rdfs:Class ;
+             rdfs:subClassOf ex:Art .
+ex:Genre rdf:type rdfs:Class .
+ex:Impressionism rdf:type ex:Genre .
+ex:Renaissance rdf:type ex:Genre .
+ex:portrait rdf:type rdfs:Property ;
+            rdfs:domain ex:Painting ;
+            rdfs:range rdfs:Literal .
+ex:artist rdf:type rdfs:Property ;
+            rdfs:domain ex:Art ;
+            rdfs:range rdfs:Literal .
+ex:hasGenre rdf:type rdfs:Property ;
+            rdfs:domain ex:Art ;
+            rdfs:range ex:Genre .
+ex:MonaLisa rdf:type ex:Painting ;
+            ex:artist "Leonardo da Vinci" ;
+            ex:hasGenre ex:Renaissance .
+ ex:StarryNight rdf:type ex:Painting ;
+               ex:artist "Vincent van Gogh" ;
+               ex:hasGenre ex:Impressionism .
+ex:TheThinker rdf:type ex:Sculpture ;
+              ex:artist "Auguste Rodin" .

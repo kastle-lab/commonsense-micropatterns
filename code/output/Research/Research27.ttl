@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix research: <http://example.com/research#> .
+research:Research a rdfs:Class ;
+  rdfs:label "Research" ;
+  rdfs:comment "A class representing a research entity" .
+research:Researcher a rdfs:Class ;
+  rdfs:subclassOf research:Research ;
+  rdfs:label "Researcher" ;
+  rdfs:comment "A class representing a person who conducts research".
+research:Publication a rdfs:Class ;
+  rdfs:subclassOf research:Research ;
+  rdfs:label "Publication" ;
+  rdfs:comment "A class representing a published piece of research" .
+research:has_researcher a rdf:Property ;
+  rdfs:domain research:Research ;
+  rdfs:range research:Researcher ;
+  rdfs:label "has researcher" ;
+  rdfs:comment "A relationship indicating the researcher of a research entity" .
+research:has_publication a rdf:Property ;
+  rdfs:domain research:Research ;
+  rdfs:range research:Publication ;
+  rdfs:label "has publication" ;
+  rdfs:comment "A relationship indicating the publication of a research entity" .

@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rights: <http://example.org/vocab/rights#> .
+rights:Right rdf:type owl:Class ;
+  rdfs:comment "An entitlement which is ethically, morally, or legally justified"^^xsd:string ;
+  rdfs:subClassOf rights:Law .
+rights:HumanRight rdf:type owl:Class ;
+  rdfs:comment "Rights inherent to all human beings, regardless of nationality, sex, ethnicity, religion, etc."^^xsd:string ;
+  rdfs:subClassOf rights:Right .
+rights:LegalRight rdf:type owl:Class ;
+  rdfs:comment "Rights that are bestowed upon individuals by a specific legal system"^^xsd:string ;
+  rdfs:subClassOf rights:Right .
+rights:MoralRight rdf:type owl:Class ;
+  rdfs:comment "Rights that pertain to ethics and moral principles"^^xsd:string ;
+  rdfs:subClassOf rights:Right .
+rights:possession rdf:type owl:ObjectProperty ;
+  rdfs:comment "Relates a Right to the Object of that Right"^^xsd:string ;
+  rdfs:domain rights:Right ;
+  rdfs:range rdf:Resource .

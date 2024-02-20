@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+# Define "Question" as a classex:Question rdf:type rdfs:Class .
+# Define properties for the Question classex:askedBy rdf:type rdf:Property ;
+  rdfs:label "asked by" ;
+  rdfs:domain ex:Question ;
+  rdfs:range xsd:string .
+ex:askedOn rdf:type rdf:Property ;
+  rdfs:label "asked on" ;
+  rdfs:domain ex:Question ;
+  rdfs:range xsd:date .
+ex:hasCategory rdf:type rdf:Property ;
+  rdfs:label "has category" ;
+  rdfs:domain ex:Question ;
+  rdfs:range xsd:string .
+ex:hasText rdf:type rdf:Property ;
+  rdfs:label "has text" ;
+  rdfs:domain ex:Question ;
+  rdfs:range xsd:string .
+# Define an instance of a Questionex:Question1 rdf:type ex:Question ;
+  ex:askedBy "John Doe" ;
+  ex:askedOn "2022-01-01"^^xsd:date ;
+  ex:hasCategory "General" ;
+  ex:hasText "What is the capital of France?" .

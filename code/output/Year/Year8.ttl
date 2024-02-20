@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com#> .
+ex:Year a rdfs:Class ;
+    rdfs:label "Year"^^xsd:string ;
+    rdfs:comment "A specific year in the Gregorian calendar."@en ;
+    rdfs:subClassOf xsd:integer .
+ex:hasYear a rdf:Property ;
+    rdfs:label "has year"@en ;
+    rdfs:comment "The property indicative of a specific year"@en ;
+    rdfs:domain ex:Date ;
+    rdfs:range ex:Year .
+ex:isYearOf a rdf:Property ;
+    rdfs:label "is year of"@en ;
+    rdfs:comment "The property indicative of a date that falls within a specific year"@en ;
+    rdfs:domain ex:Year ;
+    rdfs:range ex:Date .
+ex:Date a rdfs:Class ;
+    rdfs:label "Date"^^xsd:string ;
+    rdfs:comment "A specific date in the Gregorian calendar."@en .
+ex:isLeapYear a rdf:Property ;
+    rdfs:label "is leap year"@en ;
+    rdfs:comment "A property that determines whether a year is a leap year"@en ;
+    rdfs:domain ex:Year ;
+    rdfs:range xsd:boolean .

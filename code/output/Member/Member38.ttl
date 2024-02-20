@@ -1,0 +1,21 @@
+@prefix : <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Member a rdfs:Class ;
+    rdfs:label "Member" ;
+    rdfs:comment "A member of an organization" .
+:hasName a rdf:Property ;
+    rdfs:label "has name" ;
+    rdfs:comment "The name of the member" ;
+    rdfs:domain :Member ;
+    rdfs:range rdfs:Literal .
+:hasAge a rdf:Property ;
+    rdfs:label "has age" ;
+    rdfs:comment "The age of the member" ;
+    rdfs:domain :Member ;
+    rdfs:range rdfs:Literal .
+:hasMemberID a rdf:Property ;
+    rdfs:label "has member ID" ;
+    rdfs:comment "The unique ID given to the member" ;
+    rdfs:domain :Member ;
+    rdfs:range rdfs:Literal .

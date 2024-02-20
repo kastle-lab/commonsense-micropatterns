@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix case: <http://example.org/case#> .
+case:CaseClass a rdfs:Class ;
+  rdfs:label "Case" ;
+  rdfs:comment "A general concept for any kind of cases" .
+case:LegalCase a rdfs:Class ;
+  rdfs:subClassOf case:CaseClass ;
+  rdfs:label "Legal Case" ;
+  rdfs:comment "A legal case in court system" .
+case:MedicalCase a rdfs:Class ;
+  rdfs:subClassOf case:CaseClass ;
+  rdfs:label "Medical Case" ;
+  rdfs:comment "A medical case for a patient" .
+case:CaseAge a rdfs:Property ;
+  rdfs:domain case:CaseClass;
+  rdfs:range xsd:integer ;
+  rdfs:label "Age" ;
+  rdfs:comment "The age of a case." .
+case:CaseName a rdfs:Property ;
+  rdfs:domain case:CaseClass;
+  rdfs:range xsd:string ;
+  rdfs:label "Name" ;
+  rdfs:comment "The name of a case." .
+case:LegalCaseType a rdfs:Property ;
+  rdfs:domain case:LegalCase;
+  rdfs:range xsd:string ;
+  rdfs:label "Type" ;
+  rdfs:comment "The type of a legal case." .
+case:LegalCaseLawyer a rdfs:Property ;
+  rdfs:domain case:LegalCase;
+  rdfs:range xsd:string ;
+  rdfs:label "Lawyer" ;
+  rdfs:comment "The lawyer of a legal case." .
+case:MedicalCaseDoctor a rdfs:Property ;
+  rdfs:domain case:MedicalCase;
+  rdfs:range xsd:string ;
+  rdfs:label "Doctor" ;
+  rdfs:comment "The doctor of a medical case." .
+case:MedicalCaseDiagnosis a rdfs:Property ;
+  rdfs:domain case:MedicalCase;
+  rdfs:range xsd:string ;
+  rdfs:label "Diagnosis" ;
+  rdfs:comment "The diagnosis of a medical case." .

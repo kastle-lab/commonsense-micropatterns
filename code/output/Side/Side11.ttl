@@ -1,0 +1,30 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix side: <http://www.example.org/side/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+side:     a rdfs:Class ;
+    rdfs:label "Side"@en ;
+    rdfs:comment "Representing the notion of a side of an object or concept"@en .
+side:Left     a side: ;
+    rdfs:label "Left"@en ;
+    rdfs:comment "Representing the left side of an object or concept"@en .
+side:Right     a side: ;
+    rdfs:label "Right"@en ;
+    rdfs:comment "Representing the right side of an object or concept"@en .
+side:Top     a side: ;
+    rdfs:label "Top"@en ;
+    rdfs:comment "Representing the top side of an object or concept"@en .
+side:Bottom     a side: ;
+    rdfs:label "Bottom"@en ;
+    rdfs:comment "Representing the bottom side of an object or concept"@en .
+side:Front     a side: ;
+    rdfs:label "Front"@en ;
+    rdfs:comment "Representing the front side of an object or concept"@en .
+side:Back     a side: ;
+    rdfs:label "Back"@en ;
+    rdfs:comment "Representing the back side of an object or concept"@en .
+side:relatedTo     a rdf:Property ;
+    rdfs:label "relatedTo"@en ;
+    rdfs:comment "Property that links a thing to its side"@en ;
+    rdfs:range side: ;
+    rdfs:domain rdfs:Resource .

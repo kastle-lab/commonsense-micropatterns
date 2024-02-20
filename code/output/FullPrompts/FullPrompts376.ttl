@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix world: <http://www.example.org/world#> .
+world:   a owl:Ontology ;
+   rdfs:comment "An ontology of the world."^^xsd:string .
+world:Country  a owl:Class ;
+  rdfs:label "Country"^^xsd:string ;
+  rdfs:comment "A nation with its own government and occupied territory."^^xsd:string ;
+  rdfs:subClassOf rdfs:Resource .
+world:continent  a owl:ObjectProperty ;
+  rdfs:label "is part of"^^xsd:string ;
+  rdfs:comment "The continent that a country is part of."^^xsd:string ;
+  rdfs:domain world:Country ;
+  rdfs:range world:Continent .
+world:Continent  a owl:Class ;
+  rdfs:label "Continent"^^xsd:string ;
+  rdfs:comment "A large continuous area of land on Earth."^^xsd:string ;
+  rdfs:subClassOf rdfs:Resource .
+world:population  a owl:DatatypeProperty ;
+  rdfs:label "has population"^^xsd:string ;
+  rdfs:comment "The total number of inhabitants in a country."^^xsd:string ;
+  rdf:domain world:Country ;
+  rdf:range xsd:int .
+world:capital  a owl:ObjectProperty ;
+  rdfs:label "has capital"^^xsd:string ;
+  rdfs:comment "The city where a country's central government is located."^^xsd:string ;
+  rdfs:domain world:Country ;
+  rdfs:range world:City .
+world:City  a owl:Class ;
+  rdfs:label "City"^^xsd:string ;
+  rdfs:comment "A place where people live and work, that is larger than a town."^^xsd:string ;
+  rdfs:subClassOf rdfs:Resource .
+world:language  a owl:DatatypeProperty ;
+  rdfs:label "speaks language"^^xsd:string ;
+  rdfs:comment "The language predominantly spoken in a country."^^xsd:string ;
+  rdfs:domain world:Country ;
+  rdfs:range xsd:string .

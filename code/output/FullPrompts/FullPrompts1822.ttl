@@ -1,0 +1,25 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <https://www.w3.org/TR/owl-time#> .
+time:Hour a owl:Class ;
+    rdfs:label "Hour"@en ;
+        rdfs:subClassOf time:TemporalUnit ;
+        rdfs:comment "A unit of measuring time, equivalent to 60 minutes."@en .
+time:Minute a owl:Class ;
+    rdfs:label "Minute"@en ;
+        rdfs:subClassOf time:TemporalUnit ;
+        rdfs:comment "A unit of measuring time, equivalent to 60 seconds or 1/60th of an hour."@en .
+    time:TemporalUnit a owl:Class ;
+    rdfs:label "Temporal Unit"@en ;
+    rdfs:comment "Unit used for the measurement of time."@en .
+time:hasNumberOfHours a owl:DatatypeProperty ;
+    rdfs:domain time:TemporalUnit ;
+        rdfs:range xsd:integer ;
+        rdfs:label "has number of hours"@en ;
+        rdfs:comment "The property defines the number of hours in a temporal unit."@en .
+    time:hasNumberOfMinutes a owl:DatatypeProperty ;
+    rdfs:domain time:Hour ;
+        rdfs:range xsd:integer ;
+        rdfs:label "has number of minutes"@en ;
+        rdfs:comment "The property defines the number of minutes in an hour."@en .

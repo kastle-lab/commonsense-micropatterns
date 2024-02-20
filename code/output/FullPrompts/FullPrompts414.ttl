@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ow: <http://example.org/myontology/life#> .
+ow:Life a rdfs:Class ;
+    rdfs:label "Life" ;
+    rdfs:comment "Class for all living beings" .
+ow:Animal a rdfs:Class ;
+    rdfs:subClassOf ow:Life ;
+    rdfs:label "Animal" ;
+    rdfs:comment "Class for all animals" .
+ow:Plant a rdfs:Class ;
+    rdfs:subClassOf ow:Life ;
+    rdfs:label "Plant" ;
+    rdfs:comment "Class for all plants" .
+ow:Human a rdfs:Class ;
+    rdfs:subClassOf ow:Animal ;
+    rdfs:label "Human" ;
+    rdfs:comment "Class for all humans" .
+ow:Bird a rdfs:Class ;
+    rdfs:subClassOf ow:Animal ;
+    rdfs:label "Bird" ;
+    rdfs:comment "Class for all birds" .
+ow:FloweringPlant a rdfs:Class ;
+    rdfs:subClassOf ow:Plant ;
+    rdfs:label "Flowering plant" ;
+    rdfs:comment "Class for all flowering plants" .
+ow:NonFloweringPlant a rdfs:Class ;
+    rdfs:subClassOf ow:Plant ;
+    rdfs:label "Non-flowering plant" ;
+    rdfs:comment "Class for all non-flowering plants" .
+ow:lifespan a rdf:Property ;
+    rdfs:domain ow:Life ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "lifespan" ;
+    rdfs:comment "Property for the lifespan of a living being" .
+ow:habitat a rdf:Property ;
+    rdfs:domain ow:Life ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "habitat" ;
+    rdfs:comment "Property for the habitat of a living being" .

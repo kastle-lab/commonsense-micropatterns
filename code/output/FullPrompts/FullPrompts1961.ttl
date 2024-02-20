@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix health: <http://www.semanticweb.org/healthOntology#> .
+health:Health     rdf:type owl:Class ;
+    rdfs:label "Health" ;
+    rdfs:comment "A class representing the general concept of health" ;
+    rdfs:subClassOf owl:Thing ;
+    .
+health:hasPhysicalHeathStatus    rdf:type owl:ObjectProperty ;
+    rdfs:domain health:Person ;
+    rdfs:range health:PhysicalHealthStatus ;
+    rdfs:label "has physical health status" ;
+    rdfs:comment "Represents the physical health status of a person" ;
+    .
+health:hasMentalHealthStatus    rdf:type owl:ObjectProperty ;
+    rdfs:domain health:Person ;
+    rdfs:range health:MentalHealthStatus ;
+    rdfs:label "has mental health status" ;
+    rdfs:comment "Represents the mental health status of a person" ;
+    .
+health:Person     rdf:type owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A class representing a human being subject" ;
+    rdfs:subClassOf owl:Thing ;
+    .
+health:PhysicalHealthStatus     rdf:type owl:Class ;
+    rdfs:label "Physical health status" ;
+    rdfs:comment "Represents the state of physical health a human being can have" ;
+    .
+health:MentalHealthStatus     rdf:type owl:Class ;
+    rdfs:label "Mental health status" ;
+    rdfs:comment "Represents the state of mental health a human being can have" ;
+    .

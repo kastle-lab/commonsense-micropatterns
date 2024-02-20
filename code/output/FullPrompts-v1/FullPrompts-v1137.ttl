@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix xsd: <http://www.w3.org/2001/XMLSchema#>@prefix ontology: <http://www.example.com/ontology#>ontology:Day rdf:type rdfs:Class .
+ontology:DayName rdf:type rdfs:Datatype ;
+    rdfs:comment "The name of the day (e.g., Monday, Tuesday, etc)."^^xsd:string ;
+    rdfs:domain ontology:Day ;
+    rdfs:range xsd:string .
+ontology:DayOfWeek rdf:type rdfs:Datatype ;
+    rdfs:comment "The position of the day in a 7-day week (e.g., 1 for Sunday or Monday, etc., depending on the system)."^^xsd:int ;
+    rdfs:domain ontology:Day ;
+    rdfs:range xsd:int .
+ontology:DayOfTheMonth rdf:type rdfs:Datatype ;
+    rdfs:comment "The position of the day in the month (from 1 to 31)."^^xsd:int ;
+    rdfs:domain ontology:Day ;
+    rdfs:range xsd:int .
+ontology:isWeekday rdf:type rdf:Property ;
+    rdfs:comment "True if the day is a weekday (from Monday to Friday), false if it is a weekend day (Saturday or Sunday)."^^xsd:string ;
+    rdfs:domain ontology:Day ;
+    rdfs:range xsd:boolean .
+ontology:isHoliday rdf:type rdf:Property ;
+    rdfs:comment "True if the day is a public holiday, false otherwise."^^xsd:string ;
+    rdfs:domain ontology:Day ;
+    rdfs:range xsd:boolean .
+ontology:hasWeather rdf:type rdf:Property ;
+    rdfs:comment "The weather condition of the day (sunny, cloudy, rainy, etc.)."^^xsd:string ;
+    rdfs:domain ontology:Day ;
+    rdfs:range xsd:string .

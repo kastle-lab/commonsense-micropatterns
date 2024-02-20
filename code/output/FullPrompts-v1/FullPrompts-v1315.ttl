@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix life: <http://www.example.org/life#> .
+life:Life     rdf:type owl:Class ;
+    rdfs:comment "The property that distinguishes animals and plants from inanimate matter including the capacity for growth, reproduction, functional activity, and continuous change preceding death" .
+life:hasLife    rdf:type owl:ObjectProperty ;
+    rdfs:domain life:Organism ;
+    rdfs:range life:Life ;
+    rdfs:comment "Link an organism to the concept of life" .
+    life:Organism    rdf:type owl:Class ;
+    rdfs:comment "An individual animal, plant, or single-celled life form" .

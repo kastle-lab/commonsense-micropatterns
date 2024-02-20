@@ -1,0 +1,9 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/ontology/> .
+:Person rdf:type rdfs:Class .
+:hasName rdf:type rdf:Property ;
+         rdfs:domain :Person ;
+         rdfs:range xsd:string .
+# Example usage:john rdf:type :Person ;
+      :hasName "John Doe"^^xsd:string .

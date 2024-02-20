@@ -1,0 +1,8 @@
+ @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:John rdf:type :Person .
+:Location1 rdf:type :Location .
+:Location2 rdf:type :Location .
+:Change1  rdf:type :Change ;
+  :involves :John ;
+  :from :Location1 ;
+  :to :Location2 .

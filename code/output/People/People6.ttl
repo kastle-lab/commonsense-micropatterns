@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix people: <http://people.com#> .
+# Class definitionspeople:Person rdf:type rdfs:Class .
+people:Child rdf:type rdfs:Class ;
+  rdfs:subClassOf people:Person .
+people:Adult rdf:type rdfs:Class ;
+  rdfs:subClassOf people:Person .
+people:Male rdf:type rdfs:Class ;
+  rdfs:subClassOf people:Person .
+people:Female rdf:type rdfs:Class ;
+  rdfs:subClassOf people:Person .
+# Property definitionspeople:hasAge rdf:type rdf:Property ;
+  rdfs:domain people:Person ;
+  rdfs:range xsd:integer .
+people:hasName rdf:type rdf:Property ;
+  rdfs:domain people:Person ;
+  rdfs:range xsd:string .
+people:hasGender rdf:type rdf:Property ;
+  rdfs:domain people:Person ;
+  rdfs:range people:Gender .
+# Enumerated class for genderpeople:Gender rdf:type rdfs:Class;
+  rdfs:subClassOf rdfs:Resource .
+people:Male rdf:type people:Gender .
+people:Female rdf:type people:Gender .

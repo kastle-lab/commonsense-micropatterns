@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://example.com/ontologies/friend#> .
+ont:Friend rdf:type rdfs:Class .
+ont:hasFriend rdf:type rdf:Property ;
+  rdfs:domain ont:Person ;
+  rdfs:range ont:Person .
+ont:Person rdf:type rdfs:Class ;
+  rdfs:subClassOf [    rdf:type rdfs:Class  ] ;
+  rdfs:label "Person"@en ;
+  rdfs:comment "A human being, whether an adult or child."@en ;
+  rdfs:seeAlso <http://dbpedia.org/page/Person> .
+ont:FirstName rdf:type rdf:Property ;
+  rdfs:domain ont:Person ;
+  rdfs:range xsd:string ;
+  rdfs:label "has first name"@en ;
+  rdfs:comment "The first name of a person."@en .
+ont:LastName rdf:type rdf:Property ;
+  rdfs:domain ont:Person ;
+  rdfs:range xsd:string ;
+  rdfs:label "has last name"@en ;
+  rdfs:comment "The last name of a person."@en .
+ ont:Address rdf:type rdf:Property ;
+  rdf:type owl:FunctionalProperty;
+  rdfs:domain ont:Person ;
+  rdfs:range ont:Place ;
+  rdfs:label "has address"@en ;
+  rdfs:comment "The address of a person."@en .
+ont:Place rdf:type rdfs:Class ;
+  rdfs:subClassOf [    rdf:type rdfs:Class  ] ;
+  rdfs:label "Place"@en ;
+  rdfs:comment "A specific location."@en .
+  ont:dateOfBirth rdf:type rdf:Property ;
+  rdfs:domain ont:Person ;
+  rdfs:range xsd:date ;
+  rdfs:label "has date of birth"@en ;
+  rdfs:comment "The date of birth of a person."@en .

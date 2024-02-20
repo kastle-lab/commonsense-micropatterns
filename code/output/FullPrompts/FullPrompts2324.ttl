@@ -1,0 +1,17 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Lot rdfs:subClassOf rdfs:Class ;
+# propertiesex:hasLotNumber a rdf:Property ;
+ex:hasLotArea a rdf:Property ;
+ex:hasLotLocation a rdf:Property ;
+ex:hasLotStatus a rdf:Property ;
+ex:assignedTo a rdf:Property. # range and domain definitionsex:hasLotNumber rdfs:domain ex:Lot ;
+  rdfs:range xsd:string .
+ex:hasLotArea rdfs:domain ex:Lot ;
+  rdfs:range xsd:decimal .
+ex:hasLotLocation rdfs:domain ex:Lot ;
+  rdfs:range ex:Location .
+ex:hasLotStatus rdfs:domain ex:Lot ;
+  rdfs:range ex:Status .
+ex:assignedTo rdfs:domain ex:Lot ;
+  rdfs:range ex:Person .

@@ -1,0 +1,12 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:hour a rdf:Property ;
+    rdfs:label "hour" ;
+    rdfs:comment "Property to represent an hour of time" ;
+    rdfs:domain ex:Time ;
+    rdfs:range xsd:int .
+  ex:Time a rdfs:Class ;
+    rdfs:label "Time" ;
+    rdfs:comment "Class to represent time" .
+ex:TimeInstance a ex:Time ;
+    ex:hour "12"^^xsd:int .

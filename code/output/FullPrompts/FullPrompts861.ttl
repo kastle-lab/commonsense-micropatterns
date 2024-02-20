@@ -1,0 +1,65 @@
+@prefix : <http://example.org/> .
+# Class definitions:Integer rdf:type rdfs:Class ;
+    rdfs:subClassOf :Number ;
+    rdfs:label "Integer"@en ;
+    rdfs:comment "A class representing integer numbers."@en .
+:Real rdf:type rdfs:Class ;
+    rdfs:subClassOf :Number ;
+    rdfs:label "Real"@en ;
+    rdfs:comment "A class representing real numbers."@en .
+:Rational rdf:type rdfs:Class ;
+    rdfs:subClassOf :Number ;
+    rdfs:label "Rational"@en ;
+    rdfs:comment "A class representing rational numbers."@en .
+:Complex rdf:type rdfs:Class ;
+    rdfs:subClassOf :Number ;
+    rdfs:label "Complex"@en ;
+    rdfs:comment "A class representing complex numbers."@en .
+:Positive rdf:type rdfs:Class ;
+    rdfs:subClassOf :Number ;
+    rdfs:label "Positive"@en ;
+    rdfs:comment "A class representing positive numbers."@en .
+:Negative rdf:type rdfs:Class ;
+    rdfs:subClassOf :Number ;
+    rdfs:label "Negative"@en ;
+    rdfs:comment "A class representing negative numbers."@en .
+:Zero rdf:type rdfs:Class ;
+    rdfs:subClassOf :Number ;
+    rdfs:label "Zero"@en ;
+    rdfs:comment "A class representing the number zero."@en .
+:Odd rdf:type rdfs:Class ;
+    rdfs:subClassOf :Integer ;
+    rdfs:label "Odd"@en ;
+    rdfs:comment "A class representing odd numbers."@en .
+:Even rdf:type rdfs:Class ;
+    rdfs:subClassOf :Integer ;
+    rdfs:label "Even"@en ;
+    rdfs:comment "A class representing even numbers."@en .
+:Prime rdf:type rdfs:Class ;
+    rdfs:subClassOf :Integer ;
+    rdfs:label "Prime"@en ;
+    rdfs:comment "A class representing prime numbers."@en .
+:Fraction rdf:type rdfs:Class ;
+    rdfs:subClassOf :Rational ;
+    rdfs:label "Fraction"@en ;
+    rdfs:comment "A class representing fractions."@en .
+:Whole rdf:type rdfs:Class ;
+    rdfs:subClassOf :Integer , :Rational ;
+    rdfs:label "Whole"@en ;
+    rdfs:comment "A class representing whole numbers."@en .
+:Irrational rdf:type rdfs:Class ;
+    rdfs:subClassOf :Real ;
+    rdfs:label "Irrational"@en ;
+    rdfs:comment "A class representing irrational numbers."@en .
+:Real rdf:type rdfs:Class ;
+    rdfs:subClassOf :Complex ;
+    rdfs:label "Real"@en ;
+    rdfs:comment "A class representing real numbers within the complex number system."@en .
+:Imaginary rdf:type rdfs:Class ;
+    rdfs:subClassOf :Complex ;
+    rdfs:label "Imaginary"@en ;
+    rdfs:comment "A class representing imaginary numbers."@en .
+:Transcendental rdf:type rdfs:Class ;
+    rdfs:subClassOf :Real ;
+    rdfs:label "Transcendental"@en ;
+    rdfs:comment "A class representing transcendental numbers."@en .

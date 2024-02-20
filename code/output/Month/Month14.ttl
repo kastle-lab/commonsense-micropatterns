@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Month a rdfs:Class ;
+    rdfs:comment "Represents a month of the year"@en .
+ex:January a ex:Month ;
+    rdfs:label "January"@en ;
+    rdfs:comment "First month of the year"@en .
+ex:February a ex:Month ;
+    rdfs:label "February"@en ;
+    rdfs:comment "Second month of the year"@en .
+ex:March a ex:Month ;
+    rdfs:label "March"@en ;
+    rdfs:comment "Third month of the year"@en .
+ex:April a ex:Month ;
+    rdfs:label "April"@en ;
+    rdfs:comment "Fourth month of the year"@en .
+ex:May a ex:Month ;
+    rdfs:label "May"@en ;
+    rdfs:comment "Fifth month of the year"@en .
+ex:June a ex:Month ;
+    rdfs:label "June"@en ;
+    rdfs:comment "Sixth month of the year"@en .
+ex:July a ex:Month ;
+    rdfs:label "July"@en ;
+    rdfs:comment "Seventh month of the year"@en .
+ex:August a ex:Month ;
+    rdfs:label "August"@en ;
+    rdfs:comment "Eighth month of the year"@en .
+ex:September a ex:Month ;
+    rdfs:label "September"@en ;
+    rdfs:comment "Ninth month of the year"@en .
+ex:October a ex:Month ;
+    rdfs:label "October"@en ;
+    rdfs:comment "Tenth month of the year"@en .
+ex:November a ex:Month ;
+    rdfs:label "November"@en ;
+    rdfs:comment "Eleventh month of the year"@en .
+ex:December a ex:Month ;
+    rdfs:label "December"@en ;
+    rdfs:comment "Twelfth month of the year"@en .

@@ -1,0 +1,24 @@
+@prefix : <http://www.example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Time a rdfs:Class ;
+      rdfs:comment "Point or period of time." .
+:hasTime a rdf:Property ;
+         rdfs:domain :Event ;
+         rdfs:range :Time ;
+         rdfs:comment "Time at which an event takes place." .
+:SpecificTime a rdfs:Class ;
+              rdfs:subClassOf :Time ;
+              rdfs:comment "A specific point in time." .
+:IntervalTime a rdfs:Class ;
+              rdfs:subClassOf :Time ;
+              rdfs:comment "A period of time." .
+:startAt a rdf:Property ;
+         rdfs:domain :IntervalTime ;
+         rdfs:range :SpecificTime ;
+         rdfs:comment "The start of a period of time." .
+:endAt a rdf:Property ;
+       rdfs:domain :IntervalTime ;
+       rdfs:range :SpecificTime ;
+       rdfs:comment "The end of a period of time." .

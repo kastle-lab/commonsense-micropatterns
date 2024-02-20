@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Company rdf:type owl:Class ;
+    rdfs:label "Company"@en ;
+    rdfs:comment "A legal entity for carrying on commercial or industrial activities"@en .
+ex:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "The legal name of a company"@en ;
+    rdfs:domain ex:Company ;
+    rdfs:range rdf:PlainLiteral .
+ex:hasCEO rdf:type owl:ObjectProperty ;
+    rdfs:label "has CEO"@en ;
+    rdfs:comment "The chief executive officer of a company"@en ;
+    rdfs:domain ex:Company ;
+    rdfs:range ex:Person .
+    ex:Person rdf:type owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human being"@en .

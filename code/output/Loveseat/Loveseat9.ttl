@@ -1,0 +1,25 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:loveseat a :Furniture;
+  :hasType :SeatingFurniture;
+  :hasMaterial :Leather;
+  :hasColor "Brown"^^xsd:string;
+  :hasWidth "60"^^xsd:float;
+  :hasDepth "35"^^xsd:float;
+  :hasHeight "30"^^xsd:float;
+  :canAccommodate "2"^^xsd:int.:Furniture a :ProductCategory.:ProductCategory a rdfs:Class.:SeatingFurniture a :ProductCategory;
+  rdfs:subClassOf :Furniture.:Leather a :Material.:Material a rdfs:Class.:hasType a rdf:Property;
+  rdfs:domain :Furniture;
+  rdfs:range :ProductCategory.:hasMaterial a rdf:Property;
+  rdfs:domain :Furniture;
+  rdfs:range :Material.:hasColor a rdf:Property;
+  rdfs:domain :Furniture;
+  rdfs:range xsd:string.:hasWidth a rdf:Property;
+  rdfs:domain :Furniture;
+  rdfs:range xsd:float.:hasDepth a rdf:Property;
+  rdfs:domain :Furniture;
+  rdfs:range xsd:float.:hasHeight a rdf:Property;
+  rdfs:domain :Furniture;
+  rdfs:range xsd:float.:canAccommodate a rdf:Property;
+  rdfs:domain :Furniture;
+  rdfs:range xsd:int.

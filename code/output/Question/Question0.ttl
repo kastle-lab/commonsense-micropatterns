@@ -1,0 +1,45 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dq: <http://www.example.org/questionOntology#> .
+dq:Question a rdfs:Class ;
+    rdfs:comment "The class of all questions."@en ;
+    rdfs:label "Question"@en .
+dq:hasType a rdf:Property ;
+    rdfs:comment "The type of the question e.g. multiple choice, open-ended, yes/no."@en ;
+    rdfs:label "has type"@en ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain dq:Question .
+dq:hasDifficultyLevel a rdf:Property ;
+    rdfs:comment "The difficulty level of the question e.g. easy, medium, hard."@en ;
+    rdfs:label "has difficulty level"@en ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain dq:Question .
+dq:isRelatedToTopic a rdf:Property ;
+    rdfs:comment "The area or topic to which the question belongs."@en ;
+    rdfs:label "is related to"@en ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain dq:Question .
+dq:hasAnswer a rdf:Property ;
+    rdfs:comment "The proposed answer(s) for the question."@en ;
+    rdfs:label "has answer"@en ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain dq:Question .
+dq:drawsFromSource a rdf:Property ;
+    rdfs:comment "The source or reference from which the question is derived."@en ;
+    rdfs:label "draws from source"@en ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain dq:Question .
+dq:Answer a rdfs:Class ;
+    rdfs:label "Answer"@en ;
+    rdfs:comment "The class of all answers."@en .
+dq:hasAnswerText a rdf:Property ;
+    rdfs:comment "The text of the answer."@en ;
+    rdfs:label "has answer text"@en ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain dq:Answer .
+dq:isCorrect a rdf:Property ;
+    rdfs:comment "The property that indicates if the answer is correct or not."@en ;
+    rdfs:label "is correct"@en ;
+    rdfs:range xsd:boolean ;
+    rdfs:domain dq:Answer .

@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.com/ontology#> .
+:Body a owl:Class ;
+    rdfs:label "Body"@en ;
+    rdfs:comment "Human or animal body, the physical structure that constitutes a being."@en ;
+    rdfs:subClassOf :PhysicalEntity .
+:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part"@en ;
+    rdfs:domain :Body ;
+    rdfs:range :BodyPart .
+:BodyPart a owl:Class ;
+    rdfs:label "Body part"@en ;
+    rdfs:comment "A part or member of a body, such as an arm, a leg, or an organ."@en ;
+    rdfs:subClassOf :PhysicalEntity .
+:Heart a :BodyPart ;
+    rdfs:label "Heart"@en ;
+    rdfs:comment "The organ that pumps blood throughout the body."@en .
+    :John a :Person ;
+    rdfs:label "John"@en ;
+    :hasPart :JohnsHeart .
+:JohnsHeart a :Heart ;
+    rdfs:isPartOf :John .

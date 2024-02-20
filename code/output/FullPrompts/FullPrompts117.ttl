@@ -1,0 +1,4 @@
+@prefix ex: <http://example.com/> .
+ex:Loveseat a rdfs:Class ;
+    rdfs:label "Loveseat" ;
+    rdfs:comment "A small sofa or double chair that seats two persons" .

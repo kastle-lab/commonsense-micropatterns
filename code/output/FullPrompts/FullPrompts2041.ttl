@@ -1,0 +1,22 @@
+@prefix :      <http://example.org/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+:Car a rdfs:Class ;
+    rdfs:label "Car"@en ;
+    rdfs:comment "A wheeled motor vehicle used for transportation"@en ;
+    rdfs:subClassOf :Vehicle .
+    :hasModel a rdf:Property ;
+    rdfs:label "has model"@en ;
+    rdfs:comment "The model of the car"@en ;
+    rdfs:domain :Car ;
+    rdfs:range rdfs:Literal .
+    :hasManufacturer a rdf:Property ;
+    rdfs:label "has manufacturer"@en ;
+    rdfs:comment "The manufacturer of the car"@en ;
+    rdfs:domain :Car ;
+    rdfs:range :Manufacturer .
+    :Manufacturer a rdfs:Class ;
+    rdfs:label "Manufacturer"@en ;
+    rdfs:comment "Entity that makes a car" ;
+    rdfs:subClassOf owl:Thing.

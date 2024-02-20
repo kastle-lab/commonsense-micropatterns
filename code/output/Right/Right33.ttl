@@ -1,0 +1,5 @@
+@prefix : <http://example.org/> .
+:Right a owl:Class ;
+    rdfs:label "Right" ;
+    rdfs:comment "Represents the concept of Right in the ontology" ;
+    .

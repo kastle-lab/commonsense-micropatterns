@@ -1,0 +1,10 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:day1 a ex:Day ;
+   ex:date "2022-01-01"^^xsd:date ;
+   ex:name "New Year's Day" ;
+   ex:partOfWeek ex:Saturday ;
+   ex:partOfMonth "January" ;
+   ex:partOfYear 2022 .
+   ex:Saturday a ex:Weekday ;
+    ex:dayName "Saturday" .

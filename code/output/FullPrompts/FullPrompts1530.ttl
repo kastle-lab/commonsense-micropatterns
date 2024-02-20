@@ -1,0 +1,7 @@
+@prefix : <http://example.org/book#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:book1 rdf:type :Book .
+:book1 :title "Title of the Book" .
+:book1 :author "Author's name" .
+:book1 :publisher "Publisher's name" .
+:book1 :year 2022 .

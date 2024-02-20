@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix life: <http://example.org/life#> .
+life:Life rdf:type owl:Class .
+life:Biology rdf:type owl:Class ;
+rdfs:subClassOf life:Life .
+life:Cell rdf:type owl:Class ;
+rdfs:subClassOf life:Biology .
+life:Organism rdf:type owl:Class ;
+rdfs:subClassOf life:Biology .
+life:Human rdf:type owl:Class ;
+rdfs:subClassOf life:Organism .
+life:Plant rdf:type owl:Class ;
+rdfs:subClassOf life:Organism .
+life:Animal rdf:type owl:Class ;
+rdfs:subClassOf life:Organism .
+life:Microorganism rdf:type owl:Class ;
+rdfs:subClassOf life:Organism .
+life:contains rdf:type owl:ObjectProperty;
+rdfs:domain life:Organism ;
+rdfs:range life:Cell .
+life:cellNumber rdf:type owl:DatatypeProperty ;
+rdfs:domain life:Organism ;
+rdfs:range xsd:integer .
+life:Human rdfs:comment "A type of organism that is part of the Homo Sapien species" .
+life:Plant rdfs:comment "A type of organism that photosynthesizes and usually has roots, leaves, and a stem".
+life:Animal rdfs:comment "A type of organism that is a multicellular eukaryote and who's cells do not have cell walls".
+life:Microorganism rdfs:comment "A type of organism that consists of a single cell or a colony of cells and lacks highly structured cells".

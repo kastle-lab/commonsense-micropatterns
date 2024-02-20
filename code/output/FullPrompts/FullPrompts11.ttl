@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix couch: <http://example.org/couch#> .
+couch: a owl:Class ;
+  rdfs:label "Couch"@en ;
+  rdfs:comment "A piece of furniture for seating multiple people"@en .
+couch:type a owl:Class ;
+  rdfs:subClassOf couch: ;
+  rdfs:label "Couch Type"@en ;
+  rdfs:comment "The type or style of a couch"@en .
+couch:material a owl:Class ;
+  rdfs:subClassOf couch: ;
+  rdfs:label "Couch Material"@en ;
+  rdfs:comment "The material from which a couch is made"@en .
+couch:size a owl:Class ;
+  rdfs:subClassOf couch: ;
+  rdfs:label "Couch Size"@en ;
+  rdfs:comment "The size of a couch"@en .
+couch:hasType a rdf:Property ;
+  rdfs:domain couch: ;
+  rdfs:range couch:type ;
+  rdfs:label "has type"@en ;
+  rdfs:comment "The type or style of the couch"@en .
+couch:hasMaterial a rdf:Property ;
+  rdfs:domain couch: ;
+  rdfs:range couch:material ;
+  rdfs:label "has material"@en ;
+  rdfs:comment "The material of the couch"@en .
+couch:hasSize a rdf:Property ;
+  rdfs:domain couch: ;
+  rdfs:range xsd:string ;
+  rdfs:label "has size"@en ;
+  rdfs:comment "The size of the couch"@en .

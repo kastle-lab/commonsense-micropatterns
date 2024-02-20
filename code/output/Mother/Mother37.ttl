@@ -1,0 +1,5 @@
+@prefix ex: <http://example.org/> .
+ex:Mary a ex:Female ;
+    ex:isMotherOf ex:John .
+ex:John a ex:Male ;
+    ex:hasMother ex:Mary .

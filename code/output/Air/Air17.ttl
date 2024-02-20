@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://www.example.org/air#> .
+air: a owl:Ontology ;
+    rdfs:comment "An ontology about Air"@en .
+air:Air a owl:Class ;
+    rdfs:comment "The substance that forms the Earth's atmosphere and that we breathe"@en ;
+    rdfs:label "Air"@en .
+air:hasTemperature a owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The property that determines the temperature of the air"@en ;
+    rdfs:label "hasTemperature"@en .
+ air:hasPressure a owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The property that determines the pressure of the air"@en ;
+    rdfs:label "hasPressure"@en .
+air:hasHumidity a owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The property that determines the amount of moisture in the air"@en ;
+    rdfs:label "hasHumidity"@en .
+air:hasPollutants a owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The property that determines the presence of harmful substances in the air"@en ;
+    rdfs:label "hasPollutants"@en .
+air:isComposedOf a owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The property that determines what gases the air is composed of"@en ;
+    rdfs:label "isComposedOf"@en .
+ air:isInArea a owl:ObjectProperty ;
+    rdfs:domain air:Air ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The property that determines the area where the air is"@en ;
+    rdfs:label "isInArea"@en .

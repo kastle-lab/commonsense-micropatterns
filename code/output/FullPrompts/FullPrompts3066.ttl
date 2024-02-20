@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix community: <http://example.org/community/> .
+community:Community rdf:type rdfs:Class ;
+  rdfs:comment "The class of all Communities" ;
+  rdfs:label "Community" .
+community:hasMember rdf:type rdf:Property ;
+  rdfs:domain community:Community ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "The property that describes a member belonging to a community" ;
+  rdfs:label "hasMember" .
+community:locatedIn rdf:type rdf:Property ;
+  rdfs:domain community:Community ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "The property that describes the location of a community" ;
+  rdfs:label "locatedIn" .
+community:communityName rdf:type rdf:Property ;
+  rdfs:domain community:Community ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The property that denotes the name of a community" ;
+  rdfs:label "communityName" .

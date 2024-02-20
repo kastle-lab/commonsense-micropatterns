@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#/> .
+@prefix ont: <http://www.ontologyexample.org/Service#/> .
+ont:Service rdf:type owl:Class ;
+rdfs:label "Service"@en ;
+rdfs:comment "This refers to the concept of a service, which could be professional, recreational, etc."@en ;
+rdfs:subClassOf owl:Thing .
+ont:ProfessionalService rdf:type owl:Class ;
+rdfs:label "Professional Service"@en ;
+rdfs:comment "This refers to services that involve professional work like legal consultation, medical examination, etc."@en ;
+rdfs:subClassOf ont:Service .
+ont:RecreationalService rdf:type owl:Class ;
+rdfs:label "Recreational Service"@en ;
+rdfs:comment "This refers to services that involve recreational activities like spa, sports coaching, etc."@en ;
+rdfs:subClassOf ont:Service .
+ont:hasProvider rdf:type owl:ObjectProperty ;
+rdfs:label "has provider"@en ;
+rdfs:comment "This property describes the provider for a particular service."@en ;
+rdfs:range ont:ServiceProvider ;
+rdfs:domain ont:Service .
+ont:ServiceProvider rdf:type owl:Class ;
+rdfs:label "Service Provider"@en ;
+rdfs:comment "This refers to any entity that provides a service, they could be individuals, organizations, etc."@en .
+ont:hasPrice rdf:type owl:DatatypeProperty ;
+rdfs:label "has price"@en ;
+rdfs:comment "This property describes the price of a service."@en ;
+rdfs:range xsd:decimal ;
+rdfs:domain ont:Service .

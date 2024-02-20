@@ -1,0 +1,6 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/#> .
+ex:Person a rdfs:Class .
+ex:name a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .

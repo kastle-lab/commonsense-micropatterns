@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/#> .
+ex:Issue a rdfs:Class ;
+  rdfs:comment "The class of issues/problems" ;
+  rdfs:label "Issue" .
+ex:hasIssue a rdf:Property ;
+  rdfs:comment "The property that links something with its issues/problems" ;
+  rdfs:label "has issue" ;
+  rdfs:domain ex:Something ;
+  rdfs:range ex:Issue .
+  ex:issueDescription a rdf:Property ;
+  rdfs:comment "The property that provides a description of an issue" ;
+  rdfs:label "description" ;
+  rdfs:domain ex:Issue ;
+  rdfs:range xsd:string .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix face: <http://www.example.org/ontology/face#> .
+face:Face rdf:type owl:Class ;
+    rdfs:comment "A class representing a human face."@en ;
+    rdfs:subClassOf owl:Thing .
+face:hasFacialFeature rdf:type owl:ObjectProperty ;
+    rdfs:comment "Relates a face to its facial features."@en ;
+    rdfs:domain face:Face ;
+    rdfs:range face:FacialFeature .
+face:FacialFeature rdf:type owl:Class ;
+    rdfs:comment "A class representing a general facial feature."@en ;
+    rdfs:subClassOf owl:Thing .
+face:hasColor rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Relates a facial feature to its color."@en ;
+    rdfs:domain face:FacialFeature ;
+    rdfs:range xsd:string .
+face:Nose rdf:type owl:Class ;
+    rdfs:comment "A class representing the nose as a type of facial feature."@en ;
+    rdfs:subClassOf face:FacialFeature .
+face:Eye rdf:type owl:Class ;
+    rdfs:comment "A class representing the eye as a type of facial feature."@en ;
+    rdfs:subClassOf face:FacialFeature .
+face:Mouth rdf:type owl:Class ;
+    rdfs:comment "A class representing the mouth as a type of facial feature."@en ;
+    rdfs:subClassOf face:FacialFeature .

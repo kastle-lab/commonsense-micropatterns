@@ -1,0 +1,14 @@
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Moment a rdfs:Class ;
+   rdfs:comment "A specific point in time" .
+:hasTime a rdfs:Property ;
+   rdfs:domain :Moment ;
+   rdfs:range :Time ;
+   rdfs:comment "The time at which the moment occurs" .
+:hasLocation a rdfs:Property ;
+   rdfs:domain :Moment ;
+   rdfs:range :Location ;
+   rdfs:comment "The location at which the moment occurs" .
+:Time a rdfs:Class .
+:Location a rdfs:Class .

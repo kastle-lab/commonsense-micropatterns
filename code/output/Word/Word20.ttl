@@ -1,0 +1,34 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix word: <http://example.org/word/> .
+@prefix word-ontology: <http://example.org/word-ontology#> .
+word-ontology:    rdf:type owl:Ontology ;
+    rdfs:comment "An ontology for representing words" .
+word-ontology:Word    rdf:type owl:Class ;
+    rdfs:label "Word" ;
+    rdfs:comment "A basic unit to express meaning in a language." .
+word-ontology:hasSpelling    rdf:type owl:DatatypeProperty ;
+    rdfs:domain word-ontology:Word ;
+    rdfs:range xsd:string ;
+    rdfs:label "hasSpelling" ;
+    rdfs:comment "The spelling of the word." .
+word-ontology:hasPartOfSpeech    rdf:type owl:ObjectProperty ;
+    rdfs:domain word-ontology:Word ;
+    rdfs:range word-ontology:PartOfSpeech ;
+    rdfs:label "hasPartOfSpeech" ;
+    rdfs:comment "The grammatical role of word." .
+word-ontology:PartOfSpeech    rdf:type owl:Class ;
+    rdfs:label "PartOfSpeech" ;
+    rdfs:comment "The grammatical category of words." .
+   word:word1    rdf:type word-ontology:Word ;
+    word-ontology:hasSpelling "Hello"@en ;
+    word-ontology:hasPartOfSpeech word-ontology:Noun .
+word:word2    rdf:type word-ontology:Word ;
+    word-ontology:hasSpelling "Run"@en ;
+    word-ontology:hasPartOfSpeech word-ontology:Verb .
+word-ontology:Noun    rdf:type word-ontology:PartOfSpeech ;
+    rdfs:label "Noun" .
+word-ontology:Verb    rdf:type word-ontology:PartOfSpeech ;
+    rdfs:label "Verb" .

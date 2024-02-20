@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix word: <http://www.example.org/word#> .
+word:Word rdfs:subClassOf rdfs:Resource ;
+    rdfs:comment "A word in a language" ;
+    rdfs:label "Word"@en .
+word:partOfSpeech rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The grammatical role of the word in a sentence" ;
+    rdfs:label "part of speech"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain word:Word .
+word:spelling rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The correct arrangement of the letters of the word" ;
+    rdfs:label "spelling"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain word:Word .
+  word:hasSynonym rdf:type owl:ObjectProperty ;
+    rdfs:comment "Another word that has the same meaning"@en ;
+    rdfs:label "has synonym"@en ;
+    rdfs:range word:Word ;
+    rdfs:domain word:Word .
+word:hasAntonym rdf:type owl:ObjectProperty ;
+    rdfs:comment "Another word that means the opposite"@en ;
+    rdfs:label "has antonym"@en ;
+    rdfs:range word:Word ;
+    rdfs:domain word:Word .
+word:usedIn rdf:type owl:ObjectProperty ;
+    rdfs:comment "An expression or phrase where the word is used"@en ;
+    rdfs:label "used in"@en ;
+    rdfs:range word:Phrase ;
+    rdfs:domain word:Word .
+word:Phrase rdfs:subClassOf rdfs:Resource ;
+    rdfs:comment "A group of words that expresses a concept" ;
+    rdfs:label "Phrase"@en .
+ word:sentence rdf:type owl:DatatypeProperty ;
+    rdfs:comment "A group of words containing a subject and a predicate that is a full thought" ;
+    rdfs:label "sentence"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain word:Phrase .

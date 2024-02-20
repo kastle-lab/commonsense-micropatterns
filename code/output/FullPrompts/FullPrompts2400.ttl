@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/study#> .
+:Study a owl:Class ;
+    rdfs:label "Study" ;
+    rdfs:comment "The activity or process of learning about something by reading, memorizing and understanding." .
+:studyTopic a owl:DataTypeProperty ;
+    rdfs:label "studyTopic" ;
+    rdfs:comment "The subject area which the study is focused on." ;
+    rdfs:domain :Study ;
+    rdfs:range xsd:string .
+:studyMethod a owl:ObjectTypeProperty ;
+    rdfs:label "studyMethod" ;
+    rdfs:comment "The method or technique used in the process of study." ;
+    rdfs:domain :Study ;
+    rdfs:range :StudyMethod .
+:studyDuration a owl:DataTypeProperty ;
+    rdfs:label "studyDuration" ;
+    rdfs:comment "The length of time a study session lasts." ;
+    rdfs:domain :Study ;
+    rdfs:range xsd:duration .
+:StudyMethod a owl:Class ;
+    rdfs:label "Study method" ;
+    rdfs:comment "Different methods or techniques used to study or understand a subject." .
+    :studyMaterials a owl:ObjectTypeProperty ;
+    rdfs:label "studyMaterials" ;
+    rdfs:comment "The learning resources used in a study process." ;
+    rdfs:domain :Study ;
+    rdfs:range :StudyMaterial .
+:StudyMaterial a owl:Class ;
+    rdfs:label "Study Material" ;
+    rdfs:comment "Different materials or resources that aid in understanding during the study process such as books, videos, or software." .

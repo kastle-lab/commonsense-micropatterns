@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/service#> .
+:Service a rdfs:Class ;
+  rdfs:label "Service" ;
+  rdfs:comment "A class representing various types of services." .
+:hasName a rdf:Property ;
+  rdfs:label "has name" ;
+  rdfs:comment "The property that holds the name of the service." ;
+  rdfs:domain :Service ;
+  rdfs:range xsd:string .
+:hasType a rdf:Property ;
+  rdfs:label "has type" ;
+  rdfs:comment "The property that holds the type of the service." ;
+  rdfs:domain :Service ;
+  rdfs:range :ServiceType .
+:ServiceType a rdfs:Class ;
+  rdfs:label "Service Type" ;
+  rdfs:comment "A class representing different types of services." .
+:isPaid a rdf:Property ;
+  rdfs:label "is paid" ;
+  rdfs:comment "The property that holds the information whether the service is paid or not." ;
+  rdfs:domain :Service ;
+  rdfs:range xsd:boolean .
+:hasRate a rdf:Property ;
+  rdfs:label "has rate" ;
+  rdfs:comment "The property that holds the rate of the service." ;
+  rdfs:domain :Service ;
+  rdfs:range xsd:float .

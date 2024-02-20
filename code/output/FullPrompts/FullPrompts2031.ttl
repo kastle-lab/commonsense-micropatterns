@@ -1,0 +1,31 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Class definitionsex:Car a rdfs:Class ;
+    rdfs:label "Car" ;
+    rdfs:comment "An automobile or motor car" .
+ex:Brand a rdfs:Class ;
+    rdfs:label "Brand" ;
+    rdfs:comment "A car brand or manufacturer" .
+ex:Model a rdfs:Class ;
+    rdfs:label "Model" ;
+    rdfs:comment "A specific model of a car" .
+ex:Color a rdfs:Class ;
+    rdfs:label "Color" ;
+    rdfs:comment "The color of a car" .
+# Object property definitionsex:hasBrand a rdf:Property ;
+    rdfs:label "hasBrand" ;
+    rdfs:comment "The brand of the car" ;
+    rdfs:domain ex:Car ;
+    rdfs:range ex:Brand .
+ex:hasModel a rdf:Property ;
+    rdfs:label "hasModel" ;
+    rdfs:comment "The model of the car" ;
+    rdfs:domain ex:Brand ;
+    rdfs:range ex:Model .
+ex:hasColor a rdf:Property ;
+    rdfs:label "hasColor" ;
+    rdfs:comment "The color of the car" ;
+    rdfs:domain ex:Car ;
+    rdfs:range ex:Color .

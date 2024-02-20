@@ -1,0 +1,23 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://example.com/ontology#> .
+ont:Service a rdfs:Class ;
+    rdfs:comment "Represents the concept of a Service provided by an entity" ;
+    rdfs:label "Service" .
+ont:provides a rdf:Property ;
+    rdfs:comment "Represents an entity providing a Service" ;
+    rdfs:label "provides" ;
+    rdfs:domain ont:Entity ;
+    rdfs:range ont:Service .
+ont:Entity a rdfs:Class ;
+    rdfs:comment "Represents entities that can provide Services" ;
+    rdfs:label "Entity" .
+ont:serviceName a rdf:Property ;
+    rdfs:comment "The name of the Service" ;
+    rdfs:label "serviceName" ;
+    rdfs:domain ont:Service ;
+    rdfs:range xsd:string .
+ont:serviceDescription a rdf:Property ;
+    rdfs:comment "Description of the Service" ;
+    rdfs:label "serviceDescription" ;
+    rdfs:domain ont:Service ;
+    rdfs:range xsd:string .

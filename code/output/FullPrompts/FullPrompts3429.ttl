@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix face: <http://example.org/ontology/face#> .
+face:Face a rdfs:Class ;
+    rdfs:label "Face"@en ;
+    rdfs:comment "The front part of a person's head from the forehead to the chin"@en ;
+    rdfs:subClassOf rdfs:Resource .
+face:hasColor a rdf:Property ;
+    rdfs:label "has color"@en ;
+    rdfs:domain face:Face ;
+    rdfs:range xsd:string .
+face:hasShape a rdf:Property ;
+    rdfs:label "has shape"@en ;
+    rdfs:domain face:Face ;
+    rdfs:range xsd:string .
+face:hasTexture a rdf:Property ;
+    rdfs:label "has texture"@en ;
+    rdfs:domain face:Face ;
+    rdfs:range xsd:string .
+face:hasComponent a rdf:Property ;
+    rdfs:label "has component"@en ;
+    rdfs:domain face:Face ;
+    rdfs:range xsd:string .

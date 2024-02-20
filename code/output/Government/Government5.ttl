@@ -1,0 +1,36 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gov: <http://www.example.org/government#> .
+gov:Government a rdfs:Class ;
+  rdfs:label "Government" .
+gov:Department a rdfs:Class ;
+  rdfs:label "Department" ;
+  rdfs:subClassOf gov:Government .
+  gov:Agency a rdfs:Class ;
+  rdfs:label "Agency" ;
+  rdfs:subClassOf gov:Department .
+gov:hasDepartment a rdfs:Property ;
+  rdfs:label "has department" ;
+  rdfs:domain gov:Government ;
+  rdfs:range gov:Department .
+gov:hasAgency a rdfs:Property ;
+  rdfs:label "has agency" ;
+  rdfs:domain gov:Department ;
+  rdfs:range gov:Agency .
+gov:PublicOfficial a rdfs:Class ;
+  rdfs:label "Public Official" .
+gov:holdsPosition a rdfs:Property ;
+  rdfs:label "holds position" ;
+  rdfs:domain gov:PublicOfficial ;
+  rdfs:range gov:Government .
+gov:Legislation a rdfs:Class ;
+  rdfs:label "Legislation" .
+gov:passesLegislation a rdfs:Property ;
+  rdfs:label "passes legislation" ;
+  rdfs:domain gov:Government ;
+  rdfs:range gov:Legislation .
+gov:Policy a rdfs:Class ;
+  rdfs:label "Policy" .
+gov:implementsPolicy a rdfs:Property ;
+  rdfs:label "implements policy" ;
+  rdfs:domain gov:Government ;
+  rdfs:range gov:Policy .

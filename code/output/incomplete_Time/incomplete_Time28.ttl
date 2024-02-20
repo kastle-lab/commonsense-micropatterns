@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology for describing the temporal characteristics of things."@en ;
+    rdfs:label "Time Ontology"@en .
+time:Instant    rdf:type owl:Class ;
+    rdfs:comment "An instant is a zero-dimensional temporal entity that has position on a time coordinate."@en ;
+    rdfs:label "Instant"@en ;
+    rdfs:subClassOf time:TemporalEntity .
+time:Interval    rdf:type owl:Class ;
+    rdfs:comment "An interval is a one-dimensional temporal entity that has an extent or duration."@en ;
+    rdfs:label "Interval"@en ;
+    rdfs:subClassOf time:TemporalEntity .
+time:TemporalEntity    rdf:type owl:Class ;
+    rdfs:comment "TemporalEntity is the class of entities that have temporal extent or location within the time-line."@en ;
+    rdfs:label "Temporal Entity"@en .
+time:hasTime     rdf:type owl:ObjectProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range time:TemporalEntity ;
+    rdfs:label "hasTime"@en;
+    rdfs:comment "The property that connects a thing to a temporal entity associated with it."@en .
+time:inXSDDateTime     rdf:type owl:DatatypeProperty ;
+    rdfs:domain time:Instant ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "in XSD Date Time"@en;
+    rdfs:comment "The property that connects an instant to a representation of its position in time, formatted according to XML schema date time."@en .
+time:after     rdf:type owl:ObjectProperty ;
+    rdfs:domain time:TemporalEntity ;
+    rdfs:range time:TemporalEntity ;
+    rdfs:label "after"@en;
+    rdfs:comment "The property that connects two temporal entities where one follows the other in time."@en .
+time:before     rdf:type owl:ObjectProperty ;
+    rdfs:domain time:TemporalEntity ;
+    rdfs:range time:TemporalEntity ;
+    rdfs:label "before"@en;
+    rdfs:comment "The property that connects two temporal entities where one precedes the other in time."@en .
+time:duration     rdf:type owl:DatatypeProperty ;
+    rdfs:domain time:Interval ;
+    rdfs:range xsd:duration ;
+    rdfs:label "duration"@en;
+    rdfs:comment "The property that connects an interval to a representation of its duration, formatted according to XML schema duration."@en .

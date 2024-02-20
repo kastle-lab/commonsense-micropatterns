@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix man: <http://ontologies.com/man#> .
+man:Man rdf:type rdfs:Class .
+man:hasName rdf:type rdf:Property ;
+      rdfs:domain man:Man ;
+      rdfs:range xsd:string .
+man:hasAge rdf:type rdf:Property ;
+     rdfs:domain man:Man ;
+     rdfs:range xsd:integer .
+man:hasOccupation rdf:type rdf:Property ;
+        rdfs:domain man:Man ;
+        rdfs:range xsd:string .
+man:hasGender rdf:type rdf:Property ;
+     rdfs:domain man:Man ;
+     rdfs:range xsd:string .
+man:JohnDoe rdf:type man:Man ;
+    man:hasName "John Doe"^^xsd:string ;
+    man:hasAge 30^^xsd:integer ;
+    man:hasGender "Male"^^xsd:string ;
+    man:hasOccupation "Software Engineer"^^xsd:string .

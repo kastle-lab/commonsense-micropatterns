@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Sofa rdf:type owl:Class .
+# Properties of Sofaex:hasMaterial rdf:type owl:DataTypeProperty .
+ex:hasColor rdf:type owl:DataTypeProperty .
+ex:hasStyle rdf:type owl:DataTypeProperty .
+ex:hasSize rdf:type owl:DataTypeProperty .
+# Properties specification for Sofaex:hasMaterial rdfs:domain ex:Sofa ;
+ rdfs:range xsd:string .
+ex:hasColor rdfs:domain ex:Sofa ;
+ rdfs:range xsd:string .
+ex:hasStyle rdfs:domain ex:Sofa ;
+ rdfs:range xsd:string .
+ex:hasSize rdfs:domain ex:Sofa ;
+ rdfs:range xsd:string .

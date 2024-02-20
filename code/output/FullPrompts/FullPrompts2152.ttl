@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix state: <http://www.example.org/state#> .
+#Definition of class Statestate:State rdf:type rdfs:Class .
+state:State rdfs:comment "A recognized sovereign nation or territory" ^^xsd:string .
+#Definition of propertiesstate:hasName rdf:type rdf:Property .
+state:hasName rdfs:domain state:State .
+state:hasName rdfs:range xsd:string .
+state:hasName rdfs:comment "The official name of a state" ^^xsd:string .
+state:hasPopulation rdf:type rdf:Property .
+state:hasPopulation rdfs:domain state:State .
+state:hasPopulation rdfs:range xsd:integer .
+state:hasPopulation rdfs:comment "The total population of a state" ^^xsd:string .
+state:hasCapital rdf:type rdf:Property .
+state:hasCapital rdfs:domain state:State .
+state:hasCapital rdfs:range xsd:string .
+state:hasCapital rdfs:comment "The capital city of a state" ^^xsd:string .
+#Example of datastate:California rdf:type state:State .
+state:California state:hasName "California" .
+state:California state:hasPopulation 39538223 .
+state:California state:hasCapital "Sacramento" .
+state:Texas rdf:type state:State .
+state:Texas state:hasName "Texas" .
+state:Texas state:hasPopulation 29145505 .
+state:Texas state:hasCapital "Austin" .

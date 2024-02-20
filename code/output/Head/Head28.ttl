@@ -1,0 +1,2 @@
+   rdfs:label "Head"@en;
+   rdfs:comment "The part of the body where the brain, eyes, ears, nose and mouth are located."@en.

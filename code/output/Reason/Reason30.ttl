@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.com/ontology#> .
+# Defining "Reason" as a class:Reason a rdfs:Class ;
+    rdfs:label "Reason"@en ;
+    rdfs:comment "A class representing the concept of a 'Reason'."@en .
+:hasReason a rdf:Property ;
+    rdfs:label "has reason"@en ;
+    rdfs:comment "The property indicating that something has a reason."@en ;
+    rdfs:domain :Thing ;
+    rdfs:range :Reason .
+    :Reason    rdfs:subClassOf rdfs:Thing ;
+    rdfs:label "Reason"@en ;
+    rdfs:comment "A class to represent Reason"@en .
+:logicalReason a :Reason ;
+    rdfs:label "Logical Reason"@en ;
+   :definition "A reason based on logic or rational thinking"@en .
+:emotionalReason a :Reason ;
+    rdfs:label "Emotional Reason"@en ;
+    :definition "A reason based on emotions or feelings"@en .

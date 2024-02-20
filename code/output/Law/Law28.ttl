@@ -1,0 +1,11 @@
+@prefix ex: <http://example.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Law    a owl:Class ;
+    rdfs:label "Law"@en ;
+    owl:equivalentClass ex:StatutoryLaw, ex:CommonLaw .
+ex:StatutoryLaw    a owl:Class ;
+    rdfs:label "Statutory Law"@en ;
+    rdfs:subClassOf ex:Law .
+ex:CommonLaw    a owl:Class ;
+    rdfs:label "Common Law"@en ;
+    rdfs:subClassOf ex:Law .

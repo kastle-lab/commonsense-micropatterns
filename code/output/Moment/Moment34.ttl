@@ -1,0 +1,13 @@
+@base <http://example.org/> .
+@prefix ex: <http://example.org/terms/> .
+ex:moment a rdfs:Class ;
+rdfs:label "Moment"@en;
+rdfs:comment "A point of time described in a sequence of events"@en;
+ex:hasTime a rdf:Property ;
+rdfs:label "has time"@en ;
+rdfs:range xsd:dateTime ;
+ex:hasEvent a rdf:Property ;
+rdfs:label "has event"@en ;
+rdfs:range ex:Event.ex:Event a rdfs:Class;
+rdfs:label "Event"@en;
+rdfs:comment "Something that happens or has happened"@en.

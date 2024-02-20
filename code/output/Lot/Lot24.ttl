@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lot: <http://example.org/lot/> .
+lot:Lot a rdfs:Class ;
+    rdfs:label "Lot" ;
+    rdfs:comment "A parcel of land having fixed boundaries and designated on a plot or survey" .
+lot:area a rdf:Property ;
+    rdfs:label "area" ;
+    rdfs:domain lot:Lot ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The total surface of the Lot, measured in square meters" .
+lot:location a rdf:Property ;
+    rdfs:label "location" ;
+    rdfs:domain lot:Lot ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The geographical location of the Lot" .

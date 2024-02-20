@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix head: <http://example.org/head/> .
+head:Head rdf:type rdfs:Class .
+head:Eyes rdf:type rdfs:Class .
+head:Nose rdf:type rdfs:Class .
+head:Mouth rdf:type rdfs:Class .
+head:Hair rdf:type rdfs:Class.head:Ears rdf:type rdfs:Class .
+head:Brain rdf:type rdfs:Class.head:hasEyes rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range head:Eyes .
+head:hasNose rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range head:Nose .
+head:hasMouth rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range head:Mouth .
+head:hasEars rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range head:Ears .
+head:hasHair rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range head:Hair .
+head:hasBrain rdf:type rdf:Property ;
+    rdfs:domain head:Head ;
+    rdfs:range head:Brain .
+head:hasColor rdf:type rdf:Property ;
+    rdfs:range xsd:string .
+head:hasSize rdf:type rdf:Property ;
+    rdfs:range xsd:string .
+head:Eyes rdfs:subClassOf head:Head ;
+    head:hasColor "Blue"@en .
+head:Nose rdfs:subClassOf head:Head ;
+    head:hasSize "Small"@en.head:Mouth rdfs:subClassOf head:Head ;
+    head:hasSize "Medium"@en .
+head:Ears rdfs:subClassOf head:Head ;
+    head:hasSize "Big"@en.head:Hair rdfs:subClassOf head:Head ;
+    head:hasColor "Black"@en .
+head:Brain rdfs:subClassOf head:Head ;
+    head:hasSize "Large"@en.

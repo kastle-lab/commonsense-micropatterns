@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix idea: <http://www.example.org/idea#> .
+idea:     rdf:type owl:Ontology ;
+    rdfs:comment "Ontology of the Concept Idea"^^xsd:string ;
+    rdfs:label "Idea Ontology"^^xsd:string .
+idea:Idea    rdf:type owl:Class ;
+    rdfs:label "Idea"^^xsd:string ;
+    rdfs:comment "Concept of Idea"^^xsd:string .
+idea:hasOriginator    rdf:type owl:ObjectProperty ;
+    rdfs:label "has originator"^^xsd:string ;
+    rdfs:comment "The person or entity that originated the idea"^^xsd:string ;
+    rdfs:domain idea:Idea ;
+    rdfs:range idea:Originator .
+idea:Originator    rdf:type owl:Class ;
+    rdfs:label "Originator"^^xsd:string ;
+    rdfs:comment "The person or entity that generated an Idea"^^xsd:string .
+idea:hasDate    rdf:type owl:DatatypeProperty ;
+    rdfs:label "has date"^^xsd:string ;
+    rdfs:comment "The date when the idea was conceived"^^xsd:string ;
+    rdfs:domain idea:Idea ;
+    rdfs:range xsd:date .
+idea:isRelatedTo    rdf:type owl:ObjectProperty ;
+    rdfs:label "is related to"^^xsd:string ;
+    rdfs:comment "The notion that one idea is linked or relates to another"^^xsd:string ;
+    rdfs:domain idea:Idea ;
+    rdfs:range idea:Idea .

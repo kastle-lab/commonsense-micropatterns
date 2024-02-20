@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix health: <http://example.com/health#> .
+health:Patient a rdfs:Class ;
+    rdfs:label "Patient".
+health:Doctor a rdfs:Class ;
+    rdfs:label "Doctor".
+health:hasDoctor a rdf:Property ;
+    rdfs:domain health:Patient ;
+    rdfs:range health:Doctor ;
+    rdfs:label "has doctor" .
+health:hasPatient a rdf:Property ;
+    rdfs:domain health:Doctor ;
+    rdfs:range health:Patient ;
+    rdfs:label "has patient" .

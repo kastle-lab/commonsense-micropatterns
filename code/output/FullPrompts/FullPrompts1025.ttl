@@ -1,0 +1,39 @@
+@prefix ex: <http://example.com/ontology/money#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Currency a rdfs:Class .
+ex:Banknote a rdfs:Class ;
+  rdfs:subClassOf ex:Currency .
+ex:Coin a rdfs:Class ;
+  rdfs:subClassOf ex:Currency .
+ex:DigitalCurrency a rdfs:Class ;
+  rdfs:subClassOf ex:Currency .
+ex:hasAmount a rdfs:Property ;
+  rdfs:domain ex:Currency ;
+  rdfs:range xsd:decimal .
+ex:hasCountry a rdfs:Property ;
+  rdfs:domain ex:Currency ;
+  rdfs:range rdfs:Literal .
+ex:hasNationality a rdfs:Property ;
+  rdfs:domain ex:Currency ;
+  rdfs:range rdfs:Literal .
+ex:usDollar a ex:Currency ;
+  ex:hasAmount "1"^^xsd:decimal ;
+  ex:hasCountry "United States" ;
+  ex:hasNationality "American" .
+ex:euro a ex:Currency ;
+  ex:hasAmount "0.85"^^xsd:decimal ;
+  ex:hasCountry "European Union" ;
+  ex:hasNationality "European" .
+ex:bitcoin a ex:DigitalCurrency ;
+  ex:hasAmount "0.000022"^^xsd:decimal ;
+  ex:hasCountry "Global" ;
+  ex:hasNationality "Global" .
+ex:penny a ex:Coin ;
+  ex:hasAmount "0.01"^^xsd:decimal ;
+  ex:hasCountry "United States" ;
+  ex:hasNationality "American" .
+ex:cent a ex:Coin ;
+  ex:hasAmount "0.01"^^xsd:decimal ;
+  ex:hasCountry "European Union" ;
+  ex:hasNationality "European" .

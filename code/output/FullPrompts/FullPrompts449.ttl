@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+# Ontology Classesex:Hand rdf:type rdfs:Class ;
+    rdfs:comment "A body part that is located at the end of the arm" .
+ex:Finger rdf:type rdfs:Class ;
+    rdfs:comment "A digit attached to the hand" ;
+    rdfs:subClassOf ex:Hand .
+ex:Thumb rdf:type rdfs:Class ;
+    rdfs:comment "A thick short eminence on the hand" ;
+    rdfs:subClassOf ex:Finger .
+ex:IndexFinger rdf:type rdfs:Class ;
+    rdfs:comment "The first finger adjacent to the thumb" ;
+    rdfs:subClassOf ex:Finger .
+ex:MiddleFinger rdf:type rdfs:Class ;
+    rdfs:comment "The central finger of a hand" ;
+    rdfs:subClassOf ex:Finger .
+ex:RingFinger rdf:type rdfs:Class ;
+    rdfs:comment "The finger on which a ring is worn, usually next to the pinkie" ;
+    rdfs:subClassOf ex:Finger .
+ex:LittleFinger rdf:type rdfs:Class ;
+    rdfs:comment "The smallest finger of the human hand, located furthest from the thumb" ;
+    rdfs:subClassOf ex:Finger .
+ex:Palm rdf:type rdfs:Class ;
+    rdfs:comment "The inner surface of the hand that extends from the wrist to the base of the fingers" ;
+    rdfs:subClassOf ex:Hand .
+ex:BackOfHand rdf:type rdfs:Class ;
+    rdfs:comment "The opposite side to the palm of the hand" ;
+    rdfs:subClassOf ex:Hand .
+# Ontology Propertiesex:hasPart rdf:type rdf:Property ;
+    rdfs:domain ex:Hand ;
+    rdfs:range ex:Hand ;
+    rdfs:comment "A property indicating a part of the hand" .
+ ex:connectedTo rdf:type rdf:Property ;
+    rdfs:domain ex:Hand ;
+    rdfs:range ex:Hand ;
+    rdfs:comment "A property indicating a connection between parts of the hand" .

@@ -1,0 +1,24 @@
+@prefix : <http://example.org/air#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Air     rdf:type rdfs:Class ;
+    rdfs:label "Air"@en ;
+    rdfs:comment "A mixture of gases that forms the Earth's atmosphere"@en .
+ :containsGas     rdf:type rdf:Property ;
+    rdfs:domain :Air ;
+    rdfs:range :Gas ;
+    rdfs:label "contains gas"@en ;
+    rdfs:comment "Indicates the gas that the air contains"@en .
+:Gas     rdf:type rdfs:Class ;
+     rdfs:label "Gas"@en ;
+     rdfs:comment "An airy substance that expands freely to fill any space available, irrespective of its quantity"@en .
+:Oxygen     rdf:type :Gas ;
+     rdfs:label "Oxygen"@en ;
+     rdfs:comment "A colorless, odorless reactive gas, the life-supporting component of the air"@en .
+:Nitrogen     rdf:type :Gas ;
+     rdfs:label "Nitrogen"@en ;
+     rdfs:comment "A colorless, odorless unreactive gas that forms about 78 percent of the earth's atmosphere"@en .
+:Air1    rdf:type :Air ;
+    :containsGas :Oxygen, :Nitrogen .
+Please note that, it's just a basic ontology structure for 'Air'. You might want to add more properties and classes based on the depth of detail you want in your ontology. Also, URIs are assumed to be under 'http://example.org/air#', you should replace it with the actual ones if any.

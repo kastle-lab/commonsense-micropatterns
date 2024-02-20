@@ -1,0 +1,13 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Process    a rdfs:Class ;
+    rdfs:label "Process"@en ;
+    rdfs:comment "A series of actions or steps taken in order to achieve a particular end."@en .
+ex:end    a rdf:Property ;
+    rdfs:range ex:End ;
+    rdfs:domain ex:Process ;
+    rdfs:label "ends with"@en ;
+    rdfs:comment "The final point or part of a process."@en .
+ex:End    a rdfs:Class ;
+    rdfs:label "End"@en ;
+    rdfs:comment "The final point or part, completion or conclusion."@en .

@@ -1,0 +1,30 @@
+@prefix : <http://example.org/morning#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Morning a rdfs:Class ;
+    rdfs:label "Morning" ;
+    rdfs:comment "The period of time from sunrise to noon." .
+:Sunrise a rdfs:Class ;
+    rdfs:label "Sunrise" ;
+    rdfs:comment "The time in the morning when the sun appears." .
+:Breakfast a rdfs:Class ;
+    rdfs:label "Breakfast" ;
+    rdfs:comment "The first meal of the day, usually eaten in the morning." .
+:Alarm a rdfs:Class ;
+    rdfs:label "Alarm" ;
+    rdfs:comment "An apparatus or method that serves to wake a person from sleep." .
+:breakfastTime a rdfs:Property ;
+    rdfs:label "breakfast time" ;
+    rdfs:comment "The time set for eating breakfast." ;
+    rdfs:domain :Morning ;
+    rdfs:range xsd:time .
+:alarmSetAt a rdfs:Property ;
+    rdfs:label "alarm set at" ;
+    rdfs:comment "The time at which the alarm is set to ring." ;
+    rdfs:domain :Morning ;
+    rdfs:range xsd:time .
+:sunriseTime a rdfs:Property ;
+    rdfs:label "sunrise time" ;
+    rdfs:comment "The time at which the sun rises." ;
+    rdfs:domain :Morning ;
+    rdfs:range xsd:time .

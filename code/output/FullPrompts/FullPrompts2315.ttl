@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lot: <http://example.org/lot#> .
+# Define "Lot" classlot:Lot a rdfs:Class ;
+     rdfs:comment "The class of all lots"@en ;
+    rdfs:label "Lot"@en .
+# Define properties for "Lot"# Expected size in square feetlot:hasSize a rdf:Property ;
+    rdfs:comment "Indicate size of lot in square feet"@en ;
+    rdfs:label "hasSize"@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range rdf:Integer .
+# Expected property for Addresslot:hasAddress a rdf:Property ;
+    rdfs:comment "Indicate address of the lot"@en ;
+    rdfs:label "hasAddress"@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range rdfs:Literal .
+# Expected property for Pricelot:hasPrice a rdf:Property ;
+    rdfs:comment "Indicate price of the lot"@en ;
+    rdfs:label "hasPrice"@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range rdf:Integer .
+# Expected status (empty or built upon)lot:hasStatus a rdf:Property ;
+    rdfs:comment "Indicate status of the lot"@en ;
+    rdfs:label "hasStatus"@en ;
+    rdfs:domain lot:Lot ;
+    rdfs:range rdfs:Literal .
+ # Individual instances of "Lot"lot:Lot1 a lot:Lot ;
+    lot:hasSize "5000" ;
+    lot:hasAddress "123 Main St, Anytown, USA" ;
+    lot:hasPrice "120000" ;
+    lot:hasStatus "Empty" .
+lot:Lot2 a lot:Lot ;
+    lot:hasSize "4000" ;
+    lot:hasAddress "456 Pine St, Othertown, USA" ;
+    lot:hasPrice "80000" ;
+    lot:hasStatus "Built upon" .

@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org#> .
+ex:City rdf:type rdfs:Class .
+ex:hasName rdf:type rdf:Property ;
+           rdfs:domain ex:City ;
+           rdfs:range rdfs:Literal .
+ex:hasPopulation rdf:type rdf:Property ;
+                 rdfs:domain ex:City ;
+                 rdfs:range rdfs:Literal .
+ex:isLocatedIn rdf:type rdf:Property ;
+               rdfs:domain ex:City ;
+               rdfs:range ex:Country .
+ex:Country rdf:type rdfs:Class .
+ex:London rdf:type ex:City ;
+          ex:hasName "London" ;
+          ex:hasPopulation "8.982 million" ;
+          ex:isLocatedIn ex:UnitedKingdom .
+ex:UnitedKingdom rdf:type ex:Country ;
+                 ex:hasName "United Kingdom" .

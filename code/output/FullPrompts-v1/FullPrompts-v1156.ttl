@@ -1,0 +1,17 @@
+@prefix : <http://www.example.org/day#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:day a rdfs:Class ;
+rdfs:label "Day" .
+:dayName a rdfs:Property ;
+rdfs:domain :day ;
+rdfs:range xsd:string ;
+rdfs:label "Day Name" .
+:dayNumber a rdfs:Property ;
+rdfs:domain :day ;
+rdfs:range xsd:integer ;
+rdfs:label "Day Number" .
+:partOfWeek a rdfs:Property ;
+rdfs:domain :day ;
+rdfs:range xsd:string ;
+rdfs:label "Part of Week" .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/father#> .
+:Father a owl:Class ;
+    rdfs:subClassOf :Human ;
+    rdfs:comment "A male parent" ;
+    rdfs:label "Father" .
+:hasSon a owl:ObjectProperty ;
+    rdfs:domain :Father ;
+    rdfs:range :Son ;
+    rdfs:label "has son" ;
+    rdfs:comment "Relates a father to his son" .
+:hasDaughter a owl:ObjectProperty ;
+    rdfs:domain :Father ;
+    rdfs:range :Daughter ;
+    rdfs:label "has daughter" ;
+    rdfs:comment "Relates a father to his daughter" .
+:Son a owl:Class ;
+    rdfs:subClassOf :Human ;
+    rdfs:comment "The male offspring of a father" ;
+     rdfs:label "Son".
+:Daughter a owl:Class ;
+    rdfs:subClassOf :Human ;
+    rdfs:comment "The female offspring of a father" ;
+    rdfs:label "Daughter" .
+:Human a owl:Class ;
+    rdfs:comment "A human being" ;
+    rdfs:label "Human" .

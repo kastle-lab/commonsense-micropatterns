@@ -1,0 +1,15 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Issue a rdfs:Class .
+ex:hasIssue a rdf:Property ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Issue .
+ex:solveIssue a rdf:Property ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Issue .
+ex:Issue     rdfs:label "Issue"@en ;
+    rdfs:comment "An issue or problem that needs to be resolved"@en .
+ex:hasIssue    rdfs:label "has issue"@en ;
+    rdfs:comment "Link an entity with an issue it has"@en .
+ex:solveIssue    rdfs:label "solve issue"@en ;
+    rdfs:comment "Link an entity with an issue it solves"@en .

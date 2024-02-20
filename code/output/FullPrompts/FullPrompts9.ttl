@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix couch: <http://example.org/couch#> .
+couch:Couch rdf:type rdfs:Class ;
+rdfs:label "Couch" ;
+rdfs:comment "A comfortable piece of furniture designed for seating two or more persons." .
+couch:size rdf:type rdf:Property ;
+rdfs:label "size" ;
+rdfs:comment "The size of the couch, usually given in length, width and height." ;
+rdfs:domain couch:Couch ;
+rdfs:range xsd:string .
+couch:material rdf:type rdf:Property ;
+rdfs:label "material" ;
+rdfs:comment "The material from which the couch is made, e.g. leather, fabric, etc." ;
+rdfs:domain couch:Couch ;
+rdfs:range xsd:string .
+couch:colour rdf:type rdf:Property ;
+rdfs:label "colour" ;
+rdfs:comment "The colour of the couch." ;
+rdfs:domain couch:Couch ;
+rdfs:range xsd:string .
+couch:brand rdf:type rdf:Property ;
+rdfs:label "brand" ;
+rdfs:comment "The brand of the couch." ;
+rdfs:domain couch:Couch ;
+rdfs:range xsd:string .
+couch:model rdf:type rdf:Property ;
+rdfs:label "model" ;
+rdfs:comment "The model of the couch." ;
+rdfs:domain couch:Couch ;
+rdfs:range xsd:string .

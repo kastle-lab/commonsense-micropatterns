@@ -1,0 +1,6 @@
+@prefix ex: <http://example.com/> .
+ex:myEvent a ex:Event ;
+  ex:startTime [    a ex:Time ;
+    ex:hours "10"^^xsd:integer ;
+    ex:minutes "30"^^xsd:integer ;
+  ] .

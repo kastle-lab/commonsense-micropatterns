@@ -1,0 +1,28 @@
+ This pattern includes properties typically associated with a person.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/> .
+:Person a rdfs:Class .
+:name a rdf:Property ;
+       rdfs:label "name" ;
+       rdfs:comment "The name of a person" ;
+       rdfs:domain :Person ;
+       rdfs:range xsd:string .
+:age a rdf:Property ;
+     rdfs:label "age" ;
+     rdfs:comment "The age of a person" ;
+     rdfs:domain :Person ;
+     rdfs:range xsd:integer .
+:gender a rdf:Property ;
+        rdfs:label "gender" ;
+        rdfs:comment "The gender of a person" ;
+        rdfs:domain :Person ;
+        rdfs:range :Gender .
+:Gender a rdfs:Class ;
+        rdfs:label "Gender" ;
+        rdfs:comment "The class of genders" .
+:Male a :Gender ;
+      rdfs:label "Male" .
+      :Female a :Gender ;
+        rdfs:label "Female" .

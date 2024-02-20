@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/study#> .
+ex:Study rdf:type owl:Class ;
+  rdfs:label "Study" ;
+  rdfs:comment "A process of devoting time and attention to acquiring knowledge on an academic subject" .

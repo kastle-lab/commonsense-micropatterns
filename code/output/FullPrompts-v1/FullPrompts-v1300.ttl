@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix life: <http://www.example.org/life#> .
+life:Life rdf:type rdfs:Class ;
+    rdfs:label "Life"@en ;
+    rdfs:comment "Encompasses all forms and aspects of life"@en .
+life:HumanLife rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Life ;
+    rdfs:label "Human Life"@en ;
+    rdfs:comment "Life as experienced by human beings"@en .
+life:AnimalLife rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Life ;
+    rdfs:label "Animal Life"@en ;
+    rdfs:comment "Life as experienced by animals"@en .
+life:PlantLife rdf:type rdfs:Class ;
+    rdfs:subClassOf life:Life ;
+    rdfs:label "Plant Life"@en ;
+    rdfs:comment "Life as experienced by plants"@en .
+life:birth rdf:type rdf:Property ;
+    rdfs:domain life:Life ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "birth"@en ;
+    rdfs:comment "The beginning of life"@en .
+life:death rdf:type rdf:Property ;
+    rdfs:domain life:Life ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "death"@en ;
+    rdfs:comment "The end of life"@en .

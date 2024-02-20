@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+:Area a rdfs:Class ;
+    rdfs:label "Area"@en ;
+    rdfs:comment "A particular extent of space or surface"@en ;
+    rdfs:isDefinedBy <http://example.com/ontology#Area> .
+    :hasArea a rdf:Property ;
+     rdfs:label "has area"@en ;
+     rdfs:range :Area ;
+     rdfs:comment "A property that relates an entity to its area"@en ;
+     rdfs:isDefinedBy <http://example.com/ontology#hasArea> .
+     :AreaMeasurement a rdfs:Datatype ;
+    rdfs:label "Area Measurement"@en ;
+    rdfs:comment "A measure indicating the extent of a two-dimensional surface or shape"@en ;
+    rdfs:isDefinedBy <http://example.com/ontology#AreaMeasurement> .
+     :Area rdfs:subClassOf [     a rdfs:Class ;
+     rdfs:label "Physical Quantity" ;
+     dc:description "Area is a subclass of Physical Quantity." ;
+     rdf:isDefinedBy <http://example.com/ontology#PhysicalQuantity> ;
+].:AreaMeasurement rdfs:subClassOf [     a rdfs:Class ;
+     rdfs:label "Measurement Unit" ;
+     dc:description "AreaMeasurement is a subclass of Measurement Unit." ;
+     rdf:isDefinedBy <http://example.com/ontology#MeasurementUnit> ;
+].

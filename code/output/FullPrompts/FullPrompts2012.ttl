@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:City a rdf:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A large human settlement" ;
+    rdfs:subClassOf ex:Place .

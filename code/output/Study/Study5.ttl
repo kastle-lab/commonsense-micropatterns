@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix study: <http://example.org/study#> .
+study:Study a rdfs:Class ;
+    rdfs:comment "Class representing a study or research" ;
+    rdfs:label "Study" .
+study:Course a rdfs:Class ;
+    rdfs:comment "Class representing a course in a study" ;
+    rdfs:label "Course" ;
+    rdfs:subClassOf study:Study .
+    study:hasCourse a rdf:Property ;
+    rdfs:comment "Property linking a study with its courses" ;
+    rdfs:label "hasCourse" ;
+    rdfs:domain study:Study ;
+    rdfs:range study:Course .
+study:Topic a rdfs:Class ;
+    rdfs:comment "Class representing a topic in a course" ;
+    rdfs:label "Topic" ;
+    rdfs:subClassOf study:Course .
+study:hasTopic a rdf:Property ;
+    rdfs:comment "Property linking a course with its topics" ;
+    rdfs:label "hasTopic" ;
+    rdfs:domain study:Course ;
+    rdfs:range study:Topic .
+study:Institution a rdfs:Class ;
+    rdfs:comment "Class representing the institution where the study is taking place" ;
+    rdfs:label "Institution" .
+study:isInInstitution a rdf:Property ;
+    rdfs:comment "Property linking the study with the institution" ;
+    rdfs:label "isInInstitution" ;
+    rdfs:domain study:Study ;
+    rdfs:range study:Institution .
+study:Student a rdfs:Class ;
+    rdfs:comment "Class representing a student studying" ;
+    rdfs:label "Student" .
+study:isStudyBy a rdf:Property ;
+    rdfs:comment "Property linking the study with the student" ;
+    rdfs:label "isStudyBy" ;
+    rdfs:domain study:Study ;
+    rdfs:range study:Student .

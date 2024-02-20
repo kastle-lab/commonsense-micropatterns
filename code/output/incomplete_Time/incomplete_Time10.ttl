@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.example.org/time#> .
+time:    a owl:Ontology ;
+    rdfs:comment "A simple ontology of time" .
+time:Time    a rdfs:Class ;
+    rdfs:label "Time" ;
+    rdfs:comment "The measure of events occurrence" .
+time:Clock    a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Clock" ;
+    rdfs:comment "A tool used to measure time" .
+time:Calendar    a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Calendar" ;
+    rdfs:comment "A system of organizing days for social, religious, commercial or administrative purposes" .
+time:Second    a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Second" ;
+    rdfs:comment "A unit of time" .
+time:Minute    a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Minute" ;
+    rdfs:comment "A unit of time" .
+time:Hour     a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Hour" ;
+    rdfs:comment "A unit of time" .
+time:Day     a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Day" ;
+    rdfs:comment "A unit of time" .
+time:Week     a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Week" ;
+    rdfs:comment "A unit of time" .
+time:Month     a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Month" ;
+    rdfs:comment "A unit of time" .
+time:Year     a rdfs:Class;
+    rdfs:subClassOf time:Time ;
+    rdfs:label "Year" ;
+    rdfs:comment "A unit of time" .
+time:hasTime    a rdf:Property ;
+    rdfs:domain time:Clock ;
+    rdfs:range time:Time ;
+    rdfs:label "has time" ;
+    rdfs:comment "The time indicated by the clock" .

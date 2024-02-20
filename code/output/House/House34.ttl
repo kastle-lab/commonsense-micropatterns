@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/house#> .
+:House a rdfs:Class ;
+    rdfs:label "House"@en ;
+    rdfs:comment "A building for human habitation, especially one that is lived in by a family or small group of people."@en .
+:hasAddress a rdf:Property ;
+    rdfs:domain :House ;
+    rdfs:range xsd:string ;
+    rdfs:label "has address"@en ;
+    rdfs:comment "The address at which the house is located."@en .
+:hasNumberOfRooms a rdf:Property ;
+    rdfs:domain :House ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has number of rooms"@en ;
+    rdfs:comment "The number of rooms in the house."@en .
+:hasArea a rdf:Property ;
+    rdfs:domain :House ;
+    rdfs:range xsd:float ;
+    rdfs:label "has area"@en ;
+    rdfs:comment "The total surface area of the house, including all floors and outdoor spaces (if any). Usually measured in square meters or square feet."@en .

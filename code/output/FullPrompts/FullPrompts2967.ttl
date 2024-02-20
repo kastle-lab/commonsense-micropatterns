@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix end: <http://example.com/end#> .
+end:     rdf:type rdfs:Class ;
+    rdfs:label "End"@en ;
+    rdfs:comment "Representation of end or termination in various contexts"@en .
+end:timeEnd    rdf:type rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Time end"@en ;
+    rdfs:comment "Property to indicate end time of an event, process or period"@en .
+end:locationEnd    rdf:type rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "Location end"@en ;
+    rdfs:comment "Property to indicate end location of a journey or movement"@en .
+end:goalEnd    rdf:type rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Goal end"@en ;
+    rdfs:comment "Property to indicate the desired goal or outcome marking the end"@en .
+end:cause    rdf:type rdfs:Property ;
+    rdfs:domain end: ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "Cause"@en ;
+    rdfs:comment "Property to indicate the cause or reason of the end"@en .

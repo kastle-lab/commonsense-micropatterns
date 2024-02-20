@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ex: <http://www.example.org/> .
+ex:Place rdf:type rdfs:Class ;
+  rdfs:label "Place"@en ;
+  rdfs:comment "A location, i.e., spatial area or site"@en ;
+  rdfs:subClassOf geo:Feature .
+ex:hasName rdf:type rdf:Property ;
+  rdfs:label "has name"@en ;
+  rdfs:comment "Relates a place to its name"@en ;
+  rdfs:domain ex:Place ;
+  rdfs:range xsd:string .
+ex:hasCoordinate rdf:type rdf:Property ;
+  rdfs:label "has coordinate"@en ;
+  rdfs:comment "Relates a place to its geographic coordinate"@en ;
+  rdfs:domain ex:Place ;
+  rdfs:range geo:Point .
+# Usage exampleex:Place1 a ex:Place ;
+  ex:hasName "Test Place" ;
+  ex:hasCoordinate "POINT (0 0)"^^geo:wktLiteral .

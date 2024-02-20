@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.com/kid#> .
+:Kid    rdf:type rdfs:Class ;
+    rdfs:comment "A class representing kids".
+:hasName    rdf:type rdf:Property ;
+    rdfs:domain :Kid ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The name of the kid".
+:hasAge    rdf:type rdf:Property ;
+    rdfs:domain :Kid ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The age of the kid".
+:attendsSchool    rdf:type rdf:Property ;
+    rdfs:domain :Kid ;
+    rdfs:range :School ;
+    rdfs:comment "The school the kid attends".
+:School    rdf:type rdfs:Class ;
+    rdfs:comment "A class representing schools".

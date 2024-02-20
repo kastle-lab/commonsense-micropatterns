@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http://example.org/work#> .
+work:work rdf:type rdf:Class .
+ work:id rdf:type rdf:Property ;
+     rdf:domain work:work ;
+     rdf:range xsd:string .
+work:title rdf:type rdf:Property ;
+      rdf:domain work:work ;
+      rdf:range xsd:string .
+work:description rdf:type rdf:Property ;
+        rdf:domain work:work ;
+        rdf:range xsd:string .
+work:worker rdf:type rdf:Property ;
+       rdf:domain work:work ;
+       rdf:range xsd:string .
+       work:date rdf:type rdf:Property ;
+    rdf:domain work:work ;
+    rdf:range xsd:date .

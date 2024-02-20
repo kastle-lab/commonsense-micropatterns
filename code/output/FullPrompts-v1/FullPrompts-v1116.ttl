@@ -1,0 +1,16 @@
+
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Way rdf:type rdfs:Class ;
+    rdfs:comment "Conceptual class representing a Way or route" .
+ex:hasStartPoint rdf:type rdf:Property ;
+    rdfs:domain ex:Way ;
+    rdfs:range ex:Location ;
+    rdfs:comment "The start point of a Way" .
+ex:hasEndPoint rdf:type rdf:Property ;
+    rdfs:domain ex:Way ;
+    rdfs:range ex:Location ;
+    rdfs:comment "The end point of a Way" .
+ex:Location rdf:type rdfs:Class ;
+    rdfs:comment "Conceptual class representing a Location" .

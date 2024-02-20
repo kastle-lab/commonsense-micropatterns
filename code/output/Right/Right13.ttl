@@ -1,0 +1,29 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Right   a rdf:Class ;
+  rdfs:label "Right"@en ;
+  rdfs:comment "The concept of legal, ethical, moral permissions or entitlements"@en .
+ex:HumanRight   a rdf:Class ;
+   rdfs:subClassOf ex:Right ;
+    rdfs:label "Human Right"@en ;
+  rdfs:comment "Rights believed to belong to every person, without discrimination"@en .
+ex:PropertyRight  a rdf:Class ;
+   rdfs:subClassOf ex:Right ;
+    rdfs:label "Property Right"@en ;
+  rdfs:comment "Rights over the use, sell, and profits of property"@en .
+ex:RightOfExpression   a rdf:Class ;
+   rdfs:subClassOf ex:HumanRight ;
+   rdfs:label "Right of Expression"@en ;
+  rdfs:comment "Right to express any opinions without censorship or restraint"@en .
+ex:RightToEducation   a rdf:Class ;
+   rdfs:subClassOf ex:HumanRight ;
+   rdfs:label "Right to Education"@en ;
+  rdfs:comment "Right to a free and appropriate education"@en .
+ex:RightToVote   a rdf:Class ;
+   rdfs:subClassOf ex:HumanRight ;
+   rdfs:label "Right to Vote"@en ;
+  rdfs:comment "Right to participate in fair and free elections"@en .
+ex:John  a ex:Human ;
+  ex:hasRight ex:RightToVote, ex:RightOfExpression, ex:RightToEducation ;
+  rdfs:label "John"@en ;
+  rdfs:comment "An example individual with human rights"@en .

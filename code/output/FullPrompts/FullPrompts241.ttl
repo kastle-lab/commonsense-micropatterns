@@ -1,0 +1,5 @@
+@prefix : <http://example.org/> .
+:Way rdf:type owl:Class .
+:Provide rdf:type owl:ObjectProperty ;
+    rdfs:domain :Way ;
+    rdfs:range :Resource .

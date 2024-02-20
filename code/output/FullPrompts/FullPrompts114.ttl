@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Define the class Loveseatex:Loveseat a rdfs:Class ;
+  rdfs:label "Loveseat" ;
+  rdfs:comment "A seat designed for two or more individuals." .
+# Define properties for the Loveseatex:hasMaterial a rdf:Property ;
+  rdfs:label "has material" ;
+  rdfs:comment "The material a loveseat is made from." ;
+  rdfs:domain ex:Loveseat .
+ex:hasColor a rdf:Property ;
+  rdfs:label "has color" ;
+  rdfs:comment "The color of a loveseat." ;
+  rdfs:domain ex:Loveseat .
+ex:hasSeats a rdf:Property ;
+  rdfs:label "has seats" ;
+  rdfs:comment "The number of seats a loveseat has." ;
+  rdfs:domain ex:Loveseat .
+# Add a specific Loveseat instanceex:myLoveseat a ex:Loveseat ;
+  ex:hasMaterial "Leather" ;
+  ex:hasColor "Black" ;
+  ex:hasSeats "2" .

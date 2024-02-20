@@ -1,0 +1,16 @@
+@prefix : <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Level a rdfs:Class .
+:hasLevel a rdf:Property ;
+    rdfs:domain :Entity ;
+    rdfs:range :Level .
+:Entity a rdfs:Class .
+:level1 a :Level ;
+    rdfs:label "Level 1" .
+:level2 a :Level ;
+    rdfs:label "Level 2" .
+:entity1 a :Entity ;
+   :hasLevel :level1 .
+    :entity2 a :Entity ;
+   :hasLevel :level2 .

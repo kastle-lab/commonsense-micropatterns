@@ -1,0 +1,33 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix moment: <http://www.example.org/moments#> .
+moment:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology about moments" .
+moment:Moment     rdf:type owl:Class ;
+    rdfs:comment "A point in time" ;
+    rdfs:subClassOf owl:Thing .
+moment:hasDate     rdf:type owl:DatatypeProperty ;
+    rdfs:domain moment:Moment ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The date of the moment" .
+    moment:hasTime     rdf:type owl:DatatypeProperty ;
+    rdfs:domain moment:Moment ;
+    rdfs:range xsd:time ;
+    rdfs:comment "The specific time of the moment" .
+moment:isPartOf    rdf:type owl:ObjectProperty ;
+    rdfs:domain moment:Moment ;
+    rdfs:range moment:Period ;
+    rdfs:comment "The period that the moment is part of" .
+moment:Period     rdf:type owl:Class ;
+    rdfs:comment "A period of time" ;
+    rdfs:subClassOf owl:Thing .
+moment:periodStart    rdf:type owl:DatatypeProperty ;
+    rdfs:domain moment:Period ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The start of the period" .
+ moment:periodEnd    rdf:type owl:DatatypeProperty ;
+    rdfs:domain moment:Period ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The end of the period" .

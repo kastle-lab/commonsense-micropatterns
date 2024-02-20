@@ -1,0 +1,38 @@
+@prefix : <http://example.org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Head a rdfs:Class ;
+    rdfs:label "Head" ;
+    rdfs:comment "A part of a human body located at the top end of the body" .
+:HasEyes a rdf:Property ;
+    rdfs:domain :Head ;
+    rdfs:range :Eye ;
+    rdfs:label "has eyes" ;
+    rdfs:comment "The property that connects the head with the eyes" .
+:Eye a rdfs:Class ;
+    rdfs:label "Eye" ;
+    rdfs:comment "An organ for seeing located in the head" .
+:HasEars a rdf:Property ;
+    rdfs:domain :Head ;
+    rdfs:range :Ear ;
+    rdfs:label "has ears" ;
+    rdfs:comment "The property that connects the head with the ears" .
+:Ear a rdfs:Class ;
+    rdfs:label "Ear" ;
+    rdfs:comment "An organ for hearing located in the head" .
+:HasMouth a rdf:Property ;
+    rdfs:domain :Head ;
+    rdfs:range :Mouth ;
+    rdfs:label "has mouth" ;
+    rdfs:comment "The property that connects the head with the mouth" .
+:Mouth a rdfs:Class ;
+    rdfs:label "Mouth" ;
+    rdfs:comment "An organ for eating and speaking located in the head" .
+:HasNose a rdf:Property ;
+    rdfs:domain :Head ;
+    rdfs:range :Nose ;
+    rdfs:label "has nose" ;
+    rdfs:comment "The property that connects the head with the nose" .
+:Nose a rdfs:Class ;
+    rdfs:label "Nose" ;
+    rdfs:comment "An organ for smelling located in the head" .

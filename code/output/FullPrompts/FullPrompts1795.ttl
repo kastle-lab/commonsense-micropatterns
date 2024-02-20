@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ont: <http://www.example.org/ontology#> .
+ont:Power a rdfs:Class ;
+    rdfs:label "Power"@en ;
+    rdfs:comment "Something that is owned or possessed, which gives the ability or capacity to do something or act in a particular way"@en .
+ont:PhysicalPower a rdfs:Class ;
+    rdfs:subClassOf ont:Power ;
+    rdfs:label "Physical Power"@en ;
+    rdfs:comment "Power that refers to strength and energy in an action or a movement, often related to the body or a physical object"@en .
+ont:SocialPower a rdfs:Class ;
+    rdfs:subClassOf ont:Power ;
+    rdfs:label "Social Power"@en ;
+    rdfs:comment "Power that is related to interpersonal relationships, often reflected in the influence or control over others within a social group"@en.ont:ElectricalPower a rdfs:Class ;
+    rdfs:subClassOf ont:Power ;
+    rdfs:label "Electrical Power"@en ;
+    rdfs:comment "Power which refers to the rate, per unit time, at which electrical energy is transferred by an electric circuit"@en.ont:PoliticalPower a rdfs:Class ;
+    rdfs:subClassOf ont:Power ;
+    rdfs:label "Political Power"@en ;
+    rdfs:comment "Power that is related to or held by a person or group in a political context, often associated with governance and decision-making in a society"@en.

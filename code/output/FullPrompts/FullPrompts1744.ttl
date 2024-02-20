@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fam: <http://example.com/family#> .
+fam:Family a rdfs:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:comment "A family consists of individuals who are related by birth, marriage or other social norms and relationships"@en ;
+            rdfs:label "Family"@en .
+fam:Person a rdfs:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:label "Person"@en ;
+            rdfs:comment "Person in a family can be a child, adult, elder etc."@en .
+fam:hasMember a rdf:Property ;
+              rdfs:domain fam:Family ;
+              rdfs:range fam:Person ;
+              rdfs:label "has member"@en ;
+              rdfs:comment "Relates a family to its members."@en .
+fam:hasParent a rdf:Property ;
+              rdfs:domain fam:Person ;
+              rdfs:range fam:Person ;
+              rdfs:label "has parent"@en ;
+              rdfs:comment "Relates a person to his/her parent."@en .
+fam:hasChild a rdf:Property ;
+             rdfs:domain fam:Person ;
+             rdfs:range fam:Person ;
+             rdfs:label "has child"@en ;
+             rdfs:comment "Relates a person to his/her child."@en .
+fam:hasSpouse a rdf:Property ;
+              rdfs:domain fam:Person ;
+              rdfs:range fam:Person ;
+              rdfs:label "has spouse"@en ;
+              rdfs:comment "Relates a person to his/her spouse."@en .
+fam:hasSibling a rdf:Property ;
+               rdfs:domain fam:Person ;
+               rdfs:range fam:Person ;
+               rdfs:label "has sibling"@en ;
+               rdfs:comment "Relates a person to his/her sibling."@en .
+fam:name a rdf:Property ;
+          rdfs:domain fam:Person ;
+          rdfs:range xsd:string ;
+          rdfs:label "name"@en ;
+          rdfs:comment "Name of the person."@en .
+fam:age a rdf:Property ;
+         rdfs:domain fam:Person ;
+         rdfs:range xsd:integer ;
+         rdfs:label "age"@en ;
+         rdfs:comment "Age of the person."@en .
+fam:gender a rdf:Property ;
+            rdfs:domain fam:Person ;
+            rdfs:range xsd:string ;
+            rdfs:label "gender"@en ;
+            rdfs:comment "Gender of the person."@en .

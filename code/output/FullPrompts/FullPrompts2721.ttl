@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix house: <http://www.example.org/ontology/House#> .
+house:House a owl:Class ;
+rdfs:label "House"@en ;
+rdfs:comment "A building for human habitation, especially one that is lived in by a family or small group of people."@en .
+house:hasOwner a owl:ObjectProperty ;
+rdfs:label "has owner"@en ;
+rdfs:comment "The property represents ownership of a house."@en ;
+rdfs:domain house:House ;
+rdfs:range house:Person .
+house:hasAddress a owl:DatatypeProperty ;
+rdfs:label "has address"@en ;
+rdfs:comment "The property represents address of a house."@en ;
+rdfs:domain house:House ;
+rdfs:range xsd:string .
+house:Person a owl:Class ;
+rdfs:label "Person"@en ;
+rdfs:comment "The individual person who owns a house."@en .

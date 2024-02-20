@@ -1,0 +1,24 @@
+@prefix ex: <http://www.example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:State a rdfs:Class ;
+    rdfs:label "State"@en ;
+    rdfs:comment "A state or province is a administrative region within a country."@en ;
+    rdfs:subClassOf ex:AdministrativeRegion .
+ex:hasName a rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:domain ex:State ;
+    rdfs:range xsd:string .
+ex:California a ex:State ;
+    ex:hasName "California" ;
+    ex:belongsTo ex:USA .
+ex:Texas a ex:State ;
+    ex:hasName "Texas" ;
+    ex:belongsTo ex:USA .
+ex:USA a ex:Country ;
+    ex:hasName "United States of America" .
+ex:belongsTo a rdf:Property ;
+    rdfs:label "belongs to"@en ;
+    rdfs:domain ex:State ;
+    rdfs:range ex:Country.

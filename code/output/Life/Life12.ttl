@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ontology: <http://www.ontology.com/life#> .
+ontology:Life rdf:type rdfs:Class ;
+  rdfs:label "Life" ;
+  rdfs:comment "A property of objects which have certain processes such as growth, metabolism, reproduction, and response to stimuli." .
+ontology:Animal rdf:type rdfs:Class ;
+  rdfs:subClassOf ontology:Life ;
+  rdfs:label "Animal" ;
+  rdfs:comment "A multicellular, heterotrophic organism characterized by voluntary movement." .
+ontology:Plant rdf:type rdfs:Class ;
+  rdfs:subClassOf ontology:Life ;
+  rdfs:label "Plant" ;
+  rdfs:comment "Multicellular, predominantly photosynthetic organisms of the kingdom Plantae." .
+ontology:Bacteria rdf:type rdfs:Class ;
+  rdfs:subClassOf ontology:Life ;
+  rdfs:label "Bacteria" ;
+  rdfs:comment "Typically a few micrometres in length, bacteria have a number of shapes, ranging from spheres to rods and spirals." .
+ontology:Reproduction rdf:type rdf:Property ;
+  rdfs:domain ontology:Life ;
+  rdfs:label "Reproduction" ;
+  rdfs:comment "The biological process by which new individual organisms – 'offspring' – are produced from their 'parents'." .
+ontology:Evolution rdf:type rdf:Property ;
+  rdfs:domain ontology:Life ;
+  rdfs:label "Evolution" ;
+  rdfs:comment "Evolution is change in the heritable characteristics of biological populations over successive generations." .
+ontology:Metabolism rdf:type rdf:Property ;
+  rdfs:domain ontology:Life ;
+  rdfs:label "Metabolism" ;
+  rdfs:comment "The set of life-sustaining chemical reactions in organisms. The three main purposes of metabolism are: the conversion of food to energy to run cellular processes." .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Week rdfs:Class ;
+    rdfs:comment "A class representing a week." .
+ex:hasDay rdf:Property ;
+    rdfs:domain ex:Week ;
+    rdfs:range ex:Day ;
+    rdfs:comment "A property that relates a week to its days." .
+ex:Monday rdf:Class ;
+    rdfs:subClassOf ex:Day ;
+    rdfs:comment "A class representing Monday." .
+ex:Tuesday rdf:Class ;
+    rdfs:subClassOf ex:Day ;
+    rdfs:comment "A class representing Tuesday." .
+ex:Wednesday rdf:Class ;
+    rdfs:subClassOf ex:Day ;
+    rdfs:comment "A class representing Wednesday." .
+ex:Thursday rdf:Class ;
+    rdfs:subClassOf ex:Day ;
+    rdfs:comment "A class representing Thursday." .
+ex:Friday rdf:Class ;
+    rdfs:subClassOf ex:Day ;
+    rdfs:comment "A class representing Friday." .
+ex:Saturday rdf:Class ;
+    rdfs:subClassOf ex:Day ;
+    rdfs:comment "A class representing Saturday." .
+ex:Sunday rdf:Class ;
+    rdfs:subClassOf ex:Day ;
+    rdfs:comment "A class representing Sunday." .

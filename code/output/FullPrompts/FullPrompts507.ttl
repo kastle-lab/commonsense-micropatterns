@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix part: <http://example.org/terms/part#> .
+part:Part a rdfs:Class ;
+    rdfs:label "Part"@en ;
+    rdfs:comment "A separate piece of a whole."@en ;
+    rdfs:subClassOf rdfs:Resource .
+part:id a rdf:Property ;
+    rdfs:label "id"@en ;
+    rdfs:comment "The unique identifier of a part."@en ;
+    rdfs:domain part:Part ;
+    rdfs:range rdfs:Literal .
+part:name a rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of a part."@en ;
+    rdfs:domain part:Part ;
+    rdfs:range rdfs:Literal .
+part:description a rdf:Property ;
+    rdfs:label "description"@en ;
+    rdfs:comment "The description of a part."@en ;
+    rdfs:domain part:Part ;
+    rdfs:range rdfs:Literal .
+part:isPartOf a rdf:Property ;
+    rdfs:label "is part of"@en ;
+    rdfs:comment "Indicates that a part is a component of another larger entity."@en ;
+    rdfs:domain part:Part ;
+    rdfs:range part:Part .
+part:hasPart a rdf:Property ;
+    rdfs:label "has part"@en ;
+    rdfs:comment "Indicates that an entity has a smaller component that is considered a part."@en ;
+    rdfs:domain part:Part ;
+    rdfs:range part:Part .

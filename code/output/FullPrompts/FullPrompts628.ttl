@@ -1,0 +1,7 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Woman a owl:Class ;
+    rdfs:label "Woman"@en ;
+    rdfs:comment "A human being who identifies as a female or is biologically female. This class could incorporate further subclasses such as 'Mother' "@en .

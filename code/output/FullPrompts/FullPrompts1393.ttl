@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix point: <http://example.com/ontology/point#> .
+point:     rdf:type rdfs:Class ;
+    rdfs:label "Point" ;
+    rdfs:comment "A position or location in a two dimensional space represented by coordinates x and y" .
+point:x    rdf:type rdf:Property ;
+    rdfs:domain point: ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "x" ;
+    rdfs:comment "The x coordinate of a 2D point" .
+point:y    rdf:type rdf:Property ;
+    rdfs:domain point: ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "y" ;
+    rdfs:comment "The y coordinate of a 2D point" .

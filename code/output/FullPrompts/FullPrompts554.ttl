@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Child rdf:type rdfs:Class ;
+    rdfs:label "Child" ;
+    rdfs:comment "The class of individuals who are a human offspring (i.e., under the age of 18)" ;
+    rdfs:subClassOf ex:Human .
+ex:hasChild rdf:type rdf:Property ;
+    rdfs:label "has child" ;
+    rdfs:comment "The relation between an individual and their child" ;
+    rdfs:domain ex:Human ;
+    rdfs:range ex:Child .
+ex:isChildOf rdf:type rdf:Property ;
+    rdfs:label "is child of" ;
+    rdfs:comment "The relation between an child and their parent" ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:Human .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/Body#> .
+:HumanBody a rdfs:Class ;
+    rdfs:label "Human body" ;
+    rdfs:comment "The physical structure of a human" .
+:Organ a rdfs:Class ;
+    rdfs:subClassOf :HumanBody ;
+    rdfs:label "Organ" ;
+    rdfs:comment "A part of the body with specific function" .
+:BodyPart a rdfs:Class ;
+    rdfs:subClassOf :HumanBody ;
+    rdfs:label "Body part" ;
+    rdfs:comment "Any part of the human body" .
+:Muscle a rdfs:Class ;
+    rdfs:subClassOf :BodyPart ;
+    rdfs:label "Muscle" ;
+    rdfs:comment "A band of tissue that powers movement" .
+:Bone a rdfs:Class ;
+    rdfs:subClassOf :BodyPart ;
+    rdfs:label "Bone" ;
+    rdfs:comment "A rigid organ that supports the body" .
+:Heart a rdfs:Class ;
+    rdfs:subClassOf :Organ ;
+    rdfs:label "Heart" ;
+    rdfs:comment "An organ that pumps blood around the body" .
+:Liver a rdfs:Class ;
+    rdfs:subClassOf :Organ ;
+    rdfs:label "Liver" ;
+    rdfs:comment "A large, lobed organ that filters blood" .
+:hasPart a rdf:Property ;
+    rdfs:label "has part" ;
+    rdfs:domain :HumanBody ;
+    rdfs:range :BodyPart ;
+    rdfs:comment "The body has these parts" .
+:hasOrgan a rdf:Property ;
+    rdfs:label "has organ" ;
+    rdfs:domain :HumanBody ;
+    rdfs:range :Organ ;
+    rdfs:comment "The body has these organs" .

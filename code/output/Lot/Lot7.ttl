@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Lot     a owl:Class ;
+    rdfs:label "Lot"@en ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "The class of all lots or parcels of land."@en .
+:hasArea     a owl:DatatypeProperty ;
+    rdfs:label "has area"@en ;
+    rdfs:domain :Lot ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The area of the lot in square meters."@en .
+:hasAddress     a owl:DatatypeProperty ;
+    rdfs:label "has address"@en ;
+    rdfs:domain :Lot ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The postal address of the lot."@en .
+:isZonedFor    a owl:ObjectProperty ;
+    rdfs:label "is zoned for"@en ;
+    rdfs:domain :Lot ;
+    rdfs:range :Zoning ;
+    rdfs:comment "The zoning classification of the lot."@en .
+:Zoning     a owl:Class ;
+    rdfs:label "Zoning"@en ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:comment "The class of all zoning classifications."@en .
+:Residential     a :Zoning ;
+    rdfs:label "Residential"@en ;
+    rdfs:comment "A zoning classification that allows for residential buildings."@en .
+:Commercial     a :Zoning ;
+    rdfs:label "Commercial"@en ;
+    rdfs:comment "A zoning classification that allows for commercial buildings."@en .

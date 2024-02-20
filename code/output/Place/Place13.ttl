@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+#Defining "Place" as a Classex:Place rdf:type rdfs:Class .
+#Properties related to "Place"ex:name rdf:type rdf:Property ;
+    rdfs:domain ex:Place ;
+    rdfs:range rdfs:Literal .
+    ex:hasPostalAddress rdf:type rdf:Property ;
+    rdfs:domain ex:Place ;
+    rdfs:range ex:PostalAddress .
+    ex:containedInPlace rdf:type rdf:Property ;
+    rdfs:domain ex:Place ;
+    rdfs:range ex:Place .
+#Defining "PostalAddress" as a Class    ex:PostalAddress rdf:type rdfs:Class .
+#Properties related to "PostalAddress"ex:streetAddress rdf:type rdf:Property ;
+    rdfs:domain ex:PostalAddress ;
+    rdfs:range rdfs:Literal .
+ex:postCode rdf:type rdf:Property ;
+    rdfs:domain ex:PostalAddress ;
+    rdfs:range rdfs:Literal .
+ex:addressLocality rdf:type rdf:Property ;
+    rdfs:domain ex:PostalAddress ;
+    rdfs:range rdfs:Literal .
+ex:addressCountry rdf:type rdf:Property ;
+    rdfs:domain ex:PostalAddress ;
+    rdfs:range rdfs:Literal .

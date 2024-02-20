@@ -1,0 +1,29 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix idea: <http://www.example.com/idea#> .
+idea:    a owl:Ontology ;
+    rdfs:label "The ontology of Idea"@en .
+idea:Idea    a owl:Class ;
+    rdfs:label "Idea"@en ;
+    rdfs:comment "An abstract concept or mental representation"@en .
+idea:hasCreator    a owl:ObjectProperty ;
+    rdfs:label "has creator"@en ;
+    rdfs:domain idea:Idea ;
+    rdfs:range idea:Creator .
+idea:hasDateCreated    a owl:DatatypeProperty ;
+    rdfs:label "has date created"@en ;
+    rdfs:domain idea:Idea ;
+    rdfs:range xsd:dateTime .
+idea:hasDescription    a owl:DatatypeProperty ;
+    rdfs:label "has description"@en ;
+    rdfs:domain idea:Idea ;
+    rdfs:range xsd:string .
+idea:Creator    a owl:Class ;
+    rdfs:label "Creator"@en ;
+    rdfs:comment "The person or entity that creates an Idea"@en .
+idea:hasName    a owl:DatatypeProperty ;
+    rdfs:label "has name"@en ;
+    rdfs:domain idea:Creator ;
+    rdfs:range xsd:string .

@@ -1,0 +1,45 @@
+# Define a base URL for our ontology@base <http://www.example.org/ontology/history#> .
+# Define URLS for external ontologies we will use@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+# Define ontology schema: a owl:Ontology ;
+    rdfs:comment "An ontology for representing History" ;
+    rdfs:label "HistoryOntology" .
+:Event a owl:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "An event in history." .
+:hasDate a owl:DatatypeProperty ;
+    rdfs:domain :Event ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has date" ;
+    rdfs:comment "The date of a historical event." .
+:hasLocation a owl:ObjectProperty ;
+    rdfs:domain :Event ;
+    rdfs:range :Location ;
+    rdfs:label "has location" ;
+    rdfs:comment "The location of a historical event." .
+:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "A location where a historical event took place." .
+:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A person involved in a historical event." .
+:involvedPerson a owl:ObjectProperty ;
+    rdfs:domain :Event ;
+    rdfs:range :Person ;
+    rdfs:label "involved person" ;
+    rdfs:comment "The person involved in a historical event." .
+:hasTimePeriod a owl:ObjectProperty ;
+    rdfs:domain :Event ;
+    rdfs:range :TimePeriod ;
+    rdfs:label "has time period" ;
+    rdfs:comment "The time period of a historical event." .
+:TimePeriod a owl:Class ;
+    rdfs:label "Time Period" ;
+    rdfs:comment "Time period in which the event occurred." .
+:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain :Event ;
+    rdfs:range xsd:string ;
+    rdfs:label "has description" ;
+    rdfs:comment "The description of a historical event" .
+# End of Ontology.

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix study: <http://www.example.org/study#> .
+study:Course rdfs:subClassOf rdf:Resource .
+study:Student rdfs:subClassOf rdf:Resource .
+study:hasStudent rdfs:domain study:Course ;
+                 rdfs:range study:Student .
+                 study:hasCourse rdfs:domain study:Student ;
+                rdfs:range study:Course .
+study:exam rdfs:subClassOf study:Course ;
+           rdfs:comment "part of a course" .
+study:hasExam rdfs:domain study:Course ;
+               rdfs:range study:exam .
+study:hasScore rdfs:domain study:exam ;
+               rdfs:range xsd:integer .
+study:student1 a study:Student ;
+               study:hasCourse study:course1 .
+study:course1 a study:Course ;
+              study:hasStudent study:student1 ;
+              study:hasExam study:exam1 .
+study:exam1 a study:exam ;
+            study:hasScore "85"^^xsd:integer .

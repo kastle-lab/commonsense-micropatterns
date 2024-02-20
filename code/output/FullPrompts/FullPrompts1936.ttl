@@ -1,0 +1,18 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Door a owl:Class ;
+  rdfs:label "Door" ;
+  rdfs:comment "A class representing doors" .
+    :hasMaterial a owl:ObjectProperty ;
+   rdfs:domain :Door ;
+  rdfs:range :Material ;
+  rdfs:label "has material" ;
+  rdfs:comment "The material that the door is made from" .
+:hasColor a owl:DatatypeProperty ;
+  rdfs:domain :Door ;
+  rdfs:range xsd:string ;
+  rdfs:label "has color" ;
+  rdfs:comment "The color of the door" .
+:Material a owl:Class ;
+  rdfs:comment "Different types of materials a door can be composed of" .
