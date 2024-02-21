@@ -1,8 +1,8 @@
 subClassOf 	 135
 salary 	 20
 value 	 20
-allValuesFrom 	 18
 equivalentClass 	 18
 onProperty 	 18
+allValuesFrom 	 18
 hasNumber 	 15
 hasValue 	 11

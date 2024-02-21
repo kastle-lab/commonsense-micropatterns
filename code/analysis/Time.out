@@ -1,8 +1,8 @@
 imports 	 35
-hasBirthTime 	 10
 hasTimeStamp 	 10
-startTime 	 6
+hasBirthTime 	 10
 endTime 	 6
-inXSDDateTime 	 4
+startTime 	 6
 inXSDDuration 	 4
 hasBeginning 	 4
+inXSDDateTime 	 4

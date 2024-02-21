@@ -1,11 +1,11 @@
+hasAmount 	 65
 hasNationality 	 65
 hasCountry 	 65
-hasAmount 	 65
 onProperty 	 58
 allValuesFrom 	 36
-someValuesFrom 	 22
 unionOf 	 22
-hasExchangeRate 	 20
-hasValue 	 20
+someValuesFrom 	 22
 hasCurrency 	 20
+hasValue 	 20
+hasExchangeRate 	 20
 intersectionOf 	 16

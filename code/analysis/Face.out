@@ -1,14 +1,14 @@
 hasPart 	 90
 Eye 	 28
-eyeColor 	 27
 skinTone 	 27
+eyeColor 	 27
 unionOf 	 19
 hasFace 	 14
 onProperty 	 10
 allValuesFrom 	 10
-color 	 8
-height 	 8
 width 	 8
 shape 	 8
+color 	 8
+height 	 8
 versionInfo 	 2
 hasEye 	 1

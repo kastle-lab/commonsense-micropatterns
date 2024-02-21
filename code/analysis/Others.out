@@ -3,11 +3,11 @@ owns 	 21
 OtherIndividual 	 20
 dateOfBirth 	 20
 provide 	 16
-age 	 11
 location 	 11
+age 	 11
 name 	 11
-isProvided 	 8
 provides 	 8
-hasManufacturer 	 7
+isProvided 	 8
 hasColor 	 7
+hasManufacturer 	 7
 isProvidedBy 	 3

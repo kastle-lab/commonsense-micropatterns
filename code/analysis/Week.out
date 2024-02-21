@@ -5,7 +5,7 @@ hasSequence 	 119
 isDayOfTheWeek 	 42
 cardinality 	 16
 propertyChainAxiom 	 16
-weekNumber 	 13
 year 	 13
+weekNumber 	 13
 dayOfWeekInMonth 	 3
 dayOfWeekInWeek 	 3

@@ -1,8 +1,8 @@
 hasName 	 29
 teachesSubject 	 25
-hasSubject 	 21
-hasGradeLevel 	 21
 Teacher 	 21
+hasGradeLevel 	 21
+hasSubject 	 21
 worksAt 	 21
 provides 	 20
 teaches 	 17

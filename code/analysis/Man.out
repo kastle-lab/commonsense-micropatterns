@@ -1,7 +1,7 @@
 hasName 	 100
 hasSibling 	 56
-hasGender 	 56
 Age 	 56
+hasGender 	 56
 Name 	 56
 hasAge 	 44
 inverseOf 	 36
@@ -11,6 +11,6 @@ Mary 	 26
 name 	 16
 isMarriedTo 	 15
 hasChild 	 15
+familyName 	 4
 mbox 	 4
 givenName 	 4
-familyName 	 4

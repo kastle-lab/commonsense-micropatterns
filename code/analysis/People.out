@@ -1,9 +1,9 @@
 name 	 52
 age 	 44
-hasAge 	 32
-hasFirstName 	 32
-hasLastName 	 32
 hasGender 	 32
+hasLastName 	 32
+hasFirstName 	 32
+hasAge 	 32
 lastName 	 26
 firstName 	 26
 gender 	 26

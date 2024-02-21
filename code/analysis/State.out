@@ -5,6 +5,6 @@ name 	 30
 belongsTo 	 20
 partOf 	 15
 hasPopulation 	 9
-hasCapital 	 9
 State 	 9
+hasCapital 	 9
 inverseOf 	 2

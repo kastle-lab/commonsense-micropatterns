@@ -1,13 +1,13 @@
 hasEducation 	 32
 provides 	 30
-school 	 20
-degree 	 20
 field 	 20
+degree 	 20
 year 	 20
-learn 	 17
+school 	 20
 teach 	 17
+learn 	 17
 unionOf 	 16
 name 	 12
-hasCourse 	 4
 alumniOf 	 4
+hasCourse 	 4
 hasEnrolled 	 3

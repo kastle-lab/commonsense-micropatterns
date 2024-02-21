@@ -94,7 +94,11 @@ def parse_results():
             count+=1
 
 def count_properties():
+    '''
+        Attempts to parse through generated TTL files from LLM generation
 
+        Uses rdflib Graph to generate s,p,o per TTL file
+    '''
     for filename in os.listdir(input_path): # For each Noun
     # for i in range(1): 
         # filename= "Air.tsv"

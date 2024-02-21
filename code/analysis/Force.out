@@ -1,7 +1,7 @@
 description 	 22
 magnitude 	 19
-frictionForce 	 19
 gravitationalForce 	 19
-appliedForce 	 19
 direction 	 19
+appliedForce 	 19
+frictionForce 	 19
 hasAttribute 	 4

@@ -1,13 +1,13 @@
 hasPart 	 148
 belongsTo 	 49
-color 	 48
 hasVisionType 	 48
+color 	 48
 canSee 	 48
 hasColor 	 26
 function 	 20
 hasShape 	 8
-hasSize 	 8
 hasVision 	 8
+hasSize 	 8
 linkedTo 	 4
 characteristic 	 4
 Eye 	 1

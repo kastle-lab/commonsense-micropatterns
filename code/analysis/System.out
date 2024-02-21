@@ -3,10 +3,10 @@ name 	 130
 hasComponent 	 117
 additionalType 	 52
 isPartOf 	 52
-about 	 26
 interactsWith 	 26
+about 	 26
 partOf 	 26
 inverseOf 	 25
-hasSoftware 	 22
 hasHardware 	 22
+hasSoftware 	 22
 unionOf 	 18
