@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.com/ex#> .
-# Classesex:Person rdf:type rdfs:Class .
+# Class
+ex:Person rdf:type rdfs:Class .
 # Subclassesex:Parent rdf:type rdfs:Class ;
     rdfs:subClassOf ex:Person .
 ex:Child rdf:type rdfs:Class ;
@@ -11,7 +12,8 @@ ex:Teacher rdf:type rdfs:Class ;
     rdfs:subClassOf ex:Person .
 ex:Student rdf:type rdfs:Class ;
     rdfs:subClassOf ex:Person .
-# Propertiesex:hasName rdf:type rdf:Property ;
+# Properties
+ex:hasName rdf:type rdf:Property ;
     rdfs:domain ex:Person ;
     rdfs:range xsd:string .
 ex:hasAge rdf:type rdf:Property ;

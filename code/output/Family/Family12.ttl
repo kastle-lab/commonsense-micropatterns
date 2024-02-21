@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix family: <http://example.org/family#> .
-# Classesfamily:Family rdf:type rdfs:Class .
+# Class
+family:Family rdf:type rdfs:Class .
 family:Person rdf:type rdfs:Class .
 # Subclassesfamily:Male rdf:type rdfs:Class ;
  rdfs:subClassOf family:Person .
@@ -12,7 +13,8 @@ family:Child rdf:type rdfs:Class ;
  rdfs:subClassOf family:Person .
 family:Parent rdf:type rdfs:Class ;
  rdfs:subClassOf family:Person .
-# Propertiesfamily:hasMember rdf:type rdf:Property ;
+# Properties
+family:hasMember rdf:type rdf:Property ;
   rdfs:label "has member" ;
   rdfs:domain family:Family ;
   rdfs:range family:Person .

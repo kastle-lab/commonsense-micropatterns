@@ -3,7 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix lv: <http://example.org/level#> .
-# Classeslv:Level a rdfs:Class ;
+# Class
+lv:Level a rdfs:Class ;
     rdfs:subClassOf rdfs:Resource ;
     rdfs:label "Level" ;
     rdfs:comment "Represents a certain stage or position in a scale or series of increments." .
@@ -19,7 +20,8 @@ lv:HighLevel a rdfs:Class ;
     rdfs:subClassOf lv:Level ;
     rdfs:label "High Level" ;
     rdfs:comment "Represents a stage or position that is considered above average in a series of levels." .
-# Propertieslv:hasLevel a rdf:Property ;
+# Properties
+lv:hasLevel a rdf:Property ;
     rdfs:domain rdfs:Resource ;
     rdfs:range lv:Level ;
     rdfs:label "has level" ;

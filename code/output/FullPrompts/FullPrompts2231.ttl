@@ -2,8 +2,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://www.example.com/#> .
-# Country is a classex:Country rdf:type rdfs:Class .
-# Properties for the countryex:name rdf:type rdf:Property ;
+# Country is a class
+ex:Country rdf:type rdfs:Class .
+# Properties
+ for the countryex:name rdf:type rdf:Property ;
   rdfs:domain ex:Country ;
   rdfs:range xsd:string .
 ex:population rdf:type rdf:Property ;

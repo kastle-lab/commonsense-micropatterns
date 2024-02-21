@@ -1,3 +1,4 @@
+@prefix ex: <http://example.com/> .
 ex:Week a rdfs:Class ;
     rdfs:label "Week"@en ;
     rdfs:comment "A class representing a week."@en ;

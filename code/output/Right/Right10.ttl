@@ -3,7 +3,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://www.example.org/right#> .
-# Classes:Right rdf:type owl:Class ;
+# Class
+:Right rdf:type owl:Class ;
     rdfs:comment "The term Right refers to a moral, legal or social entitlement that an individual has." .
 :HumanRight rdf:type owl:Class ;
     rdfs:subClassOf :Right ;
@@ -14,13 +15,15 @@
 :PropertyRight rdf:type owl:Class ;
     rdfs:subClassOf :Right ;
     rdfs:comment "Theoretical legally enforceable powers to exclude others from using an economic good or service." .
-# Properties:hasRight rdf:type owl:ObjectProperty ;
+# Properties
+:hasRight rdf:type owl:ObjectProperty ;
     rdfs:domain :Person ;
     rdfs:range :Right .
 :isProtectedBy rdf:type owl:ObjectProperty ;
     rdfs:domain :Right ;
     rdfs:range :Law .
-# Individuals:FreedomOfSpeech rdf:type :HumanRight ;
+# Individuals
+:FreedomOfSpeech rdf:type :HumanRight ;
     rdfs:comment "The right to express any opinions without censorship or restraint." .
 :RightToVote rdf:type :CivilRight ;
     rdfs:comment "The right to vote in a democratic society." .

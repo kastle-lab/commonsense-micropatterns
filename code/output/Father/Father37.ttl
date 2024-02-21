@@ -1,0 +1,9 @@
+ This model is written in turtle (a common format for writing RDF)
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+<http://www.example.org/people#John_Doe>  a foaf:Person ;
+  foaf:name "John Doe" ;
+  rel:fatherOf <http://www.example.org/people#Jane_Doe> .
+<http://www.example.org/people#Jane_Doe>  a foaf:Person ;
+  foaf:name "Jane Doe" ;
+  rel:childOf <http://www.example.org/people#John_Doe> .

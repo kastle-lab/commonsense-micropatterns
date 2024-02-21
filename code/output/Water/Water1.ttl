@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix waterOnt: <http://www.example.org/waterOnt#> .
-# ClasseswaterOnt:Water a owl:Class .
+# Class
+waterOnt:Water a owl:Class .
 waterOnt:FreshWater a owl:Class ;
 rdfs:subClassOf waterOnt:Water .
 waterOnt:SaltWater a owl:Class ;
@@ -14,7 +15,8 @@ rdfs:subClassOf waterOnt:WaterSource, waterOnt:FreshWater .
 waterOnt:Ocean a owl:Class ;
 rdfs:subClassOf waterOnt:WaterSource, waterOnt:SaltWater .
 waterOnt:DrinkingWater a owl:Class;
-rdfs:subClassOf waterOnt:FreshWater.# PropertieswaterOnt:hasSource a owl:ObjectProperty ;
+rdfs:subClassOf waterOnt:FreshWater.# Properties
+waterOnt:hasSource a owl:ObjectProperty ;
     rdfs:domain waterOnt:Water ;
     rdfs:range waterOnt:WaterSource .
 waterOnt:isSourceOf a owl:ObjectProperty ;

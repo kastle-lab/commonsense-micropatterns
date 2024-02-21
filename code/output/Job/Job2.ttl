@@ -5,7 +5,8 @@
 # Job classjob:Job rdf:type rdfs:Class ;
    rdfs:label "Job" ;
    rdfs:comment "A position of employment" .
-# Propertiesjob:hasPosition rdf:type rdf:Property ;
+# Properties
+job:hasPosition rdf:type rdf:Property ;
    rdfs:range job:Position ;
    rdfs:domain job:Job ;
    rdfs:label "has position" ;

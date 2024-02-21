@@ -1,12 +1,14 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://example.org/kid#> .
-# Classesex:Kid rdf:type rdfs:Class .
+# Class
+ex:Kid rdf:type rdfs:Class .
 ex:Toy rdf:type rdfs:Class .
 ex:School rdf:type rdfs:Class .
 ex:Parent rdf:type rdfs:Class .
 ex:Hobby rdf:type rdfs:Class .
-# Propertiesex:hasToy rdf:type rdf:Property ;
+# Properties
+ex:hasToy rdf:type rdf:Property ;
           rdfs:domain ex:Kid ;
           rdfs:range ex:Toy .
 ex:hasParent rdf:type rdf:Property ;
@@ -18,7 +20,8 @@ ex:studiesAt rdf:type rdf:Property ;
 ex:hasHobby rdf:type rdf:Property ;
             rdfs:domain ex:Kid ;
             rdfs:range ex:Hobby .
-# Individualsex:Jane rdf:type ex:Kid ;
+# Individuals
+ex:Jane rdf:type ex:Kid ;
        ex:hasToy ex:Doll ;
        ex:hasParent ex:Mary ;
        ex:studiesAt ex:Greenwood_School ;

@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix svc: <http://example.com/service#> .
-# Classessvc:Service rdf:type rdfs:Class ;
+# Class
+svc:Service rdf:type rdfs:Class ;
     rdfs:comment "A class representing all services."@en ;
     rdfs:label "Service"@en .
     svc:Customer rdf:type rdfs:Class ;
@@ -11,7 +12,8 @@
 svc:ServiceProvider rdf:type rdfs:Class ;
     rdfs:comment "A class representing all service providers."@en ;
     rdfs:label "Service Provider"@en .
-# Propertiessvc:provides rdf:type rdf:Property ;
+# Properties
+svc:provides rdf:type rdf:Property ;
     rdfs:domain svc:ServiceProvider ;
     rdfs:range svc:Service ;
     rdfs:comment "The property connecting service provider and the service they provide."@en ;
@@ -26,7 +28,8 @@ svc:hasCustomer rdf:type rdf:Property ;
     rdfs:range svc:Customer ;
     rdfs:comment "The property connecting service provider and their customers."@en ;
     rdfs:label "has customer"@en .
-    # Individualsvc:ServiceProvider1 rdf:type svc:ServiceProvider ;
+    # Individuals
+vc:ServiceProvider1 rdf:type svc:ServiceProvider ;
     svc:provides svc:Service1 ;
     svc:hasCustomer svc:Customer1 .
 svc:Service1 rdf:type svc:Service .

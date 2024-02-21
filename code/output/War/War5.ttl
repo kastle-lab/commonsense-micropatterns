@@ -2,11 +2,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix war: <http://www.example.org/war#> .
-# Classeswar:War rdf:type rdfs:Class .
+# Class
+war:War rdf:type rdfs:Class .
 war:Combatant rdf:type rdfs:Class .
 war:Country rdf:type rdfs:Class .
 war:Causalities rdf:type rdfs:Class .
-# Propertieswar:hasStart rdf:type rdf:Property ;
+# Properties
+war:hasStart rdf:type rdf:Property ;
     rdfs:domain war:War ;
     rdfs:range xsd:dateTime .
     war:hasEnd rdf:type rdf:Property ;

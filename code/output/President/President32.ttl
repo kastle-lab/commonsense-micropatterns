@@ -12,4 +12,5 @@ ex:President rdf:type rdfs:Class .
                       rdfs:domain ex:President ;
                      rdfs:range ex:Country .
 Explanation:This example shows a basic ontological representation of the concept "President".
- The prefix "ex:" stands for some example namespace URL which would typically be substituted for a real namespace in practical uses.In provided Turtle, 'President', 'Term', 'Country' are classes. 'hasTerm', 'presidesOver', 'isHeadOfStateOf' are properties or relationships. This means, for instance, that a President presides over a country and a president has a term.
+ The prefix "
+ex:" stands for some example namespace URL which would typically be substituted for a real namespace in practical uses.In provided Turtle, 'President', 'Term', 'Country' are classes. 'hasTerm', 'presidesOver', 'isHeadOfStateOf' are properties or relationships. This means, for instance, that a President presides over a country and a president has a term.

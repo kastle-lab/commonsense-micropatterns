@@ -10,7 +10,8 @@ ex:People rdf:type rdf:Class ;
     rdfs:subClassOf ex:World .
 # Few Instancesex:Asia rdf:type ex:Continent .
 ex:Indian rdf:type ex:Ocean .
-# Propertiesex:hasPeople rdf:type rdf:Property ;
+# Properties
+ex:hasPeople rdf:type rdf:Property ;
     rdfs:domain ex:World ;
     rdfs:range ex:People .
 ex:hasArea rdf:type rdf:Property ;

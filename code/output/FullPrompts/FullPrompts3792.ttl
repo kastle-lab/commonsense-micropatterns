@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix reason: <http://example.com/reason#> .
-# Classesreason:Reason rdf:type owl:Class ;
+# Class
+reason:Reason rdf:type owl:Class ;
     rdfs:comment "A cause, explanation, or justification for an action or event" ;
     rdfs:subClassOf owl:Thing .
 reason:Fact rdf:type owl:Class ;
@@ -12,7 +13,8 @@ reason:Fact rdf:type owl:Class ;
 reason:Argument rdf:type owl:Class ;
     rdfs:comment "A reason or set of reasons given with the aim of persuading others that an action or idea is right or wrong" ;
     rdfs:subClassOf reason:Reason .
-# Propertiesreason:hasSupport rdf:type owl:ObjectProperty ;
+# Properties
+reason:hasSupport rdf:type owl:ObjectProperty ;
     rdfs:comment "Relates a reason to a supporting fact or argument" ;
     rdfs:domain reason:Reason ;
     rdfs:range reason:Fact .

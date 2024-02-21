@@ -5,4 +5,5 @@
 ex:January rdf:type ex:Month .
 ex:February rdf:type ex:Month .
 ex:March rdf:type ex:Month .
-<!-- And so on for the remaining months -->ex:Month rdf:type rdfs:Class .
+<!-- And so on for the remaining months -->
+ex:Month rdf:type rdfs:Class .

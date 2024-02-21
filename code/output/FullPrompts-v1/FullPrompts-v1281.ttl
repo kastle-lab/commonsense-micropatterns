@@ -1,1 +1,2 @@
+@prefix : <http://example.org/> .
 :World a owl:Class .

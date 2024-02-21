@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix time: <http://www.example.com/time#> .
-# Classestime:Time rdf:type owl:Class .
+# Class
+time:Time rdf:type owl:Class .
 time:Second rdf:type owl:Class .
 time:Minute rdf:type owl:Class .
 time:Hour rdf:type owl:Class .

@@ -22,7 +22,8 @@ night:endTime rdf:type owl:DatatypeProperty ;
 night:isPartOf rdf:type owl:ObjectProperty ;
   rdf:domain night:TimeOfDay ;
   rdf:range [ rdf:type owl:Class ] .
- # Individuals night:Midnight rdf:type night:Night ;
+ # Individuals
+ night:Midnight rdf:type night:Night ;
   night:startTime "00:00:00"^^xsd:time ;
   night:endTime "01:00:00"^^xsd:time .
 night:LateNight rdf:type night:Night,                night:SleepingTime,                night:StargazingTime ;

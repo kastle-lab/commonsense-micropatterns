@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix time: <http://www.ontology.org/time#> .
-# Classestime:Time a rdfs:Class ;
+# Class
+time:Time a rdfs:Class ;
     rdfs:label "Time" ;
     rdfs:comment "A specific point in time." .
 time:Interval a rdfs:Class ;
@@ -14,7 +15,8 @@ time:Instant a rdfs:Class ;
     rdfs:label "Instant" ;
     rdfs:comment "A point in time." ;
     rdfs:subClassOf time:Time .
-# Propertiestime:hasTime a rdf:Property ;
+# Properties
+time:hasTime a rdf:Property ;
     rdfs:label "hasTime" ;
     rdfs:domain time:Time ;
     rdfs:range xsd:dateTime .

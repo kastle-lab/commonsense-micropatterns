@@ -1,1 +1,1 @@
-Pattern:{  "@type": "Event",  "name": "Night",  "startTime": "20:00:00",  "endTime": "06:00:00",  "associatedWith": ["darkness", "sleep", "stars", "moon"],  "contrastWith": "Day"}
+  "@type": "Event",  "name": "Night",  "startTime": "20:00:00",  "endTime": "06:00:00",  "associatedWith": ["darkness", "sleep", "stars", "moon"],  "contrastWith": "Day"

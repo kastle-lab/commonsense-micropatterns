@@ -1,3 +1,4 @@
+@prefix ex: <http://example.org/#> .
 ex:World    a rdfs:Class ;
     rdfs:label "World" ;
     rdfs:comment "The universe or sphere in which something exists or takes place." .

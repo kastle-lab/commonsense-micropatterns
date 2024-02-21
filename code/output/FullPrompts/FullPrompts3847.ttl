@@ -1,7 +1,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix res: <http://example.org/research#> .
-# Classes res:Research a rdfs:Class ;
+# Class
+ res:Research a rdfs:Class ;
    rdfs:comment "Class representing the concept of research in general." .
 res:QualitativeResearch a rdfs:Class ;
   rdfs:subClassOf res:Research ;
@@ -13,7 +14,8 @@ res:Researcher a rdfs:Class ;
   rdfs:comment "Class representing individuals conducting research." .
 res:Institution a rdfs:Class ;
   rdfs:comment "Class representing institutions conducting or supporting research activities.".
-# Propertiesres:specializesIn a rdf:Property ;
+# Properties
+res:specializesIn a rdf:Property ;
   rdfs:domain res:Researcher ;
   rdfs:range res:Research ;
   rdfs:comment "Property linking researchers to their specific research field." .

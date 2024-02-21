@@ -29,7 +29,8 @@ gov:hasCitizen a rdf:Property ;
     rdfs:range gov:Citizen ;
     rdfs:label "has citizen"@en ;
     rdfs:comment "A relation describing that a government is related to a citizen."@en .
-# Individualsgov:UnitedStates a gov:Government ;
+# Individuals
+gov:UnitedStates a gov:Government ;
     gov:hasDepartment gov:DepartmentOfState ;
     gov:hasPolitician gov:JoeBiden ;
     gov:hasCitizen gov:JohnSmith .

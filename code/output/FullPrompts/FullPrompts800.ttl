@@ -1,11 +1,13 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://www.example.org/> .
-# Classes definitionex:Government rdf:type rdfs:Class .
+# Class
+ definitionex:Government rdf:type rdfs:Class .
 ex:Ministry rdf:type rdfs:Class .
 ex:Minister rdf:type rdfs:Class .
 ex:Law rdf:type rdfs:Class .
-# Properties definitionex:isHeadOf rdf:type rdf:Property ;
+# Properties
+ definitionex:isHeadOf rdf:type rdf:Property ;
             rdfs:domain ex:Minister;
             rdfs:range ex:Ministry .
 ex:hasLaw rdf:type rdf:Property ;

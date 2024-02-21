@@ -4,7 +4,8 @@
 ex:Power a rdfs:Class ;
     rdfs:label "Power" ;
     rdfs:comment "A quantity or attribute of a physical system or body;
- an object's capacity to perform work."ex:hasPower a rdf:Property ;
+ an object's capacity to perform work."
+ex:hasPower a rdf:Property ;
     rdfs:label "has power" ;
     rdfs:comment "The property that connects an object to its power." ;
     rdfs:domain ex:Object ;

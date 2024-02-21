@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix s: <http://www.example.com/loveseat#> .
-# Classess:Loveseat rdf:type rdfs:Class ;
+# Class
+s:Loveseat rdf:type rdfs:Class ;
     rdfs:label "Loveseat" ;
     rdfs:comment "A small sofa designed to seat two persons." .
 s:Material rdf:type rdfs:Class ;
@@ -14,7 +15,8 @@ s:Color rdf:type rdfs:Class ;
 s:Dimension rdf:type rdfs:Class ;
     rdfs:label "Dimension" ;
     rdfs:comment "The size and shape details of the loveseat." .
-# Propertiess:hasMaterial rdf:type rdf:Property ;
+# Properties
+s:hasMaterial rdf:type rdf:Property ;
     rdfs:label "has material" ;
     rdfs:comment "The material that the loveseat is made of." ;
     rdfs:domain s:Loveseat ;

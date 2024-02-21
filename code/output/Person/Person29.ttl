@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/> .
-# Declaration of Person classex:Person rdf:type rdfs:Class ;
+# Declaration of Person class
+ex:Person rdf:type rdfs:Class ;
 # Declaration of propertiesex:hasFullName rdf:type rdf:Property ;
   rdfs:domain ex:Person ;
   rdfs:range xsd:string ;
@@ -19,7 +20,8 @@ ex:livesIn rdf:type rdf:Property ;
   rdfs:domain ex:Person ;
   rdfs:range ex:Location ;
   rdfs:label "lives in" .
-# Declaration of Location classex:Location rdf:type rdfs:Class .
+# Declaration of Location class
+ex:Location rdf:type rdfs:Class .
 # The next part is an example of how to represent an instance of person using the above ontologyex:John rdf:type ex:Person ;
   ex:hasFullName "John Doe" ;
   ex:hasAge 30 ;

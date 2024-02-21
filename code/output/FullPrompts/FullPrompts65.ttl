@@ -9,7 +9,8 @@
 # Define the sub class 'ThreeSeaterSofa'ex:ThreeSeaterSofa rdf:type rdfs:Class ;
        rdfs:subClassOf ex:Sofa ;
        rdfs:label "Three Seater Sofa"@en .
-# Define the 'Color' classex:Color rdf:type rdfs:Class ;
+# Define the 'Color' class
+ex:Color rdf:type rdfs:Class ;
          rdfs:label "Color"@en .
 # Define the 'hasColor' property for 'Sofa'ex:hasColor rdf:type rdf:Property ;
          rdfs:domain ex:Sofa ;

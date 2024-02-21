@@ -1,3 +1,4 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 dbo:Week     a rdfs:Class ;
     rdfs:label "Week"@en ;

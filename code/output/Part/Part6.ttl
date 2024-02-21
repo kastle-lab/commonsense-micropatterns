@@ -21,7 +21,8 @@ part:InteriorPart a rdfs:Class ;
     rdfs:label "Electrical Part" ;
     rdfs:subClassOf part:Part ;
     rdfs:comment "Represents all the parts related to vehicle's electrical system." .
-# Properties    part:hasManufacturer a owl:DatatypeProperty ;
+# Properties
+    part:hasManufacturer a owl:DatatypeProperty ;
     rdfs:label "has Manufacturer" ;
     rdfs:range xsd:string ;
     rdfs:domain part:Part ;

@@ -2,7 +2,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix o: <http://example.org/ontology/> .
-# Classeso:Health rdf:type owl:Class .
+# Class
+o:Health rdf:type owl:Class .
 o:Disease rdf:type owl:Class .
 o:Symptom rdf:type owl:Class .
 o:Treatment rdf:type owl:Class .

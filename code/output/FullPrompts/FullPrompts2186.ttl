@@ -2,13 +2,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.org/student#> .
-# Classes:Student a rdfs:Class ;
+# Class
+:Student a rdfs:Class ;
   rdfs:label "Student" .
 :Course a rdfs:Class ;
   rdfs:label "Course" .
 :University a rdfs:Class ;
   rdfs:label "University" .
-# Properties:attends a rdf:Property ;
+# Properties
+:attends a rdf:Property ;
   rdfs:domain :Student ;
   rdfs:range :Course ;
   rdfs:label "attends" .

@@ -2,7 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix airOntology: <http://www.example.com/airOntology#> .
-airOntology:{  airOntology:Air rdf:type rdfs:Class ;
+  airOntology:Air rdf:type rdfs:Class ;
     rdfs:label "Air"@en ;
     rdfs:comment "The invisible gaseous substance surrounding the earth, a mixture mainly of oxygen and nitrogen."@en .
     airOntology:pollution rdf:type rdfs:Class ;
@@ -24,4 +24,4 @@ airOntology:{  airOntology:Air rdf:type rdfs:Class ;
   airOntology:AirEffects rdf:type rdfs:Class ;
     rdfs:label "Effects of Air" ;
     rdfs:comment "A class representing different effects caused by air substances, including health and environmental effects."@en .
-  }
+  

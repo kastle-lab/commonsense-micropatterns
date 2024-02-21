@@ -3,12 +3,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://www.example.org/#> .
-# Classes:Person a rdfs:Class .
+# Class
+:Person a rdfs:Class .
 :Male a rdfs:Class ;
   rdfs:subClassOf :Person .
 :Female a rdfs:Class ;
   rdfs:subClassOf :Person .
-# Properties:firstName a rdf:Property ;
+# Properties
+:firstName a rdf:Property ;
   rdfs:domain :Person ;
   rdfs:range xsd:string .
 :lastName a rdf:Property ;

@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://example.com/> .
 # Class definitionsex:Name rdf:type rdfs:Class .
-# Properties definitionsex:hasFirstName rdf:type rdf:Property ;
+# Properties
+ definitionsex:hasFirstName rdf:type rdf:Property ;
     rdfs:domain ex:Name ;
     rdfs:range rdfs:Literal .
 ex:hasMiddleName rdf:type rdf:Property ;

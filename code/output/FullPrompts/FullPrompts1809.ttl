@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix ex: <http://example.org/> .
-# Defining Power as a classex:Power a rdfs:Class ;
+# Defining Power as a class
+ex:Power a rdfs:Class ;
   rdfs:label "Power"@en .
 # Defining Electric Power as a subclass of Powerex:ElectricPower a rdfs:Class ;
   rdfs:label "Electric Power"@en ;

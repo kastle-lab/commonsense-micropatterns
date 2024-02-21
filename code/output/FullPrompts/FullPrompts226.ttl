@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix ex: <http://example.org/> .
 # Class declarationex:Way a rdfs:Class .
-# Example instance of the classex:Way1 a ex:Way .
+# Example instance of the class
+ex:Way1 a ex:Way .
 # Example property
 ex:hasDirection a rdf:Property ;
    rdfs:domain ex:Way ;

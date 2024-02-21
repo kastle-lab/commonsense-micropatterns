@@ -1,6 +1,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix hourOnt: <http://www.example.org/hourOntology#> .
-# ClasseshourOnt:Hour a rdfs:Class ;
+# Class
+hourOnt:Hour a rdfs:Class ;
   rdfs:comment "A class representing hour"^^xsd:string ;
   rdfs:label "Hour"^^xsd:string .
 hourOnt:Minute a rdfs:Class ;

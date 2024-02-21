@@ -12,7 +12,8 @@
 life:PlantLife a life:Life ;
   rdfs:label "Plant life"@en ;
   rdfs:comment "The existence of a plant individual or species, capable of growth, metabolism, reproduction, and adaptation to environment."@en .
-# Propertieslife:hasLifeSpan a rdf:Property ;
+# Properties
+life:hasLifeSpan a rdf:Property ;
   rdfs:label "has life span"@en ;
   rdfs:domain life:Life ;
   rdfs:range xsd:decimal .

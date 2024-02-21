@@ -1,13 +1,15 @@
 @prefix ex: <http://example.com/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-# Classes ex:Book a rdfs:Class ;
+# Class
+ ex:Book a rdfs:Class ;
   rdfs:label "Book"@en ;
   rdfs:comment "A written or printed work consisting of pages glued or sewn together along one side and bound in covers"@en .
 ex:Author a rdfs:Class ;
   rdfs:label "Author"@en ;
   rdfs:comment "A person who writes books"@en .
-# Propertiesex:hasAuthor a rdfs:Property ;
+# Properties
+ex:hasAuthor a rdfs:Property ;
   rdfs:label "has author"@en ;
   rdfs:domain ex:Book ;
   rdfs:range ex:Author;
@@ -22,7 +24,8 @@ ex:hasPublicationYear a rdfs:Property ;
   rdfs:domain ex:Book ;
   rdfs:range rdfs:Literal;
   rdfs:comment "The publication year of the book"@en .
-# Individualsex:J_R_R_Tolkien a ex:Author;
+# Individuals
+ex:J_R_R_Tolkien a ex:Author;
   foaf:name "J. R. R. Tolkien"@en .
 ex:The_Hobbit a ex:Book ;
   ex:hasTitle "The Hobbit"@en ;

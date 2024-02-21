@@ -1,0 +1,18 @@
+@prefix : <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Team rdf:type rdfs:Class .
+:hasMember rdf:type rdf:Property ;
+    rdfs:domain :Team ;
+    rdfs:range :Person .
+:Person rdf:type rdfs:Class .
+:TeamA rdf:type :Team ;
+    :hasMember :PersonA , :PersonB .
+:TeamB rdf:type :Team ;
+    :hasMember :PersonC , :PersonD .
+:PersonA rdf:type :Person .
+:PersonB rdf:type :Person .
+:PersonC rdf:type :Person .
+:PersonD rdf:type :Person .

@@ -3,7 +3,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix edu: <http://www.example.org/education#> .
-# Classesedu:Education a rdfs:Class ;
+# Class
+edu:Education a rdfs:Class ;
     rdfs:label "Education" .
 edu:School a rdfs:Class ;
     rdfs:label "School" ;
@@ -19,7 +20,8 @@ edu:Subject a rdfs:Class ;
     rdfs:label "Subject" .
 edu:Grade a rdfs:Class ;
     rdfs:label "Grade" .
-# Propertiesedu:attends a rdf:Property ;
+# Properties
+edu:attends a rdf:Property ;
     rdfs:label "attends" ;
     rdfs:domain edu:Student ;
     rdfs:range edu:School .

@@ -1,3 +1,4 @@
+@prefix : <http://example.org/> .
 :Work a rdfs:Class ;
 rdfs:label "Work"@en ;
 rdfs:comment "A activity or task carried out for a particular purpose or result"@en.:Person a rdfs:Class ;

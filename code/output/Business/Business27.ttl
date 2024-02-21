@@ -2,12 +2,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix business: <http://example.com/business#> .
-# Classesbusiness:Business rdf:type rdfs:Class .
+# Class
+business:Business rdf:type rdfs:Class .
 business:Owner rdf:type rdfs:Class .
 business:Employee rdf:type rdfs:Class .
 business:Product rdf:type rdfs:Class .
 business:Service rdf:type rdfs:Class .
-# Propertiesbusiness:hasOwner rdf:type rdf:Property ;
+# Properties
+business:hasOwner rdf:type rdf:Property ;
                  rdfs:domain business:Business ;
                  rdfs:range business:Owner .
                  business:hasEmployee rdf:type rdf:Property ;

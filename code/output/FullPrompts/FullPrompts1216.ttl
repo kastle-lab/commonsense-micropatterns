@@ -1,3 +1,4 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ns: <http://example.org/system#> .
 ns:ComputerSystem rdf:type rdf:Class .
 ns:provides rdf:type rdf:Property ;

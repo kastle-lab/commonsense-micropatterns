@@ -11,7 +11,7 @@ number:Integer a owl:Class ;
     rdfs:subClassOf number:Number ;
     rdfs:label "Integer" ;
     rdfs:comment "An integer is a number in the set {..., -2, -1, 0, 1, 2, .
-..}" .
+.." .
 number:RealNumber a owl:Class ;
     rdfs:subClassOf number:Number ;
     rdfs:label "Real Number" ;

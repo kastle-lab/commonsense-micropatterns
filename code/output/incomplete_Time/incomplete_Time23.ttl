@@ -2,7 +2,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 <http://example.org/ontology#> a owl:Ontology .
-# Classes:TimePoint a owl:Class ;
+# Class
+:TimePoint a owl:Class ;
   rdfs:label "Time Point"@en ;
   rdfs:subClassOf [    a owl:Restriction ;
     owl:onProperty :hasTimeStamp ;

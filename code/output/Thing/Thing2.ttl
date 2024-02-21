@@ -1,7 +1,9 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix ex: <http://example.org#> .
-# Defining Thing as a classex:Thing a rdfs:Class ;
+# Defining Thing as a class
+ex:Thing a rdfs:Class ;
     rdfs:label "Thing"@en ;
     rdfs:comment "A general concept of any object, entity, fact, or concept."@en .
 # Defining properties for the Thing class:ex:hasName a rdf:Property ;

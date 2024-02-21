@@ -1,7 +1,8 @@
 @prefix ex: <http://example.org/hand#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-# Hand classex:Hand a rdfs:Class ;
+# Hand class
+ex:Hand a rdfs:Class ;
     rdfs:label "Hand" ;
     rdfs:comment "A human hand" .
 # IsPartOf relationex:isPartOf a owl:ObjectProperty ;
@@ -13,9 +14,11 @@
     rdfs:label "has fingers" ;
     rdfs:comment "Indicates that a hand has fingers" ;
     rdfs:domain ex:Hand ;
-    rdfs:range ex:Finger.# Finger classex:Finger a rdfs:Class ;
+    rdfs:range ex:Finger.# Finger class
+ex:Finger a rdfs:Class ;
     rdfs:label "Finger" ;
     rdfs:comment "A finger of a human hand" .
-# HumanBody classex:HumanBody a rdfs:Class ;
+# HumanBody class
+ex:HumanBody a rdfs:Class ;
     rdfs:label "Human Body" ;
     rdfs:comment "The complete physical structure of a human being" .

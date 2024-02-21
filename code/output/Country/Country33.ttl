@@ -2,7 +2,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-#Define Country as a classex:Country a owl:Class ;
+#Define Country as a class
+ex:Country a owl:Class ;
            rdfs:comment "A geographical region, recognized as distinct entity in political geography" .
 # Example of a countryex:Canada a ex:Country ;
            rdfs:comment "A country in North America" .

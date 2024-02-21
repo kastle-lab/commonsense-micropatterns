@@ -2,11 +2,13 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 # Defining "Right" as a Classex:Right rdf:type owl:Class .
-# Defining a concept "Human" related to "Right"ex:Human rdf:type owl:Class ;
+# Defining a concept "Human" related to "Right"
+ex:Human rdf:type owl:Class ;
      rdfs:subClassOf [        rdf:type owl:Restriction ;
         owl:onProperty ex:hasRight ;
         owl:someValuesFrom ex:Right    ] .
-# Defining property "hasRight"ex:hasRight rdf:type owl:ObjectProperty ;
+# Defining property "hasRight"
+ex:hasRight rdf:type owl:ObjectProperty ;
     rdfs:range ex:Right ;
     rdfs:domain ex:Human .
 # Now, we can identify any specific right for a specific humanex:RightToLife rdf:type ex:Right .

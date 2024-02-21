@@ -16,7 +16,8 @@
 # Child has Parentex:hasParent rdf:type owl:ObjectProperty ;
     rdfs:domain ex:Child ;
     rdfs:range ex:Parent .
-# Parent is a classex:Parent rdf:type owl:Class .
+# Parent is a class
+ex:Parent rdf:type owl:Class .
 # Parent has a Nameex:ParentHasName rdf:type owl:DatatypeProperty ;
     rdfs:domain ex:Parent ;
     rdfs:range xsd:string .

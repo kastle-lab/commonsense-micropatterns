@@ -1,3 +1,4 @@
+ex:".
  This example is in Turtle format, which is a syntax for representing semantic data and RDF triples.
 @prefix ex: <http://www.example.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.org/money#> .
-# Classes:Money  a rdfs:Class ;
+# Class
+:Money  a rdfs:Class ;
     rdfs:comment "Money in general" ;
     rdfs:label "Money" .
 :Currency  a rdfs:Class ;
@@ -20,7 +21,8 @@
     rdfs:subClassOf :DigitalMoney ;
     rdfs:comment "Decentralized digital or virtual form of currency" ;
     rdfs:label "Cryptocurrency" .
-# Properties:hasCurrency a rdf:Property ;
+# Properties
+:hasCurrency a rdf:Property ;
     rdfs:range :Currency ;
     rdfs:domain :Money ;
     rdfs:comment "Specifying the currency type of the money" ;

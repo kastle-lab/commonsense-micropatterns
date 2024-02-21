@@ -1,7 +1,8 @@
 @prefix day: <http://www.example.org/days#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-## Classes definitionsday:Day a owl:Class .
+## Class
+ definitionsday:Day a owl:Class .
 day:WorkDay a owl:Class ;
     owl:subClassOf day:Day .
 day:Holiday a owl:Class ;

@@ -5,7 +5,8 @@
 # Class definitionex:Person  rdf:type rdfs:Class ;
   rdfs:label "Person" ;
   rdfs:comment "Class representing a person" .
-# Properties definitionsex:hasName  rdf:type rdf:Property ;
+# Properties
+ definitionsex:hasName  rdf:type rdf:Property ;
   rdfs:label "has name" ;
   rdfs:comment "Property representing a person's name" ;
   rdfs:domain ex:Person ;

@@ -5,7 +5,8 @@
 # Declaration of class room:Room rdf:type rdfs:Class ;
         # Textual Definition and Label for the class        rdfs:comment "A space within a building that is designed for a particular purpose."@en ;
         rdfs:label "Room"@en .
-# Properties associated with Room:hasRoomNumber rdf:type rdf:Property ;
+# Properties
+ associated with Room:hasRoomNumber rdf:type rdf:Property ;
             rdfs:domain :Room ;
             rdfs:range xsd:string ;
             rdfs:comment "Specifies the number or other identifier of a room."@en ;

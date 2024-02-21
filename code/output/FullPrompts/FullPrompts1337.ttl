@@ -1,3 +1,4 @@
+@prefix night: <http://www.example.org/night#> .
 @prefix time: <http://www.example.org/time#> .
 @prefix place: <http://www.example.org/place#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

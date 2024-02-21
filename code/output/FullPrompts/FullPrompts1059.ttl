@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sto: <http://example.org/story#> .
-# Classessto:Story rdf:type owl:Class ;
+# Class
+sto:Story rdf:type owl:Class ;
           rdfs:label "Story" ;
           rdfs:comment "A narrative or a tale in the context of literature, film, theater, or music" .
 sto:Character rdf:type owl:Class ;

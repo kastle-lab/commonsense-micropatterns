@@ -4,7 +4,8 @@
 ex:Country rdf:type rdfs:Class .
 # Subclasses of ex:Country if any...ex:LandlockedCountry rdf:type rdfs:Class ;
  rdfs:subClassOf ex:Country .
-# Properties that may be associated with a countryex:hasCapital rdf:type rdf:Property ;
+# Properties
+ that may be associated with a countryex:hasCapital rdf:type rdf:Property ;
   rdfs:domain ex:Country ;
   rdfs:range ex:City .
 ex:hasPopulation rdf:type rdf:Property ;

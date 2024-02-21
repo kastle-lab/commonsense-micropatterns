@@ -17,7 +17,8 @@ ex:MySunrise rdf:type ex:Sunrise .
 ex:MyBreakfast rdf:type ex:Breakfast .
 ex:MyMorningRoutine rdf:type ex:MorningRoutine .
 ex:MyStartOfWork rdf:type ex:StartOfWork .
-## Propertiesex:hasPart rdf:type rdf:Property ;
+## Properties
+ex:hasPart rdf:type rdf:Property ;
            rdfs:domain ex:Morning ;
            rdfs:range rdfs:Resource .
 ex:timeOfDay rdf:type rdf:Property ;

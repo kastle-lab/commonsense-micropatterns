@@ -4,7 +4,8 @@
 @prefix ex: <http://example.org/> .
 # Define "Water" as Classex:Water rdf:type owl:Class ;
 # Water is Substancerdfs:subClassOf ex:Substance ;
-# Properties  of Water    ex:boilsAt rdf:type owl:DatatypeProperty ;
+# Properties
+  of Water    ex:boilsAt rdf:type owl:DatatypeProperty ;
       rdfs:domain ex:Water ;
       rdfs:range rdf:Integer ;
       rdfs:comment "Boiling point of the water" .

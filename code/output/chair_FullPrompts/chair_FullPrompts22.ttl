@@ -18,5 +18,12 @@ ex:hasMaterial rdf:type rdf:Property ;
  ex:hasLegs rdf:type rdf:Property ;
     rdfs:domain ex:Chair ;
     rdfs:range rdfs:Literal .
-   In this example, "ex:Chair" is defined as a type (or class) of "ex:Furniture".
- The properties "ex:hasMaterial", "ex:hasColour", "ex:hasStyle", "ex:hasBackrest" and "ex:hasLegs" are used to describe attributes of a chair.
+   In this example, "
+ex:Chair" is defined as a type (or class) of "
+ex:Furniture".
+ The properties "
+ex:hasMaterial", "
+ex:hasColour", "
+ex:hasStyle", "
+ex:hasBackrest" and "
+ex:hasLegs" are used to describe attributes of a chair.

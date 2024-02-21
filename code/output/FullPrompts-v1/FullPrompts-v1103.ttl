@@ -3,9 +3,11 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.com/> .
-# Define "Way" as a classex:Way rdf:type owl:Class ;
+# Define "Way" as a class
+ex:Way rdf:type owl:Class ;
     rdfs:comment "Way in which something is done or occurs" .
-# Define properties associated with "Way"ex:hasMethod rdf:type owl:ObjectProperty ;
+# Define properties associated with "Way"
+ex:hasMethod rdf:type owl:ObjectProperty ;
     rdfs:domain ex:Way ;
     rdfs:comment "A specific method in which way is represented" .
 ex:hasDuration rdf:type owl:DatatypeProperty ;

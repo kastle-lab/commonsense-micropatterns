@@ -1,4 +1,7 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix xsd: <http://www.w3.org/2001/XMLSchema#>@prefix : <http://example.org/>:Head a rdfs:Class ;
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix : <http://example.org/>:Head a rdfs:Class ;
   rdfs:label "Head"@en ;
   rdfs:comment "The upper part of the human or animal body where the brain, eyes, ears, nose, and mouth are located."@en ;
   rdfs:subClassOf :BodyPart .

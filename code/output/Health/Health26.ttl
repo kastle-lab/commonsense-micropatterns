@@ -1,0 +1,23 @@
+@prefix : <http://www.example.com/health#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Health rdf:type owl:Class ;
+  rdfs:label "Health"@en .
+:Disease rdf:type owl:Class ;
+  rdfs:label "Disease"@en ;
+  rdfs:subClassOf :Health .
+  :Symptom rdf:type owl:Class ;
+  rdfs:label "Symptom"@en ;
+  rdfs:subClassOf :Health .
+:Treatment rdf:type owl:Class ;
+  rdfs:label "Treatment"@en ;
+  rdfs:subClassOf :Health .
+:hasSymptom rdf:type owl:ObjectProperty ;
+  rdfs:domain :Disease ;
+  rdfs:range :Symptom ;
+  rdfs:label "has symptom"@en .
+:hasTreatment rdf:type owl:ObjectProperty ;
+  rdfs:domain :Disease ;
+  rdfs:range :Treatment ;
+  rdfs:label "has treatment"@en .

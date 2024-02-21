@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix school: <http://www.school.org/ontology#> .
-# Classesschool:Student a rdfs:Class .
+# Class
+school:Student a rdfs:Class .
 school:Teacher a rdfs:Class .
 school:Class a rdfs:Class .
 school:School a rdfs:Class .

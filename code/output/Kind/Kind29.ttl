@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ex:Publisher a rdf:Class ;
+    rdfs:label "Publisher" .
+ex:Book a rdf:Class ;
+    rdfs:label "Book" ;
+    rdfs:subClassOf ex:Publisher .
+ex:Author a rdf:Class ;
+    rdfs:label "Author" ;
+    rdfs:subClassOf ex:Book .
+ex:kindOf a rdf:Property ;
+    rdfs:range rdf:Class ;
+    rdfs:domain rdf:Class ;
+    rdfs:label "kind of" .

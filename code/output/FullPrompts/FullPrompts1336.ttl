@@ -1,3 +1,4 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ont: <http://ontology.com/night#> .
 ont:     a owl:Ontology;
     rdfs:comment "Ontology focusing on Night related domain".

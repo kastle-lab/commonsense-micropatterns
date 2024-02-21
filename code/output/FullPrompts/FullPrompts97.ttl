@@ -4,7 +4,8 @@
 @prefix furniture: <http://www.example.org/furniture#> .
 furniture:Loveseat rdf:type rdfs:Class .
 furniture:Loveseat rdfs:subClassOf furniture:Furniture .
-# Propertiesfurniture:hasMaterial rdf:type rdf:Property ;
+# Properties
+furniture:hasMaterial rdf:type rdf:Property ;
   rdfs:domain furniture:Loveseat ;
   rdfs:range xsd:string .
 furniture:hasColor rdf:type rdf:Property ;

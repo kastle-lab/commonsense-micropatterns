@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix war: <http://www.war.com/ontology#> .
-# Classeswar:War     rdf:type owl:Class .
+# Class
+war:War     rdf:type owl:Class .
 war:Weapon     rdf:type owl:Class .
 war:Combatant    rdf:type owl:Class .
 war:Battle    rdf:type owl:Class .

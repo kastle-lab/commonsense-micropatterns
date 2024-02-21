@@ -4,7 +4,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix ex: <http://example.com/> .
-# Defining "Person" as a classex:Person a rdfs:Class ;
+# Defining "Person" as a class
+ex:Person a rdfs:Class ;
     rdfs:label "Person"@en ;
     rdfs:comment "This class represents the concept of a human being."@en .
     # Defining a few typical properties of a personex:birthPlace a rdf:Property ;

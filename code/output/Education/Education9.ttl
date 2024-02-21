@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ed: <http://www.example.com/education#> .
-# Classesed:University rdf:type rdfs:Class .
+# Class
+ed:University rdf:type rdfs:Class .
 ed:Professor rdf:type rdfs:Class .
 ed:Student rdf:type rdfs:Class .
 ed:Course rdf:type rdfs:Class .

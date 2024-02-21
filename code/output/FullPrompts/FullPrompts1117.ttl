@@ -1,16 +1,20 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://example.org/> .
-# Define "Person" classex:Person a rdfs:Class ;
+# Define "Person" class
+ex:Person a rdfs:Class ;
     rdfs:label "Person" .
-# Define "Kid" class as a subclass of "Person"ex:Kid a rdfs:Class ;
+# Define "Kid" class as a subclass of "Person"
+ex:Kid a rdfs:Class ;
     rdfs:label "Kid" ;
     rdfs:subClassOf ex:Person .
-# Define property "hasAge"ex:hasAge a rdf:Property ;
+# Define property "hasAge"
+ex:hasAge a rdf:Property ;
     rdfs:label "has age" ;
     rdfs:domain ex:Person ;
     rdfs:range rdf:integer .
-# Define property "hasParent"ex:hasParent a rdf:Property ;
+# Define property "hasParent"
+ex:hasParent a rdf:Property ;
     rdfs:label "has parent" ;
     rdfs:domain ex:Kid ;
     rdfs:range ex:Person .

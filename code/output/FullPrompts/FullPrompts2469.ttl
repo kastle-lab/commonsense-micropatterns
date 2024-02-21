@@ -3,7 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-# Classes:Word a owl:Class ;
+# Class
+:Word a owl:Class ;
     rdfs:comment "A unit of language that has meaning and can be expressed or written" ;
     rdfs:label "Word" .
 :Verb a owl:Class ;
@@ -18,7 +19,8 @@
     rdfs:subClassOf :Word ;
     rdfs:comment "A word used to describe a noun" ;
     rdfs:label "Adjective" .
-# Properties:hasSpelling a owl:DatatypeProperty ;
+# Properties
+:hasSpelling a owl:DatatypeProperty ;
     rdfs:domain :Word ;
     rdfs:range xsd:string ;
     rdfs:comment "The correct arrangement of letters in the word" ;

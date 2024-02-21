@@ -1,4 +1,5 @@
-@prefix : <http://example.org/history/>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>:History a rdfs:Class ;
+@prefix : <http://example.org/history/>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>:History a rdfs:Class ;
     rdfs:label "History"@en ;
     rdfs:comment "Representation of the field of history"@en .
 :Event a rdfs:Class ;

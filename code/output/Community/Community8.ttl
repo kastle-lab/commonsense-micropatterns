@@ -3,11 +3,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix com: <http://example.org/community#> .
-# Classescom:Community rdf:type owl:Class .
+# Class
+com:Community rdf:type owl:Class .
 com:Person rdf:type owl:Class .
 com:Location rdf:type owl:Class .
 com:Event rdf:type owl:Class .
-# Propertiescom:hasMember rdf:type owl:ObjectProperty ;
+# Properties
+com:hasMember rdf:type owl:ObjectProperty ;
     rdfs:domain com:Community ;
     rdfs:range com:Person .
 com:locatedAt rdf:type owl:ObjectProperty ;

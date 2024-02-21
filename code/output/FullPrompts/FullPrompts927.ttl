@@ -1,1 +1,1 @@
-Pattern:{  "@context": "http://schema.org/",  "@type": "Organization",  "name": "Group Name",  "member": [    {      "@type": "Person",      "name": "Member 1"    },    {      "@type": "Person",      "name": "Member 2"    },    // Applicable for additional members  ]}
+  "@context": "http://schema.org/",  "@type": "Organization",  "name": "Group Name",  "member": [    {      "@type": "Person",      "name": "Member 1"    ,    {      "@type": "Person",      "name": "Member 2"    ,    // Applicable for additional members  ]

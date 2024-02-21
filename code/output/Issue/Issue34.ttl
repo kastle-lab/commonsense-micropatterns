@@ -1,3 +1,4 @@
+@prefix ex: <http://example.com/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 ex:Issue1 a ex:Issue ;
     ex:hasTitle "Issue Title" ;

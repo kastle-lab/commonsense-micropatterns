@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix kid: <http://example.org/kid/> .
-# Classeskid:Kid rdf:type rdfs:Class ;
+# Class
+kid:Kid rdf:type rdfs:Class ;
   rdfs:label "Kid" ;
   rdfs:comment "Individual who is a child or young person" .
 kid:Hobby rdf:type rdfs:Class ;
@@ -11,7 +12,8 @@ kid:Hobby rdf:type rdfs:Class ;
 kid:School rdf:type rdfs:Class ;
   rdfs:label "School" ;
   rdfs:comment "Educational institution where kids learn" .
-# Propertieskid:hasName rdf:type rdf:Property ;
+# Properties
+kid:hasName rdf:type rdf:Property ;
   rdfs:label "has name" ;
   rdfs:domain kid:Kid ;
   rdfs:range xsd:string .

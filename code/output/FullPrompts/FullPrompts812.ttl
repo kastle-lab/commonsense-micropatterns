@@ -5,7 +5,8 @@
 # Government as a Class:Government a rdfs:Class ;
   rdfs:comment "Class representing the organization that is the governing authority of a political unit" ;
   rdfs:label "Government" .
-# Properties related to Government# Departments could be a subordinate component of government:hasDepartment a rdf:Property ;
+# Properties
+ related to Government# Departments could be a subordinate component of government:hasDepartment a rdf:Property ;
   rdfs:domain :Government ;
   rdfs:range :Department ;
   rdfs:comment "property linking a government to its departments" ;

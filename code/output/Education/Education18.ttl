@@ -3,7 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-# Classesex:Education a owl:Class .
+# Class
+ex:Education a owl:Class .
 ex:Student a owl:Class .
 ex:Teacher a owl:Class .
 ex:Subject a owl:Class .
@@ -14,7 +15,8 @@ ex:SecondaryEducation a owl:Class ;
   rdfs:subClassOf ex:Education .
 ex:HigherEducation a owl:Class ;
   rdfs:subClassOf ex:Education .
-# Propertiesex:studies a owl:ObjectProperty ;
+# Properties
+ex:studies a owl:ObjectProperty ;
   rdfs:domain ex:Student ;
   rdfs:range ex:Subject .
 ex:taughtBy a owl:ObjectProperty ;

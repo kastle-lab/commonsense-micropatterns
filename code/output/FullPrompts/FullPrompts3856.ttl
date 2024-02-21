@@ -1,4 +1,8 @@
-@prefix : <http://www.example.org/>@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix owl: <http://www.w3.org/2002/07/owl#>@prefix xsd: <http://www.w3.org/2001/XMLSchema#># Define 'Research' as a concept:Research a rdfs:Class ;
+@prefix : <http://www.example.org/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#># Define 'Research' as a concept:Research a rdfs:Class ;
   rdfs:label "Research"@en ;
   rdfs:comment "An activity that seeks to discover, interpret, or revise facts or knowledge"@en .
 # Define 'researcher' as a type of individual:Researcher a rdfs:Class ;

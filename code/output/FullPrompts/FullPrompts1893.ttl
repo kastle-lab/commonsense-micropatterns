@@ -5,7 +5,8 @@
 ### Definition of law:Law rdf:type owl:Class ;
     rdfs:comment "A system of rules created by a social or governmental institution" ;
     rdfs:label "Law" .
-### Properties of law:hasJurisdiction rdf:type owl:ObjectProperty ;
+### Properties
+ of law:hasJurisdiction rdf:type owl:ObjectProperty ;
     rdfs:label "has jurisdiction" ;
     rdfs:comment "The jurisdiction, typically a country or state, where the law is legislated." ;
     rdfs:domain :Law .

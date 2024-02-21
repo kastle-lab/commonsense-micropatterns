@@ -1,7 +1,8 @@
 @prefix ex: <http://example.org/chair#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-# Define Chair as a classex:Chair a rdfs:Class ;
+# Define Chair as a class
+ex:Chair a rdfs:Class ;
   rdfs:label "Chair" ;
   rdfs:comment "The class of all chairs." .
 # Define properties of Chairex:hasMaterial rdf:type owl:ObjectProperty ;

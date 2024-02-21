@@ -1,4 +1,7 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix xsd: <http://www.w3.org/2001/XMLSchema#>@prefix hist: <http://www.example.com/history#>hist:HistoricalEvent a rdfs:Class;
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix hist: <http://www.example.com/history#>hist:HistoricalEvent a rdfs:Class;
   rdfs:label "Historical event"@en;
   rdfs:comment "A significant event that took place in the past"@en .
 hist:HistoricalPeriod a rdfs:Class;

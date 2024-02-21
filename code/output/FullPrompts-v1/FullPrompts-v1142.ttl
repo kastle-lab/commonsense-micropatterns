@@ -1,4 +1,5 @@
-@prefix : <http://example.org/ontology/>@prefix xsd: <http://www.w3.org/2001/XMLSchema#> @prefix s: <http://example.org/ontology/day/>:Day a rdfs:Class ;
+@prefix : <http://example.org/ontology/>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> @prefix s: <http://example.org/ontology/day/>:Day a rdfs:Class ;
     rdfs:comment "A class to represent a day in a week" .
 :id a rdf:Property ;
     rdfs:domain :Day ;

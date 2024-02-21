@@ -3,7 +3,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix ont: <http://www.example.org/ontology#> .
-# Classesont:Chair rdf:type rdfs:Class ;
+# Class
+ont:Chair rdf:type rdfs:Class ;
           rdfs:label "Chair"@en ;
           rdfs:comment "A piece of furniture designed to accommodate one sitting or reclining person, providing support for the back and often the arms"@en .
 ont:Material rdf:type rdfs:Class ;
@@ -12,7 +13,8 @@ ont:Material rdf:type rdfs:Class ;
 ont:Style rdf:type rdfs:Class ;
           rdfs:label "Style"@en ;
           rdfs:comment "The design or look of a particular object"@en .
-# Propertiesont:hasMaterial rdf:type rdf:Property ;
+# Properties
+ont:hasMaterial rdf:type rdf:Property ;
                 rdfs:label "has material"@en ;
                 rdfs:domain ont:Chair ;
                 rdfs:range ont:Material .
@@ -28,7 +30,8 @@ ont:hasWeight rdf:type rdf:Property ;
               rdfs:label "has weight"@en ;
               rdfs:domain ont:Chair ;
               rdfs:range xsd:decimal .
-# Individualsont:Wood rdf:type ont:Material ;
+# Individuals
+ont:Wood rdf:type ont:Material ;
          rdfs:label "Wood"@en .
 ont:Plastic rdf:type ont:Material ;
             rdfs:label "Plastic"@en .

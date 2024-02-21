@@ -1,0 +1,30 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/> .
+:Room a rdf:Class ;
+   rdfs:label "Room" ;
+   rdfs:comment "A room within a building or structure." .
+:roomId a rdf:Property ;
+   rdfs:label "Room ID" ;
+   rdfs:comment "The unique identifier of a room." ;
+   rdfs:domain :Room ;
+   rdfs:range xsd:string .
+   :roomName a rdf:Property ;
+   rdfs:label "Room name" ;
+   rdfs:comment "The name of a room." ;
+   rdfs:domain :Room ;
+   rdfs:range xsd:string .
+:roomType a rdf:Property ;
+   rdfs:label "Room type" ;
+   rdfs:comment "The type of a room." ;
+   rdfs:domain :Room ;
+   rdfs:range xsd:string .
+   :roomSize a rdf:Property ;
+   rdfs:label "Room size" ;
+   rdfs:comment "The size of a room." ;
+   rdfs:domain :Room ;
+   rdfs:range xsd:decimal .
+ :room1 a :Room ;
+  :roomId "101" ;
+  :roomName "Conference Room" ;
+  :roomType "Meeting" ;
+  :roomSize "50.5" .

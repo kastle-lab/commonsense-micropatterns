@@ -1,4 +1,8 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>@prefix owl: <http://www.w3.org/2002/07/owl#>@prefix xsd: <http://www.w3.org/2001/XMLSchema#>@prefix law: <http://example.org/law/># This Ontology will represent the concept of a 'Law', including the 'Lawmaker', 'Country' and 'Year of publication'law:Law rdf:type owl:Class .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix law: <http://example.org/law/># This Ontology will represent the concept of a 'Law', including the 'Lawmaker', 'Country' and 'Year of publication'law:Law rdf:type owl:Class .
 law:Law rdfs:comment "A legal rule established by an authoritative figure."@en .
 law:Lawmaker rdf:type owl:Class .
 law:Lawmaker rdfs:comment "An individual, body, or organisation responsible for making a law."@en .

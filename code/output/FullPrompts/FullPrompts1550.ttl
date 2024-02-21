@@ -3,7 +3,8 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-# Define a Room classex:Room rdf:type owl:Class .
+# Define a Room class
+ex:Room rdf:type owl:Class .
 ex:Room rdfs:subClassOf owl:Thing .
 # Define room propertiesex:hasRoomNumber rdf:type owl:DatatypeProperty .
 ex:hasRoomNumber rdfs:domain ex:Room .
@@ -14,7 +15,8 @@ ex:hasRoomSize rdfs:range xsd:integer .
 ex:hasRoomType rdf:type owl:ObjectProperty .
 ex:hasRoomType rdfs:domain ex:Room .
 ex:hasRoomType rdfs:range ex:RoomType .
-# RoomType classex:RoomType rdf:type owl:Class .
+# RoomType class
+ex:RoomType rdf:type owl:Class .
 ex:RoomType rdfs:subClassOf owl:Thing .
 ex:Bedroom rdftype: ex:RoomType .
 ex:LivingRoom rdftype: ex:RoomType .

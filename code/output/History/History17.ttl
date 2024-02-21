@@ -1,7 +1,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix history: <http://www.example.org/history#> .
-# Classeshistory:HistoricalEvent a rdfs:Class ;
+# Class
+history:HistoricalEvent a rdfs:Class ;
     rdfs:label "Historical Event" ;
     rdfs:comment "An event that happened in the past" .
 history:Person a rdfs:Class ;
@@ -13,7 +14,8 @@ history:Location a rdfs:Class ;
 history:Artifact a rdfs:Class ;
     rdfs:label "Artifact" ;
     rdfs:comment "An object from the past that has been preserved and is significant or valuable" .
-# Propertieshistory:occurredAt a rdfs:Property ;
+# Properties
+history:occurredAt a rdfs:Property ;
     rdfs:label "occurred at" ;
     rdfs:comment "The location where a historical event occurred" ;
     rdfs:domain history:HistoricalEvent ;

@@ -5,7 +5,8 @@
 # The Others classothers:Others a rdfs:Class ;
     rdfs:comment "The class of all Others" ;
     rdfs:label "Others" .
-# Properties for Othersothers:hasName a rdf:Property ;
+# Properties
+ for Othersothers:hasName a rdf:Property ;
     rdfs:domain others:Others ;
     rdfs:range xsd:string ;
     rdfs:comment "The name of the Other" ;

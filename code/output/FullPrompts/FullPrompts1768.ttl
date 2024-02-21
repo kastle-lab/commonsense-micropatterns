@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix ex: <http://example.edu/family#> .
-# Classesex:Person a rdfs:Class .
+# Class
+ex:Person a rdfs:Class .
 ex:Man a rdfs:Class ;
   rdfs:subClassOf ex:Person .
 ex:Woman a rdfs:Class ;
@@ -10,7 +11,8 @@ ex:Woman a rdfs:Class ;
 ex:Child a rdfs:Class ;
   rdfs:subClassOf ex:Person .
 ex:Family a rdfs:Class .
-# Propertiesex:hasFather a rdf:Property ;
+# Properties
+ex:hasFather a rdf:Property ;
   rdfs:domain ex:Child ;
   rdfs:range ex:Man .
 ex:hasMother a rdf:Property ;

@@ -3,7 +3,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <http://www.example.com/states#> .
-# Classes:State a rdfs:Class ;
+# Class
+:State a rdfs:Class ;
     rdfs:label "State" ;
     rdfs:comment "A state is a constituent political entity of a country".
 :Country a rdfs:Class ;
@@ -12,7 +13,8 @@
 :City a rdfs:Class ;
     rdfs:label "City" ;
     rdfs:comment "A city is an urban area within a state".
-# Properties:hasState a rdf:Property ;
+# Properties
+:hasState a rdf:Property ;
     rdfs:domain :Country ;
     rdfs:range :State ;
     rdfs:label "has state" ;

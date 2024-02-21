@@ -20,5 +20,6 @@ ex:hasCost rdf:type rdf:Property ;
     ex:hasServiceType "Telecommunication" ;
     ex:providedBy ex:Provider1 ;
     ex:hasCost "50.00"^^xsd:decimal .
-# Provider classex:Provider rdf:type rdfs:Class .
+# Provider class
+ex:Provider rdf:type rdfs:Class .
 # Provider individualex:Provider1 rdf:type ex:Provider .

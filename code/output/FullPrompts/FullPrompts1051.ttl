@@ -1,0 +1,20 @@
+@prefix : <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Money rdf:type rdfs:Class ;
+    rdfs:label "Money" ;
+    rdfs:comment "A medium of exchange in the form of coins and banknotes" .
+:hasAmount rdf:type rdf:Property ;
+    rdfs:label "has amount" ;
+    rdfs:comment "The numerical amount of money" ;
+    rdfs:domain :Money ;
+    rdfs:range xsd:decimal .
+:hasCurrency rdf:type rdf:Property ;
+    rdfs:label "has currency" ;
+    rdfs:comment "The type of currency of money" ;
+    rdfs:domain :Money ;
+    rdfs:range :Currency .
+:Currency rdf:type rdfs:Class ;
+    rdfs:label "Currency" ;
+    rdfs:comment "A system of money in common use, especially for people in a nation" .

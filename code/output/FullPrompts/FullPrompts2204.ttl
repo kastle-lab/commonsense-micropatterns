@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://example.org/> .
 # Class definitionex:Student a rdfs:Class .
-# Properties of Studentex:hasStudentID a rdf:Property ;
+# Properties
+ of Studentex:hasStudentID a rdf:Property ;
   rdfs:domain ex:Student ;
   rdfs:range rdfs:Literal .
 ex:studiesCourse a rdf:Property ;

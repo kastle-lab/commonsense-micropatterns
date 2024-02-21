@@ -2,15 +2,19 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-# Declare a class named "Back"ex:Back rdf:type owl:Class ;
+# Declare a class named "Back"
+ex:Back rdf:type owl:Class ;
   rdfs:comment "Represents the concept of 'Back' in the ontology" ;
   rdfs:label "Back" .
-# An individual of class "Back"ex:Individual1 rdf:type ex:Back ;
+# An individual of class "Back"
+ex:Individual1 rdf:type ex:Back ;
    rdfs:label "Sample individual for the class 'Back'" .
-# A property that relates things to the concept of "Back"ex:hasBack rdf:type owl:ObjectProperty ;
+# A property that relates things to the concept of "Back"
+ex:hasBack rdf:type owl:ObjectProperty ;
   rdfs:comment "Relates something to the concept of 'Back'" ;
   rdfs:domain ex:Something ;
   rdfs:range ex:Back .
-# An individual of class "Something" that has a "Back"ex:SomethingIndividual rdf:type ex:Something ;
+# An individual of class "Something" that has a "Back"
+ex:SomethingIndividual rdf:type ex:Something ;
   ex:hasBack ex:Individual1 ;
   rdfs:label "Sample individual of class 'Something' that has a back".

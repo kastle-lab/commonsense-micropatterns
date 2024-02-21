@@ -1,3 +1,4 @@
+@prefix : <http://www.example.com/president#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 :president a rdfs:Class ;
     rdfs:label "President" ;

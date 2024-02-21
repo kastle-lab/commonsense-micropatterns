@@ -5,7 +5,8 @@
 # Class definitionlineOnt:Line    rdf:type rdfs:Class ;
     rdfs:comment "A line in a 2-dimensional space"^^xsd:string ;
     rdfs:label "Line"^^xsd:string .
-# Properties definitionslineOnt:hasPoint1    rdf:type rdf:Property ;
+# Properties
+ definitionslineOnt:hasPoint1    rdf:type rdf:Property ;
     rdfs:comment "The first point that defines a line"^^xsd:string ;
     rdfs:label "hasPoint1"^^xsd:string ;
     rdfs:range lineOnt:Point ;

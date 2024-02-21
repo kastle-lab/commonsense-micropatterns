@@ -22,7 +22,8 @@ ex:Forehead rdf:type rdfs:Class ;
 ex:containsFeature rdf:type rdf:Property ;
     rdfs:domain ex:Face ;
     rdfs:range rdfs:Class .
-# Individualsex:Face1 rdf:type ex:Face ;
+# Individuals
+ex:Face1 rdf:type ex:Face ;
     ex:containsFeature ex:Eyes ;
     ex:containsFeature ex:Nose ;
     ex:containsFeature ex:Mouth ;

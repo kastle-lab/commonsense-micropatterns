@@ -1,3 +1,4 @@
+@prefix ex: <http://example.org/> .
 ex:John ex:hasEducation ex:Education .
 ex:Education rdf:type ex:AcademicEducation .
 ex:Education ex:earnedAt "Harvard University"^^ex:universityName .

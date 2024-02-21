@@ -8,7 +8,8 @@
     rdfs:label "Lot"@en ;
     rdfs:comment """Lot in the context of this ontology represents an individual parcel of land designated by an owner or a governing body like a municipality or government."""@en ;
     rdfs:subClassOf dbo:Place .
-#### Properties related to Lotdbo:lotNumber a owl:DatatypeProperty ;
+#### Properties
+ related to Lotdbo:lotNumber a owl:DatatypeProperty ;
     rdfs:label "lot number"@en ;
     rdfs:comment """The lot number is a numerical identifier for a lot."""@en ;
     rdfs:domain dbr:Lot ;

@@ -9,7 +9,8 @@ ex:hasJob a rdf:Property ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Job ;
     rdfs:label "has job" ;
-    rdfs:comment "Relates a person to a job that the person has."ex:JobTitle a rdfs:Class ;
+    rdfs:comment "Relates a person to a job that the person has."
+ex:JobTitle a rdfs:Class ;
     rdfs:subClassOf ex:Job ;
     rdfs:label "Job title" ;
     rdfs:comment "The official title or name of a job" .
@@ -17,15 +18,19 @@ ex:hasJobTitle a rdf:Property ;
     rdfs:domain ex:Job ;
     rdfs:range ex:JobTitle ;
     rdfs:label "has job title" ;
-    rdfs:comment "Relates a job to its official title or name."ex:Employer a rdfs:Class ;
+    rdfs:comment "Relates a job to its official title or name."
+ex:Employer a rdfs:Class ;
     rdfs:label "Employer" ;
-    rdfs:comment "An individual or organization that employs people."ex:employedBy a rdf:Property ;
+    rdfs:comment "An individual or organization that employs people."
+ex:employedBy a rdf:Property ;
     rdfs:domain ex:Job ;
     rdfs:range ex:Employer ;
     rdfs:label "employed by" ;
-    rdfs:comment "Relates a job to the employer who employs for this job."ex:Salary a rdfs:Class ;
+    rdfs:comment "Relates a job to the employer who employs for this job."
+ex:Salary a rdfs:Class ;
     rdfs:label "Salary" ;
-    rdfs:comment "A fixed regular payment earned for work."ex:hasSalary a rdf:Property ;
+    rdfs:comment "A fixed regular payment earned for work."
+ex:hasSalary a rdf:Property ;
     rdfs:domain ex:Job ;
     rdfs:range ex:Salary ;
     rdfs:label "has salary" ;

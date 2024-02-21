@@ -2,8 +2,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/> .
-# Define "Question" as a classex:Question rdf:type rdfs:Class .
-# Define properties for the Question classex:askedBy rdf:type rdf:Property ;
+# Define "Question" as a class
+ex:Question rdf:type rdfs:Class .
+# Define properties for the Question class
+ex:askedBy rdf:type rdf:Property ;
   rdfs:label "asked by" ;
   rdfs:domain ex:Question ;
   rdfs:range xsd:string .

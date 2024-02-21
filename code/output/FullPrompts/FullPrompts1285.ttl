@@ -3,7 +3,8 @@
 @prefix ex: <http://example.com/> .
 ex:Question a rdfs:Class ;
   rdfs:label "Question" ;
-  rdfs:comment "Class representing a question.It has properties such as question text and answer."ex:hasQuestionText a rdf:Property ;
+  rdfs:comment "Class representing a question.It has properties such as question text and answer."
+ex:hasQuestionText a rdf:Property ;
   rdfs:label "hasQuestionText" ;
   rdfs:comment "Property representing the text of the question. It is a datatype property as it links a question instance to a literal (text)." ;
   rdfs:domain ex:Question ;

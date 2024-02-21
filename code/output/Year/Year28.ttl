@@ -1,3 +1,4 @@
+@prefix ex: <http://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 ex:Year a rdfs:Class ;
     rdfs:label "Year"@en ;

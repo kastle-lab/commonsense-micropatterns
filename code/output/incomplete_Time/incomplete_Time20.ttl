@@ -1,6 +1,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix time: <http://www.example.org/time#> .
-# Classestime:TimeUnit a rdfs:Class .
+# Class
+time:TimeUnit a rdfs:Class .
 time:Second a rdfs:Class ;
   rdfs:subClassOf time:TimeUnit .
 time:Minute a rdfs:Class ;
@@ -15,7 +16,8 @@ time:Month a rdfs:Class ;
   rdfs:subClassOf time:TimeUnit .
 time:Year a rdfs:Class ;
   rdfs:subClassOf time:TimeUnit .
-# Propertiestime:hasTime a rdf:Property ;
+# Properties
+time:hasTime a rdf:Property ;
   rdfs:domain rdfs:Resource ;
   rdfs:range time:TimeUnit .
 time:inSeconds a rdf:Property ;

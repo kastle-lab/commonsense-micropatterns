@@ -1,7 +1,8 @@
 @prefix ex: <http://example.com#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#>.# Define "Part" as a classex:Part a rdfs:Class ;
+@prefix owl: <http://www.w3.org/2002/07/owl#>.# Define "Part" as a class
+ex:Part a rdfs:Class ;
 # Defining Properties related to Partex:partID a rdf:Property ;
 rdfs:range rdf:XMLLiteral ;
 rdfs:domain ex:Part .
@@ -14,6 +15,7 @@ rdfs:domain ex:Part .
 # This could be used to represent instances of Partsex:Part1 a ex:Part ;
 ex:partID "P001" ;
 ex:partName "Part One" ;
-ex:partDescription "This is the description for Part One."ex:Part2 a ex:Part ;
+ex:partDescription "This is the description for Part One."
+ex:Part2 a ex:Part ;
 ex:partID "P002" ;
 ex:partName "Part Two" ;

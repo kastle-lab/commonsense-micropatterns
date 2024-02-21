@@ -1,1 +1,1 @@
-Pattern:{  "@context": "http://schema.org/",  "@type": "Thing",  "name": "Issue"}
+  "@context": "http://schema.org/",  "@type": "Thing",  "name": "Issue"

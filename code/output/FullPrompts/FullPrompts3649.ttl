@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix party: <http://example.org/party#> .
-# Classesparty:Party rdf:type rdfs:Class ;
+# Class
+party:Party rdf:type rdfs:Class ;
     rdfs:label "Party"^^xsd:string ;
     rdfs:comment "An event where people come together to celebrate or socialize."^^xsd:string .
 party:BirthdayParty rdf:type rdfs:Class ;
@@ -13,7 +14,8 @@ party:AnniversaryParty rdf:type rdfs:Class ;
     rdfs:subClassOf party:Party ;
     rdfs:label "Anniversary party"^^xsd:string ;
     rdfs:comment "A party organized to celebrate the anniversary of a significant event."^^xsd:string .
-# Propertiesparty:hasOrganizer rdf:type rdf:Property ;
+# Properties
+party:hasOrganizer rdf:type rdf:Property ;
     rdfs:label "has organizer"^^xsd:string ;
     rdfs:comment "The person or group of persons who organized the party."^^xsd:string ;
     rdfs:domain party:Party ;

@@ -1,3 +1,4 @@
+@prefix : <http://example.org/> .
 :Law a rdfs:Class ;
     rdfs:label "Law" ;
     rdfs:comment "This class represents all the laws" .

@@ -1,3 +1,4 @@
+@prefix : <http://example.org/> .
 :Issue a rdfs:Class .
 :issue1 a :Issue ;
     rdfs:label "Issue 1" ;

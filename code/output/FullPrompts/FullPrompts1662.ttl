@@ -14,7 +14,8 @@
 # Time Period classhist:TimePeriod a rdfs:Class ;
     rdfs:label "Time Period" ;
     rdfs:comment "Historical time period or era" .
-# Propertieshist:hasEvent a rdf:Property ;
+# Properties
+hist:hasEvent a rdf:Property ;
     rdfs:domain hist:TimePeriod ;
     rdfs:range  hist:HistoricalEvent ;
     rdfs:label  "has event" ;

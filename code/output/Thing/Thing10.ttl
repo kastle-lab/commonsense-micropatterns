@@ -20,7 +20,8 @@ rdfs:label "has weight"@en ;
 rdfs:comment "A property indicating the weight of the Thing."@en ;
 rdfs:domain ex:Thing ;
 rdfs:range xsd:float .
-# Declaring subclassex:PhysicalThing rdf:type owl:Class ;
+# Declaring subclass
+ex:PhysicalThing rdf:type owl:Class ;
 rdfs:subClassOf ex:Thing ;
 rdfs:label "Physical Thing"@en ;
 rdfs:comment "A subclass of Thing that has physical existence."@en .

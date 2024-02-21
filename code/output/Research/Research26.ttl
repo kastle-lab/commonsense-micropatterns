@@ -1,3 +1,4 @@
+@prefix ex: <http://example.com/#> .
 ex:ResearchPaper a owl:Class .
 ex:title a owl:DatatypeProperty ;
       rdfs:domain ex:ResearchPaper ;

@@ -2,12 +2,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.com/> .
-# Define a class "Person"ex:Person a rdfs:Class .
-# Define a class "Health"ex:Health a rdfs:Class .
-# Define a property "hasHealthStatus"ex:hasHealthStatus a rdf:Property ;
+# Define a class "Person"
+ex:Person a rdfs:Class .
+# Define a class "Health"
+ex:Health a rdfs:Class .
+# Define a property "hasHealthStatus"
+ex:hasHealthStatus a rdf:Property ;
     rdfs:domain ex:Person ;
     rdfs:range ex:Health .
-# Define a health status instance "Good"ex:GoodHealth a ex:Health ;
+# Define a health status instance "Good"
+ex:GoodHealth a ex:Health ;
     rdfs:label "Good" .
 # Define an instance of class "person" and assign a health statusex:John a ex:Person ;
     ex:hasHealthStatus ex:GoodHealth .

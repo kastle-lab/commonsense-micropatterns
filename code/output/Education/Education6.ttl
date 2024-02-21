@@ -1,6 +1,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix edu: <http://example.org/edu/> .
-# Classesedu:Education a rdfs:Class .
+# Class
+edu:Education a rdfs:Class .
 edu:School a rdfs:Class ;
     rdfs:subClassOf edu:Education .
 edu:University a rdfs:Class ;
@@ -8,7 +9,8 @@ edu:University a rdfs:Class ;
 edu:Subject a rdfs:Class .
 edu:Teacher a rdfs:Class .
 edu:Student a rdfs:Class .
-# Propertiesedu:teaches a rdf:Property ;
+# Properties
+edu:teaches a rdf:Property ;
     rdfs:domain edu:Teacher ;
     rdfs:range edu:Subject .
 edu:studies a rdf:Property ;

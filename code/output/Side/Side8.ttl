@@ -15,6 +15,7 @@ side:front rdf:type side:Side ;
            rdfs:label "Front"@en .
 side:back rdf:type side:Side ;
           rdfs:label "Back"@en .
-# Propertiesside:hasSide rdf:type rdf:Property ;
+# Properties
+side:hasSide rdf:type rdf:Property ;
              rdfs:range side:Side ;
              rdfs:label "has side"@en .

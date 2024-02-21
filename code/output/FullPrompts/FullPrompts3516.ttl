@@ -3,7 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-# Classesex:Office rdf:type rdfs:Class ;
+# Class
+ex:Office rdf:type rdfs:Class ;
   rdfs:comment "A place where people work" .
 ex:Employee rdf:type rdfs:Class ;
   rdfs:comment "An individual who works in an office." .
@@ -14,7 +15,8 @@ ex:Department rdf:type rdfs:Class ;
   rdfs:comment "A division within the office that specializes in certain duties" .
 ex:Equipment rdf:type rdfs:Class ;
   rdfs:comment "Items that are used in the office for work." .
-# Propertiesex:hasEmployee rdf:type rdf:Property ;
+# Properties
+ex:hasEmployee rdf:type rdf:Property ;
   rdfs:comment "Property linking an office to its employees." ;
   rdfs:domain ex:Office ;
   rdfs:range ex:Employee .

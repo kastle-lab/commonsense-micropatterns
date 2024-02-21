@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sv: <http://www.example.com/service#> .
-# Classessv:Service a owl:Class .
+# Class
+sv:Service a owl:Class .
 sv:OnlineService a owl:Class ;
  rdfs:subClassOf sv:Service .
 sv:OfflineService a owl:Class ;
@@ -11,7 +12,8 @@ sv:CustomerService a owl:Class ;
  rdfs:subClassOf sv:Service .
 sv:Provider a owl:Class .
 sv:Customer a owl:Class .
-# Propertiessv:hasCustomer a owl:ObjectProperty ;
+# Properties
+sv:hasCustomer a owl:ObjectProperty ;
     rdfs:domain sv:Service ;
     rdfs:range sv:Customer .
 sv:providedBy a owl:ObjectProperty ;
@@ -20,7 +22,8 @@ sv:providedBy a owl:ObjectProperty ;
 sv:hasLocation a owl:DatatypeProperty ;
     rdfs:domain sv:OfflineService ;
     rdfs:range xsd:string .
-# Individualssv:Netflix a sv:OnlineService ;
+# Individuals
+sv:Netflix a sv:OnlineService ;
     sv:providedBy sv:Netflix_Inc .
 sv:Netflix_Inc a sv:Provider .
 sv:PostalService a sv:OfflineService ;

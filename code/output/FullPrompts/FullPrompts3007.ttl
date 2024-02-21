@@ -3,8 +3,10 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.com/> .
-# Defining the class "Member"ex:Member a rdfs:Class ;
-# Defining properties for "Member"ex:hasName a rdf:Property ;
+# Defining the class "Member"
+ex:Member a rdfs:Class ;
+# Defining properties for "Member"
+ex:hasName a rdf:Property ;
   rdfs:domain ex:Member ;
   rdfs:range xsd:string .
 ex:hasAge a rdf:Property ;
@@ -16,7 +18,8 @@ ex:hasEmail a rdf:Property ;
 ex:joinsClub a rdf:Property ;
   rdfs:domain ex:Member ;
   rdfs:range ex:Club .
-# Defining another class "Club"ex:Club a rdfs:Class ;
+# Defining another class "Club"
+ex:Club a rdfs:Class ;
 ex:hasClubName a rdf:Property ;
   rdfs:domain ex:Club ;
   rdfs:range xsd:string .

@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix health: <http://example.com/health#> .
-# Classeshealth:Patient rdf:type owl:Class .
+# Class
+health:Patient rdf:type owl:Class .
 health:Disease rdf:type owl:Class .
 health:Doctor rdf:type owl:Class .
 health:MedicalCondition rdf:type owl:Class .
@@ -15,7 +16,8 @@ health:Medication rdf:type owl:Class .
   rdfs:subClassOf health:Disease .
 health:AcuteDisease rdf:type owl:Class ;
   rdfs:subClassOf health:Disease .
-# Propertieshealth:hasCondition rdf:type owl:ObjectProperty ;
+# Properties
+health:hasCondition rdf:type owl:ObjectProperty ;
   rdfs:domain health:Patient ;
   rdfs:range health:MedicalCondition .
 health:hasSymptom rdf:type owl:ObjectProperty ;
@@ -30,7 +32,8 @@ health:providesTreatment rdf:type owl:ObjectProperty ;
 health:administersMedication rdf:type owl:ObjectProperty ;
   rdfs:domain health:Doctor ;
   rdfs:range health:Medication .
-# Individualshealth:John rdf:type health:Patient .
+# Individuals
+health:John rdf:type health:Patient .
 health:Pneumonia rdf:type health:Disease .
 health:DrSmith rdf:type health:Doctor .
 health:Coughing rdf:type health:Symptom .

@@ -1,5 +1,6 @@
 @prefix : <http://www.example.org/hand#> .
-# Classes:Hand a           owl:Class .
+# Class
+:Hand a           owl:Class .
 :Finger a         owl:Class .
 :Thumb a          owl:Class .
 :IndexFinger a    owl:Class .

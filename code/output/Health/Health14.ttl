@@ -2,7 +2,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-# Classes:Person a rdfs:Class ;
+# Class
+:Person a rdfs:Class ;
   rdfs:comment "A human being"@en .
 :HealthCondition a rdfs:Class ;
   rdfs:comment "Any health condition a person can have"@en .
@@ -15,7 +16,8 @@
 :MentalHealth a rdfs:Class ;
   rdfs:subClassOf :HealthCondition ;
   rdfs:comment "The state of mental well-being or lack thereof"@en .
-# Properties:hasHealthCondition a rdf:Property ;
+# Properties
+:hasHealthCondition a rdf:Property ;
   rdfs:domain :Person ;
   rdfs:range :HealthCondition ;
   rdfs:comment "Indicates a health condition a person has"@en .

@@ -3,7 +3,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix comm: <http://example.org/community#> .
-# Classescomm:Community rdf:type owl:Class ;
+# Class
+comm:Community rdf:type owl:Class ;
     rdfs:comment "A group of people living in the same place or having a particular characteristic in common"@en ;
     rdfs:subClassOf owl:Thing .
     comm:Person rdf:type owl:Class ;

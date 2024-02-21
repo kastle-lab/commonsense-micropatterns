@@ -2,7 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix game: <http://example.org/game/> .
-# Classesgame:Game rdf:type rdfs:Class ;
+# Class
+game:Game rdf:type rdfs:Class ;
     rdfs:label "Game" ;
     rdfs:comment "A structured form of play, usually undertaken for entertainment or fun."@en .
 game:BoardGame rdf:type rdfs:Class ;
@@ -13,7 +14,8 @@ game:VideoGame rdf:type rdfs:Class ;
     rdfs:label "Video Game" ;
     rdfs:comment "An electronic game that involves interaction with a user interface to generate visual feedback on a video device such as a TV screen or computer monitor."@en ;
     rdfs:subClassOf game:Game .
-# Propertiesgame:hasPlayer rdf:type rdf:Property ;
+# Properties
+game:hasPlayer rdf:type rdf:Property ;
     rdfs:label "has player" ;
     rdfs:comment "The player of the game."@en ;
     rdfs:domain game:Game ;

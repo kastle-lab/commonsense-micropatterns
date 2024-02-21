@@ -3,7 +3,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix war: <http://example.org/war#> .
 war:War rdf:type rdfs:Class .
-# Properties of a Warwar:hasBelligerent rdf:type rdf:Property ;
+# Properties
+ of a Warwar:hasBelligerent rdf:type rdf:Property ;
   rdfs:domain war:War ;
   rdfs:range war:Belligerent .
 war:hasStartDate rdf:type rdf:Property ;

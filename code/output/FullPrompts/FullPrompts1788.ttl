@@ -3,20 +3,23 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix power: <http://www.example.org/power#> .
-# Classespower:Power a owl:Class .
+# Class
+power:Power a owl:Class .
 power:MechanicalPower a owl:Class ;
   rdfs:subClassOf power:Power .
 power:ElectricalPower a owl:Class ;
   rdfs:subClassOf power:Power .
 power:SolarPower a owl:Class ;
   rdfs:subClassOf power:Power .
-# Propertiespower:isGeneratedBy a owl:ObjectProperty ;
+# Properties
+power:isGeneratedBy a owl:ObjectProperty ;
   rdfs:domain power:Power ;
   rdfs:range power:PowerSource .
 power:isMeasuredIn a owl:DatatypeProperty ;
   rdfs:domain power:Power ;
   rdfs:range xsd:string .
-# Individualspower:CoalPlant a power:PowerSource ;
+# Individuals
+power:CoalPlant a power:PowerSource ;
   power:isGeneratedBy power:ElectricalPower .
 power:HydroPlant a power:PowerSource ;
   power:isGeneratedBy power:MechanicalPower .

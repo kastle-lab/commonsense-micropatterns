@@ -3,12 +3,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/> .
-## Classes# General class for all living things.ex:LivingThing rdf:type rdfs:Class .
+## Class
+# General class for all living things.ex:LivingThing rdf:type rdfs:Class .
 # Specific types of living things.ex:Animal rdf:type rdfs:Class ;
            rdfs:subClassOf ex:LivingThing .
 ex:Plant rdf:type rdfs:Class ;
           rdfs:subClassOf ex:LivingThing .
-## Properties# Represents the process of life.ex:hasLifeProcess rdf:type owl:ObjectProperty ;
+## Properties
+# Represents the process of life.ex:hasLifeProcess rdf:type owl:ObjectProperty ;
                   rdfs:domain ex:LivingThing ;
                   rdfs:range ex:LifeProcess .
 # Specific life processes.ex:reproduction rdf:type owl:Class ;

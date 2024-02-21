@@ -4,7 +4,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ex: <http://example.com/> .
-# Define 'History' as a classex:History a owl:Class ;
+# Define 'History' as a class
+ex:History a owl:Class ;
 # Indicate 'History' as a subclass of 'Discipline'    rdfs:subClassOf ex:Discipline ;
     # Define the concept 'History'    skos:definition "The study of past events, particularly human affairs"@en .
 # Provide a label for the 'History' class    rdfs:label "History"@en .

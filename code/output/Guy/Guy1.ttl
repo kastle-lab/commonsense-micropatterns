@@ -2,13 +2,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix guy: <http://example.com/guy#> .
-# Classesguy:Person rdf:type rdfs:Class .
+# Class
+guy:Person rdf:type rdfs:Class .
 guy:Child rdf:type rdfs:Class ;
     rdfs:subClassOf guy:Person .
 guy:Adult rdf:type rdfs:Class ;
     rdfs:subClassOf guy:Person .
 guy:Job rdf:type rdfs:Class .
-# Propertiesguy:hasName rdf:type rdf:Property ;
+# Properties
+guy:hasName rdf:type rdf:Property ;
     rdfs:domain guy:Person ;
     rdfs:range xsd:string .
 guy:hasAge rdf:type rdf:Property ;

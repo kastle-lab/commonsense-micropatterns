@@ -4,7 +4,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.com/> .
 ex:Person rdf:type owl:Class .
-# Properties definitionex:firstName rdf:type owl:DatatypeProperty ;
+# Properties
+ definitionex:firstName rdf:type owl:DatatypeProperty ;
     rdfs:domain ex:Person ;
     rdfs:range xsd:string .
 ex:lastName rdf:type owl:DatatypeProperty ;

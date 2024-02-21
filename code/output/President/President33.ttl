@@ -1,0 +1,10 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:President a rdf:Class ;
+  rdfs:label "President"@en ;
+    rdfs:comment "A president typically represents the head of the Executive branch in a government."@en .
+ex:BarackObama a ex:President ;
+  rdfs:label "Barack Obama"@en .
+ex:DonaldTrump a ex:President ;
+  rdfs:label "Donald Trump"@en .

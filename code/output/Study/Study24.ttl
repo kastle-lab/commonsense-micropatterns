@@ -3,10 +3,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.com/> .
-# Defining the class "Study"ex:Study rdf:type rdfs:Class ;
+# Defining the class "Study"
+ex:Study rdf:type rdfs:Class ;
           rdfs:label "Study" ;
           rdfs:comment "A class for representing a Study" .
-# Defining the class "Subject"ex:Subject rdf:type rdfs:Class ;
+# Defining the class "Subject"
+ex:Subject rdf:type rdfs:Class ;
             rdfs:label "Subject" ;
             rdfs:comment "A class for representing a Subject" .
 # Defining the property for linking studies to subjectsex:studiesSubject rdf:type rdf:Property ;
