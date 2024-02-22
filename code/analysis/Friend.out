@@ -1,12 +1,8 @@
-name 	 208
-hasFriend 	 171
-knows 	 107
-friendOf 	 98
-friend 	 58
 knowsSince 	 32
+hasFriend 	 32
 sharedInterests 	 32
+knows 	 30
+name 	 30
+friend 	 29
+friendOf 	 26
 isFriendOf 	 15
-equivalentClass 	 6
-onProperty 	 6
-hasValue 	 3
-someValuesFrom 	 3

@@ -1,10 +1,7 @@
-hasCoordinate 	 64
-hasPoint 	 34
-hasStartPoint 	 16
-cardinality 	 16
-onProperty 	 16
-hasEndPoint 	 16
-unionOf 	 16
+hasPoint 	 17
 hasLength 	 16
+hasCoordinate 	 16
+hasStartPoint 	 16
+hasEndPoint 	 16
 hasStraightLineInBetween 	 10
 x 	 4

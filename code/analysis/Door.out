@@ -1,9 +1,9 @@
-hasColor 	 54
-hasMaterial 	 54
-isOpen 	 46
+hasMaterial 	 22
+hasColor 	 22
+isOpen 	 22
 description 	 11
 title 	 11
 isEntranceTo 	 6
-hasLock 	 4
 hasHandle 	 4
+hasLock 	 4
 isLocked 	 4

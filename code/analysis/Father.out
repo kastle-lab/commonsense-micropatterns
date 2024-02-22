@@ -1,6 +1,5 @@
-name 	 116
-inverseOf 	 90
-hasChild 	 75
-childOf 	 68
-fatherOf 	 68
-hasFather 	 59
+childOf 	 29
+fatherOf 	 29
+name 	 29
+hasFather 	 27
+hasChild 	 27

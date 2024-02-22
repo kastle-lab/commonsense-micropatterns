@@ -1,9 +1,6 @@
-hasChild 	 127
-hasParent 	 79
-hasAge 	 40
-hasName 	 40
-inverseOf 	 34
+hasParent 	 31
+hasChild 	 29
 hasFather 	 21
 hasMother 	 21
-onProperty 	 18
-someValuesFrom 	 18
+hasAge 	 20
+hasName 	 20

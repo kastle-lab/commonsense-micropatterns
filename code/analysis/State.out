@@ -1,10 +1,9 @@
-population 	 61
-capital 	 46
-hasName 	 34
-name 	 30
-belongsTo 	 20
+capital 	 23
+population 	 23
 partOf 	 15
+name 	 15
+hasName 	 10
+belongsTo 	 10
 hasPopulation 	 9
-State 	 9
 hasCapital 	 9
-inverseOf 	 2
+State 	 9

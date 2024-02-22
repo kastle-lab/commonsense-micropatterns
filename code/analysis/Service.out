@@ -1,11 +1,11 @@
-providedBy 	 59
-hasCustomer 	 46
+providedBy 	 23
+hasCustomer 	 23
 hasLocation 	 23
-name 	 18
 provides 	 17
+description 	 9
+name 	 9
 category 	 9
 provider 	 9
-description 	 9
-providerName 	 2
 providesService 	 2
+providerName 	 2
 location 	 2

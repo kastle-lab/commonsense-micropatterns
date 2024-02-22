@@ -1,8 +1,4 @@
-subClassOf 	 135
 salary 	 20
-value 	 20
-equivalentClass 	 18
-onProperty 	 18
-allValuesFrom 	 18
+value 	 16
 hasNumber 	 15
 hasValue 	 11

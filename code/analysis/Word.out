@@ -1,8 +1,6 @@
-hasSpelling 	 93
-hasPartOfSpeech 	 74
-disjointWith 	 42
+hasPartOfSpeech 	 28
+hasSpelling 	 28
 hasLanguage 	 28
-hasMeaning 	 19
 isPartOfLanguage 	 19
+hasMeaning 	 19
 hasDefinition 	 10
-unionOf 	 8

@@ -1,9 +1,7 @@
-hasRoom 	 109
-hasAddress 	 46
+hasRoom 	 31
 hasNumberOfRooms 	 31
-disjointWith 	 28
-hasOwner 	 26
 hasCity 	 20
+hasAddress 	 20
 isHomeOf 	 20
-unionOf 	 12
+hasOwner 	 16
 provide 	 9

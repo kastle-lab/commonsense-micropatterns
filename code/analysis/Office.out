@@ -1,12 +1,8 @@
-onProperty 	 64
-someValuesFrom 	 64
-name 	 60
-disjointWith 	 21
-hasEmployee 	 18
 hasDesk 	 15
+name 	 15
+hasEmployee 	 15
 hasChair 	 15
-unionOf 	 10
-hasName 	 9
+hasName 	 3
+hasAddress 	 3
 hasDepartment 	 3
 hasPhoneNumber 	 3
-hasAddress 	 3

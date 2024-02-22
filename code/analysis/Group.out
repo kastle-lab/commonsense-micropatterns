@@ -1,12 +1,7 @@
-onProperty 	 210
-minCardinality 	 150
-hasMember 	 110
-name 	 60
-memberOf 	 54
-member 	 40
-someValuesFrom 	 30
-cardinality 	 30
+member 	 20
+name 	 20
+hasMember 	 19
+memberOf 	 15
 groupSize 	 9
-memberName 	 8
-maxCardinality 	 5
 groupName 	 4
+memberName 	 4

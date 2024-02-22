@@ -99,38 +99,65 @@ def count_properties():
 
         Uses rdflib Graph to generate s,p,o per TTL file
     '''
+    #  Stats File Setup
+    statsFile = open(os.path.join(analysis_path, "all-analysis.out"), "w")
+    ## Stats File Formatting
+    statsFile.write(f"noun: \t countOfFiles\n")
+    statsDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
+
     for filename in os.listdir(input_path): # For each Noun
-    # for i in range(1): 
-        # filename= "Air.tsv"
-        name, ext = filename.split(".")
-        noun_dir = os.path.join(output_path,name)
+    # for i in range(1): # For testing 
+    #     filename= "Air.tsv"
+        noun, ext = filename.split(".")
+        noun_dir = os.path.join(output_path,noun)
         
-        fName = f"{name}.out"
+        fName = f"{noun}.out"
         analysisFile = open(os.path.join(analysis_path, fName), "w")
         graph = Graph()
-        propertyDict = dict()
+        propertyDict = dict() # All occurences from all nouns
+
         for filename in os.listdir(noun_dir): # For each ttl from single Noun
+            nounPropDict = dict() # Individual file occurrences per noun
             with open(os.path.join(noun_dir, filename), "r") as f:
                 try:
                     graph.parse(f)
                     for _,p,_ in graph:
                         if("rdf" in p): #Skip RDF properties
                             continue 
+                        if("owl" in p): #Skip OWL properties
+                            continue 
                         p = p.split("/")[-1]
-                        if("#" in p):
-                            p = p.split("#")[-1].strip()
-                        if(str(p) in propertyDict):
-                            propertyDict[str(p)] += 1
+                        # if("#" in p): # can include RDF properties, if necessary
+                        #     p = p.split("#")[-1].strip()
+
+                        if(f"{noun}# in p"):
+                            p = p.split("#")[-1]
+                        if(str(p) in nounPropDict): # Skip over found property
+                            continue
                         else:
-                            propertyDict[str(p)] = 1
+                            nounPropDict[str(p)] = 1
                 except Exception:
-                    pass
+                    continue
                     # print("Error: " + filename)
 
+                for k,v in nounPropDict.items(): # Add each noun-file to overall property tracker
+                    if(k in propertyDict): # Increment past observed properties
+                        propertyDict[k] += v
+                    else: # Set {k,v} for identifying properties in noun
+                        propertyDict[k] = 1    
+            statsDict[noun] += 1
+
+
+        #  Sort in descending value order for output
         propertyDict = {k: v for k, v in sorted(propertyDict.items(), key=lambda item: item[1], reverse=True)}
         for key, value in propertyDict.items():
             analysisFile.write(f"{key} \t {value}\n")
-        
+
+    #  Sort in ascending key order for output
+    statsDict = dict(sorted(statsDict.items()))
+    for key,value in statsDict.items():
+        statsFile.write(f"{key}: \t {value}\n")
+
 
 if __name__ == "__main__":
     parse_results()

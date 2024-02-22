@@ -1,7 +1,4 @@
-name 	 63
-hasFirstName 	 24
+name 	 22
 hasName 	 21
 hasLastName 	 20
-minCardinality 	 14
-onProperty 	 14
-unionOf 	 9
+hasFirstName 	 20

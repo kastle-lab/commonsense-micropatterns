@@ -1,9 +1,7 @@
-hasReason 	 36
-someValuesFrom 	 33
-onProperty 	 33
-relatedConcept 	 18
+hasReason 	 24
 for 	 10
 givesReason 	 10
-isPartOf 	 9
 hasAttribute 	 9
+relatedConcept 	 9
+isPartOf 	 9
 providesReasonFor 	 7

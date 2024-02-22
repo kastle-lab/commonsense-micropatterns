@@ -1,9 +1,8 @@
-hasAge 	 77
-hasGender 	 77
-hasName 	 70
-name 	 23
-mbox 	 23
+hasName 	 27
+hasGender 	 27
+hasAge 	 27
+mbox 	 21
 age 	 21
-hasLastName 	 7
+name 	 21
 hasFirstName 	 7
-oneOf 	 1
+hasLastName 	 7

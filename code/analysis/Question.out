@@ -1,7 +1,5 @@
 hasContent 	 20
-hasQuestion 	 17
 hasAnswer 	 17
-hasTitle 	 8
+hasQuestion 	 17
 hasBody 	 8
-inverseOf 	 3
-oneOf 	 3
+hasTitle 	 8

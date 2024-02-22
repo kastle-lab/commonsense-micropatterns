@@ -1,11 +1,10 @@
-hasSide 	 219
-hasLength 	 120
-Side 	 66
-opposite 	 54
-rightSide 	 48
+Side 	 33
+hasSide 	 32
 length 	 32
-inverseOf 	 28
-oppositeTo 	 21
+rightSide 	 31
+hasLength 	 30
 symmetricTo 	 21
+oppositeTo 	 21
 leftSide 	 17
+opposite 	 9
 Polygon 	 7

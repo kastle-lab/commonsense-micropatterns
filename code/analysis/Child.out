@@ -1,10 +1,7 @@
-givenName 	 81
-familyName 	 81
-parent 	 54
-someValuesFrom 	 30
-onProperty 	 30
-age 	 27
+givenName 	 27
+familyName 	 27
 birthday 	 27
+parent 	 27
+age 	 27
 hasChild 	 18
-inverseOf 	 8
 hasAge 	 5

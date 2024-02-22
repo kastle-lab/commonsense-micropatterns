@@ -1,8 +1,7 @@
-amount 	 80
-source 	 80
-unit 	 80
-hasPower 	 56
-isGeneratedBy 	 54
+hasPower 	 27
 hasPowerOver 	 20
+isGeneratedBy 	 18
+amount 	 16
+source 	 16
+unit 	 16
 hasSource 	 11
-unionOf 	 3

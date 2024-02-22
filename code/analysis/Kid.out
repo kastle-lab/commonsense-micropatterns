@@ -1,13 +1,9 @@
-hasName 	 38
 hasAge 	 26
-hasGender 	 26
+hasName 	 26
 attendsSchool 	 26
+hasGender 	 26
 hasParent 	 23
+hasToy 	 23
 hasHobby 	 23
 studiesAt 	 23
-hasToy 	 23
 name 	 20
-domain 	 20
-range 	 20
-disjointWith 	 8
-sameAs 	 4
