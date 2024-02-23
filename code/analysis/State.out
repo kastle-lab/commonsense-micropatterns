@@ -1,9 +1,9 @@
 capital 	 23
 population 	 23
-partOf 	 15
 name 	 15
-hasName 	 10
+partOf 	 15
 belongsTo 	 10
-hasPopulation 	 9
-hasCapital 	 9
+hasName 	 10
 State 	 9
+hasCapital 	 9
+hasPopulation 	 9

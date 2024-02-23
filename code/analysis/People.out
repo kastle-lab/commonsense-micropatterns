@@ -1,14 +1,14 @@
-name 	 18
 mbox 	 18
 age 	 18
+name 	 18
 hasName 	 16
 lastName 	 13
+gender 	 13
 firstName 	 13
 birthdate 	 13
-gender 	 13
+hasFirstName 	 12
 hasLastName 	 12
 hasAge 	 12
-hasFirstName 	 12
 hasGender 	 12
 hasOccupation 	 8
 provides 	 2

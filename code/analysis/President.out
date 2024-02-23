@@ -1,12 +1,12 @@
-hasLastName 	 29
 termStart 	 29
 hasFirstName 	 29
 termEnd 	 29
+hasLastName 	 29
 name 	 28
-hasTerm 	 24
 hasName 	 24
+hasTerm 	 24
 hasCountry 	 24
 provides 	 14
-servedUntil 	 8
-servedFrom 	 8
 hasNationality 	 8
+servedFrom 	 8
+servedUntil 	 8

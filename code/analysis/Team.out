@@ -1,10 +1,10 @@
-name 	 34
 accountName 	 34
 member 	 34
+name 	 34
 holdsAccount 	 34
 hasName 	 31
 hasMember 	 31
 Person1.ex:Person1 	 25
 hasRole 	 24
-hasTeamLeader 	 11
 hasTeamName 	 11
+hasTeamLeader 	 11

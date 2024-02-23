@@ -1,12 +1,12 @@
-hasEducation 	 20
 degree 	 20
-year 	 20
 field 	 20
 school 	 20
-learn 	 17
+hasEducation 	 20
+year 	 20
 teach 	 17
+learn 	 17
 provides 	 15
 name 	 4
-alumniOf 	 4
 hasCourse 	 4
+alumniOf 	 4
 hasEnrolled 	 1

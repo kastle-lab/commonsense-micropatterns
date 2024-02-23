@@ -100,11 +100,12 @@ def count_properties():
         Uses rdflib Graph to generate s,p,o per TTL file
     '''
     #  Stats File Setup
-    statsFile = open(os.path.join(analysis_path, "all-analysis.out"), "w")
+    statsFile = open(os.path.join("./code/", "noun-valid-ttl-parsing-analysis.out"), "w")
     ## Stats File Formatting
-    statsFile.write(f"noun: \t countOfFiles\n")
-    statsDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
-
+    statsFile.write(f"noun: \t countOfValidFiles \t countOfTotalFiles \t Ratio Parsed (%) \n")
+    statsValidDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
+    statsTotalDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
+    
     for filename in os.listdir(input_path): # For each Noun
     # for i in range(1): # For testing 
     #     filename= "Air.tsv"
@@ -117,6 +118,8 @@ def count_properties():
         propertyDict = dict() # All occurences from all nouns
 
         for filename in os.listdir(noun_dir): # For each ttl from single Noun
+            statsTotalDict[noun] += 1 # Total available files
+
             nounPropDict = dict() # Individual file occurrences per noun
             with open(os.path.join(noun_dir, filename), "r") as f:
                 try:
@@ -132,6 +135,8 @@ def count_properties():
 
                         if(f"{noun}# in p"):
                             p = p.split("#")[-1]
+
+                        # Skip or Increment Count of Found Properties
                         if(str(p) in nounPropDict): # Skip over found property
                             continue
                         else:
@@ -145,7 +150,7 @@ def count_properties():
                         propertyDict[k] += v
                     else: # Set {k,v} for identifying properties in noun
                         propertyDict[k] = 1    
-            statsDict[noun] += 1
+            statsValidDict[noun] += 1
 
 
         #  Sort in descending value order for output
@@ -154,9 +159,10 @@ def count_properties():
             analysisFile.write(f"{key} \t {value}\n")
 
     #  Sort in ascending key order for output
-    statsDict = dict(sorted(statsDict.items()))
-    for key,value in statsDict.items():
-        statsFile.write(f"{key}: \t {value}\n")
+    statsValidDict = dict(sorted(statsValidDict.items()))
+    for key,value in statsValidDict.items():
+        ratioUsed = round(float(value/statsTotalDict[key]),2) * 100 # represent as percentage
+        statsFile.write(f"{key}: \t {value}  \t {statsTotalDict[key]} \t {ratioUsed}\n")
 
 
 if __name__ == "__main__":

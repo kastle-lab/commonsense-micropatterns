@@ -1,10 +1,10 @@
 hasMother 	 33
 isMotherOf 	 25
 Mother 	 23
-motherOf 	 6
 name 	 6
-sonOf 	 6
 daughterOf 	 6
+motherOf 	 6
+sonOf 	 6
 childOf 	 4
 isGender 	 3
 hasChild 	 2

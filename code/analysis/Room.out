@@ -1,7 +1,7 @@
-belongsToFloor 	 24
 hasRoomNumber 	 24
-hasRoom 	 14
+belongsToFloor 	 24
 hasCapacity 	 14
+hasRoom 	 14
 hasName 	 2
-capacity 	 1
 type 	 1
+capacity 	 1

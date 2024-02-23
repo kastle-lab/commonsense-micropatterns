@@ -1,11 +1,11 @@
 description 	 24
-countryCode 	 20
 capital 	 20
-currency 	 20
 population 	 20
+countryCode 	 20
+currency 	 20
 countryName 	 20
 hasCapital 	 16
 title 	 9
 hasPopulation 	 1
-hasCurrency 	 1
 hasMotto 	 1
+hasCurrency 	 1
