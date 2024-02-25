@@ -1,0 +1,187 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/furniture#Color> a rdfs:Class .
+
+<http://example.com/furniture#Couch> a rdfs:Class .
+
+<http://example.com/furniture#Material> a rdfs:Class .
+
+<http://example.com/furniture#Size> a rdfs:Class .
+
+<http://example.com/furniture#Upholstery> a rdfs:Class .
+
+<http://example.org/Color> a rdfs:Class .
+
+<http://example.org/Couch> a rdfs:Class .
+
+<http://example.org/Manufacturer> a rdfs:Class .
+
+<http://example.org/Material> a rdfs:Class .
+
+<http://example.org/Style> a rdfs:Class .
+
+<http://example.org/couch#> a rdfs:Class .
+
+<http://example.org/couch#Couch> a rdfs:Class .
+
+<http://example.org/couch#material> a rdfs:Class ;
+    rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#type> a rdfs:Class .
+
+<http://example.org/furniture#Couch> a rdfs:Class .
+
+<http://example.org/furniture#Dimension> a rdfs:Class .
+
+<http://example.org/furniture#Material> a rdfs:Class .
+
+<http://example.org/sofa#Color> a rdfs:Class .
+
+<http://example.org/sofa#Couch> a rdfs:Class .
+
+<http://example.org/sofa#Dimension> a rdfs:Class .
+
+<http://example.org/sofa#Material> a rdfs:Class .
+
+<http://example.org/sofa#Upholstery> a rdfs:Class .
+
+<http://www.example.com/furniture#Couch> a rdfs:Class .
+
+<http://www.example.com/furniture#Material> a rdfs:Class .
+
+<http://www.example.org/Couch> a rdfs:Class .
+
+<http://www.example.org/Dimensions> a rdfs:Class .
+
+<http://www.example.org/furniture#Couch> a rdfs:Class .
+
+<http://example.com/furniture#hasColor> rdfs:range <http://example.com/furniture#Color>,
+        <http://example.com/furniture#Couch> .
+
+<http://example.com/furniture#hasMaterial> rdfs:range <http://example.com/furniture#Couch>,
+        <http://example.com/furniture#Material> .
+
+<http://example.com/furniture#hasPrice> rdfs:range <http://example.com/furniture#Couch> .
+
+<http://example.com/furniture#hasSize> rdfs:range <http://example.com/furniture#Couch>,
+        <http://example.com/furniture#Size> .
+
+<http://example.com/furniture#hasStyle> rdfs:range <http://example.com/furniture#Couch> .
+
+<http://example.com/furniture#hasUpholstery> rdfs:range <http://example.com/furniture#Couch>,
+        <http://example.com/furniture#Upholstery> .
+
+<http://example.org/couch#brand> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#color> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#colour> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#hasBrand> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#hasColor> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#hasCushions> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#hasDimensions> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#hasMaterial> rdfs:range <http://example.org/couch#>,
+        <http://example.org/couch#material> .
+
+<http://example.org/couch#hasPrice> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#hasSize> rdfs:range <http://example.org/couch#> .
+
+<http://example.org/couch#hasType> rdfs:range <http://example.org/couch#>,
+        <http://example.org/couch#type> .
+
+<http://example.org/couch#hasUpholsteryMaterial> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#manufacturer> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#model> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#size> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/couch#style> rdfs:range <http://example.org/couch#Couch> .
+
+<http://example.org/furniture#hasColor> rdfs:range <http://example.org/furniture#Couch> .
+
+<http://example.org/furniture#hasDimension> rdfs:range <http://example.org/furniture#Couch>,
+        <http://example.org/furniture#Dimension> .
+
+<http://example.org/furniture#hasMaterial> rdfs:range <http://example.org/furniture#Couch>,
+        <http://example.org/furniture#Material> .
+
+<http://example.org/furniture#isInLivingRoom> rdfs:range <http://example.org/furniture#Couch> .
+
+<http://example.org/hasColor> rdfs:range <http://example.org/Color>,
+        <http://example.org/Couch> .
+
+<http://example.org/hasManufacturer> rdfs:range <http://example.org/Couch>,
+        <http://example.org/Manufacturer> .
+
+<http://example.org/hasMaterial> rdfs:range <http://example.org/Couch>,
+        <http://example.org/Material> .
+
+<http://example.org/hasPrice> rdfs:range <http://example.org/Couch> .
+
+<http://example.org/hasStyle> rdfs:range <http://example.org/Couch>,
+        <http://example.org/Style> .
+
+<http://example.org/sofa#hasColor> rdfs:range <http://example.org/sofa#Color>,
+        <http://example.org/sofa#Couch> .
+
+<http://example.org/sofa#hasDimension> rdfs:range <http://example.org/sofa#Couch>,
+        <http://example.org/sofa#Dimension> .
+
+<http://example.org/sofa#hasMaterial> rdfs:range <http://example.org/sofa#Couch>,
+        <http://example.org/sofa#Material> .
+
+<http://example.org/sofa#hasUpholstery> rdfs:range <http://example.org/sofa#Couch>,
+        <http://example.org/sofa#Upholstery> .
+
+<http://example.org/sofa#height> rdfs:range <http://example.org/sofa#Dimension> .
+
+<http://example.org/sofa#isConvertible> rdfs:range <http://example.org/sofa#Couch> .
+
+<http://example.org/sofa#length> rdfs:range <http://example.org/sofa#Dimension> .
+
+<http://example.org/sofa#width> rdfs:range <http://example.org/sofa#Dimension> .
+
+<http://www.example.com/furniture#hasColor> rdfs:range <http://www.example.com/furniture#Couch> .
+
+<http://www.example.com/furniture#hasMaterial> rdfs:range <http://www.example.com/furniture#Couch>,
+        <http://www.example.com/furniture#Material> .
+
+<http://www.example.com/furniture#hasSize> rdfs:range <http://www.example.com/furniture#Couch> .
+
+<http://www.example.com/furniture#hasStyle> rdfs:range <http://www.example.com/furniture#Couch> .
+
+<http://www.example.org/color> rdfs:range <http://www.example.org/Couch> .
+
+<http://www.example.org/depth> rdfs:range <http://www.example.org/Dimensions> .
+
+<http://www.example.org/dimensions> rdfs:range <http://www.example.org/Couch>,
+        <http://www.example.org/Dimensions> .
+
+<http://www.example.org/furniture#hasColor> rdfs:range <http://www.example.org/furniture#Couch> .
+
+<http://www.example.org/furniture#hasDimensions> rdfs:range <http://www.example.org/furniture#Couch> .
+
+<http://www.example.org/furniture#hasMaterial> rdfs:range <http://www.example.org/furniture#Couch> .
+
+<http://www.example.org/furniture#hasSeatDepth> rdfs:range <http://www.example.org/furniture#Couch> .
+
+<http://www.example.org/furniture#isUpholstered> rdfs:range <http://www.example.org/furniture#Couch> .
+
+<http://www.example.org/hasCushions> rdfs:range <http://www.example.org/Couch> .
+
+<http://www.example.org/height> rdfs:range <http://www.example.org/Dimensions> .
+
+<http://www.example.org/isUpholstered> rdfs:range <http://www.example.org/Couch> .
+
+<http://www.example.org/material> rdfs:range <http://www.example.org/Couch> .
+
+<http://www.example.org/width> rdfs:range <http://www.example.org/Dimensions> .
+

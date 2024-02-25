@@ -1,8 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix : <http://example.com/> .
-:Thing a owl:Class ;
-    rdfs:label "Thing"^^xsd:string ;
-    rdfs:comment "Represents any kind of thing in the universe"^^xsd:string .

@@ -1,6 +1,0 @@
-@prefix : <http://example.org/> .
-:Human a rdfs:Class ;
-    rdfs:label "Human" .
-:Head a rdfs:Class ;
-    rdfs:label "Head" ;
-    rdfs:subClassOf :Human .

@@ -1,9 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:Operation a rdfs:Class ;
-    rdfs:comment "The class representing some operation or task" .
-ex:Result a rdfs:Class ;
-    rdfs:comment "The class representing result of some operation or task" .
-ex:hasResult a rdf:Property ;
-    rdfs:domain ex:Operation ;
-    rdfs:range ex:Result ;
-    rdfs:comment "The property linking an operation to its result" .

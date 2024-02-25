@@ -1,0 +1,201 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+_:n779e292f6d4b4d55884a6fee36bf0b79b1 a rdfs:Class .
+
+<http://example.com/moment#Moment> a rdfs:Class .
+
+<http://example.com/ontology#Event> a rdfs:Class .
+
+<http://example.com/ontology#Location> a rdfs:Class .
+
+<http://example.com/ontology#Moment> a rdfs:Class .
+
+<http://example.com/ontology#Person> a rdfs:Class .
+
+<http://example.org#Moment> a rdfs:Class .
+
+<http://example.org#MomentProperty> a rdfs:Class .
+
+<http://example.org#TimePoint> a rdfs:Class .
+
+<http://example.org/moment#Date> a rdfs:Class .
+
+<http://example.org/moment#Duration> a rdfs:Class .
+
+<http://example.org/moment#Event> a rdfs:Class .
+
+<http://example.org/moment#Instant> a rdfs:Class .
+
+<http://example.org/moment#Period> a rdfs:Class .
+
+<http://example.org/moment#Time> a rdfs:Class .
+
+<http://example.org/moment#Timestamp> a rdfs:Class .
+
+<http://example.org/moment/Moment> a rdfs:Class .
+
+<http://example.org/moment/Period> a rdfs:Class .
+
+<http://example.org/moments#moment> a rdfs:Class .
+
+<http://example.org/ontology#Instant> a rdfs:Class .
+
+<http://example.org/ontology#Moment> a rdfs:Class .
+
+<http://example.org/ontology#Period> a rdfs:Class .
+
+<http://www.example.com/moments#Duration> a rdfs:Class .
+
+<http://www.example.com/moments#Moment> a rdfs:Class .
+
+<http://www.example.com/moments#TimeInstant> a rdfs:Class .
+
+<http://www.example.org/moment#Instant> a rdfs:Class .
+
+<http://www.example.org/moment#Period> a rdfs:Class .
+
+<http://www.example.org/moments#Moment> a rdfs:Class .
+
+<http://www.example.org/moments#Period> a rdfs:Class .
+
+<http://www.example.org/moments#hasEvent> a rdfs:Class ;
+    rdfs:range <http://www.example.org/moments#Moment>,
+        owl:Thing .
+
+<http://www.example.org/moments/Event> a rdfs:Class .
+
+<http://www.example.org/moments/Location> a rdfs:Class .
+
+<http://www.example.org/moments/Moment> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+time:Moment a rdfs:Class .
+
+time:TimePosition a rdfs:Class .
+
+<http://example.com/moment#hasDate> rdfs:range <http://example.com/moment#Moment> .
+
+<http://example.com/moment#hasDescription> rdfs:range <http://example.com/moment#Moment> .
+
+<http://example.com/moment#hasTime> rdfs:range <http://example.com/moment#Moment> .
+
+<http://example.com/moment#isPartOf> rdfs:range <http://example.com/moment#Moment>,
+        rdfs:Resource .
+
+<http://example.com/ontology#hasMoment> rdfs:range <http://example.com/ontology#Moment>,
+        <http://example.com/ontology#Person> .
+
+<http://example.com/ontology#inLocation> rdfs:range <http://example.com/ontology#Location>,
+        <http://example.com/ontology#Moment> .
+
+<http://example.com/ontology#isMomentOf> rdfs:range <http://example.com/ontology#Event>,
+        <http://example.com/ontology#Moment> .
+
+<http://example.org#date> rdfs:range <http://example.org#MomentProperty> .
+
+<http://example.org#hasMoment> rdfs:range <http://example.org#Moment>,
+        <http://example.org#TimePoint> .
+
+<http://example.org#hasMomentProperty> rdfs:range <http://example.org#Moment>,
+        <http://example.org#MomentProperty> .
+
+<http://example.org#time> rdfs:range <http://example.org#MomentProperty> .
+
+<http://example.org/moment#hasDate> rdfs:range <http://example.org/moment#Date> .
+
+<http://example.org/moment#hasDuration> rdfs:range <http://example.org/moment#Duration> .
+
+<http://example.org/moment#hasEvent> rdfs:range <http://example.org/moment#Event> .
+
+<http://example.org/moment#hasInstant> rdfs:range <http://example.org/moment#Instant> .
+
+<http://example.org/moment#hasMoment> rdfs:range <http://example.org/moment#Timestamp> .
+
+<http://example.org/moment#hasPeriod> rdfs:range <http://example.org/moment#Period> .
+
+<http://example.org/moment#hasTime> rdfs:range <http://example.org/moment#Time> .
+
+<http://example.org/moment/hasEndTime> rdfs:range <http://example.org/moment/Period> .
+
+<http://example.org/moment/hasStartTime> rdfs:range <http://example.org/moment/Period> .
+
+<http://example.org/moment/hasTime> rdfs:range <http://example.org/moment/Moment> .
+
+<http://example.org/moment/isPartOf> rdfs:range <http://example.org/moment/Moment>,
+        <http://example.org/moment/Period> .
+
+<http://example.org/moments#description> rdfs:range <http://example.org/moments#moment> .
+
+<http://example.org/moments#isAfter> rdfs:range <http://example.org/moments#moment> .
+
+<http://example.org/moments#isPriorTo> rdfs:range <http://example.org/moments#moment> .
+
+<http://example.org/moments#time> rdfs:range <http://example.org/moments#moment> .
+
+<http://example.org/ontology#duration> rdfs:range <http://example.org/ontology#Moment> .
+
+<http://example.org/ontology#hasBeginning> rdfs:range <http://example.org/ontology#Instant>,
+        <http://example.org/ontology#Period> .
+
+<http://example.org/ontology#hasDateTime> rdfs:range <http://example.org/ontology#Instant> .
+
+<http://example.org/ontology#hasEnd> rdfs:range <http://example.org/ontology#Instant>,
+        <http://example.org/ontology#Period> .
+
+<http://example.org/ontology#hasInstant> rdfs:range <http://example.org/ontology#Instant>,
+        <http://example.org/ontology#Moment> .
+
+<http://example.org/ontology#isPartOf> rdfs:range <http://example.org/ontology#Moment>,
+        <http://example.org/ontology#Period> .
+
+<http://www.example.com/moments#endTime> rdfs:range <http://www.example.com/moments#Duration> .
+
+<http://www.example.com/moments#hasDuration> rdfs:range <http://www.example.com/moments#Duration>,
+        <http://www.example.com/moments#Moment> .
+
+<http://www.example.com/moments#hasTimeInstant> rdfs:range <http://www.example.com/moments#Moment>,
+        <http://www.example.com/moments#TimeInstant> .
+
+<http://www.example.com/moments#startTime> rdfs:range _:n779e292f6d4b4d55884a6fee36bf0b79b1 .
+
+<http://www.example.org/moment#endDate> rdfs:range <http://www.example.org/moment#Instant>,
+        <http://www.example.org/moment#Period> .
+
+<http://www.example.org/moment#startDate> rdfs:range <http://www.example.org/moment#Instant>,
+        <http://www.example.org/moment#Period> .
+
+<http://www.example.org/moments#eventDescription> rdfs:range <http://www.example.org/moments#hasEvent> .
+
+<http://www.example.org/moments#hasDate> rdfs:range <http://www.example.org/moments#Moment> .
+
+<http://www.example.org/moments#hasLocation> rdfs:range <http://www.example.org/moments#Moment> .
+
+<http://www.example.org/moments#hasTime> rdfs:range <http://www.example.org/moments#Moment> .
+
+<http://www.example.org/moments#isPartOf> rdfs:range <http://www.example.org/moments#Moment>,
+        <http://www.example.org/moments#Period> .
+
+<http://www.example.org/moments#periodEnd> rdfs:range <http://www.example.org/moments#Period> .
+
+<http://www.example.org/moments#periodStart> rdfs:range <http://www.example.org/moments#Period> .
+
+<http://www.example.org/moments/fromEvent> rdfs:range <http://www.example.org/moments/Event>,
+        <http://www.example.org/moments/Moment> .
+
+<http://www.example.org/moments/hasDate> rdfs:range <http://www.example.org/moments/Moment> .
+
+<http://www.example.org/moments/hasDuration> rdfs:range <http://www.example.org/moments/Event> .
+
+<http://www.example.org/moments/hasLocation> rdfs:range <http://www.example.org/moments/Event>,
+        <http://www.example.org/moments/Location> .
+
+<http://www.example.org/moments/hasName> rdfs:range <http://www.example.org/moments/Location> .
+
+time:inTime rdfs:range time:Moment,
+        time:TimePosition .
+

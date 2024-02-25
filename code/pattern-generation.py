@@ -1,10 +1,45 @@
 import os
 from rdflib import URIRef, Graph, Namespace, Literal
 from rdflib import OWL, RDF, RDFS, XSD, TIME
+from rdflib.plugins.parsers.notation3 import ParserError
+
 import re
+
+import numpy as np
+
+#  Directory set up
 output_path = "./code/output/"
 input_path = "./code/resources/"
 analysis_path = "./code/analysis/"
+pattern_path = "./code/commonsense-patterns"
+
+#  Graph parameters (prefix)
+pfs = {
+    "rdf": RDF,
+    "rdfs": RDFS,
+    "xsd": XSD,
+    "owl": OWL,
+    "time": TIME
+}
+
+#  Hyperparameters
+'''
+    Properties to be added to the common-sense pattern of a noun
+    is voted with respect to the mean/average count of occurrences
+    in all properties and a manually set offset value, votingLimit.
+'''
+votingLimit = 1.03 # mean * 103%; only include values that are mean + x
+
+def init_kg(prefixes=pfs):
+    kg = Graph()
+    for prefix in pfs:
+        kg.bind(prefix, pfs[prefix])
+    return kg
+
+def serialization(noun, graph:Graph):
+    output_file = f"{noun}.ttl"
+    dest = os.path.join(pattern_path, output_file)
+    graph.serialize(format="turtle", encoding="utf-8", destination=dest)
 
 def markdown_cleanup(ontology):
     ''''
@@ -93,7 +128,30 @@ def parse_results():
             out.write(ontology)
             count+=1
 
-def count_properties():
+def voting_helper(propDict, key):
+    values = []
+    for _, value in propDict.items():
+        if(len(value) > 1):
+            for v in value:
+                values.append(v)
+        else:       
+            values.append(value)
+
+    # Mean and Std Dev stats    
+    mean = np.mean(values)
+    std_dev = np.std(values)
+
+    # Z-Scores for outlier detection
+    z_scores = [(x - mean) / std_dev for x in values]
+    filtered_data = [x for x, z_score in zip(values, z_scores) if abs(z_score) <= 1.5]
+
+    mean = np.mean(filtered_data)
+    threshold = float(mean*votingLimit)
+    if(propDict[key] >= threshold): 
+        return True
+    return False
+
+def vote_properties():
     '''
         Attempts to parse through generated TTL files from LLM generation
 
@@ -106,65 +164,131 @@ def count_properties():
     statsValidDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
     statsTotalDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
     
+    # predicate shortcut
+    a = pfs["rdf"]["type"]
+
+    # Property Types
+    properties = [
+        pfs["rdf"]["Property"],
+        pfs["owl"]["ObjectProperty"],
+        pfs["owl"]["DatatypeProperty"]
+    ]
+    
     for filename in os.listdir(input_path): # For each Noun
     # for i in range(1): # For testing 
-    #     filename= "Air.tsv"
+    #     filename= "Month.tsv"
         noun, ext = filename.split(".")
         noun_dir = os.path.join(output_path,noun)
         
         fName = f"{noun}.out"
         analysisFile = open(os.path.join(analysis_path, fName), "w")
-        graph = Graph()
-        propertyDict = dict() # All occurences from all nouns
+        graph = init_kg()
 
+        # All occurences from all nouns
+        nounPropertyDict = dict() 
+        dictSPO = set()
         for filename in os.listdir(noun_dir): # For each ttl from single Noun
             statsTotalDict[noun] += 1 # Total available files
 
-            nounPropDict = dict() # Individual file occurrences per noun
+            ttlPropDict = dict() # Individual file occurrences per noun
+            curr_graph = init_kg()
             with open(os.path.join(noun_dir, filename), "r") as f:
                 try:
-                    graph.parse(f)
-                    for _,p,_ in graph:
+                    curr_graph.parse(f)
+                    # print(filename)
+                    #  Counting Individual File Occurrences
+                    for sub,p,obj in curr_graph:
                         if("rdf" in p): #Skip RDF properties
                             continue 
                         if("owl" in p): #Skip OWL properties
                             continue 
-                        p = p.split("/")[-1]
+                        if(isinstance(obj, Literal)):
+                            continue                        
+                        temp = p.split("/")[-1]
                         # if("#" in p): # can include RDF properties, if necessary
                         #     p = p.split("#")[-1].strip()
 
-                        if(f"{noun}# in p"):
-                            p = p.split("#")[-1]
+                        if(f"{noun}#" in p):
+                            temp = temp.split("#")[-1]
 
                         # Skip or Increment Count of Found Properties
-                        if(str(p) in nounPropDict): # Skip over found property
+                        if(str(temp) in ttlPropDict): # Skip over found property
                             continue
                         else:
-                            nounPropDict[str(p)] = 1
-                except Exception:
-                    continue
-                    # print("Error: " + filename)
+                            ttlPropDict[str(temp)] = 1
+                            dictSPO[p] = [sub, obj]
 
-                for k,v in nounPropDict.items(): # Add each noun-file to overall property tracker
-                    if(k in propertyDict): # Increment past observed properties
-                        propertyDict[k] += v
+                    #  Identifying Type Properties in Noun Ontology
+                    for property in properties:
+                        for s,p,o in (curr_graph.triples( (None, pfs["rdf"]["type"], property) )):
+                            ##  Adding range of properties
+                            for _,_,propRange in curr_graph.triples((s, RDFS.range, None)):
+                                # print(str(s), str(p), str(o))
+                                ##  Skip datatypes
+                                if("xsd" in propRange or 
+                                    "XML" in propRange or
+                                    "Literal" in propRange):
+                                    continue
+                                ## Skip already added
+                                graph.add( (propRange, a, pfs["rdfs"]["Class"]) )
+                                graph.add( (s, RDFS.range, propRange) )
+
+                            ##  Adding domain of properties
+                            for _, _, propDomain in curr_graph.triples( (s, RDFS.domain, None) ):
+                                # print(str(s), str(p), str(o))
+                                ##  Skip datatypes
+                                if("xsd" in propDomain or 
+                                    "XML" in propDomain or
+                                    "Literal" in propRange):
+                                    continue
+                                ## Skip already added
+                                graph.add( (propDomain, a, pfs["rdfs"]["Class"]) )
+                                graph.add( (s, RDFS.range, propDomain) )
+
+                except ParserError:
+                    continue # Error parsing file
+                    # print("Error: " + filename)
+                except Exception as ex:
+                    continue 
+
+                for k,v in ttlPropDict.items(): # Add each noun-file to overall property tracker
+                    if(k in nounPropertyDict): # Increment past observed properties
+                        nounPropertyDict[k] += v
                     else: # Set {k,v} for identifying properties in noun
-                        propertyDict[k] = 1    
+                        nounPropertyDict[k] = 1    
+            
+            # Stats File
             statsValidDict[noun] += 1
 
+        # Voting to add to noun
 
+        for key, value in nounPropertyDict.items():
+            sub = value[0]
+            pred = key
+            obj = value[1]
+            # print(f"{sub} \t {pred} \t {obj}")
+            property = pred.split("/")[-1].split("#")[-1]
+            if(voting_helper(nounPropertyDict, property)):
+                graph.add( (sub, pred, obj) )
+        try:
+            serialization(noun, graph)
+        except Exception as ex:
+            print(noun)
         #  Sort in descending value order for output
-        propertyDict = {k: v for k, v in sorted(propertyDict.items(), key=lambda item: item[1], reverse=True)}
-        for key, value in propertyDict.items():
+        nounPropertyDict = {k: v for k, v in sorted(nounPropertyDict.items(), key=lambda item: item[1], reverse=True)}
+        for key, value in nounPropertyDict.items():
             analysisFile.write(f"{key} \t {value}\n")
 
     #  Sort in ascending key order for output
     statsValidDict = dict(sorted(statsValidDict.items()))
     for key,value in statsValidDict.items():
-        ratioUsed = round(float(value/statsTotalDict[key]),2) * 100 # represent as percentage
-        statsFile.write(f"{key}: \t {value}  \t {statsTotalDict[key]} \t {ratioUsed}\n")
+        try:
+            ratioUsed = round(float(value/statsTotalDict[key]),2) * 100 # represent as percentage
+            statsFile.write(f"{key}: \t {value}  \t {statsTotalDict[key]} \t {ratioUsed}\n")
+        except Exception as ex:
+            pass
 
 
 if __name__ == "__main__":
     parse_results()
-    count_properties()
+    vote_properties()

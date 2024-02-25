@@ -1,0 +1,97 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/days#Day> a rdfs:Class .
+
+<http://example.com/hours#Hour> a rdfs:Class .
+
+<http://example.com/week#Day> a rdfs:Class .
+
+<http://example.com/week#Week> a rdfs:Class .
+
+<http://example.org/Week> a rdfs:Class .
+
+<http://example.org/Year> a rdfs:Class .
+
+<http://example.org/week#Day> a rdfs:Class .
+
+<http://example.org/week#Week> a rdfs:Class .
+
+<http://example.org/week/Day> a rdfs:Class .
+
+<http://example.org/week/Week> a rdfs:Class .
+
+<http://www.example.com/ontology/week#Day> a rdfs:Class .
+
+<http://www.example.com/ontology/week#Week> a rdfs:Class .
+
+<http://www.example.org/week#Day> a rdfs:Class .
+
+<http://www.example.org/week#Week> a rdfs:Class .
+
+<http://www.example.org/week/Day> a rdfs:Class .
+
+<http://www.example.org/week/Week> a rdfs:Class .
+
+rdfs:Class a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com/week#hasDay> rdfs:range <http://example.com/week#Day>,
+        <http://example.com/week#Week> .
+
+<http://example.com/week#hasDays> rdfs:range <http://example.com/days#Day>,
+        <http://example.com/week#Week> .
+
+<http://example.com/week#hasHours> rdfs:range <http://example.com/hours#Hour>,
+        <http://example.com/week#Week> .
+
+<http://example.org/hasEndDay> rdfs:range <http://example.org/Week> .
+
+<http://example.org/hasStartDay> rdfs:range <http://example.org/Week> .
+
+<http://example.org/hasWeek> rdfs:range <http://example.org/Week>,
+        <http://example.org/Year> .
+
+<http://example.org/week#consistsOf> rdfs:range <http://example.org/week#Day>,
+        <http://example.org/week#Week> .
+
+<http://example.org/week#dayName> rdfs:range <http://example.org/week#Day> .
+
+<http://example.org/week#dayNumber> rdfs:range <http://example.org/week#Day> .
+
+<http://example.org/week#dayOfWeek> rdfs:range <http://example.org/week#Week>,
+        rdfs:Resource .
+
+<http://example.org/week#hasDay> rdfs:range <http://example.org/week#Day>,
+        <http://example.org/week#Week> .
+
+<http://example.org/week#hasSequence> rdfs:range <http://example.org/week#Day> .
+
+<http://example.org/week#isDayOf> rdfs:range <http://example.org/week#Day>,
+        <http://example.org/week#Week> .
+
+<http://example.org/week#numberOfWeek> rdfs:range <http://example.org/week#Week> .
+
+<http://example.org/week/hasDay> rdfs:range <http://example.org/week/Day>,
+        <http://example.org/week/Week> .
+
+<http://example.org/week/isDayOfTheWeek> rdfs:range <http://example.org/week/Day> .
+
+<http://www.example.com/ontology/week#hasDay> rdfs:range <http://www.example.com/ontology/week#Day>,
+        <http://www.example.com/ontology/week#Week> .
+
+<http://www.example.org/week#dayOfWeek> rdfs:range <http://www.example.org/week#Day> .
+
+<http://www.example.org/week#hasDay> rdfs:range <http://www.example.org/week#Day>,
+        <http://www.example.org/week#Week> .
+
+<http://www.example.org/week#hasNumber> rdfs:range <http://www.example.org/week#Week> .
+
+<http://www.example.org/week/belongsIn> rdfs:range <http://www.example.org/week/Week>,
+        rdfs:Class .
+
+<http://www.example.org/week/contains> rdfs:range <http://www.example.org/week/Day>,
+        <http://www.example.org/week/Week> .
+
+<http://www.example.org/week/hasNumber> rdfs:range <http://www.example.org/week/Week> .
+

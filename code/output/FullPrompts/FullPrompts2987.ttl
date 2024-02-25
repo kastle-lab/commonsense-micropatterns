@@ -1,7 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.com/> .
-ex:book1 rdf:type ex:Book ;
-    ex:title "The Example Book" ;
-    ex:author ex:author1 .
-    ex:author1 rdf:type ex:Author ;
-    ex:name "Author Name" .

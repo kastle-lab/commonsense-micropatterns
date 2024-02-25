@@ -1,5 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ontology: <http://example.com/ontology#> .
-@prefix individuals: <http://example.com/individuals#> .
-ontology:Mother rdf:type rdfs:Class .
-    individuals:Mary rdf:type ontology:Mother .

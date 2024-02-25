@@ -1,4 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://example.com/#> .
-:MORNING rdf:type :TIME_PERIOD .
-:MORNING :isPartOf :DAY .

@@ -1,8 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
- @prefix ex: <http://example.org/> .
-ex:Dog a rdfs:Class .
-ex:hasBreed a rdfs:Property ;
-    rdfs:domain ex:Dog ;
-    rdfs:range rdfs:Literal .
-ex:Max ex:hasBreed "Labrador" .
- ex:Buddy ex:hasBreed "Poodle" .

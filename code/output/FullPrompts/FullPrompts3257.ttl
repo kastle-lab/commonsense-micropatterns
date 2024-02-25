@@ -1,7 +1,0 @@
-@prefix : <http://example.com/> .
-:Idea a owl:Class .
-:hasIdea a owl:ObjectProperty ;
-       rdfs:domain :Person ;
-       rdfs:range :Idea .
-:isIdeaOf a owl:ObjectProperty ;
-       owl:inverseOf :hasIdea .

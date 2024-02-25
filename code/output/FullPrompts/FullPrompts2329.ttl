@@ -1,9 +1,0 @@
-@prefix : <http://example.org/> .
-:Lot a owl:Class ;
-    rdfs:subClassOf :Location .
-    :hasLot a owl:ObjectProperty ;
-    rdfs:domain :Building ;
-    rdfs:range :Lot .
-:LotNumber a owl:DatatypeProperty ;
-    rdfs:domain :Lot ;
-    rdfs:range xsd:string .

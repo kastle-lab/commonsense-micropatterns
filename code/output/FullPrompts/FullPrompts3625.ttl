@@ -1,9 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ex: <http://example.com/> .
-ex:War a rdfs:Class ;
-    rdfs:comment "A state of armed conflict between different countries or different groups within a country" ;
-    rdfs:label "War" .
-ex:WorldWarII a ex:War ;
-    rdfs:label "World War II" ;
-    rdfs:comment "A global war that lasted from 1939 to 1945. It was the most widespread war in history." .

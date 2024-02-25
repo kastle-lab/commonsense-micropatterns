@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-# Declaring City as a Classex:City rdf:type rdf:Class .
-# Declaring some instances of cityex:NewYork rdf:type ex:City .
-ex:London rdf:type ex:City .

@@ -1,5 +1,0 @@
-@prefix : <http://example.org/> .
-:person1 a :Person ;
-         :hasFriend :person2 .
-:person2 a :Person ;
-         :hasFriend :person1 .

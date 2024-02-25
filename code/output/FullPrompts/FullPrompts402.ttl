@@ -1,8 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:world a ex:Planet ;
-   ex:hasName "Earth" ;
-   ex:planetType "Terrestrial" ;
-   ex:locationInUniverse  "Milky Way Galaxy" ;
-   ex:associatedLifeform ex:Humans .
-   ex:Humans a ex:Lifeform ;
-   ex:hasName "Humans" .

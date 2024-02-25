@@ -1,8 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix sch: <http://schema.org/> .
-ex:theHobbit a sch:Book ;
-    sch:name "The Hobbit" ;
-    sch:bookFormat sch:AudiobookFormat ;
-    ex:hasEnd ex:theHobbitEnd .
-ex:theHobbitEnd a ex:End ;
-    sch:about "The end of the book 'The Hobbit'" .

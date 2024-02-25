@@ -1,0 +1,73 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/guyOntology#Guy> a rdfs:Class .
+
+<http://example.com/ontology/guy#Guy> a rdfs:Class .
+
+<http://example.com/ontology/guy#Organization> a rdfs:Class .
+
+<http://example.org#Guy> a rdfs:Class .
+
+<http://example.org/human#Gender> a rdfs:Class .
+
+<http://example.org/human#Human> a rdfs:Class .
+
+<http://www.example.org/#Guy> a rdfs:Class .
+
+<http://www.example.org/#Hobby> a rdfs:Class .
+
+<http://www.example.org/#Job> a rdfs:Class .
+
+<http://www.example.org/#Location> a rdfs:Class .
+
+<http://example.com/guyOntology#hasAge> rdfs:range <http://example.com/guyOntology#Guy> .
+
+<http://example.com/guyOntology#hasName> rdfs:range <http://example.com/guyOntology#Guy> .
+
+<http://example.com/guyOntology#hasOccupation> rdfs:range <http://example.com/guyOntology#Guy> .
+
+<http://example.com/guyOntology#isFriendWith> rdfs:range <http://example.com/guyOntology#Guy> .
+
+<http://example.com/ontology/guy#hasAge> rdfs:range <http://example.com/ontology/guy#Guy> .
+
+<http://example.com/ontology/guy#hasInterest> rdfs:range <http://example.com/ontology/guy#Guy> .
+
+<http://example.com/ontology/guy#hasLocation> rdfs:range <http://example.com/ontology/guy#Organization> .
+
+<http://example.com/ontology/guy#hasName> rdfs:range <http://example.com/ontology/guy#Guy> .
+
+<http://example.com/ontology/guy#playsSport> rdfs:range <http://example.com/ontology/guy#Guy> .
+
+<http://example.com/ontology/guy#worksAt> rdfs:range <http://example.com/ontology/guy#Guy>,
+        <http://example.com/ontology/guy#Organization> .
+
+<http://example.org#birthday> rdfs:range <http://example.org#Guy> .
+
+<http://example.org#firstName> rdfs:range <http://example.org#Guy> .
+
+<http://example.org#hasChild> rdfs:range <http://example.org#Guy> .
+
+<http://example.org#hasSpouse> rdfs:range <http://example.org#Guy> .
+
+<http://example.org#lastName> rdfs:range <http://example.org#Guy> .
+
+<http://example.org/human#hasAge> rdfs:range <http://example.org/human#Human> .
+
+<http://example.org/human#hasGender> rdfs:range <http://example.org/human#Gender>,
+        <http://example.org/human#Human> .
+
+<http://example.org/human#name> rdfs:range <http://example.org/human#Human> .
+
+<http://www.example.org/#employedAs> rdfs:range <http://www.example.org/#Guy>,
+        <http://www.example.org/#Job> .
+
+<http://www.example.org/#hasAge> rdfs:range <http://www.example.org/#Guy> .
+
+<http://www.example.org/#hasHobby> rdfs:range <http://www.example.org/#Guy>,
+        <http://www.example.org/#Hobby> .
+
+<http://www.example.org/#hasName> rdfs:range <http://www.example.org/#Guy> .
+
+<http://www.example.org/#worksIn> rdfs:range <http://www.example.org/#Guy>,
+        <http://www.example.org/#Location> .
+

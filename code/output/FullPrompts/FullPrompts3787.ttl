@@ -1,7 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix ex: <http://example.com#> .
-ex:Morning a time:TimeOfDay ;
-   time:hour "06"^^xsd:int ;
-   time:minute "00"^^xsd:int ;
-   time:second "00"^^xsd:int .

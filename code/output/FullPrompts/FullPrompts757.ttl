@@ -1,7 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix case: <http://example.org/case#> .
-case:1 a case:LegalCase ;
-  case:CaseID "12345"^^xsd:string ;
-  case:CaseName "Case ABC"^^xsd:string ;
-  case:Jurisdiction "New York"^^xsd:string ;
-  case:RelatedLaw "Law XYZ"^^xsd:string .

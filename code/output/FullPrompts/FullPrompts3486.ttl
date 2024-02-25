@@ -1,9 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix level: <http://example.org/level/> .
-level:     rdf:type rdfs:Class ;
-    rdfs:label "Level"^^xsd:string .
-level:Low    rdf:type level: ;
-    rdfs:label "Low"^^xsd:string level:Medium    rdf:type level: ;
-    rdfs:label "Medium"^^xsd:string level:High    rdf:type level: ;

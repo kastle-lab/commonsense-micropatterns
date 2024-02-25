@@ -1,3 +1,0 @@
- However, it's important to note that in a real use case, the URIs and properties would need to have more precise definitions. 
-@prefix ex: <http://example.org/> .
-ex:Night a ex:TimePeriod .

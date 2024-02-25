@@ -1,1 +1,0 @@
-Yes, we can create a straightforward pattern to represent this   "@context": {    "name": "http://schema.org/name"  ,  "@type": "Person",  "name": "Enter Name Here"The @context and @type fields establish that we're dealing with a Person object within the scope of schema.org. The "name" field is specified as a property of this object where the real name can be inputted.

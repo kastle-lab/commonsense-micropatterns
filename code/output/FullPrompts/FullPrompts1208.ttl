@@ -1,8 +1,0 @@
-@prefix ex: <http://example.org/>.@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.ex:System a rdfs:Class ;
-        rdfs:comment "A class representing a system" .
-ex:provides a rdf:Property ;
-       rdfs:domain ex:System ;
-       rdfs:range ex:Service ;
-       rdfs:comment "A property representing that a system provides a service" .
-ex:Service a rdfs:Class ;
-       rdfs:comment "A class representing a service" .

@@ -1,0 +1,272 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/case#Case> a rdfs:Class .
+
+<http://example.com/case#CaseStatus> a rdfs:Class .
+
+<http://example.com/case#Entity> a rdfs:Class .
+
+<http://example.com/case#EntityRole> a rdfs:Class .
+
+<http://example.com/case#Person> a rdfs:Class .
+
+<http://example.com/ontology/case#Case> a rdfs:Class .
+
+<http://example.org#Case> a rdfs:Class .
+
+<http://example.org#CaseType> a rdfs:Class .
+
+<http://example.org#Entity> a rdfs:Class .
+
+<http://example.org/case#Case> a rdfs:Class .
+
+<http://example.org/case#CaseStatus> a rdfs:Class .
+
+<http://example.org/case/Case> a rdfs:Class .
+
+<http://example.org/case/CaseWorker> a rdfs:Class .
+
+<http://example.org/case/Client> a rdfs:Class .
+
+<http://example.org/case/Lawyer> a rdfs:Class .
+
+<http://example.org/case/Person> a rdfs:Class .
+
+<http://example.org/case/legalCase> a rdfs:Class .
+
+<http://example.org/ontology#Case> a rdfs:Class .
+
+<http://example.org/ontology#Date> a rdfs:Class .
+
+<http://example.org/ontology#Description> a rdfs:Class .
+
+<http://example.org/ontology#Identifier> a rdfs:Class .
+
+<http://example.org/ontology#Title> a rdfs:Class .
+
+<http://example.org/ontology/case#Case> a rdfs:Class .
+
+<http://www.example.com/case#Case> a rdfs:Class .
+
+<http://www.example.com/case#Status> a rdfs:Class .
+
+<http://www.example.com/case#Subject> a rdfs:Class .
+
+<http://www.example.org/case#Case> a rdfs:Class .
+
+<http://www.example.org/case#CaseStatus> a rdfs:Class .
+
+<http://www.example.org/case#Entity> a rdfs:Class .
+
+<http://www.example.org/case#Judge> a rdfs:Class .
+
+<http://www.example.org/case#LegalCase> a rdfs:Class .
+
+<http://www.example.org/case#Party> a rdfs:Class .
+
+<http://www.example.org/caseOntology#Case> a rdfs:Class .
+
+<http://www.example.org/caseOntology#CaseStatus> a rdfs:Class .
+
+<http://www.example.org/ontology#Case> a rdfs:Class .
+
+<http://www.example.org/ontology/case#Case> a rdfs:Class .
+
+<http://www.example.org/ontology/case#CaseType> a rdfs:Class .
+
+<http://www.example.org/ontology/case#LegalCase> a rdfs:Class .
+
+<http://www.myontology.com/case#Case> a rdfs:Class .
+
+<http://www.myontology.com/case#CaseStatus> a rdfs:Class .
+
+<http://www.myontology.com/case#Investigation> a rdfs:Class ;
+    rdfs:range <http://www.myontology.com/case#Case>,
+        <http://www.myontology.com/case#Investigation> .
+
+<http://www.myontology.com/case#Investigator> a rdfs:Class .
+
+rdf:Date a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com/case#hasCaseNumber> rdfs:range <http://example.com/case#Case> .
+
+<http://example.com/case#hasDefendant> rdfs:range <http://example.com/case#Case>,
+        <http://example.com/case#Person> .
+
+<http://example.com/case#hasEntityRole> rdfs:range <http://example.com/case#Entity>,
+        <http://example.com/case#EntityRole> .
+
+<http://example.com/case#hasIdentifier> rdfs:range <http://example.com/case#Case> .
+
+<http://example.com/case#hasPlaintiff> rdfs:range <http://example.com/case#Case>,
+        <http://example.com/case#Person> .
+
+<http://example.com/case#hasRelatedCase> rdfs:range <http://example.com/case#Case> .
+
+<http://example.com/case#hasStatus> rdfs:range <http://example.com/case#Case>,
+        <http://example.com/case#CaseStatus> .
+
+<http://example.com/case#involves> rdfs:range <http://example.com/case#Case>,
+        <http://example.com/case#Entity> .
+
+<http://example.com/ontology/case#assignedTo> rdfs:range <http://example.com/ontology/case#Case> .
+
+<http://example.com/ontology/case#caseStatus> rdfs:range <http://example.com/ontology/case#Case> .
+
+<http://example.com/ontology/case#hasCaseId> rdfs:range <http://example.com/ontology/case#Case> .
+
+<http://example.com/ontology/case#isRelatedTo> rdfs:range <http://example.com/ontology/case#Case> .
+
+<http://example.org#hasCaseNumber> rdfs:range <http://example.org#Case> .
+
+<http://example.org#hasCaseType> rdfs:range <http://example.org#Case>,
+        <http://example.org#CaseType> .
+
+<http://example.org#hasEndDate> rdfs:range <http://example.org#Case> .
+
+<http://example.org#hasParty> rdfs:range <http://example.org#Case>,
+        <http://example.org#Entity> .
+
+<http://example.org#hasStartDate> rdfs:range <http://example.org#Case> .
+
+<http://example.org/case#dateClosed> rdfs:range <http://example.org/case#Case> .
+
+<http://example.org/case#dateOpened> rdfs:range <http://example.org/case#Case> .
+
+<http://example.org/case#description> rdfs:range <http://example.org/case#Case> .
+
+<http://example.org/case#hasDateOpened> rdfs:range <http://example.org/case#Case> .
+
+<http://example.org/case#hasID> rdfs:range <http://example.org/case#Case> .
+
+<http://example.org/case#hasStatus> rdfs:range <http://example.org/case#Case>,
+        <http://example.org/case#CaseStatus> .
+
+<http://example.org/case#id> rdfs:range <http://example.org/case#Case> .
+
+<http://example.org/case#title> rdfs:range <http://example.org/case#Case> .
+
+<http://example.org/case/CaseDescription> rdfs:range <http://example.org/case/legalCase> .
+
+<http://example.org/case/CaseId> rdfs:range <http://example.org/case/legalCase> .
+
+<http://example.org/case/CaseStatus> rdfs:range <http://example.org/case/legalCase> .
+
+<http://example.org/case/CaseTitle> rdfs:range <http://example.org/case/legalCase> .
+
+<http://example.org/case/LawyerName> rdfs:range <http://example.org/case/Lawyer> .
+
+<http://example.org/case/PersonName> rdfs:range <http://example.org/case/Person> .
+
+<http://example.org/case/handles> rdfs:range <http://example.org/case/Case>,
+        <http://example.org/case/CaseWorker> .
+
+<http://example.org/case/hasDefendant> rdfs:range <http://example.org/case/Person>,
+        <http://example.org/case/legalCase> .
+
+<http://example.org/case/hasLawyer> rdfs:range <http://example.org/case/Lawyer>,
+        <http://example.org/case/Person> .
+
+<http://example.org/case/hasPlaintiff> rdfs:range <http://example.org/case/Person>,
+        <http://example.org/case/legalCase> .
+
+<http://example.org/case/representedIn> rdfs:range <http://example.org/case/Case>,
+        <http://example.org/case/Client> .
+
+<http://example.org/ontology#hasCaseDate> rdfs:range <http://example.org/ontology#Case>,
+        <http://example.org/ontology#Date> .
+
+<http://example.org/ontology#hasCaseDescription> rdfs:range <http://example.org/ontology#Case>,
+        <http://example.org/ontology#Description> .
+
+<http://example.org/ontology#hasCaseId> rdfs:range <http://example.org/ontology#Case>,
+        <http://example.org/ontology#Identifier> .
+
+<http://example.org/ontology#hasCaseTitle> rdfs:range <http://example.org/ontology#Case>,
+        <http://example.org/ontology#Title> .
+
+<http://example.org/ontology/case#hasDescription> rdfs:range <http://example.org/ontology/case#Case> .
+
+<http://example.org/ontology/case#hasID> rdfs:range <http://example.org/ontology/case#Case> .
+
+<http://www.example.com/case#caseNumber> rdfs:range <http://www.example.com/case#Case> .
+
+<http://www.example.com/case#creationDate> rdfs:range <http://www.example.com/case#Case>,
+        rdf:Date .
+
+<http://www.example.com/case#endDate> rdfs:range <http://www.example.com/case#Case> .
+
+<http://www.example.com/case#hasStatus> rdfs:range <http://www.example.com/case#Case>,
+        <http://www.example.com/case#Status> .
+
+<http://www.example.com/case#hasSubject> rdfs:range <http://www.example.com/case#Case>,
+        <http://www.example.com/case#Subject> .
+
+<http://www.example.com/case#isOpen> rdfs:range <http://www.example.com/case#Case> .
+
+<http://www.example.com/case#startDate> rdfs:range <http://www.example.com/case#Case> .
+
+<http://www.example.org/case#belongsTo> rdfs:range <http://www.example.org/case#Case>,
+        <http://www.example.org/case#Entity> .
+
+<http://www.example.org/case#hasCaseDate> rdfs:range <http://www.example.org/case#Case> .
+
+<http://www.example.org/case#hasCaseId> rdfs:range <http://www.example.org/case#Case> .
+
+<http://www.example.org/case#hasCaseStatus> rdfs:range <http://www.example.org/case#Case>,
+        <http://www.example.org/case#CaseStatus> .
+
+<http://www.example.org/case#hasID> rdfs:range <http://www.example.org/case#Case> .
+
+<http://www.example.org/case#hasJudge> rdfs:range <http://www.example.org/case#Judge>,
+        <http://www.example.org/case#LegalCase> .
+
+<http://www.example.org/case#hasParties> rdfs:range <http://www.example.org/case#Case>,
+        <http://www.example.org/case#Party> .
+
+<http://www.example.org/case#hasStatus> rdfs:range <http://www.example.org/case#Case> .
+
+<http://www.example.org/case#hasTitle> rdfs:range <http://www.example.org/case#Case> .
+
+<http://www.example.org/caseOntology#hasCaseStatus> rdfs:range <http://www.example.org/caseOntology#Case>,
+        <http://www.example.org/caseOntology#CaseStatus> .
+
+<http://www.example.org/ontology#hasCaseDate> rdfs:range <http://www.example.org/ontology#Case> .
+
+<http://www.example.org/ontology#hasCaseDescription> rdfs:range <http://www.example.org/ontology#Case> .
+
+<http://www.example.org/ontology#hasCaseNumber> rdfs:range <http://www.example.org/ontology#Case> .
+
+<http://www.example.org/ontology/case#associatedWith> rdfs:range <http://www.example.org/ontology/case#Case>,
+        rdfs:Resource .
+
+<http://www.example.org/ontology/case#description> rdfs:range <http://www.example.org/ontology/case#Case> .
+
+<http://www.example.org/ontology/case#hasCaseName> rdfs:range <http://www.example.org/ontology/case#LegalCase> .
+
+<http://www.example.org/ontology/case#hasCaseNumber> rdfs:range <http://www.example.org/ontology/case#LegalCase> .
+
+<http://www.example.org/ontology/case#hasCaseType> rdfs:range <http://www.example.org/ontology/case#Case>,
+        <http://www.example.org/ontology/case#CaseType> .
+
+<http://www.example.org/ontology/case#id> rdfs:range <http://www.example.org/ontology/case#Case> .
+
+<http://www.myontology.com/case#description> rdfs:range <http://www.myontology.com/case#Case> .
+
+<http://www.myontology.com/case#id> rdfs:range <http://www.myontology.com/case#Case> .
+
+<http://www.myontology.com/case#investigationEndDate> rdfs:range <http://www.myontology.com/case#Investigation> .
+
+<http://www.myontology.com/case#investigationStartDate> rdfs:range <http://www.myontology.com/case#Investigation> .
+
+<http://www.myontology.com/case#investigator> rdfs:range <http://www.myontology.com/case#Investigation>,
+        <http://www.myontology.com/case#Investigator> .
+
+<http://www.myontology.com/case#status> rdfs:range <http://www.myontology.com/case#Case>,
+        <http://www.myontology.com/case#CaseStatus> .
+
+<http://www.myontology.com/case#title> rdfs:range <http://www.myontology.com/case#Case> .
+

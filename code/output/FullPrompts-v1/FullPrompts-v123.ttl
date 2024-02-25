@@ -1,5 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-@prefix owl: <http://www.w3.org/2002/07/owl#>
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#># Defining our own vocabulary for the class Person@prefix myvocab: <http://example.com/myvocab#># Defining the class Personmyvocab:Person a owl:Class ;
-               rdfs:comment "A person or an individual" ;
-               rdfs:label "Person" .

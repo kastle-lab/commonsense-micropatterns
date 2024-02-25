@@ -1,7 +1,0 @@
- Since the term is very generic, I've made a simple example with an "Others" category and a few potential individuals.Please note that I used a fictional vocabulary (http://example.org/) to avoid collisions with real vocabularies. Replace this with your actual vocabulary.
-@prefix ex: <http://example.org/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-ex:Others a rdf:Class .
-ex:Thing1 a ex:Others .
-ex:Thing2 a ex:Others .
-ex:Thing3 a ex:Others .

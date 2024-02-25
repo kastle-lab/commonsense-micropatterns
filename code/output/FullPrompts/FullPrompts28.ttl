@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:Couch a rdf:Class ;
-    rdfs:label "Couch"@en ;
-    rdfs:comment "A piece of furniture for seating multiple people"@en;
-    rdfs:subClassOf ex:Furniture .

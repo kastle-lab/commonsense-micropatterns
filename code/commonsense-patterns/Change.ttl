@@ -1,0 +1,190 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/change#Cause> a rdfs:Class .
+
+<http://example.com/change#Change> a rdfs:Class .
+
+<http://example.com/change#Impact> a rdfs:Class .
+
+<http://example.com/ontology/change#CausalEvent> a rdfs:Class .
+
+<http://example.com/ontology/change#Change> a rdfs:Class .
+
+<http://example.org#Change> a rdfs:Class .
+
+<http://example.org#ChangeType> a rdfs:Class .
+
+<http://example.org/Change> a rdfs:Class .
+
+<http://example.org/Entity> a rdfs:Class .
+
+<http://example.org/State> a rdfs:Class .
+
+<http://example.org/change##Change> a rdfs:Class .
+
+<http://example.org/change##State> a rdfs:Class .
+
+<http://example.org/change#AgentCausingChange> a rdfs:Class .
+
+<http://example.org/change#Change> a rdfs:Class .
+
+<http://example.org/change#ChangeAgent> a rdfs:Class .
+
+<http://example.org/change#ChangeType> a rdfs:Class .
+
+<http://example.org/change#Entity> a rdfs:Class .
+
+<http://example.org/change#Transition> a rdfs:Class .
+
+<http://example.org/change#TypeOfChange> a rdfs:Class .
+
+<http://www.example.com#Change> a rdfs:Class .
+
+<http://www.example.com#Entity> a rdfs:Class .
+
+<http://www.example.org/#Change> a rdfs:Class .
+
+<http://www.example.org/change#Change> a rdfs:Class .
+
+<http://www.example.org/ontology/change#Agent> a rdfs:Class .
+
+<http://www.example.org/ontology/change#Change> a rdfs:Class .
+
+<http://www.example.org/ontology/change#Entity> a rdfs:Class .
+
+rdf:Resource a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+<http://example.com/change#hasCause> rdfs:range <http://example.com/change#Cause>,
+        <http://example.com/change#Change> .
+
+<http://example.com/change#hasImpact> rdfs:range <http://example.com/change#Change>,
+        <http://example.com/change#Impact> .
+
+<http://example.com/ontology/change#causedBy> rdfs:range <http://example.com/ontology/change#CausalEvent>,
+        <http://example.com/ontology/change#Change> .
+
+<http://example.com/ontology/change#hasBeginState> rdfs:range <http://example.com/ontology/change#Change>,
+        rdf:Resource .
+
+<http://example.com/ontology/change#hasEndState> rdfs:range <http://example.com/ontology/change#Change>,
+        rdf:Resource .
+
+<http://example.com/ontology/change#leadsTo> rdfs:range <http://example.com/ontology/change#Change> .
+
+<http://example.org#hasChangeType> rdfs:range <http://example.org#Change>,
+        <http://example.org#ChangeType> .
+
+<http://example.org#hasEndState> rdfs:range <http://example.org#Change>,
+        rdfs:Resource .
+
+<http://example.org#hasStartState> rdfs:range <http://example.org#Change>,
+        rdfs:Resource .
+
+<http://example.org#isTriggeredBy> rdfs:range <http://example.org#Change>,
+        rdfs:Resource .
+
+<http://example.org#occursAt> rdfs:range <http://example.org#Change> .
+
+<http://example.org#resultsIn> rdfs:range <http://example.org#Change>,
+        rdfs:Resource .
+
+<http://example.org/change##hasChangeEnd> rdfs:range <http://example.org/change##Change>,
+        <http://example.org/change##State> .
+
+<http://example.org/change##hasChangeStart> rdfs:range <http://example.org/change##Change>,
+        <http://example.org/change##State> .
+
+<http://example.org/change#ChangeIntensity> rdfs:range <http://example.org/change#Change> .
+
+<http://example.org/change#OccurrenceTime> rdfs:range <http://example.org/change#Change> .
+
+<http://example.org/change#affectsEntity> rdfs:range <http://example.org/change#Change>,
+        <http://example.org/change#Entity> .
+
+<http://example.org/change#causes> rdfs:range <http://example.org/change#ChangeAgent>,
+        <http://example.org/change#Transition> .
+
+<http://example.org/change#hasAffectedObject> rdfs:range <http://example.org/change#Change>,
+        rdfs:Resource .
+
+<http://example.org/change#hasChangeAgent> rdfs:range <http://example.org/change#Change>,
+        <http://example.org/change#ChangeAgent> .
+
+<http://example.org/change#hasChangeType> rdfs:range <http://example.org/change#Change>,
+        <http://example.org/change#ChangeType> .
+
+<http://example.org/change#hasEndTime> rdfs:range <http://example.org/change#Change> .
+
+<http://example.org/change#hasInitiator> rdfs:range <http://example.org/change#Change>,
+        rdfs:Resource .
+
+<http://example.org/change#hasResult> rdfs:range <http://example.org/change#Change>,
+        rdfs:Resource .
+
+<http://example.org/change#hasStartTime> rdfs:range <http://example.org/change#Change> .
+
+<http://example.org/change#hasTypeOfChange> rdfs:range <http://example.org/change#Change>,
+        <http://example.org/change#TypeOfChange> .
+
+<http://example.org/change#isCausedBy> rdfs:range <http://example.org/change#AgentCausingChange>,
+        <http://example.org/change#Change> .
+
+<http://example.org/hasChange> rdfs:range <http://example.org/Change>,
+        <http://example.org/Entity> .
+
+<http://example.org/hasChangeEndState> rdfs:range <http://example.org/Change>,
+        <http://example.org/State> .
+
+<http://example.org/hasChangeStartState> rdfs:range <http://example.org/Change>,
+        <http://example.org/State> .
+
+<http://example.org/hasContext> rdfs:range <http://example.org/Change>,
+        rdfs:Resource .
+
+<http://example.org/hasInitiator> rdfs:range <http://example.org/Change>,
+        rdfs:Resource .
+
+<http://example.org/hasResult> rdfs:range <http://example.org/Change>,
+        rdfs:Resource .
+
+<http://example.org/occursAt> rdfs:range <http://example.org/Change>,
+        rdfs:Resource .
+
+<http://www.example.com#hasChangeDate> rdfs:range <http://www.example.com#Change> .
+
+<http://www.example.com#hasFinalValue> rdfs:range <http://www.example.com#Change> .
+
+<http://www.example.com#hasInitialValue> rdfs:range <http://www.example.com#Change> .
+
+<http://www.example.com#isChangeOf> rdfs:range <http://www.example.com#Change>,
+        <http://www.example.com#Entity> .
+
+<http://www.example.org/#changeCausedBy> rdfs:range <http://www.example.org/#Change>,
+        owl:Thing .
+
+<http://www.example.org/#changeOccursIn> rdfs:range <http://www.example.org/#Change>,
+        owl:Thing .
+
+<http://www.example.org/change#causes> rdfs:range <http://www.example.org/change#Change> .
+
+<http://www.example.org/change#effects> rdfs:range <http://www.example.org/change#Change> .
+
+<http://www.example.org/ontology/change#causedBy> rdfs:range <http://www.example.org/ontology/change#Agent>,
+        <http://www.example.org/ontology/change#Change> .
+
+<http://www.example.org/ontology/change#hasLocation> rdfs:range <http://www.example.org/ontology/change#Change> .
+
+<http://www.example.org/ontology/change#hasSource> rdfs:range <http://www.example.org/ontology/change#Change>,
+        <http://www.example.org/ontology/change#Entity> .
+
+<http://www.example.org/ontology/change#hasTarget> rdfs:range <http://www.example.org/ontology/change#Change>,
+        <http://www.example.org/ontology/change#Entity> .
+
+<http://www.example.org/ontology/change#hasTime> rdfs:range <http://www.example.org/ontology/change#Change> .
+

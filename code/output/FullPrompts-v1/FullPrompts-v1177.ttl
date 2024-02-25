@@ -1,6 +1,0 @@
-@prefix : <http://example.com/ontology#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-:Thing a rdfs:Class ;
-  rdfs:comment "A representation of any object or concept" ;
-  rdfs:label "Thing" .

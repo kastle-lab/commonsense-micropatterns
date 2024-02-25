@@ -1,7 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ns: <http://example.org/ns#> .
-ns:End    rdf:type rdfs:Class ;
-    rdfs:label "End"@en ;
-    rdfs:comment "Represents the conclusion or finish of something"@en .

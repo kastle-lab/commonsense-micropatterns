@@ -1,0 +1,168 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/people#Person> a rdfs:Class .
+
+<http://example.org#Item> a rdfs:Class .
+
+<http://example.org#Person> a rdfs:Class .
+
+<http://example.org/people#Country> a rdfs:Class .
+
+<http://example.org/people#Gender> a rdfs:Class .
+
+<http://example.org/people#Occupation> a rdfs:Class .
+
+<http://example.org/people#Person> a rdfs:Class .
+
+<http://myontology.com/people#City> a rdfs:Class .
+
+<http://myontology.com/people#Person> a rdfs:Class .
+
+<http://ontology.example.org/people#Gender> a rdfs:Class .
+
+<http://ontology.example.org/people#Occupation> a rdfs:Class .
+
+<http://ontology.example.org/people#Person> a rdfs:Class .
+
+<http://ontology.example.org/people#PhoneNumber> a rdfs:Class .
+
+<http://www.example.org/#Gender> a rdfs:Class .
+
+<http://www.example.org/#Person> a rdfs:Class .
+
+<http://www.example.org/person/Gender> a rdfs:Class .
+
+<http://www.example.org/person/Person> a rdfs:Class .
+
+<http://www.someontology.com/people#Gender> a rdfs:Class .
+
+<http://www.someontology.com/people#Person> a rdfs:Class .
+
+<http://example.com/birthDate> rdfs:range <http://example.com/Person> .
+
+<http://example.com/hasChild> rdfs:range <http://example.com/Person> .
+
+<http://example.com/hasParent> rdfs:range <http://example.com/Person> .
+
+<http://example.com/name> rdfs:range <http://example.com/Person> .
+
+<http://example.com/people#hasAge> rdfs:range <http://example.com/people#Person> .
+
+<http://example.com/people#hasFirstName> rdfs:range <http://example.com/people#Person> .
+
+<http://example.com/people#hasGender> rdfs:range <http://example.com/people#Person> .
+
+<http://example.com/people#hasLastName> rdfs:range <http://example.com/people#Person> .
+
+<http://example.org#provides> rdfs:range <http://example.org#Item>,
+        <http://example.org#Person> .
+
+<http://example.org/people#age> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#birthdate> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#firstName> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#gender> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#hasAge> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#hasChild> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#hasFirstName> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#hasGender> rdfs:range <http://example.org/people#Gender>,
+        <http://example.org/people#Person> .
+
+<http://example.org/people#hasLastName> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#hasName> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#hasNationality> rdfs:range <http://example.org/people#Country>,
+        <http://example.org/people#Person> .
+
+<http://example.org/people#hasOccupation> rdfs:range <http://example.org/people#Occupation>,
+        <http://example.org/people#Person> .
+
+<http://example.org/people#hasParent> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#isMarriedTo> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#lastName> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#livesIn> rdfs:range <http://example.org/people#Person> .
+
+<http://example.org/people#name> rdfs:range <http://example.org/people#Person> .
+
+<http://myontology.com/people#age> rdfs:range <http://myontology.com/people#Person> .
+
+<http://myontology.com/people#bornIn> rdfs:range <http://myontology.com/people#City>,
+        <http://myontology.com/people#Person> .
+
+<http://myontology.com/people#cityCountry> rdfs:range <http://myontology.com/people#City> .
+
+<http://myontology.com/people#cityCounty> rdfs:range <http://myontology.com/people#City> .
+
+<http://myontology.com/people#cityName> rdfs:range <http://myontology.com/people#City> .
+
+<http://myontology.com/people#gender> rdfs:range <http://myontology.com/people#Person> .
+
+<http://myontology.com/people#livesIn> rdfs:range <http://myontology.com/people#City>,
+        <http://myontology.com/people#Person> .
+
+<http://myontology.com/people#name> rdfs:range <http://myontology.com/people#Person> .
+
+<http://ontology.example.org/people#address> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#age> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#dateOfBirth> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#gender> rdfs:range <http://ontology.example.org/people#Gender>,
+        <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#hasChild> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#hasOccupation> rdfs:range <http://ontology.example.org/people#Occupation>,
+        <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#hasParent> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#hasPhoneNumber> rdfs:range <http://ontology.example.org/people#Person>,
+        <http://ontology.example.org/people#PhoneNumber> .
+
+<http://ontology.example.org/people#marriedTo> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#name> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://ontology.example.org/people#surname> rdfs:range <http://ontology.example.org/people#Person> .
+
+<http://www.example.org/#age> rdfs:range <http://www.example.org/#Person> .
+
+<http://www.example.org/#firstName> rdfs:range <http://www.example.org/#Person> .
+
+<http://www.example.org/#hasChild> rdfs:range <http://www.example.org/#Person> .
+
+<http://www.example.org/#hasGender> rdfs:range <http://www.example.org/#Gender>,
+        <http://www.example.org/#Person> .
+
+<http://www.example.org/#hasParent> rdfs:range <http://www.example.org/#Person> .
+
+<http://www.example.org/#lastName> rdfs:range <http://www.example.org/#Person> .
+
+<http://www.example.org/person/hasAge> rdfs:range <http://www.example.org/person/Person> .
+
+<http://www.example.org/person/hasGender> rdfs:range <http://www.example.org/person/Gender>,
+        <http://www.example.org/person/Person> .
+
+<http://www.example.org/person/hasName> rdfs:range <http://www.example.org/person/Person> .
+
+<http://www.someontology.com/people#hasAge> rdfs:range <http://www.someontology.com/people#Person> .
+
+<http://www.someontology.com/people#hasGender> rdfs:range <http://www.someontology.com/people#Gender>,
+        <http://www.someontology.com/people#Person> .
+
+<http://www.someontology.com/people#hasName> rdfs:range <http://www.someontology.com/people#Person> .
+

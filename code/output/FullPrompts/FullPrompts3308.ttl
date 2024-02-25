@@ -1,4 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:Body a rdfs:Class ;
-  rdfs:label "Body"@en ;
-  rdfs:comment "An individual human or animal's physical structure"@en .

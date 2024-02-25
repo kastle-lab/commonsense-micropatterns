@@ -1,8 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dbo: <http://dbpedia.org/ontology/> .
-_:day a dbo:Day;
-   dbo:follows _:previousDay;
-   dbo:followedBy _:nextDay;
-   dbo:dayOfMonth ?dayOfMonth;
-   dbo:dayOfWeek ?dayOfWeek;
-   dbo:dayOfYear ?dayOfYear.?dayOfMonth a xsd:integer.?dayOfWeek a xsd:string.?dayOfYear a xsd:integer.

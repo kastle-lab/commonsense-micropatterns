@@ -1,6 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/#> .
-ex:year a rdfs:Class ;
-    rdfs:label "Year" ;
-    rdfs:comment "Represents a calendar year" ;
-    rdfs:range xsd:GYear .

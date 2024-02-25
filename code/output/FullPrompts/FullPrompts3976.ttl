@@ -1,7 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix ex: <http://example.org/> .
-ex:myMoment a time:Instant ;
-    time:inXSDDateTime "2022-07-01T00:00:00Z"^^xsd:dateTime ;
-    rdfs:label "a specific moment in time" .

@@ -1,7 +1,0 @@
-@prefix : <http://example.org/ontology#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-:Idea a owl:Class ;
-   rdfs:label "Idea" ;
-  rdfs:subClassOf :MentalObject ;
-  rdfs:comment "A thought or suggestion as to a possible course of action."@en .

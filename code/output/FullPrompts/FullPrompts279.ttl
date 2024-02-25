@@ -1,5 +1,0 @@
-@prefix : <http://example.org/ontology#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-:Day a rdfs:Class ;
- rdfs:label "Day"@en ;
- rdfs:comment "A class representing the concept of a day"@en .

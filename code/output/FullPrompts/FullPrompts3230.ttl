@@ -1,7 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-ex:Minute a rdfs:Class ;
-     rdfs:label "Minute"@en ;
-     rdfs:comment "Class representing the concept of 'minute', a unit of time"@en .
-# Example usage:ex:duration1 a ex:Minute ;
-     ex:value "10"^^xsd:integer .

@@ -1,9 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-ex:Party1 a foaf:Organization ;
-  foaf:name "Party Name" ;
-  foaf:member ex:Member1, ex:Member2 .
-ex:Member1 a foaf:Person ;
-  foaf:name "Member Name 1" .
-ex:Member2 a foaf:Person ;
-  foaf:name "Member Name 2" .

@@ -1,3 +1,0 @@
-@prefix ex: <http://example.org/>.ex:PhilosophicalConcept a rdfs:Class.ex:practitionerOf a rdf:Property;
-    rdfs:domain ex:Person;
-    rdfs:range ex:PhilosophicalConcept.ex:Taoism a ex:PhilosophicalConcept.ex:LaoTzu a ex:Person.ex:LaoTzu ex:practitionerOf ex:Taoism.

@@ -1,3 +1,0 @@
- Here’s a general pattern how it could look like.# Define prefixes
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ex: <http://example.com/> .

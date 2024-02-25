@@ -1,4 +1,0 @@
-@prefix : <http://example.com#> .
-:Way  a owl:Class .
-:provide  a owl:ObjectProperty ;
-  rdfs:domain :Way .

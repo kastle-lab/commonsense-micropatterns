@@ -1,4 +1,0 @@
-@prefix : <http://example.org/#> .
-:someService a :Service ;
-    :providedBy :someServiceProvider .
-:someServiceProvider a :ServiceProvider .

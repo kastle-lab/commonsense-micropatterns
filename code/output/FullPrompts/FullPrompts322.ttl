@@ -1,2 +1,0 @@
-@prefix : <http://www.example.org/#> .
-:Thing a owl:Class .

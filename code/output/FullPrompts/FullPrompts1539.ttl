@@ -1,6 +1,0 @@
-@prefix ex: <http://example.com#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-ex:Room a rdfs:Class .
-rdfs:label "Room"@en .
-ex:hasPurpose a rdf:Property ;

@@ -1,3 +1,0 @@
-@prefix ex: <http://example.org/> .
- ex:Guy a ex:Person ;
-  ex:hasName "Guy"^^xsd:string .

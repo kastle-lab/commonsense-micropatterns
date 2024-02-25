@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-ex:year a rdf:Property ;
-    rdfs:domain ex:Event ;
-    rdfs:range xsd:gYear .

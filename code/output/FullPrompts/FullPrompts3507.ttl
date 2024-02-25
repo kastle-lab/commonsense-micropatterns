@@ -1,5 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ex: <http://www.example.com/ontology#> .
-ex:Level a rdf:Class ;
-    rdfs:label "Level" ;
-    rdfs:comment "A class denoting a level in a grading or ranking system." .

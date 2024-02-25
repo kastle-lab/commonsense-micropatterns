@@ -1,6 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ex: <http://example.org/> .
-ex:Problem1 a ex:Problem ;
-   ex:title "Problem Title" ;
-   ex:description "Detailed description of the problem" ;
-   ex:solution "Proposed solution for the problem" .

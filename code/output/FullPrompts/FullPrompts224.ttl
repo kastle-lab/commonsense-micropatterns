@@ -1,4 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix dbr: <http://dbpedia.org/resource/> .
-dbr:Path rdf:type dbo:Way .
-dbo:Way a rdf:Class .

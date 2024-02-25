@@ -1,9 +1,0 @@
-@prefix ex: <http://example.com/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2000/10/XMLSchema#> .
-ex:Company rdf:type rdfs:Class .
-ex:company1 rdf:type ex:Company ;
-  ex:companyName "Company One"^^xsd:string ;
-  ex:establishedDate "2000-01-01"^^xsd:date ;
-  ex:hasLocation "Location of Company One"^^xsd:string .

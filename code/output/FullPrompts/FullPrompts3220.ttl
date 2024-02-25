@@ -1,7 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/> .
-ex:Minute a rdfs:Class ;
-    rdfs:label "Minute" ;
-    rdfs:comment "Unit of time that equals to 60 seconds" ;
-    rdfs:subClassOf ex:UnitOfTime ;
-     ex:equalsToInSeconds xsd:integer "60" .

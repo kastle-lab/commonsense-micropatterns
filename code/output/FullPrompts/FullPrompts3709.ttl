@@ -1,7 +1,0 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://www.example.org/ontology#> .
-:Result rdf:type owl:Class ;
-    rdfs:label "Result"@en ;
-    rdfs:comment "Represents the output or outcome of an action or process"@en .

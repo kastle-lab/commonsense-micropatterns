@@ -1,3 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:Home a ex:Entity ;
-  ex:provide ex:Service .

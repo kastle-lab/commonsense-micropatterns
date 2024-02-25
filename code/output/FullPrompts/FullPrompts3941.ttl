@@ -1,6 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:Guy a ex:Human ;
-  ex:hasName "Guy" ;
-  ex:hasAge 30 ;
-  ex:hasGender "Male" ;
-  ex:hasOccupation ex:Engineer .

@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org#> .
-ex:Morning a owl:Class ;
-    rdfs:label "Morning"@en ;
-    rdfs:comment "A measurement or indicator of the time period from sunrise to noon."@en ;
-    rdfs:subClassOf ex:PartOfTheDay .

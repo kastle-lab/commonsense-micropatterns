@@ -1,0 +1,179 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:n93522e1a913c488cb2291e81a6dcdc3fb2 a rdfs:Class .
+
+<http://example.org#Cause> a rdfs:Class .
+
+<http://example.org#Problem> a rdfs:Class .
+
+<http://example.org#Solution> a rdfs:Class .
+
+<http://example.org/ontology#Problem> a rdfs:Class .
+
+<http://example.org/problem#Cause> a rdfs:Class .
+
+<http://example.org/problem#Context> a rdfs:Class .
+
+<http://example.org/problem#Effect> a rdfs:Class .
+
+<http://example.org/problem#Problem> a rdfs:Class .
+
+<http://example.org/problem#Solution> a rdfs:Class .
+
+<http://example.org/problem/DifficultyLevel> a rdfs:Class .
+
+<http://example.org/problem/Problem> a rdfs:Class .
+
+<http://example.org/problem/Solution> a rdfs:Class .
+
+<http://example.org/stuff/1.0/Problem> a rdfs:Class .
+
+<http://example.org/stuff/1.0/Solution> a rdfs:Class .
+
+<http://www.example.org/myOntology#Problem> a rdfs:Class .
+
+<http://www.example.org/problem#Cause> a rdfs:Class .
+
+<http://www.example.org/problem#Domain> a rdfs:Class .
+
+<http://www.example.org/problem#Problem> a rdfs:Class .
+
+<http://www.example.org/problem#ProblemType> a rdfs:Class .
+
+<http://www.example.org/problem#Solution> a rdfs:Class .
+
+<http://www.example.org/problem#Solving> a rdfs:Class .
+
+<http://www.semanticweb.org/problem#Cause> a rdfs:Class .
+
+<http://www.semanticweb.org/problem#Impact> a rdfs:Class .
+
+<http://www.semanticweb.org/problem#Problem> a rdfs:Class .
+
+<http://www.semanticweb.org/problem#Solution> a rdfs:Class .
+
+rdf:langString a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+<http://example.org#hasCause> rdfs:range <http://example.org#Cause>,
+        <http://example.org#Problem> .
+
+<http://example.org#hasDescription> rdfs:range <http://example.org#Problem> .
+
+<http://example.org#hasDetails> rdfs:range <http://example.org#Cause> .
+
+<http://example.org#hasRelatedProblem> rdfs:range <http://example.org#Problem> .
+
+<http://example.org#hasResult> rdfs:range <http://example.org#Solution> .
+
+<http://example.org#hasSeverity> rdfs:range <http://example.org#Problem> .
+
+<http://example.org#hasSolution> rdfs:range <http://example.org#Problem>,
+        <http://example.org#Solution> .
+
+<http://example.org#hasStep> rdfs:range <http://example.org#Solution> .
+
+<http://example.org/ontology#problemDescription> rdfs:range <http://example.org/ontology#Problem> .
+
+<http://example.org/ontology#problemSolution> rdfs:range _:n93522e1a913c488cb2291e81a6dcdc3fb2,
+        <http://example.org/ontology#Problem> .
+
+<http://example.org/problem> rdfs:range <http://example.org/problem#Context>,
+        <http://example.org/problem#Solution> .
+
+<http://example.org/problem#HasCause> rdfs:range <http://example.org/problem#Cause>,
+        <http://example.org/problem#Problem> .
+
+<http://example.org/problem#HasEffect> rdfs:range <http://example.org/problem#Effect>,
+        <http://example.org/problem#Problem> .
+
+<http://example.org/problem#HasSolution> rdfs:range <http://example.org/problem#Problem>,
+        <http://example.org/problem#Solution> .
+
+<http://example.org/problem#hasDifficulty> rdfs:range <http://example.org/problem#Problem> .
+
+<http://example.org/problem#hasProblem> rdfs:range <http://example.org/problem#Context>,
+        <http://example.org/problem#Problem> .
+
+<http://example.org/problem#hasSolution> rdfs:range <http://example.org/problem#Problem>,
+        <http://example.org/problem#Solution> .
+
+<http://example.org/problem#hasTimeToSolve> rdfs:range <http://example.org/problem#Solution> .
+
+<http://example.org/problem#isCausedBy> rdfs:range <http://example.org/problem#Cause>,
+        <http://example.org/problem#Problem> .
+
+<http://example.org/problem/hasDifficultyLevel> rdfs:range <http://example.org/problem/DifficultyLevel>,
+        <http://example.org/problem/Problem> .
+
+<http://example.org/problem/hasSolution> rdfs:range <http://example.org/problem/Problem>,
+        <http://example.org/problem/Solution> .
+
+<http://example.org/problem/solutionDescription> rdfs:range <http://example.org/problem/Solution> .
+
+<http://example.org/stuff/1.0/hasSolution> rdfs:range <http://example.org/stuff/1.0/Problem>,
+        <http://example.org/stuff/1.0/Solution> .
+
+<http://www.example.org/myOntology#hasProblem> rdfs:range <http://www.example.org/myOntology#Problem>,
+        owl:Thing .
+
+<http://www.example.org/myOntology#issueName> rdfs:range <http://www.example.org/myOntology#Problem> .
+
+<http://www.example.org/problem#belongsToDomain> rdfs:range <http://www.example.org/problem#Domain>,
+        <http://www.example.org/problem#Problem> .
+
+<http://www.example.org/problem#causeDescription> rdfs:range <http://www.example.org/problem#Cause> .
+
+<http://www.example.org/problem#description> rdfs:range <http://www.example.org/problem#Problem> .
+
+<http://www.example.org/problem#hasCause> rdfs:range <http://www.example.org/problem#Cause>,
+        <http://www.example.org/problem#Problem> .
+
+<http://www.example.org/problem#hasComplexity> rdfs:range <http://www.example.org/problem#Problem> .
+
+<http://www.example.org/problem#hasDescription> rdfs:range <http://www.example.org/problem#Problem>,
+        <http://www.example.org/problem#Solution>,
+        owl:Thing .
+
+<http://www.example.org/problem#hasDetails> rdfs:range <http://www.example.org/problem#Solution> .
+
+<http://www.example.org/problem#hasDifficulty> rdfs:range <http://www.example.org/problem#Problem>,
+        rdf:langString .
+
+<http://www.example.org/problem#hasId> rdfs:range <http://www.example.org/problem#Problem> .
+
+<http://www.example.org/problem#hasSolution> rdfs:range <http://www.example.org/problem#Problem>,
+        <http://www.example.org/problem#Solution>,
+        <http://www.example.org/problem#Solving> .
+
+<http://www.example.org/problem#hasTitle> rdfs:range <http://www.example.org/problem#Solution> .
+
+<http://www.example.org/problem#isComplex> rdfs:range <http://www.example.org/problem#Problem> .
+
+<http://www.example.org/problem#isSolutionOf> rdfs:range <http://www.example.org/problem#Problem>,
+        <http://www.example.org/problem#Solution> .
+
+<http://www.example.org/problem#isSolvedBy> rdfs:range <http://www.example.org/problem#Problem>,
+        <http://www.example.org/problem#Solution> .
+
+<http://www.example.org/problem#isTypeOf> rdfs:range <http://www.example.org/problem#Problem>,
+        <http://www.example.org/problem#ProblemType> .
+
+<http://www.example.org/problem#solution> rdfs:range <http://www.example.org/problem#Problem> .
+
+<http://www.example.org/problem#timeToSolve> rdfs:range <http://www.example.org/problem#Problem> .
+
+<http://www.semanticweb.org/problem#hasCause> rdfs:range <http://www.semanticweb.org/problem#Cause>,
+        <http://www.semanticweb.org/problem#Problem> .
+
+<http://www.semanticweb.org/problem#hasImpact> rdfs:range <http://www.semanticweb.org/problem#Impact>,
+        <http://www.semanticweb.org/problem#Problem> .
+
+<http://www.semanticweb.org/problem#hasSolution> rdfs:range <http://www.semanticweb.org/problem#Problem>,
+        <http://www.semanticweb.org/problem#Solution> .
+
+<http://www.semanticweb.org/problem#severity> rdfs:range <http://www.semanticweb.org/problem#Problem> .
+

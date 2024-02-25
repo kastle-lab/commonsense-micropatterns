@@ -1,0 +1,356 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com#ResearchField> a rdfs:Class .
+
+<http://example.com#ResearchProject> a rdfs:Class .
+
+<http://example.com#Researcher> a rdfs:Class .
+
+<http://example.com/ontology/research#Methodology> a rdfs:Class .
+
+<http://example.com/ontology/research#Research> a rdfs:Class .
+
+<http://example.com/ontology/research#Researcher> a rdfs:Class .
+
+<http://example.com/research#Publication> a rdfs:Class .
+
+<http://example.com/research#Research> a rdfs:Class .
+
+<http://example.com/research#Researcher> a rdfs:Class .
+
+<http://example.org/Research> a rdfs:Class .
+
+<http://example.org/Research#Publication> a rdfs:Class .
+
+<http://example.org/Research#Research> a rdfs:Class .
+
+<http://example.org/Research#Researcher> a rdfs:Class .
+
+<http://example.org/ResearchTopic> a rdfs:Class .
+
+<http://example.org/Researcher> a rdfs:Class .
+
+<http://example.org/Topic> a rdfs:Class .
+
+<http://example.org/ontology/research#Research> a rdfs:Class .
+
+<http://example.org/ontology/research#ResearchPaper> a rdfs:Class .
+
+<http://example.org/ontology/research#ResearchProject> a rdfs:Class .
+
+<http://example.org/ontology/research#Researcher> a rdfs:Class .
+
+<http://example.org/research#Author> a rdfs:Class .
+
+<http://example.org/research#Field> a rdfs:Class .
+
+<http://example.org/research#Institution> a rdfs:Class .
+
+<http://example.org/research#Person> a rdfs:Class .
+
+<http://example.org/research#Publication> a rdfs:Class .
+
+<http://example.org/research#Research> a rdfs:Class .
+
+<http://example.org/research#ResearchPaper> a rdfs:Class .
+
+<http://example.org/research#ResearchTopic> a rdfs:Class .
+
+<http://example.org/research#Researcher> a rdfs:Class .
+
+<http://example.org/research#Subject> a rdfs:Class .
+
+<http://example.org/research#Topic> a rdfs:Class .
+
+<http://example.org/research/Research> a rdfs:Class .
+
+<http://example.org/research/Researcher> a rdfs:Class .
+
+<http://example.org/researcher> a rdfs:Class .
+
+<http://www.example.com/#Research> a rdfs:Class .
+
+<http://www.example.com/#Researcher> a rdfs:Class .
+
+<http://www.example.com/#SubjectField> a rdfs:Class .
+
+<http://www.example.org/ontologies/research#FieldOfStudy> a rdfs:Class .
+
+<http://www.example.org/ontologies/research#Research> a rdfs:Class .
+
+<http://www.example.org/ontologies/research#ResearchMethod> a rdfs:Class .
+
+<http://www.example.org/ontologies/research#Researcher> a rdfs:Class .
+
+<http://www.example.org/ontology/research#FieldOfStudy> a rdfs:Class .
+
+<http://www.example.org/ontology/research#Journal> a rdfs:Class .
+
+<http://www.example.org/ontology/research#Research> a rdfs:Class .
+
+<http://www.example.org/ontology/research#ResearchPaper> a rdfs:Class .
+
+<http://www.example.org/ontology/research#ResearchTopic> a rdfs:Class .
+
+<http://www.example.org/ontology/research#Researcher> a rdfs:Class .
+
+<http://www.example.org/research#Academic_Institution> a rdfs:Class .
+
+<http://www.example.org/research#AreaOfResearch> a rdfs:Class .
+
+<http://www.example.org/research#Author> a rdfs:Class .
+
+<http://www.example.org/research#Field_of_Study> a rdfs:Class .
+
+<http://www.example.org/research#Product> a rdfs:Class .
+
+<http://www.example.org/research#Publication> a rdfs:Class .
+
+<http://www.example.org/research#Research> a rdfs:Class .
+
+<http://www.example.org/research#ResearchField> a rdfs:Class .
+
+<http://www.example.org/research#ResearchMethod> a rdfs:Class .
+
+<http://www.example.org/research#ResearchTopic> a rdfs:Class .
+
+<http://www.example.org/research#Researcher> a rdfs:Class .
+
+<http://www.example.org/research#Subject> a rdfs:Class .
+
+<http://www.example.org/research#Topic> a rdfs:Class .
+
+<http://www.example.org/research#diploma> a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+foaf:Organization a rdfs:Class .
+
+<http://example.com#conducts> rdfs:range <http://example.com#ResearchProject>,
+        <http://example.com#Researcher> .
+
+<http://example.com#inField> rdfs:range <http://example.com#ResearchField>,
+        <http://example.com#ResearchProject> .
+
+<http://example.com/ontology/research#conducts> rdfs:range <http://example.com/ontology/research#Research>,
+        <http://example.com/ontology/research#Researcher> .
+
+<http://example.com/ontology/research#employs> rdfs:range <http://example.com/ontology/research#Methodology>,
+        <http://example.com/ontology/research#Research> .
+
+<http://example.com/research#has_publication> rdfs:range <http://example.com/research#Publication>,
+        <http://example.com/research#Research> .
+
+<http://example.com/research#has_researcher> rdfs:range <http://example.com/research#Research>,
+        <http://example.com/research#Researcher> .
+
+<http://example.org/Research#hasPublicationDate> rdfs:range <http://example.org/Research#Publication> .
+
+<http://example.org/Research#hasResearcher> rdfs:range <http://example.org/Research#Research>,
+        <http://example.org/Research#Researcher> .
+
+<http://example.org/Research#hasTopic> rdfs:range <http://example.org/Research#Research>,
+        owl:Thing .
+
+<http://example.org/Research#publishedIn> rdfs:range <http://example.org/Research#Publication>,
+        <http://example.org/Research#Research> .
+
+<http://example.org/conducts> rdfs:range <http://example.org/Research>,
+        <http://example.org/researcher> .
+
+<http://example.org/focusesOn> rdfs:range <http://example.org/Research>,
+        <http://example.org/ResearchTopic> .
+
+<http://example.org/hasResearcher> rdfs:range <http://example.org/Research>,
+        <http://example.org/Researcher> .
+
+<http://example.org/hasTopic> rdfs:range <http://example.org/Research>,
+        <http://example.org/Topic> .
+
+<http://example.org/ontology/research#affiliation> rdfs:range <http://example.org/ontology/research#Researcher>,
+        foaf:Organization .
+
+<http://example.org/ontology/research#conducts> rdfs:range <http://example.org/ontology/research#Research>,
+        <http://example.org/ontology/research#Researcher> .
+
+<http://example.org/ontology/research#dueDate> rdfs:range <http://example.org/ontology/research#ResearchProject> .
+
+<http://example.org/ontology/research#publishes> rdfs:range <http://example.org/ontology/research#ResearchPaper>,
+        <http://example.org/ontology/research#Researcher> .
+
+<http://example.org/research#affiliatedInstitution> rdfs:range <http://example.org/research#Researcher> .
+
+<http://example.org/research#conducts> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#Researcher> .
+
+<http://example.org/research#conductsResearch> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#Researcher> .
+
+<http://example.org/research#description> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#endDate> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#funding> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#hasEndDate> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#hasName> rdfs:range <http://example.org/research#Person> .
+
+<http://example.org/research#hasPublication> rdfs:range <http://example.org/research#Publication>,
+        <http://example.org/research#Research> .
+
+<http://example.org/research#hasResearchTopic> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#ResearchTopic> .
+
+<http://example.org/research#hasResearcher> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#Researcher> .
+
+<http://example.org/research#hasStartDate> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#hasSubject> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#Subject> .
+
+<http://example.org/research#hasTitle> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#inField> rdfs:range <http://example.org/research#Field>,
+        <http://example.org/research#Research> .
+
+<http://example.org/research#institution> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#isAbout> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#Topic> .
+
+<http://example.org/research#isProducedBy> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#Researcher> .
+
+<http://example.org/research#name> rdfs:range <http://example.org/research#Researcher> .
+
+<http://example.org/research#publication> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#publishedIn> rdfs:range <http://example.org/research#Institution>,
+        <http://example.org/research#Research> .
+
+<http://example.org/research#researchTopic> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#researchedBy> rdfs:range <http://example.org/research#Author>,
+        <http://example.org/research#ResearchPaper> .
+
+<http://example.org/research#researcher> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#specializesIn> rdfs:range <http://example.org/research#Research>,
+        <http://example.org/research#Researcher> .
+
+<http://example.org/research#startDate> rdfs:range <http://example.org/research#Research> .
+
+<http://example.org/research#supports> rdfs:range <http://example.org/research#Institution>,
+        <http://example.org/research#Research> .
+
+<http://example.org/research/conducts> rdfs:range <http://example.org/research/Research>,
+        <http://example.org/research/Researcher> .
+
+<http://example.org/research/title> rdfs:range <http://example.org/research/Research> .
+
+<http://www.example.com/#hasResearcher> rdfs:range <http://www.example.com/#Research>,
+        <http://www.example.com/#Researcher> .
+
+<http://www.example.com/#hasSubjectField> rdfs:range <http://www.example.com/#Research>,
+        <http://www.example.com/#SubjectField> .
+
+<http://www.example.org/ontologies/research#conducts> rdfs:range <http://www.example.org/ontologies/research#Research>,
+        <http://www.example.org/ontologies/research#Researcher> .
+
+<http://www.example.org/ontologies/research#inField> rdfs:range <http://www.example.org/ontologies/research#FieldOfStudy>,
+        <http://www.example.org/ontologies/research#Research> .
+
+<http://www.example.org/ontologies/research#usesMethod> rdfs:range <http://www.example.org/ontologies/research#Research>,
+        <http://www.example.org/ontologies/research#ResearchMethod> .
+
+<http://www.example.org/ontology/research#belongsTo> rdfs:range <http://www.example.org/ontology/research#FieldOfStudy>,
+        <http://www.example.org/ontology/research#Research> .
+
+<http://www.example.org/ontology/research#conducts> rdfs:range <http://www.example.org/ontology/research#Research>,
+        <http://www.example.org/ontology/research#Researcher> .
+
+<http://www.example.org/ontology/research#hasResearcher> rdfs:range <http://www.example.org/ontology/research#Research>,
+        <http://www.example.org/ontology/research#Researcher> .
+
+<http://www.example.org/ontology/research#hasTopic> rdfs:range <http://www.example.org/ontology/research#Research>,
+        <http://www.example.org/ontology/research#ResearchTopic> .
+
+<http://www.example.org/ontology/research#isWrittenBy> rdfs:range <http://www.example.org/ontology/research#ResearchPaper>,
+        <http://www.example.org/ontology/research#Researcher> .
+
+<http://www.example.org/ontology/research#publishedIn> rdfs:range <http://www.example.org/ontology/research#Journal>,
+        <http://www.example.org/ontology/research#ResearchPaper> .
+
+<http://www.example.org/research#authorOf> rdfs:range <http://www.example.org/research#Author>,
+        <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#conducts> rdfs:range <http://www.example.org/research#Research>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#contributesTo> rdfs:range <http://www.example.org/research#ResearchField>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#hasAffiliation> rdfs:range <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#hasAreaOfResearch> rdfs:range <http://www.example.org/research#AreaOfResearch>,
+        <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#hasAuthor> rdfs:range <http://www.example.org/research#Product>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#hasDiploma> rdfs:range <http://www.example.org/research#Researcher>,
+        <http://www.example.org/research#diploma> .
+
+<http://www.example.org/research#hasEndDate> rdfs:range <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#hasName> rdfs:range <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#hasPublication> rdfs:range <http://www.example.org/research#Publication>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#hasResearcher> rdfs:range <http://www.example.org/research#Research>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#hasStartDate> rdfs:range <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#hasSubject> rdfs:range <http://www.example.org/research#Research>,
+        <http://www.example.org/research#Subject> .
+
+<http://www.example.org/research#hasTopic> rdfs:range <http://www.example.org/research#Research>,
+        <http://www.example.org/research#Subject>,
+        <http://www.example.org/research#Topic> .
+
+<http://www.example.org/research#inField> rdfs:range <http://www.example.org/research#Research>,
+        <http://www.example.org/research#ResearchField> .
+
+<http://www.example.org/research#outputs> rdfs:range <http://www.example.org/research#Publication>,
+        <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#performs> rdfs:range <http://www.example.org/research#Research>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#publishedIn> rdfs:range <http://www.example.org/research#Publication>,
+        <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#publishes> rdfs:range <http://www.example.org/research#Publication>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#resultsIn> rdfs:range <http://www.example.org/research#Publication>,
+        <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#studies> rdfs:range <http://www.example.org/research#ResearchTopic>,
+        <http://www.example.org/research#Researcher> .
+
+<http://www.example.org/research#study> rdfs:range <http://www.example.org/research#Field_of_Study>,
+        <http://www.example.org/research#Research> .
+
+<http://www.example.org/research#uses> rdfs:range <http://www.example.org/research#Research>,
+        <http://www.example.org/research#ResearchMethod> .
+
+<http://www.example.org/research#workAt> rdfs:range <http://www.example.org/research#Academic_Institution>,
+        <http://www.example.org/research#Author> .
+

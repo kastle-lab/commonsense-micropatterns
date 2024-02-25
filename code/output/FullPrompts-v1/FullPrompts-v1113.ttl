@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org#> .
-ex:Way a rdfs:Class .
-ex:provide a rdf:Property ;
-    rdfs:domain ex:Way ;
-    rdfs:range rdfs:Resource .

@@ -1,5 +1,0 @@
-@prefix schema: <http://schema.org/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-schema:Eye a owl:Class ;
-    rdfs:label "Eye"@en ;
-    rdfs:comment "A class representing the anatomical structure, Eye." .

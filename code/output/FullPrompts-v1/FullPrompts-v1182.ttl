@@ -1,6 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix ex: <http://example.com/> .
-ex:Thing a owl:Class ;
-    rdfs:label "Thing"@en ;
-    rdfs:comment "A class representing the concept of a 'Thing'"@en .

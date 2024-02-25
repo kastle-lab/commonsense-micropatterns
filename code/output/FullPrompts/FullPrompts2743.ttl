@@ -1,4 +1,0 @@
-@prefix : <http://example.org/> .
-:House a rdfs:Class ;
-  rdfs:comment "The class of all houses."@en ;
-    rdfs:subClassOf :Building .

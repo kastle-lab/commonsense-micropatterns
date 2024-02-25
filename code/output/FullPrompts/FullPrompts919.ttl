@@ -1,9 +1,0 @@
-@prefix ex: <http://example.com/> .
-@prefix schema: <http://schema.org/> .
-ex:Group1  a schema:Organization ;
-  schema:name "Sample Group" ;
-  schema:member ex:Member1, ex:Member2 .
-  ex:Member1  a schema:Person ;
-  schema:name "Member 1" .
-  ex:Member2  a schema:Person ;
-  schema:name "Member 2" .

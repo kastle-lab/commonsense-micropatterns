@@ -1,1 +1,0 @@
-ex:Minute a rdfs:Class .

@@ -1,0 +1,81 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/back#Back> a rdfs:Class .
+
+<http://example.com/back#BackPain> a rdfs:Class .
+
+<http://example.org/Back> a rdfs:Class .
+
+<http://example.org/Back_Condition> a rdfs:Class .
+
+<http://example.org/back#Back> a rdfs:Class .
+
+<http://example.org/back#BackDisease> a rdfs:Class .
+
+<http://example.org/back#Injury> a rdfs:Class .
+
+<http://example.org/back#Pain> a rdfs:Class .
+
+<http://www.example.com/back#Back> a rdfs:Class .
+
+<http://www.example.com/back#Human> a rdfs:Class .
+
+<http://www.example.com/back#HumanBody> a rdfs:Class .
+
+<http://www.example.com/back#backpain> a rdfs:Class .
+
+<http://www.example.org/Back> a rdfs:Class .
+
+<http://www.example.org/Place> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com/back#HasPart> rdfs:range <http://example.com/back#Back> .
+
+<http://example.com/back#HasSymptom> rdfs:range <http://example.com/back#Back>,
+        <http://example.com/back#BackPain> .
+
+<http://example.com/back#IsLocationOf> rdfs:range <http://example.com/back#Back>,
+        <http://example.com/back#BackPain> .
+
+<http://example.org/back#Affects> rdfs:range <http://example.org/back#Back>,
+        <http://example.org/back#BackDisease> .
+
+<http://example.org/back#ConnectedTo> rdfs:range <http://example.org/back#Back> .
+
+<http://example.org/back#PartOfBack> rdfs:range <http://example.org/back#Back> .
+
+<http://example.org/back#associatedCondition> rdfs:range <http://example.org/back#Back>,
+        rdfs:Resource .
+
+<http://example.org/back#hasInjury> rdfs:range <http://example.org/back#Back>,
+        <http://example.org/back#Injury> .
+
+<http://example.org/back#hasLocation> rdfs:range <http://example.org/back#Back> .
+
+<http://example.org/back#hasPain> rdfs:range <http://example.org/back#Back>,
+        <http://example.org/back#Pain> .
+
+<http://example.org/back#hasPart> rdfs:range <http://example.org/back#Back> .
+
+<http://example.org/back#isBackOf> rdfs:range <http://example.org/back#Back> .
+
+<http://example.org/back#isOppositeOf> rdfs:range <http://example.org/back#Back> .
+
+<http://example.org/back#painLevel> rdfs:range <http://example.org/back#Back> .
+
+<http://example.org/back#treatmentPlan> rdfs:range <http://example.org/back#Back>,
+        rdfs:Resource .
+
+<http://example.org/hasCondition> rdfs:range <http://example.org/Back>,
+        <http://example.org/Back_Condition> .
+
+<http://www.example.com/back#hasPart> rdfs:range <http://www.example.com/back#Back>,
+        <http://www.example.com/back#HumanBody> .
+
+<http://www.example.com/back#suffersFrom> rdfs:range <http://www.example.com/back#Human>,
+        <http://www.example.com/back#backpain> .
+
+<http://www.example.org/hasPart> rdfs:range <http://www.example.org/Back>,
+        <http://www.example.org/Place> .
+

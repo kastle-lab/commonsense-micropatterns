@@ -1,6 +1,0 @@
-@prefix : <http://example.org/> .
-:Company a rdf:Class .
-:provides a rdf:Property ;
-    rdfs:domain :Company ;
-    rdfs:range :ProductService .
-:ProductService a rdf:Class .

@@ -1,0 +1,294 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/govt#Country> a rdfs:Class .
+
+<http://example.com/govt#Government> a rdfs:Class .
+
+<http://example.com/govt#Laws> a rdfs:Class .
+
+<http://example.com/govt#State> a rdfs:Class .
+
+<http://example.org/#Branch> a rdfs:Class .
+
+<http://example.org/#Country> a rdfs:Class .
+
+<http://example.org/#Government> a rdfs:Class .
+
+<http://example.org/Branch> a rdfs:Class .
+
+<http://example.org/Executive> a rdfs:Class .
+
+<http://example.org/Government> a rdfs:Class .
+
+<http://example.org/GovernmentOntology#City> a rdfs:Class .
+
+<http://example.org/GovernmentOntology#Government> a rdfs:Class .
+
+<http://example.org/GovernmentOntology#Person> a rdfs:Class .
+
+<http://example.org/gov#Department> a rdfs:Class .
+
+<http://example.org/gov#Government> a rdfs:Class .
+
+<http://example.org/gov#Law> a rdfs:Class .
+
+<http://example.org/gov#Leader> a rdfs:Class .
+
+<http://example.org/gov#Policy> a rdfs:Class .
+
+<http://example.org/gov#PublicService> a rdfs:Class .
+
+<http://example.org/government#Country> a rdfs:Class .
+
+<http://example.org/government#Government> a rdfs:Class .
+
+<http://example.org/government#Law> a rdfs:Class .
+
+<http://example.org/government#Legislative> a rdfs:Class .
+
+<http://example.org/government#Person> a rdfs:Class .
+
+<http://example.org/govt#Government> a rdfs:Class .
+
+<http://example.org/govt#Law> a rdfs:Class .
+
+<http://example.org/govt#Person> a rdfs:Class .
+
+<http://www.example.com/government#City> a rdfs:Class .
+
+<http://www.example.com/government#Country> a rdfs:Class .
+
+<http://www.example.com/government#Department> a rdfs:Class .
+
+<http://www.example.com/government#Government> a rdfs:Class .
+
+<http://www.example.com/government#Official> a rdfs:Class .
+
+<http://www.example.com/government#Position> a rdfs:Class .
+
+<http://www.example.com/government#State> a rdfs:Class .
+
+<http://www.example.org/gov#Country> a rdfs:Class .
+
+<http://www.example.org/gov#Department> a rdfs:Class .
+
+<http://www.example.org/gov#Government> a rdfs:Class .
+
+<http://www.example.org/gov#Law> a rdfs:Class .
+
+<http://www.example.org/gov#Person> a rdfs:Class .
+
+<http://www.example.org/government#Citizen> a rdfs:Class .
+
+<http://www.example.org/government#Department> a rdfs:Class .
+
+<http://www.example.org/government#Government> a rdfs:Class .
+
+<http://www.example.org/government#GovernmentPolicy> a rdfs:Class .
+
+<http://www.example.org/government#GovernmentSystem> a rdfs:Class .
+
+<http://www.example.org/government#LeadershipPosition> a rdfs:Class .
+
+<http://www.example.org/government#Legislation> a rdfs:Class .
+
+<http://www.example.org/government#Official> a rdfs:Class .
+
+<http://www.example.org/government#PoliticalParty> a rdfs:Class .
+
+<http://www.example.org/government#diff> a rdfs:Class .
+
+<http://www.example.org/government_ontology#Department> a rdfs:Class .
+
+<http://www.example.org/government_ontology#Government> a rdfs:Class .
+
+<http://www.example.org/government_ontology#Legislation> a rdfs:Class .
+
+<http://www.example.org/government_ontology#Member> a rdfs:Class .
+
+<http://www.example.org/government_ontology#Policy> a rdfs:Class .
+
+<http://www.example.org/government_ontology#Politician> a rdfs:Class .
+
+<http://www.example.org/government_ontology#State> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+foaf:Country a rdfs:Class .
+
+foaf:Person a rdfs:Class .
+
+<http://example.com/govt#GovernedBy> rdfs:range <http://example.com/govt#Government>,
+        <http://example.com/govt#State> .
+
+<http://example.com/govt#GovernmentName> rdfs:range <http://example.com/govt#Government> .
+
+<http://example.com/govt#HasLaws> rdfs:range <http://example.com/govt#Government>,
+        <http://example.com/govt#Laws> .
+
+<http://example.com/govt#LocatedIn> rdfs:range <http://example.com/govt#Country>,
+        <http://example.com/govt#State> .
+
+<http://example.org/#governs> rdfs:range <http://example.org/#Country>,
+        <http://example.org/#Government> .
+
+<http://example.org/#hasBranch> rdfs:range <http://example.org/#Branch>,
+        <http://example.org/#Government> .
+
+<http://example.org/#isBranchOf> rdfs:range <http://example.org/#Branch>,
+        <http://example.org/#Government> .
+
+<http://example.org/#locatedIn> rdfs:range <http://example.org/#Country>,
+        <http://example.org/#Government> .
+
+<http://example.org/GovernmentOntology#Population> rdfs:range <http://example.org/GovernmentOntology#Government> .
+
+<http://example.org/GovernmentOntology#hasHead> rdfs:range <http://example.org/GovernmentOntology#Government>,
+        <http://example.org/GovernmentOntology#Person> .
+
+<http://example.org/GovernmentOntology#mayorOf> rdfs:range <http://example.org/GovernmentOntology#City>,
+        <http://example.org/GovernmentOntology#Person> .
+
+<http://example.org/GovernmentOntology#name> rdfs:range rdfs:Resource .
+
+<http://example.org/GovernmentOntology#presidentOf> rdfs:range <http://example.org/GovernmentOntology#Government>,
+        <http://example.org/GovernmentOntology#Person> .
+
+<http://example.org/consistsOf> rdfs:range <http://example.org/Branch>,
+        <http://example.org/Government> .
+
+<http://example.org/gov#hasDepartment> rdfs:range <http://example.org/gov#Department>,
+        <http://example.org/gov#Government> .
+
+<http://example.org/gov#hasLaw> rdfs:range <http://example.org/gov#Government>,
+        <http://example.org/gov#Law> .
+
+<http://example.org/gov#hasLeader> rdfs:range <http://example.org/gov#Government>,
+        <http://example.org/gov#Leader> .
+
+<http://example.org/gov#hasPolicy> rdfs:range <http://example.org/gov#Government>,
+        <http://example.org/gov#Policy> .
+
+<http://example.org/gov#providesService> rdfs:range <http://example.org/gov#Government>,
+        <http://example.org/gov#PublicService> .
+
+<http://example.org/government#createsLaw> rdfs:range <http://example.org/government#Legislative>,
+        rdfs:Resource .
+
+<http://example.org/government#enforcesLaw> rdfs:range <http://example.org/government#Government>,
+        <http://example.org/government#Law>,
+        rdfs:Resource .
+
+<http://example.org/government#hasCitizen> rdfs:range <http://example.org/government#Country>,
+        <http://example.org/government#Person> .
+
+<http://example.org/government#hasGovernment> rdfs:range <http://example.org/government#Country>,
+        <http://example.org/government#Government> .
+
+<http://example.org/government#hasHeadOfState> rdfs:range <http://example.org/government#Government>,
+        <http://example.org/government#Person> .
+
+<http://example.org/government#isHeadedBy> rdfs:range <http://example.org/government#Government>,
+        rdfs:Resource .
+
+<http://example.org/govt#leaderOf> rdfs:range <http://example.org/govt#Government>,
+        <http://example.org/govt#Person> .
+
+<http://example.org/govt#legislation> rdfs:range <http://example.org/govt#Government>,
+        <http://example.org/govt#Law> .
+
+<http://example.org/headOf> rdfs:range <http://example.org/Executive>,
+        <http://example.org/Government> .
+
+<http://www.example.com/government#departmentOf> rdfs:range <http://www.example.com/government#Department>,
+        <http://www.example.com/government#Government> .
+
+<http://www.example.com/government#hasCity> rdfs:range <http://www.example.com/government#City>,
+        <http://www.example.com/government#State> .
+
+<http://www.example.com/government#hasGovernment> rdfs:range <http://www.example.com/government#Country>,
+        <http://www.example.com/government#Government> .
+
+<http://www.example.com/government#hasState> rdfs:range <http://www.example.com/government#Country>,
+        <http://www.example.com/government#State> .
+
+<http://www.example.com/government#holdsPosition> rdfs:range <http://www.example.com/government#Official>,
+        <http://www.example.com/government#Position> .
+
+<http://www.example.com/government#positionIn> rdfs:range <http://www.example.com/government#Department>,
+        <http://www.example.com/government#Position> .
+
+<http://www.example.org/gov#hasAge> rdfs:range <http://www.example.org/gov#Person> .
+
+<http://www.example.org/gov#hasCountry> rdfs:range foaf:Country .
+
+<http://www.example.org/gov#hasDepartment> rdfs:range <http://www.example.org/gov#Department>,
+        <http://www.example.org/gov#Government> .
+
+<http://www.example.org/gov#hasGovernment> rdfs:range <http://www.example.org/gov#Country>,
+        <http://www.example.org/gov#Government> .
+
+<http://www.example.org/gov#hasLaw> rdfs:range <http://www.example.org/gov#Law> .
+
+<http://www.example.org/gov#hasLeader> rdfs:range foaf:Person .
+
+<http://www.example.org/gov#hasName> rdfs:range <http://www.example.org/gov#Person> .
+
+<http://www.example.org/gov#headOfGovernment> rdfs:range <http://www.example.org/gov#Government>,
+        <http://www.example.org/gov#Person> .
+
+<http://www.example.org/gov#participatesIn> rdfs:range rdfs:Resource .
+
+<http://www.example.org/government#belongs> rdfs:range <http://www.example.org/government#Citizen>,
+        <http://www.example.org/government#PoliticalParty> .
+
+<http://www.example.org/government#citizenAge> rdfs:range <http://www.example.org/government#Citizen> .
+
+<http://www.example.org/government#country> rdfs:range <http://www.example.org/government#Government> .
+
+<http://www.example.org/government#department> rdfs:range <http://www.example.org/government#Department>,
+        <http://www.example.org/government#Government> .
+
+<http://www.example.org/government#director> rdfs:range <http://www.example.org/government#Official>,
+        <http://www.example.org/government#diff> .
+
+<http://www.example.org/government#established> rdfs:range <http://www.example.org/government#Government> .
+
+<http://www.example.org/government#governmentType> rdfs:range <http://www.example.org/government#Government> .
+
+<http://www.example.org/government#governs> rdfs:range <http://www.example.org/government#Citizen>,
+        <http://www.example.org/government#Government> .
+
+<http://www.example.org/government#hasLeader> rdfs:range <http://www.example.org/government#Government>,
+        <http://www.example.org/government#LeadershipPosition> .
+
+<http://www.example.org/government#hasPolicy> rdfs:range <http://www.example.org/government#Government>,
+        <http://www.example.org/government#GovernmentPolicy> .
+
+<http://www.example.org/government#hasSystem> rdfs:range <http://www.example.org/government#Government>,
+        <http://www.example.org/government#GovernmentSystem> .
+
+<http://www.example.org/government#name> rdfs:range rdfs:Resource .
+
+<http://www.example.org/government#official> rdfs:range <http://www.example.org/government#Government>,
+        <http://www.example.org/government#Official> .
+
+<http://www.example.org/government#passes> rdfs:range <http://www.example.org/government#Government>,
+        <http://www.example.org/government#Legislation> .
+
+<http://www.example.org/government_ontology#governs> rdfs:range <http://www.example.org/government_ontology#Government>,
+        <http://www.example.org/government_ontology#State> .
+
+<http://www.example.org/government_ontology#hasDepartment> rdfs:range <http://www.example.org/government_ontology#Department>,
+        <http://www.example.org/government_ontology#Government> .
+
+<http://www.example.org/government_ontology#hasMember> rdfs:range <http://www.example.org/government_ontology#Government>,
+        <http://www.example.org/government_ontology#Member> .
+
+<http://www.example.org/government_ontology#implements> rdfs:range <http://www.example.org/government_ontology#Government>,
+        <http://www.example.org/government_ontology#Policy> .
+
+<http://www.example.org/government_ontology#passes> rdfs:range <http://www.example.org/government_ontology#Legislation>,
+        <http://www.example.org/government_ontology#Politician> .
+

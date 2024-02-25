@@ -1,7 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-ex:Water rdf:type ex:Substance ;
-         ex:hasStateOfMatter ex:Liquid ;
-         ex:hasBoilingPoint "100°C"^^xsd:string ;
-         ex:hasFreezingPoint "0°C"^^xsd:string ;
-         ex:isEssentialForLife ex:True .

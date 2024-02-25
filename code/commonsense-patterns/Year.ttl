@@ -1,0 +1,142 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com#Date> a rdfs:Class .
+
+<http://example.com#Something> a rdfs:Class .
+
+<http://example.com#Year> a rdfs:Class .
+
+<http://example.com/Entity> a rdfs:Class .
+
+<http://example.com/Year> a rdfs:Class .
+
+<http://example.com/year#Year> a rdfs:Class .
+
+<http://example.org/#Entity> a rdfs:Class .
+
+<http://example.org/#year> a rdfs:Class .
+
+<http://example.org/Entity> a rdfs:Class .
+
+<http://example.org/Year> a rdfs:Class .
+
+<http://example.org/ontology/Entity> a rdfs:Class .
+
+<http://example.org/ontology/Year> a rdfs:Class .
+
+<http://example.org/ontology/year#> a rdfs:Class .
+
+<http://example.org/ontology/year#Month> a rdfs:Class .
+
+<http://example.org/ontology/year#Year> a rdfs:Class .
+
+<http://example.org/year#Day> a rdfs:Class .
+
+<http://example.org/year#Event> a rdfs:Class .
+
+<http://example.org/year#Month> a rdfs:Class .
+
+<http://example.org/year#Season> a rdfs:Class .
+
+<http://example.org/year#Year> a rdfs:Class .
+
+<http://www.example.com#Event> a rdfs:Class .
+
+<http://www.example.com#Year> a rdfs:Class .
+
+<http://www.example.com/year#Day> a rdfs:Class .
+
+<http://www.example.com/year#Month> a rdfs:Class .
+
+<http://www.example.com/year#Season> a rdfs:Class .
+
+<http://www.example.com/year#Year> a rdfs:Class .
+
+<http://www.example.org/year#Year> a rdfs:Class .
+
+<http://example.com#hasYear> rdfs:range <http://example.com#Date>,
+        <http://example.com#Something>,
+        <http://example.com#Year> .
+
+<http://example.com#isLeapYear> rdfs:range <http://example.com#Year> .
+
+<http://example.com#isYearOf> rdfs:range <http://example.com#Date>,
+        <http://example.com#Year> .
+
+<http://example.com/beginningOfYear> rdfs:range <http://example.com/Year> .
+
+<http://example.com/endOfYear> rdfs:range <http://example.com/Year> .
+
+<http://example.com/hasYear> rdfs:range <http://example.com/Entity> .
+
+<http://example.com/year> rdfs:range <http://example.com/Entity>,
+        <http://example.com/Year> .
+
+<http://example.com/year#hasDay> rdfs:range <http://example.com/year#Year> .
+
+<http://example.com/year#hasMonth> rdfs:range <http://example.com/year#Year> .
+
+<http://example.com/year#isLeap> rdfs:range <http://example.com/year#Year> .
+
+<http://example.com/year#yearNumber> rdfs:range <http://example.com/year#Year> .
+
+<http://example.org/#hasYear> rdfs:range <http://example.org/#Entity>,
+        <http://example.org/#year> .
+
+<http://example.org/hasYear> rdfs:range <http://example.org/Entity>,
+        <http://example.org/Year> .
+
+<http://example.org/ontology/hasYear> rdfs:range <http://example.org/ontology/Entity>,
+        <http://example.org/ontology/Year> .
+
+<http://example.org/ontology/year#hasDay> rdfs:range <http://example.org/ontology/year#Month> .
+
+<http://example.org/ontology/year#hasMonth> rdfs:range <http://example.org/ontology/year#Month>,
+        <http://example.org/ontology/year#Year> .
+
+<http://example.org/ontology/year#isLeap> rdfs:range <http://example.org/ontology/year#Year> .
+
+<http://example.org/ontology/year#isLeapYear> rdfs:range <http://example.org/ontology/year#> .
+
+<http://example.org/ontology/year#number> rdfs:range <http://example.org/ontology/year#> .
+
+<http://example.org/ontology/year#yearID> rdfs:range <http://example.org/ontology/year#> .
+
+<http://example.org/year#hasDay> rdfs:range <http://example.org/year#Day>,
+        <http://example.org/year#Month> .
+
+<http://example.org/year#hasEvent> rdfs:range <http://example.org/year#Day>,
+        <http://example.org/year#Event> .
+
+<http://example.org/year#hasMonth> rdfs:range <http://example.org/year#Month>,
+        <http://example.org/year#Year> .
+
+<http://example.org/year#hasSeason> rdfs:range <http://example.org/year#Season>,
+        <http://example.org/year#Year> .
+
+<http://example.org/year#isLeapYear> rdfs:range <http://example.org/year#Year> .
+
+<http://example.org/year#numberOfDay> rdfs:range <http://example.org/year#Day> .
+
+<http://example.org/year#numberOfMonth> rdfs:range <http://example.org/year#Month> .
+
+<http://example.org/year#numberOfYear> rdfs:range <http://example.org/year#Year> .
+
+<http://www.example.com#inYear> rdfs:range <http://www.example.com#Event>,
+        <http://www.example.com#Year> .
+
+<http://www.example.com/year#hasDay> rdfs:range <http://www.example.com/year#Day>,
+        <http://www.example.com/year#Month> .
+
+<http://www.example.com/year#hasMonth> rdfs:range <http://www.example.com/year#Month>,
+        <http://www.example.com/year#Year> .
+
+<http://www.example.com/year#hasSeason> rdfs:range <http://www.example.com/year#Season>,
+        <http://www.example.com/year#Year> .
+
+<http://www.example.org/year#followedBy> rdfs:range <http://www.example.org/year#Year> .
+
+<http://www.example.org/year#hasYear> rdfs:range <http://www.example.org/year#Year> .
+
+<http://www.example.org/year#precededBy> rdfs:range <http://www.example.org/year#Year> .
+

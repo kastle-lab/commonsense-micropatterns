@@ -1,8 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex:  <http://example.org/> .
-ex:John ex:hasName "John Doe"^^xsd:string .
-ex:hasName rdf:type rdf:Property ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-ex:Person rdf:type rdfs:Class .

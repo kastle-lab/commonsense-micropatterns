@@ -1,8 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-:Area rdf:type owl:Class ;
-   rdfs:label "Area"@en ;
-   rdfs:comment "Quantitative measure of the extent of a 2-dimensional figure or shape, or planar lamina, in the plane"@en ;
-   rdfs:subClassOf :PhysicalQuantity .

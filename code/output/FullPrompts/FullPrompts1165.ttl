@@ -1,7 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dbo: <http://dbpedia.org/ontology/> .
-dbo:Water rdf:type rdfs:Class ;
-  rdfs:label "Water"@en ;
-  rdfs:comment "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere and the fluids of all known living organisms."@en ;
-  dbo:wikiPageID 2345 .

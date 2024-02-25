@@ -1,0 +1,148 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/ontology/rights#Jurisdiction> a rdfs:Class .
+
+<http://example.com/ontology/rights#Person> a rdfs:Class .
+
+<http://example.com/ontology/rights#Right> a rdfs:Class .
+
+<http://example.com/right#Authority> a rdfs:Class .
+
+<http://example.com/right#Right> a rdfs:Class .
+
+<http://example.com/right#RightHolder> a rdfs:Class .
+
+<http://example.com/right#Scope> a rdfs:Class .
+
+<http://example.com/rights#Right> a rdfs:Class .
+
+<http://example.org/#Entity> a rdfs:Class .
+
+<http://example.org/#Right> a rdfs:Class .
+
+<http://example.org/Person> a rdfs:Class .
+
+<http://example.org/Right> a rdfs:Class .
+
+<http://example.org/ontologies/right#> a rdfs:Class .
+
+<http://example.org/ontologies/right#Human> a rdfs:Class .
+
+<http://example.org/ontologies/right#HumanRight> a rdfs:Class .
+
+<http://example.org/ontologies/right#hasCivilRight> a rdfs:Class ;
+    rdfs:range <http://example.org/ontologies/right#hasCivilRight> .
+
+<http://example.org/right#Agent> a rdfs:Class .
+
+<http://example.org/right#Entity> a rdfs:Class .
+
+<http://example.org/right#Right> a rdfs:Class .
+
+<http://example.org/vocab/rights#Right> a rdfs:Class .
+
+<http://www.example.org/Human> a rdfs:Class .
+
+<http://www.example.org/Right> a rdfs:Class .
+
+<http://www.example.org/right#> a rdfs:Class .
+
+<http://www.example.org/right#Action> a rdfs:Class .
+
+<http://www.example.org/right#CivilRight> a rdfs:Class .
+
+<http://www.example.org/right#Entity> a rdfs:Class .
+
+<http://www.example.org/right#HumanRight> a rdfs:Class .
+
+<http://www.example.org/right#Institution> a rdfs:Class .
+
+<http://www.example.org/right#LegalRight> a rdfs:Class .
+
+<http://www.example.org/right#LegalSystem> a rdfs:Class .
+
+<http://www.example.org/right#Person> a rdfs:Class .
+
+<http://www.example.org/right#PoliticalRight> a rdfs:Class .
+
+<http://www.example.org/right#ReligiousRight> a rdfs:Class .
+
+<http://www.example.org/right#Right> a rdfs:Class .
+
+<http://www.example.org/right#RightHolder> a rdfs:Class .
+
+rdf:Resource a rdfs:Class .
+
+<http://example.com/ontology/rights#hasRight> rdfs:range <http://example.com/ontology/rights#Person>,
+        <http://example.com/ontology/rights#Right> .
+
+<http://example.com/ontology/rights#rightInJurisdiction> rdfs:range <http://example.com/ontology/rights#Jurisdiction>,
+        <http://example.com/ontology/rights#Right> .
+
+<http://example.com/right#hasRightHolder> rdfs:range <http://example.com/right#Right>,
+        <http://example.com/right#RightHolder> .
+
+<http://example.com/right#hasScope> rdfs:range <http://example.com/right#Right>,
+        <http://example.com/right#Scope> .
+
+<http://example.com/right#isEnforcedBy> rdfs:range <http://example.com/right#Authority>,
+        <http://example.com/right#Right> .
+
+<http://example.com/rights#hasRight> rdfs:range <http://example.com/rights#Right> .
+
+<http://example.org/#providesRight> rdfs:range <http://example.org/#Entity>,
+        <http://example.org/#Right> .
+
+<http://example.org/hasRight> rdfs:range <http://example.org/Person>,
+        <http://example.org/Right> .
+
+<http://example.org/ontologies/right#hasHumanRight> rdfs:range <http://example.org/ontologies/right#HumanRight> .
+
+<http://example.org/ontologies/right#hasRight> rdfs:range <http://example.org/ontologies/right#>,
+        <http://example.org/ontologies/right#Human> .
+
+<http://example.org/right#hasRight> rdfs:range <http://example.org/right#Agent>,
+        <http://example.org/right#Entity>,
+        <http://example.org/right#Right> .
+
+<http://example.org/right#isRightOf> rdfs:range <http://example.org/right#Agent>,
+        <http://example.org/right#Right> .
+
+<http://example.org/vocab/rights#possession> rdfs:range <http://example.org/vocab/rights#Right>,
+        rdf:Resource .
+
+<http://www.example.org/hasRight> rdfs:range <http://www.example.org/Human>,
+        <http://www.example.org/Right> .
+
+<http://www.example.org/right#grantedBy> rdfs:range <http://www.example.org/right#> .
+
+<http://www.example.org/right#hasRight> rdfs:range <http://www.example.org/right#>,
+        <http://www.example.org/right#Right>,
+        <http://www.example.org/right#RightHolder> .
+
+<http://www.example.org/right#holder> rdfs:range <http://www.example.org/right#Entity>,
+        <http://www.example.org/right#Right> .
+
+<http://www.example.org/right#isGrantedBy> rdfs:range <http://www.example.org/right#Institution>,
+        <http://www.example.org/right#LegalRight>,
+        <http://www.example.org/right#Right>,
+        <http://www.example.org/right#RightHolder> .
+
+<http://www.example.org/right#isGrantedTo> rdfs:range <http://www.example.org/right#LegalRight>,
+        <http://www.example.org/right#Person> .
+
+<http://www.example.org/right#protectedBy> rdfs:range <http://www.example.org/right#LegalSystem>,
+        <http://www.example.org/right#Right> .
+
+<http://www.example.org/right#rightToEquality> rdfs:range <http://www.example.org/right#CivilRight> .
+
+<http://www.example.org/right#rightToLife> rdfs:range <http://www.example.org/right#HumanRight> .
+
+<http://www.example.org/right#rightToReligiousFreedom> rdfs:range <http://www.example.org/right#ReligiousRight> .
+
+<http://www.example.org/right#rightToVote> rdfs:range <http://www.example.org/right#PoliticalRight> .
+
+<http://www.example.org/right#violatedBy> rdfs:range <http://www.example.org/right#Action>,
+        <http://www.example.org/right#Right> .
+

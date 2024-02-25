@@ -1,4 +1,0 @@
-
-@prefix : <http://example.com/> .
-:John :givesReason :Reason .
-:Reason :for :DoSomething .

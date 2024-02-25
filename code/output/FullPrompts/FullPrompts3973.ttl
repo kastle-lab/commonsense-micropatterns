@@ -1,7 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
-@prefix time: <http://purl.org/NET/c4dm/timeline.owl#> .
-:event1 a event:Event ;
-    event:time :interval1 .
-:interval1 a time:Interval ;
-    time:at "2022-07-01T10:00:00"^^xsd:dateTime .

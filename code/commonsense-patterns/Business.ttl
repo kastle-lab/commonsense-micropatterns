@@ -1,0 +1,335 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:n4ff1194930184b9aa2a0f93d39aaaa4cb1 a rdfs:Class .
+
+_:n4ff1194930184b9aa2a0f93d39aaaa4cb6 a rdfs:Class .
+
+<http://dbpedia.org/ontology/Place> a rdfs:Class .
+
+<http://example.com/Business> a rdfs:Class .
+
+<http://example.com/Industry> a rdfs:Class .
+
+<http://example.com/biz#Business> a rdfs:Class .
+
+<http://example.com/biz#Employee> a rdfs:Class .
+
+<http://example.com/biz#Product> a rdfs:Class .
+
+<http://example.com/biz#Service> a rdfs:Class .
+
+<http://example.com/business#Business> a rdfs:Class .
+
+<http://example.com/business#Employee> a rdfs:Class .
+
+<http://example.com/business#Industry> a rdfs:Class .
+
+<http://example.com/business#Location> a rdfs:Class .
+
+<http://example.com/business#Product> a rdfs:Class .
+
+<http://example.org/Business> a rdfs:Class .
+
+<http://example.org/Business#Business> a rdfs:Class .
+
+<http://example.org/Business#Company> a rdfs:Class .
+
+<http://example.org/Business#Employee> a rdfs:Class .
+
+<http://example.org/Business#Person> a rdfs:Class .
+
+<http://example.org/Business#Product> a rdfs:Class .
+
+<http://example.org/Business#Service> a rdfs:Class .
+
+<http://example.org/Client> a rdfs:Class .
+
+<http://example.org/Employee> a rdfs:Class .
+
+<http://example.org/Manager> a rdfs:Class .
+
+<http://example.org/Product> a rdfs:Class .
+
+<http://example.org/Service> a rdfs:Class .
+
+<http://example.org/ServiceOrProduct> a rdfs:Class .
+
+<http://example.org/Supplier> a rdfs:Class .
+
+<http://example.org/business#Business> a rdfs:Class .
+
+<http://example.org/business#BusinessSector> a rdfs:Class .
+
+<http://example.org/business#Employee> a rdfs:Class .
+
+<http://example.org/business#Location> a rdfs:Class .
+
+<http://example.org/business#Owner> a rdfs:Class .
+
+<http://example.org/business#Product> a rdfs:Class .
+
+<http://example.org/business#Service> a rdfs:Class .
+
+<http://mybusiness.org#Business> a rdfs:Class .
+
+<http://mybusiness.org#Customer> a rdfs:Class .
+
+<http://mybusiness.org#Department> a rdfs:Class .
+
+<http://mybusiness.org#Employee> a rdfs:Class .
+
+<http://mybusiness.org#Investor> a rdfs:Class .
+
+<http://mybusiness.org#Product> a rdfs:Class .
+
+<http://www.businessontology.com#Company> a rdfs:Class .
+
+<http://www.businessontology.com#Customer> a rdfs:Class .
+
+<http://www.businessontology.com#Employee> a rdfs:Class .
+
+<http://www.businessontology.com#Market> a rdfs:Class .
+
+<http://www.businessontology.com#Product> a rdfs:Class .
+
+<http://www.example.com/business#Business> a rdfs:Class .
+
+<http://www.example.com/business#Employee> a rdfs:Class .
+
+<http://www.example.com/business#Employer> a rdfs:Class .
+
+<http://www.example.com/business#Product> a rdfs:Class .
+
+<http://www.example.com/business#Revenue> a rdfs:Class .
+
+<http://www.example.com/business#Service> a rdfs:Class .
+
+<http://www.example.org/business#Business> a rdfs:Class .
+
+<http://www.example.org/business#BusinessPerson> a rdfs:Class .
+
+<http://www.example.org/business#Company> a rdfs:Class .
+
+<http://www.example.org/business#Customer> a rdfs:Class .
+
+<http://www.example.org/business#Employee> a rdfs:Class .
+
+<http://www.example.org/business#Location> a rdfs:Class .
+
+<http://www.example.org/business#Market> a rdfs:Class .
+
+<http://www.example.org/business#Product> a rdfs:Class .
+
+<http://www.example.org/business#Supplier> a rdfs:Class .
+
+foaf:Person a rdfs:Class .
+
+<http://example.com/biz#hasEmployee> rdfs:range <http://example.com/biz#Business>,
+        <http://example.com/biz#Employee> .
+
+<http://example.com/biz#name> rdfs:range _:n4ff1194930184b9aa2a0f93d39aaaa4cb1 .
+
+<http://example.com/biz#offersProduct> rdfs:range <http://example.com/biz#Business>,
+        <http://example.com/biz#Product> .
+
+<http://example.com/biz#offersService> rdfs:range <http://example.com/biz#Business>,
+        <http://example.com/biz#Service> .
+
+<http://example.com/biz#price> rdfs:range _:n4ff1194930184b9aa2a0f93d39aaaa4cb6 .
+
+<http://example.com/biz#revenue> rdfs:range <http://example.com/biz#Business> .
+
+<http://example.com/biz#salary> rdfs:range <http://example.com/biz#Employee> .
+
+<http://example.com/business#hasEmployee> rdfs:range <http://example.com/business#Business>,
+        <http://example.com/business#Employee> .
+
+<http://example.com/business#hasHeadquarters> rdfs:range <http://example.com/business#Business>,
+        <http://example.com/business#Location> .
+
+<http://example.com/business#industry> rdfs:range <http://example.com/business#Business>,
+        <http://example.com/business#Industry> .
+
+<http://example.com/business#producesProduct> rdfs:range <http://example.com/business#Business>,
+        <http://example.com/business#Product> .
+
+<http://example.com/operatesInIndustry> rdfs:range <http://example.com/Business>,
+        <http://example.com/Industry> .
+
+<http://example.org/Business#buys> rdfs:range <http://example.org/Business#Person>,
+        <http://example.org/Business#Product> .
+
+<http://example.org/Business#employs> rdfs:range <http://example.org/Business#Business>,
+        <http://example.org/Business#Company>,
+        <http://example.org/Business#Employee>,
+        <http://example.org/Business#Person> .
+
+<http://example.org/Business#hasCEO> rdfs:range <http://example.org/Business#Company>,
+        foaf:Person .
+
+<http://example.org/Business#offers> rdfs:range <http://example.org/Business#Company>,
+        <http://example.org/Business#Service> .
+
+<http://example.org/Business#operatesIn> rdfs:range <http://dbpedia.org/ontology/Place>,
+        <http://example.org/Business#Company> .
+
+<http://example.org/Business#owns> rdfs:range <http://example.org/Business#Business>,
+        <http://example.org/Business#Person> .
+
+<http://example.org/Business#provides> rdfs:range <http://example.org/Business#Business>,
+        <http://example.org/Business#Company>,
+        <http://example.org/Business#Product>,
+        <http://example.org/Business#Service> .
+
+<http://example.org/business#empName> rdfs:range <http://example.org/business#Employee> .
+
+<http://example.org/business#establishedDate> rdfs:range <http://example.org/business#Business> .
+
+<http://example.org/business#hasEmployee> rdfs:range <http://example.org/business#Business>,
+        <http://example.org/business#Employee> .
+
+<http://example.org/business#hasLocation> rdfs:range <http://example.org/business#Business>,
+        <http://example.org/business#Location> .
+
+<http://example.org/business#hasName> rdfs:range <http://example.org/business#Business> .
+
+<http://example.org/business#hasOwner> rdfs:range <http://example.org/business#Business>,
+        <http://example.org/business#Owner> .
+
+<http://example.org/business#hasSector> rdfs:range <http://example.org/business#Business>,
+        <http://example.org/business#BusinessSector> .
+
+<http://example.org/business#locName> rdfs:range <http://example.org/business#Location> .
+
+<http://example.org/business#name> rdfs:range <http://example.org/business#Business> .
+
+<http://example.org/business#offersProduct> rdfs:range <http://example.org/business#Business>,
+        <http://example.org/business#Product> .
+
+<http://example.org/business#prodName> rdfs:range <http://example.org/business#Product> .
+
+<http://example.org/business#producesProduct> rdfs:range <http://example.org/business#Business>,
+        <http://example.org/business#Product> .
+
+<http://example.org/business#providesService> rdfs:range <http://example.org/business#Business>,
+        <http://example.org/business#Service> .
+
+<http://example.org/business#revenue> rdfs:range <http://example.org/business#Business> .
+
+<http://example.org/business#sectorName> rdfs:range <http://example.org/business#BusinessSector> .
+
+<http://example.org/business#serviceName> rdfs:range <http://example.org/business#Service> .
+
+<http://example.org/buysFrom> rdfs:range <http://example.org/Business>,
+        <http://example.org/Supplier> .
+
+<http://example.org/hasEndTime> rdfs:range <http://example.org/Service> .
+
+<http://example.org/hasLocation> rdfs:range <http://example.org/Business> .
+
+<http://example.org/hasName> rdfs:range <http://example.org/Business> .
+
+<http://example.org/hasStartTime> rdfs:range <http://example.org/Service> .
+
+<http://example.org/hires> rdfs:range <http://example.org/Employee>,
+        <http://example.org/Manager> .
+
+<http://example.org/owns> rdfs:range <http://example.org/Business>,
+        <http://example.org/Manager> .
+
+<http://example.org/provides> rdfs:range <http://example.org/Business>,
+        <http://example.org/Service>,
+        <http://example.org/ServiceOrProduct> .
+
+<http://example.org/providesService> rdfs:range <http://example.org/Business>,
+        <http://example.org/Service> .
+
+<http://example.org/sells> rdfs:range <http://example.org/Business>,
+        <http://example.org/Product> .
+
+<http://example.org/serves> rdfs:range <http://example.org/Business>,
+        <http://example.org/Client> .
+
+<http://mybusiness.org#employs> rdfs:range <http://mybusiness.org#Business>,
+        <http://mybusiness.org#Employee> .
+
+<http://mybusiness.org#hasDepartment> rdfs:range <http://mybusiness.org#Business>,
+        <http://mybusiness.org#Department> .
+
+<http://mybusiness.org#hasLocation> rdfs:range <http://mybusiness.org#Business> .
+
+<http://mybusiness.org#hasName> rdfs:range <http://mybusiness.org#Business> .
+
+<http://mybusiness.org#hasProduct> rdfs:range <http://mybusiness.org#Business>,
+        <http://mybusiness.org#Product> .
+
+<http://mybusiness.org#hasRole> rdfs:range <http://mybusiness.org#Employee> .
+
+<http://mybusiness.org#isFundedBy> rdfs:range <http://mybusiness.org#Business>,
+        <http://mybusiness.org#Investor> .
+
+<http://mybusiness.org#serves> rdfs:range <http://mybusiness.org#Business>,
+        <http://mybusiness.org#Customer> .
+
+<http://www.businessontology.com#buys> rdfs:range <http://www.businessontology.com#Customer>,
+        <http://www.businessontology.com#Product> .
+
+<http://www.businessontology.com#employs> rdfs:range <http://www.businessontology.com#Company>,
+        <http://www.businessontology.com#Employee> .
+
+<http://www.businessontology.com#operatesIn> rdfs:range <http://www.businessontology.com#Company>,
+        <http://www.businessontology.com#Market> .
+
+<http://www.businessontology.com#price> rdfs:range <http://www.businessontology.com#Product> .
+
+<http://www.businessontology.com#produces> rdfs:range <http://www.businessontology.com#Company>,
+        <http://www.businessontology.com#Product> .
+
+<http://www.businessontology.com#revenue> rdfs:range <http://www.businessontology.com#Company> .
+
+<http://www.businessontology.com#salary> rdfs:range <http://www.businessontology.com#Employee> .
+
+<http://www.businessontology.com#sells> rdfs:range <http://www.businessontology.com#Customer>,
+        <http://www.businessontology.com#Product> .
+
+<http://www.example.com/business#employeeOf> rdfs:range <http://www.example.com/business#Employee>,
+        <http://www.example.com/business#Employer> .
+
+<http://www.example.com/business#generates> rdfs:range <http://www.example.com/business#Business>,
+        <http://www.example.com/business#Revenue> .
+
+<http://www.example.com/business#owns> rdfs:range <http://www.example.com/business#Business>,
+        <http://www.example.com/business#Employer> .
+
+<http://www.example.com/business#produces> rdfs:range <http://www.example.com/business#Business>,
+        <http://www.example.com/business#Product> .
+
+<http://www.example.com/business#provides> rdfs:range <http://www.example.com/business#Business>,
+        <http://www.example.com/business#Service> .
+
+<http://www.example.org/business#buysFrom> rdfs:range <http://www.example.org/business#Company>,
+        <http://www.example.org/business#Customer> .
+
+<http://www.example.org/business#hasBusinessLocation> rdfs:range <http://www.example.org/business#Business>,
+        <http://www.example.org/business#Location> .
+
+<http://www.example.org/business#hasEmployee> rdfs:range <http://www.example.org/business#Business>,
+        <http://www.example.org/business#Company>,
+        <http://www.example.org/business#Employee> .
+
+<http://www.example.org/business#hasOwner> rdfs:range <http://www.example.org/business#Business>,
+        <http://www.example.org/business#BusinessPerson> .
+
+<http://www.example.org/business#name> rdfs:range <http://www.example.org/business#Business> .
+
+<http://www.example.org/business#operatesIn> rdfs:range <http://www.example.org/business#Company>,
+        <http://www.example.org/business#Market> .
+
+<http://www.example.org/business#produces> rdfs:range <http://www.example.org/business#Business>,
+        <http://www.example.org/business#Company>,
+        <http://www.example.org/business#Product> .
+
+<http://www.example.org/business#supplies> rdfs:range <http://www.example.org/business#Product>,
+        <http://www.example.org/business#Supplier> .
+

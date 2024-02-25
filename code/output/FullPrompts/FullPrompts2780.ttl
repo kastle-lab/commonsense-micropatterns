@@ -1,7 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix serv: <http://www.example.com/service#> .
-serv:ServiceProvider rdf:type rdfs:Class .
-serv:provides rdf:type rdf:Property ;
-    rdfs:domain serv:ServiceProvider ;
-    rdfs:range serv:Service .
-serv:Service rdf:type rdfs:Class .

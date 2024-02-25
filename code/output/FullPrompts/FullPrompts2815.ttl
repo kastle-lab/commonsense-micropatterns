@@ -1,7 +1,0 @@
-@prefix : <http://example.org/#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-:John a foaf:Person ;
-  foaf:name "John" ;
-  foaf:knows :Jane .
-:Jane a foaf:Person ;
-  foaf:name "Jane" .

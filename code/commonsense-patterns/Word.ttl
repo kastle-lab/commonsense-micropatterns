@@ -1,0 +1,196 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:n3fac03a8237d4845ab6b8b2bf5e162d6b1 a rdfs:Class .
+
+<http://dbpedia.org/ontology/Word> a rdfs:Class .
+
+<http://dbpedia.org/ontology/WordProperty> a rdfs:Class .
+
+<http://example.com/Word> a rdfs:Class .
+
+<http://example.com/ontology/word#> a rdfs:Class .
+
+<http://example.com/ontology/word#Definition> a rdfs:Class .
+
+<http://example.com/ontology/word#Spelling> a rdfs:Class .
+
+<http://example.com/word#PartOfSpeech> a rdfs:Class .
+
+<http://example.com/word#Word> a rdfs:Class .
+
+<http://example.org/PartOfSpeech> a rdfs:Class .
+
+<http://example.org/Sentence> a rdfs:Class .
+
+<http://example.org/Word> a rdfs:Class .
+
+<http://example.org/myOntology#MailMerge> a rdfs:Class .
+
+<http://example.org/myOntology#PageLayout> a rdfs:Class .
+
+<http://example.org/myOntology#SpellingCorrector> a rdfs:Class .
+
+<http://example.org/myOntology#TextDocument> a rdfs:Class .
+
+<http://example.org/myOntology#Thesaurus> a rdfs:Class .
+
+<http://example.org/myOntology#Word> a rdfs:Class .
+
+<http://example.org/ontology/Word#PartOfSpeechClass> a rdfs:Class .
+
+<http://example.org/ontology/Word#Word> a rdfs:Class .
+
+<http://example.org/word> a rdfs:Class .
+
+<http://example.org/word#Word> a rdfs:Class .
+
+<http://www.example.com/word#PartOfSpeech> a rdfs:Class .
+
+<http://www.example.com/word#Word> a rdfs:Class .
+
+<http://www.example.org#Word> a rdfs:Class .
+
+<http://www.example.org/word#Language> a rdfs:Class .
+
+<http://www.example.org/word#Meaning> a rdfs:Class .
+
+<http://www.example.org/word#PartOfSpeech> a rdfs:Class .
+
+<http://www.example.org/word#Phrase> a rdfs:Class .
+
+<http://www.example.org/word#Word> a rdfs:Class .
+
+<http://www.example.org/wordOntology#PartOfSpeech> a rdfs:Class .
+
+<http://www.example.org/wordOntology#Word> a rdfs:Class .
+
+<http://dbpedia.org/ontology/hasWordProperty> rdfs:range <http://dbpedia.org/ontology/Word>,
+        <http://dbpedia.org/ontology/WordProperty> .
+
+<http://example.com/language> rdfs:range <http://example.com/Word> .
+
+<http://example.com/ontology/word#hasDefinition> rdfs:range <http://example.com/ontology/word#>,
+        <http://example.com/ontology/word#Definition> .
+
+<http://example.com/ontology/word#hasSpelling> rdfs:range <http://example.com/ontology/word#>,
+        <http://example.com/ontology/word#Spelling> .
+
+<http://example.com/spelling> rdfs:range <http://example.com/Word> .
+
+<http://example.com/word#hasMeaning> rdfs:range <http://example.com/word#Word> .
+
+<http://example.com/word#hasSpelling> rdfs:range <http://example.com/word#Word> .
+
+<http://example.com/word#partOfSpeech> rdfs:range <http://example.com/word#PartOfSpeech>,
+        <http://example.com/word#Word> .
+
+<http://example.org/hasContent> rdfs:range <http://example.org/Word> .
+
+<http://example.org/hasLanguage> rdfs:range <http://example.org/Word> .
+
+<http://example.org/hasLength> rdfs:range <http://example.org/Word> .
+
+<http://example.org/hasSpelling> rdfs:range <http://example.org/Word>,
+        <http://example.org/word> .
+
+<http://example.org/isSynonymOf> rdfs:range <http://example.org/word> .
+
+<http://example.org/myOntology#Author> rdfs:range <http://example.org/myOntology#TextDocument> .
+
+<http://example.org/myOntology#DocumentTitle> rdfs:range <http://example.org/myOntology#TextDocument> .
+
+<http://example.org/myOntology#WordVersion> rdfs:range <http://example.org/myOntology#Word> .
+
+<http://example.org/myOntology#appliesPageLayout> rdfs:range <http://example.org/myOntology#PageLayout>,
+        <http://example.org/myOntology#TextDocument> .
+
+<http://example.org/myOntology#hasSpellingCorrector> rdfs:range <http://example.org/myOntology#SpellingCorrector>,
+        <http://example.org/myOntology#Word> .
+
+<http://example.org/myOntology#hasThesaurus> rdfs:range <http://example.org/myOntology#Thesaurus>,
+        <http://example.org/myOntology#Word> .
+
+<http://example.org/myOntology#usesMailMerge> rdfs:range <http://example.org/myOntology#MailMerge>,
+        <http://example.org/myOntology#TextDocument> .
+
+<http://example.org/ontology/Word#Length> rdfs:range <http://example.org/ontology/Word#Word> .
+
+<http://example.org/ontology/Word#PartOfSpeech> rdfs:range <http://example.org/ontology/Word#PartOfSpeechClass>,
+        <http://example.org/ontology/Word#Word> .
+
+<http://example.org/ontology/Word#Spelling> rdfs:range <http://example.org/ontology/Word#Word> .
+
+<http://example.org/partOfSpeech> rdfs:range <http://example.org/PartOfSpeech>,
+        <http://example.org/Word> .
+
+<http://example.org/upos> rdfs:range <http://example.org/word> .
+
+<http://example.org/usedInSentence> rdfs:range <http://example.org/Sentence>,
+        <http://example.org/word> .
+
+<http://example.org/word#hasAntonym> rdfs:range <http://example.org/word#Word> .
+
+<http://example.org/word#hasDefinition> rdfs:range <http://example.org/word#Word> .
+
+<http://example.org/word#hasOrigin> rdfs:range <http://example.org/word#Word> .
+
+<http://example.org/word#hasPartOfSpeech> rdfs:range <http://example.org/word#Word> .
+
+<http://example.org/word#hasSpelling> rdfs:range <http://example.org/word#Word> .
+
+<http://example.org/word#hasSynonym> rdfs:range <http://example.org/word#Word> .
+
+<http://www.example.com/word#hasLength> rdfs:range <http://www.example.com/word#Word> .
+
+<http://www.example.com/word#hasSpelling> rdfs:range <http://www.example.com/word#Word> .
+
+<http://www.example.com/word#partOfSpeech> rdfs:range <http://www.example.com/word#PartOfSpeech>,
+        <http://www.example.com/word#Word> .
+
+<http://www.example.org#hasDefinition> rdfs:range <http://www.example.org#Word> .
+
+<http://www.example.org#hasPartOfSpeech> rdfs:range _:n3fac03a8237d4845ab6b8b2bf5e162d6b1,
+        <http://www.example.org#Word> .
+
+<http://www.example.org#hasSpelling> rdfs:range <http://www.example.org#Word> .
+
+<http://www.example.org/word#hasAntonym> rdfs:range <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#hasLemma> rdfs:range <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#hasLength> rdfs:range <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#hasMeaning> rdfs:range <http://www.example.org/word#Meaning>,
+        <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#hasPartOfSpeech> rdfs:range <http://www.example.org/word#PartOfSpeech>,
+        <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#hasSpelling> rdfs:range <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#hasSynonym> rdfs:range <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#isInLanguage> rdfs:range <http://www.example.org/word#Language>,
+        <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#isPartOfSpeech> rdfs:range <http://www.example.org/word#PartOfSpeech>,
+        <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#partOfSpeech> rdfs:range <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#sentence> rdfs:range <http://www.example.org/word#Phrase> .
+
+<http://www.example.org/word#spelling> rdfs:range <http://www.example.org/word#Word> .
+
+<http://www.example.org/word#usedIn> rdfs:range <http://www.example.org/word#Phrase>,
+        <http://www.example.org/word#Word> .
+
+<http://www.example.org/wordOntology#hasLength> rdfs:range <http://www.example.org/wordOntology#Word> .
+
+<http://www.example.org/wordOntology#hasSpelling> rdfs:range <http://www.example.org/wordOntology#Word> .
+
+<http://www.example.org/wordOntology#hasSynonyms> rdfs:range <http://www.example.org/wordOntology#Word> .
+
+<http://www.example.org/wordOntology#partOfSpeech> rdfs:range <http://www.example.org/wordOntology#PartOfSpeech>,
+        <http://www.example.org/wordOntology#Word> .
+

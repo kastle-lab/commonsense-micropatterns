@@ -1,0 +1,202 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:nc8d091ac5b5245598614ab5c8e645fe9b1 a rdfs:Class .
+
+<http://example.com/ex#Part> a rdfs:Class .
+
+<http://example.com/ex#System> a rdfs:Class .
+
+<http://example.com/system#System> a rdfs:Class .
+
+<http://example.com/system#SystemComponent> a rdfs:Class .
+
+<http://example.org/Service> a rdfs:Class .
+
+<http://example.org/System> a rdfs:Class .
+
+<http://example.org/system#Component> a rdfs:Class .
+
+<http://example.org/system#Configuration> a rdfs:Class .
+
+<http://example.org/system#Function> a rdfs:Class .
+
+<http://example.org/system#Functionality> a rdfs:Class .
+
+<http://example.org/system#Hardware> a rdfs:Class .
+
+<http://example.org/system#Part> a rdfs:Class .
+
+<http://example.org/system#Software> a rdfs:Class .
+
+<http://example.org/system#SubSystem> a rdfs:Class .
+
+<http://example.org/system#System> a rdfs:Class .
+
+<http://www.example.com/system#System> a rdfs:Class .
+
+<http://www.example.com/system#SystemComponent> a rdfs:Class .
+
+<http://www.example.org/#Service> a rdfs:Class .
+
+<http://www.example.org/#System> a rdfs:Class .
+
+<http://www.example.org/myOntology#Component> a rdfs:Class .
+
+<http://www.example.org/myOntology#System> a rdfs:Class .
+
+<http://www.example.org/system#Application> a rdfs:Class .
+
+<http://www.example.org/system#Component> a rdfs:Class .
+
+<http://www.example.org/system#ComputerSystem> a rdfs:Class .
+
+<http://www.example.org/system#Hardware> a rdfs:Class .
+
+<http://www.example.org/system#Objective> a rdfs:Class .
+
+<http://www.example.org/system#OperatingSystem> a rdfs:Class .
+
+<http://www.example.org/system#Software> a rdfs:Class .
+
+<http://www.example.org/system#System> a rdfs:Class .
+
+<http://www.example.org/system/ontology#System> a rdfs:Class .
+
+<http://www.examples.com/systems#System> a rdfs:Class .
+
+<http://www.systems.org/systems#Element> a rdfs:Class .
+
+<http://www.systems.org/systems#Function> a rdfs:Class .
+
+<http://www.systems.org/systems#Subsystem> a rdfs:Class .
+
+<http://www.systems.org/systems#System> a rdfs:Class .
+
+rdf:Resource a rdfs:Class .
+
+<http://example.com/ex#hasPart> rdfs:range <http://example.com/ex#Part>,
+        <http://example.com/ex#System> .
+
+<http://example.com/system#hasComponent> rdfs:range <http://example.com/system#System>,
+        <http://example.com/system#SystemComponent> .
+
+<http://example.com/system#partOf> rdfs:range <http://example.com/system#System>,
+        <http://example.com/system#SystemComponent> .
+
+<http://example.org/provides> rdfs:range <http://example.org/Service>,
+        <http://example.org/System> .
+
+<http://example.org/system#hasComponent> rdfs:range <http://example.org/system#Component>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#hasConfiguration> rdfs:range <http://example.org/system#Configuration>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#hasFunction> rdfs:range <http://example.org/system#Function>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#hasFunctionality> rdfs:range <http://example.org/system#Functionality>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#hasHardware> rdfs:range <http://example.org/system#Hardware>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#hasInput> rdfs:range <http://example.org/system#System>,
+        rdf:Resource .
+
+<http://example.org/system#hasOutput> rdfs:range <http://example.org/system#System>,
+        rdf:Resource .
+
+<http://example.org/system#hasPart> rdfs:range <http://example.org/system#Component>,
+        <http://example.org/system#Part>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#hasSoftware> rdfs:range <http://example.org/system#Software>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#hasSubSystem> rdfs:range <http://example.org/system#System> .
+
+<http://example.org/system#hasVersion> rdfs:range <http://example.org/system#System> .
+
+<http://example.org/system#interactsWith> rdfs:range <http://example.org/system#Component> .
+
+<http://example.org/system#isComponentOf> rdfs:range <http://example.org/system#Component>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#isInstalledOn> rdfs:range <http://example.org/system#Hardware>,
+        <http://example.org/system#Software> .
+
+<http://example.org/system#isPartOf> rdfs:range <http://example.org/system#Component>,
+        <http://example.org/system#SubSystem>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#name> rdfs:range _:nc8d091ac5b5245598614ab5c8e645fe9b1 .
+
+<http://example.org/system#performsFunction> rdfs:range <http://example.org/system#Function>,
+        <http://example.org/system#System> .
+
+<http://example.org/system#subSystem> rdfs:range <http://example.org/system#System> .
+
+<http://example.org/system#subsystem_of> rdfs:range <http://example.org/system#System> .
+
+<http://www.example.com/system#hasComponent> rdfs:range <http://www.example.com/system#System>,
+        <http://www.example.com/system#SystemComponent> .
+
+<http://www.example.org/#providesService> rdfs:range <http://www.example.org/#Service>,
+        <http://www.example.org/#System> .
+
+<http://www.example.org/myOntology#hasComponent> rdfs:range <http://www.example.org/myOntology#Component>,
+        <http://www.example.org/myOntology#System> .
+
+<http://www.example.org/myOntology#isPartOf> rdfs:range <http://www.example.org/myOntology#Component>,
+        <http://www.example.org/myOntology#System> .
+
+<http://www.example.org/system#hasApplication> rdfs:range <http://www.example.org/system#Application>,
+        <http://www.example.org/system#OperatingSystem> .
+
+<http://www.example.org/system#hasComponent> rdfs:range <http://www.example.org/system#Component>,
+        <http://www.example.org/system#System> .
+
+<http://www.example.org/system#hasFunction> rdfs:range <http://www.example.org/system#System> .
+
+<http://www.example.org/system#hasHardware> rdfs:range <http://www.example.org/system#Hardware>,
+        <http://www.example.org/system#System> .
+
+<http://www.example.org/system#hasName> rdfs:range <http://www.example.org/system#System> .
+
+<http://www.example.org/system#hasObjective> rdfs:range <http://www.example.org/system#Objective>,
+        <http://www.example.org/system#System> .
+
+<http://www.example.org/system#hasOperatingSystem> rdfs:range <http://www.example.org/system#ComputerSystem>,
+        <http://www.example.org/system#OperatingSystem> .
+
+<http://www.example.org/system#hasPart> rdfs:range <http://www.example.org/system#System> .
+
+<http://www.example.org/system#hasSoftware> rdfs:range <http://www.example.org/system#OperatingSystem>,
+        <http://www.example.org/system#Software> .
+
+<http://www.example.org/system#partOfSystem> rdfs:range <http://www.example.org/system#Component>,
+        <http://www.example.org/system#System> .
+
+<http://www.example.org/system/ontology#hasComponent> rdfs:range <http://www.example.org/system/ontology#System> .
+
+<http://www.example.org/system/ontology#id> rdfs:range <http://www.example.org/system/ontology#System> .
+
+<http://www.examples.com/systems#hasName> rdfs:range <http://www.examples.com/systems#System> .
+
+<http://www.examples.com/systems#hasPart> rdfs:range <http://www.examples.com/systems#System> .
+
+<http://www.examples.com/systems#hasVersion> rdfs:range <http://www.examples.com/systems#System> .
+
+<http://www.examples.com/systems#isPartOf> rdfs:range <http://www.examples.com/systems#System> .
+
+<http://www.systems.org/systems#DeliversFunction> rdfs:range <http://www.systems.org/systems#Function>,
+        <http://www.systems.org/systems#System> .
+
+<http://www.systems.org/systems#HasElement> rdfs:range <http://www.systems.org/systems#Element>,
+        <http://www.systems.org/systems#System> .
+
+<http://www.systems.org/systems#HasSubsystem> rdfs:range <http://www.systems.org/systems#Subsystem>,
+        <http://www.systems.org/systems#System> .
+

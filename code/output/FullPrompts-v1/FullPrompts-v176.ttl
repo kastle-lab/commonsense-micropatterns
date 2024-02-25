@@ -1,7 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.com/> .
-ex:YearClass a rdfs:Class ;
-   rdfs:comment "The class of all years" .
-ex:year2022 a ex:YearClass ;
-  rdfs:label "2022" ;
-  ex:hasValue "2022"^^xsd:gYear .

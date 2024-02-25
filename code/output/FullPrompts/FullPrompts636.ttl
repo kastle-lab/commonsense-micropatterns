@@ -1,3 +1,0 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix : <http://www.example.org/ontology#> .
-:Woman rdf:type owl:Class .

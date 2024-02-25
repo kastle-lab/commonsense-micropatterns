@@ -1,0 +1,126 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:n0e6d7cf234b94cd798e17454f1ba6585b2 a rdfs:Class .
+
+_:n0e6d7cf234b94cd798e17454f1ba6585b3 a rdfs:Class .
+
+<http://example.com/#Action> a rdfs:Class .
+
+<http://example.com/#Event> a rdfs:Class .
+
+<http://example.com/#Reason> a rdfs:Class .
+
+<http://example.com/reason#Reason> a rdfs:Class .
+
+<http://example.org#Entity> a rdfs:Class .
+
+<http://example.org#IdeaOrActionOrTheory> a rdfs:Class .
+
+<http://example.org#Reason> a rdfs:Class .
+
+<http://example.org/Action> a rdfs:Class .
+
+<http://example.org/Entity> a rdfs:Class .
+
+<http://example.org/Reason> a rdfs:Class .
+
+<http://example.org/ontology/reason#Reason> a rdfs:Class .
+
+<http://example.org/reason#Action> a rdfs:Class .
+
+<http://example.org/reason#ActionClaim> a rdfs:Class .
+
+<http://example.org/reason#ActionEffect> a rdfs:Class .
+
+<http://example.org/reason#PhenomenonFact> a rdfs:Class .
+
+<http://example.org/reason#Reason> a rdfs:Class .
+
+<http://example.org/reason-ontology#Reason> a rdfs:Class .
+
+<http://www.example.org/reason#Reason> a rdfs:Class .
+
+<http://www.example.org/reason#ReasoningenType> a rdfs:Class .
+
+<http://www.semanticweb.org/ontologies/reason#Reason> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+<http://example.com/#hasEvent> rdfs:range <http://example.com/#Event>,
+        <http://example.com/#Reason> .
+
+<http://example.com/#hasReason> rdfs:range <http://example.com/#Action>,
+        <http://example.com/#Reason> .
+
+<http://example.com/#reasonText> rdfs:range <http://example.com/#Reason> .
+
+<http://example.com/reason#relatedToDecision> rdfs:range <http://example.com/reason#Reason>,
+        rdfs:Resource .
+
+<http://example.com/reason#relatedToEvent> rdfs:range <http://example.com/reason#Reason>,
+        rdfs:Resource .
+
+<http://example.org#hasReason> rdfs:range <http://example.org#IdeaOrActionOrTheory>,
+        <http://example.org#Reason> .
+
+<http://example.org#providesReason> rdfs:range <http://example.org#Entity>,
+        <http://example.org#Reason> .
+
+<http://example.org/hasReason> rdfs:range <http://example.org/Action>,
+        <http://example.org/Entity>,
+        <http://example.org/Reason> .
+
+<http://example.org/ontology/reason#actionTriggeredBy> rdfs:range _:n0e6d7cf234b94cd798e17454f1ba6585b2,
+        <http://example.org/ontology/reason#Reason> .
+
+<http://example.org/ontology/reason#causesEvent> rdfs:range _:n0e6d7cf234b94cd798e17454f1ba6585b3,
+        <http://example.org/ontology/reason#Reason> .
+
+<http://example.org/ontology/reason#hasLogicalBasis> rdfs:range <http://example.org/ontology/reason#Reason>,
+        rdfs:Resource .
+
+<http://example.org/reason#HasReason> rdfs:range <http://example.org/reason#Reason>,
+        owl:Thing .
+
+<http://example.org/reason#actionName> rdfs:range <http://example.org/reason#Action> .
+
+<http://example.org/reason#causedBy> rdfs:range <http://example.org/reason#Reason> .
+
+<http://example.org/reason#causes> rdfs:range <http://example.org/reason#ActionEffect>,
+        <http://example.org/reason#Reason> .
+
+<http://example.org/reason#contains> rdfs:range <http://example.org/reason#Reason> .
+
+<http://example.org/reason#explains> rdfs:range <http://example.org/reason#PhenomenonFact>,
+        <http://example.org/reason#Reason> .
+
+<http://example.org/reason#hasReason> rdfs:range <http://example.org/reason#Action>,
+        <http://example.org/reason#Reason> .
+
+<http://example.org/reason#justifies> rdfs:range <http://example.org/reason#ActionClaim>,
+        <http://example.org/reason#Reason> .
+
+<http://example.org/reason#leadsTo> rdfs:range <http://example.org/reason#Reason> .
+
+<http://example.org/reason#reasonText> rdfs:range <http://example.org/reason#Reason> .
+
+<http://example.org/reason-ontology#hasReason> rdfs:range <http://example.org/reason-ontology#Reason>,
+        rdfs:Resource .
+
+<http://example.org/reason-ontology#reasonFor> rdfs:range <http://example.org/reason-ontology#Reason>,
+        rdfs:Resource .
+
+<http://example.org/reasonText> rdfs:range <http://example.org/Reason> .
+
+<http://www.example.org/reason#usesReasoningType> rdfs:range <http://www.example.org/reason#Reason>,
+        <http://www.example.org/reason#ReasoningenType> .
+
+<http://www.semanticweb.org/ontologies/reason#derivedFrom> rdfs:range <http://www.semanticweb.org/ontologies/reason#Reason>,
+        rdfs:Resource .
+
+<http://www.semanticweb.org/ontologies/reason#hasReason> rdfs:range <http://www.semanticweb.org/ontologies/reason#Reason>,
+        rdfs:Resource .
+

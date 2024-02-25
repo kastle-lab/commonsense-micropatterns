@@ -1,7 +1,0 @@
-@prefix ex: <http://example.org#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-ex:Place_123 a ex:Place ;
-    ex:name "Example Place" ;
-    geo:lat "50.85045" ;
-    geo:long "4.34878" .
