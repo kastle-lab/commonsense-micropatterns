@@ -42,7 +42,7 @@ def serialization(noun, graph:Graph):
     graph.serialize(format="turtle", encoding="utf-8", destination=dest)
 
 def markdown_cleanup(ontology):
-    ''''
+    '''
         Helper cleanup function specifically for markdown codeblock tags
     '''
     #  Strip any leading findable ```
@@ -53,11 +53,11 @@ def markdown_cleanup(ontology):
     ontology = ontology.replace(". ```",".\n```")
     ontology = ontology.replace(". ```",".\n```")
 
-    if("```" in ontology):
+    if "```" in ontology:
         onto_clean = ontology.split("\n")
         ontology = ""
         for i in range(1, len(onto_clean)-1): # Skip first set of "```"
-            if("```" in onto_clean[i]): # If second set found, don't append.
+            if "```" in onto_clean[i]: # If second set found, don't append.
                 break
             ontology += f"{onto_clean[i]}\n"
         ontology = ontology.replace(" .", " .\n")
@@ -82,8 +82,10 @@ def parse_results():
 
         count = 0
         for line in lines:
-            out_name = f"{name}{count}.ttl" # simple naming convention for unique noun ontology
+            # Simple naming convention for unique noun ontology
+            out_name = f"{name}{count}.ttl" 
             split = line.split("\t")
+            
             index = 0
             for s in split:
                 if("@" in s):
@@ -93,8 +95,11 @@ def parse_results():
                 ontology = split[index]
             except IndexError:
                 continue
+
             out = open(os.path.join(noun_dir, out_name), "w")
             # Clean up ttl lines
+            ## These were determined while running the script a few times
+            ## And seeing how RDFlib was failing to parse the graphs
             ontology = ontology.replace(" .", " .\n")
             ontology = ontology.replace("\".", "\".\n")
             ontology = ontology.replace(";", ";\n")
@@ -102,11 +107,13 @@ def parse_results():
             ontology = ontology.replace("resourceex", "resource\nex")
             ontology = ontology.replace("propertyex", "property\nex")
             ontology = ontology.replace("classex", "class\nex")
-            ontology = ontology.replace("# Classes", "# Class\n")
+            ontology = ontology.replace("# Classes", "# Classes\n")
             ontology = ontology.replace("# Properties", "# Properties\n")
             ontology = ontology.replace("# Individuals", "# Individuals\n")
             ontology = ontology.replace("\"ex:", "\"\nex:")
 
+            ## Sometimes class names were wrapped in curly braces
+            ## These are removed when encountered
             pattern = r'[a-zA-Z]*:{' # weird { } syntax
             ontology = re.sub(pattern, '', ontology)
             ontology = ontology.replace("}", "")
@@ -175,8 +182,6 @@ def vote_properties():
     ]
     
     for filename in os.listdir(input_path): # For each Noun
-    # for i in range(1): # For testing 
-    #     filename= "Month.tsv"
         noun, ext = filename.split(".")
         noun_dir = os.path.join(output_path,noun)
         
@@ -195,7 +200,6 @@ def vote_properties():
             with open(os.path.join(noun_dir, filename), "r") as f:
                 try:
                     curr_graph.parse(f)
-                    # print(filename)
                     #  Counting Individual File Occurrences
                     for sub,p,obj in curr_graph:
                         if("rdf" in p): #Skip RDF properties
@@ -205,8 +209,6 @@ def vote_properties():
                         if(isinstance(obj, Literal)):
                             continue                        
                         temp = p.split("/")[-1]
-                        # if("#" in p): # can include RDF properties, if necessary
-                        #     p = p.split("#")[-1].strip()
 
                         if(f"{noun}#" in p):
                             temp = temp.split("#")[-1]
@@ -247,7 +249,6 @@ def vote_properties():
 
                 except ParserError:
                     continue # Error parsing file
-                    # print("Error: " + filename)
                 except Exception as ex:
                     continue 
 
@@ -261,12 +262,10 @@ def vote_properties():
             statsValidDict[noun] += 1
 
         # Voting to add to noun
-
         for key, value in nounPropertyDict.items():
             sub = value[0]
             pred = key
             obj = value[1]
-            # print(f"{sub} \t {pred} \t {obj}")
             property = pred.split("/")[-1].split("#")[-1]
             if(voting_helper(nounPropertyDict, property)):
                 graph.add( (sub, pred, obj) )
@@ -287,7 +286,6 @@ def vote_properties():
             statsFile.write(f"{key}: \t {value}  \t {statsTotalDict[key]} \t {ratioUsed}\n")
         except Exception as ex:
             pass
-
 
 if __name__ == "__main__":
     parse_results()
