@@ -1,128 +1,106 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:n8f0f6114b0b64edf98466815db9c750ab1 a rdfs:Class .
+kastle:EndDate a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:date .
 
-<http://example.com#End> a rdfs:Class .
+kastle:Endtime a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:dateTime .
 
-<http://example.com#Process> a rdfs:Class .
+kastle:associatedWith a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Resource .
 
-<http://example.com/End> a rdfs:Class .
+kastle:cause a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Resource .
 
-<http://example.com/Event> a rdfs:Class .
+kastle:causes a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:EndEvent .
 
-<http://example.com/end#End> a rdfs:Class .
+kastle:consequence a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Resource .
 
-<http://example.org/#End> a rdfs:Class .
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:dateTime .
 
-<http://example.org/#Entity> a rdfs:Class .
+kastle:event a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Resource .
 
-<http://example.org/End> a rdfs:Class .
+kastle:hasActor a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Resource .
 
-<http://example.org/Event> a rdfs:Class .
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:date .
 
-<http://example.org/end#End> a rdfs:Class .
+kastle:hasEnd a rdf:Property ;
+    rdfs:domain kastle:Entity,
+        kastle:Event,
+        kastle:Process,
+        kastle:Resource,
+        kastle:Thing ;
+    rdfs:range kastle:End .
 
-<http://example.org/end#EndLocation> a rdfs:Class .
+kastle:hasEndDate a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:dateTime .
 
-<http://example.org/end#EndTime> a rdfs:Class .
+kastle:hasEndLocation a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:EndLocation .
 
-<http://example.org/end#Event> a rdfs:Class .
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:EndTime,
+        kastle:dateTime .
 
-<http://example.org/end/> a rdfs:Class .
+kastle:hasTime a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:End ;
+    rdfs:range kastle:dateTime,
+        kastle:time .
 
-<http://www.example.org/end#End> a rdfs:Class .
+kastle:isEndOf a rdf:Property ;
+    rdfs:domain kastle:End,
+        kastle:nf4c469668d52493ab3c0cf570642a750b1 ;
+    rdfs:range kastle:End,
+        kastle:Resource,
+        kastle:Thing .
 
-<http://www.example.org/end#EndEvent> a rdfs:Class .
+kastle:isResultOf a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:EndEvent .
 
-<http://www.example.org/end#EndLocation> a rdfs:Class .
+kastle:locationEnd a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Resource .
 
-<http://www.example.org/end/End> a rdfs:Class .
+kastle:of a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Resource .
 
-rdfs:Resource a rdfs:Class .
+kastle:ofEvent a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Event .
 
-owl:Thing a rdfs:Class .
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:dateTime .
 
-<http://example.com#hasEnd> rdfs:range <http://example.com#End>,
-        <http://example.com#Process> .
+kastle:timePoint a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:dateTime .
 
-<http://example.com/end#cause> rdfs:range <http://example.com/end#End>,
-        rdfs:Resource .
-
-<http://example.com/end#consequence> rdfs:range <http://example.com/end#End>,
-        rdfs:Resource .
-
-<http://example.com/end#of> rdfs:range <http://example.com/end#End>,
-        rdfs:Resource .
-
-<http://example.com/hasEnd> rdfs:range <http://example.com/End>,
-        <http://example.com/Event> .
-
-<http://example.org/#hasEnd> rdfs:range <http://example.org/#End>,
-        <http://example.org/#Entity> .
-
-<http://example.org/end#EndDate> rdfs:range <http://example.org/end#End> .
-
-<http://example.org/end#Endtime> rdfs:range <http://example.org/end#End> .
-
-<http://example.org/end#event> rdfs:range <http://example.org/end#End>,
-        rdfs:Resource .
-
-<http://example.org/end#hasActor> rdfs:range <http://example.org/end#End>,
-        rdfs:Resource .
-
-<http://example.org/end#hasDate> rdfs:range <http://example.org/end#End> .
-
-<http://example.org/end#hasEnd> rdfs:range <http://example.org/end#End>,
-        rdfs:Resource .
-
-<http://example.org/end#hasEndLocation> rdfs:range <http://example.org/end#End>,
-        <http://example.org/end#EndLocation> .
-
-<http://example.org/end#hasEndTime> rdfs:range <http://example.org/end#End>,
-        <http://example.org/end#EndTime> .
-
-<http://example.org/end#hasTime> rdfs:range <http://example.org/end#End> .
-
-<http://example.org/end#isEndOf> rdfs:range _:n8f0f6114b0b64edf98466815db9c750ab1,
-        <http://example.org/end#End>,
-        rdfs:Resource .
-
-<http://example.org/end#locationEnd> rdfs:range <http://example.org/end#End>,
-        rdfs:Resource .
-
-<http://example.org/end#ofEvent> rdfs:range <http://example.org/end#End>,
-        <http://example.org/end#Event> .
-
-<http://example.org/end#timePoint> rdfs:range <http://example.org/end#End> .
-
-<http://example.org/end/associatedWith> rdfs:range <http://example.org/end/>,
-        rdfs:Resource .
-
-<http://example.org/end/hasTime> rdfs:range <http://example.org/end/> .
-
-<http://example.org/endDate> rdfs:range <http://example.org/End> .
-
-<http://example.org/hasEnd> rdfs:range <http://example.org/End>,
-        rdfs:Resource .
-
-<http://example.org/hasEndDate> rdfs:range <http://example.org/Event> .
-
-<http://example.org/startDate> rdfs:range <http://example.org/End> .
-
-<http://www.example.org/end#causes> rdfs:range <http://www.example.org/end#End>,
-        <http://www.example.org/end#EndEvent> .
-
-<http://www.example.org/end#hasEnd> rdfs:range <http://www.example.org/end#End> .
-
-<http://www.example.org/end#hasEndLocation> rdfs:range <http://www.example.org/end#EndLocation> .
-
-<http://www.example.org/end#isResultOf> rdfs:range <http://www.example.org/end#End>,
-        <http://www.example.org/end#EndEvent> .
-
-<http://www.example.org/end/hasEnd> rdfs:range <http://www.example.org/end/End>,
-        owl:Thing .
-
-<http://www.example.org/end/isEndOf> rdfs:range <http://www.example.org/end/End>,
-        owl:Thing .
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Literal .
 

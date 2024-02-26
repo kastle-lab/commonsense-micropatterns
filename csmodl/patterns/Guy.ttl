@@ -1,73 +1,92 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/guyOntology#Guy> a rdfs:Class .
+kastle:birthday a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:date .
 
-<http://example.com/ontology/guy#Guy> a rdfs:Class .
+kastle:employedAs a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Job .
 
-<http://example.com/ontology/guy#Organization> a rdfs:Class .
+kastle:firstName a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:string .
 
-<http://example.org#Guy> a rdfs:Class .
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Guy,
+        kastle:Human ;
+    rdfs:range kastle:Literal,
+        kastle:int,
+        kastle:integer .
 
-<http://example.org/human#Gender> a rdfs:Class .
+kastle:hasChild a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Guy .
 
-<http://example.org/human#Human> a rdfs:Class .
+kastle:hasFirstName a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Literal .
 
-<http://www.example.org/#Guy> a rdfs:Class .
+kastle:hasGender a rdf:Property ;
+    rdfs:domain kastle:Human ;
+    rdfs:range kastle:Gender .
 
-<http://www.example.org/#Hobby> a rdfs:Class .
+kastle:hasHobby a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Hobby .
 
-<http://www.example.org/#Job> a rdfs:Class .
+kastle:hasInterest a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/#Location> a rdfs:Class .
+kastle:hasLastName a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/guyOntology#hasAge> rdfs:range <http://example.com/guyOntology#Guy> .
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Organization ;
+    rdfs:range kastle:string .
 
-<http://example.com/guyOntology#hasName> rdfs:range <http://example.com/guyOntology#Guy> .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:string .
 
-<http://example.com/guyOntology#hasOccupation> rdfs:range <http://example.com/guyOntology#Guy> .
+kastle:hasOccupation a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:string .
 
-<http://example.com/guyOntology#isFriendWith> rdfs:range <http://example.com/guyOntology#Guy> .
+kastle:hasSpouse a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Guy .
 
-<http://example.com/ontology/guy#hasAge> rdfs:range <http://example.com/ontology/guy#Guy> .
+kastle:isFriendWith a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Guy .
 
-<http://example.com/ontology/guy#hasInterest> rdfs:range <http://example.com/ontology/guy#Guy> .
+kastle:lastName a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:string .
 
-<http://example.com/ontology/guy#hasLocation> rdfs:range <http://example.com/ontology/guy#Organization> .
+kastle:livesIn a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/ontology/guy#hasName> rdfs:range <http://example.com/ontology/guy#Guy> .
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Human ;
+    rdfs:range kastle:string .
 
-<http://example.com/ontology/guy#playsSport> rdfs:range <http://example.com/ontology/guy#Guy> .
+kastle:playsSport a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:string .
 
-<http://example.com/ontology/guy#worksAt> rdfs:range <http://example.com/ontology/guy#Guy>,
-        <http://example.com/ontology/guy#Organization> .
+kastle:worksAt a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Literal,
+        kastle:Organization .
 
-<http://example.org#birthday> rdfs:range <http://example.org#Guy> .
-
-<http://example.org#firstName> rdfs:range <http://example.org#Guy> .
-
-<http://example.org#hasChild> rdfs:range <http://example.org#Guy> .
-
-<http://example.org#hasSpouse> rdfs:range <http://example.org#Guy> .
-
-<http://example.org#lastName> rdfs:range <http://example.org#Guy> .
-
-<http://example.org/human#hasAge> rdfs:range <http://example.org/human#Human> .
-
-<http://example.org/human#hasGender> rdfs:range <http://example.org/human#Gender>,
-        <http://example.org/human#Human> .
-
-<http://example.org/human#name> rdfs:range <http://example.org/human#Human> .
-
-<http://www.example.org/#employedAs> rdfs:range <http://www.example.org/#Guy>,
-        <http://www.example.org/#Job> .
-
-<http://www.example.org/#hasAge> rdfs:range <http://www.example.org/#Guy> .
-
-<http://www.example.org/#hasHobby> rdfs:range <http://www.example.org/#Guy>,
-        <http://www.example.org/#Hobby> .
-
-<http://www.example.org/#hasName> rdfs:range <http://www.example.org/#Guy> .
-
-<http://www.example.org/#worksIn> rdfs:range <http://www.example.org/#Guy>,
-        <http://www.example.org/#Location> .
+kastle:worksIn a rdf:Property ;
+    rdfs:domain kastle:Guy ;
+    rdfs:range kastle:Location .
 

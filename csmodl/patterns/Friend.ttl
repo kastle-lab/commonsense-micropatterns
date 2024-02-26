@@ -1,145 +1,123 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Friend/Friend_5.ttl#Friend> a rdfs:Class .
+kastle:age a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:integer .
 
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Friend/Friend_5.ttl#hasFriend> a rdfs:Class ;
-    rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Friend/Friend_5.ttl#Friend> .
+kastle:commonInterest a rdf:Property ;
+    rdfs:domain kastle:Friend,
+        kastle:hasFriend ;
+    rdfs:range kastle:string .
 
-<http://example.com#Friend> a rdfs:Class .
+kastle:friend a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 
-<http://example.com#Person> a rdfs:Class .
+kastle:friendOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 
-<http://example.com/Friend> a rdfs:Class .
+kastle:hasAddress a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:Resource .
 
-<http://example.com/Person> a rdfs:Class .
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:int,
+        kastle:integer .
 
-<http://example.com/friend#Friend> a rdfs:Class .
+kastle:hasCommonInterest a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:Resource .
 
-<http://example.com/hasFriend> a rdfs:Class ;
-    rdfs:range <http://example.com/Friend>,
-        <http://example.com/Person> .
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:duration .
 
-<http://example.org/Friend> a rdfs:Class .
+kastle:hasFriendshipEndDate a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:date .
 
-<http://example.org/Person> a rdfs:Class .
+kastle:hasFriendshipStartDate a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:date .
 
-<http://example.org/friend#Friend> a rdfs:Class .
+kastle:hasGender a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:string .
 
-<http://example.org/friend/Friend> a rdfs:Class .
+kastle:hasKnownSince a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
 
-<http://example.org/people#Friend> a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:string .
 
-<http://example.org/people#Person> a rdfs:Class .
+kastle:hasPhoneNumber a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:string .
 
-<http://example.org/people#hasFriend> a rdfs:Class ;
-    rdfs:range <http://example.org/people#Friend>,
-        <http://example.org/people#Person> .
+kastle:hasSharedExperience a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:Resource .
 
-<http://www.example.org/friend#Person> a rdfs:Class .
+kastle:isClose a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:boolean .
 
-<http://www.example.org/friend#hasFriend> a rdfs:Class ;
-    rdfs:range <http://www.example.org/friend#Person> .
+kastle:isFriendOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 
-<http://www.example.org/friends#Friend> a rdfs:Class .
+kastle:isFriendWith a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:Friend .
 
-<http://www.example.org/friends#Interest> a rdfs:Class .
+kastle:knownSince a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:date .
 
-<http://www.example.org/friends#Person> a rdfs:Class .
+kastle:knows a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Friend .
 
-<http://www.example.org/ontology/Friend> a rdfs:Class .
+kastle:knowsSince a rdf:Property ;
+    rdfs:domain kastle:Friend,
+        kastle:hasFriend ;
+    rdfs:range kastle:Literal,
+        kastle:date,
+        kastle:dateTime .
 
-<http://www.example.org/ontology/Person> a rdfs:Class .
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
 
-rdf:Resource a rdfs:Class .
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
 
-rdfs:Resource a rdfs:Class .
+kastle:placeMet a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:string .
 
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Friend/Friend_5.ttl#commonInterest> rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Friend/Friend_5.ttl#hasFriend> .
+kastle:sharedInterests a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:string .
 
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Friend/Friend_5.ttl#knowsSince> rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Friend/Friend_5.ttl#hasFriend> .
+kastle:sharesInterestWith a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Interest .
 
-<http://example.com#age> rdfs:range <http://example.com#Friend>,
-        <http://example.com#Person> .
+kastle:since a rdf:Property ;
+    rdfs:domain kastle:Friend ;
+    rdfs:range kastle:date .
 
-<http://example.com#hasFriend> rdfs:range <http://example.com#Friend>,
-        <http://example.com#Person> .
-
-<http://example.com#name> rdfs:range <http://example.com#Friend>,
-        <http://example.com#Person> .
-
-<http://example.com/friend#hasCommonInterest> rdfs:range <http://example.com/friend#Friend>,
-        rdfs:Resource .
-
-<http://example.com/friend#hasDuration> rdfs:range <http://example.com/friend#Friend> .
-
-<http://example.com/friend#hasFriend> rdfs:range <http://example.com/friend#Friend> .
-
-<http://example.com/friend#hasSharedExperience> rdfs:range <http://example.com/friend#Friend>,
-        rdfs:Resource .
-
-<http://example.com/friend#since> rdfs:range <http://example.com/friend#Friend> .
-
-<http://example.com/knowsSince> rdfs:range <http://example.com/hasFriend> .
-
-<http://example.org/commonInterest> rdfs:range <http://example.org/Friend> .
-
-<http://example.org/friend> rdfs:range <http://example.org/Person> .
-
-<http://example.org/friend#hasAddress> rdfs:range <http://example.org/friend#Friend>,
-        rdf:Resource .
-
-<http://example.org/friend#hasAge> rdfs:range <http://example.org/friend#Friend> .
-
-<http://example.org/friend#hasGender> rdfs:range <http://example.org/friend#Friend> .
-
-<http://example.org/friend#hasName> rdfs:range <http://example.org/friend#Friend> .
-
-<http://example.org/friend#hasPhoneNumber> rdfs:range <http://example.org/friend#Friend> .
-
-<http://example.org/friend#isFriendWith> rdfs:range <http://example.org/friend#Friend> .
-
-<http://example.org/friend/commonInterest> rdfs:range <http://example.org/friend/Friend> .
-
-<http://example.org/friend/hasFriend> rdfs:range <http://example.org/friend/Friend> .
-
-<http://example.org/friend/knownSince> rdfs:range <http://example.org/friend/Friend> .
-
-<http://example.org/friend/placeMet> rdfs:range <http://example.org/friend/Friend> .
-
-<http://example.org/hasFriend> rdfs:range <http://example.org/Friend>,
-        <http://example.org/Person> .
-
-<http://example.org/isClose> rdfs:range <http://example.org/Friend> .
-
-<http://example.org/knowsSince> rdfs:range <http://example.org/Friend> .
-
-<http://example.org/people#knowsSince> rdfs:range <http://example.org/people#hasFriend> .
-
-<http://www.example.org/friend#age> rdfs:range <http://www.example.org/friend#Person> .
-
-<http://www.example.org/friend#knowsSince> rdfs:range <http://www.example.org/friend#hasFriend> .
-
-<http://www.example.org/friend#location> rdfs:range <http://www.example.org/friend#Person> .
-
-<http://www.example.org/friend#name> rdfs:range <http://www.example.org/friend#Person> .
-
-<http://www.example.org/friends#hasFriend> rdfs:range <http://www.example.org/friends#Person> .
-
-<http://www.example.org/friends#hasKnownSince> rdfs:range <http://www.example.org/friends#Person> .
-
-<http://www.example.org/friends#isFriendOf> rdfs:range <http://www.example.org/friends#Person> .
-
-<http://www.example.org/friends#knows> rdfs:range <http://www.example.org/friends#Friend>,
-        <http://www.example.org/friends#Person> .
-
-<http://www.example.org/friends#sharesInterestWith> rdfs:range <http://www.example.org/friends#Interest>,
-        <http://www.example.org/friends#Person> .
-
-<http://www.example.org/ontology/hasFriend> rdfs:range <http://www.example.org/ontology/Friend>,
-        <http://www.example.org/ontology/Person> .
-
-<http://www.example.org/ontology/hasFriendshipEndDate> rdfs:range <http://www.example.org/ontology/Friend> .
-
-<http://www.example.org/ontology/hasFriendshipStartDate> rdfs:range <http://www.example.org/ontology/Friend> .
+kastle:hasFriend a rdf:Property ;
+    rdfs:domain kastle:Friend,
+        kastle:Person ;
+    rdfs:range kastle:Friend,
+        kastle:Person .
 

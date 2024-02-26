@@ -1,210 +1,169 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/fact#Fact> a rdfs:Class .
-
-<http://example.com/fact#Reporter> a rdfs:Class .
-
-<http://example.com/fact#Source> a rdfs:Class .
-
-<http://example.com/fact#Subject> a rdfs:Class .
-
-<http://example.com/ontology#Fact> a rdfs:Class .
-
-<http://example.org/Fact> a rdfs:Class .
-
-<http://example.org/fact#Fact> a rdfs:Class .
-
-<http://example.org/fact#FactCategory> a rdfs:Class .
-
-<http://example.org/fact#FactSource> a rdfs:Class .
-
-<http://example.org/fact/> a rdfs:Class .
-
-<http://example.org/fact/Fact> a rdfs:Class .
-
-<http://example.org/fact/Source> a rdfs:Class .
-
-<http://example.org/fact/Verification> a rdfs:Class .
-
-<http://example.org/truthvalue/> a rdfs:Class .
-
-<http://www.example.com/fact#Fact> a rdfs:Class .
-
-<http://www.example.com/fact#FactDescription> a rdfs:Class .
-
-<http://www.example.com/ontology#Fact> a rdfs:Class .
-
-<http://www.example.com/ontology/fact#Fact> a rdfs:Class .
-
-<http://www.example.org/fact#Fact> a rdfs:Class .
-
-<http://www.example.org/fact#FactCheck> a rdfs:Class .
-
-<http://www.example.org/fact#FactTopic> a rdfs:Class .
-
-<http://www.example.org/fact#FactType> a rdfs:Class .
-
-<http://www.example.org/fact#Source> a rdfs:Class .
-
-<http://www.example.org/fact_ontology#Fact> a rdfs:Class .
-
-<http://www.example.org/fact_ontology#Source> a rdfs:Class .
-
-rdf:resource a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-<http://example.com/fact#dateVerified> rdfs:range <http://example.com/fact#Fact> .
-
-<http://example.com/fact#hasFactValue> rdfs:range <http://example.com/fact#Fact> .
-
-<http://example.com/fact#hasReporter> rdfs:range <http://example.com/fact#Fact>,
-        <http://example.com/fact#Reporter> .
-
-<http://example.com/fact#hasSource> rdfs:range <http://example.com/fact#Fact>,
-        <http://example.com/fact#Source> .
-
-<http://example.com/fact#hasSubject> rdfs:range <http://example.com/fact#Fact>,
-        <http://example.com/fact#Subject> .
-
-<http://example.com/fact#hasVerificationStatus> rdfs:range <http://example.com/fact#Fact> .
-
-<http://example.com/fact#isVerified> rdfs:range <http://example.com/fact#Fact> .
-
-<http://example.com/fact#relatedTo> rdfs:range <http://example.com/fact#Fact>,
-        rdfs:Resource .
-
-<http://example.com/fact#sourceReference> rdfs:range <http://example.com/fact#Fact>,
-        rdfs:Resource .
-
-<http://example.com/ontology#assertedBy> rdfs:range <http://example.com/ontology#Fact>,
-        rdf:resource .
-
-<http://example.com/ontology#validity> rdfs:range <http://example.com/ontology#Fact> .
-
-<http://example.org/fact#dateVerified> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#hasCategoryName> rdfs:range <http://example.org/fact#FactCategory> .
-
-<http://example.org/fact#hasDate> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#hasDateVerified> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#hasFact> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#hasFactSource> rdfs:range <http://example.org/fact#Fact>,
-        owl:Thing .
-
-<http://example.org/fact#hasFactText> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#hasObject> rdfs:range <http://example.org/fact#Fact>,
-        rdfs:Resource .
-
-<http://example.org/fact#hasPredicate> rdfs:range <http://example.org/fact#Fact>,
-        rdfs:Resource .
-
-<http://example.org/fact#hasSource> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#hasSourceName> rdfs:range <http://example.org/fact#FactSource> .
-
-<http://example.org/fact#hasSourceUrl> rdfs:range <http://example.org/fact#FactSource> .
-
-<http://example.org/fact#hasSubject> rdfs:range <http://example.org/fact#Fact>,
-        rdfs:Resource .
-
-<http://example.org/fact#hasValue> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#isFactAbout> rdfs:range <http://example.org/fact#Fact>,
-        owl:Thing .
-
-<http://example.org/fact#isFactOfCategory> rdfs:range <http://example.org/fact#Fact>,
-        <http://example.org/fact#FactCategory> .
-
-<http://example.org/fact#isSourceVerified> rdfs:range <http://example.org/fact#FactSource> .
-
-<http://example.org/fact#isVerified> rdfs:range <http://example.org/fact#Fact> .
-
-<http://example.org/fact#relatedTo> rdfs:range <http://example.org/fact#Fact>,
-        rdfs:Resource .
-
-<http://example.org/fact#source> rdfs:range <http://example.org/fact#Fact>,
-        rdfs:Resource .
-
-<http://example.org/fact/hasSource> rdfs:range <http://example.org/fact/Fact>,
-        <http://example.org/fact/Source> .
-
-<http://example.org/fact/hasStatement> rdfs:range <http://example.org/fact/Fact> .
-
-<http://example.org/fact/hasVerification> rdfs:range <http://example.org/fact/Fact>,
-        <http://example.org/fact/Verification> .
-
-<http://example.org/fact/related_to> rdfs:range <http://example.org/fact/>,
-        rdfs:Resource .
-
-<http://example.org/fact/source> rdfs:range <http://example.org/fact/>,
-        rdfs:Resource .
-
-<http://example.org/fact/verified> rdfs:range <http://example.org/fact/>,
-        <http://example.org/truthvalue/> .
-
-<http://example.org/hasObject> rdfs:range <http://example.org/Fact> .
-
-<http://example.org/hasPredicate> rdfs:range <http://example.org/Fact> .
-
-<http://example.org/hasSubject> rdfs:range <http://example.org/Fact> .
-
-<http://www.example.com/fact#hasDescription> rdfs:range <http://www.example.com/fact#Fact>,
-        <http://www.example.com/fact#FactDescription> .
-
-<http://www.example.com/fact#hasId> rdfs:range <http://www.example.com/fact#Fact> .
-
-<http://www.example.com/fact#hasSource> rdfs:range <http://www.example.com/fact#Fact> .
-
-<http://www.example.com/fact#isAbout> rdfs:range <http://www.example.com/fact#Fact> .
-
-<http://www.example.com/ontology#hasObject> rdfs:range <http://www.example.com/ontology#Fact>,
-        rdfs:Resource .
-
-<http://www.example.com/ontology#hasPredicate> rdfs:range <http://www.example.com/ontology#Fact>,
-        rdfs:Resource .
-
-<http://www.example.com/ontology#hasSubject> rdfs:range <http://www.example.com/ontology#Fact>,
-        rdfs:Resource .
-
-<http://www.example.com/ontology/fact#isVerified> rdfs:range <http://www.example.com/ontology/fact#Fact> .
-
-<http://www.example.com/ontology/fact#source> rdfs:range <http://www.example.com/ontology/fact#Fact>,
-        rdfs:Resource .
-
-<http://www.example.com/ontology/fact#subject> rdfs:range <http://www.example.com/ontology/fact#Fact>,
-        rdfs:Resource .
-
-<http://www.example.org/fact#dateRecorded> rdfs:range <http://www.example.org/fact#Fact> .
-
-<http://www.example.org/fact#hasFactTopic> rdfs:range <http://www.example.org/fact#Fact>,
-        <http://www.example.org/fact#FactTopic> .
-
-<http://www.example.org/fact#hasFactType> rdfs:range <http://www.example.org/fact#Fact>,
-        <http://www.example.org/fact#FactType> .
-
-<http://www.example.org/fact#hasSource> rdfs:range <http://www.example.org/fact#Fact>,
-        <http://www.example.org/fact#Source> .
-
-<http://www.example.org/fact#isFactChecked> rdfs:range <http://www.example.org/fact#Fact>,
-        <http://www.example.org/fact#FactCheck> .
-
-<http://www.example.org/fact#isVerified> rdfs:range <http://www.example.org/fact#Fact> .
-
-<http://www.example.org/fact_ontology#dateVerified> rdfs:range <http://www.example.org/fact_ontology#Fact> .
-
-<http://www.example.org/fact_ontology#factStatement> rdfs:range <http://www.example.org/fact_ontology#Fact> .
-
-<http://www.example.org/fact_ontology#hasSource> rdfs:range <http://www.example.org/fact_ontology#Fact>,
-        <http://www.example.org/fact_ontology#Source> .
-
-<http://www.example.org/fact_ontology#isVerified> rdfs:range <http://www.example.org/fact_ontology#Fact> .
+kastle:assertedBy a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:resource .
+
+kastle:dateRecorded a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:date .
+
+kastle:dateVerified a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:date,
+        kastle:dateTime .
+
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Literal .
+
+kastle:factStatement a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:string .
+
+kastle:hasCategoryName a rdf:Property ;
+    rdfs:domain kastle:FactCategory ;
+    rdfs:range kastle:string .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:date .
+
+kastle:hasDateVerified a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:date .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:FactDescription .
+
+kastle:hasFact a rdf:Property ;
+    rdfs:domain kastle:Fact,
+        kastle:Subject ;
+    rdfs:range kastle:Fact .
+
+kastle:hasFactSource a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Thing .
+
+kastle:hasFactText a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:string .
+
+kastle:hasFactTopic a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:FactTopic .
+
+kastle:hasFactType a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:FactType .
+
+kastle:hasFactValue a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:string .
+
+kastle:hasId a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:string .
+
+kastle:hasObject a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Resource .
+
+kastle:hasPredicate a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Resource .
+
+kastle:hasReporter a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Reporter .
+
+kastle:hasSource a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Source,
+        kastle:string .
+
+kastle:hasSourceName a rdf:Property ;
+    rdfs:domain kastle:FactSource ;
+    rdfs:range kastle:string .
+
+kastle:hasSourceUrl a rdf:Property ;
+    rdfs:domain kastle:FactSource ;
+    rdfs:range kastle:anyURI .
+
+kastle:hasStatement a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:string .
+
+kastle:hasSubject a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Resource,
+        kastle:Subject .
+
+kastle:hasValue a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:string .
+
+kastle:hasVerification a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Verification .
+
+kastle:hasVerificationStatus a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:boolean .
+
+kastle:isAbout a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:string .
+
+kastle:isFactAbout a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Thing .
+
+kastle:isFactChecked a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:FactCheck .
+
+kastle:isFactOfCategory a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:FactCategory .
+
+kastle:isSourceVerified a rdf:Property ;
+    rdfs:domain kastle:FactSource ;
+    rdfs:range kastle:boolean .
+
+kastle:isVerified a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:boolean .
+
+kastle:relatedTo a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Resource .
+
+kastle:related_to a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Resource .
+
+kastle:source a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Fact ;
+    rdfs:range kastle:Resource .
+
+kastle:sourceReference a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Resource .
+
+kastle:subject a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:Resource .
+
+kastle:validity a rdf:Property ;
+    rdfs:domain kastle:Fact ;
+    rdfs:range kastle:boolean .
+
+kastle:verified a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle: .
 

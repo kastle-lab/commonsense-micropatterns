@@ -1,296 +1,231 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com#Company> a rdfs:Class .
-
-<http://example.com#Person> a rdfs:Class .
-
-<http://example.com#Role> a rdfs:Class .
-
-<http://example.com/Company> a rdfs:Class .
-
-<http://example.com/Location> a rdfs:Class .
-
-<http://example.com/Person> a rdfs:Class .
-
-<http://example.com/company#Company> a rdfs:Class .
-
-<http://example.com/company#Employee> a rdfs:Class .
-
-<http://example.com/companyOntology#Company> a rdfs:Class .
-
-<http://example.com/companyOntology#Person> a rdfs:Class .
-
-<http://example.com/exampleOntology#Address> a rdfs:Class .
-
-<http://example.com/exampleOntology#Company> a rdfs:Class .
-
-<http://example.com/exampleOntology#Employee> a rdfs:Class .
-
-<http://example.com/resource/Company> a rdfs:Class .
-
-<http://example.com/resource/Person> a rdfs:Class .
-
-<http://example.org/#Company> a rdfs:Class .
-
-<http://example.org/#Employee> a rdfs:Class .
-
-<http://example.org/Company> a rdfs:Class .
-
-<http://example.org/Industry> a rdfs:Class .
-
-<http://example.org/Location> a rdfs:Class .
-
-<http://example.org/Person> a rdfs:Class .
-
-<http://example.org/company#CEO> a rdfs:Class .
-
-<http://example.org/company#Company> a rdfs:Class .
-
-<http://example.org/company#Employee> a rdfs:Class .
-
-<http://example.org/company#Location> a rdfs:Class .
-
-<http://example.org/company#Person> a rdfs:Class .
-
-<http://example.org/ontology#Company> a rdfs:Class .
-
-<http://example.org/ontology#Employee> a rdfs:Class .
-
-<http://example.org/schema#Company> a rdfs:Class .
-
-<http://example.org/schema#Location> a rdfs:Class .
-
-<http://example.org/schema#Person> a rdfs:Class .
-
-<http://www.example.com#Company> a rdfs:Class .
-
-<http://www.example.com/company#CEO> a rdfs:Class .
-
-<http://www.example.com/company#Company> a rdfs:Class .
-
-<http://www.example.com/company#Employee> a rdfs:Class .
-
-<http://www.example.com/ontology#Company> a rdfs:Class .
-
-<http://www.example.com/ontology#Employee> a rdfs:Class .
-
-<http://www.example.com/ontology#Product> a rdfs:Class .
-
-<http://www.example.org/Company> a rdfs:Class .
-
-<http://xmlns.com/foaf/0.1/Person> a rdfs:Class .
-
-<http://example.com#CEO> rdfs:range <http://example.com#Company>,
-        <http://example.com#Person> .
-
-<http://example.com#birthDate> rdfs:range <http://example.com#Person> .
-
-<http://example.com#hasRole> rdfs:range <http://example.com#Person>,
-        <http://example.com#Role> .
-
-<http://example.com#industry> rdfs:range <http://example.com#Company> .
-
-<http://example.com#location> rdfs:range <http://example.com#Company> .
-
-<http://example.com#name> rdfs:range <http://example.com#Company> .
-
-<http://example.com#roleName> rdfs:range <http://example.com#Role> .
-
-<http://example.com/CEO> rdfs:range <http://example.com/Company>,
-        <http://example.com/Person> .
-
-<http://example.com/city> rdfs:range <http://example.com/Location> .
-
-<http://example.com/company#hasCountry> rdfs:range <http://example.com/company#Company> .
-
-<http://example.com/company#hasEmployee> rdfs:range <http://example.com/company#Company>,
-        <http://example.com/company#Employee> .
-
-<http://example.com/company#hasIndustry> rdfs:range <http://example.com/company#Company> .
-
-<http://example.com/company#hasJobTitle> rdfs:range <http://example.com/company#Employee> .
-
-<http://example.com/company#hasName> rdfs:range <http://example.com/company#Company> .
-
-<http://example.com/company#hasSalary> rdfs:range <http://example.com/company#Employee> .
-
-<http://example.com/companyOntology#hasCEO> rdfs:range <http://example.com/companyOntology#Company>,
-        <http://example.com/companyOntology#Person> .
-
-<http://example.com/companyOntology#hasEmployee> rdfs:range <http://example.com/companyOntology#Company>,
-        <http://example.com/companyOntology#Person> .
-
-<http://example.com/companyOntology#hasFoundingDate> rdfs:range <http://example.com/companyOntology#Company> .
-
-<http://example.com/companyOntology#hasName> rdfs:range <http://example.com/companyOntology#Company> .
-
-<http://example.com/country> rdfs:range <http://example.com/Location> .
-
-<http://example.com/employeeCount> rdfs:range <http://example.com/Company> .
-
-<http://example.com/exampleOntology#address> rdfs:range <http://example.com/exampleOntology#Address>,
-        <http://example.com/exampleOntology#Company> .
-
-<http://example.com/exampleOntology#city> rdfs:range <http://example.com/exampleOntology#Address> .
-
-<http://example.com/exampleOntology#firstName> rdfs:range <http://example.com/exampleOntology#Employee> .
-
-<http://example.com/exampleOntology#hasEmployee> rdfs:range <http://example.com/exampleOntology#Company>,
-        <http://example.com/exampleOntology#Employee> .
-
-<http://example.com/exampleOntology#lastName> rdfs:range <http://example.com/exampleOntology#Employee> .
-
-<http://example.com/exampleOntology#name> rdfs:range <http://example.com/exampleOntology#Company> .
-
-<http://example.com/exampleOntology#state> rdfs:range <http://example.com/exampleOntology#Address> .
-
-<http://example.com/exampleOntology#street> rdfs:range <http://example.com/exampleOntology#Address> .
-
-<http://example.com/exampleOntology#zipCode> rdfs:range <http://example.com/exampleOntology#Address> .
-
-<http://example.com/hasEmployee> rdfs:range <http://example.com/Company>,
-        <http://example.com/Person> .
-
-<http://example.com/hasLocation> rdfs:range <http://example.com/Company>,
-        <http://example.com/Location> .
-
-<http://example.com/industry> rdfs:range <http://example.com/Company> .
-
-<http://example.com/location> rdfs:range <http://example.com/Company>,
-        <http://example.com/Location> .
-
-<http://example.com/name> rdfs:range <http://example.com/Company> .
-
-<http://example.com/numberOfEmployees> rdfs:range <http://example.com/Company> .
-
-<http://example.com/personAge> rdfs:range <http://example.com/Person> .
-
-<http://example.com/personName> rdfs:range <http://example.com/Person> .
-
-<http://example.com/personNationality> rdfs:range <http://example.com/Person> .
-
-<http://example.com/resource/hasDirector> rdfs:range <http://example.com/resource/Company>,
-        <http://example.com/resource/Person> .
-
-<http://example.com/resource/hasEmployee> rdfs:range <http://example.com/resource/Company>,
-        <http://example.com/resource/Person> .
-
-<http://example.com/resource/location> rdfs:range <http://example.com/resource/Company> .
-
-<http://example.com/resource/name> rdfs:range <http://example.com/resource/Company> .
-
-<http://example.com/yearEstablished> rdfs:range <http://example.com/Company> .
-
-<http://example.org/#employeeName> rdfs:range <http://example.org/#Employee> .
-
-<http://example.org/#foundedIn> rdfs:range <http://example.org/#Company> .
-
-<http://example.org/#hasEmployee> rdfs:range <http://example.org/#Company>,
-        <http://example.org/#Employee> .
-
-<http://example.org/#headquarterLocation> rdfs:range <http://example.org/#Company> .
-
-<http://example.org/#industry> rdfs:range <http://example.org/#Company> .
-
-<http://example.org/#name> rdfs:range <http://example.org/#Company> .
-
-<http://example.org/company#hasAge> rdfs:range <http://example.org/company#Person> .
-
-<http://example.org/company#hasCEO> rdfs:range <http://example.org/company#CEO>,
-        <http://example.org/company#Company>,
-        <http://example.org/company#Person> .
-
-<http://example.org/company#hasDepartment> rdfs:range <http://example.org/company#Person> .
-
-<http://example.org/company#hasEmployee> rdfs:range <http://example.org/company#Company>,
-        <http://example.org/company#Employee>,
-        <http://example.org/company#Person> .
-
-<http://example.org/company#hasFirstName> rdfs:range <http://example.org/company#Person> .
-
-<http://example.org/company#hasJobTitle> rdfs:range <http://example.org/company#Person> .
-
-<http://example.org/company#hasLastName> rdfs:range <http://example.org/company#Person> .
-
-<http://example.org/company#hasLocation> rdfs:range <http://example.org/company#Company>,
-        <http://example.org/company#Location> .
-
-<http://example.org/company#hasName> rdfs:range <http://example.org/company#Company> .
-
-<http://example.org/company#hasRevenue> rdfs:range <http://example.org/company#Company> .
-
-<http://example.org/employsPerson> rdfs:range <http://example.org/Company>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.org/hasCEO> rdfs:range <http://example.org/Company>,
-        <http://example.org/Person> .
-
-<http://example.org/hasCompanyName> rdfs:range <http://example.org/Company> .
-
-<http://example.org/hasEmployeeCount> rdfs:range <http://example.org/Company> .
-
-<http://example.org/hasFullName> rdfs:range <http://example.org/Person> .
-
-<http://example.org/hasName> rdfs:range <http://example.org/Company> .
-
-<http://example.org/isLocatedIn> rdfs:range <http://example.org/Company>,
-        <http://example.org/Location> .
-
-<http://example.org/ontology#hasEmployee> rdfs:range <http://example.org/ontology#Company>,
-        <http://example.org/ontology#Employee> .
-
-<http://example.org/operatesInIndustry> rdfs:range <http://example.org/Company>,
-        <http://example.org/Industry> .
-
-<http://example.org/schema#employeeCount> rdfs:range <http://example.org/schema#Company> .
-
-<http://example.org/schema#hasEmployee> rdfs:range <http://example.org/schema#Company>,
-        <http://example.org/schema#Person> .
-
-<http://example.org/schema#locatedIn> rdfs:range <http://example.org/schema#Company>,
-        <http://example.org/schema#Location> .
-
-<http://example.org/schema#location> rdfs:range <http://example.org/schema#Company> .
-
-<http://example.org/schema#name> rdfs:range <http://example.org/schema#Company> .
-
-<http://www.example.com#hasEmployeeCount> rdfs:range <http://www.example.com#Company> .
-
-<http://www.example.com#hasLocation> rdfs:range <http://www.example.com#Company> .
-
-<http://www.example.com#hasName> rdfs:range <http://www.example.com#Company> .
-
-<http://www.example.com/company#hasCEO> rdfs:range <http://www.example.com/company#CEO>,
-        <http://www.example.com/company#Company> .
-
-<http://www.example.com/company#hasEmployee> rdfs:range <http://www.example.com/company#Company>,
-        <http://www.example.com/company#Employee> .
-
-<http://www.example.com/company#hasLocation> rdfs:range <http://www.example.com/company#Company> .
-
-<http://www.example.com/company#hasName> rdfs:range <http://www.example.com/company#Company> .
-
-<http://www.example.com/company#hasRevenue> rdfs:range <http://www.example.com/company#Company> .
-
-<http://www.example.com/ontology#foundedDate> rdfs:range <http://www.example.com/ontology#Company> .
-
-<http://www.example.com/ontology#hasEmployee> rdfs:range <http://www.example.com/ontology#Company>,
-        <http://www.example.com/ontology#Employee> .
-
-<http://www.example.com/ontology#industry> rdfs:range <http://www.example.com/ontology#Company> .
-
-<http://www.example.com/ontology#name> rdfs:range <http://www.example.com/ontology#Company> .
-
-<http://www.example.com/ontology#numberOfEmployees> rdfs:range <http://www.example.com/ontology#Company> .
-
-<http://www.example.com/ontology#produces> rdfs:range <http://www.example.com/ontology#Company>,
-        <http://www.example.com/ontology#Product> .
-
-<http://www.example.org/employeeCount> rdfs:range <http://www.example.org/Company> .
-
-<http://www.example.org/industry> rdfs:range <http://www.example.org/Company> .
-
-<http://www.example.org/location> rdfs:range <http://www.example.org/Company> .
-
-<http://www.example.org/name> rdfs:range <http://www.example.org/Company> .
+kastle:address a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Address .
+
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:city a rdf:Property ;
+    rdfs:domain kastle:Address,
+        kastle:Location ;
+    rdfs:range kastle:string .
+
+kastle:companyType a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal .
+
+kastle:country a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:string .
+
+kastle:employeeCount a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal,
+        kastle:int,
+        kastle:integer .
+
+kastle:employeeName a rdf:Property ;
+    rdfs:domain kastle:Employee ;
+    rdfs:range kastle:string .
+
+kastle:employsPerson a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Person .
+
+kastle:firstName a rdf:Property ;
+    rdfs:domain kastle:Employee ;
+    rdfs:range kastle:string .
+
+kastle:foundedDate a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:date .
+
+kastle:foundedIn a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasAddress a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:int .
+
+kastle:hasCEO a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:CEO,
+        kastle:Literal,
+        kastle:Person .
+
+kastle:hasCompanyName a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:string .
+
+kastle:hasCountry a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:string .
+
+kastle:hasDepartment a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasDirector a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Person .
+
+kastle:hasEmployee a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Employee,
+        kastle:Person .
+
+kastle:hasEmployeeCount a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:int,
+        kastle:integer .
+
+kastle:hasFirstName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasFoundingDate a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:date .
+
+kastle:hasFullName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasIndustry a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:string .
+
+kastle:hasJobTitle a rdf:Property ;
+    rdfs:domain kastle:Employee,
+        kastle:Person ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasLastName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal,
+        kastle:Location,
+        kastle:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal,
+        kastle:PlainLiteral,
+        kastle:string .
+
+kastle:hasPrice a rdf:Property ;
+    rdfs:domain kastle:Product ;
+    rdfs:range kastle:Literal .
+
+kastle:hasRevenue a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:decimal,
+        kastle:float .
+
+kastle:hasRole a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Role .
+
+kastle:hasSalary a rdf:Property ;
+    rdfs:domain kastle:Employee ;
+    rdfs:range kastle:Literal,
+        kastle:decimal .
+
+kastle:headquarterLocation a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:string .
+
+kastle:industry a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:isLocatedIn a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Location .
+
+kastle:lastName a rdf:Property ;
+    rdfs:domain kastle:Employee ;
+    rdfs:range kastle:string .
+
+kastle:locatedIn a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Location .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal,
+        kastle:Location,
+        kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:numberOfEmployees a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:integer .
+
+kastle:offersService a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Literal .
+
+kastle:operatesInIndustry a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Industry .
+
+kastle:personAge a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:integer .
+
+kastle:personName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:personNationality a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:produces a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Product .
+
+kastle:roleName a rdf:Property ;
+    rdfs:domain kastle:Role ;
+    rdfs:range kastle:string .
+
+kastle:state a rdf:Property ;
+    rdfs:domain kastle:Address ;
+    rdfs:range kastle:string .
+
+kastle:street a rdf:Property ;
+    rdfs:domain kastle:Address ;
+    rdfs:range kastle:string .
+
+kastle:yearEstablished a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:gYear .
+
+kastle:zipCode a rdf:Property ;
+    rdfs:domain kastle:Address ;
+    rdfs:range kastle:integer .
+
+kastle:CEO a rdf:Property ;
+    rdfs:domain kastle:Company ;
+    rdfs:range kastle:Person .
 

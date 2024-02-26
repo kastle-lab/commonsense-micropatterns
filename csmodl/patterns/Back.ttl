@@ -1,81 +1,79 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/back#Back> a rdfs:Class .
+kastle:Affects a rdf:Property ;
+    rdfs:domain kastle:BackDisease ;
+    rdfs:range kastle:Back .
 
-<http://example.com/back#BackPain> a rdfs:Class .
+kastle:HasPart a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Back .
 
-<http://example.org/Back> a rdfs:Class .
+kastle:HasSymptom a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:BackPain .
 
-<http://example.org/Back_Condition> a rdfs:Class .
+kastle:IsLocationOf a rdf:Property ;
+    rdfs:domain kastle:BackPain ;
+    rdfs:range kastle:Back .
 
-<http://example.org/back#Back> a rdfs:Class .
+kastle:PartOfBack a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Back .
 
-<http://example.org/back#BackDisease> a rdfs:Class .
+kastle:associatedCondition a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Resource .
 
-<http://example.org/back#Injury> a rdfs:Class .
+kastle:hasBack a rdf:Property ;
+    rdfs:domain kastle:Something ;
+    rdfs:range kastle:Back .
 
-<http://example.org/back#Pain> a rdfs:Class .
+kastle:hasCondition a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Back_Condition .
 
-<http://www.example.com/back#Back> a rdfs:Class .
+kastle:hasInjury a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Injury .
 
-<http://www.example.com/back#Human> a rdfs:Class .
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:string .
 
-<http://www.example.com/back#HumanBody> a rdfs:Class .
+kastle:hasMuscle a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Literal .
 
-<http://www.example.com/back#backpain> a rdfs:Class .
+kastle:hasPain a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Pain .
 
-<http://www.example.org/Back> a rdfs:Class .
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle:Back,
+        kastle:HumanBody,
+        kastle:Place ;
+    rdfs:range kastle:Back,
+        kastle:BackPart .
 
-<http://www.example.org/Place> a rdfs:Class .
+kastle:hasSpine a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Literal .
 
-rdfs:Resource a rdfs:Class .
+kastle:isOppositeOf a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:string .
 
-<http://example.com/back#HasPart> rdfs:range <http://example.com/back#Back> .
+kastle:painLevel a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:integer .
 
-<http://example.com/back#HasSymptom> rdfs:range <http://example.com/back#Back>,
-        <http://example.com/back#BackPain> .
+kastle:suffersFrom a rdf:Property ;
+    rdfs:domain kastle:Human ;
+    rdfs:range kastle:backpain .
 
-<http://example.com/back#IsLocationOf> rdfs:range <http://example.com/back#Back>,
-        <http://example.com/back#BackPain> .
-
-<http://example.org/back#Affects> rdfs:range <http://example.org/back#Back>,
-        <http://example.org/back#BackDisease> .
-
-<http://example.org/back#ConnectedTo> rdfs:range <http://example.org/back#Back> .
-
-<http://example.org/back#PartOfBack> rdfs:range <http://example.org/back#Back> .
-
-<http://example.org/back#associatedCondition> rdfs:range <http://example.org/back#Back>,
-        rdfs:Resource .
-
-<http://example.org/back#hasInjury> rdfs:range <http://example.org/back#Back>,
-        <http://example.org/back#Injury> .
-
-<http://example.org/back#hasLocation> rdfs:range <http://example.org/back#Back> .
-
-<http://example.org/back#hasPain> rdfs:range <http://example.org/back#Back>,
-        <http://example.org/back#Pain> .
-
-<http://example.org/back#hasPart> rdfs:range <http://example.org/back#Back> .
-
-<http://example.org/back#isBackOf> rdfs:range <http://example.org/back#Back> .
-
-<http://example.org/back#isOppositeOf> rdfs:range <http://example.org/back#Back> .
-
-<http://example.org/back#painLevel> rdfs:range <http://example.org/back#Back> .
-
-<http://example.org/back#treatmentPlan> rdfs:range <http://example.org/back#Back>,
-        rdfs:Resource .
-
-<http://example.org/hasCondition> rdfs:range <http://example.org/Back>,
-        <http://example.org/Back_Condition> .
-
-<http://www.example.com/back#hasPart> rdfs:range <http://www.example.com/back#Back>,
-        <http://www.example.com/back#HumanBody> .
-
-<http://www.example.com/back#suffersFrom> rdfs:range <http://www.example.com/back#Human>,
-        <http://www.example.com/back#backpain> .
-
-<http://www.example.org/hasPart> rdfs:range <http://www.example.org/Back>,
-        <http://www.example.org/Place> .
+kastle:treatmentPlan a rdf:Property ;
+    rdfs:domain kastle:Back ;
+    rdfs:range kastle:Resource .
 

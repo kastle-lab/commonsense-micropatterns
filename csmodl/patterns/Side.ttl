@@ -1,83 +1,76 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Entity> a rdfs:Class .
+kastle:belongsToObject a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:Class .
 
-<http://example.com/Side> a rdfs:Class .
+kastle:hasBackSide a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Side .
 
-<http://example.com/side#Side> a rdfs:Class .
+kastle:hasFrontSide a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Side .
 
-<http://example.org/Object> a rdfs:Class .
+kastle:hasLeftSide a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Side .
 
-<http://example.org/Side> a rdfs:Class .
+kastle:hasLength a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:float .
 
-<http://example.org/side#Object> a rdfs:Class .
+kastle:hasOpponent a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:Side .
 
-<http://example.org/side#Orientation> a rdfs:Class .
+kastle:hasOrientation a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:Orientation .
 
-<http://example.org/side#Side> a rdfs:Class .
+kastle:hasRelatedObject a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:Object .
 
-<http://example.org/side#SideType> a rdfs:Class .
+kastle:hasRightSide a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Side .
 
-<http://www.example.com/side#Side> a rdfs:Class .
+kastle:hasSide a rdf:Property ;
+    rdfs:domain kastle:Anything,
+        kastle:Entity,
+        kastle:Object,
+        kastle:RectangularObject,
+        kastle:Side,
+        kastle:Thing ;
+    rdfs:range kastle:Side,
+        kastle:string .
 
-<http://www.example.org/side#Side> a rdfs:Class .
+kastle:hasSideType a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:SideType .
 
-<http://www.example.org/side#Thing> a rdfs:Class .
+kastle:isSideOf a rdf:Property ;
+    rdfs:domain kastle:Side,
+        kastle:string ;
+    rdfs:range kastle:Side,
+        kastle:Thing .
 
-<http://www.example.org/side/> a rdfs:Class .
+kastle:opposite a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:Side .
 
-rdfs:Class a rdfs:Class .
+kastle:oppositeTo a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:Side .
 
-rdfs:Resource a rdfs:Class .
+kastle:relatedTo a rdf:Property ;
+    rdfs:domain kastle:Resource ;
+    rdfs:range kastle: .
 
-owl:Thing a rdfs:Class .
-
-<http://example.com/hasSide> rdfs:range <http://example.com/Entity>,
-        <http://example.com/Side> .
-
-<http://example.com/side#hasSide> rdfs:range <http://example.com/side#Side> .
-
-<http://example.org/hasSide> rdfs:range <http://example.org/Object>,
-        <http://example.org/Side> .
-
-<http://example.org/side#hasOrientation> rdfs:range <http://example.org/side#Orientation>,
-        <http://example.org/side#Side> .
-
-<http://example.org/side#hasRelatedObject> rdfs:range <http://example.org/side#Object>,
-        <http://example.org/side#Side> .
-
-<http://example.org/side#hasSideType> rdfs:range <http://example.org/side#Side>,
-        <http://example.org/side#SideType> .
-
-<http://www.example.com/side#hasSide> rdfs:range <http://www.example.com/side#Side>,
-        owl:Thing .
-
-<http://www.example.org/side#belongsToObject> rdfs:range <http://www.example.org/side#Side>,
-        rdfs:Class .
-
-<http://www.example.org/side#hasBackSide> rdfs:range <http://www.example.org/side#Side>,
-        <http://www.example.org/side#Thing> .
-
-<http://www.example.org/side#hasFrontSide> rdfs:range <http://www.example.org/side#Side>,
-        <http://www.example.org/side#Thing> .
-
-<http://www.example.org/side#hasLeftSide> rdfs:range <http://www.example.org/side#Side>,
-        <http://www.example.org/side#Thing> .
-
-<http://www.example.org/side#hasLength> rdfs:range <http://www.example.org/side#Side> .
-
-<http://www.example.org/side#hasOpponent> rdfs:range <http://www.example.org/side#Side> .
-
-<http://www.example.org/side#hasRightSide> rdfs:range <http://www.example.org/side#Side>,
-        <http://www.example.org/side#Thing> .
-
-<http://www.example.org/side#hasSide> rdfs:range <http://www.example.org/side#Side>,
-        owl:Thing .
-
-<http://www.example.org/side#isSideOf> rdfs:range <http://www.example.org/side#Side>,
-        owl:Thing .
-
-<http://www.example.org/side/relatedTo> rdfs:range <http://www.example.org/side/>,
-        rdfs:Resource .
+kastle:symmetricTo a rdf:Property ;
+    rdfs:domain kastle:Side ;
+    rdfs:range kastle:Side .
 

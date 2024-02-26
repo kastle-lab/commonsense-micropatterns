@@ -1,208 +1,154 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/history#Event> a rdfs:Class .
-
-<http://example.com/history#History> a rdfs:Class .
-
-<http://example.com/history#Location> a rdfs:Class .
-
-<http://example.org/history#Event> a rdfs:Class .
-
-<http://example.org/history#HistoricalEra> a rdfs:Class .
-
-<http://example.org/history#HistoricalFigure> a rdfs:Class .
-
-<http://example.org/history#HistoryEvent> a rdfs:Class .
-
-<http://example.org/history#Location> a rdfs:Class .
-
-<http://localhost/ontology/history#Event> a rdfs:Class .
-
-<http://localhost/ontology/history#History> a rdfs:Class .
-
-<http://www.example.com/history#Event> a rdfs:Class .
-
-<http://www.example.com/ontology#Event> a rdfs:Class .
-
-<http://www.example.com/ontology#History> a rdfs:Class .
-
-<http://www.example.com/ontology#Location> a rdfs:Class .
-
-<http://www.example.org/history#Character> a rdfs:Class .
-
-<http://www.example.org/history#Date> a rdfs:Class .
-
-<http://www.example.org/history#Description> a rdfs:Class .
-
-<http://www.example.org/history#Era> a rdfs:Class .
-
-<http://www.example.org/history#Event> a rdfs:Class .
-
-<http://www.example.org/history#HistoricalFigure> a rdfs:Class .
-
-<http://www.example.org/history#History> a rdfs:Class .
-
-<http://www.example.org/history#Location> a rdfs:Class .
-
-<http://www.example.org/history#Period> a rdfs:Class .
-
-<http://www.example.org/history.owl#HistoricalEvent> a rdfs:Class .
-
-<http://www.example.org/history.owl#Location> a rdfs:Class .
-
-<http://www.example.org/history.owl#Person> a rdfs:Class .
-
-<http://www.example.org/history.owl#TimePeriod> a rdfs:Class .
-
-<http://www.example.org/history/Era> a rdfs:Class .
-
-<http://www.example.org/history/Event> a rdfs:Class .
-
-<http://www.example.org/history/HistoricalArtifact> a rdfs:Class .
-
-<http://www.example.org/history/HistoricalEvent> a rdfs:Class .
-
-<http://www.example.org/history/HistoricalFigure> a rdfs:Class .
-
-<http://www.example.org/history/HistoricalPeriod> a rdfs:Class .
-
-<http://www.example.org/history/Period> a rdfs:Class .
-
-<http://www.history.com/ontology#Country> a rdfs:Class .
-
-<http://www.history.com/ontology#HistoricalEvent> a rdfs:Class .
-
-<http://www.history.com/ontology#HistoricalPeriod> a rdfs:Class .
-
-<http://www.history.com/ontology#Person> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-owl:Class a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-<http://example.com/history#hasDate> rdfs:range <http://example.com/history#Event> .
-
-<http://example.com/history#hasEvent> rdfs:range <http://example.com/history#Event>,
-        <http://example.com/history#History> .
-
-<http://example.com/history#hasLocation> rdfs:range <http://example.com/history#Event>,
-        <http://example.com/history#Location> .
-
-<http://example.com/history#name> rdfs:range <http://example.com/history#Location> .
-
-<http://example.org/history#hadParticipant> rdfs:range <http://example.org/history#HistoricalFigure>,
-        <http://example.org/history#HistoryEvent> .
-
-<http://example.org/history#hasDate> rdfs:range <http://example.org/history#HistoryEvent> .
-
-<http://example.org/history#hasLocation> rdfs:range <http://example.org/history#Event>,
-        <http://example.org/history#HistoryEvent>,
-        <http://example.org/history#Location>,
-        rdfs:Resource .
-
-<http://example.org/history#occurredIn> rdfs:range <http://example.org/history#HistoricalEra>,
-        <http://example.org/history#HistoryEvent> .
-
-<http://example.org/history#participatedIn> rdfs:range <http://example.org/history#HistoricalFigure>,
-        <http://example.org/history#HistoryEvent> .
-
-<http://localhost/ontology/history#date> rdfs:range <http://localhost/ontology/history#Event> .
-
-<http://localhost/ontology/history#hasHappenedIn> rdfs:range <http://localhost/ontology/history#Event>,
-        <http://localhost/ontology/history#History> .
-
-<http://localhost/ontology/history#hasLocation> rdfs:range <http://localhost/ontology/history#Event> .
-
-<http://www.example.com/history#content> rdfs:range <http://www.example.com/history#Event> .
-
-<http://www.example.com/history#date> rdfs:range <http://www.example.com/history#Event> .
-
-<http://www.example.com/history#location> rdfs:range <http://www.example.com/history#Event> .
-
-<http://www.example.com/ontology#hasDate> rdfs:range <http://www.example.com/ontology#Event> .
-
-<http://www.example.com/ontology#hasEvent> rdfs:range <http://www.example.com/ontology#Event>,
-        <http://www.example.com/ontology#History> .
-
-<http://www.example.com/ontology#hasLocation> rdfs:range <http://www.example.com/ontology#Event>,
-        <http://www.example.com/ontology#Location> .
-
-<http://www.example.org/history#belongsToEra> rdfs:range <http://www.example.org/history#Era>,
-        <http://www.example.org/history#Period> .
-
-<http://www.example.org/history#belongsToPeriod> rdfs:range <http://www.example.org/history#Event>,
-        <http://www.example.org/history#Period> .
-
-<http://www.example.org/history#hasCharacter> rdfs:range <http://www.example.org/history#Character>,
-        <http://www.example.org/history#Event> .
-
-<http://www.example.org/history#hasDate> rdfs:range <http://www.example.org/history#Date>,
-        <http://www.example.org/history#History> .
-
-<http://www.example.org/history#hasDescription> rdfs:range <http://www.example.org/history#Description>,
-        <http://www.example.org/history#History> .
-
-<http://www.example.org/history#hasLocation> rdfs:range <http://www.example.org/history#Event>,
-        <http://www.example.org/history#History>,
-        <http://www.example.org/history#Location> .
-
-<http://www.example.org/history#hasPeriod> rdfs:range <http://www.example.org/history#Event>,
-        <http://www.example.org/history#Period> .
-
-<http://www.example.org/history#participatedIn> rdfs:range <http://www.example.org/history#Event>,
-        <http://www.example.org/history#HistoricalFigure> .
-
-<http://www.example.org/history.owl#involvedIn> rdfs:range <http://www.example.org/history.owl#HistoricalEvent>,
-        <http://www.example.org/history.owl#Person> .
-
-<http://www.example.org/history.owl#livedDuring> rdfs:range <http://www.example.org/history.owl#Person>,
-        <http://www.example.org/history.owl#TimePeriod> .
-
-<http://www.example.org/history.owl#occurredAt> rdfs:range <http://www.example.org/history.owl#HistoricalEvent>,
-        <http://www.example.org/history.owl#Location> .
-
-<http://www.example.org/history.owl#occurredDuring> rdfs:range <http://www.example.org/history.owl#HistoricalEvent>,
-        <http://www.example.org/history.owl#TimePeriod> .
-
-<http://www.example.org/history/belongsTo> rdfs:range <http://www.example.org/history/HistoricalArtifact>,
-        <http://www.example.org/history/HistoricalPeriod> .
-
-<http://www.example.org/history/discovered> rdfs:range <http://www.example.org/history/HistoricalArtifact>,
-        <http://www.example.org/history/HistoricalFigure> .
-
-<http://www.example.org/history/hasDate> rdfs:range <http://www.example.org/history/Event> .
-
-<http://www.example.org/history/hasEndDate> rdfs:range <http://www.example.org/history/HistoricalPeriod> .
-
-<http://www.example.org/history/hasName> rdfs:range owl:Thing .
-
-<http://www.example.org/history/hasStartDate> rdfs:range <http://www.example.org/history/HistoricalPeriod> .
-
-<http://www.example.org/history/isPartOf> rdfs:range <http://www.example.org/history/Event>,
-        <http://www.example.org/history/Period> .
-
-<http://www.example.org/history/occurredAt> rdfs:range <http://www.example.org/history/HistoricalEvent>,
-        <http://www.example.org/history/HistoricalPeriod> .
-
-<http://www.example.org/history/occursIn> rdfs:range <http://www.example.org/history/Era>,
-        <http://www.example.org/history/Period> .
-
-<http://www.example.org/history/participatedIn> rdfs:range <http://www.example.org/history/HistoricalEvent>,
-        <http://www.example.org/history/HistoricalFigure> .
-
-<http://www.history.com/ontology#birthDate> rdfs:range <http://www.history.com/ontology#Person> .
-
-<http://www.history.com/ontology#deathDate> rdfs:range <http://www.history.com/ontology#Person> .
-
-<http://www.history.com/ontology#heldIn> rdfs:range <http://www.history.com/ontology#Country>,
-        <http://www.history.com/ontology#HistoricalEvent> .
-
-<http://www.history.com/ontology#influentialPerson> rdfs:range <http://www.history.com/ontology#Person>,
-        owl:Class .
-
-<http://www.history.com/ontology#tookPlaceDuring> rdfs:range <http://www.history.com/ontology#HistoricalEvent>,
-        <http://www.history.com/ontology#HistoricalPeriod> .
+kastle:ParticipatedIn a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Event .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:HistoricalArtifact ;
+    rdfs:range kastle:HistoricalPeriod .
+
+kastle:belongsToEra a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:Era .
+
+kastle:belongsToPeriod a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Period .
+
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:content a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:string .
+
+kastle:deathDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:discovered a rdf:Property ;
+    rdfs:domain kastle:HistoricalFigure ;
+    rdfs:range kastle:HistoricalArtifact .
+
+kastle:hadParticipant a rdf:Property ;
+    rdfs:domain kastle:HistoryEvent ;
+    rdfs:range kastle:HistoricalFigure .
+
+kastle:hasCharacter a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Character .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Event,
+        kastle:History,
+        kastle:HistoryEvent ;
+    rdfs:range kastle:Date,
+        kastle:Literal,
+        kastle:date,
+        kastle:dateTime .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:History ;
+    rdfs:range kastle:Description,
+        kastle:string .
+
+kastle:hasEndDate a rdf:Property ;
+    rdfs:domain kastle:HistoricalPeriod ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasEvent a rdf:Property ;
+    rdfs:domain kastle:History ;
+    rdfs:range kastle:Event .
+
+kastle:hasHappenedIn a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:History .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Event,
+        kastle:History,
+        kastle:HistoryEvent ;
+    rdfs:range kastle:Location,
+        kastle:Resource,
+        kastle:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:string .
+
+kastle:hasPeriod a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Period .
+
+kastle:hasStartDate a rdf:Property ;
+    rdfs:domain kastle:HistoricalPeriod ;
+    rdfs:range kastle:dateTime .
+
+kastle:heldIn a rdf:Property ;
+    rdfs:domain kastle:HistoricalEvent ;
+    rdfs:range kastle:Country .
+
+kastle:influentialPerson a rdf:Property ;
+    rdfs:domain kastle:Class ;
+    rdfs:range kastle:Person .
+
+kastle:involvedIn a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:HistoricalEvent .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Period .
+
+kastle:livedDuring a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:TimePeriod .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:string .
+
+kastle:occurredAt a rdf:Property ;
+    rdfs:domain kastle:HistoricalEvent ;
+    rdfs:range kastle:HistoricalPeriod,
+        kastle:Location .
+
+kastle:occurredDuring a rdf:Property ;
+    rdfs:domain kastle:HistoricalEvent ;
+    rdfs:range kastle:TimePeriod .
+
+kastle:occurredIn a rdf:Property ;
+    rdfs:domain kastle:HistoryEvent ;
+    rdfs:range kastle:HistoricalEra .
+
+kastle:occursIn a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:Era .
+
+kastle:participatedIn a rdf:Property ;
+    rdfs:domain kastle:HistoricalFigure ;
+    rdfs:range kastle:Event,
+        kastle:HistoricalEvent,
+        kastle:HistoryEvent .
+
+kastle:tookPlaceDuring a rdf:Property ;
+    rdfs:domain kastle:HistoricalEvent ;
+    rdfs:range kastle:HistoricalPeriod .
+
+kastle:Date a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:dateTime .
+
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:date,
+        kastle:dateTime .
 

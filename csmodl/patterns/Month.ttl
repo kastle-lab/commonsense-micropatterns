@@ -1,48 +1,29 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Date> a rdfs:Class .
+kastle:hasCalendarOrder a rdf:Property ;
+    rdfs:domain kastle:Month ;
+    rdfs:range kastle:integer .
 
-<http://example.com/Month> a rdfs:Class .
+kastle:hasDays a rdf:Property ;
+    rdfs:domain kastle:Month ;
+    rdfs:range kastle:integer .
 
-<http://example.com/Year> a rdfs:Class .
+kastle:hasMonth a rdf:Property ;
+    rdfs:domain kastle:Date,
+        kastle:Year ;
+    rdfs:range kastle:Month .
 
-<http://example.org/Month> a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Month ;
+    rdfs:range kastle:string .
 
-<http://example.org/Year> a rdfs:Class .
+kastle:hasNumberOfDays a rdf:Property ;
+    rdfs:domain kastle:Month ;
+    rdfs:range kastle:integer .
 
-<http://example.org/month#Month> a rdfs:Class .
-
-<http://example.org/month/Month> a rdfs:Class .
-
-<http://example.org/monthOntology#Month> a rdfs:Class .
-
-<http://www.example.org/month#Month> a rdfs:Class .
-
-<http://www.example.org/monthOntology#Month> a rdfs:Class .
-
-<http://www.example.org/monthOntology#Number> a rdfs:Class .
-
-<http://example.com/hasMonth> rdfs:range <http://example.com/Date>,
-        <http://example.com/Month>,
-        <http://example.com/Year> .
-
-<http://example.org/hasCalendarOrder> rdfs:range <http://example.org/Month> .
-
-<http://example.org/hasMonth> rdfs:range <http://example.org/Month>,
-        <http://example.org/Year> .
-
-<http://example.org/month#hasNumberOfDays> rdfs:range <http://example.org/month#Month> .
-
-<http://example.org/month/hasName> rdfs:range <http://example.org/month/Month> .
-
-<http://example.org/month/hasNumberOfDays> rdfs:range <http://example.org/month/Month> .
-
-<http://example.org/monthOntology#hasDays> rdfs:range <http://example.org/monthOntology#Month> .
-
-<http://example.org/monthOntology#hasName> rdfs:range <http://example.org/monthOntology#Month> .
-
-<http://www.example.org/month#hasNumberOfDays> rdfs:range <http://www.example.org/month#Month> .
-
-<http://www.example.org/monthOntology#hasOrder> rdfs:range <http://www.example.org/monthOntology#Month>,
-        <http://www.example.org/monthOntology#Number> .
+kastle:hasOrder a rdf:Property ;
+    rdfs:domain kastle:Month ;
+    rdfs:range kastle:Number .
 

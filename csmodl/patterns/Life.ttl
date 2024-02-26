@@ -1,136 +1,140 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com#Life> a rdfs:Class .
+kastle:Breathe a rdf:Property ;
+    rdfs:domain kastle:Animal ;
+    rdfs:range kastle:Literal .
 
-<http://example.com#Organism> a rdfs:Class .
+kastle:Eat a rdf:Property ;
+    rdfs:domain kastle:Animal ;
+    rdfs:range kastle:Life .
 
-<http://example.com/Birth> a rdfs:Class .
+kastle:Grow a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/Death> a rdfs:Class .
+kastle:HasCells a rdf:Property ;
+    rdfs:domain kastle:Organism ;
+    rdfs:range kastle:Cell .
 
-<http://example.com/Life> a rdfs:Class .
+kastle:Reproduce a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Life .
 
-<http://example.com/LifeCycle> a rdfs:Class .
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Date .
 
-<http://example.org/Entity> a rdfs:Class .
+kastle:consume a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:boolean .
 
-<http://example.org/Life> a rdfs:Class .
+kastle:deathDate a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Date .
 
-<http://example.org/life#Entity> a rdfs:Class .
+kastle:grow a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:boolean .
 
-<http://example.org/life#Environment> a rdfs:Class .
+kastle:habitat a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/life#Life> a rdfs:Class .
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Organism ;
+    rdfs:range kastle:integer .
 
-<http://example.org/life#LifeSpan> a rdfs:Class ;
-    rdfs:range <http://example.org/life#Entity> .
+kastle:hasBeginning a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Birth .
 
-<http://example.org/life#LifeStage> a rdfs:Class .
+kastle:hasBirth a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Birth .
 
-<http://example.org/life#Organism> a rdfs:Class .
+kastle:hasChild a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Life .
 
-<http://example.org/life#Species> a rdfs:Class .
+kastle:hasDeath a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Death .
 
-<http://example.org/life#TaxonomicRank> a rdfs:Class .
+kastle:hasEnd a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Death .
 
-<http://www.example.com/life#Life> a rdfs:Class .
+kastle:hasEnvironment a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Environment .
 
-<http://www.example.com/life#LifeForm> a rdfs:Class .
+kastle:hasForm a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:LifeForm .
 
-<http://www.example.org/life#Animal> a rdfs:Class .
+kastle:hasLife a rdf:Property ;
+    rdfs:domain kastle:Entity,
+        kastle:Life,
+        kastle:Organism ;
+    rdfs:range kastle:Life .
 
-<http://www.example.org/life#Birth> a rdfs:Class .
+kastle:hasLifeCycle a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:LifeCycle .
 
-<http://www.example.org/life#Cell> a rdfs:Class .
+kastle:hasLifeSpan a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:LifeSpan,
+        kastle:Literal .
 
-<http://www.example.org/life#Death> a rdfs:Class .
+kastle:hasLifeStage a rdf:Property ;
+    rdfs:domain kastle:Life,
+        kastle:Organism ;
+    rdfs:range kastle:LifeStage .
 
-<http://www.example.org/life#Life> a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Literal .
 
-<http://www.example.org/life#Organism> a rdfs:Class .
+kastle:hasOrganism a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Organism .
 
-<http://www.ontology.com/life#Life> a rdfs:Class .
+kastle:hasParent a rdf:Property ;
+    rdfs:domain kastle:Life,
+        kastle:Organism ;
+    rdfs:range kastle:Life,
+        kastle:Organism .
 
-<http://example.com#hasLife> rdfs:range <http://example.com#Life>,
-        <http://example.com#Organism> .
+kastle:hasSibling a rdf:Property ;
+    rdfs:domain kastle:Organism ;
+    rdfs:range kastle:Organism .
 
-<http://example.com/hasBirth> rdfs:range <http://example.com/Birth>,
-        <http://example.com/Life> .
+kastle:hasSpecies a rdf:Property ;
+    rdfs:domain kastle:Life,
+        kastle:Organism ;
+    rdfs:range kastle:Species,
+        kastle:string .
 
-<http://example.com/hasDeath> rdfs:range <http://example.com/Death>,
-        <http://example.com/Life> .
+kastle:hasTaxonomicRank a rdf:Property ;
+    rdfs:domain kastle:Organism ;
+    rdfs:range kastle:TaxonomicRank .
 
-<http://example.com/hasLifeCycle> rdfs:range <http://example.com/Life>,
-        <http://example.com/LifeCycle> .
+kastle:lifespan a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/hasLife> rdfs:range <http://example.org/Entity>,
-        <http://example.org/Life> .
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Organism ;
+    rdfs:range kastle:string .
 
-<http://example.org/life#hasAge> rdfs:range <http://example.org/life#Organism> .
+kastle:reproduce a rdf:Property ;
+    rdfs:domain kastle:Life ;
+    rdfs:range kastle:boolean .
 
-<http://example.org/life#hasEnvironment> rdfs:range <http://example.org/life#Environment>,
-        <http://example.org/life#Life> .
-
-<http://example.org/life#hasLife> rdfs:range <http://example.org/life#Entity>,
-        <http://example.org/life#Life> .
-
-<http://example.org/life#hasLifeSpan> rdfs:range <http://example.org/life#Life>,
-        <http://example.org/life#LifeSpan> .
-
-<http://example.org/life#hasLifeStage> rdfs:range <http://example.org/life#Life>,
-        <http://example.org/life#LifeStage>,
-        <http://example.org/life#Organism> .
-
-<http://example.org/life#hasOrganism> rdfs:range <http://example.org/life#Life>,
-        <http://example.org/life#Organism> .
-
-<http://example.org/life#hasParent> rdfs:range <http://example.org/life#Organism> .
-
-<http://example.org/life#hasSibling> rdfs:range <http://example.org/life#Organism> .
-
-<http://example.org/life#hasSpecies> rdfs:range <http://example.org/life#Life>,
-        <http://example.org/life#Organism>,
-        <http://example.org/life#Species> .
-
-<http://example.org/life#hasTaxonomicRank> rdfs:range <http://example.org/life#Organism>,
-        <http://example.org/life#TaxonomicRank> .
-
-<http://example.org/life#name> rdfs:range <http://example.org/life#Organism> .
-
-<http://www.example.com/life#hasForm> rdfs:range <http://www.example.com/life#Life>,
-        <http://www.example.com/life#LifeForm> .
-
-<http://www.example.org/life#Eat> rdfs:range <http://www.example.org/life#Animal>,
-        <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#HasCells> rdfs:range <http://www.example.org/life#Cell>,
-        <http://www.example.org/life#Organism> .
-
-<http://www.example.org/life#Reproduce> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#birthDate> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#consume> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#deathDate> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#grow> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#hasBeginning> rdfs:range <http://www.example.org/life#Birth>,
-        <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#hasChild> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#hasEnd> rdfs:range <http://www.example.org/life#Death>,
-        <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#hasParent> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.example.org/life#reproduce> rdfs:range <http://www.example.org/life#Life> .
-
-<http://www.ontology.com/life#Evolution> rdfs:range <http://www.ontology.com/life#Life> .
-
-<http://www.ontology.com/life#Metabolism> rdfs:range <http://www.ontology.com/life#Life> .
-
-<http://www.ontology.com/life#Reproduction> rdfs:range <http://www.ontology.com/life#Life> .
+kastle:LifeSpan a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range kastle:decimal .
 

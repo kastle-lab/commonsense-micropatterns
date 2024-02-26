@@ -1,113 +1,99 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:n90baca91ce164683a698257d214a9483b1 a rdfs:Class .
+kastle:associatedWith a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:string .
 
-_:n90baca91ce164683a698257d214a9483b2 a rdfs:Class .
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:string .
 
-<http://example.com/levels#Level> a rdfs:Class .
+kastle:hasDifficulty a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:string .
 
-<http://example.org#Level> a rdfs:Class .
+kastle:hasLevel a rdf:Property ;
+    rdfs:domain kastle:Entity,
+        kastle:Game,
+        kastle:Level,
+        kastle:Node,
+        kastle:Person,
+        kastle:Resource,
+        kastle:Thing,
+        kastle:User ;
+    rdfs:range kastle:Level,
+        kastle:integer .
 
-<http://example.org#Person> a rdfs:Class .
+kastle:hasLevelName a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:string .
 
-<http://example.org#Skill> a rdfs:Class .
+kastle:hasLevelNumber a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:decimal .
 
-<http://example.org/Game> a rdfs:Class .
+kastle:hasNextLevel a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:Level .
 
-<http://example.org/Level> a rdfs:Class .
+kastle:hasNumber a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:integer .
 
-<http://example.org/level#Level> a rdfs:Class .
+kastle:hasReward a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:string .
 
-<http://example.org/level/Level> a rdfs:Class .
+kastle:hasSkill a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Skill .
 
-<http://example.org/ontology#Entity> a rdfs:Class .
+kastle:inGame a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:Game .
 
-<http://example.org/ontology#Level> a rdfs:Class .
+kastle:isLevelOf a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:Resource,
+        kastle:Thing .
 
-<http://www.example.org/#Level> a rdfs:Class .
+kastle:levelDescription a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:String .
 
-<http://www.example.org/Level> a rdfs:Class .
+kastle:levelIndicator a rdf:Property ;
+    rdfs:domain kastle:n37d0594b7c2b493a8f60af749ddc70bcb2 ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/Node> a rdfs:Class .
+kastle:levelName a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:string .
 
-rdf:Integer a rdfs:Class .
+kastle:levelNumber a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:Integer,
+        kastle:int,
+        kastle:integer .
 
-rdf:String a rdfs:Class .
+kastle:levelOf a rdf:Property ;
+    rdfs:domain kastle:n37d0594b7c2b493a8f60af749ddc70bcb1 ;
+    rdfs:range kastle:Level .
 
-rdfs:Resource a rdfs:Class .
+kastle:levelValue a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:string .
 
-owl:Thing a rdfs:Class .
+kastle:nextLevel a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:Level .
 
-<http://example.com/levels#associatedWith> rdfs:range <http://example.com/levels#Level> .
+kastle:previousLevel a rdf:Property ;
+    rdfs:domain kastle:Level ;
+    rdfs:range kastle:Level .
 
-<http://example.com/levels#hasDifficulty> rdfs:range <http://example.com/levels#Level> .
-
-<http://example.com/levels#hasNumber> rdfs:range <http://example.com/levels#Level> .
-
-<http://example.org#hasLevel> rdfs:range <http://example.org#Level>,
-        <http://example.org#Person> .
-
-<http://example.org#hasSkill> rdfs:range <http://example.org#Person>,
-        <http://example.org#Skill> .
-
-<http://example.org/hasDifficulty> rdfs:range <http://example.org/Level> .
-
-<http://example.org/hasNumber> rdfs:range <http://example.org/Level> .
-
-<http://example.org/hasReward> rdfs:range <http://example.org/Level> .
-
-<http://example.org/inGame> rdfs:range <http://example.org/Game>,
-        <http://example.org/Level> .
-
-<http://example.org/level#associatedWith> rdfs:range <http://example.org/level#Level> .
-
-<http://example.org/level#hasDescription> rdfs:range <http://example.org/level#Level> .
-
-<http://example.org/level#hasLevel> rdfs:range <http://example.org/level#Level>,
-        rdfs:Resource .
-
-<http://example.org/level#hasLevelName> rdfs:range <http://example.org/level#Level> .
-
-<http://example.org/level#hasLevelNumber> rdfs:range <http://example.org/level#Level> .
-
-<http://example.org/level#hasNextLevel> rdfs:range <http://example.org/level#Level> .
-
-<http://example.org/level#levelIndicator> rdfs:range _:n90baca91ce164683a698257d214a9483b2 .
-
-<http://example.org/level#levelOf> rdfs:range _:n90baca91ce164683a698257d214a9483b1,
-        <http://example.org/level#Level> .
-
-<http://example.org/level#levelValue> rdfs:range <http://example.org/level#Level> .
-
-<http://example.org/level/hasLevel> rdfs:range <http://example.org/level/Level>,
-        rdfs:Resource,
-        owl:Thing .
-
-<http://example.org/level/isLevelOf> rdfs:range <http://example.org/level/Level>,
-        rdfs:Resource,
-        owl:Thing .
-
-<http://example.org/level/levelName> rdfs:range <http://example.org/level/Level> .
-
-<http://example.org/level/levelNumber> rdfs:range <http://example.org/level/Level> .
-
-<http://example.org/level/nextLevel> rdfs:range <http://example.org/level/Level> .
-
-<http://example.org/level/previousLevel> rdfs:range <http://example.org/level/Level> .
-
-<http://example.org/ontology#hasLevel> rdfs:range <http://example.org/ontology#Entity>,
-        <http://example.org/ontology#Level> .
-
-<http://www.example.org/#levelDescription> rdfs:range <http://www.example.org/#Level>,
-        rdf:String .
-
-<http://www.example.org/#levelNumber> rdfs:range <http://www.example.org/#Level>,
-        rdf:Integer .
-
-<http://www.example.org/hasLevel> rdfs:range <http://www.example.org/Level>,
-        <http://www.example.org/Node> .
-
-<http://www.example.org/levelNumber> rdfs:range <http://www.example.org/Level> .
+kastle:understanding a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Literal .
 

@@ -1,124 +1,101 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/BodyType> a rdfs:Class .
+kastle:bodyType a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:BodyType .
 
-<http://example.com/Car> a rdfs:Class .
+kastle:color a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:Literal,
+        kastle:string .
 
-<http://example.com/car#Car> a rdfs:Class .
+kastle:engineType a rdf:Property ;
+    rdfs:domain kastle:Engine ;
+    rdfs:range kastle:string .
 
-<http://example.org#Car> a rdfs:Class .
+kastle:fuelType a rdf:Property ;
+    rdfs:domain kastle:Engine ;
+    rdfs:range kastle:FuelType .
 
-<http://example.org#CarMake> a rdfs:Class .
+kastle:hasBrand a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:string .
 
-<http://example.org#CarModel> a rdfs:Class .
+kastle:hasColor a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:string .
 
-<http://example.org/Car> a rdfs:Class .
+kastle:hasEngine a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:Engine .
 
-<http://example.org/Car#Car> a rdfs:Class .
+kastle:hasEngineSize a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:float .
 
-<http://example.org/Manufacturer> a rdfs:Class .
+kastle:hasMake a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:CarMake,
+        kastle:string .
 
-<http://example.org/car#Car> a rdfs:Class .
+kastle:hasManufacturer a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:Manufacturer,
+        kastle:string .
 
-<http://www.example.org/Car> a rdfs:Class .
+kastle:hasModel a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:CarModel,
+        kastle:Literal,
+        kastle:Model,
+        kastle:string .
 
-<http://www.example.org/Manufacturer> a rdfs:Class .
+kastle:hasPrice a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:decimal .
 
-<http://www.example.org/car#Car> a rdfs:Class .
+kastle:hasProductionYear a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:integer .
 
-<http://www.example.org/car#Engine> a rdfs:Class .
+kastle:hasRegistrationYear a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:integer .
 
-<http://www.example.org/car#FuelType> a rdfs:Class .
+kastle:hasVIN a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/car#Manufacturer> a rdfs:Class .
+kastle:hasYear a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:date,
+        kastle:int,
+        kastle:integer,
+        kastle:string .
 
-<http://example.com/bodyType> rdfs:range <http://example.com/BodyType>,
-        <http://example.com/Car> .
+kastle:horsePower a rdf:Property ;
+    rdfs:domain kastle:Engine ;
+    rdfs:range kastle:integer .
 
-<http://example.com/car#hasBrand> rdfs:range <http://example.com/car#Car> .
+kastle:make a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/car#hasColor> rdfs:range <http://example.com/car#Car> .
+kastle:manufacturer a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:Manufacturer,
+        kastle:string .
 
-<http://example.com/car#hasEngineSize> rdfs:range <http://example.com/car#Car> .
+kastle:model a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:Literal,
+        kastle:string .
 
-<http://example.com/car#hasManufacturer> rdfs:range <http://example.com/car#Car> .
-
-<http://example.com/car#hasModel> rdfs:range <http://example.com/car#Car> .
-
-<http://example.com/car#hasPrice> rdfs:range <http://example.com/car#Car> .
-
-<http://example.com/car#hasProductionYear> rdfs:range <http://example.com/car#Car> .
-
-<http://example.com/car#hasYear> rdfs:range <http://example.com/car#Car> .
-
-<http://example.org#hasMake> rdfs:range <http://example.org#Car>,
-        <http://example.org#CarMake> .
-
-<http://example.org#hasModel> rdfs:range <http://example.org#Car>,
-        <http://example.org#CarModel> .
-
-<http://example.org/Car#hasColor> rdfs:range <http://example.org/Car#Car> .
-
-<http://example.org/Car#hasMake> rdfs:range <http://example.org/Car#Car> .
-
-<http://example.org/Car#hasModel> rdfs:range <http://example.org/Car#Car> .
-
-<http://example.org/Car#hasVIN> rdfs:range <http://example.org/Car#Car> .
-
-<http://example.org/Car#hasYear> rdfs:range <http://example.org/Car#Car> .
-
-<http://example.org/car#hasColor> rdfs:range <http://example.org/car#Car> .
-
-<http://example.org/car#hasMake> rdfs:range <http://example.org/car#Car> .
-
-<http://example.org/car#hasModel> rdfs:range <http://example.org/car#Car> .
-
-<http://example.org/car#hasYear> rdfs:range <http://example.org/car#Car> .
-
-<http://example.org/hasMake> rdfs:range <http://example.org/Car> .
-
-<http://example.org/hasManufacturer> rdfs:range <http://example.org/Car>,
-        <http://example.org/Manufacturer> .
-
-<http://example.org/hasModel> rdfs:range <http://example.org/Car> .
-
-<http://example.org/hasYear> rdfs:range <http://example.org/Car> .
-
-<http://www.example.org/car#color> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/car#engineType> rdfs:range <http://www.example.org/car#Engine> .
-
-<http://www.example.org/car#fuelType> rdfs:range <http://www.example.org/car#Engine>,
-        <http://www.example.org/car#FuelType> .
-
-<http://www.example.org/car#hasColor> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/car#hasEngine> rdfs:range <http://www.example.org/car#Car>,
-        <http://www.example.org/car#Engine> .
-
-<http://www.example.org/car#hasManufacturer> rdfs:range <http://www.example.org/car#Car>,
-        <http://www.example.org/car#Manufacturer> .
-
-<http://www.example.org/car#hasModel> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/car#hasRegistrationYear> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/car#hasYear> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/car#horsePower> rdfs:range <http://www.example.org/car#Engine> .
-
-<http://www.example.org/car#manufacturer> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/car#model> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/car#year> rdfs:range <http://www.example.org/car#Car> .
-
-<http://www.example.org/color> rdfs:range <http://www.example.org/Car> .
-
-<http://www.example.org/manufacturer> rdfs:range <http://www.example.org/Car>,
-        <http://www.example.org/Manufacturer> .
-
-<http://www.example.org/model> rdfs:range <http://www.example.org/Car> .
-
-<http://www.example.org/year> rdfs:range <http://www.example.org/Car> .
+kastle:year a rdf:Property ;
+    rdfs:domain kastle:Car ;
+    rdfs:range kastle:Literal,
+        kastle:gYear,
+        kastle:integer .
 

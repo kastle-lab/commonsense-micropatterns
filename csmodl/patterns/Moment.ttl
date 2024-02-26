@@ -1,201 +1,170 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
 
-_:nc8a40c3189b74ccc93f39c0217a936d7b1 a rdfs:Class .
-
-<http://example.com/moment#Moment> a rdfs:Class .
-
-<http://example.com/ontology#Event> a rdfs:Class .
-
-<http://example.com/ontology#Location> a rdfs:Class .
-
-<http://example.com/ontology#Moment> a rdfs:Class .
-
-<http://example.com/ontology#Person> a rdfs:Class .
-
-<http://example.org#Moment> a rdfs:Class .
-
-<http://example.org#MomentProperty> a rdfs:Class .
-
-<http://example.org#TimePoint> a rdfs:Class .
-
-<http://example.org/moment#Date> a rdfs:Class .
-
-<http://example.org/moment#Duration> a rdfs:Class .
-
-<http://example.org/moment#Event> a rdfs:Class .
-
-<http://example.org/moment#Instant> a rdfs:Class .
-
-<http://example.org/moment#Period> a rdfs:Class .
-
-<http://example.org/moment#Time> a rdfs:Class .
-
-<http://example.org/moment#Timestamp> a rdfs:Class .
-
-<http://example.org/moment/Moment> a rdfs:Class .
-
-<http://example.org/moment/Period> a rdfs:Class .
-
-<http://example.org/moments#moment> a rdfs:Class .
-
-<http://example.org/ontology#Instant> a rdfs:Class .
-
-<http://example.org/ontology#Moment> a rdfs:Class .
-
-<http://example.org/ontology#Period> a rdfs:Class .
-
-<http://www.example.com/moments#Duration> a rdfs:Class .
-
-<http://www.example.com/moments#Moment> a rdfs:Class .
-
-<http://www.example.com/moments#TimeInstant> a rdfs:Class .
-
-<http://www.example.org/moment#Instant> a rdfs:Class .
-
-<http://www.example.org/moment#Period> a rdfs:Class .
-
-<http://www.example.org/moments#Moment> a rdfs:Class .
-
-<http://www.example.org/moments#Period> a rdfs:Class .
-
-<http://www.example.org/moments#hasEvent> a rdfs:Class ;
-    rdfs:range <http://www.example.org/moments#Moment>,
-        owl:Thing .
-
-<http://www.example.org/moments/Event> a rdfs:Class .
-
-<http://www.example.org/moments/Location> a rdfs:Class .
-
-<http://www.example.org/moments/Moment> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-time:Moment a rdfs:Class .
-
-time:TimePosition a rdfs:Class .
-
-<http://example.com/moment#hasDate> rdfs:range <http://example.com/moment#Moment> .
-
-<http://example.com/moment#hasDescription> rdfs:range <http://example.com/moment#Moment> .
-
-<http://example.com/moment#hasTime> rdfs:range <http://example.com/moment#Moment> .
-
-<http://example.com/moment#isPartOf> rdfs:range <http://example.com/moment#Moment>,
-        rdfs:Resource .
-
-<http://example.com/ontology#hasMoment> rdfs:range <http://example.com/ontology#Moment>,
-        <http://example.com/ontology#Person> .
-
-<http://example.com/ontology#inLocation> rdfs:range <http://example.com/ontology#Location>,
-        <http://example.com/ontology#Moment> .
-
-<http://example.com/ontology#isMomentOf> rdfs:range <http://example.com/ontology#Event>,
-        <http://example.com/ontology#Moment> .
-
-<http://example.org#date> rdfs:range <http://example.org#MomentProperty> .
-
-<http://example.org#hasMoment> rdfs:range <http://example.org#Moment>,
-        <http://example.org#TimePoint> .
-
-<http://example.org#hasMomentProperty> rdfs:range <http://example.org#Moment>,
-        <http://example.org#MomentProperty> .
-
-<http://example.org#time> rdfs:range <http://example.org#MomentProperty> .
-
-<http://example.org/moment#hasDate> rdfs:range <http://example.org/moment#Date> .
-
-<http://example.org/moment#hasDuration> rdfs:range <http://example.org/moment#Duration> .
-
-<http://example.org/moment#hasEvent> rdfs:range <http://example.org/moment#Event> .
-
-<http://example.org/moment#hasInstant> rdfs:range <http://example.org/moment#Instant> .
-
-<http://example.org/moment#hasMoment> rdfs:range <http://example.org/moment#Timestamp> .
-
-<http://example.org/moment#hasPeriod> rdfs:range <http://example.org/moment#Period> .
-
-<http://example.org/moment#hasTime> rdfs:range <http://example.org/moment#Time> .
-
-<http://example.org/moment/hasEndTime> rdfs:range <http://example.org/moment/Period> .
-
-<http://example.org/moment/hasStartTime> rdfs:range <http://example.org/moment/Period> .
-
-<http://example.org/moment/hasTime> rdfs:range <http://example.org/moment/Moment> .
-
-<http://example.org/moment/isPartOf> rdfs:range <http://example.org/moment/Moment>,
-        <http://example.org/moment/Period> .
-
-<http://example.org/moments#description> rdfs:range <http://example.org/moments#moment> .
-
-<http://example.org/moments#isAfter> rdfs:range <http://example.org/moments#moment> .
-
-<http://example.org/moments#isPriorTo> rdfs:range <http://example.org/moments#moment> .
-
-<http://example.org/moments#time> rdfs:range <http://example.org/moments#moment> .
-
-<http://example.org/ontology#duration> rdfs:range <http://example.org/ontology#Moment> .
-
-<http://example.org/ontology#hasBeginning> rdfs:range <http://example.org/ontology#Instant>,
-        <http://example.org/ontology#Period> .
-
-<http://example.org/ontology#hasDateTime> rdfs:range <http://example.org/ontology#Instant> .
-
-<http://example.org/ontology#hasEnd> rdfs:range <http://example.org/ontology#Instant>,
-        <http://example.org/ontology#Period> .
-
-<http://example.org/ontology#hasInstant> rdfs:range <http://example.org/ontology#Instant>,
-        <http://example.org/ontology#Moment> .
-
-<http://example.org/ontology#isPartOf> rdfs:range <http://example.org/ontology#Moment>,
-        <http://example.org/ontology#Period> .
-
-<http://www.example.com/moments#endTime> rdfs:range <http://www.example.com/moments#Duration> .
-
-<http://www.example.com/moments#hasDuration> rdfs:range <http://www.example.com/moments#Duration>,
-        <http://www.example.com/moments#Moment> .
-
-<http://www.example.com/moments#hasTimeInstant> rdfs:range <http://www.example.com/moments#Moment>,
-        <http://www.example.com/moments#TimeInstant> .
-
-<http://www.example.com/moments#startTime> rdfs:range _:nc8a40c3189b74ccc93f39c0217a936d7b1 .
-
-<http://www.example.org/moment#endDate> rdfs:range <http://www.example.org/moment#Instant>,
-        <http://www.example.org/moment#Period> .
-
-<http://www.example.org/moment#startDate> rdfs:range <http://www.example.org/moment#Instant>,
-        <http://www.example.org/moment#Period> .
-
-<http://www.example.org/moments#eventDescription> rdfs:range <http://www.example.org/moments#hasEvent> .
-
-<http://www.example.org/moments#hasDate> rdfs:range <http://www.example.org/moments#Moment> .
-
-<http://www.example.org/moments#hasLocation> rdfs:range <http://www.example.org/moments#Moment> .
-
-<http://www.example.org/moments#hasTime> rdfs:range <http://www.example.org/moments#Moment> .
-
-<http://www.example.org/moments#isPartOf> rdfs:range <http://www.example.org/moments#Moment>,
-        <http://www.example.org/moments#Period> .
-
-<http://www.example.org/moments#periodEnd> rdfs:range <http://www.example.org/moments#Period> .
-
-<http://www.example.org/moments#periodStart> rdfs:range <http://www.example.org/moments#Period> .
-
-<http://www.example.org/moments/fromEvent> rdfs:range <http://www.example.org/moments/Event>,
-        <http://www.example.org/moments/Moment> .
-
-<http://www.example.org/moments/hasDate> rdfs:range <http://www.example.org/moments/Moment> .
-
-<http://www.example.org/moments/hasDuration> rdfs:range <http://www.example.org/moments/Event> .
-
-<http://www.example.org/moments/hasLocation> rdfs:range <http://www.example.org/moments/Event>,
-        <http://www.example.org/moments/Location> .
-
-<http://www.example.org/moments/hasName> rdfs:range <http://www.example.org/moments/Location> .
-
-time:inTime rdfs:range time:Moment,
-        time:TimePosition .
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:moment ;
+    rdfs:range kastle:string .
+
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:Instant .
+
+kastle:endTime a rdf:Property ;
+    rdfs:domain kastle:Duration ;
+    rdfs:range kastle:dateTime .
+
+kastle:eventDescription a rdf:Property ;
+    rdfs:domain kastle:hasEvent ;
+    rdfs:range kastle:string .
+
+kastle:fromEvent a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:Event .
+
+kastle:hasBegin a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:Instant .
+
+kastle:hasBeginning a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:Instant .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Moment,
+        kastle:anyURI ;
+    rdfs:range kastle:Date,
+        kastle:date,
+        kastle:dateTime .
+
+kastle:hasDateTime a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:string .
+
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Event,
+        kastle:Moment,
+        kastle:anyURI ;
+    rdfs:range kastle:Duration,
+        kastle:duration .
+
+kastle:hasEnd a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:Instant .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:time .
+
+kastle:hasInstant a rdf:Property ;
+    rdfs:domain kastle:Moment,
+        kastle:anyURI ;
+    rdfs:range kastle:Instant .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Event,
+        kastle:Moment ;
+    rdfs:range kastle:Location,
+        kastle:string .
+
+kastle:hasMoment a rdf:Property ;
+    rdfs:domain kastle:Event,
+        kastle:Person,
+        kastle:TimePoint,
+        kastle:anyURI ;
+    rdfs:range kastle:Moment,
+        kastle:Timestamp .
+
+kastle:hasMomentProperty a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:MomentProperty .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:string .
+
+kastle:hasPeriod a rdf:Property ;
+    rdfs:domain kastle:anyURI ;
+    rdfs:range kastle:Period .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:time .
+
+kastle:hasTime a rdf:Property ;
+    rdfs:domain kastle:Moment,
+        kastle:anyURI ;
+    rdfs:range kastle:Time,
+        kastle:dateTime,
+        kastle:time .
+
+kastle:hasTimeInstant a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:TimeInstant .
+
+kastle:inLocation a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:Location .
+
+kastle:inTime a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:TimePosition .
+
+kastle:isAfter a rdf:Property ;
+    rdfs:domain kastle:moment ;
+    rdfs:range kastle:moment .
+
+kastle:isMomentOf a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:Event .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:Period,
+        kastle:Resource .
+
+kastle:isPriorTo a rdf:Property ;
+    rdfs:domain kastle:moment ;
+    rdfs:range kastle:moment .
+
+kastle:periodEnd a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:dateTime .
+
+kastle:periodStart a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:dateTime .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:Instant .
+
+kastle:startTime a rdf:Property ;
+    rdfs:domain kastle:ncca62f5d9b2b4eae9c0471f108638a52b1 ;
+    rdfs:range kastle:dateTime .
+
+kastle:duration a rdf:Property ;
+    rdfs:domain kastle:Moment ;
+    rdfs:range kastle:decimal .
+
+kastle:hasEvent a rdf:Property ;
+    rdfs:domain kastle:Moment,
+        kastle:anyURI ;
+    rdfs:range kastle:Event,
+        kastle:Thing .
+
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:MomentProperty ;
+    rdfs:range kastle:date .
+
+kastle:time a rdf:Property ;
+    rdfs:domain kastle:Moment,
+        kastle:MomentProperty,
+        kastle:moment ;
+    rdfs:range kastle:Literal,
+        kastle:dateTime .
 

@@ -1,142 +1,97 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com#Date> a rdfs:Class .
+kastle:beginningOfYear a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:date .
 
-<http://example.com#Something> a rdfs:Class .
+kastle:endOfYear a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:date .
 
-<http://example.com#Year> a rdfs:Class .
+kastle:followedBy a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:Year .
 
-<http://example.com/Entity> a rdfs:Class .
+kastle:hasDay a rdf:Property ;
+    rdfs:domain kastle:Month,
+        kastle:Year ;
+    rdfs:range kastle:Day,
+        kastle:gDay,
+        kastle:integer .
 
-<http://example.com/Year> a rdfs:Class .
+kastle:hasEvent a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Event .
 
-<http://example.com/year#Year> a rdfs:Class .
+kastle:hasMonth a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:Month,
+        kastle:integer .
 
-<http://example.org/#Entity> a rdfs:Class .
+kastle:hasSeason a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:Season .
 
-<http://example.org/#year> a rdfs:Class .
+kastle:hasYear a rdf:Property ;
+    rdfs:domain kastle:Date,
+        kastle:Entity,
+        kastle:Resource,
+        kastle:Something,
+        kastle:Year ;
+    rdfs:range kastle:Year,
+        kastle:integer,
+        kastle:year .
 
-<http://example.org/Entity> a rdfs:Class .
+kastle:inYear a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Year .
 
-<http://example.org/Year> a rdfs:Class .
+kastle:isLeap a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:boolean .
 
-<http://example.org/ontology/Entity> a rdfs:Class .
+kastle:isLeapYear a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Year ;
+    rdfs:range kastle:boolean .
 
-<http://example.org/ontology/Year> a rdfs:Class .
+kastle:isYearOf a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:Date .
 
-<http://example.org/ontology/year#> a rdfs:Class .
+kastle:number a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:integer .
 
-<http://example.org/ontology/year#Month> a rdfs:Class .
+kastle:numberOfDay a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:integer .
 
-<http://example.org/ontology/year#Year> a rdfs:Class .
+kastle:numberOfMonth a rdf:Property ;
+    rdfs:domain kastle:Month ;
+    rdfs:range kastle:integer .
 
-<http://example.org/year#Day> a rdfs:Class .
+kastle:numberOfYear a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:integer .
 
-<http://example.org/year#Event> a rdfs:Class .
+kastle:precededBy a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:Year .
 
-<http://example.org/year#Month> a rdfs:Class .
+kastle:yearID a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
 
-<http://example.org/year#Season> a rdfs:Class .
+kastle:yearNumber a rdf:Property ;
+    rdfs:domain kastle:Year ;
+    rdfs:range kastle:integer .
 
-<http://example.org/year#Year> a rdfs:Class .
-
-<http://www.example.com#Event> a rdfs:Class .
-
-<http://www.example.com#Year> a rdfs:Class .
-
-<http://www.example.com/year#Day> a rdfs:Class .
-
-<http://www.example.com/year#Month> a rdfs:Class .
-
-<http://www.example.com/year#Season> a rdfs:Class .
-
-<http://www.example.com/year#Year> a rdfs:Class .
-
-<http://www.example.org/year#Year> a rdfs:Class .
-
-<http://example.com#hasYear> rdfs:range <http://example.com#Date>,
-        <http://example.com#Something>,
-        <http://example.com#Year> .
-
-<http://example.com#isLeapYear> rdfs:range <http://example.com#Year> .
-
-<http://example.com#isYearOf> rdfs:range <http://example.com#Date>,
-        <http://example.com#Year> .
-
-<http://example.com/beginningOfYear> rdfs:range <http://example.com/Year> .
-
-<http://example.com/endOfYear> rdfs:range <http://example.com/Year> .
-
-<http://example.com/hasYear> rdfs:range <http://example.com/Entity> .
-
-<http://example.com/year> rdfs:range <http://example.com/Entity>,
-        <http://example.com/Year> .
-
-<http://example.com/year#hasDay> rdfs:range <http://example.com/year#Year> .
-
-<http://example.com/year#hasMonth> rdfs:range <http://example.com/year#Year> .
-
-<http://example.com/year#isLeap> rdfs:range <http://example.com/year#Year> .
-
-<http://example.com/year#yearNumber> rdfs:range <http://example.com/year#Year> .
-
-<http://example.org/#hasYear> rdfs:range <http://example.org/#Entity>,
-        <http://example.org/#year> .
-
-<http://example.org/hasYear> rdfs:range <http://example.org/Entity>,
-        <http://example.org/Year> .
-
-<http://example.org/ontology/hasYear> rdfs:range <http://example.org/ontology/Entity>,
-        <http://example.org/ontology/Year> .
-
-<http://example.org/ontology/year#hasDay> rdfs:range <http://example.org/ontology/year#Month> .
-
-<http://example.org/ontology/year#hasMonth> rdfs:range <http://example.org/ontology/year#Month>,
-        <http://example.org/ontology/year#Year> .
-
-<http://example.org/ontology/year#isLeap> rdfs:range <http://example.org/ontology/year#Year> .
-
-<http://example.org/ontology/year#isLeapYear> rdfs:range <http://example.org/ontology/year#> .
-
-<http://example.org/ontology/year#number> rdfs:range <http://example.org/ontology/year#> .
-
-<http://example.org/ontology/year#yearID> rdfs:range <http://example.org/ontology/year#> .
-
-<http://example.org/year#hasDay> rdfs:range <http://example.org/year#Day>,
-        <http://example.org/year#Month> .
-
-<http://example.org/year#hasEvent> rdfs:range <http://example.org/year#Day>,
-        <http://example.org/year#Event> .
-
-<http://example.org/year#hasMonth> rdfs:range <http://example.org/year#Month>,
-        <http://example.org/year#Year> .
-
-<http://example.org/year#hasSeason> rdfs:range <http://example.org/year#Season>,
-        <http://example.org/year#Year> .
-
-<http://example.org/year#isLeapYear> rdfs:range <http://example.org/year#Year> .
-
-<http://example.org/year#numberOfDay> rdfs:range <http://example.org/year#Day> .
-
-<http://example.org/year#numberOfMonth> rdfs:range <http://example.org/year#Month> .
-
-<http://example.org/year#numberOfYear> rdfs:range <http://example.org/year#Year> .
-
-<http://www.example.com#inYear> rdfs:range <http://www.example.com#Event>,
-        <http://www.example.com#Year> .
-
-<http://www.example.com/year#hasDay> rdfs:range <http://www.example.com/year#Day>,
-        <http://www.example.com/year#Month> .
-
-<http://www.example.com/year#hasMonth> rdfs:range <http://www.example.com/year#Month>,
-        <http://www.example.com/year#Year> .
-
-<http://www.example.com/year#hasSeason> rdfs:range <http://www.example.com/year#Season>,
-        <http://www.example.com/year#Year> .
-
-<http://www.example.org/year#followedBy> rdfs:range <http://www.example.org/year#Year> .
-
-<http://www.example.org/year#hasYear> rdfs:range <http://www.example.org/year#Year> .
-
-<http://www.example.org/year#precededBy> rdfs:range <http://www.example.org/year#Year> .
+kastle:year a rdf:Property ;
+    rdfs:domain kastle:Document,
+        kastle:Entity ;
+    rdfs:range kastle:Literal,
+        kastle:Year .
 

@@ -1,218 +1,210 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Night> a rdfs:Class .
-
-<http://example.com/Place> a rdfs:Class .
-
-<http://example.org/Day> a rdfs:Class .
-
-<http://example.org/Night> a rdfs:Class .
-
-<http://example.org/Temperature> a rdfs:Class .
-
-<http://example.org/night#> a rdfs:Class .
-
-<http://example.org/night#Day> a rdfs:Class .
-
-<http://example.org/night#Moon> a rdfs:Class .
-
-<http://example.org/night#MoonPhase> a rdfs:Class .
-
-<http://example.org/night#Night> a rdfs:Class .
-
-<http://example.org/night#Star> a rdfs:Class .
-
-<http://example.org/night#WeatherCondition> a rdfs:Class .
-
-<http://www.example.com/ontology/astro#Sunrise> a rdfs:Class .
-
-<http://www.example.com/ontology/astro#Sunset> a rdfs:Class .
-
-<http://www.example.com/ontology/time#Night> a rdfs:Class .
-
-<http://www.example.org/night#Astronomy> a rdfs:Class .
-
-<http://www.example.org/night#Dream> a rdfs:Class .
-
-<http://www.example.org/night#Moon> a rdfs:Class .
-
-<http://www.example.org/night#MoonPhase> a rdfs:Class .
-
-<http://www.example.org/night#Night> a rdfs:Class .
-
-<http://www.example.org/night#Sleep> a rdfs:Class .
-
-<http://www.example.org/night#Star> a rdfs:Class .
-
-<http://www.example.org/night#Weather> a rdfs:Class .
-
-<http://www.example.org/night/Concept> a rdfs:Class .
-
-<http://www.example.org/night/Night> a rdfs:Class .
-
-<http://www.example.org/night/nightTimeActivity> a rdfs:Class .
-
-<http://www.example.org/place#Place> a rdfs:Class .
-
-<http://www.example.org/time#Time> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-<http://example.com/hasEnd> rdfs:range <http://example.com/Night> .
-
-<http://example.com/hasEndTime> rdfs:range <http://example.com/Night> .
-
-<http://example.com/hasNight> rdfs:range <http://example.com/Night>,
-        <http://example.com/Place> .
-
-<http://example.com/hasStart> rdfs:range <http://example.com/Night> .
-
-<http://example.com/hasStartTime> rdfs:range <http://example.com/Night> .
-
-<http://example.org/Duration> rdfs:range <http://example.org/Night> .
-
-<http://example.org/HasTemperature> rdfs:range <http://example.org/Night>,
-        <http://example.org/Temperature> .
-
-<http://example.org/hasEnd> rdfs:range <http://example.org/Night> .
-
-<http://example.org/hasEndTime> rdfs:range <http://example.org/Night> .
-
-<http://example.org/hasLength> rdfs:range <http://example.org/Night> .
-
-<http://example.org/hasMoonPhase> rdfs:range <http://example.org/Night> .
-
-<http://example.org/hasNight> rdfs:range <http://example.org/Day>,
-        <http://example.org/Night> .
-
-<http://example.org/hasStart> rdfs:range <http://example.org/Night> .
-
-<http://example.org/hasStartTime> rdfs:range <http://example.org/Night> .
-
-<http://example.org/isFollowedBy> rdfs:range <http://example.org/Day>,
-        <http://example.org/Night> .
-
-<http://example.org/night#Duration> rdfs:range <http://example.org/night#> .
-
-<http://example.org/night#EndTime> rdfs:range <http://example.org/night#> .
-
-<http://example.org/night#Observing> rdfs:range <http://example.org/night#>,
-        rdfs:Resource .
-
-<http://example.org/night#Sleeping> rdfs:range <http://example.org/night#>,
-        rdfs:Resource .
-
-<http://example.org/night#StartTime> rdfs:range <http://example.org/night#> .
-
-<http://example.org/night#Weather> rdfs:range <http://example.org/night#>,
-        rdfs:Resource .
-
-<http://example.org/night#hasDuration> rdfs:range <http://example.org/night#Night> .
-
-<http://example.org/night#hasEndHour> rdfs:range <http://example.org/night#Night> .
-
-<http://example.org/night#hasMoon> rdfs:range <http://example.org/night#Moon>,
-        <http://example.org/night#Night> .
-
-<http://example.org/night#hasMoonPhase> rdfs:range <http://example.org/night#Moon>,
-        <http://example.org/night#MoonPhase> .
-
-<http://example.org/night#hasStar> rdfs:range <http://example.org/night#Night>,
-        <http://example.org/night#Star> .
-
-<http://example.org/night#hasStartHour> rdfs:range <http://example.org/night#Night> .
-
-<http://example.org/night#hasWeather> rdfs:range <http://example.org/night#Night>,
-        <http://example.org/night#WeatherCondition> .
-
-<http://example.org/night#isDark> rdfs:range <http://example.org/night#Night> .
-
-<http://example.org/night#isPartOfDay> rdfs:range <http://example.org/night#Day>,
-        <http://example.org/night#Night> .
-
-<http://example.org/night#isQuiet> rdfs:range <http://example.org/night#Night> .
-
-<http://example.org/night#visibleDuring> rdfs:range <http://example.org/night#Night>,
-        <http://example.org/night#Star> .
-
-<http://www.example.com/ontology/time#hasEnd> rdfs:range <http://www.example.com/ontology/astro#Sunrise>,
-        <http://www.example.com/ontology/time#Night> .
-
-<http://www.example.com/ontology/time#hasStart> rdfs:range <http://www.example.com/ontology/astro#Sunset>,
-        <http://www.example.com/ontology/time#Night> .
-
-<http://www.example.org/night#activities> rdfs:range <http://www.example.org/night#Night>,
-        <http://www.example.org/night#Sleep> .
-
-<http://www.example.org/night#end> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#endsAt> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#experiences> rdfs:range <http://www.example.org/night#Dream>,
-        <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#hasAurora> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#hasDarkness> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#hasEndTime> rdfs:range <http://www.example.org/night#Night>,
-        <http://www.example.org/time#Time> .
-
-<http://www.example.org/night#hasInSky> rdfs:range <http://www.example.org/night#Moon>,
-        <http://www.example.org/night#Night>,
-        <http://www.example.org/night#Star> .
-
-<http://www.example.org/night#hasMoon> rdfs:range <http://www.example.org/night#Moon>,
-        <http://www.example.org/night#Night>,
-        owl:Thing .
-
-<http://www.example.org/night#hasMoonPhase> rdfs:range <http://www.example.org/night#MoonPhase>,
-        <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#hasStarVisibility> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#hasStarsVisible> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#hasStartTime> rdfs:range <http://www.example.org/night#Night>,
-        <http://www.example.org/time#Time> .
-
-<http://www.example.org/night#hasTemperature> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#hasWeather> rdfs:range <http://www.example.org/night#Night>,
-        <http://www.example.org/night#Weather> .
-
-<http://www.example.org/night#isAstronomicalNight> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#isIlluminatedBy> rdfs:range <http://www.example.org/night#Moon>,
-        <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#isNightOf> rdfs:range <http://www.example.org/night#Night>,
-        <http://www.example.org/place#Place> .
-
-<http://www.example.org/night#isPartOf> rdfs:range <http://www.example.org/night#Astronomy>,
-        <http://www.example.org/night#Moon> .
-
-<http://www.example.org/night#isPresentDuring> rdfs:range <http://www.example.org/night#Night>,
-        <http://www.example.org/night#Star> .
-
-<http://www.example.org/night#moonPhase> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#nightSky> rdfs:range <http://www.example.org/night#Night>,
-        <http://www.example.org/night#Star> .
-
-<http://www.example.org/night#observe> rdfs:range <http://www.example.org/night#Astronomy>,
-        <http://www.example.org/night#Star> .
-
-<http://www.example.org/night#start> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night#startsAt> rdfs:range <http://www.example.org/night#Night> .
-
-<http://www.example.org/night/conceptOfNight> rdfs:range <http://www.example.org/night/Concept>,
-        <http://www.example.org/night/Night> .
-
-<http://www.example.org/night/hasActivity> rdfs:range <http://www.example.org/night/Night>,
-        <http://www.example.org/night/nightTimeActivity> .
+kastle:Duration a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Night ;
+    rdfs:range kastle:dateTime,
+        kastle:duration .
+
+kastle:EndTime a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:dateTime .
+
+kastle:HasTemperature a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Temperature .
+
+kastle:Observing a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Resource .
+
+kastle:Sleeping a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Resource .
+
+kastle:StartTime a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:dateTime .
+
+kastle:activities a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Sleep .
+
+kastle:conceptOfNight a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Concept .
+
+kastle:end a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:dateTime .
+
+kastle:endsAt a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:time .
+
+kastle:experiences a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Dream .
+
+kastle:hasActivity a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:nightTimeActivity .
+
+kastle:hasAurora a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:boolean .
+
+kastle:hasDarkness a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:boolean .
+
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:time .
+
+kastle:hasEnd a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Literal,
+        kastle:Sunrise,
+        kastle:dateTime,
+        kastle:time .
+
+kastle:hasEndHour a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:time .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Time,
+        kastle:time .
+
+kastle:hasInSky a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Star .
+
+kastle:hasLength a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Literal,
+        kastle:float .
+
+kastle:hasMoon a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Moon,
+        kastle:Thing .
+
+kastle:hasMoonPhase a rdf:Property ;
+    rdfs:domain kastle:Moon,
+        kastle:Night ;
+    rdfs:range kastle:MoonPhase,
+        kastle:string .
+
+kastle:hasNight a rdf:Property ;
+    rdfs:domain kastle:Day,
+        kastle:Place ;
+    rdfs:range kastle:Night .
+
+kastle:hasStar a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Star .
+
+kastle:hasStarVisibility a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:boolean .
+
+kastle:hasStarsVisible a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:boolean .
+
+kastle:hasStart a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Literal,
+        kastle:Sunset,
+        kastle:dateTime,
+        kastle:time .
+
+kastle:hasStartHour a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:time .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Time,
+        kastle:time .
+
+kastle:hasTemperature a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Literal,
+        kastle:float .
+
+kastle:hasWeather a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Weather,
+        kastle:WeatherCondition .
+
+kastle:isAstronomicalNight a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:boolean .
+
+kastle:isDark a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:boolean .
+
+kastle:isFollowedBy a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Day .
+
+kastle:isIlluminatedBy a rdf:Property ;
+    rdfs:domain kastle:Moon ;
+    rdfs:range kastle:Night .
+
+kastle:isNightOf a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Place .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Moon ;
+    rdfs:range kastle:Astronomy .
+
+kastle:isPartOfDay a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Day .
+
+kastle:isPresentDuring a rdf:Property ;
+    rdfs:domain kastle:Star ;
+    rdfs:range kastle:Night .
+
+kastle:isQuiet a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:boolean .
+
+kastle:moonPhase a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:nightSky a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:Star .
+
+kastle:observe a rdf:Property ;
+    rdfs:domain kastle:Astronomy ;
+    rdfs:range kastle:Star .
+
+kastle:start a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:dateTime .
+
+kastle:startsAt a rdf:Property ;
+    rdfs:domain kastle:Night ;
+    rdfs:range kastle:time .
+
+kastle:visibleDuring a rdf:Property ;
+    rdfs:domain kastle:Star ;
+    rdfs:range kastle:Night .
+
+kastle:Weather a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Resource .
 

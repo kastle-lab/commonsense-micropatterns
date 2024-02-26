@@ -1,159 +1,121 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:n4f1e3f07cba74ed4a1d2c8c003862c36b1 a rdfs:Class .
+kastle:associatedWith a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Resource .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Action,
+        kastle:Resource,
+        kastle:string .
+
+kastle:causes a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Result .
+
+kastle:hasComment a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:string .
+
+kastle:hasCourse a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Course .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:date .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:Action ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasFinalOutcome a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:string .
+
+kastle:hasGrade a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Grade,
+        kastle:string .
+
+kastle:hasOutcome a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:string .
+
+kastle:hasProcess a rdf:Property ;
+    rdfs:domain kastle:Agent ;
+    rdfs:range kastle:Process .
+
+kastle:hasResult a rdf:Property ;
+    rdfs:domain kastle:Action,
+        kastle:Activity,
+        kastle:Event,
+        kastle:Experiment,
+        kastle:Process,
+        kastle:Test,
+        kastle:nb319ea08a0f0478b91e88f03fd1295a3b1 ;
+    rdfs:range kastle:Result .
+
+kastle:hasScore a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:float,
+        kastle:integer .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:Action ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasStudent a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Student .
+
+kastle:hasSuccess a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:boolean .
+
+kastle:hasTime a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasTimestamp a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasUnit a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Literal .
+
+kastle:hasValue a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:isResultOf a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Process,
+        kastle:nb319ea08a0f0478b91e88f03fd1295a3b4,
+        kastle:string .
+
+kastle:isSuccess a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:boolean .
+
+kastle:outcome a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:string .
 
-_:n4f1e3f07cba74ed4a1d2c8c003862c36b4 a rdfs:Class .
+kastle:score a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:integer .
 
-<http://example.com#Action> a rdfs:Class .
+kastle:timestamp a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:dateTime .
 
-<http://example.com#Experiment> a rdfs:Class .
-
-<http://example.com#QualitativeResult> a rdfs:Class ;
-    rdfs:range <http://example.com#QualitativeResult> .
-
-<http://example.com#QuantitativeResult> a rdfs:Class .
-
-<http://example.com#Result> a rdfs:Class .
-
-<http://example.com/Action> a rdfs:Class .
-
-<http://example.com/Activity> a rdfs:Class .
-
-<http://example.com/Course> a rdfs:Class .
-
-<http://example.com/Event> a rdfs:Class .
-
-<http://example.com/Grade> a rdfs:Class .
-
-<http://example.com/Result> a rdfs:Class .
-
-<http://example.com/Student> a rdfs:Class .
-
-<http://example.com/Test> a rdfs:Class .
-
-<http://example.com/final#Result> a rdfs:Class .
-
-<http://example.com/result#Action> a rdfs:Class .
-
-<http://example.com/result#Result> a rdfs:Class .
-
-<http://example.org/Agent> a rdfs:Class .
-
-<http://example.org/Event> a rdfs:Class .
-
-<http://example.org/Process> a rdfs:Class .
-
-<http://example.org/Result> a rdfs:Class .
-
-<http://example.org/result#Result> a rdfs:Class .
-
-<http://www.example.com/schema#Result> a rdfs:Class .
-
-<http://www.example.org#Process> a rdfs:Class .
-
-<http://www.example.org#Result> a rdfs:Class .
-
-<http://www.example.org/result#Result> a rdfs:Class .
-
-rdf:Resource a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-<http://example.com#hasResult> rdfs:range <http://example.com#Action>,
-        <http://example.com#Experiment>,
-        <http://example.com#Result> .
-
-<http://example.com#quantitativeResult> rdfs:range <http://example.com#QuantitativeResult> .
-
-<http://example.com/causes> rdfs:range <http://example.com/Event>,
-        <http://example.com/Result> .
-
-<http://example.com/final#hasOutcome> rdfs:range <http://example.com/final#Result> .
-
-<http://example.com/final#hasScore> rdfs:range <http://example.com/final#Result> .
-
-<http://example.com/hasCourse> rdfs:range <http://example.com/Course>,
-        <http://example.com/Result> .
-
-<http://example.com/hasGrade> rdfs:range <http://example.com/Grade>,
-        <http://example.com/Result> .
-
-<http://example.com/hasResult> rdfs:range <http://example.com/Action>,
-        <http://example.com/Activity>,
-        <http://example.com/Result>,
-        <http://example.com/Test> .
-
-<http://example.com/hasStudent> rdfs:range <http://example.com/Result>,
-        <http://example.com/Student> .
-
-<http://example.com/result#belongsTo> rdfs:range <http://example.com/result#Action>,
-        <http://example.com/result#Result>,
-        rdfs:Resource .
-
-<http://example.com/result#hasEndTime> rdfs:range <http://example.com/result#Action> .
-
-<http://example.com/result#hasStartTime> rdfs:range <http://example.com/result#Action> .
-
-<http://example.com/result#hasValue> rdfs:range <http://example.com/result#Result> .
-
-<http://example.com/score> rdfs:range <http://example.com/Result> .
-
-<http://example.org/hasProcess> rdfs:range <http://example.org/Agent>,
-        <http://example.org/Process> .
-
-<http://example.org/hasResult> rdfs:range _:n4f1e3f07cba74ed4a1d2c8c003862c36b1,
-        <http://example.org/Event>,
-        <http://example.org/Process>,
-        <http://example.org/Result> .
-
-<http://example.org/isResultOf> rdfs:range _:n4f1e3f07cba74ed4a1d2c8c003862c36b4,
-        <http://example.org/Process>,
-        <http://example.org/Result> .
-
-<http://example.org/result#hasComment> rdfs:range <http://example.org/result#Result> .
-
-<http://example.org/result#hasFinalOutcome> rdfs:range <http://example.org/result#Result> .
-
-<http://example.org/result#hasGrade> rdfs:range <http://example.org/result#Result> .
-
-<http://example.org/result#hasScore> rdfs:range <http://example.org/result#Result> .
-
-<http://example.org/result#hasTime> rdfs:range <http://example.org/result#Result> .
-
-<http://example.org/result#hasValue> rdfs:range <http://example.org/result#Result> .
-
-<http://example.org/result#isResultOf> rdfs:range <http://example.org/result#Result> .
-
-<http://www.example.com/schema#hasTimestamp> rdfs:range <http://www.example.com/schema#Result> .
-
-<http://www.example.com/schema#hasValue> rdfs:range <http://www.example.com/schema#Result> .
-
-<http://www.example.org#hasResult> rdfs:range <http://www.example.org#Process>,
-        <http://www.example.org#Result> .
-
-<http://www.example.org/result#associatedWith> rdfs:range <http://www.example.org/result#Result>,
-        rdf:Resource .
-
-<http://www.example.org/result#belongsTo> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#hasDate> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#hasOutcome> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#hasScore> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#hasTimestamp> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#hasValue> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#isResultOf> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#isSuccess> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#outcome> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#timestamp> rdfs:range <http://www.example.org/result#Result> .
-
-<http://www.example.org/result#wasGeneratedBy> rdfs:range <http://www.example.org/result#Result> .
+kastle:wasGeneratedBy a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:string .
 

@@ -1,199 +1,108 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Education> a rdfs:Class .
-
-<http://example.com/Gender> a rdfs:Class .
-
-<http://example.com/Girl> a rdfs:Class .
-
-<http://example.com/Hobby> a rdfs:Class .
-
-<http://example.com/Human> a rdfs:Class .
-
-<http://example.com/School> a rdfs:Class .
-
-<http://example.com/ex#Girl> a rdfs:Class .
-
-<http://example.com/ex#Human> a rdfs:Class .
-
-<http://example.com/example#Human> a rdfs:Class .
-
-<http://example.com/ontology/#Adult> a rdfs:Class .
-
-<http://example.com/ontology/#Girl> a rdfs:Class .
-
-<http://example.org#Gender> a rdfs:Class .
-
-<http://example.org#Girl> a rdfs:Class .
-
-<http://example.org#Human> a rdfs:Class .
-
-<http://example.org/Gender> a rdfs:Class .
-
-<http://example.org/Girl> a rdfs:Class .
-
-<http://example.org/Human> a rdfs:Class .
-
-<http://example.org/Parent> a rdfs:Class .
-
-<http://example.org/Pet> a rdfs:Class .
-
-<http://example.org/School> a rdfs:Class .
-
-<http://example.org/Toy> a rdfs:Class .
-
-<http://example.org/girl#Girl> a rdfs:Class .
-
-<http://example.org/ontology#Person> a rdfs:Class .
-
-<http://example.org/ontology#School> a rdfs:Class .
-
-<http://schema.org/Person> a rdfs:Class .
-
-<http://www.example.com/ontology#Girl> a rdfs:Class .
-
-<http://www.example.com/ontology#School> a rdfs:Class .
-
-<http://www.example.org/myOntology#Girl> a rdfs:Class .
-
-<http://www.example.org/myOntology#Human> a rdfs:Class .
-
-<http://www.example.org/ontology#Girl> a rdfs:Class .
-
-<http://www.example.org/ontology#School> a rdfs:Class .
-
-<http://www.example.org/ontology/girl#Girl> a rdfs:Class .
-
-<http://www.example.org/ontology/girl#School> a rdfs:Class .
-
-rdf:integer a rdfs:Class .
-
-rdfs:literal a rdfs:Class .
-
-<http://xmlns.com/foaf/0.1/Person> a rdfs:Class .
-
-<http://example.com/AttendsSchool> rdfs:range <http://example.com/Girl>,
-        <http://example.com/School> .
-
-<http://example.com/ex#hasAge> rdfs:range <http://example.com/ex#Girl> .
-
-<http://example.com/ex#hasName> rdfs:range <http://example.com/ex#Girl> .
-
-<http://example.com/ex#hasParent> rdfs:range <http://example.com/ex#Girl>,
-        <http://example.com/ex#Human> .
-
-<http://example.com/example#age> rdfs:range <http://example.com/example#Human> .
-
-<http://example.com/example#name> rdfs:range <http://example.com/example#Human> .
-
-<http://example.com/female> rdfs:range <http://example.com/Gender>,
-        <http://example.com/Girl> .
-
-<http://example.com/girlAge> rdfs:range <http://example.com/Girl> .
-
-<http://example.com/girlName> rdfs:range <http://example.com/Girl> .
-
-<http://example.com/hasAge> rdfs:range <http://example.com/Girl>,
-        <http://example.com/Human> .
-
-<http://example.com/hasBirthday> rdfs:range <http://example.com/Girl> .
-
-<http://example.com/hasGender> rdfs:range <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.com/hasHobby> rdfs:range <http://example.com/Girl>,
-        <http://example.com/Hobby> .
-
-<http://example.com/hasName> rdfs:range <http://example.com/Girl>,
-        <http://example.com/Human> .
-
-<http://example.com/isEnrolledIn> rdfs:range <http://example.com/Education>,
-        <http://example.com/Girl> .
-
-<http://example.com/ontology/#age> rdfs:range <http://example.com/ontology/#Girl> .
-
-<http://example.com/ontology/#hasParent> rdfs:range <http://example.com/ontology/#Adult>,
-        <http://example.com/ontology/#Girl> .
-
-<http://example.org#hasAge> rdfs:range <http://example.org#Girl> .
-
-<http://example.org#hasGender> rdfs:range <http://example.org#Gender>,
-        <http://example.org#Girl> .
-
-<http://example.org#hasName> rdfs:range <http://example.org#Girl> .
-
-<http://example.org#isGirl> rdfs:range <http://example.org#Girl>,
-        <http://example.org#Human> .
-
-<http://example.org/attendsSchool> rdfs:range <http://example.org/Girl>,
-        <http://example.org/School> .
-
-<http://example.org/child> rdfs:range <http://example.org/Girl>,
-        <http://example.org/Parent> .
-
-<http://example.org/girl#attendsSchool> rdfs:range <http://example.org/girl#Girl> .
-
-<http://example.org/girl#hasAge> rdfs:range <http://example.org/girl#Girl> .
-
-<http://example.org/girl#hasName> rdfs:range <http://example.org/girl#Girl> .
-
-<http://example.org/girl#livesIn> rdfs:range <http://example.org/girl#Girl> .
-
-<http://example.org/hasAge> rdfs:range <http://example.org/Girl> .
-
-<http://example.org/hasGender> rdfs:range <http://example.org/Gender>,
-        <http://example.org/Girl>,
-        <http://schema.org/Person> .
-
-<http://example.org/hasName> rdfs:range <http://example.org/Girl> .
-
-<http://example.org/hasPets> rdfs:range <http://example.org/Girl>,
-        <http://example.org/Pet> .
-
-<http://example.org/hasToys> rdfs:range <http://example.org/Girl>,
-        <http://example.org/Toy> .
-
-<http://example.org/isGirl> rdfs:range <http://example.org/Girl>,
-        <http://schema.org/Person> .
-
-<http://example.org/ontology#age> rdfs:range <http://example.org/ontology#Person>,
-        rdf:integer .
-
-<http://example.org/ontology#attendsSchool> rdfs:range <http://example.org/ontology#Person>,
-        <http://example.org/ontology#School> .
-
-<http://example.org/ontology#hasHairColor> rdfs:range <http://example.org/ontology#Person>,
-        rdfs:literal .
-
-<http://example.org/ontology#hasName> rdfs:range <http://example.org/ontology#Person>,
-        rdfs:literal .
-
-<http://example.org/sibling> rdfs:range <http://example.org/Girl>,
-        <http://example.org/Human> .
-
-<http://www.example.com/ontology#attendsSchool> rdfs:range <http://www.example.com/ontology#Girl>,
-        <http://www.example.com/ontology#School> .
-
-<http://www.example.com/ontology#hasAge> rdfs:range <http://www.example.com/ontology#Girl> .
-
-<http://www.example.com/ontology#hasLocation> rdfs:range <http://www.example.com/ontology#School> .
-
-<http://www.example.com/ontology#hasName> rdfs:range <http://www.example.com/ontology#Girl> .
-
-<http://www.example.org/myOntology#isGirl> rdfs:range <http://www.example.org/myOntology#Girl>,
-        <http://www.example.org/myOntology#Human> .
-
-<http://www.example.org/ontology#attendsSchool> rdfs:range <http://www.example.org/ontology#Girl>,
-        <http://www.example.org/ontology#School> .
-
-<http://www.example.org/ontology#hasAge> rdfs:range <http://www.example.org/ontology#Girl> .
-
-<http://www.example.org/ontology#hasName> rdfs:range <http://www.example.org/ontology#Girl> .
-
-<http://www.example.org/ontology/girl#attendsSchool> rdfs:range <http://www.example.org/ontology/girl#Girl>,
-        <http://www.example.org/ontology/girl#School> .
-
-<http://www.example.org/ontology/girl#hasAge> rdfs:range <http://www.example.org/ontology/girl#Girl> .
-
-<http://www.example.org/ontology/girl#hasName> rdfs:range <http://www.example.org/ontology/girl#Girl> .
+kastle:AttendsSchool a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:School .
+
+kastle:age a rdf:Property ;
+    rdfs:domain kastle:Girl,
+        kastle:Human,
+        kastle:Person ;
+    rdfs:range kastle:int,
+        kastle:integer .
+
+kastle:attendsSchool a rdf:Property ;
+    rdfs:domain kastle:Girl,
+        kastle:Person ;
+    rdfs:range kastle:School,
+        kastle:boolean .
+
+kastle:child a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Parent .
+
+kastle:female a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Gender .
+
+kastle:girlAge a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:integer .
+
+kastle:girlName a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:string .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Girl,
+        kastle:Human ;
+    rdfs:range kastle:int,
+        kastle:integer,
+        kastle:nonNegativeInteger .
+
+kastle:hasBirthday a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:date .
+
+kastle:hasGender a rdf:Property ;
+    rdfs:domain kastle:Girl,
+        kastle:Person ;
+    rdfs:range kastle:Gender,
+        kastle:string .
+
+kastle:hasHairColor a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:literal .
+
+kastle:hasHobby a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Hobby .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:School ;
+    rdfs:range kastle:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Girl,
+        kastle:Human,
+        kastle:Person ;
+    rdfs:range kastle:String,
+        kastle:literal,
+        kastle:string .
+
+kastle:hasParent a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Adult,
+        kastle:Human .
+
+kastle:hasPets a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Pet .
+
+kastle:hasToys a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Toy .
+
+kastle:isEnrolledIn a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Education .
+
+kastle:isGirl a rdf:Property ;
+    rdfs:domain kastle:Human,
+        kastle:Person ;
+    rdfs:range kastle:Girl .
+
+kastle:livesIn a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Human ;
+    rdfs:range kastle:string .
+
+kastle:sibling a rdf:Property ;
+    rdfs:domain kastle:Girl ;
+    rdfs:range kastle:Human .
 

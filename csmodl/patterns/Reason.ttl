@@ -1,126 +1,115 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:n71f186ce2d3d41d8b08ee4ac870c5d12b2 a rdfs:Class .
+kastle:HasReason a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Reason .
 
-_:n71f186ce2d3d41d8b08ee4ac870c5d12b3 a rdfs:Class .
+kastle:actionName a rdf:Property ;
+    rdfs:domain kastle:Action ;
+    rdfs:range kastle:string .
 
-<http://example.com/#Action> a rdfs:Class .
+kastle:actionTriggeredBy a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:nb5072b909aeb4a74858c8962397ecc9fb2 .
 
-<http://example.com/#Event> a rdfs:Class .
+kastle:causedBy a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:string .
 
-<http://example.com/#Reason> a rdfs:Class .
+kastle:causes a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:ActionEffect .
 
-<http://example.com/reason#Reason> a rdfs:Class .
+kastle:causesEvent a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:nb5072b909aeb4a74858c8962397ecc9fb3 .
 
-<http://example.org#Entity> a rdfs:Class .
+kastle:contains a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:string .
 
-<http://example.org#IdeaOrActionOrTheory> a rdfs:Class .
+kastle:derivedFrom a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Resource .
 
-<http://example.org#Reason> a rdfs:Class .
+kastle:explains a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:PhenomenonFact .
 
-<http://example.org/Action> a rdfs:Class .
+kastle:hasConclusion a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/Entity> a rdfs:Class .
+kastle:hasEvent a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Event .
 
-<http://example.org/Reason> a rdfs:Class .
+kastle:hasEvidence a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/ontology/reason#Reason> a rdfs:Class .
+kastle:hasLogicalBasis a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Resource .
 
-<http://example.org/reason#Action> a rdfs:Class .
+kastle:hasPremise a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/reason#ActionClaim> a rdfs:Class .
+kastle:hasPurpose a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/reason#ActionEffect> a rdfs:Class .
+kastle:hasReason a rdf:Property ;
+    rdfs:domain kastle:Action,
+        kastle:Entity,
+        kastle:IdeaOrActionOrTheory,
+        kastle:Resource ;
+    rdfs:range kastle:Reason .
 
-<http://example.org/reason#PhenomenonFact> a rdfs:Class .
+kastle:justifies a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:ActionClaim .
 
-<http://example.org/reason#Reason> a rdfs:Class .
+kastle:leadsTo a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:string .
 
-<http://example.org/reason-ontology#Reason> a rdfs:Class .
+kastle:provides a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Literal .
 
-<http://www.example.org/reason#Reason> a rdfs:Class .
+kastle:providesReason a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range kastle:Reason .
 
-<http://www.example.org/reason#ReasoningenType> a rdfs:Class .
+kastle:providesReasonFor a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Argument .
 
-<http://www.semanticweb.org/ontologies/reason#Reason> a rdfs:Class .
+kastle:reason a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Literal .
 
-rdfs:Resource a rdfs:Class .
+kastle:reasonFor a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Resource .
 
-owl:Thing a rdfs:Class .
+kastle:reasonText a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:string .
 
-<http://example.com/#hasEvent> rdfs:range <http://example.com/#Event>,
-        <http://example.com/#Reason> .
+kastle:relatedToDecision a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Resource .
 
-<http://example.com/#hasReason> rdfs:range <http://example.com/#Action>,
-        <http://example.com/#Reason> .
+kastle:relatedToEvent a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:Resource .
 
-<http://example.com/#reasonText> rdfs:range <http://example.com/#Reason> .
-
-<http://example.com/reason#relatedToDecision> rdfs:range <http://example.com/reason#Reason>,
-        rdfs:Resource .
-
-<http://example.com/reason#relatedToEvent> rdfs:range <http://example.com/reason#Reason>,
-        rdfs:Resource .
-
-<http://example.org#hasReason> rdfs:range <http://example.org#IdeaOrActionOrTheory>,
-        <http://example.org#Reason> .
-
-<http://example.org#providesReason> rdfs:range <http://example.org#Entity>,
-        <http://example.org#Reason> .
-
-<http://example.org/hasReason> rdfs:range <http://example.org/Action>,
-        <http://example.org/Entity>,
-        <http://example.org/Reason> .
-
-<http://example.org/ontology/reason#actionTriggeredBy> rdfs:range _:n71f186ce2d3d41d8b08ee4ac870c5d12b2,
-        <http://example.org/ontology/reason#Reason> .
-
-<http://example.org/ontology/reason#causesEvent> rdfs:range _:n71f186ce2d3d41d8b08ee4ac870c5d12b3,
-        <http://example.org/ontology/reason#Reason> .
-
-<http://example.org/ontology/reason#hasLogicalBasis> rdfs:range <http://example.org/ontology/reason#Reason>,
-        rdfs:Resource .
-
-<http://example.org/reason#HasReason> rdfs:range <http://example.org/reason#Reason>,
-        owl:Thing .
-
-<http://example.org/reason#actionName> rdfs:range <http://example.org/reason#Action> .
-
-<http://example.org/reason#causedBy> rdfs:range <http://example.org/reason#Reason> .
-
-<http://example.org/reason#causes> rdfs:range <http://example.org/reason#ActionEffect>,
-        <http://example.org/reason#Reason> .
-
-<http://example.org/reason#contains> rdfs:range <http://example.org/reason#Reason> .
-
-<http://example.org/reason#explains> rdfs:range <http://example.org/reason#PhenomenonFact>,
-        <http://example.org/reason#Reason> .
-
-<http://example.org/reason#hasReason> rdfs:range <http://example.org/reason#Action>,
-        <http://example.org/reason#Reason> .
-
-<http://example.org/reason#justifies> rdfs:range <http://example.org/reason#ActionClaim>,
-        <http://example.org/reason#Reason> .
-
-<http://example.org/reason#leadsTo> rdfs:range <http://example.org/reason#Reason> .
-
-<http://example.org/reason#reasonText> rdfs:range <http://example.org/reason#Reason> .
-
-<http://example.org/reason-ontology#hasReason> rdfs:range <http://example.org/reason-ontology#Reason>,
-        rdfs:Resource .
-
-<http://example.org/reason-ontology#reasonFor> rdfs:range <http://example.org/reason-ontology#Reason>,
-        rdfs:Resource .
-
-<http://example.org/reasonText> rdfs:range <http://example.org/Reason> .
-
-<http://www.example.org/reason#usesReasoningType> rdfs:range <http://www.example.org/reason#Reason>,
-        <http://www.example.org/reason#ReasoningenType> .
-
-<http://www.semanticweb.org/ontologies/reason#derivedFrom> rdfs:range <http://www.semanticweb.org/ontologies/reason#Reason>,
-        rdfs:Resource .
-
-<http://www.semanticweb.org/ontologies/reason#hasReason> rdfs:range <http://www.semanticweb.org/ontologies/reason#Reason>,
-        rdfs:Resource .
+kastle:usesReasoningType a rdf:Property ;
+    rdfs:domain kastle:Reason ;
+    rdfs:range kastle:ReasoningenType .
 

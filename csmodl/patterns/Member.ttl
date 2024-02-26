@@ -1,181 +1,145 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Group> a rdfs:Class .
-
-<http://example.com/Member> a rdfs:Class .
-
-<http://example.com/Organisation> a rdfs:Class .
-
-<http://example.com/Organization> a rdfs:Class .
-
-<http://example.com/memberontology#Group> a rdfs:Class .
-
-<http://example.com/memberontology#Member> a rdfs:Class .
-
-<http://example.com/membership_ontology#Member> a rdfs:Class .
-
-<http://example.com/membership_ontology#MembershipType> a rdfs:Class .
-
-<http://example.org#Group> a rdfs:Class .
-
-<http://example.org#Member> a rdfs:Class .
-
-<http://example.org#Organization> a rdfs:Class .
-
-<http://example.org/#Member> a rdfs:Class .
-
-<http://example.org/Member> a rdfs:Class .
-
-<http://example.org/Organization> a rdfs:Class .
-
-<http://example.org/member#Member> a rdfs:Class .
-
-<http://www.example.com/Member> a rdfs:Class .
-
-<http://www.example.com/Organization> a rdfs:Class .
-
-<http://www.example.org/#Group> a rdfs:Class .
-
-<http://www.example.org/#Member> a rdfs:Class .
-
-<http://www.example.org/member#Group> a rdfs:Class .
-
-<http://www.example.org/member#Member> a rdfs:Class .
-
-<http://www.example.org/ns#Group> a rdfs:Class .
-
-<http://www.example.org/ns#Member> a rdfs:Class .
-
-rdf:resource a rdfs:Class .
-
-<http://example.com/hasAge> rdfs:range <http://example.com/Member> .
-
-<http://example.com/hasEmail> rdfs:range <http://example.com/Member> .
-
-<http://example.com/hasMember> rdfs:range <http://example.com/Group>,
-        <http://example.com/Member>,
-        <http://example.com/Organisation>,
-        <http://example.com/Organization> .
-
-<http://example.com/hasName> rdfs:range <http://example.com/Member> .
-
-<http://example.com/id> rdfs:range <http://example.com/Member> .
-
-<http://example.com/isMemberOf> rdfs:range <http://example.com/Member>,
-        <http://example.com/Organisation> .
-
-<http://example.com/memberID> rdfs:range <http://example.com/Member> .
-
-<http://example.com/memberName> rdfs:range <http://example.com/Member> .
-
-<http://example.com/memberOf> rdfs:range <http://example.com/Member>,
-        <http://example.com/Organization> .
-
-<http://example.com/memberontology#belongsGroup> rdfs:range <http://example.com/memberontology#Group>,
-        <http://example.com/memberontology#Member> .
-
-<http://example.com/memberontology#groupHasName> rdfs:range <http://example.com/memberontology#Group> .
-
-<http://example.com/memberontology#hasBirthday> rdfs:range <http://example.com/memberontology#Member> .
-
-<http://example.com/memberontology#hasEmail> rdfs:range <http://example.com/memberontology#Member> .
-
-<http://example.com/memberontology#hasName> rdfs:range <http://example.com/memberontology#Member> .
-
-<http://example.com/membershipType> rdfs:range <http://example.com/Member> .
-
-<http://example.com/membership_ontology#email> rdfs:range <http://example.com/membership_ontology#Member> .
-
-<http://example.com/membership_ontology#id> rdfs:range <http://example.com/membership_ontology#Member> .
-
-<http://example.com/membership_ontology#joinedDate> rdfs:range <http://example.com/membership_ontology#Member> .
-
-<http://example.com/membership_ontology#membershipType> rdfs:range <http://example.com/membership_ontology#Member>,
-        <http://example.com/membership_ontology#MembershipType> .
-
-<http://example.com/membership_ontology#name> rdfs:range <http://example.com/membership_ontology#Member> .
-
-<http://example.com/name> rdfs:range <http://example.com/Member> .
-
-<http://example.com/provides> rdfs:range <http://example.com/Member> .
-
-<http://example.org#belongsTo> rdfs:range <http://example.org#Member>,
-        <http://example.org#Organization> .
-
-<http://example.org#belongsToGroup> rdfs:range <http://example.org#Group>,
-        <http://example.org#Member> .
-
-<http://example.org#hasEmail> rdfs:range <http://example.org#Member> .
-
-<http://example.org#hasID> rdfs:range <http://example.org#Member> .
-
-<http://example.org#hasJoinedDate> rdfs:range <http://example.org#Member> .
-
-<http://example.org#hasMember> rdfs:range <http://example.org#Member>,
-        <http://example.org#Organization> .
-
-<http://example.org#hasMembershipDate> rdfs:range <http://example.org#Member> .
-
-<http://example.org#hasMembershipSince> rdfs:range <http://example.org#Member> .
-
-<http://example.org#hasName> rdfs:range <http://example.org#Member> .
-
-<http://example.org#memberOf> rdfs:range <http://example.org#Member>,
-        <http://example.org#Organization> .
-
-<http://example.org/#hasName> rdfs:range <http://example.org/#Member> .
-
-<http://example.org/member#hasDateOfBirth> rdfs:range <http://example.org/member#Member> .
-
-<http://example.org/member#hasEmail> rdfs:range <http://example.org/member#Member> .
-
-<http://example.org/member#hasMemberID> rdfs:range <http://example.org/member#Member> .
-
-<http://example.org/member#hasMembershipType> rdfs:range <http://example.org/member#Member> .
-
-<http://example.org/member#hasName> rdfs:range <http://example.org/member#Member> .
-
-<http://example.org/member#joinedOn> rdfs:range <http://example.org/member#Member> .
-
-<http://example.org/member#livesInCity> rdfs:range <http://example.org/member#Member> .
-
-<http://example.org/memberOf> rdfs:range <http://example.org/Member>,
-        <http://example.org/Organization> .
-
-<http://example.org/prov> rdfs:range <http://example.org/Member>,
-        rdf:resource .
-
-<http://www.example.com/age> rdfs:range <http://www.example.com/Member> .
-
-<http://www.example.com/email> rdfs:range <http://www.example.com/Member> .
-
-<http://www.example.com/memberOf> rdfs:range <http://www.example.com/Member>,
-        <http://www.example.com/Organization> .
-
-<http://www.example.com/name> rdfs:range <http://www.example.com/Member> .
-
-<http://www.example.org/#hasMember> rdfs:range <http://www.example.org/#Group>,
-        <http://www.example.org/#Member> .
-
-<http://www.example.org/#joinedDate> rdfs:range <http://www.example.org/#Member> .
-
-<http://www.example.org/#memberOf> rdfs:range <http://www.example.org/#Group>,
-        <http://www.example.org/#Member> .
-
-<http://www.example.org/#name> rdfs:range <http://www.example.org/#Member> .
-
-<http://www.example.org/member#GroupID> rdfs:range <http://www.example.org/member#Group> .
-
-<http://www.example.org/member#GroupName> rdfs:range <http://www.example.org/member#Group> .
-
-<http://www.example.org/member#MemberID> rdfs:range <http://www.example.org/member#Member> .
-
-<http://www.example.org/member#MemberName> rdfs:range <http://www.example.org/member#Member> .
-
-<http://www.example.org/member#hasMember> rdfs:range <http://www.example.org/member#Group>,
-        <http://www.example.org/member#Member> .
-
-<http://www.example.org/ns#memberOf> rdfs:range <http://www.example.org/ns#Group>,
-        <http://www.example.org/ns#Member> .
+kastle:GroupID a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:string .
+
+kastle:GroupName a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:string .
+
+kastle:MemberID a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:MemberName a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:age a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:integer .
+
+kastle:belongsGroup a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Group .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Organization .
+
+kastle:belongsToGroup a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Group .
+
+kastle:email a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:groupHasName a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:string .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Literal,
+        kastle:integer .
+
+kastle:hasBirthday a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:date .
+
+kastle:hasDateOfBirth a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:date .
+
+kastle:hasEmail a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:hasID a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasJoinedDate a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:date .
+
+kastle:hasMember a rdf:Property ;
+    rdfs:domain kastle:Group,
+        kastle:Organisation,
+        kastle:Organization ;
+    rdfs:range kastle:Member .
+
+kastle:hasMemberID a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasMembershipDate a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:date .
+
+kastle:hasMembershipSince a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:date .
+
+kastle:hasMembershipType a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:id a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:isMemberOf a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Organisation .
+
+kastle:joinedDate a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:date .
+
+kastle:joinedOn a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:date .
+
+kastle:livesInCity a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:memberID a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:integer .
+
+kastle:memberName a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:memberOf a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Group,
+        kastle:Organization .
+
+kastle:membershipType a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:MembershipType,
+        kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:prov a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:resource .
 

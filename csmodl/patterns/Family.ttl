@@ -1,328 +1,211 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:ne0ac4bd847714d468ca1e3a0c20948a2b1 a rdfs:Class .
-
-_:ne0ac4bd847714d468ca1e3a0c20948a2b4 a rdfs:Class .
-
-_:ne0ac4bd847714d468ca1e3a0c20948a2b7 a rdfs:Class .
-
-<http://example.com/family#Family> a rdfs:Class .
-
-<http://example.com/family#FamilyMember> a rdfs:Class .
-
-<http://example.com/family#Female> a rdfs:Class .
-
-<http://example.com/family#Gender> a rdfs:Class .
-
-<http://example.com/family#Male> a rdfs:Class .
-
-<http://example.com/family#Person> a rdfs:Class .
-
-<http://example.com/family/Family> a rdfs:Class .
-
-<http://example.com/family/Person> a rdfs:Class .
-
-<http://example.com/ontology/family#Female> a rdfs:Class .
-
-<http://example.com/ontology/family#Male> a rdfs:Class .
-
-<http://example.com/ontology/family#Person> a rdfs:Class .
-
-<http://example.edu/family#Child> a rdfs:Class .
-
-<http://example.edu/family#Family> a rdfs:Class .
-
-<http://example.edu/family#Man> a rdfs:Class .
-
-<http://example.edu/family#Person> a rdfs:Class .
-
-<http://example.edu/family#Woman> a rdfs:Class .
-
-<http://example.org/Family> a rdfs:Class .
-
-<http://example.org/Person> a rdfs:Class .
-
-<http://example.org/family#Alive> a rdfs:Class .
-
-<http://example.org/family#BirthDate> a rdfs:Class .
-
-<http://example.org/family#Family> a rdfs:Class .
-
-<http://example.org/family#Gender> a rdfs:Class .
-
-<http://example.org/family#Person> a rdfs:Class .
-
-<http://example.org/family/Family> a rdfs:Class .
-
-<http://example.org/family/Person> a rdfs:Class .
-
-<http://owl.man.ac.uk/2005/07/sssw/family#Child> a rdfs:Class .
-
-<http://owl.man.ac.uk/2005/07/sssw/family#Family> a rdfs:Class .
-
-<http://owl.man.ac.uk/2005/07/sssw/family#Parent> a rdfs:Class .
-
-<http://owl.man.ac.uk/2005/07/sssw/family#Person> a rdfs:Class .
-
-<http://www.example.com/ontology#Family> a rdfs:Class .
-
-<http://www.example.com/ontology#Person> a rdfs:Class .
-
-<http://www.example.org/family#Family> a rdfs:Class .
-
-<http://www.example.org/family#Person> a rdfs:Class .
-
-<http://www.example.org/family/Female> a rdfs:Class .
-
-<http://www.example.org/family/Male> a rdfs:Class .
-
-<http://www.example.org/family/Person> a rdfs:Class .
-
-<http://example.com/family#age> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#childOf> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#dateOfBirth> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#firstName> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#gender> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#hasChild> rdfs:range <http://example.com/family#Family>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#hasDaughter> rdfs:range <http://example.com/family#FamilyMember>,
-        <http://example.com/family#Female> .
-
-<http://example.com/family#hasFather> rdfs:range <http://example.com/family#FamilyMember>,
-        <http://example.com/family#Male>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#hasGender> rdfs:range <http://example.com/family#FamilyMember>,
-        <http://example.com/family#Gender> .
-
-<http://example.com/family#hasMember> rdfs:range <http://example.com/family#Family>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#hasMother> rdfs:range <http://example.com/family#FamilyMember>,
-        <http://example.com/family#Female>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#hasName> rdfs:range <http://example.com/family#FamilyMember> .
-
-<http://example.com/family#hasParent> rdfs:range <http://example.com/family#Family>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#hasSibling> rdfs:range <http://example.com/family#FamilyMember>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#hasSon> rdfs:range <http://example.com/family#FamilyMember>,
-        <http://example.com/family#Male> .
-
-<http://example.com/family#hasSpouse> rdfs:range <http://example.com/family#FamilyMember>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#isMarriedTo> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#isSiblingOf> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#lastName> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#member> rdfs:range <http://example.com/family#Family>,
-        <http://example.com/family#Person> .
-
-<http://example.com/family#name> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family#spouseOf> rdfs:range <http://example.com/family#Person> .
-
-<http://example.com/family/hasMember> rdfs:range <http://example.com/family/Family>,
-        <http://example.com/family/Person> .
-
-<http://example.com/family/hasParent> rdfs:range <http://example.com/family/Person> .
-
-<http://example.com/family/hasSibling> rdfs:range <http://example.com/family/Person> .
-
-<http://example.com/family/hasSpouse> rdfs:range <http://example.com/family/Person> .
-
-<http://example.com/ontology/family#age> rdfs:range <http://example.com/ontology/family#Person> .
-
-<http://example.com/ontology/family#hasChild> rdfs:range <http://example.com/ontology/family#Person> .
-
-<http://example.com/ontology/family#hasFather> rdfs:range <http://example.com/ontology/family#Male>,
-        <http://example.com/ontology/family#Person> .
-
-<http://example.com/ontology/family#hasMother> rdfs:range <http://example.com/ontology/family#Female>,
-        <http://example.com/ontology/family#Person> .
-
-<http://example.com/ontology/family#name> rdfs:range <http://example.com/ontology/family#Person> .
-
-<http://example.edu/family#hasChild> rdfs:range _:ne0ac4bd847714d468ca1e3a0c20948a2b1,
-        <http://example.edu/family#Child> .
-
-<http://example.edu/family#hasFather> rdfs:range <http://example.edu/family#Child>,
-        <http://example.edu/family#Man> .
-
-<http://example.edu/family#hasMother> rdfs:range <http://example.edu/family#Child>,
-        <http://example.edu/family#Woman> .
-
-<http://example.edu/family#hasSpouse> rdfs:range _:ne0ac4bd847714d468ca1e3a0c20948a2b4,
-        _:ne0ac4bd847714d468ca1e3a0c20948a2b7 .
-
-<http://example.edu/family#partOfFamily> rdfs:range <http://example.edu/family#Family>,
-        <http://example.edu/family#Person> .
-
-<http://example.org/family#age> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#gender> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#hasBirthDate> rdfs:range <http://example.org/family#BirthDate>,
-        <http://example.org/family#Person> .
-
-<http://example.org/family#hasChild> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#hasFather> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#hasGender> rdfs:range <http://example.org/family#Gender>,
-        <http://example.org/family#Person> .
-
-<http://example.org/family#hasMember> rdfs:range <http://example.org/family#Family>,
-        <http://example.org/family#Person> .
-
-<http://example.org/family#hasMother> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#hasParent> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#hasSibling> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#hasSpouse> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family#isAlive> rdfs:range <http://example.org/family#Alive>,
-        <http://example.org/family#Person> .
-
-<http://example.org/family#name> rdfs:range <http://example.org/family#Person> .
-
-<http://example.org/family/age> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/hasChild> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/hasFather> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/hasMember> rdfs:range <http://example.org/family/Family>,
-        <http://example.org/family/Person> .
-
-<http://example.org/family/hasMother> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/hasSibling> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/hasSpouse> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/isChildOf> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/isMarriedTo> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/isParentOf> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/family/name> rdfs:range <http://example.org/family/Person> .
-
-<http://example.org/hasChild> rdfs:range <http://example.org/Family>,
-        <http://example.org/Person> .
-
-<http://example.org/hasFather> rdfs:range <http://example.org/Family>,
-        <http://example.org/Person> .
-
-<http://example.org/hasMember> rdfs:range <http://example.org/Family>,
-        <http://example.org/Person> .
-
-<http://example.org/hasMother> rdfs:range <http://example.org/Family>,
-        <http://example.org/Person> .
-
-<http://example.org/hasSibling> rdfs:range <http://example.org/Family>,
-        <http://example.org/Person> .
-
-<http://owl.man.ac.uk/2005/07/sssw/family#hasChild> rdfs:range <http://owl.man.ac.uk/2005/07/sssw/family#Child>,
-        <http://owl.man.ac.uk/2005/07/sssw/family#Parent> .
-
-<http://owl.man.ac.uk/2005/07/sssw/family#hasMember> rdfs:range <http://owl.man.ac.uk/2005/07/sssw/family#Family>,
-        <http://owl.man.ac.uk/2005/07/sssw/family#Person> .
-
-<http://owl.man.ac.uk/2005/07/sssw/family#hasParent> rdfs:range <http://owl.man.ac.uk/2005/07/sssw/family#Child>,
-        <http://owl.man.ac.uk/2005/07/sssw/family#Parent> .
-
-<http://www.example.com/ontology#child> rdfs:range <http://www.example.com/ontology#Person> .
-
-<http://www.example.com/ontology#familyMember> rdfs:range <http://www.example.com/ontology#Family>,
-        <http://www.example.com/ontology#Person> .
-
-<http://www.example.com/ontology#father> rdfs:range <http://www.example.com/ontology#Person> .
-
-<http://www.example.com/ontology#isMarriedTo> rdfs:range <http://www.example.com/ontology#Person> .
-
-<http://www.example.com/ontology#mother> rdfs:range <http://www.example.com/ontology#Person> .
-
-<http://www.example.com/ontology#sibling> rdfs:range <http://www.example.com/ontology#Person> .
-
-<http://www.example.org/family#belongsTo> rdfs:range <http://www.example.org/family#Family>,
-        <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#birthDate> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasChild> rdfs:range <http://www.example.org/family#Family>,
-        <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasDateOfBirth> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasFather> rdfs:range <http://www.example.org/family#Family>,
-        <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasFirstName> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasLastName> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasMember> rdfs:range <http://www.example.org/family#Family>,
-        <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasMother> rdfs:range <http://www.example.org/family#Family>,
-        <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasSibling> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#hasSpouse> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#isFemale> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#isMale> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#married> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family#name> rdfs:range <http://www.example.org/family#Person> .
-
-<http://www.example.org/family/birthDate> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/birthdate> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/deathDate> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/divorceDate> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/firstName> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/gender> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/hasChild> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/hasFather> rdfs:range <http://www.example.org/family/Male>,
-        <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/hasMother> rdfs:range <http://www.example.org/family/Female>,
-        <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/hasParent> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/hasSibling> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/hasSpouse> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/lastName> rdfs:range <http://www.example.org/family/Person> .
-
-<http://www.example.org/family/marriageDate> rdfs:range <http://www.example.org/family/Person> .
+kastle:age a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:integer .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Family .
+
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:birthdate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:child a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:childOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:dateOfBirth a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:deathDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:divorceDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:familyMember a rdf:Property ;
+    rdfs:domain kastle:Family ;
+    rdfs:range kastle:Person .
+
+kastle:father a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:firstName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:gender a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:integer .
+
+kastle:hasBirthDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:BirthDate .
+
+kastle:hasChild a rdf:Property ;
+    rdfs:domain kastle:Family,
+        kastle:Parent,
+        kastle:Person,
+        kastle:nfbfbee6b112647daa0e8a17cdffbe529b1 ;
+    rdfs:range kastle:Child,
+        kastle:Person .
+
+kastle:hasDateOfBirth a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:hasDaughter a rdf:Property ;
+    rdfs:domain kastle:FamilyMember ;
+    rdfs:range kastle:Female .
+
+kastle:hasFather a rdf:Property ;
+    rdfs:domain kastle:Child,
+        kastle:Family,
+        kastle:FamilyMember,
+        kastle:Person ;
+    rdfs:range kastle:Male,
+        kastle:Man,
+        kastle:Person .
+
+kastle:hasFirstName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasGender a rdf:Property ;
+    rdfs:domain kastle:FamilyMember,
+        kastle:Person ;
+    rdfs:range kastle:Gender,
+        kastle:string .
+
+kastle:hasLastName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasMember a rdf:Property ;
+    rdfs:domain kastle:Family ;
+    rdfs:range kastle:Person .
+
+kastle:hasMother a rdf:Property ;
+    rdfs:domain kastle:Child,
+        kastle:Family,
+        kastle:FamilyMember,
+        kastle:Person ;
+    rdfs:range kastle:Female,
+        kastle:Person,
+        kastle:Woman .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:FamilyMember,
+        kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasParent a rdf:Property ;
+    rdfs:domain kastle:Child,
+        kastle:Family,
+        kastle:Person ;
+    rdfs:range kastle:Parent,
+        kastle:Person .
+
+kastle:hasSibling a rdf:Property ;
+    rdfs:domain kastle:Family,
+        kastle:FamilyMember,
+        kastle:Person ;
+    rdfs:range kastle:FamilyMember,
+        kastle:Person .
+
+kastle:hasSon a rdf:Property ;
+    rdfs:domain kastle:FamilyMember ;
+    rdfs:range kastle:Male .
+
+kastle:hasSpouse a rdf:Property ;
+    rdfs:domain kastle:FamilyMember,
+        kastle:Person,
+        kastle:nfbfbee6b112647daa0e8a17cdffbe529b4 ;
+    rdfs:range kastle:FamilyMember,
+        kastle:Person,
+        kastle:nfbfbee6b112647daa0e8a17cdffbe529b7 .
+
+kastle:isAlive a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Alive .
+
+kastle:isChildOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:isFemale a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:boolean .
+
+kastle:isMale a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:boolean .
+
+kastle:isMarriedTo a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:isParentOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:isSiblingOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:lastName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:marriageDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:date .
+
+kastle:married a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:boolean .
+
+kastle:member a rdf:Property ;
+    rdfs:domain kastle:Family ;
+    rdfs:range kastle:Person .
+
+kastle:mother a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:partOfFamily a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Family .
+
+kastle:sibling a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:spouseOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 

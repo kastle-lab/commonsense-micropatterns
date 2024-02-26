@@ -1,127 +1,54 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.org#Body> a rdfs:Class .
+kastle:hasArm a rdf:Property ;
+    rdfs:domain kastle:Body ;
+    rdfs:range kastle:arm .
 
-<http://example.org#BodyPart> a rdfs:Class .
+kastle:hasBodyPart a rdf:Property ;
+    rdfs:domain kastle:Body,
+        kastle:Human,
+        kastle:HumanBody ;
+    rdfs:range kastle:Body,
+        kastle:BodyPart,
+        kastle:HumanBody .
 
-<http://example.org/Body> a rdfs:Class .
+kastle:hasHead a rdf:Property ;
+    rdfs:domain kastle:Body ;
+    rdfs:range kastle:Head,
+        kastle:head .
 
-<http://example.org/Body#Body> a rdfs:Class .
+kastle:hasLeg a rdf:Property ;
+    rdfs:domain kastle:Body ;
+    rdfs:range kastle:Leg,
+        kastle:leg .
 
-<http://example.org/Head> a rdfs:Class .
+kastle:hasLimbs a rdf:Property ;
+    rdfs:domain kastle:Body ;
+    rdfs:range kastle:Limbs .
 
-<http://example.org/Leg> a rdfs:Class .
+kastle:hasOrgan a rdf:Property ;
+    rdfs:domain kastle:Body,
+        kastle:BodyPart,
+        kastle:HumanBody ;
+    rdfs:range kastle:Organ,
+        kastle:organ .
 
-<http://example.org/Torso> a rdfs:Class .
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle:Body,
+        kastle:HumanBody ;
+    rdfs:range kastle:AnatomicalStructure,
+        kastle:Body,
+        kastle:BodyPart,
+        kastle:Resource .
 
-<http://example.org/body#Body> a rdfs:Class .
+kastle:hasTorso a rdf:Property ;
+    rdfs:domain kastle:Body ;
+    rdfs:range kastle:Torso,
+        kastle:torso .
 
-<http://example.org/body#BodyPart> a rdfs:Class .
-
-<http://example.org/body#Organ> a rdfs:Class .
-
-<http://example.org/bodyOntology#HumanBody> a rdfs:Class .
-
-<http://humanhealth.org/AnatomicalStructure> a rdfs:Class .
-
-<http://humanhealth.org/Body> a rdfs:Class .
-
-<http://www.example.com/body#Body> a rdfs:Class .
-
-<http://www.example.com/body#BodyPart> a rdfs:Class .
-
-<http://www.example.com/body#Organ> a rdfs:Class .
-
-<http://www.example.com/body#organ> a rdfs:Class .
-
-<http://www.example.org/Body#BodyPart> a rdfs:Class .
-
-<http://www.example.org/Body#HumanBody> a rdfs:Class .
-
-<http://www.example.org/Body#Organ> a rdfs:Class .
-
-<http://www.example.org/body#Body> a rdfs:Class .
-
-<http://www.example.org/body#Head> a rdfs:Class .
-
-<http://www.example.org/body#Limbs> a rdfs:Class .
-
-<http://www.example.org/body#Torso> a rdfs:Class .
-
-<http://www.example.org/body#arm> a rdfs:Class .
-
-<http://www.example.org/body#head> a rdfs:Class .
-
-<http://www.example.org/body#leg> a rdfs:Class .
-
-<http://www.example.org/body#torso> a rdfs:Class .
-
-<http://www.example.org/ontology/body#Body> a rdfs:Class .
-
-<http://www.example.org/ontology/body#BodyPart> a rdfs:Class .
-
-<http://example.org#hasPart> rdfs:range <http://example.org#Body>,
-        <http://example.org#BodyPart> .
-
-<http://example.org/Body#hasPart> rdfs:range <http://example.org/Body#Body> .
-
-<http://example.org/body#hasBodyPart> rdfs:range <http://example.org/body#Body> .
-
-<http://example.org/body#hasOrgan> rdfs:range <http://example.org/body#BodyPart>,
-        <http://example.org/body#Organ> .
-
-<http://example.org/body#hasPart> rdfs:range <http://example.org/body#Body>,
-        <http://example.org/body#BodyPart> .
-
-<http://example.org/bodyOntology#hasBodyPart> rdfs:range <http://example.org/bodyOntology#HumanBody> .
-
-<http://example.org/hasHead> rdfs:range <http://example.org/Body>,
-        <http://example.org/Head> .
-
-<http://example.org/hasLeg> rdfs:range <http://example.org/Body>,
-        <http://example.org/Leg> .
-
-<http://example.org/hasTorso> rdfs:range <http://example.org/Body>,
-        <http://example.org/Torso> .
-
-<http://humanhealth.org/hasPart> rdfs:range <http://humanhealth.org/AnatomicalStructure>,
-        <http://humanhealth.org/Body> .
-
-<http://www.example.com/body#hasOrgan> rdfs:range <http://www.example.com/body#Body>,
-        <http://www.example.com/body#Organ>,
-        <http://www.example.com/body#organ> .
-
-<http://www.example.com/body#hasPart> rdfs:range <http://www.example.com/body#Body>,
-        <http://www.example.com/body#BodyPart> .
-
-<http://www.example.org/Body#hasOrgan> rdfs:range <http://www.example.org/Body#HumanBody>,
-        <http://www.example.org/Body#Organ> .
-
-<http://www.example.org/Body#hasPart> rdfs:range <http://www.example.org/Body#BodyPart>,
-        <http://www.example.org/Body#HumanBody> .
-
-<http://www.example.org/body#hasArm> rdfs:range <http://www.example.org/body#Body>,
-        <http://www.example.org/body#arm> .
-
-<http://www.example.org/body#hasHead> rdfs:range <http://www.example.org/body#Body>,
-        <http://www.example.org/body#Head>,
-        <http://www.example.org/body#head> .
-
-<http://www.example.org/body#hasLeg> rdfs:range <http://www.example.org/body#Body>,
-        <http://www.example.org/body#leg> .
-
-<http://www.example.org/body#hasLimbs> rdfs:range <http://www.example.org/body#Body>,
-        <http://www.example.org/body#Limbs> .
-
-<http://www.example.org/body#hasPart> rdfs:range <http://www.example.org/body#Body> .
-
-<http://www.example.org/body#hasTorso> rdfs:range <http://www.example.org/body#Body>,
-        <http://www.example.org/body#Torso>,
-        <http://www.example.org/body#torso> .
-
-<http://www.example.org/ontology/body#hasPart> rdfs:range <http://www.example.org/ontology/body#Body>,
-        <http://www.example.org/ontology/body#BodyPart> .
-
-<http://www.example.org/ontology/body#isPartOf> rdfs:range <http://www.example.org/ontology/body#Body>,
-        <http://www.example.org/ontology/body#BodyPart> .
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:BodyPart ;
+    rdfs:range kastle:Body .
 

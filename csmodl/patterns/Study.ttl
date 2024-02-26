@@ -1,252 +1,229 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Course> a rdfs:Class .
-
-<http://example.com/Student> a rdfs:Class .
-
-<http://example.com/Subject> a rdfs:Class .
-
-<http://example.org/Person> a rdfs:Class .
-
-<http://example.org/Study> a rdfs:Class .
-
-<http://example.org/study#Course> a rdfs:Class .
-
-<http://example.org/study#Institution> a rdfs:Class .
-
-<http://example.org/study#LearningMaterial> a rdfs:Class .
-
-<http://example.org/study#Researcher> a rdfs:Class .
-
-<http://example.org/study#Result> a rdfs:Class .
-
-<http://example.org/study#Student> a rdfs:Class .
-
-<http://example.org/study#Study> a rdfs:Class .
-
-<http://example.org/study#StudyArea> a rdfs:Class .
-
-<http://example.org/study#Subject> a rdfs:Class .
-
-<http://example.org/study#Teacher> a rdfs:Class .
-
-<http://example.org/study#Topic> a rdfs:Class .
-
-<http://example.org/study#course> a rdfs:Class .
-
-<http://example.org/study#student> a rdfs:Class ;
-    rdfs:range <http://example.org/study#Student>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study#teacher> a rdfs:Class .
-
-<http://example.org/study/Course> a rdfs:Class .
-
-<http://example.org/study/Professor> a rdfs:Class .
-
-<http://example.org/study/Student> a rdfs:Class .
-
-<http://example.org/study/Study> a rdfs:Class .
-
-<http://example.org/study/Subject> a rdfs:Class .
-
-<http://www.example.com/study#Location> a rdfs:Class .
-
-<http://www.example.com/study#SourceMaterial> a rdfs:Class .
-
-<http://www.example.com/study#Student> a rdfs:Class .
-
-<http://www.example.com/study#Study> a rdfs:Class .
-
-<http://www.example.com/study#Subject> a rdfs:Class .
-
-<http://www.example.com/study#Tutor> a rdfs:Class .
-
-<http://www.example.org/study#Location> a rdfs:Class .
-
-<http://www.example.org/study#Method> a rdfs:Class .
-
-<http://www.example.org/study#Person> a rdfs:Class .
-
-<http://www.example.org/study#Publication> a rdfs:Class .
-
-<http://www.example.org/study#Researcher> a rdfs:Class .
-
-<http://www.example.org/study#Student> a rdfs:Class .
-
-<http://www.example.org/study#Study> a rdfs:Class .
-
-<http://www.example.org/study#Subject> a rdfs:Class .
-
-<http://www.example.org/study#SubjectArea> a rdfs:Class .
-
-<http://www.example.org/study#University> a rdfs:Class .
-
-rdf:integer a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-<http://example.com/enrolledIn> rdfs:range <http://example.com/Course>,
-        <http://example.com/Student> .
-
-<http://example.com/studies> rdfs:range <http://example.com/Student>,
-        <http://example.com/Subject> .
-
-<http://example.org/hasInvestigator> rdfs:range <http://example.org/Person>,
-        <http://example.org/Study> .
-
-<http://example.org/hasSubject> rdfs:range <http://example.org/Study>,
-        rdfs:Resource .
-
-<http://example.org/study#attends> rdfs:range <http://example.org/study#Student>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study#duration> rdfs:range <http://example.org/study#Study> .
-
-<http://example.org/study#hasCourse> rdfs:range <http://example.org/study#Course>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study#hasID> rdfs:range <http://example.org/study#Study> .
-
-<http://example.org/study#hasLocation> rdfs:range <http://example.org/study#course> .
-
-<http://example.org/study#hasName> rdfs:range <http://example.org/study#Study> .
-
-<http://example.org/study#hasResearcher> rdfs:range <http://example.org/study#Researcher>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study#hasResult> rdfs:range <http://example.org/study#Result>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study#hasStudyArea> rdfs:range <http://example.org/study#Study>,
-        <http://example.org/study#StudyArea> .
-
-<http://example.org/study#hasTitle> rdfs:range <http://example.org/study#Study> .
-
-<http://example.org/study#hasTopic> rdfs:range <http://example.org/study#Course>,
-        <http://example.org/study#Study>,
-        <http://example.org/study#Topic>,
-        rdfs:Resource .
-
-<http://example.org/study#isCourseOf> rdfs:range <http://example.org/study#Course>,
-        <http://example.org/study#Subject> .
-
-<http://example.org/study#isEnrolledIn> rdfs:range <http://example.org/study#course>,
-        <http://example.org/study#student> .
-
-<http://example.org/study#isInInstitution> rdfs:range <http://example.org/study#Institution>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study#isStudiedBy> rdfs:range <http://example.org/study#course>,
-        <http://example.org/study#student> .
-
-<http://example.org/study#isStudyBy> rdfs:range <http://example.org/study#Student>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study#isStudying> rdfs:range <http://example.org/study#Student>,
-        <http://example.org/study#Subject> .
-
-<http://example.org/study#isTaughtBy> rdfs:range <http://example.org/study#course>,
-        <http://example.org/study#teacher> .
-
-<http://example.org/study#name> rdfs:range <http://example.org/study#Student> .
-
-<http://example.org/study#partOfCurriculum> rdfs:range <http://example.org/study#Study>,
-        rdfs:Resource .
-
-<http://example.org/study#subject> rdfs:range <http://example.org/study#Study> .
-
-<http://example.org/study#taughtBy> rdfs:range <http://example.org/study#Study>,
-        <http://example.org/study#Teacher> .
-
-<http://example.org/study#uses> rdfs:range <http://example.org/study#LearningMaterial>,
-        <http://example.org/study#Study> .
-
-<http://example.org/study/courseOfStudy> rdfs:range <http://example.org/study/Course>,
-        <http://example.org/study/Study> .
-
-<http://example.org/study/duration> rdfs:range <http://example.org/study/Course>,
-        <http://example.org/study/Study> .
-
-<http://example.org/study/hasStudent> rdfs:range <http://example.org/study/Student>,
-        <http://example.org/study/Study> .
-
-<http://example.org/study/hasSubject> rdfs:range <http://example.org/study/Course>,
-        <http://example.org/study/Subject> .
-
-<http://example.org/study/isPartOf> rdfs:range <http://example.org/study/Course>,
-        <http://example.org/study/Study> .
-
-<http://example.org/study/studentID> rdfs:range <http://example.org/study/Student> .
-
-<http://example.org/study/studentName> rdfs:range <http://example.org/study/Study> .
-
-<http://example.org/study/teaches> rdfs:range <http://example.org/study/Course>,
-        <http://example.org/study/Professor> .
-
-<http://www.example.com/study#duration> rdfs:range <http://www.example.com/study#Study>,
-        rdf:integer .
-
-<http://www.example.com/study#hasStudent> rdfs:range <http://www.example.com/study#Student>,
-        <http://www.example.com/study#Study> .
-
-<http://www.example.com/study#hasStudy> rdfs:range <http://www.example.com/study#Study>,
-        <http://www.example.com/study#Subject> .
-
-<http://www.example.com/study#isTutoredBy> rdfs:range <http://www.example.com/study#Study>,
-        <http://www.example.com/study#Tutor> .
-
-<http://www.example.com/study#reads> rdfs:range <http://www.example.com/study#Student>,
-        <http://www.example.com/study#Study> .
-
-<http://www.example.com/study#studies> rdfs:range <http://www.example.com/study#Student>,
-        <http://www.example.com/study#Subject> .
-
-<http://www.example.com/study#takesPlaceAt> rdfs:range <http://www.example.com/study#Location>,
-        <http://www.example.com/study#Study> .
-
-<http://www.example.com/study#usesSourceMaterial> rdfs:range <http://www.example.com/study#SourceMaterial>,
-        <http://www.example.com/study#Study> .
-
-<http://www.example.org/study#UniName> rdfs:range <http://www.example.org/study#University> .
-
-<http://www.example.org/study#atLocation> rdfs:range <http://www.example.org/study#Location>,
-        <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#belongsTo> rdfs:range <http://www.example.org/study#Study>,
-        <http://www.example.org/study#University> .
-
-<http://www.example.org/study#duration> rdfs:range <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#focusArea> rdfs:range <http://www.example.org/study#Study>,
-        <http://www.example.org/study#SubjectArea> .
-
-<http://www.example.org/study#hasMethod> rdfs:range <http://www.example.org/study#Method>,
-        <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#hasPublication> rdfs:range <http://www.example.org/study#Publication>,
-        <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#hasResearcher> rdfs:range <http://www.example.org/study#Researcher>,
-        <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#hasStudyDate> rdfs:range <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#hasStudyID> rdfs:range <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#hasStudyName> rdfs:range <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#hasStudyTopic> rdfs:range <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#hasSubject> rdfs:range <http://www.example.org/study#Study>,
-        <http://www.example.org/study#Subject> .
-
-<http://www.example.org/study#researcher> rdfs:range <http://www.example.org/study#Person>,
-        <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#studiedBy> rdfs:range <http://www.example.org/study#Student>,
-        <http://www.example.org/study#Study> .
-
-<http://www.example.org/study#title> rdfs:range <http://www.example.org/study#Study> .
+kastle:UniName a rdf:Property ;
+    rdfs:domain kastle:University ;
+    rdfs:range kastle:string .
+
+kastle:atLocation a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Location .
+
+kastle:attends a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:Study .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:University .
+
+kastle:courseOfStudy a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Course .
+
+kastle:enrolledIn a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:Course .
+
+kastle:focusArea a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:SubjectArea .
+
+kastle:hasCourse a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Course .
+
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Literal .
+
+kastle:hasID a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:hasInvestigator a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Person .
+
+kastle:hasLevel a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Literal .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:course ;
+    rdfs:range kastle:string .
+
+kastle:hasMethod a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Method .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:hasPublication a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Publication .
+
+kastle:hasResearcher a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Researcher .
+
+kastle:hasResult a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Result .
+
+kastle:hasStudent a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Student .
+
+kastle:hasStudy a rdf:Property ;
+    rdfs:domain kastle:Subject ;
+    rdfs:range kastle:Study .
+
+kastle:hasStudyArea a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:StudyArea .
+
+kastle:hasStudyDate a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:date .
+
+kastle:hasStudyID a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:hasStudyName a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:hasStudyTopic a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:hasSubject a rdf:Property ;
+    rdfs:domain kastle:Course,
+        kastle:Study ;
+    rdfs:range kastle:Literal,
+        kastle:Resource,
+        kastle:Subject,
+        kastle:string .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:hasTopic a rdf:Property ;
+    rdfs:domain kastle:Course,
+        kastle:Study ;
+    rdfs:range kastle:Resource,
+        kastle:Topic .
+
+kastle:isCourseOf a rdf:Property ;
+    rdfs:domain kastle:Subject ;
+    rdfs:range kastle:Course .
+
+kastle:isEnrolledIn a rdf:Property ;
+    rdfs:domain kastle:student ;
+    rdfs:range kastle:course .
+
+kastle:isInInstitution a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Institution .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Course ;
+    rdfs:range kastle:Study .
+
+kastle:isStudiedBy a rdf:Property ;
+    rdfs:domain kastle:course ;
+    rdfs:range kastle:student .
+
+kastle:isStudyBy a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Student .
+
+kastle:isStudying a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:Subject .
+
+kastle:isTaughtBy a rdf:Property ;
+    rdfs:domain kastle:course ;
+    rdfs:range kastle:teacher .
+
+kastle:isTutoredBy a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Tutor .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:string .
+
+kastle:partOfCurriculum a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Resource .
+
+kastle:reads a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:Study .
+
+kastle:researcher a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Person .
+
+kastle:studentID a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:string .
+
+kastle:studentName a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:studiedBy a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Student .
+
+kastle:studies a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:Subject .
+
+kastle:subject a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:takesPlaceAt a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Location .
+
+kastle:taughtBy a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Teacher .
+
+kastle:teaches a rdf:Property ;
+    rdfs:domain kastle:Professor ;
+    rdfs:range kastle:Course .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:string .
+
+kastle:uses a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:LearningMaterial .
+
+kastle:usesSourceMaterial a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:SourceMaterial .
+
+kastle:duration a rdf:Property ;
+    rdfs:domain kastle:Course,
+        kastle:Study ;
+    rdfs:range kastle:duration,
+        kastle:integer,
+        kastle:positiveInteger .
+
+kastle:student a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Student .
 

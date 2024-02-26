@@ -1,58 +1,90 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:nfcb3f8fe5492473f8f5e894e0c4a20f5b1 a rdfs:Class .
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:string .
 
-<http://example.com/Kind> a rdfs:Class .
+kastle:example a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:string .
 
-<http://example.com/kind#Kind> a rdfs:Class .
+kastle:hasCategory a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:KindCategory .
 
-<http://example.org/kind#Kind> a rdfs:Class .
+kastle:hasCharacteristic a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Literal,
+        kastle:string .
 
-<http://example.org/kind#KindCategory> a rdfs:Class .
+kastle:hasExample a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/kind#Property> a rdfs:Class .
+kastle:hasInstances a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/kind#Kind> a rdfs:Class .
+kastle:hasKind a rdf:Property ;
+    rdfs:domain kastle:Entity,
+        kastle:Kind,
+        kastle:Thing ;
+    rdfs:range kastle:Kind,
+        kastle:n543b99f1924f4d278e1f3d5ec8b9ce2eb1 .
 
-owl:Thing a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:string .
 
-<http://example.com/kind#example> rdfs:range <http://example.com/kind#Kind> .
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Kind .
 
-<http://example.com/kind#hasCharacteristic> rdfs:range <http://example.com/kind#Kind> .
+kastle:hasProperty a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Property,
+        kastle:string .
 
-<http://example.com/kind#hasInstances> rdfs:range <http://example.com/kind#Kind> .
+kastle:hasQuality a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/kind#hasKind> rdfs:range _:nfcb3f8fe5492473f8f5e894e0c4a20f5b1,
-        <http://example.com/kind#Kind> .
+kastle:hasSubKind a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Kind .
 
-<http://example.com/kind#hasPart> rdfs:range <http://example.com/kind#Kind> .
+kastle:hasSuperKind a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Kind .
 
-<http://example.com/kind#hasSubKind> rdfs:range <http://example.com/kind#Kind> .
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/kind#hasSuperKind> rdfs:range <http://example.com/kind#Kind> .
+kastle:isKindOf a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Kind,
+        kastle:Thing .
 
-<http://example.com/kind#isKindOf> rdfs:range <http://example.com/kind#Kind> .
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:string .
 
-<http://example.com/kind#name> rdfs:range <http://example.com/kind#Kind> .
+kastle:provide a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Kind .
 
-<http://example.com/kind#understandOtherKind> rdfs:range <http://example.com/kind#Kind> .
+kastle:studiesFrom a rdf:Property ;
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:Teacher .
 
-<http://example.com/provide> rdfs:range <http://example.com/Kind> .
+kastle:teaches a rdf:Property ;
+    rdfs:domain kastle:Teacher ;
+    rdfs:range kastle:Student .
 
-<http://example.org/kind#hasCategory> rdfs:range <http://example.org/kind#Kind>,
-        <http://example.org/kind#KindCategory> .
-
-<http://example.org/kind#hasName> rdfs:range <http://example.org/kind#Kind> .
-
-<http://example.org/kind#hasProperty> rdfs:range <http://example.org/kind#Kind>,
-        <http://example.org/kind#Property> .
-
-<http://example.org/kind#isKindOf> rdfs:range <http://example.org/kind#Kind> .
-
-<http://www.example.org/kind#hasKind> rdfs:range <http://www.example.org/kind#Kind>,
-        owl:Thing .
-
-<http://www.example.org/kind#isKindOf> rdfs:range <http://www.example.org/kind#Kind>,
-        owl:Thing .
+kastle:understandOtherKind a rdf:Property ;
+    rdfs:domain kastle:Kind ;
+    rdfs:range kastle:Kind .
 

@@ -1,126 +1,107 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:n0ba93996de49481a81e9bea7f726326fb1 a rdfs:Class .
+kastle:CalculatesPower a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range kastle:n2d132167aea74ff5a4847cee0667c28cb1 .
 
-<http://example.com#Entity> a rdfs:Class .
+kastle:PowerMeasure a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:float .
 
-<http://example.com#Power> a rdfs:Class .
+kastle:affectEnvironment a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:Literal .
 
-<http://example.com#PowerSource> a rdfs:Class .
+kastle:amount a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:integer .
 
-<http://example.com/ontology#Object> a rdfs:Class .
+kastle:amountOfPower a rdf:Property ;
+    rdfs:domain kastle:PhysicalPower,
+        kastle:Power ;
+    rdfs:range kastle:decimal,
+        kastle:integer .
 
-<http://example.com/ontology#Power> a rdfs:Class .
+kastle:capacity a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/Machine> a rdfs:Class .
+kastle:control a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:PoliticalPower .
 
-<http://example.org/Power> a rdfs:Class .
+kastle:derivedFrom a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:PowerSource .
 
-<http://example.org/power#Entity> a rdfs:Class .
+kastle:generate a rdf:Property ;
+    rdfs:domain kastle:PowerGenerator ;
+    rdfs:range kastle:ElectricPower .
 
-<http://example.org/power#Power> a rdfs:Class .
+kastle:hasMagnitude a rdf:Property ;
+    rdfs:domain kastle:Power,
+        kastle:PowerConcept ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 
-<http://example.org/power#PowerConcept> a rdfs:Class .
+kastle:hasPower a rdf:Property ;
+    rdfs:domain kastle:Device,
+        kastle:Entity,
+        kastle:Human,
+        kastle:Individual,
+        kastle:Machine,
+        kastle:Object,
+        kastle:Thing ;
+    rdfs:range kastle:ElectricalPower,
+        kastle:Power .
 
-<http://example.org/power#Unit> a rdfs:Class .
+kastle:hasPowerOver a rdf:Property ;
+    rdfs:domain kastle:Country ;
+    rdfs:range kastle:Country .
 
-<http://www.example.com/ontology/power#Individual> a rdfs:Class .
+kastle:hasSource a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:Source .
 
-<http://www.example.com/ontology/power#PhysicalPower> a rdfs:Class .
+kastle:hasUnit a rdf:Property ;
+    rdfs:domain kastle:Power,
+        kastle:PowerConcept ;
+    rdfs:range kastle:Literal,
+        kastle:Unit,
+        kastle:string .
 
-<http://www.example.com/ontology/power#Power> a rdfs:Class .
+kastle:hasValue a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 
-<http://www.example.com/power#Power> a rdfs:Class .
+kastle:isGeneratedBy a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:PowerSource .
 
-<http://www.example.org/ontology#Machine> a rdfs:Class .
+kastle:isMeasuredIn a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/ontology#Power> a rdfs:Class .
+kastle:isUsedIn a rdf:Property ;
+    rdfs:domain kastle:PowerConcept ;
+    rdfs:range kastle:Resource .
 
-<http://www.example.org/power#ElectricPower> a rdfs:Class .
+kastle:measuredIn a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/power#ElectricalPower> a rdfs:Class .
+kastle:powerGeneration a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:Literal .
 
-<http://www.example.org/power#Human> a rdfs:Class .
+kastle:source a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/power#Machine> a rdfs:Class .
-
-<http://www.example.org/power#PhysicalPower> a rdfs:Class .
-
-<http://www.example.org/power#PoliticalPower> a rdfs:Class .
-
-<http://www.example.org/power#Power> a rdfs:Class .
-
-<http://www.example.org/power#PowerGenerator> a rdfs:Class .
-
-<http://www.example.org/power#SocialPower> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-<http://example.com#derivedFrom> rdfs:range <http://example.com#Power>,
-        <http://example.com#PowerSource> .
-
-<http://example.com#hasPower> rdfs:range <http://example.com#Entity>,
-        <http://example.com#Power> .
-
-<http://example.com/ontology#PowerMeasure> rdfs:range <http://example.com/ontology#Power> .
-
-<http://example.com/ontology#hasPower> rdfs:range <http://example.com/ontology#Object>,
-        <http://example.com/ontology#Power> .
-
-<http://example.org/hasPower> rdfs:range <http://example.org/Machine>,
-        <http://example.org/Power> .
-
-<http://example.org/power#CalculatesPower> rdfs:range _:n0ba93996de49481a81e9bea7f726326fb1,
-        <http://example.org/power#Entity> .
-
-<http://example.org/power#amountOfPower> rdfs:range <http://example.org/power#Power> .
-
-<http://example.org/power#hasMagnitude> rdfs:range <http://example.org/power#Power>,
-        <http://example.org/power#PowerConcept> .
-
-<http://example.org/power#hasPower> rdfs:range <http://example.org/power#Power>,
-        owl:Thing .
-
-<http://example.org/power#hasUnit> rdfs:range <http://example.org/power#Power>,
-        <http://example.org/power#Unit> .
-
-<http://example.org/power#hasValue> rdfs:range <http://example.org/power#Power> .
-
-<http://example.org/power#isUsedIn> rdfs:range <http://example.org/power#PowerConcept>,
-        rdfs:Resource .
-
-<http://example.org/power#measuredIn> rdfs:range <http://example.org/power#Power> .
-
-<http://www.example.com/ontology/power#amountOfPower> rdfs:range <http://www.example.com/ontology/power#PhysicalPower> .
-
-<http://www.example.com/ontology/power#hasPower> rdfs:range <http://www.example.com/ontology/power#Individual>,
-        <http://www.example.com/ontology/power#Power> .
-
-<http://www.example.com/power#hasUnit> rdfs:range <http://www.example.com/power#Power> .
-
-<http://www.example.com/power#hasValue> rdfs:range <http://www.example.com/power#Power> .
-
-<http://www.example.org/ontology#hasPower> rdfs:range <http://www.example.org/ontology#Machine>,
-        <http://www.example.org/ontology#Power> .
-
-<http://www.example.org/power#amount> rdfs:range <http://www.example.org/power#Power> .
-
-<http://www.example.org/power#control> rdfs:range <http://www.example.org/power#PoliticalPower>,
-        <http://www.example.org/power#Power> .
-
-<http://www.example.org/power#generate> rdfs:range <http://www.example.org/power#ElectricPower>,
-        <http://www.example.org/power#PowerGenerator> .
-
-<http://www.example.org/power#hasPower> rdfs:range <http://www.example.org/power#ElectricalPower>,
-        <http://www.example.org/power#Human>,
-        <http://www.example.org/power#Machine>,
-        <http://www.example.org/power#PhysicalPower>,
-        <http://www.example.org/power#SocialPower> .
-
-<http://www.example.org/power#source> rdfs:range <http://www.example.org/power#Power> .
-
-<http://www.example.org/power#unit> rdfs:range <http://www.example.org/power#Power> .
+kastle:unit a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range kastle:string .
 

@@ -1,132 +1,94 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
 
-<http://example.com#HourOfTime> a rdfs:Class .
+kastle:HasMinutes a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:TotalMinutes .
 
-<http://example.com#MinuteOfTime> a rdfs:Class .
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:TimeEntity,
+        kastle:TimeEvent ;
+    rdfs:range kastle:Minute .
 
-<http://example.com/Hour> a rdfs:Class .
+kastle:hasMinute a rdf:Property ;
+    rdfs:domain kastle:HourOfTime,
+        kastle:Time ;
+    rdfs:range kastle:Minute,
+        kastle:MinuteOfTime .
 
-<http://example.com/Minute> a rdfs:Class .
+kastle:hasMinutes a rdf:Property ;
+    rdfs:domain kastle:Hour,
+        kastle:TimePeriod ;
+    rdfs:range kastle:Minute,
+        kastle:integer .
 
-<http://example.com/Second> a rdfs:Class .
+kastle:hasNumber a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:integer .
 
-<http://example.com/Time> a rdfs:Class .
+kastle:hasNumberOfMinutes a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:integer .
 
-<http://example.com/TimeEvent> a rdfs:Class .
+kastle:hasNumberOfSeconds a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:integer .
 
-<http://example.com/TimePeriod> a rdfs:Class .
+kastle:hasNumericValue a rdf:Property ;
+    rdfs:domain kastle:Duration ;
+    rdfs:range kastle:decimal .
 
-<http://example.org#TimePeriod> a rdfs:Class .
+kastle:hasSeconds a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:Second .
 
-<http://example.org/Event> a rdfs:Class .
+kastle:hasTemporalDuration a rdf:Property ;
+    rdfs:domain kastle:Interval ;
+    rdfs:range kastle:DurationDescription .
 
-<http://example.org/Minute> a rdfs:Class .
+kastle:hasUnit a rdf:Property ;
+    rdfs:domain kastle:Duration ;
+    rdfs:range kastle:unitMinute .
 
-<http://example.org/Time> a rdfs:Class .
+kastle:isEquivalentTo a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:integer .
 
-<http://example.org/TotalMinutes> a rdfs:Class .
+kastle:isMinuteIn a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:Hour .
 
-<http://example.org/ontology#Minute> a rdfs:Class .
+kastle:minuteInHour a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Minute .
 
-<http://example.org/ontology/Hour> a rdfs:Class .
+kastle:minuteInTime a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:Minute .
 
-<http://example.org/ontology/Minute> a rdfs:Class .
+kastle:numericDuration a rdf:Property ;
+    rdfs:domain kastle:TemporalUnit ;
+    rdfs:range kastle:decimal .
 
-<http://example.org/ontology/minute#Minute> a rdfs:Class .
+kastle:ofHour a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:integer .
 
-<http://example.org/timescale#Minute> a rdfs:Class .
+kastle:partOfHour a rdf:Property ;
+    rdfs:domain kastle:MinuteOfTime ;
+    rdfs:range kastle:HourOfTime .
 
-<http://example.org/timescale#TimePeriod> a rdfs:Class .
+kastle:secondInMinute a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:Integer,
+        kastle:integer .
 
-<http://www.example.com/time#Hour> a rdfs:Class .
+kastle:secondInTime a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:Integer .
 
-<http://www.example.com/time#Minute> a rdfs:Class .
-
-<http://www.example.com/time#TimeEntity> a rdfs:Class .
-
-<http://www.example.org/ontology#Hour> a rdfs:Class .
-
-<http://www.example.org/ontology#Minute> a rdfs:Class .
-
-<http://www.example.org/ontology#Second> a rdfs:Class .
-
-time:DurationDescription a rdfs:Class .
-
-time:Interval a rdfs:Class .
-
-time:TemporalUnit a rdfs:Class .
-
-<http://example.com#hasMinute> rdfs:range <http://example.com#HourOfTime>,
-        <http://example.com#MinuteOfTime> .
-
-<http://example.com#partOfHour> rdfs:range <http://example.com#HourOfTime>,
-        <http://example.com#MinuteOfTime> .
-
-<http://example.com/hasDuration> rdfs:range <http://example.com/Minute>,
-        <http://example.com/TimeEvent> .
-
-<http://example.com/hasMinutes> rdfs:range <http://example.com/Hour>,
-        <http://example.com/Minute>,
-        <http://example.com/TimePeriod> .
-
-<http://example.com/hasSeconds> rdfs:range <http://example.com/Minute>,
-        <http://example.com/Second> .
-
-<http://example.com/minuteInHour> rdfs:range <http://example.com/Hour>,
-        <http://example.com/Minute> .
-
-<http://example.com/minuteInTime> rdfs:range <http://example.com/Minute>,
-        <http://example.com/Time> .
-
-<http://example.com/secondInMinute> rdfs:range <http://example.com/Minute> .
-
-<http://example.com/secondInTime> rdfs:range <http://example.com/Time> .
-
-<http://example.org#hasMinutes> rdfs:range <http://example.org#TimePeriod> .
-
-<http://example.org/HasMinutes> rdfs:range <http://example.org/Event>,
-        <http://example.org/TotalMinutes> .
-
-<http://example.org/hasMinute> rdfs:range <http://example.org/Minute>,
-        <http://example.org/Time> .
-
-<http://example.org/ontology#hasNumberOfSeconds> rdfs:range <http://example.org/ontology#Minute> .
-
-<http://example.org/ontology/hasNumberOfMinutes> rdfs:range <http://example.org/ontology/Hour> .
-
-<http://example.org/ontology/hasNumberOfSeconds> rdfs:range <http://example.org/ontology/Minute> .
-
-<http://example.org/ontology/minute#hasNumber> rdfs:range <http://example.org/ontology/minute#Minute> .
-
-<http://example.org/ontology/minute#hasNumberOfSeconds> rdfs:range <http://example.org/ontology/minute#Minute> .
-
-<http://example.org/ontology/minute#ofHour> rdfs:range <http://example.org/ontology/minute#Minute> .
-
-<http://example.org/timescale#hasMinutes> rdfs:range <http://example.org/timescale#Minute>,
-        <http://example.org/timescale#TimePeriod> .
-
-<http://example.org/timescale#isEquivalentTo> rdfs:range <http://example.org/timescale#Minute> .
-
-<http://www.example.com/time#hasDuration> rdfs:range <http://www.example.com/time#Minute>,
-        <http://www.example.com/time#TimeEntity> .
-
-<http://www.example.com/time#isMinuteIn> rdfs:range <http://www.example.com/time#Hour>,
-        <http://www.example.com/time#Minute> .
-
-<http://www.example.com/time#minuteInHour> rdfs:range <http://www.example.com/time#Hour>,
-        <http://www.example.com/time#Minute> .
-
-<http://www.example.com/time#secondInMinute> rdfs:range <http://www.example.com/time#Minute> .
-
-<http://www.example.org/ontology#hasHours> rdfs:range <http://www.example.org/ontology#Hour> .
-
-<http://www.example.org/ontology#hasMinutes> rdfs:range <http://www.example.org/ontology#Minute> .
-
-<http://www.example.org/ontology#hasSeconds> rdfs:range <http://www.example.org/ontology#Second> .
-
-time:hasTemporalDuration rdfs:range time:DurationDescription,
-        time:Interval .
-
-time:numericDuration rdfs:range time:TemporalUnit .
+kastle:unitMinute a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:decimal .
 

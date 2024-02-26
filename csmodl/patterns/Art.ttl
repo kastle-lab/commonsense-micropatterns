@@ -1,271 +1,266 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Art#Art> a rdfs:Class .
-
-<http://example.com/Art#ArtStyle> a rdfs:Class .
-
-<http://example.com/Art#Artist> a rdfs:Class .
-
-<http://example.com/art#Art> a rdfs:Class .
-
-<http://example.com/art#Artist> a rdfs:Class .
-
-<http://example.com/art#Artwork> a rdfs:Class .
-
-<http://example.com/art#Gallery> a rdfs:Class .
-
-<http://example.com/art#Material> a rdfs:Class .
-
-<http://example.com/art#Museum> a rdfs:Class .
-
-<http://example.com/art#Painting> a rdfs:Class .
-
-<http://example.com/art#Person> a rdfs:Class .
-
-<http://example.com/art#Style> a rdfs:Class .
-
-<http://example.com/art#artist> a rdfs:Class .
-
-<http://example.com/ontology/art#Artist> a rdfs:Class .
-
-<http://example.com/ontology/art#Artwork> a rdfs:Class .
-
-<http://example.org/Art> a rdfs:Class .
-
-<http://example.org/Person> a rdfs:Class .
-
-<http://example.org/art#Art> a rdfs:Class .
-
-<http://example.org/art#ArtGenre> a rdfs:Class .
-
-<http://example.org/art#ArtPeriod> a rdfs:Class .
-
-<http://example.org/art#ArtStyle> a rdfs:Class .
-
-<http://example.org/art#Artist> a rdfs:Class .
-
-<http://example.org/art#Artwork> a rdfs:Class .
-
-<http://example.org/art#Gallery> a rdfs:Class .
-
-<http://example.org/art#Genre> a rdfs:Class .
-
-<http://example.org/art#Medium> a rdfs:Class .
-
-<http://example.org/art#Museum> a rdfs:Class .
-
-<http://example.org/art#Painting> a rdfs:Class .
-
-<http://example.org/art#Sculpture> a rdfs:Class .
-
-<http://example.org/art#WorkOfArt> a rdfs:Class .
-
-<http://example.org/ontology/art#ArtStyle> a rdfs:Class .
-
-<http://example.org/ontology/art#Artist> a rdfs:Class .
-
-<http://example.org/ontology/art#Artwork> a rdfs:Class .
-
-<http://www.example.org/art#ArtWork> a rdfs:Class .
-
-<http://www.example.org/art#Artist> a rdfs:Class .
-
-<http://www.example.org/art#Artwork> a rdfs:Class .
-
-<http://www.example.org/art#Exhibition> a rdfs:Class .
-
-<http://www.example.org/art#Medium> a rdfs:Class .
-
-<http://www.example.org/art#Period> a rdfs:Class .
-
-<http://www.example.org/art#Style> a rdfs:Class .
-
-<http://example.com/Art#artworkTitle> rdfs:range <http://example.com/Art#Art> .
-
-<http://example.com/Art#hasArtStyle> rdfs:range <http://example.com/Art#Art>,
-        <http://example.com/Art#ArtStyle> .
-
-<http://example.com/Art#hasArtist> rdfs:range <http://example.com/Art#Art>,
-        <http://example.com/Art#Artist> .
-
-<http://example.com/art#created> rdfs:range <http://example.com/art#Artist>,
-        <http://example.com/art#Painting> .
-
-<http://example.com/art#creates> rdfs:range <http://example.com/art#Art>,
-        <http://example.com/art#Artist>,
-        <http://example.com/art#artist> .
-
-<http://example.com/art#display> rdfs:range <http://example.com/art#Art>,
-        <http://example.com/art#Gallery> .
-
-<http://example.com/art#exhibits> rdfs:range <http://example.com/art#Artwork>,
-        <http://example.com/art#Museum> .
-
-<http://example.com/art#hasArtist> rdfs:range <http://example.com/art#Art>,
-        <http://example.com/art#Artist> .
-
-<http://example.com/art#hasBirthDate> rdfs:range <http://example.com/art#Artist> .
-
-<http://example.com/art#hasCreated> rdfs:range <http://example.com/art#Artist>,
-        <http://example.com/art#Painting> .
-
-<http://example.com/art#hasName> rdfs:range <http://example.com/art#Person> .
-
-<http://example.com/art#hasStyle> rdfs:range <http://example.com/art#Art>,
-        <http://example.com/art#Artwork>,
-        <http://example.com/art#Style> .
-
-<http://example.com/art#hasTitle> rdfs:range <http://example.com/art#Art> .
-
-<http://example.com/art#hasYear> rdfs:range <http://example.com/art#Art> .
-
-<http://example.com/art#inspiredBy> rdfs:range <http://example.com/art#Art> .
-
-<http://example.com/art#madeOf> rdfs:range <http://example.com/art#Art>,
-        <http://example.com/art#Material> .
-
-<http://example.com/art#name> rdfs:range <http://example.com/art#Artist> .
-
-<http://example.com/art#year> rdfs:range <http://example.com/art#Painting> .
-
-<http://example.com/ontology/art#created> rdfs:range <http://example.com/ontology/art#Artist>,
-        <http://example.com/ontology/art#Artwork> .
-
-<http://example.com/ontology/art#creationDate> rdfs:range <http://example.com/ontology/art#Artwork> .
-
-<http://example.com/ontology/art#genre> rdfs:range <http://example.com/ontology/art#Artwork> .
-
-<http://example.com/ontology/art#hasCreator> rdfs:range <http://example.com/ontology/art#Artist>,
-        <http://example.com/ontology/art#Artwork> .
-
-<http://example.com/ontology/art#medium> rdfs:range <http://example.com/ontology/art#Artwork> .
-
-<http://example.org/art#ArtistName> rdfs:range <http://example.org/art#Artist> .
-
-<http://example.org/art#artGenre> rdfs:range <http://example.org/art#ArtGenre>,
-        <http://example.org/art#Artwork> .
-
-<http://example.org/art#artist> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Artist> .
-
-<http://example.org/art#belongsGenre> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#ArtGenre> .
-
-<http://example.org/art#belongsTo> rdfs:range <http://example.org/art#ArtPeriod>,
-        <http://example.org/art#ArtStyle> .
-
-<http://example.org/art#createdBy> rdfs:range <http://example.org/art#Artist>,
-        <http://example.org/art#Artwork>,
-        <http://example.org/art#WorkOfArt> .
-
-<http://example.org/art#created_by> rdfs:range <http://example.org/art#Artist>,
-        <http://example.org/art#Artwork> .
-
-<http://example.org/art#creates> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Artist> .
-
-<http://example.org/art#creationDate> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Artwork> .
-
-<http://example.org/art#displayed_at> rdfs:range <http://example.org/art#Artwork>,
-        <http://example.org/art#Gallery> .
-
-<http://example.org/art#exhibitedIn> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Museum> .
-
-<http://example.org/art#exhibits> rdfs:range <http://example.org/art#Artwork>,
-        <http://example.org/art#Museum> .
-
-<http://example.org/art#hasArtist> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Artist> .
-
-<http://example.org/art#hasCreator> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Artist> .
-
-<http://example.org/art#hasPeriod> rdfs:range <http://example.org/art#Art> .
-
-<http://example.org/art#hasStyle> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#ArtStyle>,
-        <http://example.org/art#Artwork> .
-
-<http://example.org/art#hasTitle> rdfs:range <http://example.org/art#Artwork>,
-        <http://example.org/art#WorkOfArt> .
-
-<http://example.org/art#hasYear> rdfs:range <http://example.org/art#Artwork>,
-        <http://example.org/art#Painting> .
-
-<http://example.org/art#has_genre> rdfs:range <http://example.org/art#Artwork>,
-        <http://example.org/art#Genre> .
-
-<http://example.org/art#housesArt> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Museum> .
-
-<http://example.org/art#locatedIn> rdfs:range <http://example.org/art#Museum> .
-
-<http://example.org/art#mass> rdfs:range <http://example.org/art#Sculpture> .
-
-<http://example.org/art#medium> rdfs:range <http://example.org/art#Art>,
-        <http://example.org/art#Painting> .
-
-<http://example.org/art#name> rdfs:range <http://example.org/art#Art> .
-
-<http://example.org/art#style> rdfs:range <http://example.org/art#Art> .
-
-<http://example.org/art#title> rdfs:range <http://example.org/art#Artwork> .
-
-<http://example.org/art#uses_medium> rdfs:range <http://example.org/art#Artwork>,
-        <http://example.org/art#Medium> .
-
-<http://example.org/artist> rdfs:range <http://example.org/Art>,
-        <http://example.org/Person> .
-
-<http://example.org/ontology/art#createdBy> rdfs:range <http://example.org/ontology/art#Artist>,
-        <http://example.org/ontology/art#Artwork> .
-
-<http://example.org/ontology/art#hasStyle> rdfs:range <http://example.org/ontology/art#ArtStyle>,
-        <http://example.org/ontology/art#Artwork> .
-
-<http://www.example.org/art#artistNationality> rdfs:range <http://www.example.org/art#Artist> .
-
-<http://www.example.org/art#birthDate> rdfs:range <http://www.example.org/art#Artist> .
-
-<http://www.example.org/art#createdBy> rdfs:range <http://www.example.org/art#ArtWork>,
-        <http://www.example.org/art#Artist>,
-        <http://www.example.org/art#Artwork> .
-
-<http://www.example.org/art#creationDate> rdfs:range <http://www.example.org/art#Artwork> .
-
-<http://www.example.org/art#deathDate> rdfs:range <http://www.example.org/art#Artist> .
-
-<http://www.example.org/art#endDate> rdfs:range <http://www.example.org/art#Exhibition> .
-
-<http://www.example.org/art#hasStyle> rdfs:range <http://www.example.org/art#Artwork>,
-        <http://www.example.org/art#Style> .
-
-<http://www.example.org/art#inPeriod> rdfs:range <http://www.example.org/art#Artwork>,
-        <http://www.example.org/art#Period> .
-
-<http://www.example.org/art#location> rdfs:range <http://www.example.org/art#Exhibition> .
-
-<http://www.example.org/art#mediumName> rdfs:range <http://www.example.org/art#Medium> .
-
-<http://www.example.org/art#name> rdfs:range <http://www.example.org/art#Artist> .
-
-<http://www.example.org/art#periodEnd> rdfs:range <http://www.example.org/art#Period> .
-
-<http://www.example.org/art#periodName> rdfs:range <http://www.example.org/art#Period> .
-
-<http://www.example.org/art#periodStart> rdfs:range <http://www.example.org/art#Period> .
-
-<http://www.example.org/art#shownAt> rdfs:range <http://www.example.org/art#Artwork>,
-        <http://www.example.org/art#Exhibition> .
-
-<http://www.example.org/art#startDate> rdfs:range <http://www.example.org/art#Exhibition> .
-
-<http://www.example.org/art#styleName> rdfs:range <http://www.example.org/art#Style> .
-
-<http://www.example.org/art#title> rdfs:range <http://www.example.org/art#Artwork> .
-
-<http://www.example.org/art#usesMedium> rdfs:range <http://www.example.org/art#Artwork>,
-        <http://www.example.org/art#Medium> .
+kastle:ArtistName a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:string .
+
+kastle:abstract a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Literal .
+
+kastle:artGenre a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:ArtGenre .
+
+kastle:artistNationality a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:string .
+
+kastle:artworkTitle a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:string .
+
+kastle:belongsGenre a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:ArtGenre .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:ArtStyle ;
+    rdfs:range kastle:ArtPeriod .
+
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:Literal,
+        kastle:date .
+
+kastle:bornIn a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:Literal .
+
+kastle:created a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:Artwork,
+        kastle:Painting .
+
+kastle:createdBy a rdf:Property ;
+    rdfs:domain kastle:ArtWork,
+        kastle:Artwork,
+        kastle:Painting,
+        kastle:WorkOfArt ;
+    rdfs:range kastle:Artist,
+        kastle:Creator .
+
+kastle:created_by a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:Artist .
+
+kastle:creates a rdf:Property ;
+    rdfs:domain kastle:Artist,
+        kastle:artist ;
+    rdfs:range kastle:Art .
+
+kastle:creationDate a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:Artwork ;
+    rdfs:range kastle:date,
+        kastle:dateTime .
+
+kastle:deathDate a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:date .
+
+kastle:display a rdf:Property ;
+    rdfs:domain kastle:Gallery ;
+    rdfs:range kastle:Art .
+
+kastle:displayed_at a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:Gallery .
+
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:Exhibition ;
+    rdfs:range kastle:date .
+
+kastle:exhibitedIn a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Museum .
+
+kastle:exhibits a rdf:Property ;
+    rdfs:domain kastle:Museum ;
+    rdfs:range kastle:Artwork .
+
+kastle:genre a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:string .
+
+kastle:hasArtStyle a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:ArtStyle .
+
+kastle:hasArtist a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Artist .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Painting ;
+    rdfs:range kastle:Literal .
+
+kastle:hasBirthDate a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:date .
+
+kastle:hasCreated a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:Painting .
+
+kastle:hasCreator a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:Artwork ;
+    rdfs:range kastle:Artist .
+
+kastle:hasMedium a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Literal .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Artist,
+        kastle:Person ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasPeriod a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:string .
+
+kastle:hasStyle a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:Artwork ;
+    rdfs:range kastle:ArtStyle,
+        kastle:Style,
+        kastle:string .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:Artwork,
+        kastle:WorkOfArt ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasYear a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:Artwork,
+        kastle:Painting ;
+    rdfs:range kastle:Literal,
+        kastle:date,
+        kastle:integer .
+
+kastle:has_genre a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:Genre .
+
+kastle:housesArt a rdf:Property ;
+    rdfs:domain kastle:Museum ;
+    rdfs:range kastle:Art .
+
+kastle:inPeriod a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:Period .
+
+kastle:inspiredBy a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Art .
+
+kastle:locatedIn a rdf:Property ;
+    rdfs:domain kastle:Museum ;
+    rdfs:range kastle:string .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Exhibition ;
+    rdfs:range kastle:string .
+
+kastle:madeOf a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Material .
+
+kastle:mass a rdf:Property ;
+    rdfs:domain kastle:Sculpture ;
+    rdfs:range kastle:decimal .
+
+kastle:medium a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:ArtWork,
+        kastle:Artwork,
+        kastle:Painting ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:mediumName a rdf:Property ;
+    rdfs:domain kastle:Medium ;
+    rdfs:range kastle:string .
+
+kastle:modern a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Literal .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:Artist ;
+    rdfs:range kastle:string .
+
+kastle:nationality a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range kastle:Literal .
+
+kastle:periodEnd a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:date .
+
+kastle:periodName a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:string .
+
+kastle:periodStart a rdf:Property ;
+    rdfs:domain kastle:Period ;
+    rdfs:range kastle:date .
+
+kastle:shownAt a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:Exhibition .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:Exhibition ;
+    rdfs:range kastle:date .
+
+kastle:style a rdf:Property ;
+    rdfs:domain kastle:Art,
+        kastle:ArtWork ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:styleName a rdf:Property ;
+    rdfs:domain kastle:Style ;
+    rdfs:range kastle:string .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:string .
+
+kastle:usesMedium a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:Medium .
+
+kastle:uses_medium a rdf:Property ;
+    rdfs:domain kastle:Artwork ;
+    rdfs:range kastle:Medium .
+
+kastle:year a rdf:Property ;
+    rdfs:domain kastle:Painting ;
+    rdfs:range kastle:integer .
+
+kastle:artist a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Artist,
+        kastle:Person .
 

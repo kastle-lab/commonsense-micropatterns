@@ -1,153 +1,102 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://dbpedia.org/ontology/Child> a rdfs:Class .
+kastle:Name a rdf:Property ;
+    rdfs:domain kastle:n4ee091b81c474d91896237cdd736b670b1 ;
+    rdfs:range kastle:string .
 
-<http://dbpedia.org/ontology/Mother> a rdfs:Class .
+kastle:age a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:integer .
 
-<http://dbpedia.org/ontology/Person> a rdfs:Class .
+kastle:daughterOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 
-<http://example.com/Mother> a rdfs:Class .
+kastle:givenBirth a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:Child .
 
-<http://example.com/Person> a rdfs:Class .
+kastle:givesBirthTo a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:Child .
 
-<http://example.com/mother#Child> a rdfs:Class .
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:integer .
 
-<http://example.com/mother#Mother> a rdfs:Class .
+kastle:hasChild a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:Child,
+        kastle:Person .
 
-<http://example.org#Human> a rdfs:Class .
+kastle:hasMother a rdf:Property ;
+    rdfs:domain kastle:Child,
+        kastle:Human,
+        kastle:HumanBeing,
+        kastle:Person ;
+    rdfs:range kastle:Mother .
 
-<http://example.org#Mother> a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:string .
 
-<http://example.org#Person> a rdfs:Class .
+kastle:hasOccupation a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:string .
 
-<http://example.org/#Mother> a rdfs:Class .
+kastle:hasOffspring a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 
-<http://example.org/#Person> a rdfs:Class .
+kastle:hasParent a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 
-<http://example.org/Mother> a rdfs:Class .
+kastle:hasRelationship a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:Husband .
 
-<http://example.org/Person> a rdfs:Class .
+kastle:hasSpouse a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:Person .
 
-<http://example.org/family#Mother> a rdfs:Class .
+kastle:isDaughterOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Mother .
 
-<http://example.org/family#Person> a rdfs:Class .
+kastle:isMarried a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:Person .
 
-<http://example.org/mother#Child> a rdfs:Class .
+kastle:isMotherOf a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:Human,
+        kastle:HumanBeing,
+        kastle:Person .
 
-<http://example.org/mother#HumanBeing> a rdfs:Class .
+kastle:isSonOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Mother .
 
-<http://example.org/mother#Mother> a rdfs:Class .
+kastle:isWidowed a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:boolean .
 
-<http://example.org/mother#Person> a rdfs:Class .
+kastle:motherOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 
-<http://www.example.com/mother_ontology#Child> a rdfs:Class .
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:string .
 
-<http://www.example.com/mother_ontology#Husband> a rdfs:Class .
+kastle:occupation a rdf:Property ;
+    rdfs:domain kastle:Mother ;
+    rdfs:range kastle:string .
 
-<http://www.example.com/mother_ontology#Mother> a rdfs:Class .
-
-<http://xmlns.com/foaf/0.1/Person> a rdfs:Class .
-
-<http://dbpedia.org/ontology/givenBirth> rdfs:range <http://dbpedia.org/ontology/Child>,
-        <http://dbpedia.org/ontology/Mother> .
-
-<http://dbpedia.org/ontology/hasChild> rdfs:range <http://dbpedia.org/ontology/Mother>,
-        <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/hasMother> rdfs:range <http://dbpedia.org/ontology/Mother>,
-        <http://dbpedia.org/ontology/Person> .
-
-<http://example.com/hasMother> rdfs:range <http://example.com/Mother>,
-        <http://example.com/Person> .
-
-<http://example.com/isMotherOf> rdfs:range <http://example.com/Mother>,
-        <http://example.com/Person> .
-
-<http://example.com/mother#hasChild> rdfs:range <http://example.com/mother#Child>,
-        <http://example.com/mother#Mother>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.com/mother#hasMother> rdfs:range <http://example.com/mother#Child>,
-        <http://example.com/mother#Mother>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.com/mother#hasSpouse> rdfs:range <http://example.com/mother#Mother>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.com/mother#isDaughterOf> rdfs:range <http://example.com/mother#Mother>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.com/mother#isMotherOf> rdfs:range <http://example.com/mother#Mother>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.com/mother#isSonOf> rdfs:range <http://example.com/mother#Mother>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.org#hasMother> rdfs:range <http://example.org#Human>,
-        <http://example.org#Mother>,
-        <http://example.org#Person> .
-
-<http://example.org#isMotherOf> rdfs:range <http://example.org#Human>,
-        <http://example.org#Mother>,
-        <http://example.org#Person> .
-
-<http://example.org/#hasMother> rdfs:range <http://example.org/#Mother>,
-        <http://example.org/#Person> .
-
-<http://example.org/#isMotherOf> rdfs:range <http://example.org/#Mother>,
-        <http://example.org/#Person> .
-
-<http://example.org/family#hasMother> rdfs:range <http://example.org/family#Mother>,
-        <http://example.org/family#Person> .
-
-<http://example.org/family#isMotherOf> rdfs:range <http://example.org/family#Mother>,
-        <http://example.org/family#Person> .
-
-<http://example.org/hasChild> rdfs:range <http://example.org/Mother>,
-        <http://example.org/Person> .
-
-<http://example.org/hasMother> rdfs:range <http://example.org/Mother>,
-        <http://example.org/Person>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.org/isMotherOf> rdfs:range <http://example.org/Mother>,
-        <http://xmlns.com/foaf/0.1/Person> .
-
-<http://example.org/mother#hasAge> rdfs:range <http://example.org/mother#Mother> .
-
-<http://example.org/mother#hasChild> rdfs:range <http://example.org/mother#Child>,
-        <http://example.org/mother#Mother>,
-        <http://example.org/mother#Person> .
-
-<http://example.org/mother#hasMother> rdfs:range <http://example.org/mother#HumanBeing>,
-        <http://example.org/mother#Mother>,
-        <http://example.org/mother#Person> .
-
-<http://example.org/mother#hasName> rdfs:range <http://example.org/mother#Mother> .
-
-<http://example.org/mother#hasOccupation> rdfs:range <http://example.org/mother#Mother> .
-
-<http://example.org/mother#hasOffspring> rdfs:range <http://example.org/mother#Person> .
-
-<http://example.org/mother#hasParent> rdfs:range <http://example.org/mother#Person> .
-
-<http://example.org/mother#isMarried> rdfs:range <http://example.org/mother#Mother>,
-        <http://example.org/mother#Person> .
-
-<http://example.org/mother#isMotherOf> rdfs:range <http://example.org/mother#HumanBeing>,
-        <http://example.org/mother#Mother> .
-
-<http://example.org/mother#isWidowed> rdfs:range <http://example.org/mother#Mother> .
-
-<http://www.example.com/mother_ontology#age> rdfs:range <http://www.example.com/mother_ontology#Mother> .
-
-<http://www.example.com/mother_ontology#hasChild> rdfs:range <http://www.example.com/mother_ontology#Child>,
-        <http://www.example.com/mother_ontology#Mother> .
-
-<http://www.example.com/mother_ontology#hasRelationship> rdfs:range <http://www.example.com/mother_ontology#Husband>,
-        <http://www.example.com/mother_ontology#Mother> .
-
-<http://www.example.com/mother_ontology#name> rdfs:range <http://www.example.com/mother_ontology#Mother> .
-
-<http://www.example.com/mother_ontology#occupation> rdfs:range <http://www.example.com/mother_ontology#Mother> .
+kastle:sonOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
 

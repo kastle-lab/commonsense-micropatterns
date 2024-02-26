@@ -1,206 +1,151 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Book> a rdfs:Class .
-
-<http://example.com/Organization> a rdfs:Class .
-
-<http://example.com/Person> a rdfs:Class .
-
-<http://example.com/book#Author> a rdfs:Class .
-
-<http://example.com/book#Book> a rdfs:Class .
-
-<http://example.com/book#Genre> a rdfs:Class .
-
-<http://example.com/book#Person> a rdfs:Class .
-
-<http://example.org/book#Author> a rdfs:Class .
-
-<http://example.org/book#Book> a rdfs:Class .
-
-<http://example.org/book#Publisher> a rdfs:Class .
-
-<http://example.org/book/Author> a rdfs:Class .
-
-<http://example.org/book/Book> a rdfs:Class .
-
-<http://example.org/book/Person> a rdfs:Class .
-
-<http://example.org/book/Publisher> a rdfs:Class .
-
-<http://www.example.com/book#Author> a rdfs:Class ;
-    rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#Book> a rdfs:Class .
-
-<http://www.example.com/book#Genre> a rdfs:Class .
-
-<http://www.example.com/book#Publisher> a rdfs:Class ;
-    rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.org/Book> a rdfs:Class .
-
-<http://www.example.org/Person> a rdfs:Class .
-
-<http://www.example.org/Publisher> a rdfs:Class .
-
-<http://www.example.org/book/Author> a rdfs:Class .
-
-<http://www.example.org/book/Book> a rdfs:Class .
-
-<http://www.example.org/book/Publisher> a rdfs:Class .
-
-<http://example.com/author> rdfs:range <http://example.com/Book>,
-        <http://example.com/Person> .
-
-<http://example.com/book#author> rdfs:range <http://example.com/book#Author>,
-        <http://example.com/book#Book>,
-        <http://example.com/book#Person> .
-
-<http://example.com/book#genre> rdfs:range <http://example.com/book#Book>,
-        <http://example.com/book#Genre> .
-
-<http://example.com/book#hasGenre> rdfs:range <http://example.com/book#Book>,
-        <http://example.com/book#Genre> .
-
-<http://example.com/book#publishedYear> rdfs:range <http://example.com/book#Book> .
-
-<http://example.com/book#title> rdfs:range <http://example.com/book#Book> .
-
-<http://example.com/isbn> rdfs:range <http://example.com/Book> .
-
-<http://example.com/publicationDate> rdfs:range <http://example.com/Book> .
-
-<http://example.com/publishedDate> rdfs:range <http://example.com/Book> .
-
-<http://example.com/publisher> rdfs:range <http://example.com/Book>,
-        <http://example.com/Organization> .
-
-<http://example.com/title> rdfs:range <http://example.com/Book> .
-
-<http://example.org/book#ISBN> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#author> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#hasAuthor> rdfs:range <http://example.org/book#Author>,
-        <http://example.org/book#Book> .
-
-<http://example.org/book#hasISBN> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#hasPublicationDate> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#hasPublisher> rdfs:range <http://example.org/book#Book>,
-        <http://example.org/book#Publisher> .
-
-<http://example.org/book#hasTitle> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#publicationYear> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#publishedYear> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#publisher> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book#title> rdfs:range <http://example.org/book#Book> .
-
-<http://example.org/book/author> rdfs:range <http://example.org/book/Book>,
-        <http://example.org/book/Person> .
-
-<http://example.org/book/company> rdfs:range <http://example.org/book/Publisher> .
-
-<http://example.org/book/genre> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/hasAuthor> rdfs:range <http://example.org/book/Author>,
-        <http://example.org/book/Book> .
-
-<http://example.org/book/hasGenre> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/hasISBN> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/hasPublisher> rdfs:range <http://example.org/book/Book>,
-        <http://example.org/book/Publisher> .
-
-<http://example.org/book/hasTitle> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/isbn> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/language> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/name> rdfs:range <http://example.org/book/Author> .
-
-<http://example.org/book/pages> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/publicationDate> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/publicationYear> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/publishedDate> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/publishedIn> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/publishedYear> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/publisher> rdfs:range <http://example.org/book/Book> .
-
-<http://example.org/book/title> rdfs:range <http://example.org/book/Book> .
-
-<http://www.example.com/book#ISBN> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#PublicationDate> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#Title> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#author> rdfs:range <http://www.example.com/book#Author>,
-        <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#genre> rdfs:range <http://www.example.com/book#Book>,
-        <http://www.example.com/book#Genre> .
-
-<http://www.example.com/book#hasAuthor> rdfs:range <http://www.example.com/book#Author>,
-        <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#hasGenre> rdfs:range <http://www.example.com/book#Book>,
-        <http://www.example.com/book#Genre> .
-
-<http://www.example.com/book#hasISBN> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#hasPublicationDate> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#hasPublisher> rdfs:range <http://www.example.com/book#Book>,
-        <http://www.example.com/book#Publisher> .
-
-<http://www.example.com/book#hasTitle> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#publishedDate> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.com/book#title> rdfs:range <http://www.example.com/book#Book> .
-
-<http://www.example.org/author> rdfs:range <http://www.example.org/Book>,
-        <http://www.example.org/Person> .
-
-<http://www.example.org/book/author> rdfs:range <http://www.example.org/book/Book> .
-
-<http://www.example.org/book/hasAddress> rdfs:range <http://www.example.org/book/Publisher> .
-
-<http://www.example.org/book/hasAuthor> rdfs:range <http://www.example.org/book/Author>,
-        <http://www.example.org/book/Book> .
-
-<http://www.example.org/book/hasISBN> rdfs:range <http://www.example.org/book/Book> .
-
-<http://www.example.org/book/hasName> rdfs:range <http://www.example.org/book/Author> .
-
-<http://www.example.org/book/hasPageCount> rdfs:range <http://www.example.org/book/Book> .
-
-<http://www.example.org/book/hasPublicationDate> rdfs:range <http://www.example.org/book/Book> .
-
-<http://www.example.org/book/hasPublisher> rdfs:range <http://www.example.org/book/Book>,
-        <http://www.example.org/book/Publisher> .
-
-<http://www.example.org/book/hasTitle> rdfs:range <http://www.example.org/book/Book> .
-
-<http://www.example.org/book/publishedYear> rdfs:range <http://www.example.org/book/Book> .
-
-<http://www.example.org/book/title> rdfs:range <http://www.example.org/book/Book> .
-
-<http://www.example.org/publishBy> rdfs:range <http://www.example.org/Book>,
-        <http://www.example.org/Publisher> .
+kastle:ISBN a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:string .
+
+kastle:PublicationDate a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:date .
+
+kastle:Title a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:string .
+
+kastle:author a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Author,
+        kastle:Literal,
+        kastle:Person,
+        kastle:string .
+
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Author ;
+    rdfs:range kastle:Literal .
+
+kastle:company a rdf:Property ;
+    rdfs:domain kastle:Publisher ;
+    rdfs:range kastle:string .
+
+kastle:deathDate a rdf:Property ;
+    rdfs:domain kastle:Author ;
+    rdfs:range kastle:Literal .
+
+kastle:genre a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Genre,
+        kastle:Literal,
+        kastle:string .
+
+kastle:hasAddress a rdf:Property ;
+    rdfs:domain kastle:Publisher ;
+    rdfs:range kastle:string .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Book,
+        kastle:book ;
+    rdfs:range kastle:Author,
+        kastle:Literal,
+        kastle:string .
+
+kastle:hasGenre a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Genre,
+        kastle:string .
+
+kastle:hasISBN a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Author ;
+    rdfs:range kastle:string .
+
+kastle:hasPageCount a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:integer .
+
+kastle:hasPublicationDate a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:date .
+
+kastle:hasPublisher a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Publisher .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Book,
+        kastle:book ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:isbn a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:language a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Author ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:numberOfPages a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Literal .
+
+kastle:pages a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:integer .
+
+kastle:publicationDate a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Literal,
+        kastle:date .
+
+kastle:publicationYear a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:integer .
+
+kastle:publishBy a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Publisher .
+
+kastle:publishedDate a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:date .
+
+kastle:publishedIn a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:date .
+
+kastle:publishedYear a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Literal,
+        kastle:gYear,
+        kastle:integer .
+
+kastle:publisher a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Literal,
+        kastle:Organization,
+        kastle:string .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:Publisher a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:string .
+
+kastle:Author a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:string .
 

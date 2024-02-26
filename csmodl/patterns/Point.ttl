@@ -1,119 +1,89 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/ontology/point#> a rdfs:Class .
+kastle:XCoordinate a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:double .
 
-<http://example.com/ontology/point#Point> a rdfs:Class .
+kastle:YCoordinate a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:double .
 
-<http://example.org#Point> a rdfs:Class .
+kastle:belongs_to a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:Point .
 
-<http://example.org/point#> a rdfs:Class .
+kastle:hasPoint a rdf:Property ;
+    rdfs:domain kastle:Plane ;
+    rdfs:range kastle:Point .
 
-<http://example.org/point#Point> a rdfs:Class .
+kastle:hasX a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:float .
 
-<http://example.org/point/Point> a rdfs:Class .
+kastle:hasXCoordinate a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:double,
+        kastle:real,
+        kastle:x_coordinate .
 
-<http://www.example.com/ontology/point#Point> a rdfs:Class .
+kastle:hasY a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:float .
 
-<http://www.example.com/point#Plane> a rdfs:Class .
+kastle:hasYCoordinate a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:double,
+        kastle:real,
+        kastle:y_coordinate .
 
-<http://www.example.com/point#Point> a rdfs:Class .
+kastle:hasZ a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:float .
 
-<http://www.example.org/Point> a rdfs:Class .
+kastle:hasZCoordinate a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:z_coordinate .
 
-<http://www.example.org/geo#Point> a rdfs:Class .
+kastle:isOrigin a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:boolean .
 
-<http://www.example.org/ontology/point#Point> a rdfs:Class .
+kastle:locatedInPlane a rdf:Property ;
+    rdfs:domain kastle:Point ;
+    rdfs:range kastle:Plane .
 
-<http://www.example.org/ontology/point#x_coordinate> a rdfs:Class .
+kastle:x a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 
-<http://www.example.org/ontology/point#y_coordinate> a rdfs:Class .
+kastle:xCoordinate a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 
-<http://www.example.org/ontology/point#z_coordinate> a rdfs:Class .
+kastle:y a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 
-<http://www.example/ontology/Point#Point> a rdfs:Class .
+kastle:yCoordinate a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 
-rdf:real a rdfs:Class .
-
-<http://example.com/ontology/point#hasXCoordinate> rdfs:range <http://example.com/ontology/point#Point> .
-
-<http://example.com/ontology/point#hasYCoordinate> rdfs:range <http://example.com/ontology/point#Point> .
-
-<http://example.com/ontology/point#x> rdfs:range <http://example.com/ontology/point#> .
-
-<http://example.com/ontology/point#xCoordinate> rdfs:range <http://example.com/ontology/point#>,
-        <http://example.com/ontology/point#Point> .
-
-<http://example.com/ontology/point#y> rdfs:range <http://example.com/ontology/point#> .
-
-<http://example.com/ontology/point#yCoordinate> rdfs:range <http://example.com/ontology/point#>,
-        <http://example.com/ontology/point#Point> .
-
-<http://example.com/ontology/point#zCoordinate> rdfs:range <http://example.com/ontology/point#>,
-        <http://example.com/ontology/point#Point> .
-
-<http://example.org#hasXCoordinate> rdfs:range <http://example.org#Point>,
-        rdf:real .
-
-<http://example.org#hasYCoordinate> rdfs:range <http://example.org#Point>,
-        rdf:real .
-
-<http://example.org/point#XCoordinate> rdfs:range <http://example.org/point#Point> .
-
-<http://example.org/point#YCoordinate> rdfs:range <http://example.org/point#Point> .
-
-<http://example.org/point#belongs_to> rdfs:range <http://example.org/point#Point> .
-
-<http://example.org/point#hasX> rdfs:range <http://example.org/point#> .
-
-<http://example.org/point#hasY> rdfs:range <http://example.org/point#> .
-
-<http://example.org/point#hasZ> rdfs:range <http://example.org/point#> .
-
-<http://example.org/point/x> rdfs:range <http://example.org/point/Point> .
-
-<http://example.org/point/y> rdfs:range <http://example.org/point/Point> .
-
-<http://www.example.com/ontology/point#hasXCoordinate> rdfs:range <http://www.example.com/ontology/point#Point> .
-
-<http://www.example.com/ontology/point#hasYCoordinate> rdfs:range <http://www.example.com/ontology/point#Point> .
-
-<http://www.example.com/ontology/point#hasZCoordinate> rdfs:range <http://www.example.com/ontology/point#Point> .
-
-<http://www.example.com/point#hasPoint> rdfs:range <http://www.example.com/point#Plane>,
-        <http://www.example.com/point#Point> .
-
-<http://www.example.com/point#hasXCoordinate> rdfs:range <http://www.example.com/point#Point> .
-
-<http://www.example.com/point#hasYCoordinate> rdfs:range <http://www.example.com/point#Point> .
-
-<http://www.example.com/point#isOrigin> rdfs:range <http://www.example.com/point#Point> .
-
-<http://www.example.com/point#locatedInPlane> rdfs:range <http://www.example.com/point#Plane>,
-        <http://www.example.com/point#Point> .
-
-<http://www.example.org/geo#x> rdfs:range <http://www.example.org/geo#Point> .
-
-<http://www.example.org/geo#y> rdfs:range <http://www.example.org/geo#Point> .
-
-<http://www.example.org/ontology/point#hasXCoordinate> rdfs:range <http://www.example.org/ontology/point#Point>,
-        <http://www.example.org/ontology/point#x_coordinate> .
-
-<http://www.example.org/ontology/point#hasYCoordinate> rdfs:range <http://www.example.org/ontology/point#Point>,
-        <http://www.example.org/ontology/point#y_coordinate> .
-
-<http://www.example.org/ontology/point#hasZCoordinate> rdfs:range <http://www.example.org/ontology/point#Point>,
-        <http://www.example.org/ontology/point#z_coordinate> .
-
-<http://www.example.org/xCoordinate> rdfs:range <http://www.example.org/Point> .
-
-<http://www.example.org/yCoordinate> rdfs:range <http://www.example.org/Point> .
-
-<http://www.example.org/zCoordinate> rdfs:range <http://www.example.org/Point> .
-
-<http://www.example/ontology/Point#xCoordinate> rdfs:range <http://www.example/ontology/Point#Point> .
-
-<http://www.example/ontology/Point#yCoordinate> rdfs:range <http://www.example/ontology/Point#Point> .
-
-<http://www.example/ontology/Point#zCoordinate> rdfs:range <http://www.example/ontology/Point#Point> .
+kastle:zCoordinate a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Point ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 

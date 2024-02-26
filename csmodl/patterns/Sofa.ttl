@@ -1,161 +1,131 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Color> a rdfs:Class .
-
-<http://example.com/Manufacturer> a rdfs:Class .
-
-<http://example.com/Material> a rdfs:Class .
-
-<http://example.com/Room> a rdfs:Class .
-
-<http://example.com/Size> a rdfs:Class .
-
-<http://example.com/Sofa> a rdfs:Class .
-
-<http://example.com/Style> a rdfs:Class .
-
-<http://example.org#material> a rdfs:Class .
-
-<http://example.org#sofa> a rdfs:Class .
-
-<http://example.org/Color> a rdfs:Class .
-
-<http://example.org/Material> a rdfs:Class .
-
-<http://example.org/Sofa> a rdfs:Class .
-
-<http://example.org/Style> a rdfs:Class .
-
-<http://example.org/onto#Furniture> a rdfs:Class .
-
-<http://example.org/onto#Sofa> a rdfs:Class .
-
-<http://example.org/sofa#> a rdfs:Class .
-
-<http://example.org/sofa#Sofa> a rdfs:Class .
-
-<http://example.org/vocab#Sofa> a rdfs:Class .
-
-<http://www.example.com/sofa#Material> a rdfs:Class .
-
-<http://www.example.com/sofa#Sofa> a rdfs:Class .
-
-<http://www.example.com/sofa#Style> a rdfs:Class .
-
-<http://www.example.org/furniture#Sofa> a rdfs:Class .
-
-<http://www.furniture.org#Manufacturer> a rdfs:Class .
-
-<http://www.furniture.org#Material> a rdfs:Class .
-
-<http://www.furniture.org#Sofa> a rdfs:Class .
-
-rdf:integer a rdfs:Class .
-
-<http://example.com/hasColor> rdfs:range <http://example.com/Color>,
-        <http://example.com/Sofa> .
-
-<http://example.com/hasMaterial> rdfs:range <http://example.com/Material>,
-        <http://example.com/Sofa> .
-
-<http://example.com/hasSize> rdfs:range <http://example.com/Size>,
-        <http://example.com/Sofa> .
-
-<http://example.com/hasStyle> rdfs:range <http://example.com/Sofa>,
-        <http://example.com/Style> .
-
-<http://example.com/isUsedIn> rdfs:range <http://example.com/Room>,
-        <http://example.com/Sofa> .
-
-<http://example.com/manufacturedBy> rdfs:range <http://example.com/Manufacturer>,
-        <http://example.com/Sofa> .
-
-<http://example.org#hasMaterial> rdfs:range <http://example.org#material>,
-        <http://example.org#sofa> .
-
-<http://example.org#numSeats> rdfs:range <http://example.org#sofa>,
-        rdf:integer .
-
-<http://example.org/hasColor> rdfs:range <http://example.org/Color>,
-        <http://example.org/Sofa> .
-
-<http://example.org/hasMaterial> rdfs:range <http://example.org/Material>,
-        <http://example.org/Sofa> .
-
-<http://example.org/hasStyle> rdfs:range <http://example.org/Sofa>,
-        <http://example.org/Style> .
-
-<http://example.org/onto#hasColor> rdfs:range <http://example.org/onto#Furniture> .
-
-<http://example.org/onto#hasSeats> rdfs:range <http://example.org/onto#Sofa> .
-
-<http://example.org/onto#typeOfMaterial> rdfs:range <http://example.org/onto#Furniture> .
-
-<http://example.org/sofa#brand> rdfs:range <http://example.org/sofa#> .
-
-<http://example.org/sofa#color> rdfs:range <http://example.org/sofa#> .
-
-<http://example.org/sofa#hasColor> rdfs:range <http://example.org/sofa#Sofa> .
-
-<http://example.org/sofa#hasManufacturer> rdfs:range <http://example.org/sofa#Sofa> .
-
-<http://example.org/sofa#hasMaterial> rdfs:range <http://example.org/sofa#Sofa> .
-
-<http://example.org/sofa#hasStyle> rdfs:range <http://example.org/sofa#Sofa> .
-
-<http://example.org/sofa#material> rdfs:range <http://example.org/sofa#> .
-
-<http://example.org/sofa#price> rdfs:range <http://example.org/sofa#>,
-        <http://example.org/sofa#Sofa> .
-
-<http://example.org/sofa#size> rdfs:range <http://example.org/sofa#> .
-
-<http://example.org/sofa#style> rdfs:range <http://example.org/sofa#> .
-
-<http://example.org/sofa#weight> rdfs:range <http://example.org/sofa#Sofa> .
-
-<http://example.org/vocab#color> rdfs:range <http://example.org/vocab#Sofa> .
-
-<http://example.org/vocab#design> rdfs:range <http://example.org/vocab#Sofa> .
-
-<http://example.org/vocab#manufacturer> rdfs:range <http://example.org/vocab#Sofa> .
-
-<http://example.org/vocab#material> rdfs:range <http://example.org/vocab#Sofa> .
-
-<http://example.org/vocab#price> rdfs:range <http://example.org/vocab#Sofa> .
-
-<http://example.org/vocab#size> rdfs:range <http://example.org/vocab#Sofa> .
-
-<http://www.example.com/sofa#hasColor> rdfs:range <http://www.example.com/sofa#Sofa> .
-
-<http://www.example.com/sofa#hasCushion> rdfs:range <http://www.example.com/sofa#Sofa> .
-
-<http://www.example.com/sofa#hasMaterial> rdfs:range <http://www.example.com/sofa#Material>,
-        <http://www.example.com/sofa#Sofa> .
-
-<http://www.example.com/sofa#hasSize> rdfs:range <http://www.example.com/sofa#Sofa> .
-
-<http://www.example.com/sofa#hasStyle> rdfs:range <http://www.example.com/sofa#Sofa>,
-        <http://www.example.com/sofa#Style> .
-
-<http://www.example.org/furniture#hasHeight> rdfs:range <http://www.example.org/furniture#Sofa> .
-
-<http://www.example.org/furniture#hasLength> rdfs:range <http://www.example.org/furniture#Sofa> .
-
-<http://www.example.org/furniture#hasWidth> rdfs:range <http://www.example.org/furniture#Sofa> .
-
-<http://www.example.org/furniture#seatsNumber> rdfs:range <http://www.example.org/furniture#Sofa> .
-
-<http://www.furniture.org#hasColor> rdfs:range <http://www.furniture.org#Sofa> .
-
-<http://www.furniture.org#hasMaterial> rdfs:range <http://www.furniture.org#Material>,
-        <http://www.furniture.org#Sofa> .
-
-<http://www.furniture.org#hasSize> rdfs:range <http://www.furniture.org#Sofa> .
-
-<http://www.furniture.org#hasStyle> rdfs:range <http://www.furniture.org#Sofa> .
-
-<http://www.furniture.org#manufacturedBy> rdfs:range <http://www.furniture.org#Manufacturer>,
-        <http://www.furniture.org#Sofa> .
+kastle:brand a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Sofa ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:color a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Sofa ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:dimensions a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Literal .
+
+kastle:hasBrand a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Literal .
+
+kastle:hasColor a rdf:Property ;
+    rdfs:domain kastle:Furniture,
+        kastle:Sofa ;
+    rdfs:range kastle:Color,
+        kastle:Literal,
+        kastle:string .
+
+kastle:hasCushion a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:integer .
+
+kastle:hasDimension a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Literal .
+
+kastle:hasFabric a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Literal .
+
+kastle:hasHeight a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:integer .
+
+kastle:hasLength a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:integer .
+
+kastle:hasManufacturer a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasMaterial a rdf:Property ;
+    rdfs:domain kastle:Sofa,
+        kastle:sofa ;
+    rdfs:range kastle:Literal,
+        kastle:Material,
+        kastle:material,
+        kastle:string .
+
+kastle:hasPrice a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Literal .
+
+kastle:hasSeats a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:integer .
+
+kastle:hasSize a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Size,
+        kastle:nonNegativeInteger,
+        kastle:string .
+
+kastle:hasStyle a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Literal,
+        kastle:Style,
+        kastle:string .
+
+kastle:hasWidth a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:integer .
+
+kastle:isUsedIn a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Room .
+
+kastle:manufacturedBy a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:Manufacturer .
+
+kastle:numSeats a rdf:Property ;
+    rdfs:domain kastle:sofa ;
+    rdfs:range kastle:integer .
+
+kastle:price a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Sofa ;
+    rdfs:range kastle:decimal .
+
+kastle:seatsNumber a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:integer .
+
+kastle:size a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
+
+kastle:style a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
+
+kastle:typeOfMaterial a rdf:Property ;
+    rdfs:domain kastle:Furniture ;
+    rdfs:range kastle:string .
+
+kastle:weight a rdf:Property ;
+    rdfs:domain kastle:Sofa ;
+    rdfs:range kastle:decimal .
+
+kastle:material a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Sofa ;
+    rdfs:range kastle:Literal,
+        kastle:string .
 

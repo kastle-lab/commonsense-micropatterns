@@ -1,169 +1,125 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/morning#Activity> a rdfs:Class .
+kastle:BreakfastTime a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:time .
+
+kastle:WorkStart a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:time .
+
+kastle:breakfast a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Breakfast .
+
+kastle:coffee a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Coffee .
+
+kastle:does a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:MorningTime .
+
+kastle:end_time a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:time .
+
+kastle:endsAt a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:time .
+
+kastle:exercise a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Exercise .
+
+kastle:follows a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Night .
+
+kastle:hasActivity a rdf:Property ;
+    rdfs:domain kastle:MORNING,
+        kastle:Morning ;
+    rdfs:range kastle:Activity,
+        kastle:resource .
+
+kastle:hasAlarm a rdf:Property ;
+    rdfs:domain kastle:Routine ;
+    rdfs:range kastle:Alarm .
+
+kastle:hasBreakfast a rdf:Property ;
+    rdfs:domain kastle:Mornings ;
+    rdfs:range kastle:Breakfast .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Time,
+        kastle:time .
+
+kastle:hasMeal a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Meal .
+
+kastle:hasMorning a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Morning .
+
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:MorningActivity .
+
+kastle:hasRoutine a rdf:Property ;
+    rdfs:domain kastle:Mornings ;
+    rdfs:range kastle:Routine .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:MORNING,
+        kastle:Morning ;
+    rdfs:range kastle:Time,
+        kastle:time .
+
+kastle:includes a rdf:Property ;
+    rdfs:domain kastle:MorningActivity ;
+    rdfs:range kastle:Resource .
+
+kastle:isEarly a rdf:Property ;
+    rdfs:domain kastle:Mornings ;
+    rdfs:range kastle:Early .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Day .
+
+kastle:isPartOfDay a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Day .
+
+kastle:start_time a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:time .
+
+kastle:startsAt a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:time .
+
+kastle:startsWith a rdf:Property ;
+    rdfs:domain kastle:Mornings ;
+    rdfs:range kastle:Sunrise .
 
-<http://example.com/morning#Morning> a rdfs:Class .
+kastle:sunrise a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:Siunarise .
 
-<http://example.org#Day> a rdfs:Class .
+kastle:wakeup a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:WakeUp .
 
-<http://example.org#Morning> a rdfs:Class .
+kastle:Sunrise a rdf:Property ;
+    rdfs:domain kastle:EarlyMorning ;
+    rdfs:range kastle:time .
 
-<http://example.org/Day> a rdfs:Class .
-
-<http://example.org/Morning> a rdfs:Class .
-
-<http://example.org/Time> a rdfs:Class .
-
-<http://example.org/morning#Activity> a rdfs:Class .
-
-<http://example.org/morning#MORNING> a rdfs:Class .
-
-<http://example.org/morning#Morning> a rdfs:Class .
-
-<http://www.example.org/#Day> a rdfs:Class .
-
-<http://www.example.org/#EarlyMorning> a rdfs:Class .
-
-<http://www.example.org/#Morning> a rdfs:Class .
-
-<http://www.example.org/morning#Activity> a rdfs:Class .
-
-<http://www.example.org/morning#Alarm> a rdfs:Class .
-
-<http://www.example.org/morning#Breakfast> a rdfs:Class .
-
-<http://www.example.org/morning#Coffee> a rdfs:Class .
-
-<http://www.example.org/morning#Day> a rdfs:Class .
-
-<http://www.example.org/morning#Early> a rdfs:Class .
-
-<http://www.example.org/morning#Exercise> a rdfs:Class .
-
-<http://www.example.org/morning#Meal> a rdfs:Class .
-
-<http://www.example.org/morning#Morning> a rdfs:Class .
-
-<http://www.example.org/morning#MorningActivity> a rdfs:Class .
-
-<http://www.example.org/morning#Mornings> a rdfs:Class .
-
-<http://www.example.org/morning#Routine> a rdfs:Class .
-
-<http://www.example.org/morning#Siunarise> a rdfs:Class .
-
-<http://www.example.org/morning#Sunrise> a rdfs:Class .
-
-<http://www.example.org/morning#WakeUp> a rdfs:Class .
-
-<http://www.example.org/ontology#Day> a rdfs:Class .
-
-<http://www.example.org/ontology#Morning> a rdfs:Class .
-
-<http://www.example.org/ontology#Night> a rdfs:Class .
-
-rdf:Resource a rdfs:Class .
-
-rdfs:resource a rdfs:Class .
-
-<http://example.com/morning#end_time> rdfs:range <http://example.com/morning#Morning> .
-
-<http://example.com/morning#hasActivity> rdfs:range <http://example.com/morning#Activity>,
-        <http://example.com/morning#Morning> .
-
-<http://example.com/morning#start_time> rdfs:range <http://example.com/morning#Morning> .
-
-<http://example.org#hasMorning> rdfs:range <http://example.org#Day>,
-        <http://example.org#Morning> .
-
-<http://example.org/endsAt> rdfs:range <http://example.org/Morning> .
-
-<http://example.org/hasEndTime> rdfs:range <http://example.org/Morning>,
-        <http://example.org/Time> .
-
-<http://example.org/hasStartTime> rdfs:range <http://example.org/Morning>,
-        <http://example.org/Time> .
-
-<http://example.org/isPartOf> rdfs:range <http://example.org/Day>,
-        <http://example.org/Morning> .
-
-<http://example.org/morning#hasActivity> rdfs:range <http://example.org/morning#Activity>,
-        <http://example.org/morning#MORNING>,
-        <http://example.org/morning#Morning>,
-        rdfs:resource .
-
-<http://example.org/morning#hasStartTime> rdfs:range <http://example.org/morning#MORNING> .
-
-<http://example.org/startsAt> rdfs:range <http://example.org/Morning> .
-
-<http://www.example.org/#BreakfastTime> rdfs:range <http://www.example.org/#Morning> .
-
-<http://www.example.org/#Sunrise> rdfs:range <http://www.example.org/#EarlyMorning> .
-
-<http://www.example.org/#WorkStart> rdfs:range <http://www.example.org/#Morning> .
-
-<http://www.example.org/#hasMorning> rdfs:range <http://www.example.org/#Day>,
-        <http://www.example.org/#Morning> .
-
-<http://www.example.org/morning#breakfast> rdfs:range <http://www.example.org/morning#Breakfast>,
-        <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#coffee> rdfs:range <http://www.example.org/morning#Coffee>,
-        <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#exercise> rdfs:range <http://www.example.org/morning#Exercise>,
-        <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#hasActivity> rdfs:range <http://www.example.org/morning#Activity>,
-        <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#hasAlarm> rdfs:range <http://www.example.org/morning#Alarm>,
-        <http://www.example.org/morning#Routine> .
-
-<http://www.example.org/morning#hasBreakfast> rdfs:range <http://www.example.org/morning#Breakfast>,
-        <http://www.example.org/morning#Mornings> .
-
-<http://www.example.org/morning#hasEndTime> rdfs:range <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#hasMeal> rdfs:range <http://www.example.org/morning#Meal>,
-        <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#hasPart> rdfs:range <http://www.example.org/morning#Morning>,
-        <http://www.example.org/morning#MorningActivity> .
-
-<http://www.example.org/morning#hasRoutine> rdfs:range <http://www.example.org/morning#Mornings>,
-        <http://www.example.org/morning#Routine> .
-
-<http://www.example.org/morning#hasStartTime> rdfs:range <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#includes> rdfs:range <http://www.example.org/morning#MorningActivity>,
-        rdf:Resource .
-
-<http://www.example.org/morning#isEarly> rdfs:range <http://www.example.org/morning#Early>,
-        <http://www.example.org/morning#Mornings> .
-
-<http://www.example.org/morning#isPartOfDay> rdfs:range <http://www.example.org/morning#Day>,
-        <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#startsWith> rdfs:range <http://www.example.org/morning#Mornings>,
-        <http://www.example.org/morning#Sunrise> .
-
-<http://www.example.org/morning#sunrise> rdfs:range <http://www.example.org/morning#Morning>,
-        <http://www.example.org/morning#Siunarise> .
-
-<http://www.example.org/morning#time> rdfs:range <http://www.example.org/morning#Morning> .
-
-<http://www.example.org/morning#wakeup> rdfs:range <http://www.example.org/morning#Morning>,
-        <http://www.example.org/morning#WakeUp> .
-
-<http://www.example.org/ontology#follows> rdfs:range <http://www.example.org/ontology#Morning>,
-        <http://www.example.org/ontology#Night> .
-
-<http://www.example.org/ontology#hasEndTime> rdfs:range <http://www.example.org/ontology#Morning> .
-
-<http://www.example.org/ontology#hasStartTime> rdfs:range <http://www.example.org/ontology#Morning> .
-
-<http://www.example.org/ontology#isPartOf> rdfs:range <http://www.example.org/ontology#Day>,
-        <http://www.example.org/ontology#Morning> .
+kastle:time a rdf:Property ;
+    rdfs:domain kastle:Morning ;
+    rdfs:range kastle:time .
 

@@ -1,198 +1,160 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Room> a rdfs:Class .
-
-<http://example.com/RoomTypeEnumeration> a rdfs:Class .
-
-<http://example.com/room#Room> a rdfs:Class .
-
-<http://example.org/#Building> a rdfs:Class .
-
-<http://example.org/#Furniture> a rdfs:Class .
-
-<http://example.org/#Room> a rdfs:Class .
-
-<http://example.org/#RoomType> a rdfs:Class .
-
-<http://example.org/#Size> a rdfs:Class .
-
-<http://example.org/Building> a rdfs:Class .
-
-<http://example.org/Door> a rdfs:Class .
-
-<http://example.org/Person> a rdfs:Class .
-
-<http://example.org/Room> a rdfs:Class .
-
-<http://example.org/Room/Building> a rdfs:Class .
-
-<http://example.org/Room/Room> a rdfs:Class .
-
-<http://example.org/Window> a rdfs:Class .
-
-<http://example.org/ontology/room#Room> a rdfs:Class .
-
-<http://example.org/room#Building> a rdfs:Class .
-
-<http://example.org/room#Furniture> a rdfs:Class .
-
-<http://example.org/room#Room> a rdfs:Class .
-
-<http://example.org/room#RoomType> a rdfs:Class .
-
-<http://example.org/room/Room> a rdfs:Class .
-
-<http://www.example.com/Room> a rdfs:Class .
-
-<http://www.example.com/ontology#Room> a rdfs:Class .
-
-<http://www.example.com/ontology#RoomFunction> a rdfs:Class .
-
-<http://www.example.com/room#Furniture> a rdfs:Class .
-
-<http://www.example.com/room#Person> a rdfs:Class .
-
-<http://www.example.com/room#Room> a rdfs:Class .
-
-<http://www.example.org/room#Building> a rdfs:Class .
-
-<http://www.example.org/room#Room> a rdfs:Class .
-
-rdf:langString a rdfs:Class .
-
-<http://example.com/RoomName> rdfs:range <http://example.com/Room> .
-
-<http://example.com/RoomOccupancy> rdfs:range <http://example.com/Room> .
-
-<http://example.com/RoomType> rdfs:range <http://example.com/Room>,
-        <http://example.com/RoomTypeEnumeration> .
-
-<http://example.com/hasName> rdfs:range <http://example.com/Room>,
-        rdf:langString .
-
-<http://example.com/room#hasFurniture> rdfs:range <http://example.com/room#Room> .
-
-<http://example.com/room#locatedIn> rdfs:range <http://example.com/room#Room> .
-
-<http://example.com/room#size> rdfs:range <http://example.com/room#Room> .
-
-<http://example.com/room#typeOfRoom> rdfs:range <http://example.com/room#Room> .
-
-<http://example.org/#hasFurniture> rdfs:range <http://example.org/#Furniture>,
-        <http://example.org/#Room> .
-
-<http://example.org/#hasSize> rdfs:range <http://example.org/#Room>,
-        <http://example.org/#Size> .
-
-<http://example.org/#hasType> rdfs:range <http://example.org/#Room>,
-        <http://example.org/#RoomType> .
-
-<http://example.org/#isPartOf> rdfs:range <http://example.org/#Building>,
-        <http://example.org/#Room> .
-
-<http://example.org/Room/FloorArea> rdfs:range <http://example.org/Room/Room> .
-
-<http://example.org/Room/hasDoor> rdfs:range <http://example.org/Room/Room> .
-
-<http://example.org/Room/hasRoom> rdfs:range <http://example.org/Room/Building>,
-        <http://example.org/Room/Room> .
-
-<http://example.org/Room/hasWindow> rdfs:range <http://example.org/Room/Room> .
-
-<http://example.org/Room/isPartOf> rdfs:range <http://example.org/Room/Building>,
-        <http://example.org/Room/Room> .
-
-<http://example.org/accommodatesPerson> rdfs:range <http://example.org/Person>,
-        <http://example.org/Room> .
-
-<http://example.org/belongsToBuilding> rdfs:range <http://example.org/Building>,
-        <http://example.org/Room> .
-
-<http://example.org/capacity> rdfs:range <http://example.org/Room> .
-
-<http://example.org/hasDoor> rdfs:range <http://example.org/Door>,
-        <http://example.org/Room> .
-
-<http://example.org/hasWindow> rdfs:range <http://example.org/Room>,
-        <http://example.org/Window> .
-
-<http://example.org/ontology/room#area> rdfs:range <http://example.org/ontology/room#Room> .
-
-<http://example.org/ontology/room#belongsInFloor> rdfs:range <http://example.org/ontology/room#Room> .
-
-<http://example.org/ontology/room#hasDoor> rdfs:range <http://example.org/ontology/room#Room> .
-
-<http://example.org/ontology/room#hasWindow> rdfs:range <http://example.org/ontology/room#Room> .
-
-<http://example.org/ontology/room#roomNumber> rdfs:range <http://example.org/ontology/room#Room> .
-
-<http://example.org/room#capacity> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room#hasDoor> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room#hasFurniture> rdfs:range <http://example.org/room#Furniture>,
-        <http://example.org/room#Room> .
-
-<http://example.org/room#hasName> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room#hasNumber> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room#hasWindow> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room#isLocatedIn> rdfs:range <http://example.org/room#Building>,
-        <http://example.org/room#Room> .
-
-<http://example.org/room#isOccupied> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room#isOfType> rdfs:range <http://example.org/room#Room>,
-        <http://example.org/room#RoomType> .
-
-<http://example.org/room#name> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room#size> rdfs:range <http://example.org/room#Room> .
-
-<http://example.org/room/capacity> rdfs:range <http://example.org/room/Room> .
-
-<http://example.org/room/type> rdfs:range <http://example.org/room/Room> .
-
-<http://www.example.com/color> rdfs:range <http://www.example.com/Room> .
-
-<http://www.example.com/hasDoor> rdfs:range <http://www.example.com/Room> .
-
-<http://www.example.com/hasWindow> rdfs:range <http://www.example.com/Room> .
-
-<http://www.example.com/isOccupied> rdfs:range <http://www.example.com/Room> .
-
-<http://www.example.com/name> rdfs:range <http://www.example.com/Room> .
-
-<http://www.example.com/ontology#hasArea> rdfs:range <http://www.example.com/ontology#Room> .
-
-<http://www.example.com/ontology#hasFunction> rdfs:range <http://www.example.com/ontology#Room>,
-        <http://www.example.com/ontology#RoomFunction> .
-
-<http://www.example.com/ontology#hasRoomNumber> rdfs:range <http://www.example.com/ontology#Room> .
-
-<http://www.example.com/ontology#occupant> rdfs:range <http://www.example.com/ontology#Room> .
-
-<http://www.example.com/room#hasFurniture> rdfs:range <http://www.example.com/room#Furniture>,
-        <http://www.example.com/room#Room> .
-
-<http://www.example.com/room#hasOccupant> rdfs:range <http://www.example.com/room#Person>,
-        <http://www.example.com/room#Room> .
-
-<http://www.example.com/room#hasRoomNumber> rdfs:range <http://www.example.com/room#Room> .
-
-<http://www.example.com/room#hasSize> rdfs:range <http://www.example.com/room#Room> .
-
-<http://www.example.com/size> rdfs:range <http://www.example.com/Room> .
-
-<http://www.example.org/room#belongsTo> rdfs:range <http://www.example.org/room#Building>,
-        <http://www.example.org/room#Room> .
-
-<http://www.example.org/room#hasWindow> rdfs:range <http://www.example.org/room#Room> .
-
-<http://www.example.org/room#number> rdfs:range <http://www.example.org/room#Room> .
-
-<http://www.example.org/room#size> rdfs:range <http://www.example.org/room#Room> .
+kastle:FloorArea a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:integer .
+
+kastle:RoomName a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:string .
+
+kastle:RoomOccupancy a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:int .
+
+kastle:accommodates a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Literal .
+
+kastle:accommodatesPerson a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Person .
+
+kastle:area a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:float .
+
+kastle:belongsInFloor a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:int .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Building .
+
+kastle:belongsToBuilding a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Building .
+
+kastle:belongsToFloor a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Floor .
+
+kastle:capacity a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:integer .
+
+kastle:color a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:string .
+
+kastle:hasArea a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:float .
+
+kastle:hasCapacity a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:integer .
+
+kastle:hasDoor a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Door,
+        kastle:boolean .
+
+kastle:hasFunction a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:RoomFunction .
+
+kastle:hasFurniture a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Furniture,
+        kastle:boolean .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:langString,
+        kastle:string .
+
+kastle:hasNumber a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:integer .
+
+kastle:hasOccupant a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Person .
+
+kastle:hasRoom a rdf:Property ;
+    rdfs:domain kastle:Building ;
+    rdfs:range kastle:Room .
+
+kastle:hasRoomNumber a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasSize a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Size,
+        kastle:integer .
+
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:RoomType .
+
+kastle:hasWindow a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Window,
+        kastle:boolean .
+
+kastle:isLocatedIn a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Building .
+
+kastle:isOccupied a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:boolean .
+
+kastle:isOfType a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:RoomType .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:Building .
+
+kastle:locatedIn a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:string .
+
+kastle:number a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:int .
+
+kastle:roomNumber a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:int .
+
+kastle:size a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:decimal,
+        kastle:float,
+        kastle:integer .
+
+kastle:type a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:string .
+
+kastle:typeOfRoom a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:string .
+
+kastle:RoomType a rdf:Property ;
+    rdfs:domain kastle:Room ;
+    rdfs:range kastle:RoomTypeEnumeration .
 

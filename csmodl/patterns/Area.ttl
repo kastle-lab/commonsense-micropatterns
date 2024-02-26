@@ -1,136 +1,96 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:n31d05ffa08804cae8b1d58a1725d921eb1 a rdfs:Class .
+kastle:AreaValue a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:decimal .
 
-<http://example.com/Area> a rdfs:Class .
+kastle:hasArea a rdf:Property ;
+    rdfs:domain kastle:Area,
+        kastle:GeographicalEntity,
+        kastle:PhysicalEntity,
+        kastle:PhysicalObject,
+        kastle:Place,
+        kastle:Space ;
+    rdfs:range kastle:Area,
+        kastle:decimal .
 
-<http://example.com/PhysicalObject> a rdfs:Class .
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/Place> a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/area#Area> a rdfs:Class .
+kastle:hasSize a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/ontology/area#Area> a rdfs:Class .
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:Literal .
 
-<http://example.com/ontology/area#Unit> a rdfs:Class .
+kastle:hasUnit a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:AreaUnit,
+        kastle:Unit,
+        kastle:UnitOfMeasurement,
+        kastle:nd1c852deeb484382a9fbe8e50d2047f2b1 .
 
-<http://example.org#Area> a rdfs:Class .
+kastle:hasValue a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:decimal,
+        kastle:float .
 
-<http://example.org#GeographicalEntity> a rdfs:Class .
+kastle:inSquareMiles a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:decimal .
 
-<http://example.org/Area> a rdfs:Class .
+kastle:length a rdf:Property ;
+    rdfs:domain kastle:Area,
+        kastle:SquareArea ;
+    rdfs:range kastle:decimal,
+        kastle:double,
+        kastle:float .
 
-<http://example.org/PhysicalEntity> a rdfs:Class .
+kastle:radius a rdf:Property ;
+    rdfs:domain kastle:Circle ;
+    rdfs:range kastle:float .
 
-<http://example.org/PhysicalObject> a rdfs:Class .
+kastle:sideLength a rdf:Property ;
+    rdfs:domain kastle:PolygonArea ;
+    rdfs:range kastle:double .
 
-<http://example.org/Place> a rdfs:Class .
+kastle:sides a rdf:Property ;
+    rdfs:domain kastle:PolygonArea ;
+    rdfs:range kastle:decimal .
 
-<http://example.org/Space> a rdfs:Class .
+kastle:unit a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/area#Area> a rdfs:Class .
+kastle:unitOfMeasure a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:string .
 
-<http://example.org/area#Circle> a rdfs:Class .
+kastle:unitOfMeasurement a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/area#Unit> a rdfs:Class .
+kastle:value a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/ontology/area#Area> a rdfs:Class .
+kastle:width a rdf:Property ;
+    rdfs:domain kastle:Area,
+        kastle:SquareArea ;
+    rdfs:range kastle:decimal,
+        kastle:double,
+        kastle:float .
 
-<http://example.org/ontology/area#PhysicalObject> a rdfs:Class .
-
-<http://example.org/ontology/area#UnitOfMeasurement> a rdfs:Class .
-
-<http://www.area.org/ontology/1.0#Area> a rdfs:Class .
-
-<http://www.area.org/ontology/1.0#AreaUnit> a rdfs:Class .
-
-<http://www.example.com/ontology/area#Area> a rdfs:Class .
-
-<http://www.example.org/Area> a rdfs:Class .
-
-<http://www.example.org/PhysicalEntity> a rdfs:Class .
-
-<http://www.example.org/PolygonArea> a rdfs:Class .
-
-<http://www.example.org/SquareArea> a rdfs:Class .
-
-<http://www.example.org/SquareMeters> a rdfs:Class .
-
-rdf:decimal a rdfs:Class .
-
-<http://example.com/area#length> rdfs:range <http://example.com/area#Area> .
-
-<http://example.com/area#width> rdfs:range <http://example.com/area#Area> .
-
-<http://example.com/hasArea> rdfs:range <http://example.com/Area>,
-        <http://example.com/PhysicalObject>,
-        <http://example.com/Place> .
-
-<http://example.com/length> rdfs:range <http://example.com/Area> .
-
-<http://example.com/ontology/area#hasUnit> rdfs:range <http://example.com/ontology/area#Area>,
-        <http://example.com/ontology/area#Unit> .
-
-<http://example.com/ontology/area#hasValue> rdfs:range <http://example.com/ontology/area#Area> .
-
-<http://example.com/width> rdfs:range <http://example.com/Area> .
-
-<http://example.org#hasArea> rdfs:range <http://example.org#Area>,
-        <http://example.org#GeographicalEntity> .
-
-<http://example.org/area#hasUnit> rdfs:range _:n31d05ffa08804cae8b1d58a1725d921eb1,
-        <http://example.org/area#Area>,
-        <http://example.org/area#Unit> .
-
-<http://example.org/area#hasValue> rdfs:range <http://example.org/area#Area> .
-
-<http://example.org/area#length> rdfs:range <http://example.org/area#Area> .
-
-<http://example.org/area#radius> rdfs:range <http://example.org/area#Circle> .
-
-<http://example.org/area#width> rdfs:range <http://example.org/area#Area> .
-
-<http://example.org/hasArea> rdfs:range <http://example.org/Area>,
-        <http://example.org/PhysicalEntity>,
-        <http://example.org/PhysicalObject>,
-        <http://example.org/Place>,
-        <http://example.org/Space> .
-
-<http://example.org/length> rdfs:range <http://example.org/Area>,
-        rdf:decimal .
-
-<http://example.org/ontology/area#hasArea> rdfs:range <http://example.org/ontology/area#Area>,
-        <http://example.org/ontology/area#PhysicalObject> .
-
-<http://example.org/ontology/area#hasUnit> rdfs:range <http://example.org/ontology/area#Area>,
-        <http://example.org/ontology/area#UnitOfMeasurement> .
-
-<http://example.org/ontology/area#hasValue> rdfs:range <http://example.org/ontology/area#Area> .
-
-<http://example.org/unitOfMeasure> rdfs:range <http://example.org/Area> .
-
-<http://example.org/width> rdfs:range <http://example.org/Area>,
-        rdf:decimal .
-
-<http://www.area.org/ontology/1.0#hasUnit> rdfs:range <http://www.area.org/ontology/1.0#Area>,
-        <http://www.area.org/ontology/1.0#AreaUnit> .
-
-<http://www.example.com/ontology/area#hasArea> rdfs:range <http://www.example.com/ontology/area#Area> .
-
-<http://www.example.org/AreaUnit> rdfs:range <http://www.example.org/Area>,
-        <http://www.example.org/SquareMeters> .
-
-<http://www.example.org/AreaValue> rdfs:range <http://www.example.org/Area> .
-
-<http://www.example.org/hasArea> rdfs:range <http://www.example.org/Area>,
-        <http://www.example.org/PhysicalEntity> .
-
-<http://www.example.org/length> rdfs:range <http://www.example.org/SquareArea> .
-
-<http://www.example.org/sideLength> rdfs:range <http://www.example.org/PolygonArea> .
-
-<http://www.example.org/sides> rdfs:range <http://www.example.org/PolygonArea> .
-
-<http://www.example.org/width> rdfs:range <http://www.example.org/SquareArea> .
+kastle:AreaUnit a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range kastle:SquareMeters .
 

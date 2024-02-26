@@ -1,193 +1,164 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Answer> a rdfs:Class .
-
-<http://example.com/Question> a rdfs:Class .
-
-<http://example.com/Topic> a rdfs:Class .
-
-<http://example.com/User> a rdfs:Class .
-
-<http://example.com/question#AnswerEntity> a rdfs:Class .
-
-<http://example.com/question#QuestionCategory> a rdfs:Class .
-
-<http://example.com/question#QuestionEntity> a rdfs:Class .
-
-<http://example.org/#Question> a rdfs:Class .
-
-<http://example.org/#User> a rdfs:Class .
-
-<http://example.org/Answer> a rdfs:Class .
-
-<http://example.org/Question> a rdfs:Class .
-
-<http://example.org/ontology/question#Answer> a rdfs:Class .
-
-<http://example.org/ontology/question#Question> a rdfs:Class .
-
-<http://example.org/ontology/question#QuestionTopic> a rdfs:Class .
-
-<http://example.org/ontology/questionAnswering#Question> a rdfs:Class .
-
-<http://example.org/question-ontology#Answer> a rdfs:Class .
-
-<http://example.org/question-ontology#Question> a rdfs:Class .
-
-<http://example.org/question_ontology#Entity> a rdfs:Class .
-
-<http://example.org/question_ontology#Question> a rdfs:Class .
-
-<http://example.org/question_ontology#Response> a rdfs:Class .
-
-<http://www.example.org/question#Answer> a rdfs:Class .
-
-<http://www.example.org/question#Question> a rdfs:Class .
-
-<http://www.example.org/question#QuestionType> a rdfs:Class .
-
-<http://www.example.org/question/Question> a rdfs:Class .
-
-<http://www.example.org/questionOntology#Answer> a rdfs:Class .
-
-<http://www.semanticweb.org/questionnaire#Answer> a rdfs:Class .
-
-<http://www.semanticweb.org/questionnaire#Question> a rdfs:Class .
-
-<http://www.semanticweb.org/questionnaire#User> a rdfs:Class .
-
-<http://www.some-website.org/questionOntology#Answer> a rdfs:Class .
-
-<http://www.some-website.org/questionOntology#Question> a rdfs:Class .
-
-<http://www.some-website.org/questionOntology#Source> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-<http://example.com/hasAnswer> rdfs:range <http://example.com/Answer>,
-        <http://example.com/Question> .
-
-<http://example.com/hasDifficultyLevel> rdfs:range <http://example.com/Question> .
-
-<http://example.com/hasQuestion> rdfs:range <http://example.com/Question>,
-        <http://example.com/User> .
-
-<http://example.com/hasQuestionText> rdfs:range <http://example.com/Question> .
-
-<http://example.com/question#hasAnswer> rdfs:range <http://example.com/question#AnswerEntity>,
-        <http://example.com/question#QuestionEntity> .
-
-<http://example.com/question#hasAnswerText> rdfs:range <http://example.com/question#AnswerEntity> .
-
-<http://example.com/question#hasCategory> rdfs:range <http://example.com/question#QuestionCategory>,
-        <http://example.com/question#QuestionEntity> .
-
-<http://example.com/question#hasText> rdfs:range <http://example.com/question#QuestionEntity> .
-
-<http://example.com/relatedToTopic> rdfs:range <http://example.com/Question>,
-        <http://example.com/Topic> .
-
-<http://example.org/#askedBy> rdfs:range <http://example.org/#Question>,
-        <http://example.org/#User> .
-
-<http://example.org/#hasQuestionText> rdfs:range <http://example.org/#Question> .
-
-<http://example.org/askedIn> rdfs:range <http://example.org/Question>,
-        rdfs:Resource .
-
-<http://example.org/hasAnswer> rdfs:range <http://example.org/Answer>,
-        <http://example.org/Question> .
-
-<http://example.org/hasAnswerText> rdfs:range <http://example.org/Answer> .
-
-<http://example.org/hasContent> rdfs:range <http://example.org/Question> .
-
-<http://example.org/hasQuestionText> rdfs:range <http://example.org/Question> .
-
-<http://example.org/ontology/question#HasAnswer> rdfs:range <http://example.org/ontology/question#Answer>,
-        <http://example.org/ontology/question#Question> .
-
-<http://example.org/ontology/question#TopicOf> rdfs:range <http://example.org/ontology/question#Question>,
-        <http://example.org/ontology/question#QuestionTopic> .
-
-<http://example.org/ontology/questionAnswering#hasQuestionText> rdfs:range <http://example.org/ontology/questionAnswering#Question> .
-
-<http://example.org/ontology/questionAnswering#hasQuestionType> rdfs:range <http://example.org/ontology/questionAnswering#Question> .
-
-<http://example.org/question-ontology#answerText> rdfs:range <http://example.org/question-ontology#Answer> .
-
-<http://example.org/question-ontology#hasAnswer> rdfs:range <http://example.org/question-ontology#Answer>,
-        <http://example.org/question-ontology#Question> .
-
-<http://example.org/question-ontology#isCorrect> rdfs:range <http://example.org/question-ontology#Answer> .
-
-<http://example.org/question-ontology#questionText> rdfs:range <http://example.org/question-ontology#Question> .
-
-<http://example.org/question_ontology#hasQuestion> rdfs:range <http://example.org/question_ontology#Entity>,
-        <http://example.org/question_ontology#Question> .
-
-<http://example.org/question_ontology#hasResponse> rdfs:range <http://example.org/question_ontology#Entity>,
-        <http://example.org/question_ontology#Response> .
-
-<http://example.org/question_ontology#isResponseTo> rdfs:range <http://example.org/question_ontology#Question>,
-        <http://example.org/question_ontology#Response> .
-
-<http://www.example.org/question#answerText> rdfs:range <http://www.example.org/question#Answer> .
-
-<http://www.example.org/question#isCorrect> rdfs:range <http://www.example.org/question#Answer> .
-
-<http://www.example.org/question#possibleAnswer> rdfs:range <http://www.example.org/question#Answer>,
-        <http://www.example.org/question#Question> .
-
-<http://www.example.org/question#text> rdfs:range <http://www.example.org/question#Question> .
-
-<http://www.example.org/question#type> rdfs:range <http://www.example.org/question#Question>,
-        <http://www.example.org/question#QuestionType> .
-
-<http://www.example.org/question#weight> rdfs:range <http://www.example.org/question#Question> .
-
-<http://www.example.org/question/hasAnswer> rdfs:range <http://www.example.org/question/Question> .
-
-<http://www.example.org/question/hasContent> rdfs:range <http://www.example.org/question/Question> .
-
-<http://www.example.org/question/isAnsweredBy> rdfs:range <http://www.example.org/question/Question> .
-
-<http://www.example.org/question/isAskedBy> rdfs:range <http://www.example.org/question/Question> .
-
-<http://www.example.org/questionOntology#isCorrect> rdfs:range <http://www.example.org/questionOntology#Answer> .
-
-<http://www.semanticweb.org/questionnaire#asked> rdfs:range <http://www.semanticweb.org/questionnaire#Question>,
-        <http://www.semanticweb.org/questionnaire#User> .
-
-<http://www.semanticweb.org/questionnaire#hasAnswer> rdfs:range <http://www.semanticweb.org/questionnaire#Answer>,
-        <http://www.semanticweb.org/questionnaire#Question> .
-
-<http://www.semanticweb.org/questionnaire#hasChoice> rdfs:range <http://www.semanticweb.org/questionnaire#Answer>,
-        <http://www.semanticweb.org/questionnaire#Question> .
-
-<http://www.semanticweb.org/questionnaire#hasContent> rdfs:range <http://www.semanticweb.org/questionnaire#Question> .
-
-<http://www.semanticweb.org/questionnaire#hasSpecificDate> rdfs:range <http://www.semanticweb.org/questionnaire#Question> .
-
-<http://www.semanticweb.org/questionnaire#hasTitle> rdfs:range <http://www.semanticweb.org/questionnaire#Question> .
-
-<http://www.semanticweb.org/questionnaire#relatedTo> rdfs:range <http://www.semanticweb.org/questionnaire#Question> .
-
-<http://www.some-website.org/questionOntology#answerText> rdfs:range <http://www.some-website.org/questionOntology#Answer> .
-
-<http://www.some-website.org/questionOntology#hasAnswer> rdfs:range <http://www.some-website.org/questionOntology#Answer>,
-        <http://www.some-website.org/questionOntology#Question> .
-
-<http://www.some-website.org/questionOntology#hasSource> rdfs:range <http://www.some-website.org/questionOntology#Question>,
-        <http://www.some-website.org/questionOntology#Source> .
-
-<http://www.some-website.org/questionOntology#isCorrectAnswer> rdfs:range <http://www.some-website.org/questionOntology#Answer> .
-
-<http://www.some-website.org/questionOntology#questionText> rdfs:range <http://www.some-website.org/questionOntology#Question> .
-
-<http://www.some-website.org/questionOntology#sourceName> rdfs:range <http://www.some-website.org/questionOntology#Source> .
-
-<http://www.some-website.org/questionOntology#sourceType> rdfs:range <http://www.some-website.org/questionOntology#Source> .
-
-<http://www.some-website.org/questionOntology#sourceURL> rdfs:range <http://www.some-website.org/questionOntology#Source> .
+kastle:HasAnswer a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Answer .
+
+kastle:TopicOf a rdf:Property ;
+    rdfs:domain kastle:QuestionTopic ;
+    rdfs:range kastle:Question .
+
+kastle:answerText a rdf:Property ;
+    rdfs:domain kastle:Answer ;
+    rdfs:range kastle:string .
+
+kastle:asked a rdf:Property ;
+    rdfs:domain kastle:User ;
+    rdfs:range kastle:Question .
+
+kastle:askedBy a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:User .
+
+kastle:askedIn a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Resource .
+
+kastle:drawsFromSource a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Literal .
+
+kastle:hasAnswer a rdf:Property ;
+    rdfs:domain kastle:Question,
+        kastle:QuestionEntity ;
+    rdfs:range kastle:Answer,
+        kastle:AnswerEntity,
+        kastle:Literal,
+        kastle:string .
+
+kastle:hasAnswerText a rdf:Property ;
+    rdfs:domain kastle:Answer,
+        kastle:AnswerEntity ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasBody a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Literal .
+
+kastle:hasCategory a rdf:Property ;
+    rdfs:domain kastle:QuestionEntity ;
+    rdfs:range kastle:QuestionCategory .
+
+kastle:hasChoice a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Answer .
+
+kastle:hasContent a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:string .
+
+kastle:hasDifficultyLevel a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Literal,
+        kastle:int .
+
+kastle:hasQuestion a rdf:Property ;
+    rdfs:domain kastle:Entity,
+        kastle:Person,
+        kastle:User ;
+    rdfs:range kastle:Question .
+
+kastle:hasQuestionText a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:string .
+
+kastle:hasResponse a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range kastle:Response .
+
+kastle:hasSource a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Source .
+
+kastle:hasSpecificDate a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:date .
+
+kastle:hasText a rdf:Property ;
+    rdfs:domain kastle:QuestionEntity,
+        kastle:n7367ba24aac444cc823facc4afcb64e0b1 ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Literal .
+
+kastle:isAnsweredBy a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:string .
+
+kastle:isAskedBy a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:string .
+
+kastle:isCorrect a rdf:Property ;
+    rdfs:domain kastle:Answer ;
+    rdfs:range kastle:boolean .
+
+kastle:isCorrectAnswer a rdf:Property ;
+    rdfs:domain kastle:Answer ;
+    rdfs:range kastle:boolean .
+
+kastle:isRelatedToTopic a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Literal .
+
+kastle:isResponseTo a rdf:Property ;
+    rdfs:domain kastle:Response ;
+    rdfs:range kastle:Question .
+
+kastle:possibleAnswer a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Answer .
+
+kastle:questionText a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:string .
+
+kastle:relatedToTopic a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:Topic .
+
+kastle:sourceName a rdf:Property ;
+    rdfs:domain kastle:Source ;
+    rdfs:range kastle:string .
+
+kastle:sourceType a rdf:Property ;
+    rdfs:domain kastle:Source ;
+    rdfs:range kastle:string .
+
+kastle:sourceURL a rdf:Property ;
+    rdfs:domain kastle:Source ;
+    rdfs:range kastle:string .
+
+kastle:text a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:string .
+
+kastle:type a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:QuestionType .
+
+kastle:weight a rdf:Property ;
+    rdfs:domain kastle:Question ;
+    rdfs:range kastle:int .
 

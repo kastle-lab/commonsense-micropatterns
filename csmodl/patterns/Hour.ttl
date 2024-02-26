@@ -1,126 +1,90 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
 
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Hour/Hour_15.ttl#Hour> a rdfs:Class .
+kastle:HasMinutes a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Minute .
 
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Hour/Hour_15.ttl#Minute> a rdfs:Class .
+kastle:IsPartOf a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:TemporalEntity .
 
-<http://example.com/Day> a rdfs:Class .
+kastle:endTime a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Instant,
+        kastle:TimePeriod,
+        kastle:time .
 
-<http://example.com/Hour> a rdfs:Class .
+kastle:hasHour a rdf:Property ;
+    rdfs:domain kastle:Entity,
+        kastle:Measure,
+        kastle:TemporalEntity,
+        kastle:Time ;
+    rdfs:range kastle:Hour,
+        kastle:integer .
 
-<http://example.com/Minute> a rdfs:Class .
+kastle:hasMinute a rdf:Property ;
+    rdfs:domain kastle:Hour,
+        kastle:Measure ;
+    rdfs:range kastle:Minute,
+        kastle:integer .
 
-<http://example.com/Second> a rdfs:Class .
+kastle:hasMinutes a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:integer .
 
-<http://example.com/Time> a rdfs:Class .
+kastle:hasNumber a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:int .
 
-<http://example.com/TimePeriod> a rdfs:Class .
+kastle:hasNumberOfHours a rdf:Property ;
+    rdfs:domain kastle:TemporalUnit ;
+    rdfs:range kastle:integer .
 
-<http://example.org/Entity> a rdfs:Class .
+kastle:hasNumberOfMinutes a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:integer .
 
-<http://example.org/Hour> a rdfs:Class .
+kastle:hasSecond a rdf:Property ;
+    rdfs:domain kastle:Measure,
+        kastle:Minute ;
+    rdfs:range kastle:Second,
+        kastle:integer .
 
-<http://example.org/hoursOntology#Hour> a rdfs:Class .
+kastle:hasTemporalDuration a rdf:Property ;
+    rdfs:domain kastle:TemporalEntity ;
+    rdfs:range kastle:Duration .
 
-<http://example.org/hoursOntology#PartOfDay> a rdfs:Class .
+kastle:hourOfDay a rdf:Property ;
+    rdfs:domain kastle:TemporalEntity ;
+    rdfs:range kastle:hour .
 
-<http://example.org/time#Hour> a rdfs:Class .
+kastle:hourValue a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:integer .
 
-<http://purl.org/NET/c4dm/timeline.owl#Instant> a rdfs:Class .
+kastle:hours a rdf:Property ;
+    rdfs:domain kastle:TemporalEntity ;
+    rdfs:range kastle:decimal .
 
-<http://www.example.org/hour> a rdfs:Class .
+kastle:isInTimeZone a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Literal .
 
-<http://www.example.org/hours#Hour> a rdfs:Class .
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Day .
 
-<http://www.example.org/ontology#Measure> a rdfs:Class .
+kastle:isPartOfDay a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Day,
+        kastle:Literal,
+        kastle:PartOfDay .
 
-<http://www.ontologyexample.org/hour#Hour> a rdfs:Class .
-
-<http://www.semanticweb.org/ontologies/hour#Hour> a rdfs:Class .
-
-time:Duration a rdfs:Class .
-
-time:Hour a rdfs:Class .
-
-time:TemporalEntity a rdfs:Class .
-
-<https://www.w3.org/TR/owl-time#Hour> a rdfs:Class .
-
-<https://www.w3.org/TR/owl-time#TemporalUnit> a rdfs:Class .
-
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Hour/Hour_15.ttl#HasMinutes> rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Hour/Hour_15.ttl#Hour>,
-        <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Hour/Hour_15.ttl#Minute> .
-
-<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Hour/Hour_15.ttl#IsPartOf> rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Hour/Hour_15.ttl#Hour>,
-        time:TemporalEntity .
-
-<http://example.com/endTime> rdfs:range <http://example.com/Hour>,
-        <http://example.com/TimePeriod> .
-
-<http://example.com/hasHour> rdfs:range <http://example.com/Hour>,
-        <http://example.com/Time> .
-
-<http://example.com/hasMinute> rdfs:range <http://example.com/Hour>,
-        <http://example.com/Minute> .
-
-<http://example.com/hasSecond> rdfs:range <http://example.com/Minute>,
-        <http://example.com/Second> .
-
-<http://example.com/isPartOf> rdfs:range <http://example.com/Day>,
-        <http://example.com/Hour> .
-
-<http://example.com/isPartOfDay> rdfs:range <http://example.com/Day>,
-        <http://example.com/Hour> .
-
-<http://example.com/startTime> rdfs:range <http://example.com/Hour>,
-        <http://example.com/TimePeriod> .
-
-<http://example.org/hasHour> rdfs:range <http://example.org/Entity>,
-        <http://example.org/Hour> .
-
-<http://example.org/hoursOntology#hasNumber> rdfs:range <http://example.org/hoursOntology#Hour> .
-
-<http://example.org/hoursOntology#isPartOfDay> rdfs:range <http://example.org/hoursOntology#Hour>,
-        <http://example.org/hoursOntology#PartOfDay> .
-
-<http://example.org/time#hasHour> rdfs:range <http://example.org/time#Hour>,
-        time:TemporalEntity .
-
-<http://www.example.org/hourOfDay> rdfs:range <http://www.example.org/hour>,
-        time:TemporalEntity .
-
-<http://www.example.org/hours#endTime> rdfs:range <http://www.example.org/hours#Hour> .
-
-<http://www.example.org/hours#startTime> rdfs:range <http://www.example.org/hours#Hour> .
-
-<http://www.example.org/ontology#hasHour> rdfs:range <http://www.example.org/ontology#Measure> .
-
-<http://www.example.org/ontology#hasMinute> rdfs:range <http://www.example.org/ontology#Measure> .
-
-<http://www.example.org/ontology#hasSecond> rdfs:range <http://www.example.org/ontology#Measure> .
-
-<http://www.ontologyexample.org/hour#endTime> rdfs:range <http://purl.org/NET/c4dm/timeline.owl#Instant>,
-        <http://www.ontologyexample.org/hour#Hour> .
-
-<http://www.ontologyexample.org/hour#hasNumberOfMinutes> rdfs:range <http://www.ontologyexample.org/hour#Hour> .
-
-<http://www.ontologyexample.org/hour#startTime> rdfs:range <http://purl.org/NET/c4dm/timeline.owl#Instant>,
-        <http://www.ontologyexample.org/hour#Hour> .
-
-<http://www.semanticweb.org/ontologies/hour#hasMinutes> rdfs:range <http://www.semanticweb.org/ontologies/hour#Hour> .
-
-time:hasHour rdfs:range time:Hour,
-        time:TemporalEntity .
-
-time:hasTemporalDuration rdfs:range time:Duration,
-        time:TemporalEntity .
-
-time:hourValue rdfs:range time:Hour .
-
-time:hours rdfs:range time:TemporalEntity .
-
-<https://www.w3.org/TR/owl-time#hasNumberOfHours> rdfs:range <https://www.w3.org/TR/owl-time#TemporalUnit> .
-
-<https://www.w3.org/TR/owl-time#hasNumberOfMinutes> rdfs:range <https://www.w3.org/TR/owl-time#Hour> .
+kastle:startTime a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Instant,
+        kastle:TimePeriod,
+        kastle:time .
 

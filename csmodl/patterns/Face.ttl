@@ -1,248 +1,116 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:n3c4c1d7b887e48ccbc3e176b246a29dab1 a rdfs:Class .
-
-<http://example.com/faceontology#Face> a rdfs:Class .
-
-<http://example.com/faceontology#FacialFeature> a rdfs:Class .
-
-<http://example.com/ontology/face#Eye> a rdfs:Class .
-
-<http://example.com/ontology/face#Face> a rdfs:Class .
-
-<http://example.com/ontology/face#FacePart> a rdfs:Class .
-
-<http://example.com/ontology/face#Mouth> a rdfs:Class .
-
-<http://example.com/ontology/face#Nose> a rdfs:Class .
-
-<http://example.org#Eye> a rdfs:Class .
-
-<http://example.org#Face> a rdfs:Class .
-
-<http://example.org#Mouth> a rdfs:Class .
-
-<http://example.org#Nose> a rdfs:Class .
-
-<http://example.org/Face> a rdfs:Class .
-
-<http://example.org/SkinType> a rdfs:Class .
-
-<http://example.org/ontology#Face> a rdfs:Class .
-
-<http://example.org/ontology#Human> a rdfs:Class .
-
-<http://example.org/ontology/face#Face> a rdfs:Class .
-
-<http://example.org/ontology/face#FacePart> a rdfs:Class .
-
-<http://www.example.com#Face> a rdfs:Class .
-
-<http://www.example.com#Mouth> a rdfs:Class .
-
-<http://www.example.com#Nose> a rdfs:Class .
-
-<http://www.example.com/face#Eye> a rdfs:Class .
-
-<http://www.example.com/face#Face> a rdfs:Class .
-
-<http://www.example.com/face#Mouth> a rdfs:Class .
-
-<http://www.example.com/face#Nose> a rdfs:Class .
-
-<http://www.example.com/ontologies/face#Cheek> a rdfs:Class .
-
-<http://www.example.com/ontologies/face#Eye> a rdfs:Class .
-
-<http://www.example.com/ontologies/face#Face> a rdfs:Class .
-
-<http://www.example.com/ontologies/face#Mouth> a rdfs:Class .
-
-<http://www.example.com/ontologies/face#Nose> a rdfs:Class .
-
-<http://www.example.com/ontology#Eye> a rdfs:Class .
-
-<http://www.example.com/ontology#Face> a rdfs:Class .
-
-<http://www.example.com/ontology#Mouth> a rdfs:Class .
-
-<http://www.example.com/ontology#Nose> a rdfs:Class .
-
-<http://www.example.org/face#Eye> a rdfs:Class .
-
-<http://www.example.org/face#Face> a rdfs:Class .
-
-<http://www.example.org/face#Mouth> a rdfs:Class .
-
-<http://www.example.org/face#Nose> a rdfs:Class .
-
-<http://www.example.org/ontology#Eye> a rdfs:Class .
-
-<http://www.example.org/ontology#Face> a rdfs:Class .
-
-<http://www.example.org/ontology#Mouth> a rdfs:Class .
-
-<http://www.example.org/ontology#Nose> a rdfs:Class .
-
-<http://www.example.org/ontology/face#Face> a rdfs:Class .
-
-<http://www.example.org/ontology/face#FacialFeature> a rdfs:Class .
-
-<https://ontology.example.com/face#Expression> a rdfs:Class .
-
-<https://ontology.example.com/face#Eyes> a rdfs:Class .
-
-<https://ontology.example.com/face#Face> a rdfs:Class .
-
-<https://ontology.example.com/face#Mouth> a rdfs:Class .
-
-<https://ontology.example.com/face#Nose> a rdfs:Class .
-
-<https://ontology.example.com/face#Skin> a rdfs:Class .
-
-<http://example.com/faceontology#hasColor> rdfs:range <http://example.com/faceontology#Face> .
-
-<http://example.com/faceontology#hasFeature> rdfs:range <http://example.com/faceontology#Face>,
-        <http://example.com/faceontology#FacialFeature> .
-
-<http://example.com/ontology/face#color> rdfs:range <http://example.com/ontology/face#Face> .
-
-<http://example.com/ontology/face#hasColor> rdfs:range <http://example.com/ontology/face#FacePart> .
-
-<http://example.com/ontology/face#hasEye> rdfs:range <http://example.com/ontology/face#Eye>,
-        <http://example.com/ontology/face#Face> .
-
-<http://example.com/ontology/face#hasMouth> rdfs:range <http://example.com/ontology/face#Face>,
-        <http://example.com/ontology/face#Mouth> .
-
-<http://example.com/ontology/face#hasNose> rdfs:range <http://example.com/ontology/face#Face>,
-        <http://example.com/ontology/face#Nose> .
-
-<http://example.com/ontology/face#hasPart> rdfs:range <http://example.com/ontology/face#Face>,
-        <http://example.com/ontology/face#FacePart> .
-
-<http://example.com/ontology/face#hasPosition> rdfs:range <http://example.com/ontology/face#FacePart> .
-
-<http://example.com/ontology/face#hasSize> rdfs:range <http://example.com/ontology/face#FacePart> .
-
-<http://example.com/ontology/face#shape> rdfs:range <http://example.com/ontology/face#Face> .
-
-<http://example.org#hasEye> rdfs:range <http://example.org#Eye>,
-        <http://example.org#Face> .
-
-<http://example.org#hasMouth> rdfs:range <http://example.org#Face>,
-        <http://example.org#Mouth> .
-
-<http://example.org#hasNose> rdfs:range <http://example.org#Face>,
-        <http://example.org#Nose> .
-
-<http://example.org/hasFacialFeature> rdfs:range _:n3c4c1d7b887e48ccbc3e176b246a29dab1,
-        <http://example.org/Face> .
-
-<http://example.org/hasSkinType> rdfs:range <http://example.org/Face>,
-        <http://example.org/SkinType> .
-
-<http://example.org/ontology#hasFace> rdfs:range <http://example.org/ontology#Face>,
-        <http://example.org/ontology#Human> .
-
-<http://example.org/ontology/face#hasColor> rdfs:range <http://example.org/ontology/face#Face> .
-
-<http://example.org/ontology/face#hasComponent> rdfs:range <http://example.org/ontology/face#Face> .
-
-<http://example.org/ontology/face#hasEye> rdfs:range <http://example.org/ontology/face#Face> .
-
-<http://example.org/ontology/face#hasMouth> rdfs:range <http://example.org/ontology/face#Face> .
-
-<http://example.org/ontology/face#hasNose> rdfs:range <http://example.org/ontology/face#Face> .
-
-<http://example.org/ontology/face#hasPart> rdfs:range <http://example.org/ontology/face#Face>,
-        <http://example.org/ontology/face#FacePart> .
-
-<http://example.org/ontology/face#hasShape> rdfs:range <http://example.org/ontology/face#Face> .
-
-<http://example.org/ontology/face#hasTexture> rdfs:range <http://example.org/ontology/face#Face> .
-
-<http://www.example.com#eyeColor> rdfs:range <http://www.example.com#Face> .
-
-<http://www.example.com#hasMouth> rdfs:range <http://www.example.com#Face>,
-        <http://www.example.com#Mouth> .
-
-<http://www.example.com#hasNose> rdfs:range <http://www.example.com#Face>,
-        <http://www.example.com#Nose> .
-
-<http://www.example.com#skinTone> rdfs:range <http://www.example.com#Face> .
-
-<http://www.example.com/face#eyeColor> rdfs:range <http://www.example.com/face#Eye> .
-
-<http://www.example.com/face#hasEye> rdfs:range <http://www.example.com/face#Eye>,
-        <http://www.example.com/face#Face> .
-
-<http://www.example.com/face#hasMouth> rdfs:range <http://www.example.com/face#Face>,
-        <http://www.example.com/face#Mouth> .
-
-<http://www.example.com/face#hasNose> rdfs:range <http://www.example.com/face#Face>,
-        <http://www.example.com/face#Nose> .
-
-<http://www.example.com/face#mouthSize> rdfs:range <http://www.example.com/face#Mouth> .
-
-<http://www.example.com/face#noseSize> rdfs:range <http://www.example.com/face#Nose> .
-
-<http://www.example.com/ontologies/face#hasCheek> rdfs:range <http://www.example.com/ontologies/face#Cheek>,
-        <http://www.example.com/ontologies/face#Face> .
-
-<http://www.example.com/ontologies/face#hasEye> rdfs:range <http://www.example.com/ontologies/face#Eye>,
-        <http://www.example.com/ontologies/face#Face> .
-
-<http://www.example.com/ontologies/face#hasMouth> rdfs:range <http://www.example.com/ontologies/face#Face>,
-        <http://www.example.com/ontologies/face#Mouth> .
-
-<http://www.example.com/ontologies/face#hasNose> rdfs:range <http://www.example.com/ontologies/face#Face>,
-        <http://www.example.com/ontologies/face#Nose> .
-
-<http://www.example.com/ontology#hasEye> rdfs:range <http://www.example.com/ontology#Eye>,
-        <http://www.example.com/ontology#Face> .
-
-<http://www.example.com/ontology#hasMouth> rdfs:range <http://www.example.com/ontology#Face>,
-        <http://www.example.com/ontology#Mouth> .
-
-<http://www.example.com/ontology#hasNose> rdfs:range <http://www.example.com/ontology#Face>,
-        <http://www.example.com/ontology#Nose> .
-
-<http://www.example.org/face#hasEye> rdfs:range <http://www.example.org/face#Eye>,
-        <http://www.example.org/face#Face> .
-
-<http://www.example.org/face#hasMouth> rdfs:range <http://www.example.org/face#Face>,
-        <http://www.example.org/face#Mouth> .
-
-<http://www.example.org/face#hasNose> rdfs:range <http://www.example.org/face#Face>,
-        <http://www.example.org/face#Nose> .
-
-<http://www.example.org/ontology#hasEyes> rdfs:range <http://www.example.org/ontology#Eye>,
-        <http://www.example.org/ontology#Face> .
-
-<http://www.example.org/ontology#hasMouth> rdfs:range <http://www.example.org/ontology#Face>,
-        <http://www.example.org/ontology#Mouth> .
-
-<http://www.example.org/ontology#hasNose> rdfs:range <http://www.example.org/ontology#Face>,
-        <http://www.example.org/ontology#Nose> .
-
-<http://www.example.org/ontology/face#hasColor> rdfs:range <http://www.example.org/ontology/face#FacialFeature> .
-
-<http://www.example.org/ontology/face#hasFacialFeature> rdfs:range <http://www.example.org/ontology/face#Face>,
-        <http://www.example.org/ontology/face#FacialFeature> .
-
-<https://ontology.example.com/face#hasExpression> rdfs:range <https://ontology.example.com/face#Expression>,
-        <https://ontology.example.com/face#Face> .
-
-<https://ontology.example.com/face#hasEyes> rdfs:range <https://ontology.example.com/face#Eyes>,
-        <https://ontology.example.com/face#Face> .
-
-<https://ontology.example.com/face#hasMouth> rdfs:range <https://ontology.example.com/face#Face>,
-        <https://ontology.example.com/face#Mouth> .
-
-<https://ontology.example.com/face#hasNose> rdfs:range <https://ontology.example.com/face#Face>,
-        <https://ontology.example.com/face#Nose> .
-
-<https://ontology.example.com/face#hasSkin> rdfs:range <https://ontology.example.com/face#Face>,
-        <https://ontology.example.com/face#Skin> .
+kastle:color a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:string .
+
+kastle:eyeColor a rdf:Property ;
+    rdfs:domain kastle:Eye,
+        kastle:Face ;
+    rdfs:range kastle:string .
+
+kastle:hasCheek a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Cheek .
+
+kastle:hasColor a rdf:Property ;
+    rdfs:domain kastle:Face,
+        kastle:FacePart,
+        kastle:FacialFeature ;
+    rdfs:range kastle:string .
+
+kastle:hasComponent a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:string .
+
+kastle:hasExpression a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Expression .
+
+kastle:hasEye a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Eye,
+        kastle:integer .
+
+kastle:hasEyes a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Eye,
+        kastle:Eyes,
+        kastle:Literal .
+
+kastle:hasFace a rdf:Property ;
+    rdfs:domain kastle:Human ;
+    rdfs:range kastle:Face .
+
+kastle:hasFacialFeature a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:FacialFeature,
+        kastle:n9ad26cb6c1af4b8b8b71dd872516604fb1 .
+
+kastle:hasFeature a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:FacialFeature .
+
+kastle:hasMouth a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Literal,
+        kastle:Mouth,
+        kastle:boolean .
+
+kastle:hasNose a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Literal,
+        kastle:Nose,
+        kastle:boolean .
+
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Class,
+        kastle:FacePart .
+
+kastle:hasPosition a rdf:Property ;
+    rdfs:domain kastle:FacePart ;
+    rdfs:range kastle:string .
+
+kastle:hasShape a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:string .
+
+kastle:hasSize a rdf:Property ;
+    rdfs:domain kastle:FacePart ;
+    rdfs:range kastle:string .
+
+kastle:hasSkin a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Skin .
+
+kastle:hasSkinColor a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:Literal .
+
+kastle:hasSkinType a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:SkinType .
+
+kastle:hasTexture a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:string .
+
+kastle:mouthSize a rdf:Property ;
+    rdfs:domain kastle:Mouth ;
+    rdfs:range kastle:string .
+
+kastle:noseSize a rdf:Property ;
+    rdfs:domain kastle:Nose ;
+    rdfs:range kastle:string .
+
+kastle:shape a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:string .
+
+kastle:skinTone a rdf:Property ;
+    rdfs:domain kastle:Face ;
+    rdfs:range kastle:string .
 

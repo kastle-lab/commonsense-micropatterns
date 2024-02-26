@@ -1,247 +1,232 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/health#Disease> a rdfs:Class .
+kastle:administersTreatment a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Treatment .
+
+kastle:admittedIn a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Hospital .
+
+kastle:diagnosedWith a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Disease .
+
+kastle:diagnoses a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Diseases .
+
+kastle:disease a rdf:Property ;
+    rdfs:domain kastle:Health ;
+    rdfs:range kastle:string .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Patient,
+        kastle:Person ;
+    rdfs:range kastle:integer .
+
+kastle:hasAilment a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Ailment .
+
+kastle:hasCondition a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:HealthCondition,
+        kastle:MedicalCondition .
+
+kastle:hasDiagnosis a rdf:Property ;
+    rdfs:domain kastle:HealthRecord,
+        kastle:Patient ;
+    rdfs:range kastle:Diagnosis,
+        kastle:Disease .
+
+kastle:hasDietRestriction a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:DietRestriction .
+
+kastle:hasDisease a rdf:Property ;
+    rdfs:domain kastle:Patient,
+        kastle:Person ;
+    rdfs:range kastle:Disease,
+        kastle:Diseases .
+
+kastle:hasDoctor a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Doctor .
+
+kastle:hasGender a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:string .
+
+kastle:hasGymMembership a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:GymMembership .
+
+kastle:hasHealth a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Health .
+
+kastle:hasHealthRecord a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:HealthRecord .
+
+kastle:hasHealthStatus a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Health .
+
+kastle:hasHeight a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:float .
+
+kastle:hasIllness a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Illness .
+
+kastle:hasMedication a rdf:Property ;
+    rdfs:domain kastle:Health,
+        kastle:Treatment ;
+    rdfs:range kastle:Medication .
+
+kastle:hasMentalHealth a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:MentalHealth .
+
+kastle:hasMentalHealthStatus a rdf:Property ;
+    rdfs:domain kastle:Patient,
+        kastle:Person ;
+    rdfs:range kastle:MentalHealth,
+        kastle:MentalHealthStatus .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:string .
+
+kastle:hasPatient a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Patient .
 
-<http://example.com/health#Doctor> a rdfs:Class .
+kastle:hasPhysicalHealth a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:PhysicalHealth .
 
-<http://example.com/health#Medication> a rdfs:Class .
+kastle:hasPhysicalHealthStatus a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:PhysicalHealth .
 
-<http://example.com/health#Patient> a rdfs:Class .
+kastle:hasPhysicalHeathStatus a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:PhysicalHealthStatus .
 
-<http://example.com/health#Treatment> a rdfs:Class .
+kastle:hasSeverity a rdf:Property ;
+    rdfs:domain kastle:Symptom ;
+    rdfs:range kastle:string .
 
-<http://example.com/ontology/health#MentalHealth> a rdfs:Class .
+kastle:hasSideEffect a rdf:Property ;
+    rdfs:domain kastle:Medication ;
+    rdfs:range kastle:SideEffect .
 
-<http://example.com/ontology/health#Person> a rdfs:Class .
-
-<http://example.com/ontology/health#PhysicalHealth> a rdfs:Class .
-
-<http://example.org/health#Doctor> a rdfs:Class .
-
-<http://example.org/health#GymMembership> a rdfs:Class .
-
-<http://example.org/health#Health> a rdfs:Class .
-
-<http://example.org/health#HealthCareProvider> a rdfs:Class .
-
-<http://example.org/health#HealthCondition> a rdfs:Class .
-
-<http://example.org/health#Hospital> a rdfs:Class .
-
-<http://example.org/health#Illness> a rdfs:Class .
-
-<http://example.org/health#MedicalCondition> a rdfs:Class .
-
-<http://example.org/health#Patient> a rdfs:Class .
-
-<http://example.org/health#Person> a rdfs:Class .
-
-<http://example.org/health#Treatment> a rdfs:Class .
-
-<http://example.org/ont#Disease> a rdfs:Class .
-
-<http://example.org/ont#Medication> a rdfs:Class .
-
-<http://example.org/ont#Person> a rdfs:Class .
-
-<http://example.org/ont#SideEffect> a rdfs:Class .
-
-<http://example.org/ont#Symptom> a rdfs:Class .
-
-<http://example.org/ont#Treatment> a rdfs:Class .
-
-<http://www.example.com/health#Disease> a rdfs:Class .
-
-<http://www.example.com/health#Doctor> a rdfs:Class .
-
-<http://www.example.com/health#Medication> a rdfs:Class .
-
-<http://www.example.com/health#Patient> a rdfs:Class .
-
-<http://www.example.com/health#Symptom> a rdfs:Class .
-
-<http://www.example.com/health#Treatment> a rdfs:Class .
-
-<http://www.example.org/health#Disease> a rdfs:Class .
-
-<http://www.example.org/health#Diseases> a rdfs:Class .
-
-<http://www.example.org/health#Doctor> a rdfs:Class .
-
-<http://www.example.org/health#Health> a rdfs:Class .
-
-<http://www.example.org/health#Hospital> a rdfs:Class .
-
-<http://www.example.org/health#Medication> a rdfs:Class .
-
-<http://www.example.org/health#MentalHealth> a rdfs:Class .
-
-<http://www.example.org/health#Patient> a rdfs:Class .
-
-<http://www.example.org/health#Person> a rdfs:Class .
-
-<http://www.example.org/health#PhysicalHealth> a rdfs:Class .
-
-<http://www.example.org/health#Symptom> a rdfs:Class .
-
-<http://www.example.org/health#Treatment> a rdfs:Class .
-
-<http://www.semanticweb.org/healthOntology#MentalHealthStatus> a rdfs:Class .
-
-<http://www.semanticweb.org/healthOntology#Person> a rdfs:Class .
-
-<http://www.semanticweb.org/healthOntology#PhysicalHealthStatus> a rdfs:Class .
-
-<http://example.com/health#administersTreatment> rdfs:range <http://example.com/health#Doctor>,
-        <http://example.com/health#Treatment> .
-
-<http://example.com/health#hasDisease> rdfs:range <http://example.com/health#Disease>,
-        <http://example.com/health#Patient> .
-
-<http://example.com/health#prescribesMedication> rdfs:range <http://example.com/health#Doctor>,
-        <http://example.com/health#Medication> .
-
-<http://example.com/health#receivesTreatment> rdfs:range <http://example.com/health#Patient>,
-        <http://example.com/health#Treatment> .
-
-<http://example.com/ontology/health#hasMentalHealth> rdfs:range <http://example.com/ontology/health#MentalHealth>,
-        <http://example.com/ontology/health#Person> .
-
-<http://example.com/ontology/health#hasPhysicalHealth> rdfs:range <http://example.com/ontology/health#Person>,
-        <http://example.com/ontology/health#PhysicalHealth> .
-
-<http://example.org/health#hasCondition> rdfs:range <http://example.org/health#HealthCondition>,
-        <http://example.org/health#MedicalCondition>,
-        <http://example.org/health#Patient> .
-
-<http://example.org/health#hasDoctor> rdfs:range <http://example.org/health#Doctor>,
-        <http://example.org/health#Patient> .
-
-<http://example.org/health#hasGymMembership> rdfs:range <http://example.org/health#GymMembership>,
-        <http://example.org/health#Person> .
-
-<http://example.org/health#hasIllness> rdfs:range <http://example.org/health#Illness>,
-        <http://example.org/health#Patient> .
-
-<http://example.org/health#provides> rdfs:range <http://example.org/health#Health>,
-        <http://example.org/health#HealthCareProvider> .
-
-<http://example.org/health#receives> rdfs:range <http://example.org/health#Health>,
-        <http://example.org/health#Patient> .
-
-<http://example.org/health#receivesTreatment> rdfs:range <http://example.org/health#Patient>,
-        <http://example.org/health#Treatment> .
-
-<http://example.org/health#worksAt> rdfs:range <http://example.org/health#Doctor>,
-        <http://example.org/health#Hospital> .
-
-<http://example.org/ont#hasAge> rdfs:range <http://example.org/ont#Person> .
-
-<http://example.org/ont#hasDisease> rdfs:range <http://example.org/ont#Disease>,
-        <http://example.org/ont#Person> .
-
-<http://example.org/ont#hasGender> rdfs:range <http://example.org/ont#Person> .
-
-<http://example.org/ont#hasHeight> rdfs:range <http://example.org/ont#Person> .
-
-<http://example.org/ont#hasSeverity> rdfs:range <http://example.org/ont#Symptom> .
-
-<http://example.org/ont#hasSideEffect> rdfs:range <http://example.org/ont#Medication>,
-        <http://example.org/ont#SideEffect> .
-
-<http://example.org/ont#hasWeight> rdfs:range <http://example.org/ont#Person> .
-
-<http://example.org/ont#includesSymptom> rdfs:range <http://example.org/ont#Disease>,
-        <http://example.org/ont#Symptom> .
-
-<http://example.org/ont#treatmentFor> rdfs:range <http://example.org/ont#Disease>,
-        <http://example.org/ont#Treatment> .
-
-<http://example.org/ont#usedMedication> rdfs:range <http://example.org/ont#Medication>,
-        <http://example.org/ont#Treatment> .
-
-<http://www.example.com/health#administersTreatment> rdfs:range <http://www.example.com/health#Doctor>,
-        <http://www.example.com/health#Treatment> .
-
-<http://www.example.com/health#hasDisease> rdfs:range <http://www.example.com/health#Disease>,
-        <http://www.example.com/health#Patient> .
-
-<http://www.example.com/health#hasSymptom> rdfs:range <http://www.example.com/health#Disease>,
-        <http://www.example.com/health#Symptom> .
-
-<http://www.example.com/health#hasTreatment> rdfs:range <http://www.example.com/health#Disease>,
-        <http://www.example.com/health#Treatment> .
-
-<http://www.example.com/health#prescribes> rdfs:range <http://www.example.com/health#Doctor>,
-        <http://www.example.com/health#Medication> .
-
-<http://www.example.com/health#receivesTreatment> rdfs:range <http://www.example.com/health#Patient>,
-        <http://www.example.com/health#Treatment> .
-
-<http://www.example.com/health#treats> rdfs:range <http://www.example.com/health#Doctor>,
-        <http://www.example.com/health#Patient> .
-
-<http://www.example.org/health#admittedIn> rdfs:range <http://www.example.org/health#Hospital>,
-        <http://www.example.org/health#Patient> .
-
-<http://www.example.org/health#diagnosedWith> rdfs:range <http://www.example.org/health#Disease>,
-        <http://www.example.org/health#Patient> .
-
-<http://www.example.org/health#diagnoses> rdfs:range <http://www.example.org/health#Diseases>,
-        <http://www.example.org/health#Doctor> .
-
-<http://www.example.org/health#disease> rdfs:range <http://www.example.org/health#Health> .
-
-<http://www.example.org/health#hasDisease> rdfs:range <http://www.example.org/health#Disease>,
-        <http://www.example.org/health#Diseases>,
-        <http://www.example.org/health#Patient>,
-        <http://www.example.org/health#Person> .
-
-<http://www.example.org/health#hasHealthStatus> rdfs:range <http://www.example.org/health#Health>,
-        <http://www.example.org/health#Patient> .
-
-<http://www.example.org/health#hasMedication> rdfs:range <http://www.example.org/health#Health>,
-        <http://www.example.org/health#Medication> .
-
-<http://www.example.org/health#hasMentalHealthStatus> rdfs:range <http://www.example.org/health#MentalHealth>,
-        <http://www.example.org/health#Patient> .
-
-<http://www.example.org/health#hasPhysicalHealthStatus> rdfs:range <http://www.example.org/health#Patient>,
-        <http://www.example.org/health#PhysicalHealth> .
-
-<http://www.example.org/health#hasSymptom> rdfs:range <http://www.example.org/health#Disease>,
-        <http://www.example.org/health#Symptom> .
-
-<http://www.example.org/health#hasTreatment> rdfs:range <http://www.example.org/health#Disease>,
-        <http://www.example.org/health#Treatment> .
-
-<http://www.example.org/health#isDiagnosedWith> rdfs:range <http://www.example.org/health#Disease>,
-        <http://www.example.org/health#Patient> .
-
-<http://www.example.org/health#isFollowingTreatment> rdfs:range <http://www.example.org/health#Patient>,
-        <http://www.example.org/health#Treatment> .
-
-<http://www.example.org/health#isTreatedBy> rdfs:range <http://www.example.org/health#Disease>,
-        <http://www.example.org/health#Treatment> .
-
-<http://www.example.org/health#manages> rdfs:range <http://www.example.org/health#Doctor>,
-        <http://www.example.org/health#Patient> .
-
-<http://www.example.org/health#medicationName> rdfs:range <http://www.example.org/health#Medication> .
-
-<http://www.example.org/health#operatesIn> rdfs:range <http://www.example.org/health#Doctor>,
-        <http://www.example.org/health#Hospital> .
-
-<http://www.example.org/health#prescribes> rdfs:range <http://www.example.org/health#Doctor>,
-        <http://www.example.org/health#Medication>,
-        <http://www.example.org/health#Treatment> .
-
-<http://www.example.org/health#treats> rdfs:range <http://www.example.org/health#Doctor>,
-        <http://www.example.org/health#Patient> .
-
-<http://www.semanticweb.org/healthOntology#hasMentalHealthStatus> rdfs:range <http://www.semanticweb.org/healthOntology#MentalHealthStatus>,
-        <http://www.semanticweb.org/healthOntology#Person> .
-
-<http://www.semanticweb.org/healthOntology#hasPhysicalHeathStatus> rdfs:range <http://www.semanticweb.org/healthOntology#Person>,
-        <http://www.semanticweb.org/healthOntology#PhysicalHealthStatus> .
+kastle:hasSymptom a rdf:Property ;
+    rdfs:domain kastle:Disease ;
+    rdfs:range kastle:Symptom .
+
+kastle:hasTreatment a rdf:Property ;
+    rdfs:domain kastle:Ailment,
+        kastle:Disease ;
+    rdfs:range kastle:Treatment .
+
+kastle:hasWeight a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:float .
+
+kastle:includesMedication a rdf:Property ;
+    rdfs:domain kastle:Treatment ;
+    rdfs:range kastle:Medication .
+
+kastle:includesSymptom a rdf:Property ;
+    rdfs:domain kastle:Disease ;
+    rdfs:range kastle:Symptom .
+
+kastle:isDiagnosedWith a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Disease .
+
+kastle:isFollowingTreatment a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Treatment .
+
+kastle:isTreatedBy a rdf:Property ;
+    rdfs:domain kastle:Disease ;
+    rdfs:range kastle:Treatment .
+
+kastle:isTreatedWith a rdf:Property ;
+    rdfs:domain kastle:Disease ;
+    rdfs:range kastle:Treatment .
+
+kastle:manages a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Patient .
+
+kastle:medicationName a rdf:Property ;
+    rdfs:domain kastle:Medication ;
+    rdfs:range kastle:string .
+
+kastle:operatesIn a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Hospital .
+
+kastle:prescribedBy a rdf:Property ;
+    rdfs:domain kastle:Medicine ;
+    rdfs:range kastle:Doctor .
+
+kastle:prescribedFor a rdf:Property ;
+    rdfs:domain kastle:Medicine ;
+    rdfs:range kastle:Disease .
+
+kastle:prescribes a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Medication,
+        kastle:Treatment .
+
+kastle:prescribesMedication a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Medication .
+
+kastle:provides a rdf:Property ;
+    rdfs:domain kastle:HealthCareProvider ;
+    rdfs:range kastle:Health .
+
+kastle:receives a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Health,
+        kastle:Treatment .
+
+kastle:receivesTreatment a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Treatment .
+
+kastle:suffersFrom a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Disease .
+
+kastle:takesMedication a rdf:Property ;
+    rdfs:domain kastle:Patient ;
+    rdfs:range kastle:Medication .
+
+kastle:treatmentFor a rdf:Property ;
+    rdfs:domain kastle:Disease ;
+    rdfs:range kastle:Treatment .
+
+kastle:treats a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Patient .
+
+kastle:usedMedication a rdf:Property ;
+    rdfs:domain kastle:Treatment ;
+    rdfs:range kastle:Medication .
+
+kastle:worksAt a rdf:Property ;
+    rdfs:domain kastle:Doctor ;
+    rdfs:range kastle:Hospital .
 

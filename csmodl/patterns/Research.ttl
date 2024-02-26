@@ -1,355 +1,248 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com#ResearchField> a rdfs:Class .
-
-<http://example.com#ResearchProject> a rdfs:Class .
-
-<http://example.com#Researcher> a rdfs:Class .
-
-<http://example.com/ontology/research#Methodology> a rdfs:Class .
-
-<http://example.com/ontology/research#Research> a rdfs:Class .
-
-<http://example.com/ontology/research#Researcher> a rdfs:Class .
-
-<http://example.com/research#Publication> a rdfs:Class .
-
-<http://example.com/research#Research> a rdfs:Class .
-
-<http://example.com/research#Researcher> a rdfs:Class .
-
-<http://example.org/Research> a rdfs:Class .
-
-<http://example.org/Research#Publication> a rdfs:Class .
-
-<http://example.org/Research#Research> a rdfs:Class .
-
-<http://example.org/Research#Researcher> a rdfs:Class .
-
-<http://example.org/ResearchTopic> a rdfs:Class .
-
-<http://example.org/Researcher> a rdfs:Class .
-
-<http://example.org/Topic> a rdfs:Class .
-
-<http://example.org/ontology/research#Research> a rdfs:Class .
-
-<http://example.org/ontology/research#ResearchPaper> a rdfs:Class .
-
-<http://example.org/ontology/research#ResearchProject> a rdfs:Class .
-
-<http://example.org/ontology/research#Researcher> a rdfs:Class .
-
-<http://example.org/research#Author> a rdfs:Class .
-
-<http://example.org/research#Field> a rdfs:Class .
-
-<http://example.org/research#Institution> a rdfs:Class .
-
-<http://example.org/research#Person> a rdfs:Class .
-
-<http://example.org/research#Publication> a rdfs:Class .
-
-<http://example.org/research#Research> a rdfs:Class .
-
-<http://example.org/research#ResearchPaper> a rdfs:Class .
-
-<http://example.org/research#ResearchTopic> a rdfs:Class .
-
-<http://example.org/research#Researcher> a rdfs:Class .
-
-<http://example.org/research#Subject> a rdfs:Class .
-
-<http://example.org/research#Topic> a rdfs:Class .
-
-<http://example.org/research/Research> a rdfs:Class .
-
-<http://example.org/research/Researcher> a rdfs:Class .
-
-<http://example.org/researcher> a rdfs:Class .
-
-<http://www.example.com/#Research> a rdfs:Class .
-
-<http://www.example.com/#Researcher> a rdfs:Class .
-
-<http://www.example.com/#SubjectField> a rdfs:Class .
-
-<http://www.example.org/ontologies/research#FieldOfStudy> a rdfs:Class .
-
-<http://www.example.org/ontologies/research#Research> a rdfs:Class .
-
-<http://www.example.org/ontologies/research#ResearchMethod> a rdfs:Class .
-
-<http://www.example.org/ontologies/research#Researcher> a rdfs:Class .
-
-<http://www.example.org/ontology/research#FieldOfStudy> a rdfs:Class .
-
-<http://www.example.org/ontology/research#Journal> a rdfs:Class .
-
-<http://www.example.org/ontology/research#Research> a rdfs:Class .
-
-<http://www.example.org/ontology/research#ResearchPaper> a rdfs:Class .
-
-<http://www.example.org/ontology/research#ResearchTopic> a rdfs:Class .
-
-<http://www.example.org/ontology/research#Researcher> a rdfs:Class .
-
-<http://www.example.org/research#Academic_Institution> a rdfs:Class .
-
-<http://www.example.org/research#AreaOfResearch> a rdfs:Class .
-
-<http://www.example.org/research#Author> a rdfs:Class .
-
-<http://www.example.org/research#Field_of_Study> a rdfs:Class .
-
-<http://www.example.org/research#Product> a rdfs:Class .
-
-<http://www.example.org/research#Publication> a rdfs:Class .
-
-<http://www.example.org/research#Research> a rdfs:Class .
-
-<http://www.example.org/research#ResearchField> a rdfs:Class .
-
-<http://www.example.org/research#ResearchMethod> a rdfs:Class .
-
-<http://www.example.org/research#ResearchTopic> a rdfs:Class .
-
-<http://www.example.org/research#Researcher> a rdfs:Class .
-
-<http://www.example.org/research#Subject> a rdfs:Class .
-
-<http://www.example.org/research#Topic> a rdfs:Class .
-
-<http://www.example.org/research#diploma> a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-<http://xmlns.com/foaf/0.1/Organization> a rdfs:Class .
-
-<http://example.com#conducts> rdfs:range <http://example.com#ResearchProject>,
-        <http://example.com#Researcher> .
-
-<http://example.com#inField> rdfs:range <http://example.com#ResearchField>,
-        <http://example.com#ResearchProject> .
-
-<http://example.com/ontology/research#conducts> rdfs:range <http://example.com/ontology/research#Research>,
-        <http://example.com/ontology/research#Researcher> .
-
-<http://example.com/ontology/research#employs> rdfs:range <http://example.com/ontology/research#Methodology>,
-        <http://example.com/ontology/research#Research> .
-
-<http://example.com/research#has_publication> rdfs:range <http://example.com/research#Publication>,
-        <http://example.com/research#Research> .
-
-<http://example.com/research#has_researcher> rdfs:range <http://example.com/research#Research>,
-        <http://example.com/research#Researcher> .
-
-<http://example.org/Research#hasPublicationDate> rdfs:range <http://example.org/Research#Publication> .
-
-<http://example.org/Research#hasResearcher> rdfs:range <http://example.org/Research#Research>,
-        <http://example.org/Research#Researcher> .
-
-<http://example.org/Research#hasTopic> rdfs:range <http://example.org/Research#Research>,
-        owl:Thing .
-
-<http://example.org/Research#publishedIn> rdfs:range <http://example.org/Research#Publication>,
-        <http://example.org/Research#Research> .
-
-<http://example.org/conducts> rdfs:range <http://example.org/Research>,
-        <http://example.org/researcher> .
-
-<http://example.org/focusesOn> rdfs:range <http://example.org/Research>,
-        <http://example.org/ResearchTopic> .
-
-<http://example.org/hasResearcher> rdfs:range <http://example.org/Research>,
-        <http://example.org/Researcher> .
-
-<http://example.org/hasTopic> rdfs:range <http://example.org/Research>,
-        <http://example.org/Topic> .
-
-<http://example.org/ontology/research#affiliation> rdfs:range <http://example.org/ontology/research#Researcher>,
-        <http://xmlns.com/foaf/0.1/Organization> .
-
-<http://example.org/ontology/research#conducts> rdfs:range <http://example.org/ontology/research#Research>,
-        <http://example.org/ontology/research#Researcher> .
-
-<http://example.org/ontology/research#dueDate> rdfs:range <http://example.org/ontology/research#ResearchProject> .
-
-<http://example.org/ontology/research#publishes> rdfs:range <http://example.org/ontology/research#ResearchPaper>,
-        <http://example.org/ontology/research#Researcher> .
-
-<http://example.org/research#affiliatedInstitution> rdfs:range <http://example.org/research#Researcher> .
-
-<http://example.org/research#conducts> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#Researcher> .
-
-<http://example.org/research#conductsResearch> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#Researcher> .
-
-<http://example.org/research#description> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#endDate> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#funding> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#hasEndDate> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#hasName> rdfs:range <http://example.org/research#Person> .
-
-<http://example.org/research#hasPublication> rdfs:range <http://example.org/research#Publication>,
-        <http://example.org/research#Research> .
-
-<http://example.org/research#hasResearchTopic> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#ResearchTopic> .
-
-<http://example.org/research#hasResearcher> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#Researcher> .
-
-<http://example.org/research#hasStartDate> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#hasSubject> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#Subject> .
-
-<http://example.org/research#hasTitle> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#inField> rdfs:range <http://example.org/research#Field>,
-        <http://example.org/research#Research> .
-
-<http://example.org/research#institution> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#isAbout> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#Topic> .
-
-<http://example.org/research#isProducedBy> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#Researcher> .
-
-<http://example.org/research#name> rdfs:range <http://example.org/research#Researcher> .
-
-<http://example.org/research#publication> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#publishedIn> rdfs:range <http://example.org/research#Institution>,
-        <http://example.org/research#Research> .
-
-<http://example.org/research#researchTopic> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#researchedBy> rdfs:range <http://example.org/research#Author>,
-        <http://example.org/research#ResearchPaper> .
-
-<http://example.org/research#researcher> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#specializesIn> rdfs:range <http://example.org/research#Research>,
-        <http://example.org/research#Researcher> .
-
-<http://example.org/research#startDate> rdfs:range <http://example.org/research#Research> .
-
-<http://example.org/research#supports> rdfs:range <http://example.org/research#Institution>,
-        <http://example.org/research#Research> .
-
-<http://example.org/research/conducts> rdfs:range <http://example.org/research/Research>,
-        <http://example.org/research/Researcher> .
-
-<http://example.org/research/title> rdfs:range <http://example.org/research/Research> .
-
-<http://www.example.com/#hasResearcher> rdfs:range <http://www.example.com/#Research>,
-        <http://www.example.com/#Researcher> .
-
-<http://www.example.com/#hasSubjectField> rdfs:range <http://www.example.com/#Research>,
-        <http://www.example.com/#SubjectField> .
-
-<http://www.example.org/ontologies/research#conducts> rdfs:range <http://www.example.org/ontologies/research#Research>,
-        <http://www.example.org/ontologies/research#Researcher> .
-
-<http://www.example.org/ontologies/research#inField> rdfs:range <http://www.example.org/ontologies/research#FieldOfStudy>,
-        <http://www.example.org/ontologies/research#Research> .
-
-<http://www.example.org/ontologies/research#usesMethod> rdfs:range <http://www.example.org/ontologies/research#Research>,
-        <http://www.example.org/ontologies/research#ResearchMethod> .
-
-<http://www.example.org/ontology/research#belongsTo> rdfs:range <http://www.example.org/ontology/research#FieldOfStudy>,
-        <http://www.example.org/ontology/research#Research> .
-
-<http://www.example.org/ontology/research#conducts> rdfs:range <http://www.example.org/ontology/research#Research>,
-        <http://www.example.org/ontology/research#Researcher> .
-
-<http://www.example.org/ontology/research#hasResearcher> rdfs:range <http://www.example.org/ontology/research#Research>,
-        <http://www.example.org/ontology/research#Researcher> .
-
-<http://www.example.org/ontology/research#hasTopic> rdfs:range <http://www.example.org/ontology/research#Research>,
-        <http://www.example.org/ontology/research#ResearchTopic> .
-
-<http://www.example.org/ontology/research#isWrittenBy> rdfs:range <http://www.example.org/ontology/research#ResearchPaper>,
-        <http://www.example.org/ontology/research#Researcher> .
-
-<http://www.example.org/ontology/research#publishedIn> rdfs:range <http://www.example.org/ontology/research#Journal>,
-        <http://www.example.org/ontology/research#ResearchPaper> .
-
-<http://www.example.org/research#authorOf> rdfs:range <http://www.example.org/research#Author>,
-        <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#conducts> rdfs:range <http://www.example.org/research#Research>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#contributesTo> rdfs:range <http://www.example.org/research#ResearchField>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#hasAffiliation> rdfs:range <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#hasAreaOfResearch> rdfs:range <http://www.example.org/research#AreaOfResearch>,
-        <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#hasAuthor> rdfs:range <http://www.example.org/research#Product>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#hasDiploma> rdfs:range <http://www.example.org/research#Researcher>,
-        <http://www.example.org/research#diploma> .
-
-<http://www.example.org/research#hasEndDate> rdfs:range <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#hasName> rdfs:range <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#hasPublication> rdfs:range <http://www.example.org/research#Publication>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#hasResearcher> rdfs:range <http://www.example.org/research#Research>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#hasStartDate> rdfs:range <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#hasSubject> rdfs:range <http://www.example.org/research#Research>,
-        <http://www.example.org/research#Subject> .
-
-<http://www.example.org/research#hasTopic> rdfs:range <http://www.example.org/research#Research>,
-        <http://www.example.org/research#Subject>,
-        <http://www.example.org/research#Topic> .
-
-<http://www.example.org/research#inField> rdfs:range <http://www.example.org/research#Research>,
-        <http://www.example.org/research#ResearchField> .
-
-<http://www.example.org/research#outputs> rdfs:range <http://www.example.org/research#Publication>,
-        <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#performs> rdfs:range <http://www.example.org/research#Research>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#publishedIn> rdfs:range <http://www.example.org/research#Publication>,
-        <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#publishes> rdfs:range <http://www.example.org/research#Publication>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#resultsIn> rdfs:range <http://www.example.org/research#Publication>,
-        <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#studies> rdfs:range <http://www.example.org/research#ResearchTopic>,
-        <http://www.example.org/research#Researcher> .
-
-<http://www.example.org/research#study> rdfs:range <http://www.example.org/research#Field_of_Study>,
-        <http://www.example.org/research#Research> .
-
-<http://www.example.org/research#uses> rdfs:range <http://www.example.org/research#Research>,
-        <http://www.example.org/research#ResearchMethod> .
-
-<http://www.example.org/research#workAt> rdfs:range <http://www.example.org/research#Academic_Institution>,
-        <http://www.example.org/research#Author> .
+kastle:abstract a rdf:Property ;
+    rdfs:domain kastle:ResearchPaper ;
+    rdfs:range kastle:Literal .
+
+kastle:affiliatedInstitution a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:string .
+
+kastle:affiliation a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Organization .
+
+kastle:authorOf a rdf:Property ;
+    rdfs:domain kastle:Author ;
+    rdfs:range kastle:Research .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:FieldOfStudy .
+
+kastle:conducts a rdf:Property ;
+    rdfs:domain kastle:Researcher,
+        kastle:researcher ;
+    rdfs:range kastle:Research,
+        kastle:ResearchProject .
+
+kastle:conductsResearch a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Research .
+
+kastle:contributesTo a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:ResearchField .
+
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:string .
+
+kastle:dueDate a rdf:Property ;
+    rdfs:domain kastle:ResearchProject ;
+    rdfs:range kastle:date .
+
+kastle:employs a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Methodology .
+
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:dateTime .
+
+kastle:focusesOn a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:ResearchTopic .
+
+kastle:funding a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:string .
+
+kastle:hasAffiliation a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:string .
+
+kastle:hasAreaOfResearch a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:AreaOfResearch .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Product ;
+    rdfs:range kastle:Researcher .
+
+kastle:hasDiploma a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:diploma .
+
+kastle:hasEndDate a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:date,
+        kastle:dateTime .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Person,
+        kastle:Researcher ;
+    rdfs:range kastle:string .
+
+kastle:hasPublication a rdf:Property ;
+    rdfs:domain kastle:Research,
+        kastle:Researcher ;
+    rdfs:range kastle:Publication,
+        kastle:string .
+
+kastle:hasPublicationDate a rdf:Property ;
+    rdfs:domain kastle:Publication ;
+    rdfs:range kastle:date .
+
+kastle:hasResearchTopic a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:ResearchTopic .
+
+kastle:hasResearcher a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Researcher .
+
+kastle:hasStartDate a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:date,
+        kastle:dateTime .
+
+kastle:hasSubject a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Subject .
+
+kastle:hasSubjectField a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:SubjectField .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:string .
+
+kastle:hasTopic a rdf:Property ;
+    rdfs:domain kastle:Research,
+        kastle:Subject ;
+    rdfs:range kastle:ResearchTopic,
+        kastle:Thing,
+        kastle:Topic,
+        kastle:string .
+
+kastle:has_publication a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Publication .
+
+kastle:has_researcher a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Researcher .
+
+kastle:inField a rdf:Property ;
+    rdfs:domain kastle:Research,
+        kastle:ResearchProject ;
+    rdfs:range kastle:Field,
+        kastle:FieldOfStudy,
+        kastle:ResearchField .
+
+kastle:institution a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:string .
+
+kastle:isAbout a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Topic .
+
+kastle:isProducedBy a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Researcher .
+
+kastle:isWrittenBy a rdf:Property ;
+    rdfs:domain kastle:ResearchPaper ;
+    rdfs:range kastle:Researcher .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:string .
+
+kastle:outputs a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Publication .
+
+kastle:performs a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Research .
+
+kastle:publication a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:string .
+
+kastle:publishedIn a rdf:Property ;
+    rdfs:domain kastle:Research,
+        kastle:ResearchPaper ;
+    rdfs:range kastle:Institution,
+        kastle:Journal,
+        kastle:Publication .
+
+kastle:publishes a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Publication,
+        kastle:ResearchPaper .
+
+kastle:researchTopic a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:string .
+
+kastle:researchedBy a rdf:Property ;
+    rdfs:domain kastle:ResearchPaper ;
+    rdfs:range kastle:Author .
+
+kastle:resultsIn a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Publication .
+
+kastle:specializesIn a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Research .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:dateTime .
+
+kastle:studies a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:ResearchTopic .
+
+kastle:study a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Field_of_Study .
+
+kastle:supports a rdf:Property ;
+    rdfs:domain kastle:Institution ;
+    rdfs:range kastle:Research .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Research,
+        kastle:ResearchPaper ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:topic a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Literal .
+
+kastle:uses a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:ResearchMethod .
+
+kastle:usesMethod a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:ResearchMethod .
+
+kastle:workAt a rdf:Property ;
+    rdfs:domain kastle:Author ;
+    rdfs:range kastle:Academic_Institution .
+
+kastle:researcher a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:string .
 

@@ -1,225 +1,188 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
 
-<http://example.com/ontology/Event> a rdfs:Class .
-
-<http://example.com/time#TimeEvent> a rdfs:Class .
-
-<http://example.org/time#Instant> a rdfs:Class .
-
-<http://example.org/time#Interval> a rdfs:Class .
-
-<http://timeontology.com/ns#SpecificTime> a rdfs:Class .
-
-<http://timeontology.com/ns#Time> a rdfs:Class .
-
-<http://timeontology.com/ns#TimeInterval> a rdfs:Class .
-
-<http://www.example.com/ontology#Event> a rdfs:Class .
-
-<http://www.example.com/ontology#IntervalTime> a rdfs:Class .
-
-<http://www.example.com/ontology#SpecificTime> a rdfs:Class .
-
-<http://www.example.com/ontology#Time> a rdfs:Class .
-
-<http://www.example.com/time#Instant> a rdfs:Class .
-
-<http://www.example.com/time#Interval> a rdfs:Class .
-
-<http://www.example.com/time#TemporalUnit> a rdfs:Class .
-
-<http://www.example.org/TimeInterval> a rdfs:Class .
-
-<http://www.example.org/time#DateTime> a rdfs:Class .
-
-<http://www.example.org/time#Duration> a rdfs:Class .
-
-<http://www.example.org/time#Event> a rdfs:Class .
-
-<http://www.example.org/time#Instant> a rdfs:Class .
-
-<http://www.example.org/time#Interval> a rdfs:Class .
-
-<http://www.example.org/time#Time> a rdfs:Class .
-
-<http://www.example.org/time#TimePeriod> a rdfs:Class .
-
-<http://www.ontology.com/time#DateTime> a rdfs:Class .
-
-<http://www.ontology.com/time#Instant> a rdfs:Class .
-
-<http://www.ontology.com/time#Interval> a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-time:DateTime a rdfs:Class .
-
-time:DateTimeDescription a rdfs:Class .
-
-time:Instant a rdfs:Class .
-
-time:Interval a rdfs:Class .
-
-time:TemporalInterval a rdfs:Class .
-
-time:TemporalPosition a rdfs:Class .
-
-time:TemporalUnit a rdfs:Class .
-
-time:Time a rdfs:Class .
-
-<http://example.com/ontology/hasTime> rdfs:range <http://example.com/ontology/Event> .
-
-<http://example.com/time#description> rdfs:range <http://example.com/time#TimeEvent> .
-
-<http://example.com/time#endTime> rdfs:range <http://example.com/time#TimeEvent>,
-        time:DateTime .
-
-<http://example.com/time#startTime> rdfs:range <http://example.com/time#TimeEvent>,
-        time:DateTime .
-
-<http://example.com/time#title> rdfs:range <http://example.com/time#TimeEvent> .
-
-<http://example.org/time#DateTime> rdfs:range <http://example.org/time#Instant> .
-
-<http://example.org/time#duration> rdfs:range <http://example.org/time#Interval> .
-
-<http://example.org/time#hasBeginning> rdfs:range <http://example.org/time#Instant>,
-        <http://example.org/time#Interval> .
-
-<http://example.org/time#hasEnd> rdfs:range <http://example.org/time#Instant>,
-        <http://example.org/time#Interval> .
-
-<http://timeontology.com/ns#atTime> rdfs:range <http://timeontology.com/ns#SpecificTime>,
-        owl:Thing .
-
-<http://timeontology.com/ns#during> rdfs:range <http://timeontology.com/ns#TimeInterval>,
-        owl:Thing .
-
-<http://timeontology.com/ns#hasTime> rdfs:range <http://timeontology.com/ns#Time>,
-        owl:Thing .
-
-<http://timeontology.com/ns#inFuture> rdfs:range <http://timeontology.com/ns#Time>,
-        owl:Thing .
-
-<http://timeontology.com/ns#inPast> rdfs:range <http://timeontology.com/ns#Time>,
-        owl:Thing .
-
-<http://www.example.com/ontology#endAt> rdfs:range <http://www.example.com/ontology#IntervalTime>,
-        <http://www.example.com/ontology#SpecificTime> .
-
-<http://www.example.com/ontology#hasTime> rdfs:range <http://www.example.com/ontology#Event>,
-        <http://www.example.com/ontology#Time> .
-
-<http://www.example.com/ontology#startAt> rdfs:range <http://www.example.com/ontology#IntervalTime>,
-        <http://www.example.com/ontology#SpecificTime> .
-
-<http://www.example.com/time#endsWith> rdfs:range <http://www.example.com/time#Instant>,
-        <http://www.example.com/time#Interval> .
-
-<http://www.example.com/time#hasDuration> rdfs:range <http://www.example.com/time#Interval>,
-        <http://www.example.com/time#TemporalUnit> .
-
-<http://www.example.com/time#isPartOf> rdfs:range <http://www.example.com/time#Interval> .
-
-<http://www.example.com/time#isUnitOf> rdfs:range <http://www.example.com/time#Interval>,
-        <http://www.example.com/time#TemporalUnit> .
-
-<http://www.example.com/time#startsWith> rdfs:range <http://www.example.com/time#Instant>,
-        <http://www.example.com/time#Interval> .
-
-<http://www.example.org/hasEndTime> rdfs:range <http://www.example.org/TimeInterval> .
-
-<http://www.example.org/hasStartTime> rdfs:range <http://www.example.org/TimeInterval> .
-
-<http://www.example.org/time#begin> rdfs:range <http://www.example.org/time#Instant>,
-        <http://www.example.org/time#Interval> .
-
-<http://www.example.org/time#days> rdfs:range <http://www.example.org/time#Duration> .
-
-<http://www.example.org/time#end> rdfs:range <http://www.example.org/time#Instant>,
-        <http://www.example.org/time#Interval> .
-
-<http://www.example.org/time#endTime> rdfs:range <http://www.example.org/time#Interval> .
-
-<http://www.example.org/time#endedAt> rdfs:range <http://www.example.org/time#TimePeriod> .
-
-<http://www.example.org/time#hasBeginning> rdfs:range <http://www.example.org/time#Instant>,
-        <http://www.example.org/time#Interval> .
-
-<http://www.example.org/time#hasDuration> rdfs:range <http://www.example.org/time#Duration>,
-        <http://www.example.org/time#TimePeriod>,
-        owl:Thing .
-
-<http://www.example.org/time#hasEnd> rdfs:range <http://www.example.org/time#Instant>,
-        <http://www.example.org/time#Interval> .
-
-<http://www.example.org/time#hasEndTime> rdfs:range <http://www.example.org/time#TimePeriod> .
-
-<http://www.example.org/time#hasHour> rdfs:range <http://www.example.org/time#Time> .
-
-<http://www.example.org/time#hasMinute> rdfs:range <http://www.example.org/time#Time> .
-
-<http://www.example.org/time#hasSecond> rdfs:range <http://www.example.org/time#Time> .
-
-<http://www.example.org/time#hasStartTime> rdfs:range <http://www.example.org/time#TimePeriod> .
-
-<http://www.example.org/time#hasTime> rdfs:range <http://www.example.org/time#Event> .
-
-<http://www.example.org/time#inDateTime> rdfs:range <http://www.example.org/time#Instant> .
-
-<http://www.example.org/time#inXSDDateTime> rdfs:range <http://www.example.org/time#DateTime> .
-
-<http://www.example.org/time#isTimePointOf> rdfs:range <http://www.example.org/time#Instant>,
-        <http://www.example.org/time#TimePeriod> .
-
-<http://www.example.org/time#startTime> rdfs:range <http://www.example.org/time#Interval> .
-
-<http://www.example.org/time#startedAt> rdfs:range <http://www.example.org/time#TimePeriod> .
-
-<http://www.ontology.com/time#dateTimeStamp> rdfs:range <http://www.ontology.com/time#DateTime>,
-        <http://www.ontology.com/time#Instant> .
-
-<http://www.ontology.com/time#duration> rdfs:range <http://www.ontology.com/time#Interval> .
-
-<http://www.ontology.com/time#hasBeginning> rdfs:range <http://www.ontology.com/time#Instant>,
-        <http://www.ontology.com/time#Interval> .
-
-<http://www.ontology.com/time#hasEnd> rdfs:range <http://www.ontology.com/time#Instant>,
-        <http://www.ontology.com/time#Interval> .
-
-time:duration rdfs:range time:Interval .
-
-time:hasBeginning rdfs:range time:Instant,
-        time:Interval,
-        time:TemporalInterval,
-        time:TemporalPosition,
-        time:Time .
-
-time:hasDateTime rdfs:range time:Time .
-
-time:hasEnd rdfs:range time:Instant,
-        time:Interval,
-        time:TemporalInterval,
-        time:TemporalPosition,
-        time:Time .
-
-time:hasHour rdfs:range time:Time .
-
-time:hasMinute rdfs:range time:Time .
-
-time:hasSecond rdfs:range time:Time .
-
-time:hasTemporalUnit rdfs:range time:Instant,
-        time:TemporalUnit .
-
-time:hasTimezone rdfs:range time:Time .
-
-time:inXSDDateTime rdfs:range time:DateTimeDescription,
-        time:Instant,
-        time:Time .
-
-time:inXSDDateTimeStamp rdfs:range time:TemporalPosition .
+kastle:atTime a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:SpecificTime .
+
+kastle:begin a rdf:Property ;
+    rdfs:domain kastle:Interval ;
+    rdfs:range kastle:Instant .
+
+kastle:days a rdf:Property ;
+    rdfs:domain kastle:Duration ;
+    rdfs:range kastle:int .
+
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:TimeEvent ;
+    rdfs:range kastle:string .
+
+kastle:during a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:TimeInterval .
+
+kastle:end a rdf:Property ;
+    rdfs:domain kastle:Interval ;
+    rdfs:range kastle:Instant .
+
+kastle:endAt a rdf:Property ;
+    rdfs:domain kastle:IntervalTime ;
+    rdfs:range kastle:SpecificTime .
+
+kastle:endTime a rdf:Property ;
+    rdfs:domain kastle:Interval,
+        kastle:TimeEvent ;
+    rdfs:range kastle:DateTime,
+        kastle:dateTime .
+
+kastle:endedAt a rdf:Property ;
+    rdfs:domain kastle:TimePeriod ;
+    rdfs:range kastle:dateTime .
+
+kastle:endsWith a rdf:Property ;
+    rdfs:domain kastle:Interval ;
+    rdfs:range kastle:Instant .
+
+kastle:hasBeginning a rdf:Property ;
+    rdfs:domain kastle:Interval,
+        kastle:TemporalInterval,
+        kastle:Time ;
+    rdfs:range kastle:Instant,
+        kastle:TemporalPosition .
+
+kastle:hasDateTime a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Interval,
+        kastle:Thing,
+        kastle:TimePeriod ;
+    rdfs:range kastle:Duration,
+        kastle:TemporalUnit,
+        kastle:duration .
+
+kastle:hasEnd a rdf:Property ;
+    rdfs:domain kastle:Interval,
+        kastle:TemporalInterval,
+        kastle:Time ;
+    rdfs:range kastle:Instant,
+        kastle:TemporalPosition .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:TimeInterval,
+        kastle:TimePeriod ;
+    rdfs:range kastle:Literal,
+        kastle:dateTime .
+
+kastle:hasHour a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:int,
+        kastle:integer .
+
+kastle:hasMinute a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:int,
+        kastle:integer .
+
+kastle:hasSecond a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:int,
+        kastle:integer .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:TimeInterval,
+        kastle:TimePeriod ;
+    rdfs:range kastle:Literal,
+        kastle:dateTime .
+
+kastle:hasTemporalUnit a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:TemporalUnit .
+
+kastle:hasTime a rdf:Property ;
+    rdfs:domain kastle:Event,
+        kastle:Thing ;
+    rdfs:range kastle:Time,
+        kastle:dateTime .
+
+kastle:hasTimezone a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:string .
+
+kastle:inDateTime a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:dateTime .
+
+kastle:inFuture a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Time .
+
+kastle:inPast a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Time .
+
+kastle:inXSDDateTime a rdf:Property ;
+    rdfs:domain kastle:DateTime,
+        kastle:Instant,
+        kastle:Time ;
+    rdfs:range kastle:DateTimeDescription,
+        kastle:dateTime .
+
+kastle:inXSDDateTimeStamp a rdf:Property ;
+    rdfs:domain kastle:TemporalPosition ;
+    rdfs:range kastle:dateTimeStamp .
+
+kastle:inXSDDuration a rdf:Property ;
+    rdfs:domain kastle:Interval ;
+    rdfs:range kastle:Literal .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Interval ;
+    rdfs:range kastle:Interval .
+
+kastle:isTimePointOf a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:TimePeriod .
+
+kastle:isUnitOf a rdf:Property ;
+    rdfs:domain kastle:TemporalUnit ;
+    rdfs:range kastle:Interval .
+
+kastle:startAt a rdf:Property ;
+    rdfs:domain kastle:IntervalTime ;
+    rdfs:range kastle:SpecificTime .
+
+kastle:startTime a rdf:Property ;
+    rdfs:domain kastle:Interval,
+        kastle:TimeEvent ;
+    rdfs:range kastle:DateTime,
+        kastle:dateTime .
+
+kastle:startedAt a rdf:Property ;
+    rdfs:domain kastle:TimePeriod ;
+    rdfs:range kastle:dateTime .
+
+kastle:startsWith a rdf:Property ;
+    rdfs:domain kastle:Interval ;
+    rdfs:range kastle:Instant .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:TimeEvent ;
+    rdfs:range kastle:string .
+
+kastle:dateTimeStamp a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:DateTime .
+
+kastle:duration a rdf:Property ;
+    rdfs:domain kastle:Interval,
+        kastle:TimePeriod ;
+    rdfs:range kastle:Literal,
+        kastle:duration .
+
+kastle:DateTime a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:dateTime .
 

@@ -1,225 +1,155 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Agent> a rdfs:Class .
-
-<http://example.com/Force> a rdfs:Class .
-
-<http://example.com/Object> a rdfs:Class .
-
-<http://example.com/ontology/Force> a rdfs:Class .
-
-<http://example.com/ontology/Object> a rdfs:Class .
-
-<http://example.com/ontology/force#Direction> a rdfs:Class .
-
-<http://example.com/ontology/force#Force> a rdfs:Class .
-
-<http://example.com/ontology/force#Magnitude> a rdfs:Class .
-
-<http://example.org/Direction> a rdfs:Class .
-
-<http://example.org/Entity> a rdfs:Class .
-
-<http://example.org/Force> a rdfs:Class .
-
-<http://example.org/Force/Direction> a rdfs:Class .
-
-<http://example.org/Force/Force> a rdfs:Class .
-
-<http://example.org/Force/ForceUnit> a rdfs:Class .
-
-<http://example.org/Object> a rdfs:Class .
-
-<http://example.org/force#Force> a rdfs:Class .
-
-<http://example.org/force_ontology#Change> a rdfs:Class .
-
-<http://example.org/force_ontology#Force> a rdfs:Class .
-
-<http://example.org/ontology#Direction> a rdfs:Class ;
-    rdfs:range <http://example.org/ontology#Direction>,
-        <http://example.org/ontology#Force> .
-
-<http://example.org/ontology#Force> a rdfs:Class .
-
-<http://example.org/ontology#Magnitude> a rdfs:Class ;
-    rdfs:range <http://example.org/ontology#Force> .
-
-<http://example.org/ontology#PhysicalObject> a rdfs:Class .
-
-<http://www.example.com/force#Direction> a rdfs:Class ;
-    rdfs:range <http://www.example.com/force#Direction>,
-        <http://www.example.com/force#Force> .
-
-<http://www.example.com/force#Force> a rdfs:Class .
-
-<http://www.example.com/force#Object> a rdfs:Class .
-
-<http://www.example.com/ontology#Direction> a rdfs:Class .
-
-<http://www.example.com/ontology#Force> a rdfs:Class .
-
-<http://www.example.com/ontology#Magnitude> a rdfs:Class .
-
-<http://www.example.org/#Force> a rdfs:Class .
-
-<http://www.example.org/#Magnitude> a rdfs:Class .
-
-<http://www.example.org/force#> a rdfs:Class .
-
-<http://www.example.org/force#Force> a rdfs:Class .
-
-<http://www.example.org/ontology#PhysicalObject> a rdfs:Class .
-
-<http://www.example.org/ontology/force#> a rdfs:Class .
-
-<http://www.example.org/ontology/force#Force> a rdfs:Class .
-
-<http://www.example.org/ontology/force#ForceType> a rdfs:Class .
-
-<http://www.forceontology.org/Force#Direction> a rdfs:Class ;
-    rdfs:range <http://www.forceontology.org/Force#Direction>,
-        <http://www.forceontology.org/Force#Force> .
-
-<http://www.forceontology.org/Force#Entity> a rdfs:Class .
-
-<http://www.forceontology.org/Force#Force> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-<http://example.com/appliedBy> rdfs:range <http://example.com/Agent>,
-        <http://example.com/Force> .
-
-<http://example.com/appliedOn> rdfs:range <http://example.com/Force>,
-        <http://example.com/Object> .
-
-<http://example.com/ontology/force#hasDirection> rdfs:range <http://example.com/ontology/force#Direction>,
-        <http://example.com/ontology/force#Force> .
-
-<http://example.com/ontology/force#hasMagnitude> rdfs:range <http://example.com/ontology/force#Force>,
-        <http://example.com/ontology/force#Magnitude> .
-
-<http://example.com/ontology/hasForce> rdfs:range <http://example.com/ontology/Force>,
-        <http://example.com/ontology/Object> .
-
-<http://example.org/Force/hasDirection> rdfs:range <http://example.org/Force/Direction>,
-        <http://example.org/Force/Force> .
-
-<http://example.org/Force/hasForceValue> rdfs:range <http://example.org/Force/Force> .
-
-<http://example.org/Force/hasUnit> rdfs:range <http://example.org/Force/Force>,
-        <http://example.org/Force/ForceUnit> .
-
-<http://example.org/appliesForce> rdfs:range <http://example.org/Entity>,
-        <http://example.org/Force> .
-
-<http://example.org/force#actsOn> rdfs:range <http://example.org/force#Force>,
-        owl:Thing .
-
-<http://example.org/force#hasStrength> rdfs:range <http://example.org/force#Force> .
-
-<http://example.org/force_ontology#Direction> rdfs:range <http://example.org/force_ontology#Force> .
-
-<http://example.org/force_ontology#Magnitude> rdfs:range <http://example.org/force_ontology#Force> .
-
-<http://example.org/force_ontology#ResultsIn> rdfs:range <http://example.org/force_ontology#Change>,
-        <http://example.org/force_ontology#Force> .
-
-<http://example.org/hasDirection> rdfs:range <http://example.org/Force> .
-
-<http://example.org/hasForce> rdfs:range <http://example.org/Force>,
-        <http://example.org/Object> .
-
-<http://example.org/hasForceDirection> rdfs:range <http://example.org/Direction>,
-        <http://example.org/Force> .
-
-<http://example.org/hasForceMagnitude> rdfs:range <http://example.org/Force> .
-
-<http://example.org/hasMagnitude> rdfs:range <http://example.org/Force> .
-
-<http://example.org/isAppliedTo> rdfs:range <http://example.org/Force>,
-        <http://example.org/Object> .
-
-<http://example.org/ontology#DirectionOfForce> rdfs:range <http://example.org/ontology#Direction>,
-        <http://example.org/ontology#Force> .
-
-<http://example.org/ontology#MagnitudeOfForce> rdfs:range <http://example.org/ontology#Force> .
-
-<http://example.org/ontology#hasDirection> rdfs:range <http://example.org/ontology#Direction>,
-        <http://example.org/ontology#Force> .
-
-<http://example.org/ontology#hasMagnitude> rdfs:range <http://example.org/ontology#Force>,
-        <http://example.org/ontology#Magnitude> .
-
-<http://example.org/ontology#isForceOf> rdfs:range <http://example.org/ontology#Force>,
-        <http://example.org/ontology#PhysicalObject> .
-
-<http://example.org/resistsForce> rdfs:range <http://example.org/Entity>,
-        <http://example.org/Force> .
-
-<http://www.example.com/force#AppliedOn> rdfs:range <http://www.example.com/force#Force>,
-        <http://www.example.com/force#Object> .
-
-<http://www.example.com/force#Magnitude> rdfs:range <http://www.example.com/force#Force> .
-
-<http://www.example.com/force#hasDirection> rdfs:range <http://www.example.com/force#Direction>,
-        <http://www.example.com/force#Force> .
-
-<http://www.example.com/force#hasMagnitude> rdfs:range <http://www.example.com/force#Force> .
-
-<http://www.example.com/ontology#hasDirection> rdfs:range <http://www.example.com/ontology#Direction>,
-        <http://www.example.com/ontology#Force> .
-
-<http://www.example.com/ontology#hasMagnitude> rdfs:range <http://www.example.com/ontology#Force>,
-        <http://www.example.com/ontology#Magnitude> .
-
-<http://www.example.org/#hasMagnitude> rdfs:range <http://www.example.org/#Force>,
-        <http://www.example.org/#Magnitude> .
-
-<http://www.example.org/force#appliedOn> rdfs:range <http://www.example.org/force#Force>,
-        owl:Thing .
-
-<http://www.example.org/force#applied_to> rdfs:range <http://www.example.org/force#>,
-        rdfs:Resource .
-
-<http://www.example.org/force#magnitude> rdfs:range <http://www.example.org/force#>,
-        <http://www.example.org/force#Force> .
-
-<http://www.example.org/force#measuredIn> rdfs:range <http://www.example.org/force#Force> .
-
-<http://www.example.org/ontology#hasForce> rdfs:range <http://www.example.org/ontology#PhysicalObject> .
-
-<http://www.example.org/ontology/force#Direction> rdfs:range <http://www.example.org/ontology/force#Force> .
-
-<http://www.example.org/ontology/force#Magnitude> rdfs:range <http://www.example.org/ontology/force#Force> .
-
-<http://www.example.org/ontology/force#Newton> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.example.org/ontology/force#Type> rdfs:range <http://www.example.org/ontology/force#Force>,
-        <http://www.example.org/ontology/force#ForceType> .
-
-<http://www.example.org/ontology/force#appliedBy> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.example.org/ontology/force#appliedOn> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.example.org/ontology/force#forceDirection> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.example.org/ontology/force#forceValue> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.example.org/ontology/force#hasDirection> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.example.org/ontology/force#hasMagnitude> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.example.org/ontology/force#unitOfMeasure> rdfs:range <http://www.example.org/ontology/force#> .
-
-<http://www.forceontology.org/Force#AppliedBy> rdfs:range <http://www.forceontology.org/Force#Entity>,
-        <http://www.forceontology.org/Force#Force> .
-
-<http://www.forceontology.org/Force#AppliedOn> rdfs:range <http://www.forceontology.org/Force#Entity>,
-        <http://www.forceontology.org/Force#Force> .
-
-<http://www.forceontology.org/Force#Magnitude> rdfs:range <http://www.forceontology.org/Force#Force> .
+kastle:AppliedBy a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Entity .
+
+kastle:AppliedOn a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Entity,
+        kastle:Object .
+
+kastle:DirectionOfForce a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Direction .
+
+kastle:MagnitudeOfForce a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:float .
+
+kastle:Newton a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:float .
+
+kastle:ResultsIn a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Change .
+
+kastle:Type a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:ForceType .
+
+kastle:actsOn a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Thing .
+
+kastle:appliedBy a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Force ;
+    rdfs:range kastle:Agent,
+        kastle:string .
+
+kastle:appliedOn a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Force ;
+    rdfs:range kastle:Object,
+        kastle:Thing,
+        kastle:string .
+
+kastle:applied_to a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Resource .
+
+kastle:appliesForce a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Entity .
+
+kastle:direction a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Literal .
+
+kastle:forceDirection a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
+
+kastle:forceValue a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:decimal .
+
+kastle:hasDirection a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Force ;
+    rdfs:range kastle:Direction,
+        kastle:Literal,
+        kastle:string .
+
+kastle:hasForce a rdf:Property ;
+    rdfs:domain kastle:Object,
+        kastle:PhysicalObject ;
+    rdfs:range kastle:Force,
+        kastle:decimal .
+
+kastle:hasForceDirection a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Direction .
+
+kastle:hasForceMagnitude a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:decimal .
+
+kastle:hasForceValue a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:decimal .
+
+kastle:hasMagnitude a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Force ;
+    rdfs:range kastle:Literal,
+        kastle:Magnitude,
+        kastle:decimal .
+
+kastle:hasStrength a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:decimal .
+
+kastle:hasUnit a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:ForceUnit .
+
+kastle:isAppliedTo a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Object .
+
+kastle:isForceOf a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:PhysicalObject .
+
+kastle:magnitude a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Force ;
+    rdfs:range kastle:decimal .
+
+kastle:measuredIn a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:string .
+
+kastle:resistsForce a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:Entity .
+
+kastle:resultant_effect a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Literal .
+
+kastle:type a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Literal .
+
+kastle:unitOfMeasure a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
+
+kastle:Magnitude a rdf:Property ;
+    rdfs:domain kastle:Force ;
+    rdfs:range kastle:decimal,
+        kastle:float .
+
+kastle:Direction a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Force ;
+    rdfs:range kastle:Direction,
+        kastle:Literal,
+        kastle:string .
 

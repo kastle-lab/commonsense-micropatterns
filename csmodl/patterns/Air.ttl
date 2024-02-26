@@ -1,172 +1,199 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Air> a rdfs:Class .
-
-<http://example.com/air#Air> a rdfs:Class .
-
-<http://example.org/Air> a rdfs:Class .
-
-<http://example.org/AirPollution> a rdfs:Class .
-
-<http://example.org/ChemicalElement> a rdfs:Class .
-
-<http://example.org/air#> a rdfs:Class .
-
-<http://example.org/air#Air> a rdfs:Class .
-
-<http://example.org/air#AirComposition> a rdfs:Class .
-
-<http://example.org/air#AirCondition> a rdfs:Class .
-
-<http://example.org/air#AirQuality> a rdfs:Class .
-
-<http://example.org/air#Component> a rdfs:Class .
-
-<http://example.org/air#Gas> a rdfs:Class .
-
-<http://example.org/air#component> a rdfs:Class .
-
-<http://example.org/ontology/air#> a rdfs:Class .
-
-<http://example.org/ontology/air#AirQuality> a rdfs:Class .
-
-<http://example.org/ontology/air#Composition> a rdfs:Class .
-
-<http://example.org/ontology/air#Pollutant> a rdfs:Class .
-
-<http://www.example.com/air#> a rdfs:Class .
-
-<http://www.example.org/air#> a rdfs:Class .
-
-<http://www.example.org/air#Air> a rdfs:Class .
-
-<http://www.example.org/air#Composition> a rdfs:Class .
-
-<http://www.example.org/air#Humidity> a rdfs:Class .
-
-<http://www.example.org/air#Pollution> a rdfs:Class .
-
-<http://www.example.org/air#Pressure> a rdfs:Class .
-
-<http://www.example.org/air#Temperature> a rdfs:Class .
-
-<http://example.com/air#hasNitrogen> rdfs:range <http://example.com/air#Air> .
-
-<http://example.com/air#hasOtherGases> rdfs:range <http://example.com/air#Air> .
-
-<http://example.com/air#hasOxygen> rdfs:range <http://example.com/air#Air> .
-
-<http://example.com/containsCarbonDioxide> rdfs:range <http://example.com/Air> .
-
-<http://example.com/containsNitrogen> rdfs:range <http://example.com/Air> .
-
-<http://example.com/containsOxygen> rdfs:range <http://example.com/Air> .
-
-<http://example.org/air#ContainsCarbonDioxide> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#ContainsOxygen> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#HasHumidity> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#HasPressure> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#HasQualityIndex> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#HasTemperature> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#IsPolluted> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#components> rdfs:range <http://example.org/air#>,
-        <http://example.org/air#Component> .
-
-<http://example.org/air#composition> rdfs:range <http://example.org/air#> .
-
-<http://example.org/air#consistsOf> rdfs:range <http://example.org/air#>,
-        <http://example.org/air#component> .
-
-<http://example.org/air#contains> rdfs:range <http://example.org/air#Air>,
-        <http://example.org/air#Component> .
-
-<http://example.org/air#hasComponent> rdfs:range <http://example.org/air#>,
-        <http://example.org/air#component> .
-
-<http://example.org/air#hasComposition> rdfs:range <http://example.org/air#Air>,
-        <http://example.org/air#AirComposition> .
-
-<http://example.org/air#hasHumidity> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#hasQuality> rdfs:range <http://example.org/air#Air>,
-        <http://example.org/air#AirQuality> .
-
-<http://example.org/air#hasTemperature> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#humidity> rdfs:range <http://example.org/air#> .
-
-<http://example.org/air#isComposedOf> rdfs:range <http://example.org/air#Air>,
-        <http://example.org/air#Gas> .
-
-<http://example.org/air#isConditioned> rdfs:range <http://example.org/air#Air>,
-        <http://example.org/air#AirCondition> .
-
-<http://example.org/air#polluted> rdfs:range <http://example.org/air#> .
-
-<http://example.org/air#pollution> rdfs:range <http://example.org/air#> .
-
-<http://example.org/air#pressure> rdfs:range <http://example.org/air#> .
-
-<http://example.org/air#quality> rdfs:range <http://example.org/air#Air> .
-
-<http://example.org/air#temperature> rdfs:range <http://example.org/air#> .
-
-<http://example.org/containsNitrogen> rdfs:range <http://example.org/Air>,
-        <http://example.org/ChemicalElement> .
-
-<http://example.org/containsOxygen> rdfs:range <http://example.org/Air>,
-        <http://example.org/ChemicalElement> .
-
-<http://example.org/hasAirPollution> rdfs:range <http://example.org/Air>,
-        <http://example.org/AirPollution> .
-
-<http://example.org/ontology/air#contains> rdfs:range <http://example.org/ontology/air#AirQuality>,
-        <http://example.org/ontology/air#Pollutant> .
-
-<http://example.org/ontology/air#hasPart> rdfs:range <http://example.org/ontology/air#>,
-        <http://example.org/ontology/air#Composition> .
-
-<http://example.org/ontology/air#percentage> rdfs:range <http://example.org/ontology/air#Composition> .
-
-<http://www.example.com/air#Humidity> rdfs:range <http://www.example.com/air#> .
-
-<http://www.example.com/air#Pressure> rdfs:range <http://www.example.com/air#> .
-
-<http://www.example.com/air#Quality> rdfs:range <http://www.example.com/air#> .
-
-<http://www.example.com/air#Temperature> rdfs:range <http://www.example.com/air#> .
-
-<http://www.example.org/air#containsNitrogen> rdfs:range <http://www.example.org/air#Composition> .
-
-<http://www.example.org/air#containsOxygen> rdfs:range <http://www.example.org/air#Composition> .
-
-<http://www.example.org/air#hasHumidity> rdfs:range <http://www.example.org/air#>,
-        <http://www.example.org/air#Air>,
-        <http://www.example.org/air#Humidity> .
-
-<http://www.example.org/air#hasPollutants> rdfs:range <http://www.example.org/air#Air> .
-
-<http://www.example.org/air#hasPollutionLevel> rdfs:range <http://www.example.org/air#>,
-        <http://www.example.org/air#Pollution> .
-
-<http://www.example.org/air#hasPressure> rdfs:range <http://www.example.org/air#>,
-        <http://www.example.org/air#Air>,
-        <http://www.example.org/air#Pressure> .
-
-<http://www.example.org/air#hasTemperature> rdfs:range <http://www.example.org/air#>,
-        <http://www.example.org/air#Air>,
-        <http://www.example.org/air#Temperature> .
-
-<http://www.example.org/air#hasVolume> rdfs:range <http://www.example.org/air#Air> .
-
-<http://www.example.org/air#isComposedOf> rdfs:range <http://www.example.org/air#Air> .
-
-<http://www.example.org/air#isInArea> rdfs:range <http://www.example.org/air#Air> .
+kastle:ContainsCarbonDioxide a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:ContainsOxygen a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:HasHumidity a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:HasPressure a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:HasQualityIndex a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:int .
+
+kastle:HasTemperature a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:IsPolluted a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:boolean .
+
+kastle:Quality a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
+
+kastle:components a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Component .
+
+kastle:composition a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
+
+kastle:consistsOf a rdf:Property ;
+    rdfs:domain kastle:component ;
+    rdfs:range kastle: .
+
+kastle:contains a rdf:Property ;
+    rdfs:domain kastle:Air,
+        kastle:AirQuality ;
+    rdfs:range kastle:Component,
+        kastle:Pollutant .
+
+kastle:containsCarbonDioxide a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:boolean .
+
+kastle:containsNitrogen a rdf:Property ;
+    rdfs:domain kastle:Air,
+        kastle:Composition ;
+    rdfs:range kastle:ChemicalElement,
+        kastle:boolean,
+        kastle:float .
+
+kastle:containsOxygen a rdf:Property ;
+    rdfs:domain kastle:Air,
+        kastle:Composition ;
+    rdfs:range kastle:ChemicalElement,
+        kastle:boolean,
+        kastle:float .
+
+kastle:hasAirPollution a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:AirPollution .
+
+kastle:hasComponent a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Air ;
+    rdfs:range kastle:Component,
+        kastle:component .
+
+kastle:hasComposition a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:AirComposition .
+
+kastle:hasHumidity a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Air ;
+    rdfs:range kastle:Humidity,
+        kastle:float .
+
+kastle:hasNitrogen a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:hasOtherGases a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:hasOxygen a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:float .
+
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Composition .
+
+kastle:hasPollutants a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:string .
+
+kastle:hasPollutionLevel a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Pollution .
+
+kastle:hasPressure a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Air ;
+    rdfs:range kastle:Pressure,
+        kastle:decimal,
+        kastle:float .
+
+kastle:hasQuality a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:AirQuality .
+
+kastle:hasTemperature a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Air ;
+    rdfs:range kastle:Temperature,
+        kastle:decimal,
+        kastle:float .
+
+kastle:hasVolume a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:decimal .
+
+kastle:humidity a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:float .
+
+kastle:isComposedOf a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:Gas,
+        kastle:string .
+
+kastle:isConditioned a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:AirCondition .
+
+kastle:isInArea a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:string .
+
+kastle:percentage a rdf:Property ;
+    rdfs:domain kastle:Composition ;
+    rdfs:range kastle:decimal .
+
+kastle:pollutant a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:Literal .
+
+kastle:polluted a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:boolean .
+
+kastle:pollution a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:string .
+
+kastle:pressure a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:float .
+
+kastle:provides a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:Benefit .
+
+kastle:quality a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:string .
+
+kastle:temperature a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:float .
+
+kastle:Humidity a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:decimal .
+
+kastle:Pressure a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:decimal .
+
+kastle:Temperature a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:decimal .
 

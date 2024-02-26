@@ -1,331 +1,266 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/War> a rdfs:Class .
-
-<http://example.com/ontology/war#Battles> a rdfs:Class .
-
-<http://example.com/ontology/war#Casualties> a rdfs:Class .
-
-<http://example.com/ontology/war#Combatant> a rdfs:Class .
-
-<http://example.com/ontology/war#Treaty> a rdfs:Class .
-
-<http://example.com/ontology/war#War> a rdfs:Class .
-
-<http://example.com/ontology/war#Weapons> a rdfs:Class .
-
-<http://example.org#Country> a rdfs:Class .
-
-<http://example.org#Location> a rdfs:Class .
-
-<http://example.org#Person> a rdfs:Class .
-
-<http://example.org#War> a rdfs:Class .
-
-<http://example.org/Cause> a rdfs:Class .
-
-<http://example.org/Country> a rdfs:Class .
-
-<http://example.org/Entity> a rdfs:Class .
-
-<http://example.org/Location> a rdfs:Class .
-
-<http://example.org/TimePeriod> a rdfs:Class .
-
-<http://example.org/War> a rdfs:Class .
-
-<http://example.org/ontology/war#War> a rdfs:Class .
-
-<http://example.org/war#Belligerent> a rdfs:Class .
-
-<http://example.org/war#Country> a rdfs:Class .
-
-<http://example.org/war#Location> a rdfs:Class .
-
-<http://example.org/war#War> a rdfs:Class .
-
-<http://example.org/war#WarPart> a rdfs:Class .
-
-<http://example.org/war#Weapon> a rdfs:Class .
-
-<http://example.org/warOntology#Actor> a rdfs:Class .
-
-<http://example.org/warOntology#Cause> a rdfs:Class .
-
-<http://example.org/warOntology#Location> a rdfs:Class .
-
-<http://example.org/warOntology#Outcome> a rdfs:Class .
-
-<http://example.org/warOntology#War> a rdfs:Class .
-
-<http://www.example.com/Battle> a rdfs:Class .
-
-<http://www.example.com/War> a rdfs:Class .
-
-<http://www.example.org/#Country> a rdfs:Class .
-
-<http://www.example.org/#DateTime> a rdfs:Class .
-
-<http://www.example.org/#War> a rdfs:Class .
-
-<http://www.example.org/war#Army> a rdfs:Class .
-
-<http://www.example.org/war#Combatant> a rdfs:Class .
-
-<http://www.example.org/war#Conflicts> a rdfs:Class .
-
-<http://www.example.org/war#Countries> a rdfs:Class .
-
-<http://www.example.org/war#Country> a rdfs:Class .
-
-<http://www.example.org/war#Location> a rdfs:Class .
-
-<http://www.example.org/war#Military> a rdfs:Class .
-
-<http://www.example.org/war#Nation> a rdfs:Class .
-
-<http://www.example.org/war#Reason> a rdfs:Class .
-
-<http://www.example.org/war#Result> a rdfs:Class .
-
-<http://www.example.org/war#Soldier> a rdfs:Class .
-
-<http://www.example.org/war#War> a rdfs:Class .
-
-<http://www.example.org/war#battles> a rdfs:Class .
-
-<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> a rdfs:Class .
-
-<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> a rdfs:Class .
-
-<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> a rdfs:Class .
-
-rdf:langString a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-rdfs:Thing a rdfs:Class .
-
-<http://www.warontology.com/ontology#Weapon> a rdfs:Class .
-
-<http://example.com/hasBasicOutcome> rdfs:range <http://example.com/War> .
-
-<http://example.com/hasEndDate> rdfs:range <http://example.com/War> .
-
-<http://example.com/hasInvolvedCountry> rdfs:range <http://example.com/War> .
-
-<http://example.com/hasName> rdfs:range <http://example.com/War> .
-
-<http://example.com/hasStartDate> rdfs:range <http://example.com/War> .
-
-<http://example.com/ontology/war#CasualtiesIn> rdfs:range <http://example.com/ontology/war#Casualties>,
-        <http://example.com/ontology/war#War> .
-
-<http://example.com/ontology/war#beginsOn> rdfs:range <http://example.com/ontology/war#War> .
-
-<http://example.com/ontology/war#endsOn> rdfs:range <http://example.com/ontology/war#War> .
-
-<http://example.com/ontology/war#endsWith> rdfs:range <http://example.com/ontology/war#Treaty>,
-        <http://example.com/ontology/war#War> .
-
-<http://example.com/ontology/war#hasBattle> rdfs:range <http://example.com/ontology/war#Battles>,
-        <http://example.com/ontology/war#War> .
-
-<http://example.com/ontology/war#hasCombatant> rdfs:range <http://example.com/ontology/war#Combatant>,
-        <http://example.com/ontology/war#War> .
-
-<http://example.com/ontology/war#usesWeapon> rdfs:range <http://example.com/ontology/war#Combatant>,
-        <http://example.com/ontology/war#Weapons> .
-
-<http://example.org#endDate> rdfs:range <http://example.org#War> .
-
-<http://example.org#hasCasualties> rdfs:range <http://example.org#War> .
-
-<http://example.org#hasEndTime> rdfs:range <http://example.org#War> .
-
-<http://example.org#hasLeader> rdfs:range <http://example.org#Country>,
-        <http://example.org#Person> .
-
-<http://example.org#hasLocation> rdfs:range <http://example.org#Location>,
-        <http://example.org#War> .
-
-<http://example.org#hasParticipatingCountry> rdfs:range <http://example.org#Country>,
-        <http://example.org#War> .
-
-<http://example.org#hasStartTime> rdfs:range <http://example.org#War> .
-
-<http://example.org#involvedCountry> rdfs:range <http://example.org#Country>,
-        <http://example.org#War> .
-
-<http://example.org#startDate> rdfs:range <http://example.org#War> .
-
-<http://example.org/hasBelligerent> rdfs:range <http://example.org/Entity>,
-        <http://example.org/War> .
-
-<http://example.org/hasCause> rdfs:range <http://example.org/Cause>,
-        <http://example.org/War> .
-
-<http://example.org/hasLocation> rdfs:range <http://example.org/Location>,
-        <http://example.org/War> .
-
-<http://example.org/hasTimeframe> rdfs:range <http://example.org/TimePeriod>,
-        <http://example.org/War> .
-
-<http://example.org/involvedCountry> rdfs:range <http://example.org/Country>,
-        <http://example.org/War> .
-
-<http://example.org/ontology/war#causedBy> rdfs:range <http://example.org/ontology/war#War>,
-        rdfs:Thing .
-
-<http://example.org/ontology/war#endTime> rdfs:range <http://example.org/ontology/war#War>,
-        rdf:langString .
-
-<http://example.org/ontology/war#hasCasualties> rdfs:range <http://example.org/ontology/war#War>,
-        rdf:langString .
-
-<http://example.org/ontology/war#involvedParty> rdfs:range <http://example.org/ontology/war#War>,
-        rdfs:Thing .
-
-<http://example.org/ontology/war#startTime> rdfs:range <http://example.org/ontology/war#War>,
-        rdf:langString .
-
-<http://example.org/war#beganOn> rdfs:range <http://example.org/war#War> .
-
-<http://example.org/war#belligerent> rdfs:range <http://example.org/war#Country>,
-        <http://example.org/war#War> .
-
-<http://example.org/war#belligerentName> rdfs:range <http://example.org/war#Belligerent> .
-
-<http://example.org/war#casualties> rdfs:range <http://example.org/war#War> .
-
-<http://example.org/war#consequence> rdfs:range <http://example.org/war#War> .
-
-<http://example.org/war#dateEnded> rdfs:range <http://example.org/war#War> .
-
-<http://example.org/war#dateStarted> rdfs:range <http://example.org/war#War> .
-
-<http://example.org/war#endedOn> rdfs:range <http://example.org/war#War> .
-
-<http://example.org/war#hasBelligerent> rdfs:range <http://example.org/war#Belligerent>,
-        <http://example.org/war#War> .
-
-<http://example.org/war#hasWarPart> rdfs:range <http://example.org/war#War>,
-        <http://example.org/war#WarPart> .
-
-<http://example.org/war#location> rdfs:range <http://example.org/war#Location>,
-        <http://example.org/war#War> .
-
-<http://example.org/war#participant> rdfs:range <http://example.org/war#Belligerent>,
-        <http://example.org/war#War> .
-
-<http://example.org/war#usesWeapon> rdfs:range <http://example.org/war#Belligerent>,
-        <http://example.org/war#Weapon> .
-
-<http://example.org/warOntology#hasCause> rdfs:range <http://example.org/warOntology#Cause>,
-        <http://example.org/warOntology#War> .
-
-<http://example.org/warOntology#hasDate> rdfs:range <http://example.org/warOntology#War> .
-
-<http://example.org/warOntology#hasLocation> rdfs:range <http://example.org/warOntology#Location>,
-        <http://example.org/warOntology#War> .
-
-<http://example.org/warOntology#hasOutcome> rdfs:range <http://example.org/warOntology#Outcome>,
-        <http://example.org/warOntology#War> .
-
-<http://example.org/warOntology#hasParticipant> rdfs:range <http://example.org/warOntology#Actor>,
-        <http://example.org/warOntology#War> .
-
-<http://www.example.com/hasBattle> rdfs:range <http://www.example.com/Battle>,
-        <http://www.example.com/War> .
-
-<http://www.example.com/hasLocation> rdfs:range <http://www.example.com/Battle>,
-        rdfs:Resource .
-
-<http://www.example.com/involvesCountry> rdfs:range <http://www.example.com/War>,
-        rdfs:Resource .
-
-<http://www.example.org/#hasEndTime> rdfs:range <http://www.example.org/#DateTime>,
-        <http://www.example.org/#War> .
-
-<http://www.example.org/#hasStartTime> rdfs:range <http://www.example.org/#DateTime>,
-        <http://www.example.org/#War> .
-
-<http://www.example.org/#involvesCountry> rdfs:range <http://www.example.org/#Country>,
-        <http://www.example.org/#War> .
-
-<http://www.example.org/war#casualties> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#causeOfWar> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#commencesAt> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#endYear> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#endsAt> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasBattle> rdfs:range <http://www.example.org/war#War>,
-        <http://www.example.org/war#battles> .
-
-<http://www.example.org/war#hasCasualties> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasCombatant1> rdfs:range <http://www.example.org/war#Country>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasCombatant2> rdfs:range <http://www.example.org/war#Country>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasConflict> rdfs:range <http://www.example.org/war#Conflicts>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasEndDate> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasEndTime> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasInvolved> rdfs:range <http://www.example.org/war#Army>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasLocation> rdfs:range <http://www.example.org/war#Location>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasMilitary> rdfs:range <http://www.example.org/war#Military>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasParticipant> rdfs:range <http://www.example.org/war#Combatant>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasReason> rdfs:range <http://www.example.org/war#Reason>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasResult> rdfs:range <http://www.example.org/war#Result>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasStartDate> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#hasStartTime> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#involvedCountry> rdfs:range <http://www.example.org/war#Countries>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#involves> rdfs:range <http://www.example.org/war#Nation>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#participatesIn> rdfs:range <http://www.example.org/war#Soldier>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#participatingCountry> rdfs:range <http://www.example.org/war#Country>,
-        <http://www.example.org/war#War> .
-
-<http://www.example.org/war#resultOfWar> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.example.org/war#startYear> rdfs:range <http://www.example.org/war#War> .
-
-<http://www.warontology.com/ontology#hasLocation> rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event>,
-        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> .
-
-<http://www.warontology.com/ontology#participatesIn> rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>,
-        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> .
-
-<http://www.warontology.com/ontology#uses> rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>,
-        <http://www.warontology.com/ontology#Weapon> .
+kastle:CasualtiesIn a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Casualties .
+
+kastle:beganOn a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:dateTime .
+
+kastle:beginsOn a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:date .
+
+kastle:belligerent a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Country .
+
+kastle:belligerentName a rdf:Property ;
+    rdfs:domain kastle:Belligerent ;
+    rdfs:range kastle:string .
+
+kastle:casualties a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:integer .
+
+kastle:causeOfWar a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:string .
+
+kastle:causedBy a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Thing .
+
+kastle:commencesAt a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:date .
+
+kastle:consequence a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:string .
+
+kastle:dateEnded a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:dateTime .
+
+kastle:dateStarted a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:dateTime .
+
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:dateTime .
+
+kastle:endTime a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:langString .
+
+kastle:endYear a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:date .
+
+kastle:endedOn a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:dateTime .
+
+kastle:endsAt a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:date .
+
+kastle:endsOn a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:date .
+
+kastle:endsWith a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Treaty .
+
+kastle:hasBasicOutcome a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:string .
+
+kastle:hasBattle a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Battle,
+        kastle:Battles,
+        kastle:battles .
+
+kastle:hasBelligerent a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Belligerent,
+        kastle:Entity .
+
+kastle:hasCasualties a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Literal,
+        kastle:integer,
+        kastle:langString .
+
+kastle:hasCause a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Cause .
+
+kastle:hasCombatant a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Combatant .
+
+kastle:hasCombatant1 a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Country .
+
+kastle:hasCombatant2 a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Country .
+
+kastle:hasConflict a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Conflicts .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasEndDate a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Literal,
+        kastle:date .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:DateTime,
+        kastle:Literal,
+        kastle:dateTime .
+
+kastle:hasInvolved a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Army .
+
+kastle:hasInvolvedCountry a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:string .
+
+kastle:hasLeader a rdf:Property ;
+    rdfs:domain kastle:Country ;
+    rdfs:range kastle:Person .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Battle,
+        kastle:Event,
+        kastle:War ;
+    rdfs:range kastle:Location,
+        kastle:Place,
+        kastle:Resource .
+
+kastle:hasMilitary a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Military .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:string .
+
+kastle:hasOutcome a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Outcome .
+
+kastle:hasParticipant a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Actor,
+        kastle:Combatant .
+
+kastle:hasParticipatingCountry a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Country .
+
+kastle:hasReason a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Reason .
+
+kastle:hasResult a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Result .
+
+kastle:hasStartDate a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Literal,
+        kastle:date .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:DateTime,
+        kastle:Literal,
+        kastle:dateTime .
+
+kastle:hasTimeframe a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:TimePeriod .
+
+kastle:hasWarPart a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:WarPart .
+
+kastle:involvedCountry a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Countries,
+        kastle:Country .
+
+kastle:involvedParty a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Thing .
+
+kastle:involves a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Nation .
+
+kastle:involvesCountry a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Country,
+        kastle:Resource .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Location .
+
+kastle:participant a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Belligerent .
+
+kastle:participatesIn a rdf:Property ;
+    rdfs:domain kastle:Agent,
+        kastle:Soldier ;
+    rdfs:range kastle:Event,
+        kastle:War .
+
+kastle:participatingCountry a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:Country .
+
+kastle:resultOfWar a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:string .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:dateTime .
+
+kastle:startTime a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:langString .
+
+kastle:startYear a rdf:Property ;
+    rdfs:domain kastle:War ;
+    rdfs:range kastle:date .
+
+kastle:uses a rdf:Property ;
+    rdfs:domain kastle:Agent ;
+    rdfs:range kastle:Weapon .
+
+kastle:usesWeapon a rdf:Property ;
+    rdfs:domain kastle:Belligerent,
+        kastle:Combatant ;
+    rdfs:range kastle:Weapon,
+        kastle:Weapons .
 

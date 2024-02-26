@@ -1,169 +1,210 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Day> a rdfs:Class .
-
-<http://example.com/day#Day> a rdfs:Class .
-
-<http://example.org/Calendar> a rdfs:Class .
-
-<http://example.org/Day> a rdfs:Class .
-
-<http://example.org/DayOntology#Day> a rdfs:Class .
-
-<http://example.org/day#> a rdfs:Class .
-
-<http://example.org/day#Activity> a rdfs:Class .
-
-<http://example.org/day#Day> a rdfs:Class .
-
-<http://example.org/day#DayOfWeek> a rdfs:Class .
-
-<http://example.org/day#Event> a rdfs:Class .
-
-<http://example.org/day#PartOfDay> a rdfs:Class .
-
-<http://example.org/day#Time> a rdfs:Class .
-
-<http://example.org/day#Weather> a rdfs:Class .
-
-<http://example.org/ontology/day#Day> a rdfs:Class .
-
-<http://example.org/ontology/day#DayPart> a rdfs:Class .
-
-<http://example.org/ontology/day#WeatherCondition> a rdfs:Class .
-
-<http://ontology.example.org/day#Day> a rdfs:Class .
-
-<http://www.example.org/#Day> a rdfs:Class .
-
-<http://www.example.org/#Hour> a rdfs:Class .
-
-<http://www.example.org/#Minute> a rdfs:Class .
-
-<http://www.example.org/#PartOfDay> a rdfs:Class .
-
-<http://www.example.org/#Second> a rdfs:Class .
-
-<http://www.example.org/Day#Day> a rdfs:Class .
-
-<http://example.com/day#hasName> rdfs:range <http://example.com/day#Day> .
-
-<http://example.com/day#hasTimeOfDay> rdfs:range <http://example.com/day#Day> .
-
-<http://example.com/dayOfMonth> rdfs:range <http://example.com/Day> .
-
-<http://example.com/dayOfWeek> rdfs:range <http://example.com/Day> .
-
-<http://example.com/dayOfYear> rdfs:range <http://example.com/Day> .
-
-<http://example.org/DayOntology#hasDate> rdfs:range <http://example.org/DayOntology#Day> .
-
-<http://example.org/DayOntology#hasDaylightDuration> rdfs:range <http://example.org/DayOntology#Day> .
-
-<http://example.org/DayOntology#hasTemperature> rdfs:range <http://example.org/DayOntology#Day> .
-
-<http://example.org/day#beginningOfDay> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#endOfDay> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#hasActivity> rdfs:range <http://example.org/day#Activity>,
-        <http://example.org/day#Time> .
-
-<http://example.org/day#hasAfternoon> rdfs:range <http://example.org/day#> .
-
-<http://example.org/day#hasDate> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#hasDayName> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#hasDayNumber> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#hasDayOfMonth> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#hasDayOfTheWeek> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#hasDayOfWeek> rdfs:range <http://example.org/day#Day>,
-        <http://example.org/day#DayOfWeek> .
-
-<http://example.org/day#hasDayOfYear> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#hasEvening> rdfs:range <http://example.org/day#> .
-
-<http://example.org/day#hasEvent> rdfs:range <http://example.org/day#Day>,
-        <http://example.org/day#Event> .
-
-<http://example.org/day#hasMorning> rdfs:range <http://example.org/day#> .
-
-<http://example.org/day#hasNight> rdfs:range <http://example.org/day#> .
-
-<http://example.org/day#hasPartOfDay> rdfs:range <http://example.org/day#Day>,
-        <http://example.org/day#PartOfDay> .
-
-<http://example.org/day#hasPrecipitation> rdfs:range <http://example.org/day#Weather> .
-
-<http://example.org/day#hasTemperature> rdfs:range <http://example.org/day#Day>,
-        <http://example.org/day#Weather> .
-
-<http://example.org/day#hasTime> rdfs:range <http://example.org/day#Day>,
-        <http://example.org/day#Time> .
-
-<http://example.org/day#hasWeather> rdfs:range <http://example.org/day#Day>,
-        <http://example.org/day#Weather> .
-
-<http://example.org/day#isHoliday> rdfs:range <http://example.org/day#> .
-
-<http://example.org/day#isWeekday> rdfs:range <http://example.org/day#Day> .
-
-<http://example.org/day#isWeekend> rdfs:range <http://example.org/day#>,
-        <http://example.org/day#Day> .
-
-<http://example.org/hasDay> rdfs:range <http://example.org/Calendar>,
-        <http://example.org/Day> .
-
-<http://example.org/ontology/day#hasDayPart> rdfs:range <http://example.org/ontology/day#Day>,
-        <http://example.org/ontology/day#DayPart> .
-
-<http://example.org/ontology/day#hasEndTime> rdfs:range <http://example.org/ontology/day#DayPart> .
-
-<http://example.org/ontology/day#hasStartTime> rdfs:range <http://example.org/ontology/day#DayPart> .
-
-<http://example.org/ontology/day#hasTemperature> rdfs:range <http://example.org/ontology/day#Day> .
-
-<http://example.org/ontology/day#hasWeatherCondition> rdfs:range <http://example.org/ontology/day#Day>,
-        <http://example.org/ontology/day#WeatherCondition> .
-
-<http://ontology.example.org/day#hasAfternoon> rdfs:range <http://ontology.example.org/day#Day> .
-
-<http://ontology.example.org/day#hasEvening> rdfs:range <http://ontology.example.org/day#Day> .
-
-<http://ontology.example.org/day#hasMorning> rdfs:range <http://ontology.example.org/day#Day> .
-
-<http://ontology.example.org/day#hasNight> rdfs:range <http://ontology.example.org/day#Day> .
-
-<http://ontology.example.org/day#hasTemperature> rdfs:range <http://ontology.example.org/day#Day> .
-
-<http://www.example.org/#hasHours> rdfs:range <http://www.example.org/#Day>,
-        <http://www.example.org/#Hour> .
-
-<http://www.example.org/#hasMinutes> rdfs:range <http://www.example.org/#Hour>,
-        <http://www.example.org/#Minute> .
-
-<http://www.example.org/#hasPartOfDay> rdfs:range <http://www.example.org/#Day>,
-        <http://www.example.org/#PartOfDay> .
-
-<http://www.example.org/#hasSeconds> rdfs:range <http://www.example.org/#Minute>,
-        <http://www.example.org/#Second> .
-
-<http://www.example.org/Day#endsAt> rdfs:range <http://www.example.org/Day#Day> .
-
-<http://www.example.org/Day#hasDaylight> rdfs:range <http://www.example.org/Day#Day> .
-
-<http://www.example.org/Day#hasHumidity> rdfs:range <http://www.example.org/Day#Day> .
-
-<http://www.example.org/Day#hasSunrise> rdfs:range <http://www.example.org/Day#Day> .
-
-<http://www.example.org/Day#hasSunset> rdfs:range <http://www.example.org/Day#Day> .
-
-<http://www.example.org/Day#hasTemperature> rdfs:range <http://www.example.org/Day#Day> .
-
-<http://www.example.org/Day#startsAt> rdfs:range <http://www.example.org/Day#Day> .
+kastle:EventType a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Literal .
+
+kastle:beginningOfDay a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:dateTime .
+
+kastle:dayOfMonth a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:int .
+
+kastle:dayOfWeek a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:string .
+
+kastle:dayOfYear a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:int .
+
+kastle:endOfDay a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:dateTime .
+
+kastle:endsAt a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:time .
+
+kastle:hasActivity a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:Activity .
+
+kastle:hasAfternoon a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Day ;
+    rdfs:range kastle:boolean .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:date .
+
+kastle:hasDay a rdf:Property ;
+    rdfs:domain kastle:Calendar,
+        kastle:Day ;
+    rdfs:range kastle:date,
+        kastle:string .
+
+kastle:hasDayName a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:string .
+
+kastle:hasDayNumber a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:integer .
+
+kastle:hasDayOfMonth a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:integer .
+
+kastle:hasDayOfTheWeek a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:string .
+
+kastle:hasDayOfWeek a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:DayOfWeek,
+        kastle:Literal,
+        kastle:string .
+
+kastle:hasDayOfYear a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:integer,
+        kastle:string .
+
+kastle:hasDayPart a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:DayPart .
+
+kastle:hasDaylight a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:boolean .
+
+kastle:hasDaylightDuration a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:duration .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:DayPart ;
+    rdfs:range kastle:time .
+
+kastle:hasEvening a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Day ;
+    rdfs:range kastle:boolean .
+
+kastle:hasEvent a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Event .
+
+kastle:hasHours a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Hour .
+
+kastle:hasHumidity a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:float .
+
+kastle:hasMinutes a rdf:Property ;
+    rdfs:domain kastle:Hour ;
+    rdfs:range kastle:Minute .
+
+kastle:hasMorning a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Day ;
+    rdfs:range kastle:boolean .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:string .
+
+kastle:hasNight a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Day ;
+    rdfs:range kastle:boolean .
+
+kastle:hasPartOfDay a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:PartOfDay .
+
+kastle:hasPrecipitation a rdf:Property ;
+    rdfs:domain kastle:Weather ;
+    rdfs:range kastle:integer .
+
+kastle:hasSeconds a rdf:Property ;
+    rdfs:domain kastle:Minute ;
+    rdfs:range kastle:Second .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:DayPart ;
+    rdfs:range kastle:time .
+
+kastle:hasSunrise a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:time .
+
+kastle:hasSunset a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:time .
+
+kastle:hasTemperature a rdf:Property ;
+    rdfs:domain kastle:Day,
+        kastle:Weather ;
+    rdfs:range kastle:float,
+        kastle:integer .
+
+kastle:hasTime a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Time .
+
+kastle:hasTimeOfDay a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:string .
+
+kastle:hasWeather a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Literal,
+        kastle:Weather .
+
+kastle:hasWeatherCondition a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Literal,
+        kastle:WeatherCondition .
+
+kastle:hasWeekday a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Literal .
+
+kastle:isHoliday a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:boolean .
+
+kastle:isPartOfWeek a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:Week .
+
+kastle:isWeekday a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:boolean .
+
+kastle:isWeekend a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Day ;
+    rdfs:range kastle:boolean .
+
+kastle:startsAt a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:time .
+
+kastle:sunriseTime a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:dateTime .
+
+kastle:sunsetTime a rdf:Property ;
+    rdfs:domain kastle:Day ;
+    rdfs:range kastle:dateTime .
 

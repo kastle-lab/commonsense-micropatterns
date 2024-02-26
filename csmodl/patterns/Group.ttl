@@ -1,258 +1,128 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://dbpedia.org/ontology/Group> a rdfs:Class .
-
-<http://dbpedia.org/ontology/Person> a rdfs:Class .
-
-<http://example.com#Group> a rdfs:Class .
-
-<http://example.com#Member> a rdfs:Class .
-
-<http://example.com#Person> a rdfs:Class .
-
-<http://example.com/Group> a rdfs:Class .
-
-<http://example.com/Group#Group> a rdfs:Class .
-
-<http://example.com/Group#Member> a rdfs:Class .
-
-<http://example.com/GroupLeader> a rdfs:Class .
-
-<http://example.com/GroupMember> a rdfs:Class .
-
-<http://example.com/group#Group> a rdfs:Class .
-
-<http://example.com/group#Member> a rdfs:Class .
-
-<http://example.com/group_ontology#Group> a rdfs:Class .
-
-<http://example.org#Group> a rdfs:Class .
-
-<http://example.org#Person> a rdfs:Class .
-
-<http://example.org/#Group> a rdfs:Class .
-
-<http://example.org/#Person> a rdfs:Class .
-
-<http://example.org/Group> a rdfs:Class .
-
-<http://example.org/GroupOntology#Group> a rdfs:Class .
-
-<http://example.org/GroupOntology#GroupLeader> a rdfs:Class .
-
-<http://example.org/GroupOntology#GroupMember> a rdfs:Class .
-
-<http://example.org/Individual> a rdfs:Class .
-
-<http://example.org/Member> a rdfs:Class .
-
-<http://example.org/Person> a rdfs:Class .
-
-<http://example.org/group#Group> a rdfs:Class .
-
-<http://example.org/group#GroupType> a rdfs:Class .
-
-<http://example.org/group#Member> a rdfs:Class .
-
-<http://example.org/group#Role> a rdfs:Class .
-
-<http://example.org/group-ontology#Group> a rdfs:Class .
-
-<http://example.org/group-ontology#Member> a rdfs:Class .
-
-<http://example.org/group/Group> a rdfs:Class .
-
-<http://example.org/group/Person> a rdfs:Class .
-
-<http://example.org/terms/group#Group> a rdfs:Class .
-
-<http://www.example.com/namespace#Group> a rdfs:Class .
-
-<http://www.example.com/namespace#Person> a rdfs:Class .
-
-<http://www.example.org/ontology#Group> a rdfs:Class .
-
-<http://www.example.org/ontology#Individual> a rdfs:Class .
-
-<http://www.example.org/ontology#Member> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-owl:Thing a rdfs:Class .
-
-<http://dbpedia.org/ontology/GroupSize> rdfs:range <http://dbpedia.org/ontology/Group> .
-
-<http://dbpedia.org/ontology/hasMember> rdfs:range <http://dbpedia.org/ontology/Group>,
-        <http://dbpedia.org/ontology/Person> .
-
-<http://example.com#GroupID> rdfs:range <http://example.com#Group> .
-
-<http://example.com#GroupName> rdfs:range <http://example.com#Group> .
-
-<http://example.com#groupID> rdfs:range <http://example.com#Group> .
-
-<http://example.com#groupName> rdfs:range <http://example.com#Group> .
-
-<http://example.com#groupSize> rdfs:range <http://example.com#Group> .
-
-<http://example.com#hasMember> rdfs:range <http://example.com#Group>,
-        <http://example.com#Member>,
-        <http://example.com#Person> .
-
-<http://example.com#memberName> rdfs:range <http://example.com#Member> .
-
-<http://example.com#memberOf> rdfs:range <http://example.com#Group>,
-        <http://example.com#Member> .
-
-<http://example.com/Group#groupDescription> rdfs:range <http://example.com/Group#Group> .
-
-<http://example.com/Group#groupMember> rdfs:range <http://example.com/Group#Group>,
-        <http://example.com/Group#Member> .
-
-<http://example.com/Group#groupName> rdfs:range <http://example.com/Group#Group> .
-
-<http://example.com/Group#groupSize> rdfs:range <http://example.com/Group#Group> .
-
-<http://example.com/Group#memberName> rdfs:range <http://example.com/Group#Member> .
-
-<http://example.com/Group#memberOf> rdfs:range <http://example.com/Group#Group>,
-        <http://example.com/Group#Member> .
-
-<http://example.com/Group#memberRole> rdfs:range <http://example.com/Group#Member> .
-
-<http://example.com/group#GroupSize> rdfs:range <http://example.com/group#Group> .
-
-<http://example.com/group#establishedDate> rdfs:range <http://example.com/group#Group> .
-
-<http://example.com/group#groupName> rdfs:range <http://example.com/group#Group> .
-
-<http://example.com/group#hasMember> rdfs:range <http://example.com/group#Group>,
-        <http://example.com/group#Member>,
-        owl:Thing .
-
-<http://example.com/group#memberName> rdfs:range <http://example.com/group#Member> .
-
-<http://example.com/group#name> rdfs:range <http://example.com/group#Group> .
-
-<http://example.com/group#size> rdfs:range <http://example.com/group#Group> .
-
-<http://example.com/group_ontology#groupSize> rdfs:range <http://example.com/group_ontology#Group> .
-
-<http://example.com/group_ontology#hasLeader> rdfs:range <http://example.com/group_ontology#Group>,
-        rdfs:Resource .
-
-<http://example.com/group_ontology#hasMember> rdfs:range <http://example.com/group_ontology#Group>,
-        rdfs:Resource .
-
-<http://example.com/leader> rdfs:range <http://example.com/Group>,
-        <http://example.com/GroupLeader> .
-
-<http://example.com/member> rdfs:range <http://example.com/Group>,
-        <http://example.com/GroupMember> .
-
-<http://example.org#hasGroupName> rdfs:range <http://example.org#Group> .
-
-<http://example.org#hasGroupSize> rdfs:range <http://example.org#Group> .
-
-<http://example.org#hasMember> rdfs:range <http://example.org#Group>,
-        <http://example.org#Person> .
-
-<http://example.org/#groupName> rdfs:range <http://example.org/#Group> .
-
-<http://example.org/#groupSize> rdfs:range <http://example.org/#Group> .
-
-<http://example.org/#hasMember> rdfs:range <http://example.org/#Group>,
-        <http://example.org/#Person> .
-
-<http://example.org/GroupOntology#groupName> rdfs:range <http://example.org/GroupOntology#Group> .
-
-<http://example.org/GroupOntology#hasLeader> rdfs:range <http://example.org/GroupOntology#Group>,
-        <http://example.org/GroupOntology#GroupLeader> .
-
-<http://example.org/GroupOntology#hasMember> rdfs:range <http://example.org/GroupOntology#Group>,
-        <http://example.org/GroupOntology#GroupMember> .
-
-<http://example.org/group#groupMember> rdfs:range <http://example.org/group#Group>,
-        <http://example.org/group#Member> .
-
-<http://example.org/group#groupName> rdfs:range <http://example.org/group#Group> .
-
-<http://example.org/group#groupSize> rdfs:range <http://example.org/group#Group> .
-
-<http://example.org/group#hasGroupSize> rdfs:range <http://example.org/group#Group> .
-
-<http://example.org/group#hasLeader> rdfs:range <http://example.org/group#Group>,
-        rdfs:Resource .
-
-<http://example.org/group#hasMember> rdfs:range <http://example.org/group#Group>,
-        <http://example.org/group#Member>,
-        rdfs:Resource .
-
-<http://example.org/group#hasRole> rdfs:range <http://example.org/group#Member>,
-        <http://example.org/group#Role> .
-
-<http://example.org/group#memberName> rdfs:range <http://example.org/group#Member> .
-
-<http://example.org/group#name> rdfs:range <http://example.org/group#Group> .
-
-<http://example.org/group#ofType> rdfs:range <http://example.org/group#Group>,
-        <http://example.org/group#GroupType> .
-
-<http://example.org/group-ontology#groupName> rdfs:range <http://example.org/group-ontology#Group> .
-
-<http://example.org/group-ontology#groupSize> rdfs:range <http://example.org/group-ontology#Group> .
-
-<http://example.org/group-ontology#hasMember> rdfs:range <http://example.org/group-ontology#Group>,
-        owl:Thing .
-
-<http://example.org/group-ontology#memberOf> rdfs:range <http://example.org/group-ontology#Group>,
-        <http://example.org/group-ontology#Member> .
-
-<http://example.org/group/creationDate> rdfs:range <http://example.org/group/Group> .
-
-<http://example.org/group/hasMember> rdfs:range <http://example.org/group/Group>,
-        <http://example.org/group/Person> .
-
-<http://example.org/group/isPartOf> rdfs:range <http://example.org/group/Group>,
-        <http://example.org/group/Person> .
-
-<http://example.org/group/name> rdfs:range <http://example.org/group/Group> .
-
-<http://example.org/groupName> rdfs:range <http://example.org/Group> .
-
-<http://example.org/groupSize> rdfs:range <http://example.org/Group> .
-
-<http://example.org/hasMember> rdfs:range <http://example.org/Group>,
-        <http://example.org/Individual>,
-        <http://example.org/Person> .
-
-<http://example.org/member> rdfs:range <http://example.org/Group>,
-        rdfs:Resource .
-
-<http://example.org/memberOf> rdfs:range <http://example.org/Group>,
-        <http://example.org/Member> .
-
-<http://example.org/terms/group#createdOn> rdfs:range <http://example.org/terms/group#Group> .
-
-<http://example.org/terms/group#description> rdfs:range <http://example.org/terms/group#Group> .
-
-<http://example.org/terms/group#hasLeader> rdfs:range <http://example.org/terms/group#Group>,
-        rdfs:Resource .
-
-<http://example.org/terms/group#member> rdfs:range <http://example.org/terms/group#Group>,
-        rdfs:Resource .
-
-<http://example.org/terms/group#name> rdfs:range <http://example.org/terms/group#Group> .
-
-<http://www.example.com/namespace#hasMember> rdfs:range <http://www.example.com/namespace#Group>,
-        <http://www.example.com/namespace#Person> .
-
-<http://www.example.org/ontology#hasAge> rdfs:range <http://www.example.org/ontology#Member> .
-
-<http://www.example.org/ontology#hasMember> rdfs:range <http://www.example.org/ontology#Group>,
-        <http://www.example.org/ontology#Individual>,
-        <http://www.example.org/ontology#Member> .
-
-<http://www.example.org/ontology#hasName> rdfs:range <http://www.example.org/ontology#Member> .
+kastle:GroupID a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:integer .
+
+kastle:GroupName a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:string .
+
+kastle:GroupSize a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:integer .
+
+kastle:createdOn a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:date .
+
+kastle:creationDate a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:date .
+
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:string .
+
+kastle:establishedDate a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:date .
+
+kastle:groupDescription a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:string .
+
+kastle:groupID a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:integer .
+
+kastle:groupMember a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:Member .
+
+kastle:groupName a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:groupSize a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:int,
+        kastle:integer,
+        kastle:positiveInteger .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:integer .
+
+kastle:hasGroupName a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:string .
+
+kastle:hasGroupSize a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:integer .
+
+kastle:hasLeader a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:GroupLeader,
+        kastle:Resource .
+
+kastle:hasMember a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:GroupMember,
+        kastle:Individual,
+        kastle:Member,
+        kastle:Person,
+        kastle:Resource,
+        kastle:Thing .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:hasRole a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Role .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Group .
+
+kastle:leader a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:GroupLeader .
+
+kastle:member a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:GroupMember,
+        kastle:Resource .
+
+kastle:memberName a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:memberOf a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:Group .
+
+kastle:memberRole a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Group,
+        kastle:Person ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:ofType a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:GroupType .
+
+kastle:size a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range kastle:integer .
 

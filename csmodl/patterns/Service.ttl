@@ -1,208 +1,175 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com#Provider> a rdfs:Class .
-
-<http://example.com#Service> a rdfs:Class .
-
-<http://example.com#ServiceProvider> a rdfs:Class .
-
-<http://example.com/Entity> a rdfs:Class .
-
-<http://example.com/Service> a rdfs:Class .
-
-<http://example.com/ontology#Service> a rdfs:Class .
-
-<http://example.com/ontology#ServiceConsumer> a rdfs:Class .
-
-<http://example.com/ontology#ServiceProvider> a rdfs:Class .
-
-<http://example.com/service#> a rdfs:Class .
-
-<http://example.com/service#Service> a rdfs:Class .
-
-<http://example.com/service#ServiceCost> a rdfs:Class .
-
-<http://example.com/service#ServiceLocation> a rdfs:Class .
-
-<http://example.com/service#ServiceProvider> a rdfs:Class .
-
-<http://example.com/service#ServiceUser> a rdfs:Class .
-
-<http://example.org/Service> a rdfs:Class .
-
-<http://example.org/ServiceProvider> a rdfs:Class .
-
-<http://example.org/service#Provider> a rdfs:Class .
-
-<http://example.org/service#Service> a rdfs:Class .
-
-<http://example.org/service#ServiceConsumer> a rdfs:Class .
-
-<http://example.org/service#ServiceProvider> a rdfs:Class .
-
-<http://example.org/service#ServiceType> a rdfs:Class .
-
-<http://www.example.org/ontology/service#Service> a rdfs:Class .
-
-<http://www.example.org/ontology/service#ServiceProvider> a rdfs:Class .
-
-<http://www.example.org/service#Consumer> a rdfs:Class .
-
-<http://www.example.org/service#Provider> a rdfs:Class .
-
-<http://www.example.org/service#Service> a rdfs:Class .
-
-<http://www.example.org/service#ServiceConsumer> a rdfs:Class .
-
-<http://www.example.org/service#ServiceProvider> a rdfs:Class .
-
-<http://www.example.org/service-ontology#Customer> a rdfs:Class .
-
-<http://www.example.org/service-ontology#Price> a rdfs:Class .
-
-<http://www.example.org/service-ontology#Provider> a rdfs:Class .
-
-<http://www.example.org/service-ontology#Service> a rdfs:Class .
-
-<http://www.example.org/service-ontology#ServiceType> a rdfs:Class .
-
-<http://example.com#provides> rdfs:range <http://example.com#Service>,
-        <http://example.com#ServiceProvider> .
-
-<http://example.com#providesService> rdfs:range <http://example.com#Provider>,
-        <http://example.com#Service> .
-
-<http://example.com#serviceCost> rdfs:range <http://example.com#Service> .
-
-<http://example.com#serviceName> rdfs:range <http://example.com#Service> .
-
-<http://example.com#serviceRating> rdfs:range <http://example.com#Service> .
-
-<http://example.com/ontology#hasServiceConsumer> rdfs:range <http://example.com/ontology#Service>,
-        <http://example.com/ontology#ServiceConsumer> .
-
-<http://example.com/ontology#hasServiceProvider> rdfs:range <http://example.com/ontology#Service>,
-        <http://example.com/ontology#ServiceProvider> .
-
-<http://example.com/providesService> rdfs:range <http://example.com/Entity>,
-        <http://example.com/Service> .
-
-<http://example.com/service#cost> rdfs:range <http://example.com/service#Service> .
-
-<http://example.com/service#endTime> rdfs:range <http://example.com/service#Service> .
-
-<http://example.com/service#hasCost> rdfs:range <http://example.com/service#>,
-        <http://example.com/service#ServiceCost> .
-
-<http://example.com/service#locatedAt> rdfs:range <http://example.com/service#>,
-        <http://example.com/service#ServiceLocation> .
-
-<http://example.com/service#location> rdfs:range <http://example.com/service#ServiceProvider> .
-
-<http://example.com/service#name> rdfs:range <http://example.com/service#Service> .
-
-<http://example.com/service#offeredBy> rdfs:range <http://example.com/service#Service>,
-        <http://example.com/service#ServiceProvider> .
-
-<http://example.com/service#price> rdfs:range <http://example.com/service#Service> .
-
-<http://example.com/service#provider> rdfs:range <http://example.com/service#Service> .
-
-<http://example.com/service#provides> rdfs:range <http://example.com/service#>,
-        <http://example.com/service#Service>,
-        <http://example.com/service#ServiceProvider> .
-
-<http://example.com/service#rating> rdfs:range <http://example.com/service#Service> .
-
-<http://example.com/service#startTime> rdfs:range <http://example.com/service#Service> .
-
-<http://example.com/service#uses> rdfs:range <http://example.com/service#>,
-        <http://example.com/service#ServiceUser> .
-
-<http://example.org/name> rdfs:range <http://example.org/Service> .
-
-<http://example.org/price> rdfs:range <http://example.org/Service> .
-
-<http://example.org/service#hasName> rdfs:range <http://example.org/service#Service> .
-
-<http://example.org/service#hasRate> rdfs:range <http://example.org/service#Service> .
-
-<http://example.org/service#hasServiceConsumer> rdfs:range <http://example.org/service#Service>,
-        <http://example.org/service#ServiceConsumer> .
-
-<http://example.org/service#hasServiceDuration> rdfs:range <http://example.org/service#Service> .
-
-<http://example.org/service#hasServiceProvider> rdfs:range <http://example.org/service#Service>,
-        <http://example.org/service#ServiceProvider> .
-
-<http://example.org/service#hasType> rdfs:range <http://example.org/service#Service>,
-        <http://example.org/service#ServiceType> .
-
-<http://example.org/service#isPaid> rdfs:range <http://example.org/service#Service> .
-
-<http://example.org/service#provider> rdfs:range <http://example.org/service#Provider>,
-        <http://example.org/service#Service> .
-
-<http://example.org/service#providerName> rdfs:range <http://example.org/service#ServiceProvider> .
-
-<http://example.org/service#providesService> rdfs:range <http://example.org/service#Service>,
-        <http://example.org/service#ServiceProvider> .
-
-<http://example.org/service#serviceName> rdfs:range <http://example.org/service#Service> .
-
-<http://example.org/service#serviceProvider> rdfs:range <http://example.org/service#Service>,
-        <http://example.org/service#ServiceProvider> .
-
-<http://example.org/serviceProvider> rdfs:range <http://example.org/Service>,
-        <http://example.org/ServiceProvider> .
-
-<http://www.example.org/ontology/service#description> rdfs:range <http://www.example.org/ontology/service#Service> .
-
-<http://www.example.org/ontology/service#name> rdfs:range <http://www.example.org/ontology/service#Service> .
-
-<http://www.example.org/ontology/service#provider> rdfs:range <http://www.example.org/ontology/service#Service>,
-        <http://www.example.org/ontology/service#ServiceProvider> .
-
-<http://www.example.org/ontology/service#providerName> rdfs:range <http://www.example.org/ontology/service#ServiceProvider> .
-
-<http://www.example.org/service#ProviderLocation> rdfs:range <http://www.example.org/service#ServiceProvider> .
-
-<http://www.example.org/service#ProviderName> rdfs:range <http://www.example.org/service#ServiceProvider> .
-
-<http://www.example.org/service#hasConsumer> rdfs:range <http://www.example.org/service#Consumer>,
-        <http://www.example.org/service#Service> .
-
-<http://www.example.org/service#hasDuration> rdfs:range <http://www.example.org/service#Service> .
-
-<http://www.example.org/service#hasName> rdfs:range <http://www.example.org/service#Service> .
-
-<http://www.example.org/service#hasPrice> rdfs:range <http://www.example.org/service#Service> .
-
-<http://www.example.org/service#hasProvider> rdfs:range <http://www.example.org/service#Provider>,
-        <http://www.example.org/service#Service> .
-
-<http://www.example.org/service#isProvidedBy> rdfs:range <http://www.example.org/service#Service>,
-        <http://www.example.org/service#ServiceProvider> .
-
-<http://www.example.org/service#serviceConsumer> rdfs:range <http://www.example.org/service#Service>,
-        <http://www.example.org/service#ServiceConsumer> .
-
-<http://www.example.org/service#serviceProvider> rdfs:range <http://www.example.org/service#Service>,
-        <http://www.example.org/service#ServiceProvider> .
-
-<http://www.example.org/service#serviceType> rdfs:range <http://www.example.org/service#Service> .
-
-<http://www.example.org/service-ontology#hasPrice> rdfs:range <http://www.example.org/service-ontology#Price>,
-        <http://www.example.org/service-ontology#Service> .
-
-<http://www.example.org/service-ontology#name> rdfs:range <http://www.example.org/service-ontology#Service> .
-
-<http://www.example.org/service-ontology#providesService> rdfs:range <http://www.example.org/service-ontology#Provider>,
-        <http://www.example.org/service-ontology#Service> .
-
-<http://www.example.org/service-ontology#type> rdfs:range <http://www.example.org/service-ontology#Service>,
-        <http://www.example.org/service-ontology#ServiceType> .
-
-<http://www.example.org/service-ontology#usesService> rdfs:range <http://www.example.org/service-ontology#Customer>,
-        <http://www.example.org/service-ontology#Service> .
+kastle:ProviderLocation a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range kastle:string .
+
+kastle:ProviderName a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range kastle:string .
+
+kastle:cost a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:float .
+
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:string .
+
+kastle:endTime a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:dateTime .
+
+kastle:hasConsumer a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Consumer .
+
+kastle:hasCost a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:ServiceCost .
+
+kastle:hasCustomer a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Customer .
+
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:duration .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:OfflineService ;
+    rdfs:range kastle:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:string .
+
+kastle:hasPrice a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Price,
+        kastle:decimal .
+
+kastle:hasProvider a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Provider .
+
+kastle:hasRate a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:float .
+
+kastle:hasServiceConsumer a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceConsumer .
+
+kastle:hasServiceDuration a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:duration .
+
+kastle:hasServiceProvider a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceProvider .
+
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceType .
+
+kastle:isPaid a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:boolean .
+
+kastle:isProvidedBy a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceProvider .
+
+kastle:locatedAt a rdf:Property ;
+    rdfs:domain kastle: ;
+    rdfs:range kastle:ServiceLocation .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range kastle:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Literal,
+        kastle:string .
+
+kastle:offeredBy a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceProvider .
+
+kastle:price a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:decimal .
+
+kastle:providedBy a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Provider .
+
+kastle:provider a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Provider,
+        kastle:ServiceProvider,
+        kastle:string .
+
+kastle:providerName a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range kastle:string .
+
+kastle:provides a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range kastle:,
+        kastle:Service .
+
+kastle:providesService a rdf:Property ;
+    rdfs:domain kastle:Entity,
+        kastle:Provider,
+        kastle:ServiceProvider ;
+    rdfs:range kastle:Service .
+
+kastle:rating a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:float .
+
+kastle:serviceConsumer a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceConsumer .
+
+kastle:serviceCost a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:float .
+
+kastle:serviceName a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:string .
+
+kastle:serviceProvider a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceProvider .
+
+kastle:serviceRating a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:float .
+
+kastle:serviceType a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:string .
+
+kastle:startTime a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:dateTime .
+
+kastle:type a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceType .
+
+kastle:uses a rdf:Property ;
+    rdfs:domain kastle:ServiceUser ;
+    rdfs:range kastle: .
+
+kastle:usesService a rdf:Property ;
+    rdfs:domain kastle:Customer ;
+    rdfs:range kastle:Service .
 

@@ -1,198 +1,102 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Head> a rdfs:Class .
-
-<http://example.com/head#Head> a rdfs:Class .
-
-<http://example.org#Ear> a rdfs:Class .
-
-<http://example.org#Eye> a rdfs:Class .
-
-<http://example.org#Head> a rdfs:Class .
-
-<http://example.org#Mouth> a rdfs:Class .
-
-<http://example.org#Nose> a rdfs:Class .
-
-<http://example.org/Animal> a rdfs:Class .
-
-<http://example.org/Head> a rdfs:Class .
-
-<http://example.org/Human> a rdfs:Class .
-
-<http://example.org/head#Ear> a rdfs:Class .
-
-<http://example.org/head#Ears> a rdfs:Class .
-
-<http://example.org/head#Eye> a rdfs:Class .
-
-<http://example.org/head#Eyes> a rdfs:Class .
-
-<http://example.org/head#Face> a rdfs:Class .
-
-<http://example.org/head#Forehead> a rdfs:Class .
-
-<http://example.org/head#Hair> a rdfs:Class .
-
-<http://example.org/head#Head> a rdfs:Class .
-
-<http://example.org/head#Mouth> a rdfs:Class .
-
-<http://example.org/head#Nose> a rdfs:Class .
-
-<http://example.org/head#Person> a rdfs:Class .
-
-<http://example.org/head/> a rdfs:Class .
-
-<http://example.org/head/HeadPart> a rdfs:Class .
-
-<http://www.example.com/#head> a rdfs:Class .
-
-<http://www.example.com/#it> a rdfs:Class .
-
-<http://www.example.com/onto#Head> a rdfs:Class .
-
-<http://www.example.com/ontology#Head> a rdfs:Class .
-
-<http://www.example.com/ontology#Person> a rdfs:Class .
-
-<http://www.example.org/HeadOntology#Eye> a rdfs:Class .
-
-<http://www.example.org/HeadOntology#Head> a rdfs:Class .
-
-<http://www.example.org/HeadOntology#Mouth> a rdfs:Class .
-
-<http://www.example.org/HeadOntology#Nose> a rdfs:Class .
-
-<http://www.example.org/head#Head> a rdfs:Class .
-
-<http://www.example.org/ontology#Ear> a rdfs:Class .
-
-<http://www.example.org/ontology#Eye> a rdfs:Class .
-
-<http://www.example.org/ontology#Head> a rdfs:Class .
-
-<http://www.example.org/ontology#Human> a rdfs:Class .
-
-<http://www.example.org/ontology#Mouth> a rdfs:Class .
-
-<http://www.example.org/ontology#Nose> a rdfs:Class .
-
-<http://www.semanticweb.org/head#BodyPart> a rdfs:Class .
-
-<http://www.semanticweb.org/head#Head> a rdfs:Class .
-
-rdf:literal a rdfs:Class .
-
-rdfs:Class a rdfs:Class .
-
-<http://example.com/hasPart> rdfs:range <http://example.com/Head>,
-        rdfs:Class .
-
-<http://example.com/head#hasPart> rdfs:range <http://example.com/head#Head> .
-
-<http://example.org#HasEars> rdfs:range <http://example.org#Ear>,
-        <http://example.org#Head> .
-
-<http://example.org#HasEyes> rdfs:range <http://example.org#Eye>,
-        <http://example.org#Head> .
-
-<http://example.org#HasMouth> rdfs:range <http://example.org#Head>,
-        <http://example.org#Mouth> .
-
-<http://example.org#HasNose> rdfs:range <http://example.org#Head>,
-        <http://example.org#Nose> .
-
-<http://example.org/hasHead> rdfs:range <http://example.org/Animal>,
-        <http://example.org/Head>,
-        <http://example.org/Human> .
-
-<http://example.org/head#hasEar> rdfs:range <http://example.org/head#Ear>,
-        <http://example.org/head#Head> .
-
-<http://example.org/head#hasEars> rdfs:range <http://example.org/head#Ears>,
-        <http://example.org/head#Head>,
-        rdf:literal .
-
-<http://example.org/head#hasEye> rdfs:range <http://example.org/head#Eye>,
-        <http://example.org/head#Head> .
-
-<http://example.org/head#hasEyeColor> rdfs:range <http://example.org/head#Head> .
-
-<http://example.org/head#hasEyes> rdfs:range <http://example.org/head#Eyes>,
-        <http://example.org/head#Face>,
-        <http://example.org/head#Head>,
-        rdf:literal .
-
-<http://example.org/head#hasFace> rdfs:range <http://example.org/head#Face>,
-        <http://example.org/head#Head> .
-
-<http://example.org/head#hasForehead> rdfs:range <http://example.org/head#Forehead>,
-        <http://example.org/head#Head> .
-
-<http://example.org/head#hasHair> rdfs:range <http://example.org/head#Hair>,
-        <http://example.org/head#Head>,
-        rdf:literal .
-
-<http://example.org/head#hasHairColor> rdfs:range <http://example.org/head#Head> .
-
-<http://example.org/head#hasHead> rdfs:range <http://example.org/head#Head>,
-        <http://example.org/head#Person> .
-
-<http://example.org/head#hasMouth> rdfs:range <http://example.org/head#Face>,
-        <http://example.org/head#Head>,
-        <http://example.org/head#Mouth>,
-        rdf:literal .
-
-<http://example.org/head#hasNose> rdfs:range <http://example.org/head#Face>,
-        <http://example.org/head#Head>,
-        <http://example.org/head#Nose>,
-        rdf:literal .
-
-<http://example.org/head/hasPart> rdfs:range <http://example.org/head/>,
-        <http://example.org/head/HeadPart> .
-
-<http://www.example.com/#provides> rdfs:range <http://www.example.com/#head>,
-        <http://www.example.com/#it> .
-
-<http://www.example.com/onto#hasEyes> rdfs:range <http://www.example.com/onto#Head> .
-
-<http://www.example.com/onto#hasMouth> rdfs:range <http://www.example.com/onto#Head> .
-
-<http://www.example.com/onto#hasNose> rdfs:range <http://www.example.com/onto#Head> .
-
-<http://www.example.com/ontology#hasHead> rdfs:range <http://www.example.com/ontology#Head>,
-        <http://www.example.com/ontology#Person> .
-
-<http://www.example.org/HeadOntology#hasEyes> rdfs:range <http://www.example.org/HeadOntology#Eye>,
-        <http://www.example.org/HeadOntology#Head> .
-
-<http://www.example.org/HeadOntology#hasMouth> rdfs:range <http://www.example.org/HeadOntology#Head>,
-        <http://www.example.org/HeadOntology#Mouth> .
-
-<http://www.example.org/HeadOntology#hasNose> rdfs:range <http://www.example.org/HeadOntology#Head>,
-        <http://www.example.org/HeadOntology#Nose> .
-
-<http://www.example.org/head#hasPart> rdfs:range <http://www.example.org/head#Head> .
-
-<http://www.example.org/ontology#eyeCount> rdfs:range <http://www.example.org/ontology#Head> .
-
-<http://www.example.org/ontology#hasEar> rdfs:range <http://www.example.org/ontology#Ear>,
-        <http://www.example.org/ontology#Head> .
-
-<http://www.example.org/ontology#hasEye> rdfs:range <http://www.example.org/ontology#Eye>,
-        <http://www.example.org/ontology#Head> .
-
-<http://www.example.org/ontology#hasHead> rdfs:range <http://www.example.org/ontology#Head>,
-        <http://www.example.org/ontology#Human> .
-
-<http://www.example.org/ontology#hasMouth> rdfs:range <http://www.example.org/ontology#Head>,
-        <http://www.example.org/ontology#Mouth> .
-
-<http://www.example.org/ontology#hasNose> rdfs:range <http://www.example.org/ontology#Head>,
-        <http://www.example.org/ontology#Nose> .
-
-<http://www.semanticweb.org/head#hasPart> rdfs:range <http://www.semanticweb.org/head#BodyPart>,
-        <http://www.semanticweb.org/head#Head> .
+kastle:HasEars a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Ear .
+
+kastle:HasEyes a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Eye .
+
+kastle:HasMouth a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Mouth .
+
+kastle:HasNose a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Nose .
+
+kastle:eyeCount a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:integer .
+
+kastle:hasEar a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Ear .
+
+kastle:hasEars a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Ears,
+        kastle:literal .
+
+kastle:hasEye a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Eye .
+
+kastle:hasEyeColor a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:string .
+
+kastle:hasEyes a rdf:Property ;
+    rdfs:domain kastle:Face,
+        kastle:Head ;
+    rdfs:range kastle:Eye,
+        kastle:Eyes,
+        kastle:literal .
+
+kastle:hasFace a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Face .
+
+kastle:hasForehead a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Forehead .
+
+kastle:hasHair a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Hair,
+        kastle:literal .
+
+kastle:hasHairColor a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:string .
+
+kastle:hasHead a rdf:Property ;
+    rdfs:domain kastle:Human,
+        kastle:Person ;
+    rdfs:range kastle:Head .
+
+kastle:hasMouth a rdf:Property ;
+    rdfs:domain kastle:Face,
+        kastle:Head ;
+    rdfs:range kastle:Mouth,
+        kastle:literal .
+
+kastle:hasNose a rdf:Property ;
+    rdfs:domain kastle:Face,
+        kastle:Head ;
+    rdfs:range kastle:Nose,
+        kastle:literal .
+
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle:,
+        kastle:Head ;
+    rdfs:range kastle:BodyPart,
+        kastle:Class,
+        kastle:Head,
+        kastle:HeadPart .
+
+kastle:hasSensoryOrgan a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:SensoryOrgan .
+
+kastle:hasSkin a rdf:Property ;
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:Skin .
+
+kastle:provides a rdf:Property ;
+    rdfs:domain kastle:head ;
+    rdfs:range kastle:it .
 

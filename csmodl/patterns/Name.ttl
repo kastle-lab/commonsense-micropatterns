@@ -1,113 +1,112 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/Name> a rdfs:Class .
+kastle:entityName a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range kastle:Name .
 
-<http://example.com/name#Name> a rdfs:Class .
+kastle:familyName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.org/Person> a rdfs:Class .
+kastle:firstName a rdf:Property ;
+    rdfs:domain kastle:Name,
+        kastle:Person ;
+    rdfs:range kastle:Name,
+        kastle:string .
 
-<http://example.org/name#Name> a rdfs:Class .
+kastle:fullName a rdf:Property ;
+    rdfs:domain kastle:Name,
+        kastle:Person ;
+    rdfs:range kastle:string .
 
-<http://example.org/name#Person> a rdfs:Class .
+kastle:givenName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.org/nameOntology#Name> a rdfs:Class .
+kastle:hasFirstName a rdf:Property ;
+    rdfs:domain kastle:Name,
+        kastle:Person ;
+    rdfs:range kastle:Literal,
+        kastle:Name,
+        kastle:string .
 
-<http://example.org/ns#Name> a rdfs:Class .
+kastle:hasFullName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/ns#Person> a rdfs:Class .
+kastle:hasLastName a rdf:Property ;
+    rdfs:domain kastle:Name,
+        kastle:Person ;
+    rdfs:range kastle:Literal,
+        kastle:Name,
+        kastle:string .
 
-<http://example.org/ontology#Entity> a rdfs:Class .
+kastle:hasMiddleName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:Literal,
+        kastle:string .
 
-<http://example.org/ontology#Name> a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:NameEntity,
+        kastle:Person ;
+    rdfs:range kastle:Name,
+        kastle:string .
 
-<http://example.org/ontology#NameEntity> a rdfs:Class .
+kastle:hasNamePrefix a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/ontology#Person> a rdfs:Class .
+kastle:hasNameSuffix a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:Literal .
 
-<http://ontology.example.org/name#Name> a rdfs:Class .
+kastle:hasNickName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:Literal .
 
-<http://ontology.example.org/name#Person> a rdfs:Class .
+kastle:hasPrefix a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://www.example.org/ontology/name#Name> a rdfs:Class .
+kastle:hasSuffix a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.com/hasFirstName> rdfs:range <http://example.com/Name> .
+kastle:hasfirstName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.com/hasLastName> rdfs:range <http://example.com/Name> .
+kastle:haslastName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.com/hasMiddleName> rdfs:range <http://example.com/Name> .
+kastle:hasmiddleName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.com/hasPrefix> rdfs:range <http://example.com/Name> .
+kastle:lastName a rdf:Property ;
+    rdfs:domain kastle:Name,
+        kastle:Person ;
+    rdfs:range kastle:Name,
+        kastle:string .
 
-<http://example.com/hasSuffix> rdfs:range <http://example.com/Name> .
+kastle:middleName a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.com/name#familyName> rdfs:range <http://example.com/name#Name> .
+kastle:namePrefix a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.com/name#givenName> rdfs:range <http://example.com/name#Name> .
+kastle:nameSuffix a rdf:Property ;
+    rdfs:domain kastle:Name ;
+    rdfs:range kastle:string .
 
-<http://example.com/name#middleName> rdfs:range <http://example.com/name#Name> .
-
-<http://example.com/name#namePrefix> rdfs:range <http://example.com/name#Name> .
-
-<http://example.com/name#nameSuffix> rdfs:range <http://example.com/name#Name> .
-
-<http://example.com/name#nickName> rdfs:range <http://example.com/name#Name> .
-
-<http://example.org/hasName> rdfs:range <http://example.org/Person> .
-
-<http://example.org/name#firstName> rdfs:range <http://example.org/name#Name>,
-        <http://example.org/name#Person> .
-
-<http://example.org/name#lastName> rdfs:range <http://example.org/name#Name>,
-        <http://example.org/name#Person> .
-
-<http://example.org/name#middleName> rdfs:range <http://example.org/name#Name> .
-
-<http://example.org/nameOntology#firstName> rdfs:range <http://example.org/nameOntology#Name> .
-
-<http://example.org/nameOntology#fullName> rdfs:range <http://example.org/nameOntology#Name> .
-
-<http://example.org/nameOntology#lastName> rdfs:range <http://example.org/nameOntology#Name> .
-
-<http://example.org/nameOntology#middleName> rdfs:range <http://example.org/nameOntology#Name> .
-
-<http://example.org/ns#hasFirstName> rdfs:range <http://example.org/ns#Name>,
-        <http://example.org/ns#Person> .
-
-<http://example.org/ns#hasLastName> rdfs:range <http://example.org/ns#Name>,
-        <http://example.org/ns#Person> .
-
-<http://example.org/ontology#entityName> rdfs:range <http://example.org/ontology#Entity>,
-        <http://example.org/ontology#Name> .
-
-<http://example.org/ontology#firstName> rdfs:range <http://example.org/ontology#Name>,
-        <http://example.org/ontology#Person> .
-
-<http://example.org/ontology#fullName> rdfs:range <http://example.org/ontology#Person> .
-
-<http://example.org/ontology#hasName> rdfs:range <http://example.org/ontology#NameEntity> .
-
-<http://example.org/ontology#lastName> rdfs:range <http://example.org/ontology#Name>,
-        <http://example.org/ontology#Person> .
-
-<http://example.org/ontology#nickName> rdfs:range <http://example.org/ontology#Name>,
-        <http://example.org/ontology#Person> .
-
-<http://ontology.example.org/name#hasName> rdfs:range <http://ontology.example.org/name#Name>,
-        <http://ontology.example.org/name#Person> .
-
-<http://ontology.example.org/name#hasPrefix> rdfs:range <http://ontology.example.org/name#Name> .
-
-<http://ontology.example.org/name#hasSuffix> rdfs:range <http://ontology.example.org/name#Name> .
-
-<http://ontology.example.org/name#hasfirstName> rdfs:range <http://ontology.example.org/name#Name> .
-
-<http://ontology.example.org/name#haslastName> rdfs:range <http://ontology.example.org/name#Name> .
-
-<http://ontology.example.org/name#hasmiddleName> rdfs:range <http://ontology.example.org/name#Name> .
-
-<http://www.example.org/ontology/name#firstName> rdfs:range <http://www.example.org/ontology/name#Name> .
-
-<http://www.example.org/ontology/name#fullName> rdfs:range <http://www.example.org/ontology/name#Name> .
-
-<http://www.example.org/ontology/name#lastName> rdfs:range <http://www.example.org/ontology/name#Name> .
+kastle:nickName a rdf:Property ;
+    rdfs:domain kastle:Name,
+        kastle:Person ;
+    rdfs:range kastle:Name,
+        kastle:string .
 

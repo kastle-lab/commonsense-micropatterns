@@ -1,270 +1,233 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.com/law#Law> a rdfs:Class .
-
-<http://example.com/law#Lawyer> a rdfs:Class .
-
-<http://example.com/law#jurisdiction> a rdfs:Class .
-
-<http://example.com/law/Client> a rdfs:Class .
-
-<http://example.com/law/Court> a rdfs:Class .
-
-<http://example.com/law/Judge> a rdfs:Class .
-
-<http://example.com/law/Lawyer> a rdfs:Class .
-
-<http://example.com/law/LegalEntity> a rdfs:Class .
-
-<http://example.com/law/Legislation> a rdfs:Class .
-
-<http://example.org/law#Case> a rdfs:Class .
-
-<http://example.org/law#Law> a rdfs:Class .
-
-<http://example.org/law#Lawyer> a rdfs:Class .
-
-<http://example.org/law#Prosecutor> a rdfs:Class .
-
-<http://example.org/law#Rule> a rdfs:Class .
-
-<http://example.org/law/Article> a rdfs:Class .
-
-<http://example.org/law/Court> a rdfs:Class .
-
-<http://example.org/law/Law> a rdfs:Class .
-
-<http://example.org/lawpro#Jurisdiction> a rdfs:Class .
-
-<http://example.org/lawpro#Law> a rdfs:Class .
-
-<http://example.org/lawpro#Statute> a rdfs:Class .
-
-<http://www.example.com/law#Case> a rdfs:Class .
-
-<http://www.example.com/law#CourtCase> a rdfs:Class .
-
-<http://www.example.com/law#Judge> a rdfs:Class .
-
-<http://www.example.com/law#Jurisdiction> a rdfs:Class .
-
-<http://www.example.com/law#Law> a rdfs:Class .
-
-<http://www.example.com/law#Lawyer> a rdfs:Class .
-
-<http://www.example.com/law#LegalRule> a rdfs:Class .
-
-<http://www.example.com/law-ontology#Jurisdiction> a rdfs:Class .
-
-<http://www.example.com/law-ontology#Law> a rdfs:Class .
-
-<http://www.example.com/lawConcept#GovernmentEntity> a rdfs:Class .
-
-<http://www.example.com/lawConcept#Law> a rdfs:Class .
-
-<http://www.example.com/lawOntology#Client> a rdfs:Class .
-
-<http://www.example.com/lawOntology#Court> a rdfs:Class .
-
-<http://www.example.com/lawOntology#Lawyer> a rdfs:Class .
-
-<http://www.example.org/law#Case> a rdfs:Class .
-
-<http://www.example.org/law#Constitution> a rdfs:Class .
-
-<http://www.example.org/law#Law> a rdfs:Class .
-
-<http://www.example.org/law#Statute> a rdfs:Class .
-
-<http://www.example.org/law/Law> a rdfs:Class .
-
-<http://www.example.org/law/Lawyer> a rdfs:Class .
-
-<http://www.example.org/law/StatutoryLaw> a rdfs:Class .
-
-<http://www.example.org/law/court> a rdfs:Class .
-
-<http://www.example.org/ontology/Law#Case> a rdfs:Class .
-
-<http://www.example.org/ontology/Law#EnactingBody> a rdfs:Class .
-
-<http://www.example.org/ontology/Law#Law> a rdfs:Class .
-
-<http://www.example.org/ontology/law#Client> a rdfs:Class .
-
-<http://www.example.org/ontology/law#Jurisdiction> a rdfs:Class .
-
-<http://www.example.org/ontology/law#Law> a rdfs:Class .
-
-<http://www.example.org/ontology/law#Lawyer> a rdfs:Class .
-
-<http://www.example.org/ontology/law#LegalIssue> a rdfs:Class .
-
-rdfs:Resource a rdfs:Class .
-
-<http://example.com/law#appliesIn> rdfs:range <http://example.com/law#Law>,
-        <http://example.com/law#jurisdiction> .
-
-<http://example.com/law#practicesIn> rdfs:range <http://example.com/law#Law>,
-        <http://example.com/law#Lawyer> .
-
-<http://example.com/law/Applies> rdfs:range <http://example.com/law/Court>,
-        <http://example.com/law/Legislation> .
-
-<http://example.com/law/Decides> rdfs:range <http://example.com/law/Judge>,
-        <http://example.com/law/LegalEntity> .
-
-<http://example.com/law/Represents> rdfs:range <http://example.com/law/Client>,
-        <http://example.com/law/Lawyer> .
-
-<http://example.org/law#enforces> rdfs:range <http://example.org/law#Prosecutor>,
-        <http://example.org/law#Rule> .
-
-<http://example.org/law#follows> rdfs:range <http://example.org/law#Law>,
-        <http://example.org/law#Rule> .
-
-<http://example.org/law#handles> rdfs:range <http://example.org/law#Case>,
-        <http://example.org/law#Lawyer> .
-
-<http://example.org/law#happensInJurisdiction> rdfs:range <http://example.org/law#Case>,
-        <http://example.org/law#Law> .
-
-<http://example.org/law#hasEffectiveDate> rdfs:range <http://example.org/law#Law> .
-
-<http://example.org/law#hasExperienceIn> rdfs:range <http://example.org/law#Law>,
-        <http://example.org/law#Lawyer> .
-
-<http://example.org/law#hasNumber> rdfs:range <http://example.org/law#Law> .
-
-<http://example.org/law#hasStatus> rdfs:range <http://example.org/law#Law> .
-
-<http://example.org/law#hasTitle> rdfs:range <http://example.org/law#Law> .
-
-<http://example.org/law#involves> rdfs:range <http://example.org/law#Case>,
-        <http://example.org/law#Law> .
-
-<http://example.org/law#isPartOf> rdfs:range <http://example.org/law#Law> .
-
-<http://example.org/law#name> rdfs:range <http://example.org/law#Lawyer> .
-
-<http://example.org/law#represents> rdfs:range <http://example.org/law#Law>,
-        <http://example.org/law#Lawyer> .
-
-<http://example.org/law/hasArticle> rdfs:range <http://example.org/law/Article>,
-        <http://example.org/law/Law> .
-
-<http://example.org/law/hasCourt> rdfs:range <http://example.org/law/Court>,
-        <http://example.org/law/Law> .
-
-<http://example.org/law/hasIdentifier> rdfs:range <http://example.org/law/Law> .
-
-<http://example.org/law/hasLocation> rdfs:range <http://example.org/law/Court> .
-
-<http://example.org/law/hasName> rdfs:range <http://example.org/law/Court> .
-
-<http://example.org/law/hasNumber> rdfs:range <http://example.org/law/Article> .
-
-<http://example.org/law/hasText> rdfs:range <http://example.org/law/Article> .
-
-<http://example.org/law/hasTitle> rdfs:range <http://example.org/law/Law> .
-
-<http://example.org/law/hasYear> rdfs:range <http://example.org/law/Law> .
-
-<http://example.org/lawpro#authoritativeEntity> rdfs:range <http://example.org/lawpro#Jurisdiction>,
-        <http://example.org/lawpro#Law> .
-
-<http://example.org/lawpro#enactedDate> rdfs:range <http://example.org/lawpro#Statute> .
-
-<http://example.org/lawpro#relatedTo> rdfs:range <http://example.org/lawpro#Law> .
-
-<http://www.example.com/law#defendedIn> rdfs:range <http://www.example.com/law#Case>,
-        <http://www.example.com/law#Lawyer> .
-
-<http://www.example.com/law#hasJurisdiction> rdfs:range <http://www.example.com/law#Jurisdiction>,
-        <http://www.example.com/law#Law> .
-
-<http://www.example.com/law#involves> rdfs:range <http://www.example.com/law#CourtCase>,
-        <http://www.example.com/law#LegalRule> .
-
-<http://www.example.com/law#judgedIn> rdfs:range <http://www.example.com/law#Case>,
-        <http://www.example.com/law#Judge> .
-
-<http://www.example.com/law#lawSpeciality> rdfs:range <http://www.example.com/law#Law>,
-        <http://www.example.com/law#Lawyer> .
-
-<http://www.example.com/law#practices> rdfs:range <http://www.example.com/law#Lawyer>,
-        <http://www.example.com/law#LegalRule> .
-
-<http://www.example.com/law#relatedTo> rdfs:range <http://www.example.com/law#Case>,
-        <http://www.example.com/law#Law> .
-
-<http://www.example.com/law-ontology#appliesTo> rdfs:range <http://www.example.com/law-ontology#Jurisdiction>,
-        <http://www.example.com/law-ontology#Law> .
-
-<http://www.example.com/law-ontology#hasTitle> rdfs:range <http://www.example.com/law-ontology#Law> .
-
-<http://www.example.com/law-ontology#hasYearImplemented> rdfs:range <http://www.example.com/law-ontology#Law> .
-
-<http://www.example.com/lawConcept#hasEffectiveDate> rdfs:range <http://www.example.com/lawConcept#Law> .
-
-<http://www.example.com/lawConcept#hasJurisdiction> rdfs:range <http://www.example.com/lawConcept#Law> .
-
-<http://www.example.com/lawConcept#hasLawNumber> rdfs:range <http://www.example.com/lawConcept#Law> .
-
-<http://www.example.com/lawConcept#hasTitle> rdfs:range <http://www.example.com/lawConcept#Law> .
-
-<http://www.example.com/lawConcept#isEnforcedBy> rdfs:range <http://www.example.com/lawConcept#GovernmentEntity>,
-        <http://www.example.com/lawConcept#Law> .
-
-<http://www.example.com/lawConcept#isRatifiedBy> rdfs:range <http://www.example.com/lawConcept#GovernmentEntity>,
-        <http://www.example.com/lawConcept#Law> .
-
-<http://www.example.com/lawOntology#client> rdfs:range <http://www.example.com/lawOntology#Client> .
-
-<http://www.example.com/lawOntology#court> rdfs:range <http://www.example.com/lawOntology#Court> .
-
-<http://www.example.com/lawOntology#lawyer> rdfs:range <http://www.example.com/lawOntology#Lawyer> .
-
-<http://www.example.org/law#correspondsTo> rdfs:range <http://www.example.org/law#Case>,
-        <http://www.example.org/law#Statute> .
-
-<http://www.example.org/law#hasCase> rdfs:range <http://www.example.org/law#Case>,
-        <http://www.example.org/law#Law> .
-
-<http://www.example.org/law#hasConstitution> rdfs:range <http://www.example.org/law#Constitution>,
-        <http://www.example.org/law#Law> .
-
-<http://www.example.org/law#hasStatute> rdfs:range <http://www.example.org/law#Law>,
-        <http://www.example.org/law#Statute> .
-
-<http://www.example.org/law/judges> rdfs:range <http://www.example.org/law/court>,
-        rdfs:Resource .
-
-<http://www.example.org/law/passedBy> rdfs:range <http://www.example.org/law/StatutoryLaw>,
-        rdfs:Resource .
-
-<http://www.example.org/law/practicesLaw> rdfs:range <http://www.example.org/law/Law>,
-        <http://www.example.org/law/Lawyer> .
-
-<http://www.example.org/ontology/Law#hasEnactingBody> rdfs:range <http://www.example.org/ontology/Law#EnactingBody>,
-        <http://www.example.org/ontology/Law#Law> .
-
-<http://www.example.org/ontology/Law#isApplicableTo> rdfs:range <http://www.example.org/ontology/Law#Case>,
-        <http://www.example.org/ontology/Law#Law> .
-
-<http://www.example.org/ontology/law#hasCitation> rdfs:range <http://www.example.org/ontology/law#Law> .
-
-<http://www.example.org/ontology/law#hasEffectiveDate> rdfs:range <http://www.example.org/ontology/law#Law> .
-
-<http://www.example.org/ontology/law#hasJurisdiction> rdfs:range <http://www.example.org/ontology/law#Jurisdiction>,
-        <http://www.example.org/ontology/law#Law> .
-
-<http://www.example.org/ontology/law#hasLegalIssue> rdfs:range <http://www.example.org/ontology/law#Client>,
-        <http://www.example.org/ontology/law#LegalIssue> .
-
-<http://www.example.org/ontology/law#hasRepresented> rdfs:range <http://www.example.org/ontology/law#Client>,
-        <http://www.example.org/ontology/law#Lawyer> .
-
-<http://www.example.org/ontology/law#isSpecializedIn> rdfs:range <http://www.example.org/ontology/law#Law>,
-        <http://www.example.org/ontology/law#Lawyer> .
+kastle:Applies a rdf:Property ;
+    rdfs:domain kastle:Court ;
+    rdfs:range kastle:Legislation .
+
+kastle:Decides a rdf:Property ;
+    rdfs:domain kastle:Judge ;
+    rdfs:range kastle:LegalEntity .
+
+kastle:Represents a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Client .
+
+kastle:appliesIn a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:jurisdiction .
+
+kastle:appliesTo a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Jurisdiction .
+
+kastle:authoritativeEntity a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Jurisdiction .
+
+kastle:correspondsTo a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Statute .
+
+kastle:defendedIn a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Case .
+
+kastle:enactedDate a rdf:Property ;
+    rdfs:domain kastle:Statute ;
+    rdfs:range kastle:date .
+
+kastle:enforces a rdf:Property ;
+    rdfs:domain kastle:EnforcementBody,
+        kastle:Prosecutor ;
+    rdfs:range kastle:Law,
+        kastle:Rule .
+
+kastle:follows a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Rule .
+
+kastle:handles a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Case .
+
+kastle:happensInJurisdiction a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Law .
+
+kastle:hasArticle a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Article .
+
+kastle:hasCase a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Case .
+
+kastle:hasCaseNumber a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Literal .
+
+kastle:hasCitation a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:string .
+
+kastle:hasConstitution a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Constitution .
+
+kastle:hasCourt a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Court .
+
+kastle:hasEffectiveDate a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:date,
+        kastle:dateTime .
+
+kastle:hasEnactingBody a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:EnactingBody .
+
+kastle:hasExperienceIn a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Law .
+
+kastle:hasIdentifier a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:string .
+
+kastle:hasJurisdiction a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Jurisdiction,
+        kastle:string .
+
+kastle:hasLawNumber a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:string .
+
+kastle:hasLegalIssue a rdf:Property ;
+    rdfs:domain kastle:Client ;
+    rdfs:range kastle:LegalIssue .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Court ;
+    rdfs:range kastle:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Court ;
+    rdfs:range kastle:string .
+
+kastle:hasNumber a rdf:Property ;
+    rdfs:domain kastle:Article,
+        kastle:Law ;
+    rdfs:range kastle:int,
+        kastle:integer .
+
+kastle:hasRepresented a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Client .
+
+kastle:hasStatus a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:string .
+
+kastle:hasStatute a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Statute .
+
+kastle:hasText a rdf:Property ;
+    rdfs:domain kastle:Article ;
+    rdfs:range kastle:string .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:string .
+
+kastle:hasYear a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:integer .
+
+kastle:hasYearImplemented a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:gYear .
+
+kastle:involves a rdf:Property ;
+    rdfs:domain kastle:Case,
+        kastle:CourtCase ;
+    rdfs:range kastle:Law,
+        kastle:LegalRule .
+
+kastle:isApplicableTo a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Case .
+
+kastle:isEnforcedBy a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:GovernmentEntity .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Law .
+
+kastle:isRatifiedBy a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:GovernmentEntity .
+
+kastle:isSpecializedIn a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Law .
+
+kastle:judgedIn a rdf:Property ;
+    rdfs:domain kastle:Judge ;
+    rdfs:range kastle:Case .
+
+kastle:judges a rdf:Property ;
+    rdfs:domain kastle:court ;
+    rdfs:range kastle:Resource .
+
+kastle:juridiction a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:judge .
+
+kastle:lawSpeciality a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Law .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:string .
+
+kastle:passedBy a rdf:Property ;
+    rdfs:domain kastle:StatutoryLaw ;
+    rdfs:range kastle:Resource .
+
+kastle:practice a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:lawyer .
+
+kastle:practices a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:LegalRule .
+
+kastle:practicesIn a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Law .
+
+kastle:practicesLaw a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Law .
+
+kastle:relatedTo a rdf:Property ;
+    rdfs:domain kastle:Case,
+        kastle:Law ;
+    rdfs:range kastle:Law .
+
+kastle:represents a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Law .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Law ;
+    rdfs:range kastle:Literal .
 

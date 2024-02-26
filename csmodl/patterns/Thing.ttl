@@ -1,84 +1,84 @@
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://example.org/ontology/thing#AbstractThing> a rdfs:Class .
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Literal .
 
-<http://example.org/ontology/thing#PhysicalThing> a rdfs:Class .
+kastle:existsIn a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Thing .
 
-<http://example.org/stuff/1.0/ConceptualObject> a rdfs:Class .
+kastle:hasAbstract a rdf:Property ;
+    rdfs:domain kastle:ConceptualObject ;
+    rdfs:range kastle:string .
 
-<http://example.org/stuff/1.0/PhysicalObject> a rdfs:Class .
+kastle:hasColor a rdf:Property ;
+    rdfs:domain kastle:PhysicalObject,
+        kastle:PhysicalThing,
+        kastle:Thing ;
+    rdfs:range kastle:langString,
+        kastle:string .
 
-<http://www.example.com/ontology#Thing> a rdfs:Class .
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:AbstractThing ;
+    rdfs:range kastle:string .
 
-<http://www.example.com/thing#Event> a rdfs:Class .
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:AbstractThing ;
+    rdfs:range kastle:string .
 
-<http://www.example.com/thing#Property> a rdfs:Class .
+kastle:hasPart a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Thing .
 
-<http://www.example.com/thing#Thing> a rdfs:Class .
+kastle:hasProperty a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Property .
 
-<http://www.example.org/ontology#Property> a rdfs:Class .
+kastle:hasShape a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:langString,
+        kastle:string .
 
-<http://www.example.org/ontology#Thing> a rdfs:Class .
+kastle:hasSize a rdf:Property ;
+    rdfs:domain kastle:PhysicalObject,
+        kastle:PhysicalThing,
+        kastle:Thing ;
+    rdfs:range kastle:decimal,
+        kastle:double,
+        kastle:string .
 
-<http://www.example.org/thing#Thing> a rdfs:Class .
+kastle:hasSymbol a rdf:Property ;
+    rdfs:domain kastle:ConceptualObject ;
+    rdfs:range kastle:string .
 
-rdf:double a rdfs:Class .
+kastle:hasTexture a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:langString .
 
-rdf:langString a rdfs:Class .
+kastle:involves a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Event .
 
-<http://example.org/ontology/thing#hasColor> rdfs:range <http://example.org/ontology/thing#PhysicalThing> .
+kastle:isComposedOf a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Thing .
 
-<http://example.org/ontology/thing#hasDescription> rdfs:range <http://example.org/ontology/thing#AbstractThing> .
+kastle:isMadeOf a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Thing .
 
-<http://example.org/ontology/thing#hasName> rdfs:range <http://example.org/ontology/thing#AbstractThing> .
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Thing .
 
-<http://example.org/ontology/thing#hasSize> rdfs:range <http://example.org/ontology/thing#PhysicalThing> .
+kastle:isUsedFor a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Thing .
 
-<http://example.org/stuff/1.0/hasAbstract> rdfs:range <http://example.org/stuff/1.0/ConceptualObject> .
-
-<http://example.org/stuff/1.0/hasColor> rdfs:range <http://example.org/stuff/1.0/PhysicalObject> .
-
-<http://example.org/stuff/1.0/hasSize> rdfs:range <http://example.org/stuff/1.0/PhysicalObject> .
-
-<http://example.org/stuff/1.0/hasSymbol> rdfs:range <http://example.org/stuff/1.0/ConceptualObject> .
-
-<http://www.example.com/ontology#hasColor> rdfs:range <http://www.example.com/ontology#Thing>,
-        rdf:langString .
-
-<http://www.example.com/ontology#hasShape> rdfs:range <http://www.example.com/ontology#Thing>,
-        rdf:langString .
-
-<http://www.example.com/ontology#hasSize> rdfs:range <http://www.example.com/ontology#Thing>,
-        rdf:double .
-
-<http://www.example.com/ontology#hasTexture> rdfs:range <http://www.example.com/ontology#Thing>,
-        rdf:langString .
-
-<http://www.example.com/ontology#isComposedOf> rdfs:range <http://www.example.com/ontology#Thing> .
-
-<http://www.example.com/ontology#isPartOf> rdfs:range <http://www.example.com/ontology#Thing> .
-
-<http://www.example.com/thing#existsIn> rdfs:range <http://www.example.com/thing#Thing> .
-
-<http://www.example.com/thing#hasProperty> rdfs:range <http://www.example.com/thing#Property>,
-        <http://www.example.com/thing#Thing> .
-
-<http://www.example.com/thing#involves> rdfs:range <http://www.example.com/thing#Event>,
-        <http://www.example.com/thing#Thing> .
-
-<http://www.example.com/thing#isMadeOf> rdfs:range <http://www.example.com/thing#Thing> .
-
-<http://www.example.com/thing#isUsedFor> rdfs:range <http://www.example.com/thing#Thing> .
-
-<http://www.example.org/ontology#hasProperty> rdfs:range <http://www.example.org/ontology#Property>,
-        <http://www.example.org/ontology#Thing> .
-
-<http://www.example.org/thing#hasColor> rdfs:range <http://www.example.org/thing#Thing> .
-
-<http://www.example.org/thing#hasPart> rdfs:range <http://www.example.org/thing#Thing> .
-
-<http://www.example.org/thing#hasShape> rdfs:range <http://www.example.org/thing#Thing> .
-
-<http://www.example.org/thing#hasSize> rdfs:range <http://www.example.org/thing#Thing> .
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Thing ;
+    rdfs:range kastle:Literal .
 
