@@ -7,11 +7,14 @@ import re
 
 import numpy as np
 
-#  Directory set up
-output_path = "./code/output/"
-input_path = "./code/resources/"
-analysis_path = "./code/analysis/"
-pattern_path = "./code/commonsense-patterns"
+#  Directories
+input_path = "../data/prompt-results"
+output_path = "../data/extracted-patterns"
+analysis_path = "../data/pattern-analysis"
+pattern_path = "../csmodl/patterns"
+
+#  Voting parameters
+votingLimit = 1.03 # mean * 103%; only include values that are mean + x
 
 #  Graph parameters (prefix)
 pfs = {
@@ -21,14 +24,15 @@ pfs = {
     "owl": OWL,
     "time": TIME
 }
+# predicate shortcut
+a = pfs["rdf"]["type"]
 
-#  Hyperparameters
-'''
-    Properties to be added to the common-sense pattern of a noun
-    is voted with respect to the mean/average count of occurrences
-    in all properties and a manually set offset value, votingLimit.
-'''
-votingLimit = 1.03 # mean * 103%; only include values that are mean + x
+# Property Types
+prop_types = [
+    pfs["rdf"]["Property"],
+    pfs["owl"]["ObjectProperty"],
+    pfs["owl"]["DatatypeProperty"]
+]
 
 def init_kg(prefixes=pfs):
     kg = Graph()
@@ -65,75 +69,88 @@ def markdown_cleanup(ontology):
         ontology = ontology.replace(";", ";\n")
     return ontology
 
+def strip_uri(uri):
+    tokens = re.split("[#/]", uri)
+    name = tokens[-1]
+    return name
+
 def parse_results():
     '''
         Generates noun-specific directories with resultant TTL files
         provided the list of TSV in `resources`.
     '''
-    for filename in os.listdir(input_path):
-        name, ext = filename.split(".")
+    result_files = os.listdir(input_path)
+    result_files.sort()
+    for result_file in result_files:
+        name, ext = result_file.split(".")
+        # Only process the tsv files
+        if ext != "tsv":
+            # Historically there were some other file exts
+            continue
+        else:
+            # print(f"Parsing {name}.")
+            pass
+
         noun_dir = os.path.join(output_path,name)
         # Organize turtle output per LLM generated noun ontologies to individual directory
         if(not os.path.exists(noun_dir)): 
             os.mkdir(noun_dir)
+            print(f"\tCreating firectory: {noun_dir}")
 
-        with open(os.path.join(input_path, filename), "r") as inp:
+        with open(os.path.join(input_path, result_file), "r") as inp:
             lines = [ line.strip() for line in inp.readlines() ]
 
-        count = 0
-        for line in lines:
-            # Simple naming convention for unique noun ontology
-            out_name = f"{name}{count}.ttl" 
-            split = line.split("\t")
-            
-            index = 0
-            for s in split:
-                if("@" in s):
-                    break
-                index+=1
-            try:
-                ontology = split[index]
-            except IndexError:
-                continue
-
-            out = open(os.path.join(noun_dir, out_name), "w")
-            # Clean up ttl lines
-            ## These were determined while running the script a few times
-            ## And seeing how RDFlib was failing to parse the graphs
-            ontology = ontology.replace(" .", " .\n")
-            ontology = ontology.replace("\".", "\".\n")
-            ontology = ontology.replace(";", ";\n")
-            ontology = ontology.replace("@@", "@")
-            ontology = ontology.replace("resourceex", "resource\nex")
-            ontology = ontology.replace("propertyex", "property\nex")
-            ontology = ontology.replace("classex", "class\nex")
-            ontology = ontology.replace("# Classes", "# Classes\n")
-            ontology = ontology.replace("# Properties", "# Properties\n")
-            ontology = ontology.replace("# Individuals", "# Individuals\n")
-            ontology = ontology.replace("\"ex:", "\"\nex:")
-
-            ## Sometimes class names were wrapped in curly braces
-            ## These are removed when encountered
-            pattern = r'[a-zA-Z]*:{' # weird { } syntax
-            ontology = re.sub(pattern, '', ontology)
-            ontology = ontology.replace("}", "")
-
-            if("[" in ontology):
+            for count, line in enumerate(lines):
+                # Simple naming convention for unique noun ontology
+                out_name = f"{name}_{count}.ttl" 
+                split = line.split("\t")
+                
+                index = 0
+                for s in split:
+                    if("@" in s):
+                        break
+                    index+=1
                 try:
-                    ontology += split[index+1]
+                    ontology = split[index]
                 except IndexError:
-                    pass
+                    continue
 
-            if("```" in ontology):
-                ontology = markdown_cleanup(ontology)
-            ontology = ontology.replace('\n\n', '\n')
-            ontology = ontology.replace('>@', '>\n@')
-            ontology = ontology.replace('>ex', '>\nex')
+                out = open(os.path.join(noun_dir, out_name), "w")
+                # Clean up ttl lines
+                ## These were determined while running the script a few times
+                ## And seeing how RDFlib was failing to parse the graphs
+                ontology = ontology.replace(" .", " .\n")
+                ontology = ontology.replace("\".", "\".\n")
+                ontology = ontology.replace(";", ";\n")
+                ontology = ontology.replace("@@", "@")
+                ontology = ontology.replace("resourceex", "resource\nex")
+                ontology = ontology.replace("propertyex", "property\nex")
+                ontology = ontology.replace("classex", "class\nex")
+                ontology = ontology.replace("# Classes", "# Classes\n")
+                ontology = ontology.replace("# Properties", "# Properties\n")
+                ontology = ontology.replace("# Individuals", "# Individuals\n")
+                ontology = ontology.replace("\"ex:", "\"\nex:")
 
-            #  Write to individual file
-            # print(f"Writing to {out_name}")
-            out.write(ontology)
-            count+=1
+                ## Sometimes class names were wrapped in curly braces
+                ## These are removed when encountered
+                pattern = r'[a-zA-Z]*:{' # weird { } syntax
+                ontology = re.sub(pattern, '', ontology)
+                ontology = ontology.replace("}", "")
+
+                if("[" in ontology):
+                    try:
+                        ontology += split[index+1]
+                    except IndexError:
+                        pass
+
+                if("```" in ontology):
+                    ontology = markdown_cleanup(ontology)
+                ontology = ontology.replace('\n\n', '\n')
+                ontology = ontology.replace('>@', '>\n@')
+                ontology = ontology.replace('>ex', '>\nex')
+
+                #  Write to individual file
+                out.write(ontology)
 
 def voting_helper(propDict, key):
     values = []
@@ -165,127 +182,98 @@ def vote_properties():
         Uses rdflib Graph to generate s,p,o per TTL file
     '''
     #  Stats File Setup
-    statsFile = open(os.path.join("./code/", "noun-valid-ttl-parsing-analysis.out"), "w")
-    ## Stats File Formatting
-    statsFile.write(f"noun: \t countOfValidFiles \t countOfTotalFiles \t Ratio Parsed (%) \n")
-    statsValidDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
-    statsTotalDict = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
-    
-    # predicate shortcut
-    a = pfs["rdf"]["type"]
-
-    # Property Types
-    properties = [
-        pfs["rdf"]["Property"],
-        pfs["owl"]["ObjectProperty"],
-        pfs["owl"]["DatatypeProperty"]
-    ]
-    
-    for filename in os.listdir(input_path): # For each Noun
-        noun, ext = filename.split(".")
-        noun_dir = os.path.join(output_path,noun)
+    analysis_filename = "noun-valid-ttl-parsing-analysis.out"
+    analysis_filepath = os.path.join(analysis_path, analysis_filename)
+    with open(analysis_filepath, "w") as stats_file: 
+        ## Stats File Formatting
+        stats_file.write(f"noun: \t countOfValidFiles \t countOfTotalFiles \t Ratio Parsed (%) \n")
+        stats_valid = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
+        stats_total = { filename.split(".")[0]: 0 for filename in os.listdir(input_path) }
         
-        fName = f"{noun}.out"
-        analysisFile = open(os.path.join(analysis_path, fName), "w")
-        graph = init_kg()
+        noun_filepaths = os.listdir(input_path)
+        noun_filepaths.sort()
+        for noun_filepath in noun_filepaths: # For each Noun
+            noun, ext = noun_filepath.split(".")
+            noun_dir = os.path.join(output_path, noun)
 
-        # All occurences from all nouns
-        nounPropertyDict = dict() 
-        dictSPO = set()
-        for filename in os.listdir(noun_dir): # For each ttl from single Noun
-            statsTotalDict[noun] += 1 # Total available files
-
-            ttlPropDict = dict() # Individual file occurrences per noun
-            curr_graph = init_kg()
-            with open(os.path.join(noun_dir, filename), "r") as f:
-                try:
-                    curr_graph.parse(f)
-                    #  Counting Individual File Occurrences
-                    for sub,p,obj in curr_graph:
-                        if("rdf" in p): #Skip RDF properties
-                            continue 
-                        if("owl" in p): #Skip OWL properties
-                            continue 
-                        if(isinstance(obj, Literal)):
-                            continue                        
-                        temp = p.split("/")[-1]
-
-                        if(f"{noun}#" in p):
-                            temp = temp.split("#")[-1]
-
-                        # Skip or Increment Count of Found Properties
-                        if(str(temp) in ttlPropDict): # Skip over found property
-                            continue
-                        else:
-                            ttlPropDict[str(temp)] = 1
-                            dictSPO[p] = [sub, obj]
-
-                    #  Identifying Type Properties in Noun Ontology
-                    for property in properties:
-                        for s,p,o in (curr_graph.triples( (None, pfs["rdf"]["type"], property) )):
-                            ##  Adding range of properties
-                            for _,_,propRange in curr_graph.triples((s, RDFS.range, None)):
-                                # print(str(s), str(p), str(o))
-                                ##  Skip datatypes
-                                if("xsd" in propRange or 
-                                    "XML" in propRange or
-                                    "Literal" in propRange):
-                                    continue
-                                ## Skip already added
-                                graph.add( (propRange, a, pfs["rdfs"]["Class"]) )
-                                graph.add( (s, RDFS.range, propRange) )
-
-                            ##  Adding domain of properties
-                            for _, _, propDomain in curr_graph.triples( (s, RDFS.domain, None) ):
-                                # print(str(s), str(p), str(o))
-                                ##  Skip datatypes
-                                if("xsd" in propDomain or 
-                                    "XML" in propDomain or
-                                    "Literal" in propRange):
-                                    continue
-                                ## Skip already added
-                                graph.add( (propDomain, a, pfs["rdfs"]["Class"]) )
-                                graph.add( (s, RDFS.range, propDomain) )
-
-                except ParserError:
-                    continue # Error parsing file
-                except Exception as ex:
-                    continue 
-
-                for k,v in ttlPropDict.items(): # Add each noun-file to overall property tracker
-                    if(k in nounPropertyDict): # Increment past observed properties
-                        nounPropertyDict[k] += v
-                    else: # Set {k,v} for identifying properties in noun
-                        nounPropertyDict[k] = 1    
+            noun_graph = init_kg()
             
-            # Stats File
-            statsValidDict[noun] += 1
+            analysis_noun_filename = f"{noun}.out"
+            analysis_noun_filepath = os.path.join(analysis_path, analysis_noun_filename)
+            with open(analysis_filepath, "w") as analysis_noun_file:
+                # All occurences from all nouns
+                noun_properties = dict()
+                for filename in os.listdir(noun_dir): # For each ttl from single Noun
+                    stats_total[noun] += 1 # Total available files
+                    unique_props = set() # Individual file occurrences per noun
+                    curr_graph = init_kg()
+                    with open(os.path.join(noun_dir, filename), "r") as f:
+                        try:
+                            # Try to parse the graph
+                            curr_graph.parse(f)
+                        except Exception as e:
+                            print(f"\tCould not parse: {filename}")
+                            continue
 
-        # Voting to add to noun
-        for key, value in nounPropertyDict.items():
-            sub = value[0]
-            pred = key
-            obj = value[1]
-            property = pred.split("/")[-1].split("#")[-1]
-            if(voting_helper(nounPropertyDict, property)):
-                graph.add( (sub, pred, obj) )
-        try:
-            serialization(noun, graph)
-        except Exception as ex:
-            print(noun)
-        #  Sort in descending value order for output
-        nounPropertyDict = {k: v for k, v in sorted(nounPropertyDict.items(), key=lambda item: item[1], reverse=True)}
-        for key, value in nounPropertyDict.items():
-            analysisFile.write(f"{key} \t {value}\n")
+                        #  Identifying Type Properties in Noun Ontology
+                        for prop_type in prop_types:
+                            for s,p,o in (curr_graph.triples( (None, pfs["rdf"]["type"], prop_type) )):
+                                predicate = s
+                                prop_name = strip_uri(predicate)
+                            
+                                try:
+                                    _,_,prop_range = list(curr_graph.triples((predicate, RDFS.range,  None)))[0]
+                                    _,_,prop_domain = list(curr_graph.triples((predicate, RDFS.domain,  None)))[0]
+                                except IndexError as e:
+                                    # Consider missing domain/range to be malformed property
+                                    # This will accidentally remove all inverses
+                                    continue
 
-    #  Sort in ascending key order for output
-    statsValidDict = dict(sorted(statsValidDict.items()))
-    for key,value in statsValidDict.items():
-        try:
-            ratioUsed = round(float(value/statsTotalDict[key]),2) * 100 # represent as percentage
-            statsFile.write(f"{key}: \t {value}  \t {statsTotalDict[key]} \t {ratioUsed}\n")
-        except Exception as ex:
-            pass
+                                try:
+                                    domain_name = strip_uri(prop_domain)
+                                    range_name = strip_uri(prop_range)
+                                except:
+                                    print(prop_domain)
+                                    print(prop_range)
+                                    os.sys.exit()
+                                unique_props.add((prop_name, domain_name, range_name))
+
+                        for unique_prop in unique_props:
+                            try: 
+                                noun_properties[unique_prop] += 1
+                            except KeyError as e:
+                                noun_properties[unique_prop] = 1    
+                    
+                    # Stats File
+                    stats_valid[noun] += 1
+
+                # Voting to add to noun
+                #
+                # for key, value in noun_properties.items():
+                #     sub = value[0]
+                #     pred = key
+                #     obj = value[1]
+                #     property_name = pred.split("/")[-1].split("#")[-1]
+                #     if(voting_helper(noun_properties, property_name)):
+                #         noun_graph.add( (sub, pred, obj) )
+                try:
+                    serialization(noun, noun_graph)
+                except Exception as ex:
+                    print(noun)
+
+                #  Sort in descending value order for output
+                noun_properties = {k: v for k, v in sorted(noun_properties.items(), key=lambda item: item[1], reverse=True)}
+                for key, value in noun_properties.items():
+                    analysis_noun_file.write(f"{key} \t {value}\n")
+
+            #  Sort in ascending key order for output
+            stats_valid = dict(sorted(stats_valid.items()))
+            for key,value in stats_valid.items():
+                try:
+                    ratioUsed = round(float(value/stats_total[key]),2) * 100 # represent as percentage
+                    stats_file.write(f"{key}: \t {value}  \t {stats_total[key]} \t {ratioUsed}\n")
+                except Exception as ex:
+                    pass
 
 if __name__ == "__main__":
     parse_results()
