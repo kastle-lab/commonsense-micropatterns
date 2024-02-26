@@ -1,0 +1,13 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Lot a rdfs:Class ;
+    rdfs:label "Parking Lot"@en ;
+    rdfs:comment "A class for representing a parking lot in the ontology"@en .
+ex:hasCapacity a rdf:Property ;
+    rdfs:label "has capacity"@en ;
+    rdfs:domain ex:Lot ;
+    rdfs:range rdf:integer .
+ex:lot123 a ex:Lot ;
+    ex:hasCapacity 50 ;
+    rdfs:label "Lot 123"@en .

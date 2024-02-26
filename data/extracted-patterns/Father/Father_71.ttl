@@ -1,0 +1,4 @@
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:John rdf:type ex:Person .
+ex:Jack rdf:type ex:Person .
+ex:John ex:fatherOf ex:Jack .

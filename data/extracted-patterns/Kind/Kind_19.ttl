@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kind: <http://example.com/kind#> .
+kind:Kind a rdfs:Class .
+kind:AnimalKind a rdfs:Class ;
+    rdfs:subClassOf kind:Kind .
+kind:PlantKind a rdfs:Class ;
+    rdfs:subClassOf kind:Kind .
+kind:name a rdf:Property ;
+    rdfs:domain kind:Kind ;
+    rdfs:range xsd:string .
+kind:hasCharacteristic a rdf:Property ;
+    rdfs:domain kind:Kind ;
+    rdfs:range xsd:string .
+kind:Goldfish a kind:AnimalKind ;
+    kind:name "Goldfish" ;
+    kind:hasCharacteristic "Aquatic".
+kind:Rose a kind:PlantKind ;
+    kind:name "Rose" ;
+    kind:hasCharacteristic "Flowering".

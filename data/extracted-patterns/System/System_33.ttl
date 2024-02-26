@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sys: <http://www.example.org/system#> .
+# Classes
+sys:System a rdfs:Class .
+sys:Component a rdfs:Class .
+sys:User a rdfs:Class .
+sys:Software a rdfs:Class .
+sys:Hardware a rdfs:Class .
+# Object Propertiessys:hasComponent a rdf:Property ;
+  rdfs:domain sys:System ;
+  rdfs:range sys:Component .
+  sys:usedBy a rdf:Property ;
+  rdfs:domain sys:System ;
+  rdfs:range sys:User .
+sys:hasSoftware a rdf:Property ;
+  rdfs:domain sys:System ;
+  rdfs:range sys:Software .
+sys:hasHardware a rdf:Property ;
+  rdfs:domain sys:System ;
+  rdfs:range sys:Hardware .
+sys:operatesOn a rdf:Property ;
+  rdfs:domain sys:User ;
+  rdfs:range sys:System .

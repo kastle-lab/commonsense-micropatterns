@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix force: <http://www.example.org/force#> .
+force:   rdf:type rdfs:Class ;
+  rdfs:label "Force" ;
+  rdfs:comment "Physics concept that represents a push or pull."@en .
+force:type   rdf:type rdf:Property ;
+  rdfs:domain force: ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The type of the force, e.g., gravitational, electromagnetic, etc."@en .
+force:direction   rdf:type rdf:Property ;
+  rdfs:domain force: ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The direction of the force, often represented by vectors."@en .
+force:magnitude   rdf:type rdf:Property ;
+  rdfs:domain force: ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "The magnitude of the force, measured in units of newtons."@en .
+force:applied_to  rdf:type rdf:Property ;
+ rdfs:domain force: ;
+ rdfs:range rdfs:Resource ;
+ rdfs:comment "The object to which the force is applied."@en .
+force:resultant_effect  rdf:type rdf:Property ;
+ rdfs:domain force: ;
+ rdfs:range rdfs:Literal ;
+ rdfs:comment "The resulting effect caused by the application of the force."@en .

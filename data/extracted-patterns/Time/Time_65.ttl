@@ -1,0 +1,17 @@
+@prefix : <http://www.example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:TimeInterval a rdfs:Class ;
+    rdfs:label "Time Interval" ;
+    rdfs:comment "A specific duration of time." .
+:hasStartTime a owl:ObjectProperty ;
+    rdfs:label "has start time" ;
+    rdfs:comment "The time when the interval begins." ;
+    rdfs:domain :TimeInterval ;
+    rdfs:range xsd:dateTime .
+:hasEndTime a owl:ObjectProperty ;
+    rdfs:label "has end time" ;
+    rdfs:comment "The time when the interval ends." ;
+    rdfs:domain :TimeInterval ;
+    rdfs:range xsd:dateTime .

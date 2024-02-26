@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix car: <http://www.example.com/car#> .
+car:Car rdf:type rdfs:Class .
+car:Brand rdf:type rdfs:Class .
+car:Model rdf:type rdfs:Class .
+car:Color rdf:type rdfs:Property .
+car:Year rdf:type rdfs:Property .
+car:Color rdfs:range xsd:string .
+car:Year rdfs:range xsd:integer .
+car:Car rdfs:subClassOf car:Brand .
+car:Car rdfs:subClassOf car:Model .
+car:Brand rdfs:domain car:Car .
+car:Model rdfs:domain car:Car .
+car:Color rdfs:domain car:Car .
+car:Year rdfs:domain car:Car .
+car:Brand rdfs:comment "The brand of the car."@en .
+car:Model rdfs:comment "The model of the car."@en .
+car:Color rdfs:comment "The color of the car."@en .
+car:Year rdfs:comment "The year of manufacture of the car."@en .
+car:Car rdfs:label "Car"@en .
+car:Brand rdfs:label "Brand"@en .
+car:Model rdfs:label "Model"@en .
+car:Color rdfs:label "Color"@en .
+car:Year rdfs:label "Year"@en .

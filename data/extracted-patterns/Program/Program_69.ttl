@@ -1,0 +1,12 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+  ex:Program1 rdf:type ex:Program ;
+    ex:name "Example Program"^^xsd:string ;
+    ex:version "1.0"^^xsd:string ;
+    ex:developer ex:Developer1 ;
+    ex:language "Python"^^xsd:string ;
+    ex:launchDate "2022-01-01"^^xsd:date .
+ex:Developer1 rdf:type ex:Developer ;
+    ex:name "John Doe"^^xsd:string ;
+    ex:email "john.doe@example.com"^^xsd:string .

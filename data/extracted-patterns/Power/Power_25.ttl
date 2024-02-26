@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix power: <http://www.example.com/owl/power#> .
+power:         rdf:type owl:Ontology ;
+        rdfs:comment "Ontology of the Power"@en .
+# Class Definitionspower:Power         rdf:type owl:Class ;
+        rdfs:label "Power"@en ;
+        rdfs:comment "The ability to act or produce an effect"@en .
+power:PhysicalPower         rdf:type owl:Class ;
+        rdfs:subClassOf power:Power ;
+        rdfs:label "Physical power"@en ;
+        rdfs:comment "Power which can be measured and quantified, such as electrical or mechanical power"@en .
+power:PoliticalPower         rdf:type owl:Class ;
+        rdfs:subClassOf power:Power ;
+        rdfs:label "Political power"@en ;
+        rdfs:comment "Power that a person or group has over a political apparatus or state"@en .
+# Property Definitions power:hasSource         rdf:type owl:ObjectProperty ;
+        rdfs:domain power:Power ;
+        rdfs:range power:Source ;
+        rdfs:label "has source"@en ;
+        rdfs:comment "Indicates the source that the power originates from"@en .
+power:hasMagnitude         rdf:type owl:DatatypeProperty ;
+        rdfs:domain power:PhysicalPower ;
+        rdfs:range  xsd:decimal ;
+        rdfs:label "has magnitude"@en ;
+        rdfs:comment "Indicates the magnitude, or quantum, of the physical power"@en .
+# Individual Definitions power:PresidentialPower         rdf:type power:PoliticalPower ;
+        rdfs:label "Presidential power"@en ;
+        rdfs:comment "Power that is vested in a president"@en ;
+        power:hasSource power:Constitution .

@@ -1,0 +1,24 @@
+@prefix : <http://example.org/chair#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Chair a owl:Class ;
+    rdfs:subClassOf :Furniture ;
+    rdfs:label ""Chair""@en ;
+    rdfs:comment ""A piece of furniture designed to accommodate one person, with a backrest and a seat.""@en ;
+    rdfs:seeAlso <http://www.wikidata.org/entity/Q15026> .
+ :hasMaterial a owl:ObjectProperty ;
+    rdfs:domain :Chair ;
+    rdfs:range :Material ;
+    rdfs:label ""has material""@en ;
+    rdfs:comment ""The material from which a chair is made.""@en ;
+    owl:inverseOf :isMaterialOf .
+:Material a owl:Class ;
+    rdfs:label ""Material""@en ;
+    rdfs:comment ""A matter from which something is made.""@en .
+:isMaterialOf a owl:ObjectProperty ;
+    rdfs:domain :Material ;
+    rdfs:range :Chair ;
+    rdfs:label ""is material of""@en ;
+    rdfs:comment ""Relates a material to a chair that is made from it.""@en ;
+    owl:inverseOf :hasMaterial .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.org/day#> .
+day: a rdfs:Class ;
+rdfs:comment "The concept of a day"@en ;
+rdfs:label "Day"@en .
+day:hasMorning a rdf:Property ;
+rdfs:domain day: ;
+rdfs:range xsd:boolean ;
+rdfs:comment "States if a day has morning"@en ;
+rdfs:label "Has morning"@en .
+day:hasAfternoon a rdf:Property ;
+rdfs:domain day: ;
+rdfs:range xsd:boolean ;
+rdfs:comment "States if a day has afternoon"@en ;
+rdfs:label "Has afternoon"@en .
+day:hasEvening a rdf:Property ;
+rdfs:domain day: ;
+rdfs:range xsd:boolean ;
+rdfs:comment "States if a day has evening"@en ;
+rdfs:label "Has evening"@en .
+day:hasNight a rdf:Property ;
+rdfs:domain day: ;
+rdfs:range xsd:boolean ;
+rdfs:comment "States if a day has night"@en ;
+rdfs:label "Has night"@en .
+day:isHoliday a rdf:Property ;
+rdfs:domain day: ;
+rdfs:range xsd:boolean ;
+rdfs:comment "States if a day is a holiday"@en ;
+rdfs:label "Is holiday"@en .
+day:isWeekend a rdf:Property ;
+rdfs:domain day: ;
+rdfs:range xsd:boolean ;
+rdfs:comment "States if a day is a weekend"@en ;
+rdfs:label "Is weekend"@en .
+day:partOfDay a rdfs:Class ;
+rdfs:subClassOf day: ;
+rdfs:comment "Different parts of a day"@en ;
+rdfs:label "Part of day"@en .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Book rdf:type rdfs:Class ;
+   rdfs:subClassOf ex:Documents ;
+   rdfs:label "Book" ;
+   rdfs:comment "A written or printed work consisting of pages glued or sewn together along one side and bound in covers." .
+ex:title rdf:type owl:DatatypeProperty ;
+   rdfs:domain ex:Book ;
+   rdfs:label "title" ;
+   rdfs:comment "The title of the book." ;
+   rdfs:range xsd:string .
+ex:author rdf:type owl:ObjectProperty ;
+   rdfs:domain ex:Book ;
+   rdfs:label "author" ;
+   rdfs:comment "The author of the book." ;
+   rdfs:range ex:Person .
+ex:publishedDate rdf:type owl:DatatypeProperty ;
+   rdfs:domain ex:Book ;
+   rdfs:label "publishedDate" ;
+   rdfs:comment "The date the book was published." ;
+   rdfs:range xsd:date .
+ex:ISBN rdf:type owl:DatatypeProperty ;
+   rdfs:domain ex:Book ;
+   rdfs:label "ISBN" ;
+   rdfs:comment "The International Standard Book Number of the book." ;
+   rdfs:range xsd:string .
+ex:Person rdf:type rdfs:Class ;
+   rdfs:label "Person" ;

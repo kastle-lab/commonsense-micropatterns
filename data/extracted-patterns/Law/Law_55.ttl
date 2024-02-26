@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix law: <http://example.org/law/> .
+law:Law rdf:type rdfs:Class .
+law:hasTitle rdf:type rdf:Property ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:string .
+    law:hasArticle rdf:type rdf:Property ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Article .
+    law:Article rdf:type rdfs:Class .
+law:hasNumber rdf:type rdf:Property ;
+    rdfs:domain law:Article ;
+    rdfs:range xsd:integer .
+    law:hasText rdf:type rdf:Property ;
+    rdfs:domain law:Article ;
+    rdfs:range xsd:string .
+    law:hasCourt rdf:type rdf:Property ;
+    rdfs:range law:Court ;
+    rdfs:domain law:Law .
+        law:Court rdf:type rdfs:Class .
+law:hasName rdf:type rdf:Property ;
+    rdfs:domain law:Court ;
+    rdfs:range xsd:string .
+law:hasLocation rdf:type rdf:Property ;
+    rdfs:domain law:Court ;
+    rdfs:range xsd:string .

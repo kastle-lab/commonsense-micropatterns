@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix work: <http://example.org/work#> .
+work:Work rdf:type owl:Class ;
+    rdfs:comment "A class representing works or jobs" ;
+    rdfs:label "Work" .
+work:hasPosition rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Indicates the position title of a work" ;
+    rdfs:label "has position" ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:string .
+work:hasLocation rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Indicates the location of a work" ;
+    rdfs:label "has location" ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:string .
+work:hasWorkHours rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Indicates the work hours of a work" ;
+    rdfs:label "has work hours" ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:int .
+work:hasStartDate rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Indicates the start date of a work" ;
+    rdfs:label "has start date" ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:date .
+work:hasEndDate rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Indicates the end date of a work" ;
+    rdfs:label "has end date" ;
+    rdfs:domain work:Work ;
+    rdfs:range xsd:date .
+work:Employee rdf:type owl:Class ;
+    rdfs:comment "A class representing employees" ;
+    rdfs:label "Employee" .
+work:isEmployedAt rdf:type owl:ObjectProperty ;
+    rdfs:comment "Indicates where an employee is employed" ;
+    rdfs:label "is employed at" ;
+    rdfs:domain work:Employee ;
+    rdfs:range work:Work .

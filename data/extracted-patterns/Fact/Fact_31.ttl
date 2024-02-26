@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+#Definition of a Fact class
+ex:Fact rdf:type rdfs:Class .
+ex:Fact rdfs:label "Fact" ;
+        rdfs:comment "A statement that can be proven to be true or false".
+#Properties for the Fact class
+ex:hasStatement rdf:type rdf:Property ;
+               rdfs:domain ex:Fact ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The statement of the fact" .
+ex:hasEvidence rdf:type rdf:Property ;
+               rdfs:domain ex:Fact ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The evidence that supports the fact" .
+ex:isTrue rdf:type rdf:Property ;
+          rdfs:domain ex:Fact ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Indicates whether the fact is true or not" .
+ #Example instance of a Factex:fact1 rdf:type ex:Fact ;
+         ex:hasStatement "The earth revolves around the sun" ;
+         ex:hasEvidence "Scientific observations of celestial bodies" ;
+         ex:isTrue "True"^^xsd:boolean .

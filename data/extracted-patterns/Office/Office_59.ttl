@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix office: <http://example.org/office#> .
+office:Office rdf:type rdfs:Class ;
+   rdfs:comment "A place where people work."@en ;
+   rdfs:label "Office"@en .
+office:hasEmployee rdf:type rdf:Property ;
+    rdfs:range office:Employee ;
+    rdfs:domain office:Office ;
+    rdfs:label "has employee"@en ;
+    rdfs:comment "An office has employees working in it."@en .
+office:Employee rdf:type rdfs:Class ;
+    rdfs:comment "A person who works in an office."@en ;
+    rdfs:label "Employee"@en .
+office:hasLocation rdf:type rdf:Property ;
+    rdfs:range xsd:string ;
+    rdfs:domain office:Office ;
+    rdfs:label "has location"@en ;
+    rdfs:comment "An office has a specific location."@en .
+office:hasOfficeNumber rdf:type rdf:Property ;
+    rdfs:range xsd:integer ;
+    rdfs:domain office:Office ;
+    rdfs:label "has office number"@en ;
+    rdfs:comment "An office has a unique number."@en .

@@ -1,0 +1,5 @@
+@prefix : <http://example.org/study/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:study rdf:type rdf:Class .
+:provides rdf:type rdf:Property ;
+            rdf:domain :study .

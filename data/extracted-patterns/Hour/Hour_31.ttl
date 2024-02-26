@@ -1,0 +1,18 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+time:Hour a rdfs:Class ;
+      rdfs:label "Hour" ;
+      rdfs:subClassOf time:TemporalUnit ;
+      rdfs:comment "A unit of measure of time, specifically 60 minutes or 1/24 of a day." .
+time:hasHour a owl:ObjectProperty ;
+      rdfs:label "has hour" ;
+      rdfs:domain time:TemporalEntity ;
+      rdfs:range time:Hour ;
+      rdfs:comment "Relates a temporal entity to an hour." .
+      time:hourValue a owl:DatatypeProperty ;
+      rdfs:label "hour value" ;
+      rdfs:domain time:Hour ;
+      rdfs:range xsd:integer ;
+      rdfs:comment "The numeric value of an hour." .

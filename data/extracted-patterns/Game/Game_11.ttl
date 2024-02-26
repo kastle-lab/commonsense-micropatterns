@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix game: <http://www.gameontology.org#> .
+game:Game  rdf:type rdfs:Class ;
+  rdfs:label "Game"@en ;
+  rdfs:comment "A digital or non-digital activity that has rules and objectives"@en .
+game:boardGame  rdf:type game:Game ;
+  rdfs:label "Board Game"@en ;
+  rdfs:comment "A game that involves counters or pieces moved or placed on a pre-marked surface or 'board', according to a set of rules"@en .
+game:digitalGame  rdf:type game:Game ;
+  rdfs:label "Digital Game"@en ;
+  rdfs:comment "A game that is facilitated by electronic technology and can be played on devices like video game consoles, computers, smartphones etc."@en .
+game:rolePlayingGame  rdf:type game:Game ;
+  rdfs:label "Role Playing Game"@en ;
+  rdfs:comment "A game in which players assume the roles of characters in a fictional setting"@en .
+game:releaseYear  rdf:type rdf:Property ;
+  rdfs:label "Release Year"@en ;
+  rdfs:comment "The year when the game was released"@en ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:year .
+game:rating  rdf:type rdf:Property ;
+  rdfs:label "Rating"@en ;
+  rdfs:comment "User rating of the game"@en ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:float .

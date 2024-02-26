@@ -1,0 +1,14 @@
+@prefix : <http://www.example.com/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Team rdf:type rdfs:Class ;
+:hasMember rdf:type rdf:Property;
+    rdfs:domain :Team;
+    rdfs:range :Person.:hasName rdf:type rdf:Property;
+    rdfs:domain :Team;
+    rdfs:range xsd:string.:Person rdf:type rdfs:Class.:hasAge rdf:type rdf:Property;
+    rdfs:domain :Person;
+    rdfs:range xsd:integer.:hasPosition rdf:type rdf:Property;
+    rdfs:domain :Person;
+    rdfs:range :Position.:Position rdf:type rdfs:Class .

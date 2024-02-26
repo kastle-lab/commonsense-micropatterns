@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fact: <http://example.com/fact#> .
+fact:Fact rdf:type rdfs:Class ;
+rdfs:label "Fact" ;
+rdfs:comment "A statement that can be proven to be true or false." .
+fact:dateVerified rdf:type rdf:Property ;
+rdfs:range xsd:dateTime ;
+rdfs:domain fact:Fact ;
+rdfs:label "date verified" ;
+rdfs:comment "The date a fact was verified." .
+fact:isVerified rdf:type rdf:Property ;
+rdfs:range xsd:boolean ;
+rdfs:domain fact:Fact ;
+rdfs:label "is verified" ;
+rdfs:comment "Indicates whether a fact has been verified." .
+fact:sourceReference rdf:type rdf:Property ;
+rdfs:range rdfs:Resource ;
+rdfs:domain fact:Fact ;
+rdfs:label "source reference" ;
+rdfs:comment "The reference or source from which a fact was obtained." .
+fact:relatedTo rdf:type rdf:Property ;
+rdfs:range rdfs:Resource ;
+rdfs:domain fact:Fact ;
+rdfs:label "related to" ;
+rdfs:comment "Other facts or resources related to a fact." .

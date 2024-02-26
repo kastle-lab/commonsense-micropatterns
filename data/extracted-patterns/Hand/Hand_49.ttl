@@ -1,0 +1,11 @@
+@prefix ex: <http://example.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+# Hand class definitionex:Hand a obo:BFO_0000020 ;
+ # Continuant    rdfs:label "Hand" ;
+    rdfs:subClassOf obo:UBERON_0002380 .
+ # Arm# Hand hasPart Fingersex:Fingers a obo:BFO_0000020 ;
+ # Continuant    rdfs:label "Fingers" ;
+    rdfs:subClassOf obo:UBERON_0002388 , # Digit of hand    obo:BFO_0000110 ex:Hand .
+ # has part some Hand# Hand hasPart Palmex:Palm a obo:BFO_0000020 ;
+ # Continuant    rdfs:label "Palm" ;
+    rdfs:subClassOf obo:UBERON_0001434 , # Palm of hand    obo:BFO_0000110 ex:Hand .

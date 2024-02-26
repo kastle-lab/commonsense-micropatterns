@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qaont: <http://example.org/ontology/question#> .
+ qaont:Question rdf:type owl:Class ;
+    rdfs:label "Question"@en ;
+    rdfs:comment "A sentence or phrase that seeks to find out information."@en ;
+    rdfs:subClassOf rdfs:Resource .
+qaont:MultipleChoiceQuestion rdf:type owl:Class ;
+    rdfs:label "Multiple Choice Question"@en ;
+    rdfs:comment "A question that allows selection of one option from several choices."@en ;
+    rdfs:subClassOf qaont:Question .
+qaont:OpenEndedQuestion rdf:type owl:Class ;
+    rdfs:label "Open Ended Question"@en ;
+    rdfs:comment "A question that requires a full, meaningful answer."@en ;
+    rdfs:subClassOf qaont:Question .
+qaont:QuestionTopic rdf:type owl:Class ;
+    rdfs:label "Question Topic"@en ;
+    rdfs:comment "The subject that the question is about."@en ;
+    rdfs:subClassOf rdfs:Resource .
+qaont:TopicOf rdf:type owl:ObjectProperty ;
+    rdfs:label "is topic of"@en ;
+    rdfs:comment "Connects a question to its topic"@en ;
+    rdfs:domain qaont:QuestionTopic ;
+    rdfs:range qaont:Question .
+qaont:Answer rdf:type owl:Class ;
+    rdfs:label "Answer"@en ;
+    rdfs:comment "A solution or explanation for a question."@en ;
+    rdfs:subClassOf rdfs:Resource .
+qaont:HasAnswer rdf:type owl:ObjectProperty ;
+    rdfs:label "has answer"@en ;
+    rdfs:comment "Connects a question to its answer"@en ;
+    rdfs:domain qaont:Question ;
+    rdfs:range qaont:Answer .

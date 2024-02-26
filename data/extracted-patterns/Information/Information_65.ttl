@@ -1,0 +1,11 @@
+ This example includes an "InformationProvider" class and a "providesInformationAbout" property. 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix info: <http://example.org/info#> .
+info:InformationProvider a rdfs:Class ;
+  rdfs:comment "The class of entities that provide information" .
+info:providesInformationAbout a rdf:Property ;
+  rdfs:domain info:InformationProvider ;
+  rdfs:range rdfs:Resource ;
+  rdfs:comment "A property representing the topic an Information Provider provides information about" .

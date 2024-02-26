@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+dbo:Office a rdfs:Class ;
+    rdfs:label "Office"@en ;
+    rdfs:comment "A building or room where people perform work or an organization operates"@en .
+dbo:OfficeFurniture a rdfs:Class ;
+    rdfs:label "Office furniture"@en ;
+    rdfs:comment "Furniture items commonly used in an office"@en ;
+    rdfs:subClassOf dbo:Office .
+dbo:OfficeEquipment a rdfs:Class ;
+    rdfs:label "Office equipment"@en ;
+    rdfs:comment "Equipment used in an office, such as computers, printers, and fax machines"@en ;
+    rdfs:subClassOf dbo:Office .
+dbo:OfficeEmployee a rdfs:Class ;
+    rdfs:label "Office employee"@en ;
+    rdfs:comment "A person who works in an office, performing tasks such as administrative duties or customer service"@en ;
+    rdfs:subClassOf dbo:Office .
+dbo:OfficeSpace a rdfs:Class ;
+    rdfs:label "Office space"@en ;
+    rdfs:comment "A physical area designated for office work"@en ;
+    rdfs:subClassOf dbo:Office .

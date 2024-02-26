@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix company: <http://example.com/company#> .
+# Class Definitionscompany:Company a rdfs:Class ;
+    rdfs:label "Company" ;
+    rdfs:comment "A business organization" .
+company:Employee a rdfs:Class ;
+    rdfs:label "Employee" ;
+    rdfs:comment "A person who works in the company" .
+company:Department a rdfs:Class ;
+    rdfs:label "Department" ;
+    rdfs:comment "A division of a company" .
+company:Product a rdfs:Class ;
+    rdfs:label "Product" ;
+    rdfs:comment "A thing that a company produces" .
+# Property Definitionscompany:hasEmployee a rdf:Property ;
+    rdfs:label "has employee" ;
+    rdfs:domain company:Company ;
+    rdfs:range company:Employee .
+company:hasDepartment a rdf:Property ;
+    rdfs:label "has department" ;
+    rdfs:domain company:Company ;
+    rdfs:range company:Department .
+company:produces a rdf:Property ;
+    rdfs:label "produces" ;
+    rdfs:domain company:Company ;
+    rdfs:range company:Product .
+# Individual Companies, Employees, Departments and Productscompany:microsoft a company:Company ;
+    rdfs:label "Microsoft" .
+company:bill a company:Employee ;
+    rdfs:label "Bill" .
+company:softwareDevelopment a company:Department ;
+    rdfs:label "Software Development" .
+company:windows a company:Product ;
+    rdfs:label "Windows" .
+# Relationshipscompany:microsoft company:hasEmployee company:bill .
+company:microsoft company:hasDepartment company:softwareDevelopment .
+company:microsoft company:produces company:windows .

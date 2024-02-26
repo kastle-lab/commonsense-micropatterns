@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix month: <http://example.org/month#> .
+month:Month rdf:type rdfs:Class ;
+         rdfs:label "Month"@en ;
+         rdfs:comment "Represents a month of the year"@en .
+month:January rdf:type month:Month ;
+         rdfs:label "January"@en ;
+         rdfs:comment "The first month of the year"@en .
+month:February rdf:type month:Month ;
+         rdfs:label "February"@en ;
+         rdfs:comment "The second month of the year"@en .
+month:hasNumberOfDays rdf:type owl:DatatypeProperty ;
+         rdfs:domain month:Month ;
+         rdfs:range xsd:integer ;
+         rdfs:label "has number of days"@en ;
+         rdfs:comment "The number of days in a month"@en .
+month:January month:hasNumberOfDays 31 .
+month:February month:hasNumberOfDays 28 .

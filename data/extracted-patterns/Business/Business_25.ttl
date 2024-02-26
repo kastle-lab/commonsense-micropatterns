@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/business#> .
+ex:Business rdf:type rdfs:Class ;
+    rdfs:comment "A commercial activity engaged in as a means of livelihood or profit, or an entity which engages in such activities" .
+ex:isInvolvedIn rdf:type rdf:Property ;
+    rdfs:range ex:Business ;
+    rdfs:domain ex:Individual ;
+    rdfs:comment "Relates an individual to a business in which they are involved." .
+ex:OperatesIn rdf:type rdf:Property ;
+    rdfs:range ex:Location ;
+    rdfs:domain ex:Business ;
+    rdfs:comment "Relates a business to a location in which it operates." .
+ex:Location rdf:type rdfs:Class;
+    rdfs:comment "Geographic location in which a business operates." .
+ex:Individual rdf:type rdfs:Class ;
+    rdfs:comment "An individual is someone who is involved in a business" .
+    ex:Product rdf:type rdfs:Class ;
+    rdfs:comment "A thing produced by the business for use or sale." .
+ ex:Produces rdf:type rdf:Property ;
+    rdfs:range ex:Product ;
+    rdfs:domain ex:Business ;
+    rdfs:comment "Relates a business to a product it produces." .
+ ex:hasRevenue rdf:type rdf:Property;
+    rdfs:range xsd:decimal ;
+    rdfs:domain ex:Business ;
+    rdfs:comment "Relates a business to its revenue." .
+ ex:hasEmployee rdf:type rdf:Property;
+    rdfs:range ex:Individual;
+    rdfs:domain ex:Business ;
+    rdfs:comment "Relates a business to its employees." .

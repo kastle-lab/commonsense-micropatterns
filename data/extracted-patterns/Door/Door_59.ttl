@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/ontology#> .
+:Door rdf:type rdfs:Class ;
+  rdfs:label "Door"@en ;
+  rdfs:comment "The class of all doors"@en .
+:hasMaterial rdf:type rdf:Property ;
+  rdfs:label "has material"@en ;
+  rdfs:comment "The material from which a door is made"@en ;
+  rdfs:domain :Door ;
+  rdfs:range :Material .
+:isOpen rdf:type rdf:Property ;
+  rdfs:label "is open"@en ;
+  rdfs:comment "The property indicating whether a door is open or not"@en ;
+  rdfs:domain :Door ;
+  rdfs:range rdf:Literal .
+:Material rdf:type rdfs:Class ;
+  rdfs:label "Material"@en .
+:Wood rdf:type :Material ;
+  rdfs:label "Wood"@en .

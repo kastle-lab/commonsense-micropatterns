@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Service a rdfs:Class ;
+    rdfs:comment "The class of all services" .
+:providesService a rdf:Property ;
+    rdfs:domain :Agent ;
+    rdfs:range :Service ;
+    rdfs:comment "Relates an agent to a service it provides" .
+:usesService a rdf:Property ;
+    rdfs:domain :Agent ;
+    rdfs:range :Service ;
+    rdfs:comment "Relates an agent to a service it uses" .
+:Agent a rdfs:Class ;
+    rdfs:comment "The class of all agents" .

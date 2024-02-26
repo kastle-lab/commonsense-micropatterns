@@ -1,0 +1,41 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix water: <http://example.org/ontology/water#> .
+water:PotableWater a rdfs:Class ;
+  rdfs:subClassOf water:WaterPod ;
+  rdfs:label "Potable Water"@en ;
+  rdfs:comment "Water that is safe to drink or to use for food preparation, without risk of health problems."@en .
+  water:WaterBody a rdfs:Class ;
+  rdfs:label "Water body"@en ;
+  rdfs:comment "Significant accumulation of water on a planet's surface."@en .
+water:Sea a rdfs:Class ;
+  rdfs:subClassOf water:WaterBody ;
+  rdfs:label "Sea"@en ;
+  rdfs:comment "Large body of salt water that is smaller than an ocean."@en .
+water:Lake a rdfs:Class ;
+  rdfs:subClassOf water:WaterBody ;
+  rdfs:label "Lake"@en ;
+  rdfs:comment "An area filled with water, localized in a basin, surrounded by land."@en .
+water:River a rdfs:Class ;
+  rdfs:subClassOf water:WaterBody ;
+  rdfs:label "River"@en ;
+  rdfs:comment "A large natural watercourse flowing towards an ocean, a lake or another river."@en .
+water:WaterPod a rdfs:Class ;
+  rdfs:label "Water Pod"@en ;
+  rdfs:comment "Container that is used to hold water."@en .
+water:ChemicalProperty a rdfs:Class ;
+  rdfs:label "Chemical Property of Water"@en ;
+  rdfs:comment "Chemical characteristics of water, including it's formula, pH level, solubility and others"@en .
+water:WaterFormula rdf:type water:ChemicalProperty ;
+  rdfs:label "Water Formula"@en ;
+  rdfs:comment "Chemical formula of water is H2O"@en .
+water:WaterPH rdf:type water:ChemicalProperty ;
+  rdfs:label "pH level of water"@en ;
+  rdfs:comment "Pure water has a pH level of 7, which is considered neutral."@en .
+water:polar rdf:type water:ChemicalProperty ;
+  rdfs:label "Polarity of water"@en ;
+  rdfs:comment "Water is a polar molecule, due to the difference in electronegativity of oxygen and hydrogen atoms."@en .
+water:soluble rdf:type water:ChemicalProperty ;
+  rdfs:label "Solubility in water"@en ;
+  rdfs:comment "Many substances are soluble in water due to its polar nature."@en .

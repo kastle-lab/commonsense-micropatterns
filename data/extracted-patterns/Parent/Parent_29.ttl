@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ontology: <http://example.com/ontology#> .
+ontology:Parent a rdfs:Class .
+ontology:hasChild a rdfs:Property ;
+  rdfs:domain ontology:Parent ;
+  rdfs:range ontology:Person .
+ontology:hasParent a rdfs:Property ;
+  rdfs:domain ontology:Person ;
+  rdfs:range ontology:Parent .
+ontology:Person a rdfs:Class.

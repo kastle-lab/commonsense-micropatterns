@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix job: <http://example.org/job/> .
+job:Job a rdfs:Class ;
+  rdfs:label "Job" ;
+  rdfs:comment "A class representing a job" .
+job:title a rdf:Property ;
+  rdfs:label "title" ;
+  rdfs:comment "Job's title" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:domain job:Job .
+job:employer a rdf:Property ;
+  rdfs:label "employer" ;
+  rdfs:comment "Employer for the job" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:domain job:Job .
+job:location a rdf:Property ;
+  rdfs:label "location" ;
+  rdfs:comment "Location of the job" ;
+  rdfs:range rdfs:Literal ;
+  rdfs:domain job:Job .

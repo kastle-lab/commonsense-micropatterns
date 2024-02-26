@@ -1,0 +1,12 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:hour a rdfs:Class ;
+  rdfs:label "Hour"@en .
+ex:hasHour a rdf:Property ;
+  rdfs:range ex:Hour ;
+  rdfs:domain ex:TimeEvent ;
+  rdfs:label "has hour"@en ;
+  rdfs:comment "The hour associated with a particular time event"@en .
+  ex:Hour   rdfs:subClassOf xsd:integer .
+ex:TimeEvent a rdfs:Class ;
+  rdfs:label "Time Event"@en .

@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix reason: <http://www.semanticweb.org/ontologies/reason#> .
+# Classes
+reason:Reason rdfs:subClassOf rdfs:Resource ;
+              rdfs:label "Reason"@en  .
+              reason:LogicalReason rdfs:subClassOf reason:Reason ;
+                     rdfs:label "Logical Reason"@en  .
+reason:EmotionalReason rdfs:subClassOf reason:Reason ;
+                       rdfs:label "Emotional Reason"@en  .
+reason:EvidenceBasedReason rdfs:subClassOf reason:Reason ;
+                           rdfs:label "Evidence Based Reason"@en  .
+reason:IntuitiveReason rdfs:subClassOf reason:Reason ;
+                       rdfs:label "Intuitive Reason"@en  .
+# Properties
+reason:hasReason rdf:type owl:ObjectProperty ;
+                 rdfs:domain rdfs:Resource ;
+                 rdfs:range reason:Reason ;
+                 rdfs:label "has reason"@en  .
+reason:derivedFrom rdf:type owl:ObjectProperty ;
+                   rdfs:domain reason:Reason ;
+                   rdfs:range rdfs:Resource ;
+                   rdfs:label "derived from"@en  .

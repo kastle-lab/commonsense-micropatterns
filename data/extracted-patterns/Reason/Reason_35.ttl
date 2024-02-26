@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/reason#> .
+# Class definitions:Reason a owl:Class ;
+    rdfs:comment "The mental process of thinking and understanding things" .
+:LogicalReason a owl:Class ;
+    rdfs:subClassOf :Reason ;
+    rdfs:comment "A reason that follows the principles of logic" .
+:EmotionalReason a owl:Class ;
+    rdfs:subClassOf :Reason ;
+    rdfs:comment "A reason that is influenced by personal feelings or emotions" .
+# Property definitions:isBasedOn a owl:ObjectProperty ;
+    rdfs:domain :Reason ;
+    rdfs:range :Fact ;
+    rdfs:comment "Connects a Reason with the Fact it is based on" .
+:isTriggeredBy a owl:ObjectProperty ;
+    rdfs:domain :EmotionalReason ;
+    rdfs:range :Emotion ;
+    rdfs:comment "Connects an EmotionalReason with the triggering Emotion" .
+# Class definitions for concepts linked through properties:Fact a owl:Class ;
+    rdfs:comment "A piece of information used as evidence or as part of a report or news article" .
+:Emotion a owl:Class ;
+     rdfs:comment "A strong feeling deriving from one's circumstances, mood, or relationships with others" .
+# Datatype property definitions:isConsideredValid a owl:DatatypeProperty ;
+    rdfs:domain :Reason ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Indicates whether a Reason is considered valid or not" .
+"""

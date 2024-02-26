@@ -1,0 +1,17 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/ontology#> .
+ex:Water a rdfs:Class ;
+    rdfs:label "Water"@en ;
+    rdfs:comment "A substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states"@en .
+    ex:H20 a ex:Water ;
+    rdfs:label "H2O"@en ;
+    rdfs:comment "The most common form of water consisting of two hydrogen atoms covalently bonded to a single oxygen atom"@en .
+ex:BoilingPoint a rdfs:Property ;
+    rdfs:label "Boiling point"@en ;
+    rdfs:comment "The temperature at which a substance changes state from liquid to gas"@en ;
+    rdfs:domain ex:Water ;
+    rdfs:range xsd:float .
+ex:H20 ex:BoilingPoint "100.0"^^xsd:float .

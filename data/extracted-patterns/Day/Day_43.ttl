@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Day rdf:type owl:Class ;
+rdfs:label "Day"@en ;
+rdfs:comment "A period of 24 hours, especially from twelve o'clock one night to twelve o'clock the next night, when it is understood to start again."@en .
+ex:hasDay rdf:type owl:DatatypeProperty ;
+rdfs:domain ex:Calendar ;
+rdfs:range xsd:date ;
+rdfs:label "has day"@en ;
+rdfs:comment "The property which links a calendar to a specific day."@en .

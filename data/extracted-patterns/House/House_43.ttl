@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Declaring House as a Classex:House a rdfs:Class .
+# Properties
+ that a House can haveex:hasAddress a rdfs:Property ;
+  rdfs:domain ex:House ;
+  rdfs:range rdfs:Literal .
+ex:hasOwner a rdfs:Property ;
+  rdfs:domain ex:House ;
+  rdfs:range ex:Person .
+# Declaring Person as a Classex:Person a rdfs:Class .
+# An instance of Houseex:myHouse a ex:House ;
+  ex:hasAddress "123, Main Street, MyCity, MyCountry" ;
+  ex:hasOwner ex:JohnDoe .
+# An instance of Personex:JohnDoe a ex:Person .

@@ -1,0 +1,176 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Place/Place_1.ttl#Place> a rdfs:Class .
+
+<http://example.com/Address> a rdfs:Class .
+
+<http://example.com/Place> a rdfs:Class .
+
+<http://example.com/PostalAddress> a rdfs:Class .
+
+<http://example.com/place/Place> a rdfs:Class .
+
+<http://example.org/place#Country> a rdfs:Class .
+
+<http://example.org/place#Place> a rdfs:Class .
+
+<http://example.org/place#city> a rdfs:Class .
+
+<http://example.org/place/City> a rdfs:Class .
+
+<http://example.org/place/Place> a rdfs:Class .
+
+<http://www.example.org/Place> a rdfs:Class .
+
+<http://www.example.org/myontology#Place> a rdfs:Class .
+
+<http://www.example.org/place#> a rdfs:Class .
+
+<http://www.example.org/place#City> a rdfs:Class .
+
+<http://www.example.org/place#Country> a rdfs:Class .
+
+<http://www.example.org/place#Location> a rdfs:Class .
+
+<http://www.example.org/place#Park> a rdfs:Class .
+
+<http://www.example.org/place#Place> a rdfs:Class .
+
+<http://www.example.org/place#Type> a rdfs:Class .
+
+<http://www.geonames.org/ontology#Place> a rdfs:Class .
+
+rdf:string a rdfs:Class .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> a rdfs:Class .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> a rdfs:Class .
+
+<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Place/Place_1.ttl#PlaceName> rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Place/Place_1.ttl#Place> .
+
+<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Place/Place_1.ttl#latitude> rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Place/Place_1.ttl#Place>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos#lat> .
+
+<file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Place/Place_1.ttl#longitude> rdfs:range <file:///home/cogan/repos/kastle/commonsense-micropatterns/data/extracted-patterns/Place/Place_1.ttl#Place>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos#long> .
+
+<http://example.com/City> rdfs:range <http://example.com/Address>,
+        rdf:string .
+
+<http://example.com/Country> rdfs:range <http://example.com/Address>,
+        rdf:string .
+
+<http://example.com/StreetAddress> rdfs:range <http://example.com/Address>,
+        rdf:string .
+
+<http://example.com/containedInPlace> rdfs:range <http://example.com/Place> .
+
+<http://example.com/hasAddress> rdfs:range <http://example.com/Address>,
+        <http://example.com/Place> .
+
+<http://example.com/hasLatitude> rdfs:range <http://example.com/Place> .
+
+<http://example.com/hasLongitude> rdfs:range <http://example.com/Place> .
+
+<http://example.com/hasName> rdfs:range <http://example.com/Place> .
+
+<http://example.com/hasPostalAddress> rdfs:range <http://example.com/Place>,
+        <http://example.com/PostalAddress> .
+
+<http://example.com/isLocatedIn> rdfs:range <http://example.com/Place> .
+
+<http://example.com/latitude> rdfs:range <http://example.com/Place> .
+
+<http://example.com/locatedIn> rdfs:range <http://example.com/Place> .
+
+<http://example.com/longitude> rdfs:range <http://example.com/Place> .
+
+<http://example.com/name> rdfs:range <http://example.com/Place> .
+
+<http://example.com/place/location> rdfs:range <http://example.com/place/Place> .
+
+<http://example.com/place/name> rdfs:range <http://example.com/place/Place> .
+
+<http://example.org/place#countryOf> rdfs:range <http://example.org/place#Country>,
+        <http://example.org/place#city> .
+
+<http://example.org/place#hasAddress> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#hasLatitude> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#hasLocation> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#hasLongitude> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#hasName> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#isLocatedIn> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#latitude> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#locatedIn> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#longitude> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#name> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place#population> rdfs:range <http://example.org/place#Place> .
+
+<http://example.org/place/hasLatitude> rdfs:range <http://example.org/place/Place> .
+
+<http://example.org/place/hasLongitude> rdfs:range <http://example.org/place/Place> .
+
+<http://example.org/place/hasPopulation> rdfs:range <http://example.org/place/City> .
+
+<http://example.org/place/name> rdfs:range <http://example.org/place/Place> .
+
+<http://www.example.org/locatedIn> rdfs:range <http://www.example.org/Place> .
+
+<http://www.example.org/myontology#latitude> rdfs:range <http://www.example.org/myontology#Place> .
+
+<http://www.example.org/myontology#longitude> rdfs:range <http://www.example.org/myontology#Place> .
+
+<http://www.example.org/myontology#name> rdfs:range <http://www.example.org/myontology#Place> .
+
+<http://www.example.org/name> rdfs:range <http://www.example.org/Place> .
+
+<http://www.example.org/place#hasArea> rdfs:range <http://www.example.org/place#Place> .
+
+<http://www.example.org/place#hasLocation> rdfs:range <http://www.example.org/place#>,
+        <http://www.example.org/place#Location>,
+        <http://www.example.org/place#Place> .
+
+<http://www.example.org/place#hasName> rdfs:range <http://www.example.org/place#Place> .
+
+<http://www.example.org/place#hasPopulation> rdfs:range <http://www.example.org/place#Place> .
+
+<http://www.example.org/place#hasType> rdfs:range <http://www.example.org/place#>,
+        <http://www.example.org/place#Type> .
+
+<http://www.example.org/place#isLocatedIn> rdfs:range <http://www.example.org/place#City>,
+        <http://www.example.org/place#Country> .
+
+<http://www.example.org/place#isPartOf> rdfs:range <http://www.example.org/place#City>,
+        <http://www.example.org/place#Park>,
+        <http://www.example.org/place#Place> .
+
+<http://www.example.org/place#latitude> rdfs:range <http://www.example.org/place#Location> .
+
+<http://www.example.org/place#location> rdfs:range <http://www.example.org/place#Place> .
+
+<http://www.example.org/place#longitude> rdfs:range <http://www.example.org/place#Location> .
+
+<http://www.example.org/place#name> rdfs:range <http://www.example.org/place#>,
+        <http://www.example.org/place#Place> .
+
+<http://www.example.org/place#population> rdfs:range <http://www.example.org/place#Place> .
+
+<http://www.geonames.org/ontology#hasArea> rdfs:range <http://www.geonames.org/ontology#Place> .
+
+<http://www.geonames.org/ontology#hasName> rdfs:range <http://www.geonames.org/ontology#Place> .
+
+<http://www.geonames.org/ontology#hasPopulation> rdfs:range <http://www.geonames.org/ontology#Place> .
+
+<http://www.geonames.org/ontology#isLocatedIn> rdfs:range <http://www.geonames.org/ontology#Place> .
+

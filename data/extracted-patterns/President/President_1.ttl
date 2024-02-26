@@ -1,0 +1,31 @@
+@prefix : <http://www.example.com/president#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:president a rdfs:Class ;
+    rdfs:label "President" ;
+    rdfs:comment "The chief executive in a democratic government" .
+:hasName a rdfs:Property ;
+    rdfs:label "has name" ;
+    rdfs:domain :president ;
+    rdfs:range rdfs:Literal .
+:presidesOver a rdfs:Property ;
+    rdfs:label "presides over" ;
+    rdfs:domain :president ;
+    rdfs:range :country .
+:country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government, occupying a particular territory" .
+:servedTerm a rdfs:Property ;
+    rdfs:label "served term" ;
+    rdfs:domain :president ;
+    rdfs:range :term .
+:term a rdfs:Class ;
+    rdfs:label "Term" ;
+    rdfs:comment "The period of time during which a person serves as president" .
+:startOfTerm a rdfs:Property ;
+    rdfs:label "start of term" ;
+    rdfs:domain :term ;
+    rdfs:range rdfs:Literal .
+:endOfTerm a rdfs:Property ;
+    rdfs:label "end of term" ;
+    rdfs:domain :term ;
+    rdfs:range rdfs:Literal .

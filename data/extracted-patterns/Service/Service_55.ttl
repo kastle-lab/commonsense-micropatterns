@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix service: <http://example.com/service#> .
+# Defining Class 'Service'service:Service rdf:type rdfs:Class ;
+    rdfs:comment "A service of any kind that is provided to customers" ;
+    rdfs:label "Service"@en .
+# Defining Properties for 'Service'service:name rdf:type rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of the service"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:string .
+service:price rdf:type rdf:Property ;
+    rdfs:label "price"@en ;
+    rdfs:comment "The price of the service"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range xsd:decimal .
+service:provider rdf:type rdf:Property ;
+    rdfs:label "provider"@en ;
+    rdfs:comment "The entity that provides the service"@en ;
+    rdfs:domain service:Service ;
+    rdfs:range foaf:Organization .
+# Instance of 'Service'service:service1 rdf:type service:Service ;
+    service:name "Room Cleaning" ;
+    service:price "50.00" ;
+    service:provider foaf:organization1 .

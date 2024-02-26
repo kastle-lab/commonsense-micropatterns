@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pres: <http://www.example.org/president#> .
+pres:President rdf:type owl:Class ;
+    rdfs:comment "The role of the head of state and head of government."@en ;
+    rdfs:subClassOf owl:Thing .
+  pres:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:label "has name"@en ;
+    rdfs:domain pres:President ;
+    rdfs:range xsd:string .
+pres:hasNationality rdf:type owl:DatatypeProperty ;
+    rdfs:label "has nationality"@en ;
+    rdfs:domain pres:President ;
+    rdfs:range xsd:string .
+pres:hasStartTerm rdf:type owl:DatatypeProperty ;
+    rdfs:label "has start term"@en ;
+    rdfs:domain pres:President ;
+    rdfs:range xsd:date .
+pres:hasEndTerm rdf:type owl:DatatypeProperty ;
+    rdfs:label "has end term"@en ;
+    rdfs:domain pres:President ;
+    rdfs:range xsd:date .
+pres:isPresidentOf rdf:type owl:ObjectProperty ;
+    rdfs:label "is president of"@en ;
+    rdfs:domain pres:President ;
+    rdfs:range pres:Country .
+pres:Country rdf:type owl:Class ;
+    rdfs:comment "A nation with its own government"@en ;
+    rdfs:subClassOf owl:Thing .

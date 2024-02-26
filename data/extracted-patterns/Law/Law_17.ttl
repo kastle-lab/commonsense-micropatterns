@@ -1,0 +1,27 @@
+@prefix law: <http://example.org/lawpro#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+law:Law     rdf:type owl:Class ;
+    rdfs:comment "Represents a body of rules established by an authority." .
+law:Jurisdiction     rdf:type owl:Class ;
+    rdfs:comment "Jurisdiction refers to the legal authority to administer justice." .
+law:Statute     rdf:type owl:Class ;
+    rdfs:subClassOf law:Law ;
+    rdfs:comment "A specific, formal written enactment by the legislative branch." .
+law:CaseLaw     rdf:type owl:Class ;
+    rdfs:subClassOf law:Law ;
+    rdfs:comment "Law established by the outcome of former cases." .
+law:authoritativeEntity     rdf:type owl:ObjectProperty ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Jurisdiction ;
+    rdfs:comment "The authoritative entity that enforces the law." .
+law:relatedTo     rdf:type owl:ObjectProperty ;
+    rdfs:domain law:Law ;
+    rdfs:range law:Law ;
+    rdfs:comment "Indicates another law that is related to this law." .
+law:enactedDate     rdf:type owl:DatatypeProperty ;
+    rdfs:domain law:Statute ;
+    rdfs:range xsd:date;
+    rdfs:comment "The date when the law was formally enacted." .

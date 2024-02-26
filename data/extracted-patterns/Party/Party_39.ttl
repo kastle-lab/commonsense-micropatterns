@@ -1,0 +1,27 @@
+@prefix : <http://www.example.com#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Party a rdfs:Class ;
+  rdfs:label "Party" ;
+  rdfs:comment "A social gathering of invited guests, typically involving eating, drinking, and entertainment" .
+:hasPartyType a rdfs:Property ;
+  rdfs:domain :Party ;
+  rdfs:range xsd:string .
+:hasLocation a rdfs:Property ;
+  rdfs:domain :Party ;
+  rdfs:range xsd:string .
+:hasGuestCount a rdfs:Property ;
+  rdfs:domain :Party ;
+  rdfs:range xsd:integer .
+:PartyOrganizer a rdfs:Class ;
+  rdfs:label "Party Organizer" ;
+  rdfs:comment "Person who plans and organizes parties" .
+:organizes a rdfs:Property ;
+  rdfs:domain :PartyOrganizer ;
+  rdfs:range :Party .
+:springBreakParty a :Party ;
+  :hasPartyType "Spring Break" ;
+  :hasLocation "Miami" ;
+  :hasGuestCount 500 .
+:johnSmith a :PartyOrganizer ;
+  :organizes :springBreakParty .

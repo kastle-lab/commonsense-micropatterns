@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix head: <http://www.semanticweb.org/head#> .
+head:     a owl:Ontology ;
+    rdfs:comment "Ontology of the Head" .
+head:Head     a owl:Class ;
+    rdfs:comment "Represents the human head" ;
+    rdfs:label "Head" .
+head:hasPart     a owl:ObjectProperty ;
+    rdfs:label "hasPart" ;
+    rdfs:range head:BodyPart;
+    rdfs:domain head:Head .
+head:BodyPart     a owl:Class ;
+    rdfs:label "Body Part" .
+head:Ear     a owl:Class ;
+    rdfs:subClassOf head:BodyPart ;
+    rdfs:label "Ear" .
+head:Nose     a owl:Class ;
+    rdfs:subClassOf head:BodyPart ;
+    rdfs:label "Nose" .
+head:Eye     a owl:Class ;
+    rdfs:subClassOf head:BodyPart ;
+    rdfs:label "Eye" .
+head:Mouth     a owl:Class ;
+    rdfs:subClassOf head:BodyPart ;
+    rdfs:label "Mouth" .
+    head:Hair     a owl:Class ;
+    rdfs:subClassOf head:BodyPart ;
+    rdfs:label "Hair" .

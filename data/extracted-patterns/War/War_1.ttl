@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix war: <http://www.war.com/ontology#> .
+# Classes
+war:War     rdf:type owl:Class .
+war:Weapon     rdf:type owl:Class .
+war:Combatant    rdf:type owl:Class .
+war:Battle    rdf:type owl:Class .
+war:Treaty    rdf:type owl:Class .
+war:Casualty    rdf:type owl:Class .
+# Object propertieswar:usesWeapon    rdf:type owl:ObjectProperty ;
+    rdfs:domain war:Combatant ;
+    rdfs:range war:Weapon .
+war:participatesIn    rdf:type owl:ObjectProperty ;
+    rdfs:domain war:Combatant ;
+    rdfs:range war:Battle .
+war:endsWith    rdf:type owl:ObjectProperty ;
+    rdfs:domain war:War ;
+    rdfs:range war:Treaty .
+war:causes    rdf:type owl:ObjectProperty ;
+    rdfs:domain war:War ;
+    rdfs:range war:Casualty .
+# Data propertieswar:hasStartDate    rdf:type owl:DatatypeProperty ;
+    rdfs:domain war:War ;
+    rdfs:range xsd:dateTime .
+war:hasEndDate    rdf:type owl:DatatypeProperty ;
+    rdfs:domain war:War ;
+    rdfs:range xsd:dateTime .
+war:hasName    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ] ;
+    rdfs:range xsd:string .
+war:hasDeathCount    rdf:type owl:DatatypeProperty ;
+    rdfs:domain war:Casualty ;
+    rdfs:range xsd:integer .

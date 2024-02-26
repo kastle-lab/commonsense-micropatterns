@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/monthOntology#> .
+:Month rdf:type rdfs:Class ;
+rdfs:subClassOf :TimePeriod .
+:January rdf:type :Month ;
+         rdfs:label "January"@en ;
+         :hasOrder 1 .
+         :February rdf:type :Month ;
+          rdfs:label "February"@en ;
+          :hasOrder 2 .
+:March rdf:type :Month ;
+       rdfs:label "March"@en ;
+       :hasOrder 3 .
+:April rdf:type :Month ;
+       rdfs:label "April"@en ;
+       :hasOrder 4 .
+:May rdf:type :Month ;
+     rdfs:label "May"@en ;
+     :hasOrder 5 .
+:June rdf:type :Month ;
+      rdfs:label "June"@en ;
+      :hasOrder 6 .
+:July rdf:type :Month ;
+     rdfs:label "July"@en ;
+     :hasOrder 7 .
+:August rdf:type :Month ;
+        rdfs:label "August"@en ;
+        :hasOrder 8 .
+:September rdf:type :Month ;
+           rdfs:label "September"@en ;
+           :hasOrder 9 .
+:October rdf:type :Month ;
+         rdfs:label "October"@en ;
+         :hasOrder 10 .
+:November rdf:type :Month ;
+          rdfs:label "November"@en ;
+          :hasOrder 11.:December rdf:type :Month ;
+          rdfs:label "December"@en ;
+          :hasOrder 12.:hasOrder rdf:type rdf:Property ;
+          rdfs:domain :Month ;
+          rdfs:range :Number .

@@ -1,0 +1,9 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:other1    a rdf:Other;
+    rdfs:label "Other one"@en;
+    :dateOfBirth "1990-01-01"^^xsd:date.:other2    a rdf:Other;
+    rdfs:label "Other two"@en;
+    :dateOfBirth "1995-06-15"^^xsd:date.

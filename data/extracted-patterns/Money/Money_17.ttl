@@ -1,0 +1,36 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix money: <http://example.org/money#> .
+money:Money   rdfs:subClassOf rdfs:Resource ;
+  rdfs:label "Money"@en ;
+  rdfs:comment "Representation of all types of money including currency, digital money, etc."@en .
+  money:Currency   rdfs:subClassOf money:Money ;
+  rdfs:label "Currency"@en ;
+  rdfs:comment "Physical or tangible form of money usually issued by government."@en .
+    money:DigitalMoney   rdfs:subClassOf money:Money ;
+  rdfs:label "Digital Money"@en ;
+  rdfs:comment "Virtual or intangible form of money, used in online transactions."@en .
+money:hasValue   rdfs:range xsd:decimal ;
+  rdfs:domain money:Money ;
+  rdfs:label "has value"@en ;
+  rdfs:comment "Determines the value of the money."@en .
+money:hasCurrencyCode   rdfs:range xsd:string ;
+  rdfs:domain money:Currency ;
+  rdfs:label "has currency code"@en ;
+  rdfs:comment "Identifies the currency by its international code."@en .
+money:hasCurrencyName   rdfs:range xsd:string ;
+  rdfs:domain money:Currency ;
+  rdfs:label "has currency name"@en ;
+  rdfs:comment "Identifies the currency by its name."@en .
+money:isIssuedBy   rdfs:range xsd:string ;
+  rdfs:domain money:Currency ;
+  rdfs:label "is issued by"@en ;
+  rdfs:comment "Determines the issuing authority of the currency."@en .
+ money:DigitalMoneyType   rdfs:range xsd:string ;
+  rdfs:domain money:DigitalMoney ;
+  rdfs:label "Digital Money Type"@en ;
+  rdfs:comment "Determines the type of digital money."@en .
+ money:belongsToUser   rdfs:range xsd:string ;
+  rdfs:domain money:DigitalMoney ;
+  rdfs:label "belongs to user"@en ;
+  rdfs:comment "Determines the owner of the digital money."@en .

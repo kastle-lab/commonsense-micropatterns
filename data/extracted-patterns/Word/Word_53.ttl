@@ -1,0 +1,33 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+#Define "Word" as a class
+ex:Word a owl:Class ;
+  rdfs:label "Word" ;
+  rdfs:comment "Represents a single word in a language" ;
+  rdfs:subClassOf owl:Thing .
+#Define the property "hasSpelling"
+ex:hasSpelling a owl:DatatypeProperty ;
+  rdfs:label "hasSpelling" ;
+  rdfs:comment "The spelling of the word" ;
+  rdfs:domain ex:Word ;
+  rdfs:range xsd:string .
+#Define the property "hasLength"
+ex:hasLength a owl:DatatypeProperty ;
+  rdfs:label "hasLength" ;
+  rdfs:comment "The length of the word" ;
+  rdfs:domain ex:Word ;
+  rdfs:range xsd:integer .
+#Define the property "partOfSpeech"
+ex:partOfSpeech a owl:ObjectProperty ;
+  rdfs:label "partOfSpeech" ;
+  rdfs:comment "Part of speech the word belongs to" ;
+  rdfs:domain ex:Word ;
+  rdfs:range ex:PartOfSpeech .
+#Define "PartOfSpeech" as a class
+ex:PartOfSpeech a owl:Class ;
+  rdfs:label "Part of Speech" ;
+  rdfs:comment "Represents a grammatical category of a word" ;
+  rdfs:subClassOf owl:Thing .

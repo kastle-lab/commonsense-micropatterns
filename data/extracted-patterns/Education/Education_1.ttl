@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix edu: <http://www.example.org/education#> .
+# Classes
+edu:Education a rdfs:Class ;
+    rdfs:label "Education" .
+edu:School a rdfs:Class ;
+    rdfs:label "School" ;
+    rdfs:subClassOf edu:Education .
+edu:University a rdfs:Class ;
+    rdfs:label "University" ;
+    rdfs:subClassOf edu:Education .
+edu:Student a rdfs:Class ;
+    rdfs:label "Student" .
+edu:Teacher a rdfs:Class ;
+    rdfs:label "Teacher" .
+edu:Subject a rdfs:Class ;
+    rdfs:label "Subject" .
+edu:Grade a rdfs:Class ;
+    rdfs:label "Grade" .
+# Properties
+edu:attends a rdf:Property ;
+    rdfs:label "attends" ;
+    rdfs:domain edu:Student ;
+    rdfs:range edu:School .
+edu:teaches a rdf:Property ;
+    rdfs:label "teaches" ;
+    rdfs:domain edu:Teacher ;
+    rdfs:range edu:Subject .
+edu:studies a rdf:Property ;
+    rdfs:label "studies" ;
+    rdfs:domain edu:Student ;
+    rdfs:range edu:Subject .
+edu:receives a rdf:Property ;
+    rdfs:label "receives" ;
+    rdfs:domain edu:Student ;
+    rdfs:range edu:Grade .
+edu:assigns a rdf:Property ;
+    rdfs:label "assigns" ;
+    rdfs:domain edu:Teacher ;
+    rdfs:range edu:Grade .
+edu:worksAt a rdf:Property ;
+    rdfs:label "works at" ;
+    rdfs:domain edu:Teacher ;
+    rdfs:range edu:University.

@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix furniture: <http://example.com/furniture#> .
+furniture:Chair rdf:type rdfs:Class ;
+    rdfs:subClassOf furniture:Furniture ;
+    rdfs:label ""Chair""@en ;
+    rdfs:comment ""A piece of furniture designed for sitting""@en .
+furniture:hasMaterial rdf:type owl:ObjectProperty ;
+    rdfs:domain furniture:Chair ;
+    rdfs:range furniture:Material ;
+    rdfs:label ""has material""@en ;
+    rdfs:comment ""The material from which the chair is made""@en .
+furniture:hasColor rdf:type owl:DatatypeProperty ;
+    rdfs:domain furniture:Chair ;
+    rdfs:range xsd:string ;
+    rdfs:label ""has color""@en ;
+    rdfs:comment ""The color of the chair""@en .
+furniture:hasHeight rdf:type owl:DatatypeProperty ;
+    rdfs:domain furniture:Chair ;
+    rdfs:range xsd:decimal ;
+    rdfs:label ""has height""@en ;
+    rdfs:comment ""The height of the chair in cm""@en .
+furniture:hasWidth rdf:type owl:DatatypeProperty ;
+    rdfs:domain furniture:Chair ;
+    rdfs:range xsd:decimal ;
+    rdfs:label ""has width""@en ;
+    rdfs:comment ""The width of the chair in cm""@en .
+furniture:Material rdf:type rdfs:Class ;
+    rdfs:label ""Material""@en ;
+    rdfs:comment ""The material of a furniture""@en .
+furniture:Furniture rdf:type owl:Class ;
+    rdfs:label ""Furniture""@en ;
+    rdfs:comment ""Moveable articles that are used to make a room or building suitable for living or working""@en .

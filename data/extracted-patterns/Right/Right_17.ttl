@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix right: <http://example.org/ontologies/right#> .
+right:    a rdfs:Class ;
+    rdfs:comment "The superclass for all Rights in the system" .
+right:HumanRight    a rdfs:Class ;
+    rdfs:subClassOf right: ;
+    rdfs:comment "Rights that every human is entitled to by virtue of being a human being" .
+right:CivilRight    a rdfs:Class ;
+    rdfs:subClassOf right: ;
+    rdfs:comment "Rights that protect individuals' freedom from infringement by governments, social organizations, and private individuals" .
+right:hasRight    a rdf:Property ;
+    rdfs:domain right:Human ;
+    rdfs:range right: ;
+    rdfs:comment "Connects people to the rights they possess" .
+right:hasCivilRight    a rdf:Property ;
+    rdfs:subPropertyOf right:hasRight ;
+    rdfs:range right:hasCivilRight ;
+    rdfs:comment "Connects people to their civil rights" .
+right:hasHumanRight    a rdf:Property ;
+    rdfs:subPropertyOf right:hasRight ;
+    rdfs:range right:HumanRight ;
+    rdfs:comment "Connects people to their human rights" .

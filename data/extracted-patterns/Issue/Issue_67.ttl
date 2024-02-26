@@ -1,0 +1,12 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ex:Issue1 a ex:Issue ;
+    ex:hasTitle "Issue Title" ;
+    ex:hasDescription "Issue Description" ;
+    ex:hasStatus ex:Open ;
+    ex:assignedTo ex:User1 .
+    ex:Issue2 a ex:Issue ;
+    ex:hasTitle "Another Issue Title" ;
+    ex:hasDescription "Another Issue Description" ;
+    ex:hasStatus ex:Closed ;
+    ex:assignedTo ex:User2 .

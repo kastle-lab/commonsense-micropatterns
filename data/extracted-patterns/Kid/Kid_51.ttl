@@ -1,0 +1,8 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Kid a rdfs:Class ;
+  rdfs:comment "A child or young person" ;
+  rdfs:subClassOf ex:Human .
+ex:john a ex:Kid ;
+  ex:age "7"^^xsd:int ;
+  ex:name "John Doe"^^xsd:string .

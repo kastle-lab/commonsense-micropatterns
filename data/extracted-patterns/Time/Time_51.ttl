@@ -1,0 +1,10 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:event1     a ex:Event ;
+    ex:startTime "2020-04-02T15:00:00"^^xsd:dateTime ;
+    ex:endTime "2020-04-02T17:00:00"^^xsd:dateTime .
+ex:Event    a rdfs:Class .
+    ex:startTime    a rdf:Property ;
+    rdfs:range xsd:dateTime .
+    ex:endTime    a rdf:Property ;
+    rdfs:range xsd:dateTime .

@@ -1,0 +1,22 @@
+@prefix : <http://example.org/week#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+: a rdfs:Ontology ;
+:DayOfWeek a rdfs:Class ;
+    rdfs:label "Day of Week"@en ;
+    rdfs:comment "Days of the week"@en ;
+:Monday a :DayOfWeek ;
+    rdfs:label "Monday"@en ;
+:Tuesday a :DayOfWeek ;
+    rdfs:label "Tuesday"@en ;
+:Wednesday a :DayOfWeek ;
+    rdfs:label "Wednesday"@en ;
+:Thursday a :DayOfWeek ;
+    rdfs:label "Thursday"@en ;
+:Friday a :DayOfWeek ;
+    rdfs:label "Friday"@en ;
+:Saturday a :DayOfWeek ;
+    rdfs:label "Saturday"@en ;
+:Sunday a :DayOfWeek ;
+    rdfs:label "Sunday"@en ;
+.

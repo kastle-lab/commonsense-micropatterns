@@ -1,0 +1,9 @@
+[  {    "@id": "
+ex:Month",    "@type": "owl:Class",    "rdfs:label": "Month",    "rdfs:comment": "One of the twelve parts into which a year is divided",    "rdfs:subClassOf": "owl:TimePeriod",    "
+ex:hasNumericalOrder": {      "@type": "owl:DatatypeProperty",      "rdfs:domain": "
+ex:Month",      "rdfs:range": "xsd:integer"    ,    "
+ex:hasName": {      "@type": "owl:DatatypeProperty",      "rdfs:domain": "
+ex:Month",      "rdfs:range": "xsd:string"    ,    "
+ex:belongsToYear": {      "@type": "owl:ObjectProperty",      "rdfs:domain": "
+ex:Month",      "rdfs:range": "
+ex:Year"      ]

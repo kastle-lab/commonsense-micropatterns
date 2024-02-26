@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.org/right#> .
+# Classes
+:Right rdf:type owl:Class ;
+    rdfs:comment "The term Right refers to a moral, legal or social entitlement that an individual has." .
+:HumanRight rdf:type owl:Class ;
+    rdfs:subClassOf :Right ;
+    rdfs:comment "A Right that is believed to belong to every person." .
+:CivilRight rdf:type owl:Class ;
+    rdfs:subClassOf :Right ;
+    rdfs:comment "Rights that protect individuals' freedom from infringement by governments, social organizations, and private individuals." .
+:PropertyRight rdf:type owl:Class ;
+    rdfs:subClassOf :Right ;
+    rdfs:comment "Theoretical legally enforceable powers to exclude others from using an economic good or service." .
+# Properties
+:hasRight rdf:type owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Right .
+:isProtectedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain :Right ;
+    rdfs:range :Law .
+# Individuals
+:FreedomOfSpeech rdf:type :HumanRight ;
+    rdfs:comment "The right to express any opinions without censorship or restraint." .
+:RightToVote rdf:type :CivilRight ;
+    rdfs:comment "The right to vote in a democratic society." .
+:RightToProperty rdf:type :PropertyRight ;
+    rdfs:comment "The right to own, use, and enjoy property." .
+# Relations:John :hasRight :FreedomOfSpeech .
+:FreedomOfSpeech :isProtectedBy :FirstAmendmentLaw .

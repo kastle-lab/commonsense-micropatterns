@@ -1,0 +1,34 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.org/face#> .
+: a owl:Ontology ;
+    rdfs:comment "An ontology covering the concept of a Face."@en .
+:Face a owl:Class ;
+    rdfs:label "Face"@en ;
+    rdfs:comment "It represents the concept of a human face"@en .
+:hasEye a owl:ObjectProperty ;
+    rdfs:label "hasEye"@en ;
+    rdfs:comment "Indicates that the face has an eye"@en ;
+    rdfs:domain :Face ;
+    rdfs:range :Eye .
+:hasNose a owl:ObjectProperty ;
+    rdfs:label "hasNose"@en ;
+    rdfs:comment "Indicates that the face has a nose"@en ;
+    rdfs:domain :Face ;
+    rdfs:range :Nose .
+:hasMouth a owl:ObjectProperty ;
+    rdfs:label "hasMouth"@en ;
+    rdfs:comment "Indicates that the face has a mouth"@en ;
+    rdfs:domain :Face ;
+    rdfs:range :Mouth .
+:Eye a owl:Class ;
+    rdfs:label "Eye"@en ;
+    rdfs:comment "It represents the concept of an eye"@en .
+   :Nose a owl:Class ;
+    rdfs:label "Nose"@en ;
+    rdfs:comment "It represents the concept of a nose"@en .
+:Mouth a owl:Class ;
+    rdfs:label "Mouth"@en ;
+    rdfs:comment "It represents the concept of a mouth"@en .

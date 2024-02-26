@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix part: <http://example.org/part/> .
+part:   rdf:type owl:Ontology ;
+  rdfs:comment "Ontology about parts"@en ;
+  rdfs:label "Part Ontology"@en .
+part:Part  rdf:type owl:Class ;
+  rdfs:comment "A physical substance, material, component or section that is thought of as distinct and separate"@en ;
+  rdfs:label "Part"@en .
+part:hasPart  rdf:type owl:ObjectProperty ;
+  rdfs:comment "The part is a component of something else"@en ;
+  rdfs:label "has part"@en ;
+  rdfs:domain part:Part ;
+  rdfs:range part:Part .
+  part:partOf  rdf:type owl:ObjectProperty ;
+  rdfs:comment "The part is included in something larger"@en ;
+  rdfs:label "part of"@en ;
+  rdfs:domain part:Part ;
+  rdfs:range part:Part .
+part:hasMaterial  rdf:type owl:ObjectProperty ;
+  rdfs:comment "The part is constructed from a certain material"@en ;
+  rdfs:label "has material"@en ;
+  rdfs:domain part:Part .
+part:hasSize  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The part has a certain size"@en ;
+  rdfs:label "has size"@en ;
+  rdfs:domain part:Part ;
+  rdfs:range xsd:decimal .
+part:hasWeight  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The part has a certain weight"@en ;
+  rdfs:label "has weight"@en ;
+  rdfs:domain part:Part ;
+  rdfs:range xsd:decimal .

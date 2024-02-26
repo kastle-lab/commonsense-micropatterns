@@ -1,0 +1,33 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix art: <http://example.org/art#> .
+art:Art    rdf:type owl:Class ;
+    rdfs:label "Art"@en ;
+    rdfs:comment "The concept of Art which represents human creativity and imagination."@en ;
+.art:Artist    rdf:type owl:Class ;
+    rdfs:label "Artist"@en ;
+    rdfs:comment "The concept of Artist, who is the creator of art."@en ;
+    rdfs:subClassOf art:Person ;
+.art:Person    rdf:type owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "The concept of person, an individual human."@en ;
+.art:painting    rdf:type owl:Class ;
+    rdfs:label "Painting"@en ;
+    rdfs:comment "The concept of Painting, a form of art created using colors on a surface."@en ;
+    rdfs:subClassOf art:Art ;
+.art:sculpture    rdf:type owl:Class ;
+    rdfs:label "Sculpture"@en ;
+    rdfs:comment "The concept of Sculpture, a three-dimensional form of art."@en ;
+    rdfs:subClassOf art:Art ;
+.art:createdBy    rdf:type owl:ObjectProperty ;
+    rdfs:label "created by"@en ;
+    rdfs:comment "A relationship between an art piece and the artist who created it."@en ;
+    rdfs:domain art:Art ;
+    rdfs:range art:Artist ;
+.art:creationDate    rdf:type owl:DatatypeProperty ;
+    rdfs:label "creation date"@en ;
+    rdfs:comment "The date when a piece of art was created."@en ;
+    rdfs:domain art:Art ;
+    rdfs:range xsd:date ;
+.

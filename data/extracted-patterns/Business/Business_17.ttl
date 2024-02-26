@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix biz: <http://example.com/biz#> .
+biz:Business rdf:type rdfs:Class .
+biz:Employee rdf:type rdfs:Class .
+biz:Product rdf:type rdfs:Class .
+biz:Service rdf:type rdfs:Class .
+biz:hasEmployee rdf:type rdf:Property ;
+    rdfs:domain biz:Business ;
+     rdfs:range biz:Employee .
+biz:offersProduct rdf:type rdf:Property ;
+    rdfs:domain biz:Business ;
+     rdfs:range biz:Product .
+biz:offersService rdf:type rdf:Property ;
+    rdfs:domain biz:Business ;
+    rdfs:range biz:Service .
+biz:name rdf:type rdf:Property ;
+    rdfs:domain [ rdf:type owl:Class ;
+ owl:unionOf (biz:Business biz:Employee biz:Product biz:Service) ] ;
+    rdfs:range xsd:string .
+biz:revenue rdf:type rdf:Property ;
+    rdfs:domain biz:Business ;
+    rdfs:range xsd:float .
+biz:salary rdf:type rdf:Property ;
+    rdfs:domain biz:Employee ;
+    rdfs:range xsd:float .
+biz:price rdf:type rdf:Property ;
+    rdfs:domain [ rdf:type owl:Class ;
+ owl:unionOf (biz:Product biz:Service) ] ;
+    rdfs:range xsd:float .

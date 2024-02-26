@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Sofa rdf:type rdfs:Class .
+ ex:Sofa rdfs:label "Sofa" .
+ex:Sofa rdfs:comment "A piece of furniture for seating two or more people in the form of a bench".
+ ex:hasMaterial rdf:type rdf:Property ;
+    rdfs:label "has material" ;
+    rdfs:comment "The material from which the sofa is made" ;
+    rdfs:domain ex:Sofa ;
+    rdfs:range ex:Material .
+ex:hasColor rdf:type rdf:Property ;
+    rdfs:label "has color" ;
+    rdfs:comment "The color of the sofa" ;
+    rdfs:domain ex:Sofa ;
+    rdfs:range ex:Color .
+ex:hasStyle rdf:type rdf:Property ;
+    rdfs:label "has style" ;
+    rdfs:comment "The style of the sofa" ;
+    rdfs:domain ex:Sofa ;
+    rdfs:range ex:Style .
+ex:Manufacturer rdf:type rdfs:Class .
+ex:manufacturedBy rdf:type rdf:Property ;
+    rdfs:label "manufactured by" ;
+    rdfs:comment "The manufacturer of the sofa" ;
+    rdfs:domain ex:Sofa ;
+    rdfs:range ex:Manufacturer .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix person: <http://example.org/Person/> .
+# The class of all peopleperson:Person a rdfs:Class ;
+rdfs:label "Person"@en ;
+rdfs:comment "The class of all people"@en .
+person:name a rdf:Property ;
+rdfs:label "name"@en ;
+rdfs:comment "The name of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range xsd:string .
+person:age a rdf:Property ;
+rdfs:label "age"@en ;
+rdfs:comment "The age of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range xsd:integer .
+person:dateOfBirth a rdf:Property ;
+rdfs:label "date of birth"@en ;
+rdfs:comment "The date of birth of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range xsd:date .
+person:address a rdf:Property ;
+rdfs:label "address"@en ;
+rdfs:comment "The address of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range xsd:string .
+ person:hasParent a rdf:Property ;
+rdfs:label "has parent"@en ;
+rdfs:comment "The parent of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range person:Person .
+person:hasChild a rdf:Property ;
+rdfs:label "has child"@en ;
+rdfs:comment "The child of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range person:Person .
+person:hasFriend a rdf:Property ;
+rdfs:label "has friend"@en ;
+rdfs:comment "The friend of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range person:Person .
+person:marriedTo a rdf:Property ;
+rdfs:label "married to"@en ;
+rdfs:comment "The spouse of a person"@en ;
+rdfs:domain person:Person ;
+rdfs:range person:Person .

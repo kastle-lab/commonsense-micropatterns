@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix ex: <http://example.org/ns#>
+ex:Word a rdfs:Class .
+ex:hasSpelling a rdf:Property ;
+    rdfs:domain ex:Word ;
+    rdfs:range rdfs:Literal .
+    ex:hasMeaning a rdf:Property ;
+    rdfs:domain ex:Word ;
+    rdfs:range rdfs:Literal .
+    ex:Word1 a ex:Word ;
+    ex:hasSpelling "word" ;
+    ex:hasMeaning "a single distinct meaningful element of speech or writing, used with others (or sometimes alone) to form a sentence and typically shown with a space on either side when written or printed." .

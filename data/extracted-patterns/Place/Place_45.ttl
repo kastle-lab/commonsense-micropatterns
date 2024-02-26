@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+# Defining a Place Class:Place rdf:type rdfs:Class ;
+    rdfs:comment "A location, area, or site"  ;
+    rdfs:subClassOf geo:Feature .
+# Defining basic attributes of Place:name rdf:type rdf:Property ;
+      rdf:domain :Place ;
+      rdf:range xsd:string .
+:hasExactLocation rdf:type rdf:Property ;
+      rdf:domain :Place ;
+      rdf:range geo:Point .
+# Defining the date a Place was established:dateEstablished rdf:type rdf:Property ;
+      rdf:domain :Place ;
+      rdf:range dct:date .
+# Defining the population of a Place:population rdf:type rdf:Property ;
+      rdf:domain :Place ;
+      rdf:range xsd:integer .
+ # Defining the area of a Place:area rdf:type rdf:Property ;
+      rdf:domain :Place ;
+      rdf:range xsd:float .
+ # Defining a point of interest within a Place:hasPointOfInterest rdf:type rdf:Property ;
+      rdf:domain :Place ;
+      rdf:range :PointOfInterest .
+ # Defining a PointOfInterest Class:PointOfInterest rdf:type rdfs:Class ;
+    rdfs:comment "A place of interest within a location, area, or site" ;
+    rdfs:subClassOf geo:Feature .

@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Money rdf:type owl:Class ;
+    rdfs:label "Money"@en ;
+    rdfs:comment "A medium of exchange for goods and services, universally accepted in transactions"@en ;
+    rdfs:subClassOf ex:EconomicConcept .
+    ex:hasCurrency rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Money ;
+    rdfs:range ex:Currency ;
+    rdfs:label "has currency"@en ;
+    rdfs:comment "The specific type of money used in a region or country"@en .
+ex:Currency rdf:type owl:Class ;
+    rdfs:label "Currency"@en ;
+    rdfs:comment "A system of money specific to a particular region or country"@en .

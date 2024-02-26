@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix part: <http://example.com/parts#> .
+part:Part a rdfs:Class ;
+    rdfs:label "Part" ;
+    rdfs:comment "A component of a larger whole." .
+part:serialNumber a rdf:Property ;
+    rdfs:label "serialNumber" ;
+    rdfs:comment "The unique identification number for a part." ;
+    rdfs:domain part:Part ;
+    rdfs:range rdfs:Literal .
+part:manufacturer a rdf:Property ;
+    rdfs:label "manufacturer" ;
+    rdfs:comment "The manufacturer of the part." ;
+    rdfs:domain part:Part ;
+    rdfs:range rdfs:Literal .
+part:Part_1234 a part:Part ;
+    part:serialNumber "1234" ;
+    part:manufacturer "ACME Corp." .

@@ -1,0 +1,9 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.@prefix : <http://example.org/couch#>.:Couch rdf:type rdfs:Class.:hasColor rdf:type rdf:Property;
+    rdfs:domain :Couch;
+    rdfs:range rdfs:Literal.:hasMaterial rdf:type rdf:Property;
+    rdfs:domain :Couch;
+    rdfs:range rdfs:Literal.:hasStyle rdf:type rdf:Property;
+    rdfs:domain :Couch;
+    rdfs:range rdfs:Literal.:hasSize rdf:type rdf:Property;
+    rdfs:domain :Couch;
+    rdfs:range rdfs:Literal.

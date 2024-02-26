@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix company: <http://www.example.com/company#> .
+company:Company rdf:type rdfs:Class .
+company:employee rdf:type rdf:Property ;
+    rdfs:domain company:Company ;
+    rdfs:range company:Employee .
+company:name rdf:type rdf:Property ;
+    rdfs:domain company:Company ;
+    rdfs:range xsd:string.company:address rdf:type rdf:Property ;
+    rdfs:domain company:Company ;
+    rdfs:range xsd:string.company:Employee rdf:type rdfs:Class .
+company:empName rdf:type rdf:Property ;
+    rdfs:domain company:Employee ;
+    rdfs:range xsd:string .
+company:position rdf:type rdf:Property ;
+    rdfs:domain company:Employee ;
+    rdfs:range xsd:string .
+company:Department rdf:type rdfs:Class .
+company:deptName rdf:type rdf:Property ;
+    rdfs:domain company:Department ;
+    rdfs:range xsd:string .
+company:belongs rdf:type rdf:Property ;
+    rdfs:domain company:Employee ;
+    rdfs:range company:Department .
+company:managedBy rdf:type rdf:Property ;
+    rdfs:domain company:Department ;
+    rdfs:range company:Employee .
+   company:runs rdf:type rdf:Property ;
+    rdfs:domain company:Company ;
+    rdfs:range company:Department.

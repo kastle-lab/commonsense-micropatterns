@@ -1,0 +1,247 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Part> a rdfs:Class .
+
+<http://example.com/ontology/part#Manufacturer> a rdfs:Class .
+
+<http://example.com/ontology/part#Part> a rdfs:Class .
+
+<http://example.com/part#Assembly> a rdfs:Class .
+
+<http://example.com/part#Category> a rdfs:Class .
+
+<http://example.com/part#Manufacturer> a rdfs:Class .
+
+<http://example.com/part#Part> a rdfs:Class .
+
+<http://example.org#Part> a rdfs:Class .
+
+<http://example.org#Thing> a rdfs:Class .
+
+<http://example.org#Whole> a rdfs:Class .
+
+<http://example.org/Part> a rdfs:Class .
+
+<http://example.org/Service> a rdfs:Class .
+
+<http://example.org/ontology#Part> a rdfs:Class .
+
+<http://example.org/ontology#Thing> a rdfs:Class .
+
+<http://example.org/part#Assembly> a rdfs:Class .
+
+<http://example.org/part#Component> a rdfs:Class .
+
+<http://example.org/part#Manufacturer> a rdfs:Class .
+
+<http://example.org/part#Material> a rdfs:Class .
+
+<http://example.org/part#MechanicalPart> a rdfs:Class .
+
+<http://example.org/part#Part> a rdfs:Class .
+
+<http://example.org/part/Part> a rdfs:Class .
+
+<http://example.org/parts#Part> a rdfs:Class .
+
+<http://example.org/terms/part#Part> a rdfs:Class .
+
+<http://www.example.com/ontology/part#Object> a rdfs:Class .
+
+<http://www.example.com/ontology/part#Part> a rdfs:Class .
+
+<http://www.example.com/ontology/part#Process> a rdfs:Class .
+
+<http://www.example.com/part#Part> a rdfs:Class .
+
+<http://www.example.com/partOntology#Assembly> a rdfs:Class .
+
+<http://www.example.com/partOntology#Part> a rdfs:Class .
+
+<http://www.example.org/#Assembly> a rdfs:Class .
+
+<http://www.example.org/#Part> a rdfs:Class .
+
+<http://www.example.org/ontology#Automobile> a rdfs:Class .
+
+<http://www.example.org/ontology#Part> a rdfs:Class .
+
+<http://www.example.org/part#Part> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com/isPartOf> rdfs:range <http://example.com/Part> .
+
+<http://example.com/ontology/part#hasDescription> rdfs:range <http://example.com/ontology/part#Part> .
+
+<http://example.com/ontology/part#hasManufacturer> rdfs:range <http://example.com/ontology/part#Manufacturer>,
+        <http://example.com/ontology/part#Part> .
+
+<http://example.com/ontology/part#hasManufacturerName> rdfs:range <http://example.com/ontology/part#Manufacturer> .
+
+<http://example.com/ontology/part#hasPartNumber> rdfs:range <http://example.com/ontology/part#Part> .
+
+<http://example.com/ontology/part#isPartOf> rdfs:range <http://example.com/ontology/part#Part> .
+
+<http://example.com/part#belongsToAssembly> rdfs:range <http://example.com/part#Assembly>,
+        <http://example.com/part#Part> .
+
+<http://example.com/part#categoryName> rdfs:range <http://example.com/part#Category> .
+
+<http://example.com/part#hasPart> rdfs:range <http://example.com/part#Part> .
+
+<http://example.com/part#hasPartNumber> rdfs:range <http://example.com/part#Part> .
+
+<http://example.com/part#isPartOf> rdfs:range <http://example.com/part#Part> .
+
+<http://example.com/part#manufacturerName> rdfs:range <http://example.com/part#Manufacturer> .
+
+<http://example.com/part#manufacturerWebsite> rdfs:range <http://example.com/part#Manufacturer> .
+
+<http://example.com/part#partCategory> rdfs:range <http://example.com/part#Category>,
+        <http://example.com/part#Part> .
+
+<http://example.com/part#partManufacturer> rdfs:range <http://example.com/part#Manufacturer>,
+        <http://example.com/part#Part> .
+
+<http://example.com/part#partName> rdfs:range <http://example.com/part#Part> .
+
+<http://example.com/part#partNumber> rdfs:range <http://example.com/part#Part> .
+
+<http://example.com/partManufacturer> rdfs:range <http://example.com/Part> .
+
+<http://example.com/partName> rdfs:range <http://example.com/Part> .
+
+<http://example.com/partNumber> rdfs:range <http://example.com/Part> .
+
+<http://example.org#hasPart> rdfs:range <http://example.org#Part>,
+        <http://example.org#Thing>,
+        <http://example.org#Whole> .
+
+<http://example.org#isPartOf> rdfs:range <http://example.org#Part>,
+        <http://example.org#Thing>,
+        <http://example.org#Whole> .
+
+<http://example.org/ontology#hasPart> rdfs:range <http://example.org/ontology#Part>,
+        <http://example.org/ontology#Thing> .
+
+<http://example.org/ontology#partOf> rdfs:range <http://example.org/ontology#Part>,
+        <http://example.org/ontology#Thing> .
+
+<http://example.org/part#belongsTo> rdfs:range <http://example.org/part#Part>,
+        rdfs:Resource .
+
+<http://example.org/part#hasPart> rdfs:range <http://example.org/part#Assembly>,
+        <http://example.org/part#Part> .
+
+<http://example.org/part#isPartOf> rdfs:range <http://example.org/part#Assembly>,
+        <http://example.org/part#Part> .
+
+<http://example.org/part#madeOf> rdfs:range <http://example.org/part#Material>,
+        <http://example.org/part#MechanicalPart>,
+        <http://example.org/part#Part> .
+
+<http://example.org/part#manufacturedBy> rdfs:range <http://example.org/part#Manufacturer>,
+        <http://example.org/part#Part> .
+
+<http://example.org/part#manufacturer> rdfs:range <http://example.org/part#Part> .
+
+<http://example.org/part#manufacturingDate> rdfs:range <http://example.org/part#Part> .
+
+<http://example.org/part#partId> rdfs:range <http://example.org/part#Part> .
+
+<http://example.org/part#partName> rdfs:range <http://example.org/part#Part> .
+
+<http://example.org/part#partOf> rdfs:range <http://example.org/part#Part> .
+
+<http://example.org/part#subPart> rdfs:range <http://example.org/part#Component>,
+        <http://example.org/part#Part> .
+
+<http://example.org/part/hasMaterial> rdfs:range <http://example.org/part/Part> .
+
+<http://example.org/part/hasPart> rdfs:range <http://example.org/part/Part> .
+
+<http://example.org/part/hasSize> rdfs:range <http://example.org/part/Part> .
+
+<http://example.org/part/hasWeight> rdfs:range <http://example.org/part/Part> .
+
+<http://example.org/part/partOf> rdfs:range <http://example.org/part/Part> .
+
+<http://example.org/parts#hasPart> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#isPartOf> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#name> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#partDescription> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#partID> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#partManufacturer> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#partModel> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#partName> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#partOf> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/parts#weight> rdfs:range <http://example.org/parts#Part> .
+
+<http://example.org/provides> rdfs:range <http://example.org/Part>,
+        <http://example.org/Service> .
+
+<http://example.org/terms/part#hasPart> rdfs:range <http://example.org/terms/part#Part> .
+
+<http://example.org/terms/part#isPartOf> rdfs:range <http://example.org/terms/part#Part> .
+
+<http://www.example.com/ontology/part#hasPart> rdfs:range <http://www.example.com/ontology/part#Object>,
+        <http://www.example.com/ontology/part#Part> .
+
+<http://www.example.com/ontology/part#objectID> rdfs:range <http://www.example.com/ontology/part#Object> .
+
+<http://www.example.com/ontology/part#partID> rdfs:range <http://www.example.com/ontology/part#Part> .
+
+<http://www.example.com/ontology/part#partOf> rdfs:range <http://www.example.com/ontology/part#Object>,
+        <http://www.example.com/ontology/part#Part> .
+
+<http://www.example.com/ontology/part#processID> rdfs:range <http://www.example.com/ontology/part#Process> .
+
+<http://www.example.com/ontology/part#usedIn> rdfs:range <http://www.example.com/ontology/part#Part>,
+        <http://www.example.com/ontology/part#Process> .
+
+<http://www.example.com/ontology/part#usesPart> rdfs:range <http://www.example.com/ontology/part#Part>,
+        <http://www.example.com/ontology/part#Process> .
+
+<http://www.example.com/part#belongsTo> rdfs:range <http://www.example.com/part#Part> .
+
+<http://www.example.com/part#hasPart> rdfs:range <http://www.example.com/part#Part> .
+
+<http://www.example.com/part#partID> rdfs:range <http://www.example.com/part#Part> .
+
+<http://www.example.com/part#partManufactureDate> rdfs:range <http://www.example.com/part#Part> .
+
+<http://www.example.com/part#partName> rdfs:range <http://www.example.com/part#Part> .
+
+<http://www.example.com/partOntology#belongs_in> rdfs:range <http://www.example.com/partOntology#Assembly>,
+        <http://www.example.com/partOntology#Part> .
+
+<http://www.example.com/partOntology#has_material> rdfs:range <http://www.example.com/partOntology#Part> .
+
+<http://www.example.com/partOntology#has_part> rdfs:range <http://www.example.com/partOntology#Assembly>,
+        <http://www.example.com/partOntology#Part> .
+
+<http://www.example.org/#provides> rdfs:range <http://www.example.org/#Assembly>,
+        <http://www.example.org/#Part> .
+
+<http://www.example.org/ontology#:hasPart> rdfs:range <http://www.example.org/ontology#Automobile>,
+        <http://www.example.org/ontology#Part> .
+
+<http://www.example.org/ontology#isPartOf> rdfs:range <http://www.example.org/ontology#Automobile>,
+        <http://www.example.org/ontology#Part> .
+
+<http://www.example.org/part#partID> rdfs:range <http://www.example.org/part#Part> .
+
+<http://www.example.org/part#partName> rdfs:range <http://www.example.org/part#Part> .
+
+<http://www.example.org/part#partOf> rdfs:range <http://www.example.org/part#Part> .
+

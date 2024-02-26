@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix result: <http://example.org/result#> .
+result:Result rdf:type rdfs:Class ;
+    rdfs:comment "A representation of a result or outcome."@en ;
+    rdfs:label "Result"@en .
+  result:hasFinalOutcome rdf:type rdf:Property ;
+    rdfs:comment "Relates a Result to its final outcome."@en ;
+    rdfs:label "has final outcome"@en ;
+    rdfs:domain result:Result ;
+    rdfs:range xsd:string .
+result:isResultOf rdf:type rdf:Property ;
+    rdfs:comment "The event or action that produced this result."@en ;
+    rdfs:label "is result of"@en ;
+    rdfs:domain result:Result ;
+    rdfs:range xsd:string .
+result:hasGrade rdf:type rdf:Property ;
+    rdfs:comment "The grade of the result, e.g. in examinations or competitions."@en ;
+    rdfs:label "has grade"@en ;
+    rdfs:domain result:Result ;
+    rdfs:range xsd:string .
+result:hasComment rdf:type rdf:Property ;
+    rdfs:comment "A comment or explanatory note about the result."@en ;
+    rdfs:label "has comment"@en ;
+    rdfs:domain result:Result ;
+    rdfs:range xsd:string .

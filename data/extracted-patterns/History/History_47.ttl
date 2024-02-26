@@ -1,0 +1,23 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix history: <http://www.example.com/history#> .
+history:Event a rdfs:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "A historical event" .
+history:date a rdf:Property ;
+    rdfs:label "date" ;
+    rdfs:comment "The date of the event" ;
+    rdfs:domain history:Event ;
+    rdfs:range xsd:date .
+history:location a rdf:Property ;
+    rdfs:label "location" ;
+    rdfs:comment "The location of the event" ;
+    rdfs:domain history:Event ;
+    rdfs:range xsd:string .
+history:content a rdf:Property ;
+    rdfs:label "content" ;
+    rdfs:comment "Description of the event" ;
+    rdfs:domain history:Event ;
+    rdfs:range xsd:string .

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sch: <http://schema.org/> .
+# Define Education as a Class:schEducation a rdf:Class ;
+# Define subclasses:schPrimaryEducation a rdf:Class ;
+  rdfs:subClassOf :schEducation .
+:schSecondaryEducation a rdf:Class ;
+  rdfs:subClassOf :schEducation .
+:schHigherEducation a rdf:Class ;
+  rdfs:subClassOf :schEducation .
+# Define properties:schCourseName a rdf:Property ;
+  rdfs:domain :schEducation ;
+  rdfs:range xsd:string .
+:schInstitution a rdf:Property ;
+  rdfs:domain :schEducation ;
+  rdfs:range xsd:string .
+# Define individuals:math101 a :schHigherEducation ;
+  :schCourseName "Mathematics 101" ;
+  :schInstitution "XYZ University" .
+:engLit101 a :schHigherEducation ;
+  :schCourseName "English Literature 101" ;
+  :schInstitution "XYZ University" .

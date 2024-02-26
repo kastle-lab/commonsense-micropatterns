@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix waterOnt: <http://www.example.org/waterOnt#> .
+# Classes
+waterOnt:Water a owl:Class .
+waterOnt:FreshWater a owl:Class ;
+rdfs:subClassOf waterOnt:Water .
+waterOnt:SaltWater a owl:Class ;
+rdfs:subClassOf waterOnt:Water .
+waterOnt:WaterSource a owl:Class .
+waterOnt:River a owl:Class ;
+rdfs:subClassOf waterOnt:WaterSource, waterOnt:FreshWater .
+waterOnt:Ocean a owl:Class ;
+rdfs:subClassOf waterOnt:WaterSource, waterOnt:SaltWater .
+waterOnt:DrinkingWater a owl:Class;
+rdfs:subClassOf waterOnt:FreshWater.# Properties
+waterOnt:hasSource a owl:ObjectProperty ;
+    rdfs:domain waterOnt:Water ;
+    rdfs:range waterOnt:WaterSource .
+waterOnt:isSourceOf a owl:ObjectProperty ;
+    owl:inverseOf waterOnt:hasSource .
+waterOnt:hasSaltContent a owl:DatatypeProperty ;
+    rdfs:domain waterOnt:Water ;
+    rdfs:range xsd:float .

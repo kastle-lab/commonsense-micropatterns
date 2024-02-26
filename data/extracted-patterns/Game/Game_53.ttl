@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix game: <http://www.example.org/game/> .
+# Class Definitionsgame:Game a owl:Class ;
+    rdfs:label "Game"@en ;
+    rdfs:comment "The class of all games"@en .
+game:VideoGame a owl:Class ;
+    rdfs:subClassOf game:Game ;
+    rdfs:label "Video Game"@en ;
+    rdfs:comment "The class of all video games"@en .
+game:BoardGame a owl:Class ;
+    rdfs:subClassOf game:Game ;
+    rdfs:label "Board Game"@en ;
+    rdfs:comment "The class of all board games"@en .
+# Property Definitionsgame:hasPlayer a owl:ObjectProperty ;
+    rdfs:label "has player"@en ;
+    rdfs:comment "The property that connects a game to its player(s)"@en ;
+    rdfs:domain game:Game ;
+    rdfs:range game:Player .
+game:hasRule a owl:ObjectProperty ;
+    rdfs:label "has rule"@en;
+    rdfs:comment "The property that associates a game with its rules"@en ;
+    rdfs:domain game:Game ;
+    rdfs:range game:Rule .
+# Additional Classesgame:Player a owl:Class ;
+    rdfs:label "Player"@en ;
+    rdfs:comment "The class of all players"@en .
+game:Rule a owl:Class ;
+    rdfs:label "Rule"@en ;
+    rdfs:comment "The class of all game rules"@en .

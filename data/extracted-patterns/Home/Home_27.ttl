@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix home: <http://example.com/home#> .
+home:Home rdf:type rdfs:Class ;
+    rdfs:label "Home"@en ;
+    rdfs:comment "A place where an individual or family resides"@en .
+home:Room rdf:type rdfs:Class ;
+    rdfs:label "Room"@en ;
+    rdfs:comment "A part or division of a building enclosed by walls, floor, and ceiling"@en ;
+    rdfs:subClassOf home:Home .
+home:Bedroom rdf:type rdfs:Class ;
+    rdfs:label "Bedroom"@en ;
+    rdfs:comment "A room for sleeping in"@en ;
+    rdfs:subClassOf home:Room .
+home:Bathroom rdf:type rdfs:Class ;
+    rdfs:label "Bathroom"@en ;
+    rdfs:comment "A room containing a bath or shower and typically also a washbasin and a toilet"@en ;
+    rdfs:subClassOf home:Room .
+home:Kitchen rdf:type rdfs:Class ;
+    rdfs:label "Kitchen"@en ;
+    rdfs:comment "A room or area where food is prepared and cooked"@en ;
+    rdfs:subClassOf home:Room .
+home:Furniture rdf:type rdfs:Class ;
+    rdfs:label "Furniture"@en ;
+    rdfs:comment "Large movable equipment, such as tables and chairs, used to make a house, office, or other space suitable for living or working"@en .
+home:Bed rdf:type rdfs:Class ;
+    rdfs:label "Bed"@en ;
+    rdfs:comment "A piece of furniture for sleep or rest, typically a framework with a mattress"@en ;
+    rdfs:subClassOf home:Furniture .
+home:Chair rdf:type rdfs:Class ;
+    rdfs:label "Chair"@en ;
+    rdfs:comment "A separate seat for one person, typically with a back and four legs"@en ;
+    rdfs:subClassOf home:Furniture .
+home:hasRoom rdf:type rdf:Property ;
+    rdfs:label "has room"@en ;
+    rdfs:comment "A property that denotes a room belonging to a home"@en ;
+    rdfs:domain home:Home ;
+    rdfs:range home:Room .
+home:hasFurniture rdf:type rdf:Property ;
+    rdfs:label "has furniture"@en ;
+    rdfs:comment "A property that denotes a furniture belonging to a room"@en ;
+    rdfs:domain home:Room ;
+    rdfs:range home:Furniture .

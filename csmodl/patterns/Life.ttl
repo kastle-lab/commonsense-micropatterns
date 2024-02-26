@@ -1,0 +1,136 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com#Life> a rdfs:Class .
+
+<http://example.com#Organism> a rdfs:Class .
+
+<http://example.com/Birth> a rdfs:Class .
+
+<http://example.com/Death> a rdfs:Class .
+
+<http://example.com/Life> a rdfs:Class .
+
+<http://example.com/LifeCycle> a rdfs:Class .
+
+<http://example.org/Entity> a rdfs:Class .
+
+<http://example.org/Life> a rdfs:Class .
+
+<http://example.org/life#Entity> a rdfs:Class .
+
+<http://example.org/life#Environment> a rdfs:Class .
+
+<http://example.org/life#Life> a rdfs:Class .
+
+<http://example.org/life#LifeSpan> a rdfs:Class ;
+    rdfs:range <http://example.org/life#Entity> .
+
+<http://example.org/life#LifeStage> a rdfs:Class .
+
+<http://example.org/life#Organism> a rdfs:Class .
+
+<http://example.org/life#Species> a rdfs:Class .
+
+<http://example.org/life#TaxonomicRank> a rdfs:Class .
+
+<http://www.example.com/life#Life> a rdfs:Class .
+
+<http://www.example.com/life#LifeForm> a rdfs:Class .
+
+<http://www.example.org/life#Animal> a rdfs:Class .
+
+<http://www.example.org/life#Birth> a rdfs:Class .
+
+<http://www.example.org/life#Cell> a rdfs:Class .
+
+<http://www.example.org/life#Death> a rdfs:Class .
+
+<http://www.example.org/life#Life> a rdfs:Class .
+
+<http://www.example.org/life#Organism> a rdfs:Class .
+
+<http://www.ontology.com/life#Life> a rdfs:Class .
+
+<http://example.com#hasLife> rdfs:range <http://example.com#Life>,
+        <http://example.com#Organism> .
+
+<http://example.com/hasBirth> rdfs:range <http://example.com/Birth>,
+        <http://example.com/Life> .
+
+<http://example.com/hasDeath> rdfs:range <http://example.com/Death>,
+        <http://example.com/Life> .
+
+<http://example.com/hasLifeCycle> rdfs:range <http://example.com/Life>,
+        <http://example.com/LifeCycle> .
+
+<http://example.org/hasLife> rdfs:range <http://example.org/Entity>,
+        <http://example.org/Life> .
+
+<http://example.org/life#hasAge> rdfs:range <http://example.org/life#Organism> .
+
+<http://example.org/life#hasEnvironment> rdfs:range <http://example.org/life#Environment>,
+        <http://example.org/life#Life> .
+
+<http://example.org/life#hasLife> rdfs:range <http://example.org/life#Entity>,
+        <http://example.org/life#Life> .
+
+<http://example.org/life#hasLifeSpan> rdfs:range <http://example.org/life#Life>,
+        <http://example.org/life#LifeSpan> .
+
+<http://example.org/life#hasLifeStage> rdfs:range <http://example.org/life#Life>,
+        <http://example.org/life#LifeStage>,
+        <http://example.org/life#Organism> .
+
+<http://example.org/life#hasOrganism> rdfs:range <http://example.org/life#Life>,
+        <http://example.org/life#Organism> .
+
+<http://example.org/life#hasParent> rdfs:range <http://example.org/life#Organism> .
+
+<http://example.org/life#hasSibling> rdfs:range <http://example.org/life#Organism> .
+
+<http://example.org/life#hasSpecies> rdfs:range <http://example.org/life#Life>,
+        <http://example.org/life#Organism>,
+        <http://example.org/life#Species> .
+
+<http://example.org/life#hasTaxonomicRank> rdfs:range <http://example.org/life#Organism>,
+        <http://example.org/life#TaxonomicRank> .
+
+<http://example.org/life#name> rdfs:range <http://example.org/life#Organism> .
+
+<http://www.example.com/life#hasForm> rdfs:range <http://www.example.com/life#Life>,
+        <http://www.example.com/life#LifeForm> .
+
+<http://www.example.org/life#Eat> rdfs:range <http://www.example.org/life#Animal>,
+        <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#HasCells> rdfs:range <http://www.example.org/life#Cell>,
+        <http://www.example.org/life#Organism> .
+
+<http://www.example.org/life#Reproduce> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#birthDate> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#consume> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#deathDate> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#grow> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#hasBeginning> rdfs:range <http://www.example.org/life#Birth>,
+        <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#hasChild> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#hasEnd> rdfs:range <http://www.example.org/life#Death>,
+        <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#hasParent> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.example.org/life#reproduce> rdfs:range <http://www.example.org/life#Life> .
+
+<http://www.ontology.com/life#Evolution> rdfs:range <http://www.ontology.com/life#Life> .
+
+<http://www.ontology.com/life#Metabolism> rdfs:range <http://www.ontology.com/life#Life> .
+
+<http://www.ontology.com/life#Reproduction> rdfs:range <http://www.ontology.com/life#Life> .
+

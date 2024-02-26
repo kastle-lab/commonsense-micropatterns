@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix law: <http://example.org/law/> .
+law:Law a rdfs:Class ;
+    rdfs:comment "Represents the concept of a Law" ;
+    rdfs:label "Law" .
+law:hasTitle a rdf:Property ;
+    rdfs:comment "The title of the law" ;
+    rdfs:label "has title" ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:string .
+law:hasYear a rdf:Property ;
+    rdfs:comment "The year the law was enacted" ;
+    rdfs:label "has year" ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:integer .
+law:hasIdentifier a rdf:Property ;
+    rdfs:comment "The unique identifier of the law (e.g., citation, act number, etc.)" ;
+    rdfs:label "has identifier" ;
+    rdfs:domain law:Law ;
+    rdfs:range xsd:string .

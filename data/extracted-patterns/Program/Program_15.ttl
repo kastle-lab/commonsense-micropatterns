@@ -1,0 +1,52 @@
+@prefix prog: <http://example.org/programontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Classes
+prog:Program a rdfs:Class ;
+    rdfs:label "Program"@en ;
+    rdfs:comment "Software program or application"@en ;
+    .
+prog:Version a rdfs:Class ;
+    rdfs:label "Version"@en ;
+    rdfs:comment "Version of a program"@en ;
+    .
+prog:Developer a rdfs:Class ;
+    rdfs:label "Developer"@en ;
+    rdfs:comment "Developer or author of a program"@en ;
+    .
+prog:Language a rdfs:Class ;
+    rdfs:label "Language"@en ;
+    rdfs:comment "Programming language used to write a program"@en ;
+    .
+# Object Propertiesprog:hasVersion a rdf:Property ;
+    rdfs:label "has version"@en ;
+    rdfs:comment "Links a program to its versions"@en ;
+    rdfs:domain prog:Program ;
+    rdfs:range prog:Version ;
+    .
+prog:hasDeveloper a rdf:Property ;
+    rdfs:label "has developer"@en ;
+    rdfs:comment "Links a program to its developer"@en ;
+    rdfs:domain prog:Program ;
+    rdfs:range prog:Developer ;
+    .
+prog:hasLanguage a rdf:Property ;
+    rdfs:label "has language"@en ;
+    rdfs:comment "Links a program to the language used for its development"@en ;
+    rdfs:domain prog:Program ;
+    rdfs:range prog:Language ;
+    .
+# Data Propertiesprog:hasName a rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "Program's name"@en ;
+    rdfs:domain prog:Program ;
+    rdfs:range xsd:string ;
+    .
+prog:hasReleaseDate a rdf:Property ;
+    rdfs:label "has release date"@en ;
+    rdfs:comment "Program's release date"@en ;
+    rdfs:domain prog:Version ;
+    rdfs:range xsd:date ;
+    .

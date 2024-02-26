@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com/> .
+ex:Year rdf:type rdfs:Class ;
+   rdfs:label "Year" ;
+   rdfs:comment "The class of all years" .
+ex:year rdf:type rdf:Property ;
+   rdfs:label "year" ;
+   rdfs:comment "The property that associates an entity with a year" ;
+   rdfs:domain ex:Entity ;
+   rdfs:range ex:Year .
+ex:Entity rdf:type rdfs:Class ;
+   rdfs:label "Entity" ;
+   rdfs:comment "The class of all entities" .
+ex:Entity ex:year "2020"^^xsd:integer .
+ex:beginningOfYear rdf:type rdf:Property ;
+   rdfs:label "beginning of year" ;
+   rdfs:comment "The property that signifies the beginning of a year" ;
+   rdfs:domain ex:Year ;
+   rdfs:range xsd:date .
+ex:endOfYear rdf:type rdf:Property ;
+   rdfs:label "end of year" ;
+   rdfs:comment "The property that signifies the end of a year" ;
+   rdfs:domain ex:Year ;
+   rdfs:range xsd:date .

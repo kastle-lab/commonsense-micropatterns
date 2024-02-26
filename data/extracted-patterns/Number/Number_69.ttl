@@ -1,0 +1,3 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:object1 ex:hasNumber "1234"^^xsd:integer .

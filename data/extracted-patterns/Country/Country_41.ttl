@@ -1,0 +1,27 @@
+  @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Defining a class Country:Country a owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:comment "A nation with its own government and occupying a particular territory" ;
+  rdfs:label "Country"@en .
+# Defining a property hasCapital:hasCapital a owl:ObjectProperty ;
+  rdfs:domain :Country ;
+  rdfs:range :City ;
+  rdfs:comment "The property that represents the capital of a country" ;
+  rdfs:label "hasCapital"@en .
+# Defining a property hasPopulation:hasPopulation a owl:DatatypeProperty ;
+  rdfs:domain :Country ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The property that represents the population of a country" ;
+  rdfs:label "hasPopulation"@en .
+# Defining a property officialLanguage:officialLanguage a owl:DatatypeProperty ;
+  rdfs:domain :Country ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The property that represents the official language/s of a country" ;
+  rdfs:label "officialLanguage"@en .
+# Defining a property area:area a owl:DatatypeProperty ;
+  rdfs:domain :Country ;
+  rdfs:range xsd:float ;
+  rdfs:comment "The property that represents the total area (in square km) of a country" ;
+  rdfs:label "area"@en .

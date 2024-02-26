@@ -1,0 +1,268 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Guest> a rdfs:Class .
+
+<http://example.com/Location> a rdfs:Class .
+
+<http://example.com/Party> a rdfs:Class .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/ontology/Party> a rdfs:Class .
+
+<http://example.com/ontology/Person> a rdfs:Class .
+
+<http://example.com/party> a rdfs:Class .
+
+<http://example.com/party#Party> a rdfs:Class .
+
+<http://example.com/party#Person> a rdfs:Class .
+
+<http://example.org#DateTime> a rdfs:Class .
+
+<http://example.org#Location> a rdfs:Class .
+
+<http://example.org#Party> a rdfs:Class .
+
+<http://example.org#Person> a rdfs:Class .
+
+<http://example.org/#Party> a rdfs:Class .
+
+<http://example.org/#PartyEvent> a rdfs:Class .
+
+<http://example.org/#PartyMember> a rdfs:Class .
+
+<http://example.org/Location> a rdfs:Class .
+
+<http://example.org/Party> a rdfs:Class .
+
+<http://example.org/Person> a rdfs:Class .
+
+<http://example.org/Theme> a rdfs:Class .
+
+<http://example.org/party#Guest> a rdfs:Class .
+
+<http://example.org/party#Location> a rdfs:Class .
+
+<http://example.org/party#Party> a rdfs:Class .
+
+<http://example.org/party#PartyOrganiser> a rdfs:Class .
+
+<http://example.org/party#Person> a rdfs:Class .
+
+<http://example.org/party/Party> a rdfs:Class .
+
+<http://example.org/party/Person> a rdfs:Class .
+
+<http://www.example.com/party#Location> a rdfs:Class .
+
+<http://www.example.com/party#Party> a rdfs:Class .
+
+<http://www.example.com/party#Person> a rdfs:Class .
+
+<http://www.example.org/Party> a rdfs:Class .
+
+<http://www.example.org/Party#Party> a rdfs:Class .
+
+<http://www.example.org/Party#Person> a rdfs:Class .
+
+<http://www.example.org/PartyActivity> a rdfs:Class .
+
+<http://www.example.org/party#Location> a rdfs:Class .
+
+<http://www.example.org/party#Party> a rdfs:Class .
+
+<http://www.example.org/party#PartyType> a rdfs:Class .
+
+<http://www.example.org/party#Person> a rdfs:Class .
+
+<http://www.myontology.com/#Party> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://xmlns.com/foaf/0.1/Person> a rdfs:Class .
+
+"dateTime"^^rdf:Property a rdfs:Class .
+
+<http://example.com/hasAttendee> rdfs:range <http://example.com/Party>,
+        <http://example.com/Person> .
+
+<http://example.com/hasDate> rdfs:range <http://example.com/Party> .
+
+<http://example.com/hasDateTime> rdfs:range <http://example.com/party>,
+        "dateTime"^^rdf:Property .
+
+<http://example.com/hasGuest> rdfs:range <http://example.com/Guest>,
+        <http://example.com/party> .
+
+<http://example.com/hasLocation> rdfs:range <http://example.com/Location>,
+        <http://example.com/Party>,
+        <http://example.com/party> .
+
+<http://example.com/ontology/hasMember> rdfs:range <http://example.com/ontology/Party>,
+        <http://example.com/ontology/Person> .
+
+<http://example.com/party#hasDateTime> rdfs:range <http://example.com/party#Party> .
+
+<http://example.com/party#hasGuest> rdfs:range <http://example.com/party#Party>,
+        <http://example.com/party#Person> .
+
+<http://example.com/party#hasLocation> rdfs:range <http://example.com/party#Party> .
+
+<http://example.com/party#hasName> rdfs:range <http://example.com/party#Person> .
+
+<http://example.com/party#hasTheme> rdfs:range <http://example.com/party#Party> .
+
+<http://example.com/party#hostedBy> rdfs:range <http://example.com/party#Party>,
+        <http://example.com/party#Person> .
+
+<http://example.com/party#member> rdfs:range <http://example.com/party#Party>,
+        <http://xmlns.com/foaf/0.1/Person> .
+
+<http://example.org#hasDate> rdfs:range <http://example.org#DateTime>,
+        <http://example.org#Party> .
+
+<http://example.org#hasGuest> rdfs:range <http://example.org#Party>,
+        <http://example.org#Person> .
+
+<http://example.org#hasHost> rdfs:range <http://example.org#Party>,
+        <http://example.org#Person> .
+
+<http://example.org#hasLocation> rdfs:range <http://example.org#Location>,
+        <http://example.org#Party> .
+
+<http://example.org/#attendedBy> rdfs:range <http://example.org/#PartyEvent>,
+        <http://example.org/#PartyMember> .
+
+<http://example.org/#hasEvent> rdfs:range <http://example.org/#Party>,
+        <http://example.org/#PartyEvent> .
+
+<http://example.org/#hasMember> rdfs:range <http://example.org/#Party>,
+        <http://example.org/#PartyMember> .
+
+<http://example.org/#organizedBy> rdfs:range <http://example.org/#Party>,
+        <http://example.org/#PartyMember> .
+
+<http://example.org/Provide> rdfs:range <http://example.org/Party>,
+        rdfs:Resource .
+
+<http://example.org/hasDate> rdfs:range <http://example.org/Party> .
+
+<http://example.org/hasGuest> rdfs:range <http://example.org/Party>,
+        <http://example.org/Person> .
+
+<http://example.org/hasHost> rdfs:range <http://example.org/Party>,
+        <http://example.org/Person> .
+
+<http://example.org/hasLocation> rdfs:range <http://example.org/Location>,
+        <http://example.org/Party> .
+
+<http://example.org/hasTheme> rdfs:range <http://example.org/Party>,
+        <http://example.org/Theme> .
+
+<http://example.org/party#hasDate> rdfs:range <http://example.org/party#Party> .
+
+<http://example.org/party#hasDateTime> rdfs:range <http://example.org/party#Party> .
+
+<http://example.org/party#hasGuest> rdfs:range <http://example.org/party#Guest>,
+        <http://example.org/party#Party>,
+        <http://example.org/party#Person> .
+
+<http://example.org/party#hasHost> rdfs:range <http://example.org/party#Party>,
+        <http://example.org/party#Person> .
+
+<http://example.org/party#hasLocation> rdfs:range <http://example.org/party#Location>,
+        <http://example.org/party#Party>,
+        rdfs:Resource .
+
+<http://example.org/party#hasOrganizer> rdfs:range <http://example.org/party#Party> .
+
+<http://example.org/party#hasTheme> rdfs:range <http://example.org/party#Party> .
+
+<http://example.org/party#hasTime> rdfs:range <http://example.org/party#Party> .
+
+<http://example.org/party#organisedBy> rdfs:range <http://example.org/party#Party>,
+        <http://example.org/party#PartyOrganiser> .
+
+<http://example.org/party/attendee> rdfs:range <http://example.org/party/Party> .
+
+<http://example.org/party/date> rdfs:range <http://example.org/party/Party> .
+
+<http://example.org/party/hasDate> rdfs:range <http://example.org/party/Party> .
+
+<http://example.org/party/hasGuest> rdfs:range <http://example.org/party/Party>,
+        <http://example.org/party/Person> .
+
+<http://example.org/party/hasHost> rdfs:range <http://example.org/party/Party>,
+        <http://example.org/party/Person> .
+
+<http://example.org/party/hasLocation> rdfs:range <http://example.org/party/Party> .
+
+<http://example.org/party/hasTime> rdfs:range <http://example.org/party/Party> .
+
+<http://example.org/party/location> rdfs:range <http://example.org/party/Party> .
+
+<http://example.org/party/theme> rdfs:range <http://example.org/party/Party> .
+
+<http://www.example.com/party#hasDate> rdfs:range <http://www.example.com/party#Party> .
+
+<http://www.example.com/party#hasGuest> rdfs:range <http://www.example.com/party#Party>,
+        <http://www.example.com/party#Person> .
+
+<http://www.example.com/party#hasHost> rdfs:range <http://www.example.com/party#Party>,
+        <http://www.example.com/party#Person> .
+
+<http://www.example.com/party#hasLocation> rdfs:range <http://www.example.com/party#Location>,
+        <http://www.example.com/party#Party> .
+
+<http://www.example.org/Party#hasBirthDate> rdfs:range <http://www.example.org/Party#Person> .
+
+<http://www.example.org/Party#hasLeader> rdfs:range <http://www.example.org/Party#Party>,
+        <http://www.example.org/Party#Person> .
+
+<http://www.example.org/Party#hasName> rdfs:range <http://www.example.org/Party#Party> .
+
+<http://www.example.org/name> rdfs:range <http://www.example.org/Party> .
+
+<http://www.example.org/participatesIn> rdfs:range <http://www.example.org/Party>,
+        <http://www.example.org/PartyActivity> .
+
+<http://www.example.org/party#address> rdfs:range <http://www.example.org/party#Location> .
+
+<http://www.example.org/party#age> rdfs:range <http://www.example.org/party#Person> .
+
+<http://www.example.org/party#city> rdfs:range <http://www.example.org/party#Location> .
+
+<http://www.example.org/party#hasDate> rdfs:range <http://www.example.org/party#Party> .
+
+<http://www.example.org/party#hasGuest> rdfs:range <http://www.example.org/party#Party>,
+        <http://www.example.org/party#Person> .
+
+<http://www.example.org/party#hasHost> rdfs:range <http://www.example.org/party#Party>,
+        <http://www.example.org/party#Person> .
+
+<http://www.example.org/party#hasLocation> rdfs:range <http://www.example.org/party#Location>,
+        <http://www.example.org/party#Party> .
+
+<http://www.example.org/party#hasPartyType> rdfs:range <http://www.example.org/party#Party>,
+        <http://www.example.org/party#PartyType> .
+
+<http://www.example.org/party#hasTheme> rdfs:range <http://www.example.org/party#Party> .
+
+<http://www.example.org/party#name> rdfs:range <http://www.example.org/party#Person> .
+
+<http://www.example.org/party#zipcode> rdfs:range <http://www.example.org/party#Location> .
+
+<http://www.myontology.com/#date> rdfs:range <http://www.myontology.com/#Party> .
+
+<http://www.myontology.com/#guest> rdfs:range <http://www.myontology.com/#Party>,
+        rdfs:Resource .
+
+<http://www.myontology.com/#location> rdfs:range <http://www.myontology.com/#Party>,
+        rdfs:Resource .
+
+<http://www.myontology.com/#music> rdfs:range <http://www.myontology.com/#Party> .
+
+<http://www.myontology.com/#theme> rdfs:range <http://www.myontology.com/#Party> .
+

@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix business: <http://example.com/business#> .
+# Classes
+business:Business rdf:type rdfs:Class .
+business:Owner rdf:type rdfs:Class .
+business:Employee rdf:type rdfs:Class .
+business:Product rdf:type rdfs:Class .
+business:Service rdf:type rdfs:Class .
+# Properties
+business:hasOwner rdf:type rdf:Property ;
+                 rdfs:domain business:Business ;
+                 rdfs:range business:Owner .
+                 business:hasEmployee rdf:type rdf:Property ;
+                     rdfs:domain business:Business ;
+                     rdfs:range business:Employee .
+business:offerProduct rdf:type rdf:Property ;
+                      rdfs:domain business:Business ;
+                      rdfs:range business:Product .
+business:offerService rdf:type rdf:Property ;
+                      rdfs:domain business:Business ;
+                      rdfs:range business:Service .
+# Databusiness:Business1 rdf:type business:Business ;
+                   business:hasOwner business:Owner1 ;
+                   business:hasEmployee business:Employee1 ;
+                   business:offerProduct business:Product1 ;
+                   business:offerService business:Service1 .
+business:Owner1 rdf:type business:Owner .
+business:Employee1 rdf:type business:Employee .
+business:Product1 rdf:type business:Product .
+business:Service1 rdf:type business:Service .

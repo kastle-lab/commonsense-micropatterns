@@ -1,0 +1,31 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/#Chair> a rdfs:Class .
+
+<http://example.org/ns#Chair> a rdfs:Class .
+
+<http://example.org/stuff/1.0/Chair> a rdfs:Class .
+
+<http://example.org/stuff/1.0/Company> a rdfs:Class .
+
+<http://example.org/#hasColor> rdfs:range <http://example.org/#Chair> .
+
+<http://example.org/#hasDepth> rdfs:range <http://example.org/#Chair> .
+
+<http://example.org/#hasHeight> rdfs:range <http://example.org/#Chair> .
+
+<http://example.org/#hasMaterial> rdfs:range <http://example.org/#Chair> .
+
+<http://example.org/#hasStyle> rdfs:range <http://example.org/#Chair> .
+
+<http://example.org/#hasWidth> rdfs:range <http://example.org/#Chair> .
+
+<http://example.org/ns#hasColour> rdfs:range <http://example.org/ns#Chair> .
+
+<http://example.org/ns#hasMaterial> rdfs:range <http://example.org/ns#Chair> .
+
+<http://example.org/ns#hasWeightCapacity> rdfs:range <http://example.org/ns#Chair> .
+
+<http://example.org/stuff/1.0/manufacturer> rdfs:range <http://example.org/stuff/1.0/Chair>,
+        <http://example.org/stuff/1.0/Company> .
+

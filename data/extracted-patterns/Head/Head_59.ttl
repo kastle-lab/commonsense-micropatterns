@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/head-ontology#> .
+:Head rdf:type owl:Class .
+:personHasHead rdf:type owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Head ;
+    rdfs:label "person has head" ;
+    rdfs:comment "The property that relates a person with their head." .
+:Eyes rdf:type owl:Class ;
+    rdfs:subClassOf :Head ;
+:Nose rdf:type owl:Class ;
+    rdfs:subClassOf :Head ;
+:Mouth rdf:type owl:Class ;
+    rdfs:subClassOf :Head .
+:hasEyes rdf:type owl:ObjectProperty ;
+    rdfs:domain :Head ;
+    rdfs:range :Eyes ;
+    rdfs:label "head has eyes" ;
+    rdfs:comment "The property that connects a head with eyes." .
+:hasNose rdf:type owl:ObjectProperty ;
+    rdfs:domain :Head ;
+    rdfs:range :Nose ;
+    rdfs:label "head has nose" ;
+    rdfs:comment "The property that connects a head with nose." .
+:hasMouth rdf:type owl:ObjectProperty ;
+    rdfs:domain :Head ;
+    rdfs:range :Mouth ;
+    rdfs:label "head has mouth" ;
+    rdfs:comment "The property that connects a head with mouth." .

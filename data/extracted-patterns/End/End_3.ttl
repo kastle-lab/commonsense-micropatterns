@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix end: <http://www.example.org/end#> .
+end:    a owl:Ontology ;
+    rdfs:comment "Ontology focused on the concept of End"^^xsd:string ;
+    rdfs:label "End Ontology"^^xsd:string .
+end:End    a owl:Class ;
+    rdfs:comment "End of a process or state"^^xsd:string ;
+    rdfs:label "End"^^xsd:string .
+end:EndTime    a owl:Class ;
+    rdfs:comment "Time at which something ends"^^xsd:string ;
+    rdfs:label "End Time"^^xsd:string .
+end:EndLocation    a owl:Class ;
+    rdfs:comment "Location at which something ends"^^xsd:string ;
+    rdfs:label "End Location"^^xsd:string .
+end:hasEnd    a owl:ObjectProperty ;
+    rdfs:range end:End ;
+    rdfs:comment "Relation to the end of a process or state"^^xsd:string ;
+    rdfs:label "has end"^^xsd:string .
+end:hasEndTime    a owl:DatatypeProperty ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Relation to the end time of a process or state"^^xsd:string ;
+    rdfs:label "has end time"^^xsd:string .
+end:hasEndLocation    a owl:ObjectProperty ;
+    rdfs:range end:EndLocation ;
+    rdfs:comment "Relation to the location where a process or state ends"^^xsd:string ;
+    rdfs:label "has end location"^^xsd:string .

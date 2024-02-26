@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/ontology#> .
+:Force     rdf:type owl:Class ;
+    rdfs:comment "The class of all forces"@en ;
+    rdfs:label "Force"@en ;
+    rdfs:subClassOf :PhysicalQuantity .
+:MagnitudeOfForce    rdf:type owl:DatatypeProperty ;
+    rdfs:comment "The magnitude of a force"@en ;
+    rdfs:label "Magnitude of force"@en ;
+    rdfs:domain :Force ;
+    rdfs:range xsd:float .
+:DirectionOfForce    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The direction of a force"@en ;
+    rdfs:label "Direction of force"@en ;
+    rdfs:domain :Force ;
+    rdfs:range :Direction .
+:isForceOf    rdf:type owl:ObjectProperty ;
+    rdfs:comment "Links an object to the force it exerts"@en ;
+    rdfs:label "is force of"@en ;
+    rdfs:domain :Force ;
+    rdfs:range :PhysicalObject .
+:Direction     rdf:type owl:Class ;
+    rdfs:comment "The class of directions"@en ;
+    rdfs:label "Direction"@en .
+:PhysicalObject     rdf:type owl:Class ;
+    rdfs:comment "The class of physical objects"@en ;
+    rdfs:label "Physical object"@en .
+:PhysicalQuantity     rdf:type owl:Class ;
+    rdfs:comment "The class of physical quantities"@en ;
+    rdfs:label "Physical quantity"@en .

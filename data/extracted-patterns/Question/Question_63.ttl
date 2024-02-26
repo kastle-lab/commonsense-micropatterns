@@ -1,0 +1,17 @@
+ These should be filled in with specific data for each instance.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.org/> .
+ex:question rdf:type owl:Class .
+ex:questionID rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:question ;
+    rdfs:range xsd:string .
+ex:questionText rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:question ;
+    rdfs:range xsd:string .
+ex:askedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:question ;
+    rdfs:range ex:user .
+ex:user rdf:type owl:Class .

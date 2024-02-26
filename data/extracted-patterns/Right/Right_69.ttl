@@ -1,0 +1,13 @@
+ Keep in mind, this is a simplified interpretation where "Right" is understood as a legal or moral entitlement. It can also refer to a direction opposite to left. This is often much more complex in a complete ontology.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+#Defining Right as a class
+ex:Right rdf:type rdfs:Class ;
+             rdfs:comment "Representation of Rights or entitlements" .
+#Defining instances of Rightex:FreedomOfSpeech rdf:type ex:Right ;
+         rdfs:comment "An example of a legal or moral right" .
+#To represent 'Right' as a directionex:Direction rdf:type rdfs:Class ;
+                      rdfs:comment "Direction representation" .
+ex:Right rdf:type ex:Direction ;
+         rdfs:comment "An instance depicting 'Right' direction" .

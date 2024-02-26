@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Door a owl:Class ;
+      rdfs:label "Door"@en ;
+      rdfs:subClassOf :BuildingComponent ;
+      rdfs:comment "A door is a building component that pivots or slides to allow access or secure a space."@en .
+:hasMaterial a owl:ObjectProperty ;
+             rdfs:label "has material"@en ;
+             rdfs:comment "The door is made out of this material."@en ;
+             rdfs:domain :Door ;
+             rdfs:range :Material .
+:hasColor a owl:DatatypeProperty ;
+          rdfs:label "has color"@en ;
+          rdfs:comment "The door has this color."@en ;
+          rdfs:domain :Door ;
+          rdfs:range xsd:string .
+:isOpen a owl:DatatypeProperty ;
+        rdfs:label "is open"@en ;
+        rdfs:comment "The door is currently open or closed."@en ;
+        rdfs:domain :Door ;
+        rdfs:range xsd:boolean .

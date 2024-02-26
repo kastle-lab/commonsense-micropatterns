@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.com/studentOntology#> .
+:Student a rdfs:Class ;
+    rdfs:label "Student" .
+:firstName a rdf:Property ;
+    rdfs:label "has first name" ;
+    rdfs:domain :Student ;
+    rdfs:range xsd:string .
+:lastName a rdf:Property ;
+    rdfs:label "has last name" ;
+    rdfs:domain :Student ;
+    rdfs:range xsd:string .
+:hasMatriculationID a rdf:Property ;
+    rdfs:label "has matriculation ID" ;
+    rdfs:domain :Student ;
+    rdfs:range xsd:string .
+:attendsCourse a rdf:Property ;
+    rdfs:label "attends course" ;
+    rdfs:domain :Student ;
+    rdfs:range :Course .
+:Course a rdfs:Class ;
+    rdfs:label "Course" .
+:courseTitle a rdf:Property ;
+    rdfs:label "has course title" ;
+    rdfs:domain :Course ;
+    rdfs:range xsd:string .
+:courseNumber a rdf:Property ;
+    rdfs:label "has course number" ;
+    rdfs:domain :Course ;
+    rdfs:range xsd:string .

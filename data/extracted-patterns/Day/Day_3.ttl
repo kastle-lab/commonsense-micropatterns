@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://example.com/day#> .
+day:Day rdf:type rdfs:Class .
+day:hasName rdf:type rdf:Property ;
+  rdfs:domain day:Day ;
+  rdfs:range xsd:string .
+day:hasTimeOfDay rdf:type rdf:Property ;
+  rdfs:domain day:Day ;
+  rdfs:range xsd:string .
+day:MORNING rdf:type day:Day ;
+  day:hasName "Morning" ;
+  day:hasTimeOfDay "6 AM to 12 PM"^^xsd:string .
+day:AFTERNOON rdf:type day:Day ;
+  day:hasName "Afternoon" ;
+  day:hasTimeOfDay "12 PM to 4 PM"^^xsd:string .
+day:EVENING rdf:type day:Day ;
+  day:hasName "Evening" ;
+  day:hasTimeOfDay "4 PM to 8 PM"^^xsd:string .
+day:NIGHT rdf:type day:Day ;
+  day:hasName "Night" ;
+  day:hasTimeOfDay "8 PM to 6 AM"^^xsd:string .

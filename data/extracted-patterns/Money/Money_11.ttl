@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix money: <http://example.org/money#> .
+money:    rdf:type owl:Ontology ;
+    rdfs:comment "An ontology to represent concept of Money" .
+money:Currency    rdf:type owl:Class ;
+    rdfs:label "Currency" ;
+    rdfs:comment "A system of money in general use in a particular country." .
+money:Banknote    rdf:type owl:Class ;
+    rdfs:subClassOf money:Currency ;
+    rdfs:label "Banknote" ;
+    rdfs:comment "A type of negotiable instrument known as a promissory note, made by a bank, payable to the bearer on demand." .
+money:Coin    rdf:type owl:Class ;
+    rdfs:subClassOf money:Currency ;
+    rdfs:label "Coin" ;
+    rdfs:comment "A type of currency that is a small, flat, round piece of metal or plastic used primarily as a medium of exchange or legal tender." .
+money:hasValue    rdf:type owl:DatatypeProperty ;
+    rdfs:label "has value" ;
+    rdfs:domain money:Currency ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The nominal monetary value associated with a currency." .
+money:isLegalTenderIn    rdf:type owl:ObjectProperty ;
+    rdfs:label "is legal tender in" ;
+    rdfs:domain money:Currency ;
+    rdfs:range rdfs:Class ;
+    rdfs:comment "Indicates the countries where this currency is a legal tender." .

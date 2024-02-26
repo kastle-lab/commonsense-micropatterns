@@ -1,0 +1,27 @@
+@prefix night: <http://www.example.org/night#> .
+@prefix time: <http://www.example.org/time#> .
+@prefix place: <http://www.example.org/place#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+night:Night a rdfs:Class ;
+    rdfs:label "Night"@en ;
+    rdfs:comment "The period of time from sunset to sunrise"@en ;
+    rdfs:subClassOf time:TimePeriod .
+night:hasStartTime a rdf:Property ;
+    rdfs:label "has start time"@en ;
+    rdfs:domain night:Night ;
+    rdfs:range time:Time .
+night:hasEndTime a rdf:Property ;
+    rdfs:label "has end time"@en ;
+    rdfs:domain night:Night ;
+    rdfs:range time:Time .
+night:isNightOf a rdf:Property ;
+    rdfs:label "is night of"@en ;
+    rdfs:domain night:Night ;
+    rdfs:range place:Place .
+time:Time a rdfs:Class ;
+    rdfs:label "Time"@en ;
+    rdfs:comment "A point of time"@en .
+place:Place a rdfs:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:comment "A point or area in space"@en .

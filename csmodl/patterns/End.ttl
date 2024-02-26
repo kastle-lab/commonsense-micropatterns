@@ -1,0 +1,128 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:n8f0f6114b0b64edf98466815db9c750ab1 a rdfs:Class .
+
+<http://example.com#End> a rdfs:Class .
+
+<http://example.com#Process> a rdfs:Class .
+
+<http://example.com/End> a rdfs:Class .
+
+<http://example.com/Event> a rdfs:Class .
+
+<http://example.com/end#End> a rdfs:Class .
+
+<http://example.org/#End> a rdfs:Class .
+
+<http://example.org/#Entity> a rdfs:Class .
+
+<http://example.org/End> a rdfs:Class .
+
+<http://example.org/Event> a rdfs:Class .
+
+<http://example.org/end#End> a rdfs:Class .
+
+<http://example.org/end#EndLocation> a rdfs:Class .
+
+<http://example.org/end#EndTime> a rdfs:Class .
+
+<http://example.org/end#Event> a rdfs:Class .
+
+<http://example.org/end/> a rdfs:Class .
+
+<http://www.example.org/end#End> a rdfs:Class .
+
+<http://www.example.org/end#EndEvent> a rdfs:Class .
+
+<http://www.example.org/end#EndLocation> a rdfs:Class .
+
+<http://www.example.org/end/End> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+<http://example.com#hasEnd> rdfs:range <http://example.com#End>,
+        <http://example.com#Process> .
+
+<http://example.com/end#cause> rdfs:range <http://example.com/end#End>,
+        rdfs:Resource .
+
+<http://example.com/end#consequence> rdfs:range <http://example.com/end#End>,
+        rdfs:Resource .
+
+<http://example.com/end#of> rdfs:range <http://example.com/end#End>,
+        rdfs:Resource .
+
+<http://example.com/hasEnd> rdfs:range <http://example.com/End>,
+        <http://example.com/Event> .
+
+<http://example.org/#hasEnd> rdfs:range <http://example.org/#End>,
+        <http://example.org/#Entity> .
+
+<http://example.org/end#EndDate> rdfs:range <http://example.org/end#End> .
+
+<http://example.org/end#Endtime> rdfs:range <http://example.org/end#End> .
+
+<http://example.org/end#event> rdfs:range <http://example.org/end#End>,
+        rdfs:Resource .
+
+<http://example.org/end#hasActor> rdfs:range <http://example.org/end#End>,
+        rdfs:Resource .
+
+<http://example.org/end#hasDate> rdfs:range <http://example.org/end#End> .
+
+<http://example.org/end#hasEnd> rdfs:range <http://example.org/end#End>,
+        rdfs:Resource .
+
+<http://example.org/end#hasEndLocation> rdfs:range <http://example.org/end#End>,
+        <http://example.org/end#EndLocation> .
+
+<http://example.org/end#hasEndTime> rdfs:range <http://example.org/end#End>,
+        <http://example.org/end#EndTime> .
+
+<http://example.org/end#hasTime> rdfs:range <http://example.org/end#End> .
+
+<http://example.org/end#isEndOf> rdfs:range _:n8f0f6114b0b64edf98466815db9c750ab1,
+        <http://example.org/end#End>,
+        rdfs:Resource .
+
+<http://example.org/end#locationEnd> rdfs:range <http://example.org/end#End>,
+        rdfs:Resource .
+
+<http://example.org/end#ofEvent> rdfs:range <http://example.org/end#End>,
+        <http://example.org/end#Event> .
+
+<http://example.org/end#timePoint> rdfs:range <http://example.org/end#End> .
+
+<http://example.org/end/associatedWith> rdfs:range <http://example.org/end/>,
+        rdfs:Resource .
+
+<http://example.org/end/hasTime> rdfs:range <http://example.org/end/> .
+
+<http://example.org/endDate> rdfs:range <http://example.org/End> .
+
+<http://example.org/hasEnd> rdfs:range <http://example.org/End>,
+        rdfs:Resource .
+
+<http://example.org/hasEndDate> rdfs:range <http://example.org/Event> .
+
+<http://example.org/startDate> rdfs:range <http://example.org/End> .
+
+<http://www.example.org/end#causes> rdfs:range <http://www.example.org/end#End>,
+        <http://www.example.org/end#EndEvent> .
+
+<http://www.example.org/end#hasEnd> rdfs:range <http://www.example.org/end#End> .
+
+<http://www.example.org/end#hasEndLocation> rdfs:range <http://www.example.org/end#EndLocation> .
+
+<http://www.example.org/end#isResultOf> rdfs:range <http://www.example.org/end#End>,
+        <http://www.example.org/end#EndEvent> .
+
+<http://www.example.org/end/hasEnd> rdfs:range <http://www.example.org/end/End>,
+        owl:Thing .
+
+<http://www.example.org/end/isEndOf> rdfs:range <http://www.example.org/end/End>,
+        owl:Thing .
+

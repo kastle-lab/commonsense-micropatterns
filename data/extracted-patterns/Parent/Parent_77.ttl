@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Parent a rdfs:Class ;
+  rdfs:label "Parent" ;
+  rdfs:comment "Individual who is a biological or adoptive mother or father" .
+ex:provides a rdf:Property ;
+  rdfs:label "provides" ;
+  rdfs:comment "Provides or supplies something to someone" .
+ex:Product a rdfs:Class ;
+  rdfs:label "Product" ;
+  rdfs:comment "Something that is made or grown to be sold or used" .
+ex:Parent rdfs:subClassOf [  a rdf:Restriction ;
+  rdf:onProperty ex:provides ;
+  rdf:allValuesFrom ex:Product] .

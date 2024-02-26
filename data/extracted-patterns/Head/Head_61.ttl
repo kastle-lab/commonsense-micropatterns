@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+# Class declarationex:Head a rdfs:Class ;
+  rdfs:comment "A class representing a head" ;
+  rdfs:label "Head" .
+# Property declarations associated with the "Head" class
+ex:hasEye a rdf:Property ;
+  rdfs:comment "Represents the eyes contained in a head" ;
+  rdfs:label "has eye" ;
+  rdfs:domain ex:Head ;
+  rdfs:range ex:Eye .
+ex:hasEar a rdf:Property ;
+  rdfs:comment "Represents the ears contained in a head" ;
+  rdfs:label "has ear" ;
+  rdfs:domain ex:Head ;
+  rdfs:range ex:Ear .
+ex:hasMouth a rdf:Property ;
+  rdfs:comment "Represents the mouth contained in a head" ;
+  rdfs:label "has mouth" ;
+  rdfs:domain ex:Head ;
+  rdfs:range ex:Mouth .
+ex:hasHair a rdf:Property ;
+  rdfs:comment "Represents hair contained in a head" ;
+  rdfs:label "has hair" ;
+  rdfs:domain ex:Head ;
+  rdfs:range ex:Hair .
+# Declaration of related classesex:Eye a rdfs:Class ;
+  rdfs:label "Eye" .
+ex:Ear a rdfs:Class ;
+  rdfs:label "Ear" .
+ex:Mouth a rdfs:Class ;
+  rdfs:label "Mouth" .
+ex:Hair a rdfs:Class ;
+  rdfs:label "Hair" .

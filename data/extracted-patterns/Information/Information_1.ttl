@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix info: <http://example.com/ontology/information/> .
+info:Information a rdfs:Class ;
+  rdfs:label "Information" ;
+  rdfs:comment "The entity for representing information or data" .
+info:hasTitle a rdf:Property ;
+  rdfs:label "has title" ;
+  rdfs:comment "The title of the information" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:string .
+info:hasSource a rdf:Property ;
+  rdfs:label "has source" ;
+  rdfs:comment "The source from where the information is derived" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:string .
+info:hasAuthor a rdf:Property ;
+  rdfs:label "has author" ;
+  rdfs:comment "The author who generated the information" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:string .
+info:hasPublicationDate a rdf:Property ;
+  rdfs:label "has publication date" ;
+  rdfs:comment "The date when the information was published" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:date .
+info:hasContent a rdf:Property ;
+  rdfs:label "has content" ;
+  rdfs:comment "The actual content of the information" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:string .
+info:isConfidential a rdf:Property ;
+  rdfs:label "is confidential" ;
+  rdfs:comment "Indicates if the information is confidential" ;
+  rdfs:domain info:Information ;
+  rdfs:range xsd:boolean .

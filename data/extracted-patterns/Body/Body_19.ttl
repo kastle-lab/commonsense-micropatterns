@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix body: <http://www.example.com/body#>.body:Body a owl:Class ;
+  rdfs:comment "Class denoting the human body" ;
+  rdfs:label "Body" .
+body:hasPart a owl:ObjectProperty ;
+  rdfs:domain body:Body ;
+  rdfs:range body:BodyPart ;
+  rdfs:comment "Relation indicating that the body has certain parts" ;
+  rdfs:label "has part" .
+body:BodyPart a owl:Class ;
+  rdfs:comment "Class denoting the parts of the human body" ;
+  rdfs:label "Body part" .
+body:Head a body:BodyPart ;
+  rdfs:comment "Head is a part of the body" ;
+  rdfs:label "Head" .
+body:Arm a body:BodyPart ;
+  rdfs:comment "Arm is a part of the body" ;
+  rdfs:label "Arm" .
+body:Leg a body:BodyPart ;
+  rdfs:comment "Leg is a part of the body" ;
+  rdfs:label "Leg" .
+body:Torso a body:BodyPart ;
+  rdfs:comment "Torso is a part of the body" ;
+  rdfs:label "Torso" .
+body:organ a owl:Class ;
+  rdfs:subClassOf body:BodyPart ;
+  rdfs:comment "Class representing organs in the body" ;
+  rdfs:label "Organ" .
+body:hasOrgan a owl:ObjectProperty ;
+  rdfs:domain body:Body ;
+  rdfs:range body:organ ;
+  rdfs:comment "Relation denoting that the body has certain organs" ;
+  rdfs:label "has organ" .
+body:Heart a body:organ ;
+  rdfs:comment "Heart is an organ of the body" ;
+  rdfs:label "Heart" .
+body:Lung a body:organ ;
+  rdfs:comment "Lung is an organ of the body" ;
+  rdfs:label "Lung" .
+body:Liver a body:organ ;
+  rdfs:comment "Liver is an organ of the body" ;
+  rdfs:label "Liver" .
+body:Stomach a body:organ ;
+  rdfs:comment "Stomach is an organ of the body" ;
+  rdfs:label "Stomach" .

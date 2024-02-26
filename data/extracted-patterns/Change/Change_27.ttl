@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix change: <http://example.org/change#> .
+change:Change a rdfs:Class ;
+    rdfs:comment "Class representing the concept of change or transformation" .
+change:hasOrigin a rdf:Property ;
+    rdfs:comment "Property representing the original state before the change" ;
+    rdfs:domain change:Change ;
+    rdfs:range rdfs:Resource .
+change:hasTarget a rdf:Property ;
+    rdfs:comment "Property representing the target state after the change" ;
+    rdfs:domain change:Change ;
+    rdfs:range rdfs:Resource .
+change:hasAgent a rdf:Property ;
+    rdfs:comment "Property representing the agent causing the change" ;
+    rdfs:domain change:Change ;
+    rdfs:range rdfs:Resource .
+# example instanceschange:Change1 a change:Change ;
+    change:hasOrigin "State1"^^xsd:string ;
+    change:hasTarget "State2"^^xsd:string ;
+    change:hasAgent "Agent1"^^xsd:string .

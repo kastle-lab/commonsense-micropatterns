@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/ontology/thing#AbstractThing> a rdfs:Class .
+
+<http://example.org/ontology/thing#PhysicalThing> a rdfs:Class .
+
+<http://example.org/stuff/1.0/ConceptualObject> a rdfs:Class .
+
+<http://example.org/stuff/1.0/PhysicalObject> a rdfs:Class .
+
+<http://www.example.com/ontology#Thing> a rdfs:Class .
+
+<http://www.example.com/thing#Event> a rdfs:Class .
+
+<http://www.example.com/thing#Property> a rdfs:Class .
+
+<http://www.example.com/thing#Thing> a rdfs:Class .
+
+<http://www.example.org/ontology#Property> a rdfs:Class .
+
+<http://www.example.org/ontology#Thing> a rdfs:Class .
+
+<http://www.example.org/thing#Thing> a rdfs:Class .
+
+rdf:double a rdfs:Class .
+
+rdf:langString a rdfs:Class .
+
+<http://example.org/ontology/thing#hasColor> rdfs:range <http://example.org/ontology/thing#PhysicalThing> .
+
+<http://example.org/ontology/thing#hasDescription> rdfs:range <http://example.org/ontology/thing#AbstractThing> .
+
+<http://example.org/ontology/thing#hasName> rdfs:range <http://example.org/ontology/thing#AbstractThing> .
+
+<http://example.org/ontology/thing#hasSize> rdfs:range <http://example.org/ontology/thing#PhysicalThing> .
+
+<http://example.org/stuff/1.0/hasAbstract> rdfs:range <http://example.org/stuff/1.0/ConceptualObject> .
+
+<http://example.org/stuff/1.0/hasColor> rdfs:range <http://example.org/stuff/1.0/PhysicalObject> .
+
+<http://example.org/stuff/1.0/hasSize> rdfs:range <http://example.org/stuff/1.0/PhysicalObject> .
+
+<http://example.org/stuff/1.0/hasSymbol> rdfs:range <http://example.org/stuff/1.0/ConceptualObject> .
+
+<http://www.example.com/ontology#hasColor> rdfs:range <http://www.example.com/ontology#Thing>,
+        rdf:langString .
+
+<http://www.example.com/ontology#hasShape> rdfs:range <http://www.example.com/ontology#Thing>,
+        rdf:langString .
+
+<http://www.example.com/ontology#hasSize> rdfs:range <http://www.example.com/ontology#Thing>,
+        rdf:double .
+
+<http://www.example.com/ontology#hasTexture> rdfs:range <http://www.example.com/ontology#Thing>,
+        rdf:langString .
+
+<http://www.example.com/ontology#isComposedOf> rdfs:range <http://www.example.com/ontology#Thing> .
+
+<http://www.example.com/ontology#isPartOf> rdfs:range <http://www.example.com/ontology#Thing> .
+
+<http://www.example.com/thing#existsIn> rdfs:range <http://www.example.com/thing#Thing> .
+
+<http://www.example.com/thing#hasProperty> rdfs:range <http://www.example.com/thing#Property>,
+        <http://www.example.com/thing#Thing> .
+
+<http://www.example.com/thing#involves> rdfs:range <http://www.example.com/thing#Event>,
+        <http://www.example.com/thing#Thing> .
+
+<http://www.example.com/thing#isMadeOf> rdfs:range <http://www.example.com/thing#Thing> .
+
+<http://www.example.com/thing#isUsedFor> rdfs:range <http://www.example.com/thing#Thing> .
+
+<http://www.example.org/ontology#hasProperty> rdfs:range <http://www.example.org/ontology#Property>,
+        <http://www.example.org/ontology#Thing> .
+
+<http://www.example.org/thing#hasColor> rdfs:range <http://www.example.org/thing#Thing> .
+
+<http://www.example.org/thing#hasPart> rdfs:range <http://www.example.org/thing#Thing> .
+
+<http://www.example.org/thing#hasShape> rdfs:range <http://www.example.org/thing#Thing> .
+
+<http://www.example.org/thing#hasSize> rdfs:range <http://www.example.org/thing#Thing> .
+

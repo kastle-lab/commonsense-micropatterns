@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:Fact a rdfs:Class ;
+    rdfs:comment "A representation of a fact" .
+ex:fact1 a ex:Fact ;
+    ex:hasSubject ex:subject1 ;
+    ex:hasPredicate ex:predicate1 ;
+    ex:hasObject ex:object1 .
+ex:hasSubject a rdf:Property ;
+    rdfs:range rdfs:Resource ;
+    rdfs:domain ex:Fact ;
+    rdfs:comment "The subject of the fact" .
+ex:hasPredicate a rdf:Property ;
+    rdfs:range rdfs:Resource ;
+    rdfs:domain ex:Fact ;
+    rdfs:comment "The predicate of the fact" .
+ex:hasObject a rdf:Property ;
+    rdfs:range rdfs:Resource ;
+    rdfs:domain ex:Fact ;
+    rdfs:comment "The object of the fact" .

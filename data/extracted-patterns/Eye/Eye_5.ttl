@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eye: <http://www.example.org/eye#> .
+eye:   rdf:type rdfs:Class ;
+  rdfs:label "Eye"@en .
+ eye:color   rdf:type rdf:Property ;
+  rdfs:label "has color"@en ;
+  rdfs:domain eye: ;
+  rdfs:range xsd:string .
+eye:disease  rdf:type rdf:Property ;
+  rdfs:label "has disease"@en ;
+  rdfs:domain eye: ;
+  rdfs:range xsd:string .
+eye:lens  rdf:type rdfs:Class ;
+  rdfs:label "Lens"@en ;
+  rdfs:subClassOf eye: .
+eye:retina  rdf:type rdfs:Class ;
+  rdfs:label "Retina"@en ;
+  rdfs:subClassOf eye: .
+eye:cornea  rdf:type rdfs:Class ;
+  rdfs:label "Cornea"@en ;
+  rdfs:subClassOf eye: .
+eye:macula  rdf:type rdfs:Class ;
+  rdfs:label "Macula"@en ;
+  rdfs:subClassOf eye: .
+eye:vision  rdf:type rdf:Property ;
+  rdfs:label "has vision"@en ;
+  rdfs:domain eye: ;
+  rdfs:range xsd:boolean .

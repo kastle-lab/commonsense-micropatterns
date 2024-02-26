@@ -1,0 +1,4 @@
+@prefix : <http://example.org/> .
+:moment a rdfs:Class ;
+  rdfs:comment "A point in time" ;
+  rdfs:label "Moment" .

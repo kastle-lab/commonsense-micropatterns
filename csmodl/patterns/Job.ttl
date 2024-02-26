@@ -1,0 +1,297 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Job> a rdfs:Class .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/job#Job> a rdfs:Class .
+
+<http://example.org/#Company> a rdfs:Class .
+
+<http://example.org/#Job> a rdfs:Class .
+
+<http://example.org/#Person> a rdfs:Class .
+
+<http://example.org/#Position> a rdfs:Class .
+
+<http://example.org/#Salary> a rdfs:Class .
+
+<http://example.org/Job> a rdfs:Class .
+
+<http://example.org/Organization> a rdfs:Class .
+
+<http://example.org/job#Employer> a rdfs:Class .
+
+<http://example.org/job#Field> a rdfs:Class .
+
+<http://example.org/job#Industry> a rdfs:Class .
+
+<http://example.org/job#Job> a rdfs:Class .
+
+<http://example.org/job#Location> a rdfs:Class .
+
+<http://example.org/job#Skill> a rdfs:Class .
+
+<http://example.org/job/Company> a rdfs:Class .
+
+<http://example.org/job/Employer> a rdfs:Class .
+
+<http://example.org/job/Job> a rdfs:Class .
+
+<http://example.org/job/JobPosting> a rdfs:Class .
+
+<http://example.org/jobOntology#Employer> a rdfs:Class .
+
+<http://example.org/jobOntology#Job> a rdfs:Class .
+
+<http://example.org/organization/Organization> a rdfs:Class .
+
+<http://example.org/person/Person> a rdfs:Class .
+
+<http://www.example.com/ontology/job#Industry> a rdfs:Class .
+
+<http://www.example.com/ontology/job#Job> a rdfs:Class .
+
+<http://www.example.com/ontology/job#Skill> a rdfs:Class .
+
+<http://www.example.org/job#Job> a rdfs:Class .
+
+<http://www.example.org/job#job> a rdfs:Class .
+
+<http://www.example.org/job#location> a rdfs:Class .
+
+<http://www.example.org/job#organization> a rdfs:Class .
+
+<http://www.example.org/job#title> a rdfs:Class .
+
+<http://www.example.org/job/Job> a rdfs:Class .
+
+<http://www.example.org/ontology/job#Employer> a rdfs:Class .
+
+<http://www.example.org/ontology/job#Job> a rdfs:Class .
+
+<http://www.example.org/ontology/job#WorkArea> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com/employee> rdfs:range <http://example.com/Job>,
+        <http://example.com/Person> .
+
+<http://example.com/hasJob> rdfs:range <http://example.com/Job>,
+        <http://example.com/Person> .
+
+<http://example.com/job#description> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#employer> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#endDate> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#hasDescription> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#hasEmployer> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#hasLocation> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#hasResponsibilities> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#hasSalary> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#hasTitle> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#location> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#requiresSkills> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#salary> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#startDate> rdfs:range <http://example.com/job#Job> .
+
+<http://example.com/job#title> rdfs:range <http://example.com/job#Job> .
+
+<http://example.org/#hasJob> rdfs:range <http://example.org/#Job>,
+        <http://example.org/#Person> .
+
+<http://example.org/#hasPosition> rdfs:range <http://example.org/#Job>,
+        <http://example.org/#Position> .
+
+<http://example.org/#hasSalary> rdfs:range <http://example.org/#Job>,
+        <http://example.org/#Salary> .
+
+<http://example.org/#jobTitle> rdfs:range <http://example.org/#Job> .
+
+<http://example.org/#worksFor> rdfs:range <http://example.org/#Company>,
+        <http://example.org/#Person> .
+
+<http://example.org/hasEmployer> rdfs:range <http://example.org/Job>,
+        <http://example.org/Organization> .
+
+<http://example.org/hasEndDate> rdfs:range <http://example.org/Job> .
+
+<http://example.org/hasJobTitle> rdfs:range <http://example.org/Job> .
+
+<http://example.org/hasStartDate> rdfs:range <http://example.org/Job> .
+
+<http://example.org/isFullTime> rdfs:range <http://example.org/Job> .
+
+<http://example.org/job#belongsToIndustry> rdfs:range <http://example.org/job#Industry>,
+        <http://example.org/job#Job> .
+
+<http://example.org/job#description> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#employer> rdfs:range <http://example.org/job#Employer>,
+        <http://example.org/job#Job> .
+
+<http://example.org/job#employerName> rdfs:range <http://example.org/job#Employer> .
+
+<http://example.org/job#employmentType> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#endDate> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#hasDescription> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#hasEmployer> rdfs:range <http://example.org/job#Employer>,
+        <http://example.org/job#Job>,
+        rdfs:Resource .
+
+<http://example.org/job#hasLocation> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#hasSalary> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#hasTitle> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#inField> rdfs:range <http://example.org/job#Field>,
+        <http://example.org/job#Job> .
+
+<http://example.org/job#industry> rdfs:range <http://example.org/job#Employer> .
+
+<http://example.org/job#isFullTime> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#jobLocation> rdfs:range <http://example.org/job#Job>,
+        <http://example.org/job#Location> .
+
+<http://example.org/job#location> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#locationName> rdfs:range <http://example.org/job#Location> .
+
+<http://example.org/job#name> rdfs:range <http://example.org/job#Employer> .
+
+<http://example.org/job#positionTitle> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#requiresExperience> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#requiresSkill> rdfs:range <http://example.org/job#Job>,
+        <http://example.org/job#Skill> .
+
+<http://example.org/job#requiresSkills> rdfs:range <http://example.org/job#Job>,
+        <http://example.org/job#Skill> .
+
+<http://example.org/job#salary> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#startDate> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job#title> rdfs:range <http://example.org/job#Job> .
+
+<http://example.org/job/employer> rdfs:range <http://example.org/job/Job>,
+        <http://example.org/organization/Organization> .
+
+<http://example.org/job/hasCompany> rdfs:range <http://example.org/job/Company>,
+        <http://example.org/job/Job> .
+
+<http://example.org/job/hasEmployer> rdfs:range <http://example.org/job/Employer>,
+        <http://example.org/job/Job> .
+
+<http://example.org/job/hasSalary> rdfs:range <http://example.org/job/Job> .
+
+<http://example.org/job/hasTitle> rdfs:range <http://example.org/job/Job> .
+
+<http://example.org/job/isFullTime> rdfs:range <http://example.org/job/Job> .
+
+<http://example.org/job/location> rdfs:range <http://example.org/job/Job> .
+
+<http://example.org/job/postedJob> rdfs:range <http://example.org/job/Job>,
+        <http://example.org/job/JobPosting> .
+
+<http://example.org/job/requiresSkill> rdfs:range <http://example.org/job/Job> .
+
+<http://example.org/job/salary> rdfs:range <http://example.org/job/Job> .
+
+<http://example.org/job/title> rdfs:range <http://example.org/job/Job> .
+
+<http://example.org/jobOntology#employer> rdfs:range <http://example.org/jobOntology#Employer>,
+        <http://example.org/jobOntology#Job> .
+
+<http://example.org/jobOntology#jobDescription> rdfs:range <http://example.org/jobOntology#Job> .
+
+<http://example.org/jobOntology#jobID> rdfs:range <http://example.org/jobOntology#Job> .
+
+<http://example.org/jobOntology#jobLocation> rdfs:range <http://example.org/jobOntology#Job> .
+
+<http://example.org/jobOntology#jobSalary> rdfs:range <http://example.org/jobOntology#Job> .
+
+<http://example.org/jobOntology#jobTitle> rdfs:range <http://example.org/jobOntology#Job> .
+
+<http://example.org/organization/name> rdfs:range <http://example.org/organization/Organization> .
+
+<http://example.org/person/name> rdfs:range <http://example.org/person/Person> .
+
+<http://example.org/person/worksAs> rdfs:range <http://example.org/job/Job>,
+        <http://example.org/person/Person> .
+
+<http://www.example.com/ontology/job#hasDescription> rdfs:range <http://www.example.com/ontology/job#Job> .
+
+<http://www.example.com/ontology/job#hasSalary> rdfs:range <http://www.example.com/ontology/job#Job> .
+
+<http://www.example.com/ontology/job#hasTitle> rdfs:range <http://www.example.com/ontology/job#Job> .
+
+<http://www.example.com/ontology/job#isPartOfIndustry> rdfs:range <http://www.example.com/ontology/job#Industry>,
+        <http://www.example.com/ontology/job#Job> .
+
+<http://www.example.com/ontology/job#requiresSkill> rdfs:range <http://www.example.com/ontology/job#Job>,
+        <http://www.example.com/ontology/job#Skill> .
+
+<http://www.example.org/job#hasDescription> rdfs:range <http://www.example.org/job#Job> .
+
+<http://www.example.org/job#hasLocation> rdfs:range <http://www.example.org/job#Job>,
+        <http://www.example.org/job#job>,
+        <http://www.example.org/job#location> .
+
+<http://www.example.org/job#hasOrganization> rdfs:range <http://www.example.org/job#job>,
+        <http://www.example.org/job#organization> .
+
+<http://www.example.org/job#hasSalary> rdfs:range <http://www.example.org/job#Job>,
+        <http://www.example.org/job#job> .
+
+<http://www.example.org/job#hasTitle> rdfs:range <http://www.example.org/job#Job>,
+        <http://www.example.org/job#job>,
+        <http://www.example.org/job#title> .
+
+<http://www.example.org/job#requiresSkill> rdfs:range <http://www.example.org/job#Job> .
+
+<http://www.example.org/job/description> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/job/endTime> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/job/location> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/job/requiresEducation> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/job/requiresExperience> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/job/salary> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/job/startTime> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/job/title> rdfs:range <http://www.example.org/job/Job> .
+
+<http://www.example.org/ontology/job#areaOfWork> rdfs:range <http://www.example.org/ontology/job#Job>,
+        <http://www.example.org/ontology/job#WorkArea> .
+
+<http://www.example.org/ontology/job#employer> rdfs:range <http://www.example.org/ontology/job#Employer>,
+        <http://www.example.org/ontology/job#Job> .
+
+<http://www.example.org/ontology/job#jobDescription> rdfs:range <http://www.example.org/ontology/job#Job> .
+
+<http://www.example.org/ontology/job#jobId> rdfs:range <http://www.example.org/ontology/job#Job> .
+
+<http://www.example.org/ontology/job#jobTitle> rdfs:range <http://www.example.org/ontology/job#Job> .
+

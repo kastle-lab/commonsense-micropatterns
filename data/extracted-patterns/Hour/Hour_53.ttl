@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Hour    rdf:type owl:Class ;
+    rdfs:label "Hour" ;
+    rdfs:comment "A unit of time equivalent to 60 minutes." .
+:hasHour    rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Time ;
+    rdfs:range xsd:int ;
+    rdfs:label "has hour" ;
+    rdfs:comment "Property that indicates the hour of a certain time object." .

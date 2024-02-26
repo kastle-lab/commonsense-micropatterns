@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org#> .
+# Defining Thing as a class
+ex:Thing a rdfs:Class ;
+    rdfs:label "Thing"@en ;
+    rdfs:comment "A general concept of any object, entity, fact, or concept."@en .
+# Defining properties for the Thing class:ex:hasName a rdf:Property ;
+    rdfs:label "has name"@en ;
+    rdfs:domain ex:Thing ;
+    rdfs:range rdfs:Literal .
+    ex:hasDescription a rdf:Property ;
+    rdfs:label "has description"@en ;
+    rdfs:domain ex:Thing ;
+    rdfs:range rdfs:Literal .
+ex:isRelatedTo a rdf:Property ;
+    rdfs:label "is related to"@en ;
+    rdfs:domain ex:Thing ;
+    rdfs:range ex:Thing .
+  # Example of an instance of Thing class:ex:thing1 a ex:Thing ;
+    ex:hasName "Sample Thing" ;
+    ex:hasDescription "This is a sample instance of the Thing class." ;
+    ex:isRelatedTo ex:thing2 .
+# Another Thing instance:ex:thing2 a ex:Thing ;
+    ex:hasName "Another Thing" ;
+    ex:hasDescription "This is another instance of the Thing class." .

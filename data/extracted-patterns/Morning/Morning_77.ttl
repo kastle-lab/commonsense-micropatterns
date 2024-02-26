@@ -1,0 +1,3 @@
+@prefix ex: <http://example.org/> .
+ex:Morning a ex:TimeOfDay ;
+         rdfs:label "Morning" .

@@ -1,0 +1,3 @@
+@base <http://example.org/>.@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.@prefix owl: <http://www.w3.org/2002/07/owl#>.:Head a owl:Class;
+   rdfs:label "Head"@en;
+   rdfs:comment "The part of the body where the brain, eyes, ears, nose and mouth are located."@en.

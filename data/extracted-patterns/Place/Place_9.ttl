@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix place: <http://www.example.org/place#> .
+place:Place    rdf:type owl:Class ;
+   rdfs:label "Place" ;
+   rdfs:comment "A location, area or space." .
+place:hasName   rdf:type owl:DatatypeProperty ;
+   rdfs:label "has name" ;
+   rdfs:domain place:Place ;
+   rdfs:range xsd:string .
+place:Country    rdf:type owl:Class ;
+   rdfs:label "Country" ;
+   rdfs:subClassOf place:Place ;
+   rdfs:comment "A political entity usually comprising numerous states or provinces" .
+ place:City   rdf:type owl:Class ;
+   rdfs:label "City" ;
+   rdfs:subClassOf place:Place ;
+   rdfs:comment "A large human settlement, can be part of a state or province." .
+place:isLocatedIn    rdf:type owl:ObjectProperty ;
+   rdfs:label "is located in" ;
+   rdfs:domain place:City ;
+   rdfs:range place:Country .
+place:Park   rdf:type owl:Class ;
+   rdfs:label "Park" ;
+   rdfs:subClassOf place:Place ;
+   rdfs:comment "A public area of land for enjoyment of nature." .
+place:isPartOf    rdf:type owl:ObjectProperty ;
+   rdfs:label "is part of" ;
+   rdfs:domain place:Park ;
+   rdfs:range place:City .

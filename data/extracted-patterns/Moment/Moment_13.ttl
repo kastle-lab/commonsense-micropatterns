@@ -1,0 +1,30 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix moment: <http://example.org/moment#> .
+# Classes
+moment:Moment a rdfs:Class ;
+    rdfs:comment "A point in time." ;
+    rdfs:label "Moment" .
+moment:Event a rdfs:Class ;
+    rdfs:comment "An occurrence at a specific moment." ;
+    rdfs:subClassOf moment:Moment .
+moment:TimeSpan a rdfs:Class ;
+    rdfs:comment "A duration between two moments." ;
+    rdfs:label "TimeSpan" .
+# Properties
+moment:hasEvent a rdf:Property ;
+    rdfs:comment "Relates a moment to the event that occurred at that moment." ;
+    rdfs:domain moment:Moment ;
+    rdfs:range moment:Event .
+moment:hasStart a rdf:Property ;
+    rdfs:comment "Relates a time span to the moment it starts." ;
+    rdfs:domain moment:TimeSpan ;
+    rdfs:range moment:Moment .
+moment:hasEnd a rdf:Property ;
+    rdfs:comment "Relates a time span to the moment it ends." ;
+    rdfs:domain moment:TimeSpan ;
+    rdfs:range moment:Moment .
+moment:hasDuration a rdf:Property ;
+    rdfs:comment "Relates a time span to its duration defined in seconds." ;
+    rdfs:domain moment:TimeSpan ;
+    rdfs:range xsd:positiveInteger .

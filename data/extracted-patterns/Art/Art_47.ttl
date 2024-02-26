@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix art: <http://example.org/art#> .
+art:Painting a rdfs:Class .
+art:hasAuthor a rdf:Property ;
+    rdfs:domain art:Painting ;
+    rdfs:range rdfs:Literal .
+art:hasYear a rdf:Property ;
+    rdfs:domain art:Painting ;
+    rdfs:range xsd:integer .
+art:MonaLisa a art:Painting ;
+    art:hasAuthor "Leonardo da Vinci" ;
+    art:hasYear 1503 .
+art:TheStarryNight a art:Painting ;
+    art:hasAuthor "Vincent van Gogh" ;
+    art:hasYear 1889 .

@@ -1,0 +1,31 @@
+@prefix : <http://www.example.com/result#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Classes
+:Result rdf:type owl:Class ;
+  rdfs:label "Result" ;
+  rdfs:comment "The outcome of an action, process, or experiment" .
+:PositiveResult rdf:type owl:Class ;
+  rdfs:label "PositiveResult" ;
+  rdfs:comment "A favorable or desired outcome" ;
+  rdfs:subClassOf :Result .
+:NegativeResult rdf:type owl:Class ;
+  rdfs:label "NegativeResult" ;
+  rdfs:comment "An unfavorable or undesired outcome" ;
+  rdfs:subClassOf :Result .
+:NeutralResult rdf:type owl:Class ;
+  rdfs:label "NeutralResult" ;
+  rdfs:comment "An outcome which is neither favorable nor unfavorable" ;
+  rdfs:subClassOf :Result .
+# Object Properties:hasSource rdf:type owl:ObjectProperty ;
+  rdfs:domain :Result ;
+  rdfs:range :Action ;
+  rdfs:label "has source" ;
+  rdfs:comment "Specifies the action, process, or experiment that led to the result" .
+# Datatype Properties:hasValue rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Result ;
+  rdfs:range xsd:string ;
+  rdfs:label "has value" ;
+  rdfs:comment "Specifies the value or description of the result" .

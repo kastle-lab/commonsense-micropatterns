@@ -1,0 +1,31 @@
+@prefix ex: <http://www.example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:War rdf:type rdfs:Class ;
+    rdfs:comment "Class representing wars" .
+ex:hasStartDate rdf:type rdf:Property ;
+    rdfs:domain ex:War ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The start date of a war" .
+ex:hasEndDate rdf:type rdf:Property ;
+    rdfs:domain ex:War ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The end date of a war" .
+ex:involvesCountry rdf:type rdf:Property ;
+    rdfs:domain ex:War ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "A country involved in a war" .
+ex:hasCasualties rdf:type rdf:Property ;
+    rdfs:domain ex:War ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The number of casualties of a war" .
+ex:hasBattle rdf:type rdf:Property ;
+    rdfs:domain ex:War ;
+    rdfs:range ex:Battle ;
+    rdfs:comment "The battle involved in a war" .
+ex:Battle rdf:type rdfs:Class ;
+    rdfs:comment "Class representing battles" .
+ex:hasLocation rdf:type rdf:Property ;
+    rdfs:domain ex:Battle ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "The location of a battle" .

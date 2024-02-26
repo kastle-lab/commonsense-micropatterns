@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ques: <http://example.org/question#> .
+ques:Question rdfs:subClassOf rdfs:Resource ;
+  rdfs:comment "Represents a question"^^xsd:string ;
+  rdfs:label "Question" .
+ques:QuestionType rdfs:subClassOf rdfs:Resource ;
+  rdfs:comment "Represents the type of a question"^^xsd:string ;
+  rdfs:label "Question Type" .
+ques:askedBy rdfs:subPropertyOf rdf:Property ;
+  rdfs:comment "Represents who asked the question"^^xsd:string ;
+  rdfs:label "Asked By" ;
+  rdfs:domain ques:Question ;
+  rdfs:range rdfs:Resource .
+ques:hasType rdfs:subPropertyOf rdf:Property ;
+  rdfs:comment "Represents the type of question"^^xsd:string ;
+  rdfs:label "Has type" ;
+  rdfs:domain ques:Question ;
+  rdfs:range ques:QuestionType .
+ques:hasAnswer rdfs:subPropertyOf rdf:Property ;
+  rdfs:comment "Represents the answer of a question"^^xsd:string ;
+  rdfs:label "Has answer" ;
+  rdfs:domain ques:Question ;
+  rdfs:range rdfs:Resource .
+ ques:MCQ rdfs:subClassOf ques:QuestionType ;
+  rdfs:comment "Represents a multiple choice question"^^xsd:string ;
+  rdfs:label "MCQ" .
+ ques:OpenEnded rdfs:subClassOf ques:QuestionType ;
+  rdfs:comment "Represents an open-ended question"^^xsd:string ;
+  rdfs:label "Open Ended" .
+ ques:ClosedEnded rdfs:subClassOf ques:QuestionType ;
+  rdfs:comment "Represents a close-ended question"^^xsd:string ;
+  rdfs:label "Closed Ended" .

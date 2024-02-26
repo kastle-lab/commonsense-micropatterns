@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix my: <http://www.example.org/myOntology#> .
+my:System rdf:type owl:Class ;
+   rdfs:comment "A set of interacting or interdependent component parts forming a complex whole."@en .
+my:hasComponent rdf:type owl:ObjectProperty ;
+  rdfs:domain my:System ;
+  rdfs:range my:Component ;
+  rdfs:comment "The property that connects a system with its components."@en .
+my:Component rdf:type owl:Class ;
+  rdfs:comment "A part or element of a larger whole, especially a part of a machine or vehicle."@en .
+my:isPartOf rdf:type owl:ObjectProperty ;
+  rdfs:domain my:Component ;
+  rdfs:range my:System ;
+  rdfs:comment "This property connects a component to the system that it forms part of."@en .

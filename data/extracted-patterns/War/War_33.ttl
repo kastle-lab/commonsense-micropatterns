@@ -1,0 +1,24 @@
+@prefix ex: <https://example.org#> .
+ex:War a rdfs:Class ;
+    rdfs:label "War"@en ;
+    rdfs:comment "A state of armed conflict between different groups or states."@en .
+ex:Conflict a rdfs:Class ;
+   rdfs:subClassOf ex:War.ex:Rebellion a rdfs:Class ;
+   rdfs:subClassOf ex:Conflict. ex:CivilWar a rdfs:Class ;
+   rdfs:subClassOf ex:War.ex:WorldWar a rdfs:Class ;
+   rdfs:subClassOf ex:War.ex:CauseOfWar a rdfs:Class ;
+ ex:WarStrategy a rdfs:Class .
+ex:casualties a rdfs:Property ;
+   rdfs:domain ex:War;
+   rdfs:range xsd:int .
+ex:startDate a rdfs:Property ;
+   rdfs:domain ex:War;
+   rdfs:range xsd:date.ex:endDate a rdfs:Property ;
+   rdfs:domain ex:War;
+   rdfs:range xsd:date.ex:hasCause a rdfs:Property ;
+   rdfs:domain ex:War;
+   rdfs:range ex:CauseOfWar.ex:usesStrategy a rdfs:Property ;
+   rdfs:domain ex:War;
+   rdfs:range ex:WarStrategy.ex:hasLocation a rdfs:Property ;
+   rdfs:domain ex:War;
+   rdfs:range ex:Location.

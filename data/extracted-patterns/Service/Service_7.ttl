@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix svc: <http://example.com/service#> .
+# Classes
+svc:Service rdf:type rdfs:Class ;
+    rdfs:comment "A class representing all services."@en ;
+    rdfs:label "Service"@en .
+    svc:Customer rdf:type rdfs:Class ;
+    rdfs:comment "A class representing all customers who use services."@en ;
+    rdfs:label "Customer"@en .
+svc:ServiceProvider rdf:type rdfs:Class ;
+    rdfs:comment "A class representing all service providers."@en ;
+    rdfs:label "Service Provider"@en .
+# Properties
+svc:provides rdf:type rdf:Property ;
+    rdfs:domain svc:ServiceProvider ;
+    rdfs:range svc:Service ;
+    rdfs:comment "The property connecting service provider and the service they provide."@en ;
+    rdfs:label "provides"@en .
+svc:usesService rdf:type rdf:Property ;
+    rdfs:domain svc:Customer ;
+    rdfs:range svc:Service ;
+    rdfs:comment "The property connecting customers and the service they use."@en ;
+    rdfs:label "uses service"@en .
+svc:hasCustomer rdf:type rdf:Property ;
+    rdfs:domain svc:ServiceProvider ;
+    rdfs:range svc:Customer ;
+    rdfs:comment "The property connecting service provider and their customers."@en ;
+    rdfs:label "has customer"@en .
+    # Individuals
+vc:ServiceProvider1 rdf:type svc:ServiceProvider ;
+    svc:provides svc:Service1 ;
+    svc:hasCustomer svc:Customer1 .
+svc:Service1 rdf:type svc:Service .
+svc:Customer1 rdf:type svc:Customer ;
+    svc:usesService svc:Service1 .

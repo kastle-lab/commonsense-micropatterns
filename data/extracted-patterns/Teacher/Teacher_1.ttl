@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix teaching: <http://example.com/teaching#> .
+teaching:Teacher a owl:Class ;
+    rdfs:label "Teacher" ;
+    rdfs:comment "A person who helps students to acquire knowledge, competence or virtue" ;
+    rdfs:subClassOf teaching:Person .
+teaching:hasName a owl:DatatypeProperty ;
+    rdfs:label "has name" ;
+    rdfs:comment "The name of the teacher" ;
+    rdfs:domain teaching:Teacher ;
+    rdfs:range xsd:string .
+teaching:teachSubject a owl:ObjectProperty ;
+    rdfs:label "teach subject" ;
+    rdfs:comment "The subject that a teacher teaches" ;
+    rdfs:domain teaching:Teacher ;
+    rdfs:range teaching:Subject .
+teaching:Subject a owl:Class ;
+    rdfs:label "Subject" ;
+    rdfs:comment "An area of knowledge that is taught by a teacher" .
+teaching:age a owl:DatatypeProperty ;
+    rdfs:label "age" ;
+    rdfs:comment "The age of the teacher" ;
+    rdfs:domain teaching:Teacher ;
+    rdfs:range xsd:integer .
+teaching:worksIn a owl:ObjectProperty ;
+    rdfs:label "works in" ;
+    rdfs:comment "The school where a teacher works" ;
+    rdfs:domain teaching:Teacher ;
+    rdfs:range teaching:School .
+teaching:School a owl:Class ;
+    rdfs:label "School" .

@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/monthOntology#> .
+:Month rdf:type rdfs:Class .
+:hasName rdf:type rdf:Property ;
+    rdfs:domain :Month ;
+    rdfs:range xsd:string .
+:hasDays rdf:type rdf:Property ;
+    rdfs:domain :Month ;
+    rdfs:range xsd:integer .
+:January rdf:type :Month ;
+    :hasName "January" ;
+    :hasDays 31 .
+  :February rdf:type :Month ;
+    :hasName "February" ;
+    :hasDays 28 .

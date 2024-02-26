@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+  @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix ex: <http://example.org/> .
+ ex:Week022022 a time:Week ;
+    time:weekNumber "8"^^xsd:integer ;
+    time:year "2022"^^xsd:gYear ;
+    rdfs:label "Week 8 of 2022" ;
+    rdfs:comment "This represents the 8th week of the year 2022." .

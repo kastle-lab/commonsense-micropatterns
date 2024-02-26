@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.org/#> .
+ex:Level rdf:type rdfs:Class .
+ ex:levelNumber rdf:type rdf:Property ;
+    rdfs:domain ex:Level ;
+    rdfs:range rdf:Integer ;
+    rdfs:comment "The level number of a level entity" .
+ex:levelDescription rdf:type rdf:Property ;
+    rdfs:domain ex:Level ;
+    rdfs:range rdf:String ;
+    rdfs:comment "The description of a level entity" .

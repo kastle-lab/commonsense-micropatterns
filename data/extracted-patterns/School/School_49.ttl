@@ -1,0 +1,27 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:School a rdfs:Class ;
+        rdfs:label "School"^^xsd:string ;
+        rdfs:comment "Represents any institutional setting that provides education"^^xsd:string ;
+        rdfs:subClassOf ex:Institution .
+ex:hasName a rdf:Property ;
+        rdfs:domain ex:School ;
+        rdfs:range xsd:string ;
+        rdfs:label "has Name"^^xsd:string ;
+        rdfs:comment "The name of the School"^^xsd:string .
+ex:hasStudent a rdf:Property ;
+        rdfs:domain ex:School ;
+        rdfs:range ex:Student ;
+        rdfs:label "has Student"^^xsd:string ;
+        rdfs:comment "The student that attends the School"^^xsd:string .
+ex:Student a rdfs:Class ;
+        rdfs:label "Student"^^xsd:string ;
+        rdfs:comment "Represents a person who is enrolled in the School"^^xsd:string ;
+        rdfs:subClassOf ex:Person .
+ex:attend a rdf:Property ;
+        rdfs:domain ex:Student ;
+        rdfs:range ex:School ;
+        rdfs:label "attends"^^xsd:string ;
+        rdfs:comment "The school that the Student attends"^^xsd:string .

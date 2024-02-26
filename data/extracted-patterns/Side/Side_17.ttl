@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix side: <http://example.com/side#> .
+# Side ontologyside:Side rdf:type rdfs:Class .
+side:left rdf:type side:Side ;
+          rdfs:label "Left"@en .
+side:right rdf:type side:Side ;
+           rdfs:label "Right"@en .
+side:up rdf:type side:Side ;
+        rdfs:label "Up"@en .
+side:down rdf:type side:Side ;
+          rdfs:label "Down"@en .
+side:front rdf:type side:Side ;
+           rdfs:label "Front"@en .
+side:back rdf:type side:Side ;
+          rdfs:label "Back"@en .
+# Properties
+side:hasSide rdf:type rdf:Property ;
+             rdfs:range side:Side ;
+             rdfs:label "has side"@en .

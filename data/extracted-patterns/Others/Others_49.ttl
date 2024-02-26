@@ -1,0 +1,30 @@
+@prefix : <http://example.org/ontology/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix owl: <http://www.w3.org/2002/07/owl#>:Other rdf:type owl:Class .
+:Other rdfs:subClassOf :Person .
+:Person rdf:type owl:Class .
+:hasRelation rdf:type owl:ObjectProperty ;
+       rdfs:domain :Person ;
+       rdfs:range :Other .
+:hasName rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Person ;
+       rdfs:range xsd:string .
+ :hasAge rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Person ;
+       rdfs:range xsd:integer .
+ :hasGender rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Person ;
+       rdfs:range xsd:string .
+ :PersonA rdf:type :Person ;
+      :hasName "John Doe" ;
+      :hasAge 35 ;
+      :hasGender "Male" ;
+      :hasRelation :PersonB .
+:PersonB rdf:type :Other ;
+      :hasName "Jane Doe" ;
+      :hasAge 30 ;
+      :hasGender "Female" .
+# In this ontology, "Other" is a subclass of "Person".
+ A person can have a relation to another person or "other".
+ Each person or "other" has a name, age, and gender. In this example, PersonA and PersonB have these properties and PersonA has a relation to PersonB.

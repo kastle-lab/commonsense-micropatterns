@@ -1,0 +1,4 @@
+@prefix : <http://example.org/ontology#> .
+:Change a owl:Class ;
+    rdfs:label "Change"@en ;
+    rdfs:comment "The act or process of changing. This may include changing from one state, form, or condition to another, or undergoing a transition or transformation"@en .

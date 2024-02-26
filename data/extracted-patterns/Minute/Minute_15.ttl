@@ -1,0 +1,21 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/#> .
+:Minute rdf:type owl:Class ;
+    rdfs:subClassOf :UnitOfTime ;
+    rdfs:label "Minute"@en ;
+    rdfs:comment "Unit of time that consists of 60 seconds."@en .
+:hasDuration rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Minute ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has duration"@en ;
+    rdfs:comment "The duration value in seconds of the unit of time."@en .
+:isPartOf rdf:type owl:ObjectProperty ;
+    rdfs:domain :Minute ;
+    rdfs:range :Hour ;
+    rdfs:label "is part of"@en ;
+    rdfs:comment "The hour that this minute is part of."@en .
+:containsSeconds rdf:type owl:ObjectProperty ;
+    rdfs:domain :Minute ;
+    rdfs:range :Second ;
+    rdfs:label "contains seconds"@en ;
+    rdfs:comment "The number of seconds that this minute contains."@en .

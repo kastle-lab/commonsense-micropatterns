@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Things Ontology@prefix thing: <http://www.example.org/thing#> .
+thing:Thing a owl:Class ;
+            rdfs:comment "The most general class of things"@en ;
+            rdfs:label "Thing" .
+thing:PhysicalThing a owl:Class ;
+                  owl:subClassOf thing:Thing ;
+                  rdfs:comment "Things that exist in the physical world"@en ;
+                  rdfs:label "Physical Thing" .
+thing:NonPhysicalThing a owl:Class ;
+                       owl:subClassOf thing:Thing ;
+                       rdfs:comment "Things that exist conceptually rather than physically"@en ;
+                       rdfs:label "Non-Physical Thing" .
+thing:LivingThing a owl:Class ;
+                 owl:subClassOf thing:PhysicalThing ;
+                 rdfs:comment "Living, organic entities"@en ;
+                 rdfs:label "Living Thing" .
+thing:Animal a owl:Class ;
+             owl:subClassOf thing:LivingThing ;
+             rdfs:comment "A living entity that is not a plant"@en ;
+             rdfs:label "Animal" .
+thing:Plant a owl:Class ;
+            owl:subClassOf thing:LivingThing ;
+            rdfs:comment "A living entity that synthesizes its food through photosynthesis"@en ;
+            rdfs:label "Plant" .
+thing:idea a owl:Class ;
+            owl:subClassOf thing:NonPhysicalThing ;
+            rdfs:comment "A concept formed in the mind"@en ;
+            rdfs:label "Idea" .
+thing:emotion a owl:Class ;
+              owl:subClassOf thing:NonPhysicalThing ;
+              rdfs:comment "A state of feeling"@en ;
+              rdfs:label "Emotion" .
+ # End Of Things Ontology

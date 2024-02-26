@@ -1,0 +1,4 @@
+@prefix ex: <http://example.com/> .
+ex:Eye a owl:Class ;
+    rdfs:label "Eye" ;
+    rdfs:comment "The organ of sight." .

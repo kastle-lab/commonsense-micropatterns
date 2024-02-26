@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix change: <http://example.org/change#> .
+change:Change a owl:Class ;
+    rdfs:label "Change" ;
+    rdfs:comment "Set of modifications or transformations on entities" .
+change:Entity a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "Item that can undergo a change" .
+change:ChangeType a owl:Class ;
+    rdfs:label "Change Type" ;
+    rdfs:comment "Type or kind of change" .
+change:ChangeAgent a owl:Class ;
+    rdfs:label "Change Agent" ;
+    rdfs:comment "Agent or force that causes the change" .
+change:hasChangeType a owl:ObjectProperty ;
+    rdfs:label "has change type" ;
+    rdfs:domain change:Change ;
+    rdfs:range change:ChangeType ;
+    rdfs:comment "Links change to its type" .
+change:hasChangeAgent a owl:ObjectProperty ;
+    rdfs:label "has change agent" ;
+    rdfs:domain change:Change ;
+    rdfs:range change:ChangeAgent ;
+    rdfs:comment "Links change to its initiating agent" .
+change:affectsEntity a owl:ObjectProperty ;
+    rdfs:label "affects entity" ;
+    rdfs:domain change:Change ;
+    rdfs:range change:Entity ;
+    rdfs:comment "Links change to the entity it influences" .

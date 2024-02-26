@@ -1,0 +1,38 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix life: <http://example.org/life/>life:LivingBeing a rdfs:Class ;
+    rdfs:label "Living being"@en ;
+    rdfs:comment "A life form that is living, able to grow and reproduce"@en .
+life:isComposedOf a rdf:Property ;
+    rdfs:label "is composed of"@en ;
+    rdfs:comment "The biological components that make up a living being" ;
+    rdfs:domain life:LivingBeing ;
+    rdfs:range life:BiologicalComponent .
+life:BiologicalComponent a rdfs:Class;
+    rdfs:label "Biological Component"@en;
+    rdfs:comment "A constituent part of a living being, either physical or intangible"@en.life:Human a owl:Class ;
+    rdfs:subclassOf life:LivingBeing ;
+    rdfs:label "Human"@en ;
+    rdfs:comment "A member of the Homo sapiens species, characterized by bipedal locomotion and high intelligence"@en.life:Animal a owl:Class ;
+    rdfs:subclassOf life:LivingBeing ;
+    rdfs:label "Animal"@en ;
+    rdfs:comment "A multi-celled organism that feeds on other organisms, and is characterized by voluntary movement"@en .
+life:Plant a owl:Class ;
+    rdfs:subclassOf life:LivingBeing ;
+    rdfs:label "Plant"@en ;
+    rdfs:comment "A usually photosynthetic life form lacking distinguishable organs and usually producing cellulose cell walls"@en .
+life:hasHabitat a rdf:Property ;
+    rdfs:label "has habitat"@en ;
+    rdfs:comment "The natural environment in which a living being can live and grow" ;
+    rdfs:domain life:LivingBeing ;
+    rdfs:range life:Habitat.life:Habitat a rdfs:Class ;
+    rdfs:label "Habitat"@en ;
+    rdfs:comment "A place or type of site where an organism or population naturally occurs"@en.  life:Reproduction a rdfs:Class ;
+    rdfs:label "Reproduction"@en ;
+    rdfs:comment "The biological process by which new individuals of the same species are produced, either by a single parent or by two parents"@en.life:hasReproductionMethod a rdf:Property ;
+    rdfs:label "has reproduction method"@en ;
+    rdfs:comment "The type of reproduction method a living being uses" ;
+    rdfs:domain life:LivingBeing ;
+    rdfs:range life:Reproduction.

@@ -1,0 +1,20 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Defining "Result" as a class
+ex:Result a rdfs:Class ;
+          rdfs:label "Result" ;
+          rdfs:comment "Result of a specific process or experiment".
+# Defining properties for "Result"
+ex:hasScore a rdf:Property ;
+            rdfs:label "hasScore" ;
+            rdfs:comment "Score or quantity obtained as a result" ;
+            rdfs:domain ex:Result ;
+            rdfs:range rdfs:Literal.ex:isResultOf a rdf:Property ;
+              rdfs:label "isResultOf" ;
+              rdfs:comment "The process or experiment yielding this result" ;
+              rdfs:domain ex:Result ;
+              rdfs:range ex:Process.# Defining "Process" as a class
+ex:Process a rdfs:Class ;
+           rdfs:label "Process" ;
+           rdfs:comment "A specific process that yields a result".

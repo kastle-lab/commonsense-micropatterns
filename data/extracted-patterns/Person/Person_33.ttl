@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix ex: <http://example.com/> .
+# Defining "Person" as a class
+ex:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "This class represents the concept of a human being."@en .
+    # Defining a few typical properties of a personex:birthPlace a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "birthplace"@en ;
+    rdfs:comment "This property represents the birthplace of a person."@en .
+ex:birthDate a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:date ;
+    rdfs:label "birth date"@en ;
+    rdfs:comment "This property represents the birth date of a person."@en .
+ex:gender a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "gender"@en ;
+    rdfs:comment "This property represents the gender of a person."@en .
+# Defining a few instance of a persondbpedia:Joe_Biden a ex:Person ;
+    ex:birthPlace "Scranton, Pennsylvania, U.S." ;
+    ex:birthDate "1942-11-20"^^xsd:date ;
+    ex:gender "Male" .
+dbpedia:Kamala_Harris a ex:Person ;
+    ex:birthPlace "Oakland, California, U.S." ;
+    ex:birthDate "1964-10-20"^^xsd:date ;
+    ex:gender "Female" .

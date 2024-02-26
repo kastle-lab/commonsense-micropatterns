@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix info: <http://www.example.com/info#> .
+info:Information rdf:type rdfs:Class ;
+    rdfs:comment "The class of all information entities."@en ;
+    rdfs:label "Information"@en .
+info:Document rdf:type rdfs:Class ;
+    rdfs:subClassOf info:Information ;
+    rdfs:comment "A tangible or digital document containing information."@en ;
+    rdfs:label "Document"@en .
+info:hasInformation rdf:type rdf:Property ;
+    rdfs:domain info:Document ;
+    rdfs:range info:Information ;
+    rdfs:comment "Property linking documents to the information they contain."@en ;
+    rdfs:label "hasInformation"@en .
+info:DataType rdf:type rdfs:Class ;
+    rdfs:subClassOf info:Information ;
+    rdfs:comment "Describes the type or form of information."@en ;
+    rdfs:label "Data Type"@en .
+info:dataType rdf:type rdf:Property ;
+    rdfs:domain info:Information ;
+    rdfs:range info:DataType ;
+    rdfs:comment "Property linking information to its data type."@en ;
+    rdfs:label "hasDataType"@en .
+info:source rdf:type rdf:Property ;
+    rdfs:domain info:Information ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The source from where the information was obtained."@en ;
+    rdfs:label "source"@en .
+info:creationDate rdf:type rdf:Property ;
+    rdfs:domain info:Information ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The date and time when the information was created."@en ;
+    rdfs:label "creation date"@en .
+info:author rdf:type rdf:Property ;
+    rdfs:domain info:Information ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The author or creator of the information."@en ;
+    rdfs:label "author"@en .

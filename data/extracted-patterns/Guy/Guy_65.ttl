@@ -1,0 +1,3 @@
+@prefix : <http://example.org/> .
+:Guy a rdfs:Class ;
+    rdfs:label "Guy"@en .

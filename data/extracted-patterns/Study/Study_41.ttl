@@ -1,0 +1,19 @@
+@prefix : <http://www.example.org/study#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Study a rdfs:Class .
+:title a rdf:Property ;
+       rdfs:domain :Study ;
+       rdfs:range xsd:string .
+       :researcher a rdf:Property ;
+            rdfs:domain :Study ;
+            rdfs:range :Person .
+:focusArea a rdf:Property ;
+          rdfs:domain :Study ;
+          rdfs:range :SubjectArea .
+:duration a rdf:Property ;
+          rdfs:domain :Study ;
+          rdfs:range xsd:integer .
+# Defining additional classes necessary for the ontology:Person a rdfs:Class .
+:SubjectArea a rdfs:Class .

@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.org/ontology#> .
+# Creating the class 'Man'ex:Man rdf:type rdfs:Class .
+ # Creating some properties with respective domain and rangesex:hasAge rdf:type rdf:Property ;
+    rdfs:domain ex:Man ;
+    rdfs:range rdf:integer .
+ex:hasName rdf:type rdf:Property ;
+    rdfs:domain ex:Man ;
+    rdfs:range rdfs:Literal .
+ex:hasGender rdf:type rdf:Property ;
+    rdfs:domain ex:Man ;
+    rdfs:range rdfs:Literal .
+# Defining a specific 'Man' and providing some propertiesex:John rdf:type ex:Man ;
+    ex:hasAge 30 ;
+    ex:hasName "John" ;
+    ex:hasGender "Male" .

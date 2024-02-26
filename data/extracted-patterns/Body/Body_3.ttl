@@ -1,0 +1,36 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/body#> .
+# Main Classes:Body rdf:type owl:Class .
+:Organ rdf:type owl:Class .
+:Tissue rdf:type owl:Class .
+:Cell rdf:type owl:Class .
+# Sub-classes of Organ:Heart rdf:type owl:Class ;
+      rdfs:subClassOf :Organ .
+:Lung rdf:type owl:Class ;
+      rdfs:subClassOf :Organ .
+:Liver rdf:type owl:Class ;
+      rdfs:subClassOf :Organ .
+# Sub-classes of Tissue:MuscleTissue rdf:type owl:Class ;
+              rdfs:subClassOf :Tissue .
+:NervousTissue rdf:type owl:Class ;
+               rdfs:subClassOf :Tissue .
+# Sub-classes of Cell:Neuron rdf:type owl:Class ;
+        rdfs:subClassOf :Cell .
+:MuscleCell rdf:type owl:Class ;
+            rdfs:subClassOf :Cell .
+# Object properties     :contains rdf:type owl:ObjectProperty .
+:madeOf rdf:type owl:ObjectProperty .
+# Domain and Ranges of Object Properties:contains rdfs:domain :Body ;
+          rdfs:range :Organ .
+:madeOf rdfs:domain :Organ ;
+        rdfs:range :Tissue .
+        :madeOf rdfs:domain :Tissue ;
+        rdfs:range :Cell .
+# Datatype properties:size rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Body ;
+      rdfs:range xsd:integer .
+ :weight rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Body ;
+        rdfs:range xsd:decimal .

@@ -1,0 +1,286 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com#Coach> a rdfs:Class .
+
+<http://example.com#Person> a rdfs:Class .
+
+<http://example.com#Team> a rdfs:Class .
+
+<http://example.com/Member> a rdfs:Class .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/Sport> a rdfs:Class .
+
+<http://example.com/Team> a rdfs:Class .
+
+<http://example.com/Team#Member> a rdfs:Class .
+
+<http://example.com/Team#Role> a rdfs:Class .
+
+<http://example.com/Team#Team> a rdfs:Class .
+
+<http://example.com/team#Member> a rdfs:Class .
+
+<http://example.com/team#Team> a rdfs:Class .
+
+<http://example.org/Person> a rdfs:Class .
+
+<http://example.org/Team> a rdfs:Class .
+
+<http://example.org/team#Game> a rdfs:Class .
+
+<http://example.org/team#Person> a rdfs:Class .
+
+<http://example.org/team#Sport> a rdfs:Class .
+
+<http://example.org/team#Team> a rdfs:Class .
+
+<http://www.example.com/team#> a rdfs:Class .
+
+<http://www.example.com/team#Name> a rdfs:Class .
+
+<http://www.example.com/team#Person> a rdfs:Class .
+
+<http://www.example.com/team#Team> a rdfs:Class .
+
+<http://www.example.com/team#TeamLeague> a rdfs:Class .
+
+<http://www.example.com/team#TeamMember> a rdfs:Class .
+
+<http://www.example.org/#Person> a rdfs:Class .
+
+<http://www.example.org/#Team> a rdfs:Class .
+
+<http://www.example.org/#role> a rdfs:Class ;
+    rdfs:range <http://www.example.org/#Person> .
+
+<http://www.example.org/ontology#Person> a rdfs:Class .
+
+<http://www.example.org/ontology#Sport> a rdfs:Class .
+
+<http://www.example.org/ontology#Team> a rdfs:Class .
+
+<http://www.example.org/team#Location> a rdfs:Class .
+
+<http://www.example.org/team#Member> a rdfs:Class .
+
+<http://www.example.org/team#Person> a rdfs:Class .
+
+<http://www.example.org/team#Project> a rdfs:Class .
+
+<http://www.example.org/team#Role> a rdfs:Class .
+
+<http://www.example.org/team#Sport> a rdfs:Class .
+
+<http://www.example.org/team#Task> a rdfs:Class .
+
+<http://www.example.org/team#Team> a rdfs:Class .
+
+<http://www.example.org/team#TeamMember> a rdfs:Class .
+
+rdf:resource a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com#hasCoach> rdfs:range <http://example.com#Coach>,
+        <http://example.com#Team> .
+
+<http://example.com#member> rdfs:range <http://example.com#Person>,
+        <http://example.com#Team> .
+
+<http://example.com#name> rdfs:range <http://example.com#Team> .
+
+<http://example.com/Team#member> rdfs:range <http://example.com/Team#Member>,
+        <http://example.com/Team#Team> .
+
+<http://example.com/Team#role> rdfs:range <http://example.com/Team#Member>,
+        <http://example.com/Team#Role> .
+
+<http://example.com/hasCoach> rdfs:range <http://example.com/Person>,
+        <http://example.com/Team> .
+
+<http://example.com/hasMember> rdfs:range <http://example.com/Member>,
+        <http://example.com/Person>,
+        <http://example.com/Team> .
+
+<http://example.com/hasName> rdfs:range <http://example.com/Member> .
+
+<http://example.com/hasRole> rdfs:range <http://example.com/Member> .
+
+<http://example.com/playsSport> rdfs:range <http://example.com/Sport>,
+        <http://example.com/Team> .
+
+<http://example.com/team#hasMember> rdfs:range <http://example.com/team#Member>,
+        <http://example.com/team#Team> .
+
+<http://example.com/team#memberName> rdfs:range <http://example.com/team#Member> .
+
+<http://example.com/team#memberRole> rdfs:range <http://example.com/team#Member> .
+
+<http://example.com/team#teamName> rdfs:range <http://example.com/team#Team> .
+
+<http://example.org/hasMember> rdfs:range <http://example.org/Person>,
+        <http://example.org/Team> .
+
+<http://example.org/team#firstName> rdfs:range <http://example.org/team#Person> .
+
+<http://example.org/team#hasCoach> rdfs:range <http://example.org/team#Person>,
+        <http://example.org/team#Team> .
+
+<http://example.org/team#hasExperience> rdfs:range <http://example.org/team#Person> .
+
+<http://example.org/team#hasMember> rdfs:range <http://example.org/team#Person>,
+        <http://example.org/team#Team> .
+
+<http://example.org/team#hasPosition> rdfs:range <http://example.org/team#Person> .
+
+<http://example.org/team#hasSport> rdfs:range <http://example.org/team#Sport>,
+        <http://example.org/team#Team> .
+
+<http://example.org/team#lastName> rdfs:range <http://example.org/team#Person> .
+
+<http://example.org/team#league> rdfs:range <http://example.org/team#Team> .
+
+<http://example.org/team#location> rdfs:range <http://example.org/team#Team> .
+
+<http://example.org/team#member> rdfs:range <http://example.org/team#Person>,
+        <http://example.org/team#Team>,
+        rdf:resource,
+        rdfs:Resource .
+
+<http://example.org/team#memberOf> rdfs:range <http://example.org/team#Person>,
+        <http://example.org/team#Team> .
+
+<http://example.org/team#name> rdfs:range <http://example.org/team#Team> .
+
+<http://example.org/team#participatesIn> rdfs:range <http://example.org/team#Game>,
+        <http://example.org/team#Team> .
+
+<http://example.org/team#role> rdfs:range <http://example.org/team#Person>,
+        rdf:resource .
+
+<http://example.org/team#sport> rdfs:range <http://example.org/team#Team> .
+
+<http://example.org/team#teamLeader> rdfs:range <http://example.org/team#Team>,
+        rdfs:Resource .
+
+<http://example.org/team#teamName> rdfs:range <http://example.org/team#Team> .
+
+<http://www.example.com/team#hasLeader> rdfs:range <http://www.example.com/team#Person>,
+        <http://www.example.com/team#Team> .
+
+<http://www.example.com/team#hasMember> rdfs:range <http://www.example.com/team#>,
+        <http://www.example.com/team#Person>,
+        <http://www.example.com/team#Team>,
+        <http://www.example.com/team#TeamMember> .
+
+<http://www.example.com/team#hasName> rdfs:range <http://www.example.com/team#Name>,
+        <http://www.example.com/team#Team> .
+
+<http://www.example.com/team#member> rdfs:range <http://www.example.com/team#Team>,
+        <http://www.example.com/team#TeamMember> .
+
+<http://www.example.com/team#name> rdfs:range <http://www.example.com/team#>,
+        <http://www.example.com/team#TeamMember> .
+
+<http://www.example.com/team#participatesIn> rdfs:range <http://www.example.com/team#>,
+        <http://www.example.com/team#TeamLeague> .
+
+<http://www.example.com/team#role> rdfs:range <http://www.example.com/team#TeamMember> .
+
+<http://www.example.org/#hasRole> rdfs:range <http://www.example.org/#Team>,
+        <http://www.example.org/#role> .
+
+<http://www.example.org/#member> rdfs:range <http://www.example.org/#Person>,
+        <http://www.example.org/#Team> .
+
+<http://www.example.org/#name> rdfs:range <http://www.example.org/#Person>,
+        <http://www.example.org/#Team> .
+
+<http://www.example.org/ontology#hasCaptain> rdfs:range <http://www.example.org/ontology#Person>,
+        <http://www.example.org/ontology#Team> .
+
+<http://www.example.org/ontology#hasMember> rdfs:range <http://www.example.org/ontology#Person>,
+        <http://www.example.org/ontology#Team> .
+
+<http://www.example.org/ontology#name> rdfs:range <http://www.example.org/ontology#Person> .
+
+<http://www.example.org/ontology#playsSport> rdfs:range <http://www.example.org/ontology#Sport>,
+        <http://www.example.org/ontology#Team> .
+
+<http://www.example.org/ontology#sportName> rdfs:range <http://www.example.org/ontology#Sport> .
+
+<http://www.example.org/team#endDate> rdfs:range <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#hasDeadline> rdfs:range <http://www.example.org/team#Task> .
+
+<http://www.example.org/team#hasExperience> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#hasMember> rdfs:range <http://www.example.org/team#Member>,
+        <http://www.example.org/team#Person>,
+        <http://www.example.org/team#Team>,
+        <http://www.example.org/team#TeamMember> .
+
+<http://www.example.org/team#hasMemberExperience> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#hasMemberName> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#hasMemberRole> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#hasName> rdfs:range <http://www.example.org/team#Task>,
+        <http://www.example.org/team#Team>,
+        <http://www.example.org/team#TeamMember>,
+        rdfs:Resource .
+
+<http://www.example.org/team#hasNumberOfPlayers> rdfs:range <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#hasProject> rdfs:range <http://www.example.org/team#Project>,
+        <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#hasProjectDeadline> rdfs:range <http://www.example.org/team#Project> .
+
+<http://www.example.org/team#hasProjectName> rdfs:range <http://www.example.org/team#Project> .
+
+<http://www.example.org/team#hasRole> rdfs:range <http://www.example.org/team#Member>,
+        <http://www.example.org/team#Role> .
+
+<http://www.example.org/team#hasTask> rdfs:range <http://www.example.org/team#Task>,
+        <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#hasTeamLead> rdfs:range <http://www.example.org/team#Member>,
+        <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#hasTeamName> rdfs:range <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#isOfAge> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#locatedIn> rdfs:range <http://www.example.org/team#Location>,
+        <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#member> rdfs:range <http://www.example.org/team#Member>,
+        <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#memberName> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#memberRole> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#name> rdfs:range <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#playsIn> rdfs:range <http://www.example.org/team#Sport>,
+        <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#playsSport> rdfs:range <http://www.example.org/team#Sport>,
+        <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#position> rdfs:range <http://www.example.org/team#Member> .
+
+<http://www.example.org/team#sportName> rdfs:range <http://www.example.org/team#Sport> .
+
+<http://www.example.org/team#startDate> rdfs:range <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#teamLeader> rdfs:range <http://www.example.org/team#Team> .
+
+<http://www.example.org/team#teamName> rdfs:range <http://www.example.org/team#Team> .
+

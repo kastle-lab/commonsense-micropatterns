@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sto: <http://example.org/sto#> .
+# Defining class "Story"sto:Story rdf:type rdfs:Class ;
+  rdfs:label "Story" ;
+  rdfs:comment "A narrative or account of events" .
+# Defining class "Author"sto:Author rdf:type rdfs:Class ;
+  rdfs:label "Author" ;
+  rdfs:comment "The writer of a story" .
+# Defining class "Character"sto:Character rdf:type rdfs:Class ;
+  rdfs:label "Character" ;
+  rdfs:comment "A person, animal, or imaginary being in a story" .
+# Defining class "Setting"sto:Setting rdf:type rdfs:Class ;
+  rdfs:label "Setting" ;
+  rdfs:comment "The time and place of the events in the story" .
+# Defining class "Plot"sto:Plot rdf:type rdfs:Class ;
+  rdfs:label "Plot" ;
+  rdfs:comment "The sequence of events in a story" .
+# Defining propertiessto:isCreatedBy rdf:type rdf:Property ;
+  rdfs:label "is created by" ;
+  rdfs:domain sto:Story ;
+  rdfs:range sto:Author .
+sto:hasCharacter rdf:type rdf:Property ;
+  rdfs:label "has character" ;
+  rdfs:domain sto:Story ;
+  rdfs:range sto:Character .
+sto:hasSetting rdf:type rdf:Property ;
+  rdfs:label "has setting" ;
+  rdfs:domain sto:Story ;
+  rdfs:range sto:Setting .
+sto:hasPlot rdf:type rdf:Property ;
+  rdfs:label "has plot" ;
+  rdfs:domain sto:Story ;
+  rdfs:range sto:Plot .

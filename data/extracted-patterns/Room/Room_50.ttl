@@ -1,0 +1,27 @@
+@prefix : <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Declaration of class room:Room rdf:type rdfs:Class ;
+        # Textual Definition and Label for the class        rdfs:comment "A space within a building that is designed for a particular purpose."@en ;
+        rdfs:label "Room"@en .
+# Properties
+ associated with Room:hasRoomNumber rdf:type rdf:Property ;
+            rdfs:domain :Room ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Specifies the number or other identifier of a room."@en ;
+            rdfs:label "has room number"@en .
+            :hasRoomType rdf:type rdf:Property ;
+            rdfs:domain :Room ;
+            rdfs:range :RoomType ;
+            rdfs:comment "Specifies the type or purpose of a room."@en ;
+            rdfs:label "has room type"@en .
+# Example room:Room101 rdf:type :Room ;
+        :hasRoomNumber "101" ;
+        :hasRoomType :Lab .
+# Room type RoomType:RoomType rdf:type rdfs:Class ;
+        rdfs:comment "The type or purpose of a room."@en ;
+        rdfs:label "Room Type"@en .
+# Example room type: Lab:Lab rdf:type :RoomType ;
+    rdfs:label "Lab"@en ;
+    rdfs:comment "A type of room designed for scientific research or teaching."@en .

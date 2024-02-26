@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.com#> .
+ex:Car a rdfs:Class.ex:hasColor a rdf:Property;
+  rdfs:domain ex:Car;
+  rdfs:range ex:Color.ex:hasMake a rdf:Property;
+  rdfs:domain ex:Car;
+  rdfs:range ex:Make.ex:hasModel a rdf:Property;
+  rdfs:domain ex:Car;
+  rdfs:range ex:Model.ex:hasYear a rdf:Property;
+  rdfs:domain ex:Car;
+  rdfs:range ex:Year.

@@ -1,0 +1,23 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:   <http://example.com#> .
+ex:Researcher  a rdfs:Class ;
+               rdfs:label "Researcher" ;
+               rdfs:comment "A person who conducts research." .
+ex:ResearchField  a rdfs:Class ;
+                  rdfs:label "Research Field" ;
+                  rdfs:comment "A particular area of academic research." .
+ex:ResearchProject  a rdfs:Class ;
+                    rdfs:label "Research Project" ;
+                    rdfs:comment "A project specifically designed for research." .
+                    ex:conducts  a rdf:Property ;
+             rdfs:domain ex:Researcher ;
+             rdfs:range ex:ResearchProject ;
+             rdfs:label "conducts" ;
+             rdfs:comment "A researcher conducts a research project." .
+ex:inField  a rdf:Property ;
+            rdfs:domain ex:ResearchProject ;
+            rdfs:range ex:ResearchField ;
+            rdfs:label "inField" ;
+            rdfs:comment "A research project is in a certain research field." .

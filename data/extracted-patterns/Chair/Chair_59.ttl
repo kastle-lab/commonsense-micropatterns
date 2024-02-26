@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:chair rdf:type rdfs:Class .
+ex:chair rdfs:subClassOf ex:furniture .
+ex:officeChair rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:chair .
+ex:diningRoomChair rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:chair .
+ex:chair rdfs:label ""Chair""@en .
+ex:officeChair rdfs:label ""Office Chair""@en .
+ex:diningRoomChair rdfs:label ""Dining Room Chair""@en .

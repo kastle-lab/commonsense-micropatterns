@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org#> .
+# Category Classesex:Power rdf:type rdfs:Class.ex:ElectricalPower rdf:type rdfs:Class .
+ex:SolarPower rdf:type rdfs:Class .
+ex:MagneticPower rdf:type rdfs:Class .
+ex:NuclearPower rdf:type rdfs:Class .
+ex:WavePower rdf:type rdfs:Class .
+ex:HumanPower rdf:type rdfs:Class .
+# Subclass Relationsex:Power rdfs:subClassOf ex:Energy.ex:ElectricalPower rdfs:subClassOf ex:Power.ex:SolarPower rdfs:subClassOf ex:Power.ex:MagneticPower rdfs:subClassOf ex:Power.ex:NuclearPower rdfs:subClassOf ex:Power.ex:WavePower rdfs:subClassOf ex:Power.ex:HumanPower rdfs:subClassOf ex:Power.# Properties
+ex:generates rdf:type rdf:Property ;
+              rdfs:domain ex:Power ;
+             rdfs:range ex:Energy .
+ex:consumes rdf:type rdf:Property ;
+            rdfs:domain ex:Power ;
+            rdfs:range ex:Energy .
+ex:transformsFrom rdf:type rdf:Property ;
+                  rdfs:domain ex:Power ;
+                  rdfs:range ex:Energy .
+ex:transformsTo rdf:type rdf:Property ;
+                rdfs:domain ex:Power ;
+                rdfs:range ex:Energy .
+# Individuals
+ and Their Class Membershipex:WindTurbine rdf:type ex:WindPower .
+# Individuals
+ and Their Property Relationshipsex:WindTurbine ex:generates ex:ElectricalPower .

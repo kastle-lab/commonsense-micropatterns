@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix presidency: <http://example.org/presidency/> .
+presidency:President     rdf:type owl:Class ;
+    rdfs:comment "The official position of the head of state and government in a republic."@en ;
+    rdfs:label "President"@en .
+presidency:hasTerm    rdf:type owl:DatatypeProperty ;
+    rdfs:domain presidency:President ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The number of terms an individual has served as President."@en ;
+    rdfs:label "has term"@en .
+presidency:inOfficeSince    rdf:type owl:DatatypeProperty ;
+    rdfs:domain presidency:President ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The date a President assumed office."@en ;
+    rdfs:label "in office since"@en .
+presidency:hasCountry    rdf:type owl:ObjectProperty ;
+    rdfs:domain presidency:President ;
+    rdfs:range presidency:Country ;
+    rdfs:comment "The country a President governs."@en ;
+    rdfs:label "has country"@en .
+presidency:Country    rdf:type owl:Class ;
+    rdfs:comment "A country of a President's governance."@en ;
+    rdfs:label "Country"@en .
+    presidency:hasName    rdf:type owl:DatatypeProperty ;
+    rdfs:domain presidency:President ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of a President."@en ;
+    rdfs:label "has name"@en .

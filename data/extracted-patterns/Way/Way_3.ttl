@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://examplenamespace.com/way#> .
+way:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology describing different aspects of 'Way'."@en .
+way:Way     rdf:type owl:Class ;
+    rdfs:label "Way"@en ;
+    rdfs:comment "A method, style, manner, means, technique or process of doing something."@en .
+way:Path     rdf:type owl:Class ;
+    rdfs:subClassOf way:Way ;
+    rdfs:label "Path"@en ;
+    rdfs:comment "A track or area created for a specific way or purpose."@en .
+way:Mode     rdf:type owl:Class ;
+    rdfs:subClassOf way:Way ;
+    rdfs:label "Mode"@en ;
+    rdfs:comment "A method or system of doing something."@en .
+way:PhysicalWay     rdf:type owl:Class ;
+    rdfs:subClassOf way:Way ;
+    rdfs:label "Physical Way"@en ;
+    rdfs:comment "A tangible or material method or system of doing something."@en .
+way:MentalWay     rdf:type owl:Class ;
+    rdfs:subClassOf way:Way ;
+    rdfs:label "Mental Way"@en ;
+    rdfs:comment "A mental, psychological, or philosophical method or system of doing something."@en .
+way:hasStart     rdf:type owl:ObjectProperty ;
+    rdfs:label "has start"@en ;
+    rdfs:comment "The starting point of a way."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range rdfs:Resource .
+way:hasEnd     rdf:type owl:ObjectProperty ;
+    rdfs:label "has end"@en ;
+    rdfs:comment "The ending point of a way."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range rdfs:Resource .
+way:hasLength     rdf:type owl:DatatypeProperty ;
+    rdfs:label "has length"@en ;
+    rdfs:comment "The length of a way."@en ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:double .

@@ -1,0 +1,242 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Character> a rdfs:Class .
+
+<http://example.com/Location> a rdfs:Class .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/Plot> a rdfs:Class .
+
+<http://example.com/Story> a rdfs:Class .
+
+<http://example.com/story#Character> a rdfs:Class .
+
+<http://example.com/story#Plot> a rdfs:Class .
+
+<http://example.com/story#Setting> a rdfs:Class .
+
+<http://example.com/story#Story> a rdfs:Class .
+
+<http://example.com/storyontology#Author> a rdfs:Class .
+
+<http://example.com/storyontology#Character> a rdfs:Class .
+
+<http://example.com/storyontology#Genre> a rdfs:Class .
+
+<http://example.com/storyontology#Plot> a rdfs:Class .
+
+<http://example.com/storyontology#Setting> a rdfs:Class .
+
+<http://example.com/storyontology#Story> a rdfs:Class .
+
+<http://example.org/story#Author> a rdfs:Class .
+
+<http://example.org/story#Character> a rdfs:Class .
+
+<http://example.org/story#Genre> a rdfs:Class .
+
+<http://example.org/story#Person> a rdfs:Class .
+
+<http://example.org/story#Plot> a rdfs:Class .
+
+<http://example.org/story#Setting> a rdfs:Class .
+
+<http://example.org/story#Story> a rdfs:Class .
+
+<http://example.org/story#Theme> a rdfs:Class .
+
+<http://www.example.com/story#Author> a rdfs:Class .
+
+<http://www.example.com/story#Character> a rdfs:Class .
+
+<http://www.example.com/story#Genre> a rdfs:Class .
+
+<http://www.example.com/story#Plot> a rdfs:Class .
+
+<http://www.example.com/story#Setting> a rdfs:Class .
+
+<http://www.example.com/story#Story> a rdfs:Class .
+
+<http://www.example.org/story> a rdfs:Class .
+
+<http://www.example.org/story#Author> a rdfs:Class .
+
+<http://www.example.org/story#Character> a rdfs:Class .
+
+<http://www.example.org/story#Genre> a rdfs:Class .
+
+<http://www.example.org/story#Person> a rdfs:Class .
+
+<http://www.example.org/story#Setting> a rdfs:Class .
+
+<http://www.example.org/story#Story> a rdfs:Class .
+
+<http://www.example.org/story#character> a rdfs:Class .
+
+<http://www.example.org/story/Character> a rdfs:Class .
+
+<http://www.example.org/story/Genre> a rdfs:Class .
+
+<http://www.example.org/story/Story> a rdfs:Class .
+
+<http://example.com/author> rdfs:range <http://example.com/Person>,
+        <http://example.com/Story> .
+
+<http://example.com/hasAuthor> rdfs:range <http://example.com/Person>,
+        <http://example.com/Story> .
+
+<http://example.com/hasCharacter> rdfs:range <http://example.com/Character>,
+        <http://example.com/Story> .
+
+<http://example.com/hasPlot> rdfs:range <http://example.com/Plot>,
+        <http://example.com/Story> .
+
+<http://example.com/hasSetting> rdfs:range <http://example.com/Location>,
+        <http://example.com/Story> .
+
+<http://example.com/story#hasCharacter> rdfs:range <http://example.com/story#Character>,
+        <http://example.com/story#Story> .
+
+<http://example.com/story#hasPlot> rdfs:range <http://example.com/story#Plot>,
+        <http://example.com/story#Story> .
+
+<http://example.com/story#hasSetting> rdfs:range <http://example.com/story#Setting>,
+        <http://example.com/story#Story> .
+
+<http://example.com/storyontology#hasAuthor> rdfs:range <http://example.com/storyontology#Author>,
+        <http://example.com/storyontology#Story> .
+
+<http://example.com/storyontology#hasCharacter> rdfs:range <http://example.com/storyontology#Character>,
+        <http://example.com/storyontology#Story> .
+
+<http://example.com/storyontology#hasGenre> rdfs:range <http://example.com/storyontology#Genre>,
+        <http://example.com/storyontology#Story> .
+
+<http://example.com/storyontology#hasPlot> rdfs:range <http://example.com/storyontology#Plot>,
+        <http://example.com/storyontology#Story> .
+
+<http://example.com/storyontology#hasSetting> rdfs:range <http://example.com/storyontology#Setting>,
+        <http://example.com/storyontology#Story> .
+
+<http://example.com/storyontology#hasTitle> rdfs:range <http://example.com/storyontology#Story> .
+
+<http://example.com/title> rdfs:range <http://example.com/Story> .
+
+<http://example.org/story#author> rdfs:range <http://example.org/story#Person>,
+        <http://example.org/story#Story> .
+
+<http://example.org/story#character> rdfs:range <http://example.org/story#Character>,
+        <http://example.org/story#Story> .
+
+<http://example.org/story#genre> rdfs:range <http://example.org/story#Story> .
+
+<http://example.org/story#hasAuthor> rdfs:range <http://example.org/story#Author>,
+        <http://example.org/story#Person>,
+        <http://example.org/story#Story> .
+
+<http://example.org/story#hasCharacter> rdfs:range <http://example.org/story#Character>,
+        <http://example.org/story#Story> .
+
+<http://example.org/story#hasGenre> rdfs:range <http://example.org/story#Genre>,
+        <http://example.org/story#Story> .
+
+<http://example.org/story#hasPlot> rdfs:range <http://example.org/story#Plot>,
+        <http://example.org/story#Story> .
+
+<http://example.org/story#hasSetting> rdfs:range <http://example.org/story#Setting>,
+        <http://example.org/story#Story> .
+
+<http://example.org/story#hasTheme> rdfs:range <http://example.org/story#Story>,
+        <http://example.org/story#Theme> .
+
+<http://example.org/story#hasTitle> rdfs:range <http://example.org/story#Story> .
+
+<http://example.org/story#name> rdfs:range <http://example.org/story#Character> .
+
+<http://example.org/story#publicationDate> rdfs:range <http://example.org/story#Story> .
+
+<http://example.org/story#title> rdfs:range <http://example.org/story#Story> .
+
+<http://www.example.com/story#hasAuthor> rdfs:range <http://www.example.com/story#Author>,
+        <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#hasCharacter> rdfs:range <http://www.example.com/story#Character>,
+        <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#hasCharacterName> rdfs:range <http://www.example.com/story#Character> .
+
+<http://www.example.com/story#hasCharacters> rdfs:range <http://www.example.com/story#Character>,
+        <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#hasDescription> rdfs:range <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#hasGenre> rdfs:range <http://www.example.com/story#Genre>,
+        <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#hasLocation> rdfs:range <http://www.example.com/story#Setting> .
+
+<http://www.example.com/story#hasName> rdfs:range <http://www.example.com/story#Author> .
+
+<http://www.example.com/story#hasPlot> rdfs:range <http://www.example.com/story#Plot>,
+        <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#hasSetting> rdfs:range <http://www.example.com/story#Setting>,
+        <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#hasTitle> rdfs:range <http://www.example.com/story#Story> .
+
+<http://www.example.com/story#writtenBy> rdfs:range <http://www.example.com/story#Author>,
+        <http://www.example.com/story#Story> .
+
+<http://www.example.org/story#author> rdfs:range <http://www.example.org/story>,
+        <http://www.example.org/story#Person>,
+        <http://www.example.org/story#Story> .
+
+<http://www.example.org/story#characterName> rdfs:range <http://www.example.org/story#character> .
+
+<http://www.example.org/story#genre> rdfs:range <http://www.example.org/story>,
+        <http://www.example.org/story#Story> .
+
+<http://www.example.org/story#hasAuthor> rdfs:range <http://www.example.org/story#Author>,
+        <http://www.example.org/story#Story> .
+
+<http://www.example.org/story#hasCharacter> rdfs:range <http://www.example.org/story>,
+        <http://www.example.org/story#Character>,
+        <http://www.example.org/story#Story>,
+        <http://www.example.org/story#character> .
+
+<http://www.example.org/story#hasCharacters> rdfs:range <http://www.example.org/story#Character>,
+        <http://www.example.org/story#Story> .
+
+<http://www.example.org/story#hasGenre> rdfs:range <http://www.example.org/story#Genre>,
+        <http://www.example.org/story#Story> .
+
+<http://www.example.org/story#hasSetting> rdfs:range <http://www.example.org/story#Setting>,
+        <http://www.example.org/story#Story> .
+
+<http://www.example.org/story#hasTitle> rdfs:range <http://www.example.org/story#Story> .
+
+<http://www.example.org/story#publicationYear> rdfs:range <http://www.example.org/story> .
+
+<http://www.example.org/story#title> rdfs:range <http://www.example.org/story>,
+        <http://www.example.org/story#Story> .
+
+<http://www.example.org/story/author> rdfs:range <http://www.example.org/story/Story> .
+
+<http://www.example.org/story/character> rdfs:range <http://www.example.org/story/Story> .
+
+<http://www.example.org/story/genre> rdfs:range <http://www.example.org/story/Genre>,
+        <http://www.example.org/story/Story> .
+
+<http://www.example.org/story/hasCharacter> rdfs:range <http://www.example.org/story/Character>,
+        <http://www.example.org/story/Story> .
+
+<http://www.example.org/story/name> rdfs:range <http://www.example.org/story/Character> .
+
+<http://www.example.org/story/plot> rdfs:range <http://www.example.org/story/Story> .
+
+<http://www.example.org/story/role> rdfs:range <http://www.example.org/story/Character> .
+
+<http://www.example.org/story/title> rdfs:range <http://www.example.org/story/Story> .
+

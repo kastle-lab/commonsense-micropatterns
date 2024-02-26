@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/#> .
+ex:Door a rdfs:Class ;
+    rdfs:label "Door"@en ;
+    rdfs:comment "A hinged, sliding, or revolving barrier at the entrance to a building, room, or vehicle, or in the framework of a cupboard."@en ;
+    rdfs:subClassOf ex:PhysicalObject .

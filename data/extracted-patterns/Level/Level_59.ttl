@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+# Class definitionex:Level     a rdfs:Class ;
+    rdfs:comment "A class representing a level or stage in a process or structure" ;
+    rdfs:label "Level" .
+# Property definitionsex:hasLevel     a rdf:Property ;
+    rdfs:comment "Property that relates an entity to its level" ;
+    rdfs:label "has level" ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Level .
+ex:levelValue     a rdf:Property ;
+    rdfs:comment "Property that assigns a numeric value to a level" ;
+    rdfs:label "level value" ;
+    rdfs:domain ex:Level ;
+    rdfs:range xsd:integer .
+# Example instancesex:entity1     a ex:Entity ;
+    ex:hasLevel ex:level1 .
+ex:level1    a ex:Level ;
+    ex:levelValue "5"^^xsd:integer .

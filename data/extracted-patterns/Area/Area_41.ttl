@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Area a rdfs:Class ;
+    rdfs:label "Area" ;
+    rdfs:comment "Represents geographical or spatial area." .
+ex:hasArea a rdf:Property ;
+    rdfs:domain ex:Place ;
+    rdfs:range ex:Area ;
+    rdfs:label "hasArea" ;
+    rdfs:comment "Relates a place to its geographical or spatial area." .
+ex:inSquareMiles a rdf:Property ;
+    rdfs:domain ex:Area ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "inSquareMiles" ;
+    rdfs:comment "The size of an area in square miles." .
+ex:Place a rdfs:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "Represents a place or location." .
+  ex:london a ex:Place ;
+   ex:hasArea ex:londonArea .
+ex:londonArea a ex:Area ;
+   ex:inSquareMiles "607.0"^^xsd:decimal .

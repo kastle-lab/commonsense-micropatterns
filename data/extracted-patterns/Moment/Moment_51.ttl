@@ -1,0 +1,18 @@
+@prefix : <http://example.org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+### Classes
+:Instant rdf:type rdfs:Class .
+:Period rdf:type rdfs:Class .
+### Properties
+:hasBegin rdf:type rdf:Property ;
+          rdfs:domain :Period ;
+          rdfs:range :Instant .
+:hasEnd rdf:type rdf:Property ;
+          rdfs:domain :Period ;
+          rdfs:range :Instant .
+### Instances:Instant_1 rdf:type :Instant .
+:Instant_2 rdf:type :Instant .
+:Period_1    rdf:type :Period ;
+             :hasBegin :Instant_1 ;
+             :hasEnd :Instant_2 .

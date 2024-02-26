@@ -1,0 +1,58 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:nfcb3f8fe5492473f8f5e894e0c4a20f5b1 a rdfs:Class .
+
+<http://example.com/Kind> a rdfs:Class .
+
+<http://example.com/kind#Kind> a rdfs:Class .
+
+<http://example.org/kind#Kind> a rdfs:Class .
+
+<http://example.org/kind#KindCategory> a rdfs:Class .
+
+<http://example.org/kind#Property> a rdfs:Class .
+
+<http://www.example.org/kind#Kind> a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+<http://example.com/kind#example> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#hasCharacteristic> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#hasInstances> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#hasKind> rdfs:range _:nfcb3f8fe5492473f8f5e894e0c4a20f5b1,
+        <http://example.com/kind#Kind> .
+
+<http://example.com/kind#hasPart> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#hasSubKind> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#hasSuperKind> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#isKindOf> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#name> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/kind#understandOtherKind> rdfs:range <http://example.com/kind#Kind> .
+
+<http://example.com/provide> rdfs:range <http://example.com/Kind> .
+
+<http://example.org/kind#hasCategory> rdfs:range <http://example.org/kind#Kind>,
+        <http://example.org/kind#KindCategory> .
+
+<http://example.org/kind#hasName> rdfs:range <http://example.org/kind#Kind> .
+
+<http://example.org/kind#hasProperty> rdfs:range <http://example.org/kind#Kind>,
+        <http://example.org/kind#Property> .
+
+<http://example.org/kind#isKindOf> rdfs:range <http://example.org/kind#Kind> .
+
+<http://www.example.org/kind#hasKind> rdfs:range <http://www.example.org/kind#Kind>,
+        owl:Thing .
+
+<http://www.example.org/kind#isKindOf> rdfs:range <http://www.example.org/kind#Kind>,
+        owl:Thing .
+

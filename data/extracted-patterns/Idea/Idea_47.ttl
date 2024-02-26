@@ -1,0 +1,10 @@
+@prefix : <http://example.com/resources/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix idea: <http://example.com/ontology/idea#> .
+:idea1234 a idea:Idea ;
+    rdfs:label "Some Idea"@en ;
+    idea:hasAuthor :author1234 ;
+    idea:hasText "This is the text of the idea."@en ;
+    idea:hasCreationDate "2022-01-01T00:00:00Z"^^xsd:dateTime .

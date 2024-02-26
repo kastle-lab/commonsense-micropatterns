@@ -1,0 +1,5 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+:someWeek a dbo:Week ;
+    dbo:startDate "2022-01-01"^^xsd:date ;
+    dbo:endDate "2022-01-07"^^xsd:date .

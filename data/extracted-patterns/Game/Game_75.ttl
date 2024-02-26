@@ -1,0 +1,16 @@
+ In this model, a game is represented with its title, developer, genre, and release date.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix game: <http://example.com/game#> .
+game:Game a rdfs:Class ;
+game:title a rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:string .
+game:developer a rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:string .
+game:genre a rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:string .
+game:releaseDate a rdf:Property ;
+  rdfs:domain game:Game ;
+  rdfs:range xsd:date .

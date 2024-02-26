@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.com/ontology#> .
+ex:Couch rdf:type rdfs:Class ;
+    rdfs:label "Couch"@en ;
+    rdfs:comment "A comfortable piece of furniture meant for sitting or laying"@en .
+  ex:hasColor rdf:type rdf:Property ;
+    rdfs:domain ex:Couch ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has color"@en ;
+    rdfs:comment "The color of the couch"@en .
+ex:hasMaterial rdf:type rdf:Property ;
+    rdfs:domain ex:Couch ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has material"@en ;
+    rdfs:comment "The material of the couch"@en .
+    ex:hasUpholstery rdf:type rdf:Property ;
+    rdfs:domain ex:Couch ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has upholstery"@en ;
+    rdfs:comment "The type of upholstery on the couch"@en .

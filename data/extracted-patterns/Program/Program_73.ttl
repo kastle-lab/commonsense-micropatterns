@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Program a rdfs:Class ;
+    rdfs:label "Program" ;
+    rdfs:comment "A software program or application." .
+ex:name a rdfs:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of the program or application." ;
+    rdfs:domain ex:Program ;
+    rdfs:range rdfs:Literal .
+ex:version a rdfs:DatatypeProperty ;
+    rdfs:label "version" ;
+    rdfs:comment "The version of the program or application." ;
+    rdfs:domain ex:Program ;
+    rdfs:range rdfs:Literal .
+ex:hasDeveloper a rdfs:ObjectProperty ;
+    rdfs:label "has developer" ;
+    rdfs:comment "The developer of the program." ;
+    rdfs:domain ex:Program ;
+    rdfs:range ex:Developer .

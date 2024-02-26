@@ -1,0 +1,215 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/ns#Entity> a rdfs:Class .
+
+<http://example.com/ns#Point> a rdfs:Class .
+
+<http://example.com/ns#Way> a rdfs:Class .
+
+<http://example.org/Location> a rdfs:Class .
+
+<http://example.org/Way> a rdfs:Class .
+
+<http://example.org/ontology/way#Way> a rdfs:Class .
+
+<http://example.org/way#> a rdfs:Class .
+
+<http://example.org/way#Destination> a rdfs:Class .
+
+<http://example.org/way#Direction> a rdfs:Class .
+
+<http://example.org/way#Location> a rdfs:Class .
+
+<http://example.org/way#Method> a rdfs:Class .
+
+<http://example.org/way#Person> a rdfs:Class .
+
+<http://example.org/way#Way> a rdfs:Class .
+
+<http://example.org/way/> a rdfs:Class .
+
+<http://example.org/way/Location> a rdfs:Class .
+
+<http://example.org/way/PedestrianPath> a rdfs:Class .
+
+<http://example.org/way/Road> a rdfs:Class .
+
+<http://example.org/way/Way> a rdfs:Class .
+
+<http://examplenamespace.com/way#Way> a rdfs:Class .
+
+<http://ontology.example.org/way#Location> a rdfs:Class .
+
+<http://ontology.example.org/way#Way> a rdfs:Class .
+
+<http://www.example.org/#Point> a rdfs:Class .
+
+<http://www.example.org/#Way> a rdfs:Class .
+
+<http://www.example.org/Subject> a rdfs:Class .
+
+<http://www.example.org/Way> a rdfs:Class .
+
+<http://www.example.org/ontology/way#Direction> a rdfs:Class .
+
+<http://www.example.org/ontology/way#Method> a rdfs:Class .
+
+<http://www.example.org/ontology/way#Path> a rdfs:Class .
+
+<http://www.example.org/way#Path> a rdfs:Class .
+
+<http://www.example.org/way#Way> a rdfs:Class .
+
+rdf:boolean a rdfs:Class .
+
+rdf:decimal a rdfs:Class .
+
+rdf:langString a rdfs:Class .
+
+rdfs:Class a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com/ns#hasEndPoint> rdfs:range <http://example.com/ns#Point>,
+        <http://example.com/ns#Way> .
+
+<http://example.com/ns#hasStartPoint> rdfs:range <http://example.com/ns#Point>,
+        <http://example.com/ns#Way> .
+
+<http://example.com/ns#hasWay> rdfs:range <http://example.com/ns#Entity>,
+        <http://example.com/ns#Way> .
+
+<http://example.org/hasEndPoint> rdfs:range <http://example.org/Location>,
+        <http://example.org/Way> .
+
+<http://example.org/hasStartPoint> rdfs:range <http://example.org/Location>,
+        <http://example.org/Way> .
+
+<http://example.org/ontology/way#hasDirection> rdfs:range <http://example.org/ontology/way#Way> .
+
+<http://example.org/ontology/way#hasEndPoint> rdfs:range <http://example.org/ontology/way#Way>,
+        rdfs:Resource .
+
+<http://example.org/ontology/way#hasLength> rdfs:range <http://example.org/ontology/way#Way> .
+
+<http://example.org/ontology/way#hasStartPoint> rdfs:range <http://example.org/ontology/way#Way>,
+        rdfs:Resource .
+
+<http://example.org/way#aspectOfWay> rdfs:range <http://example.org/way#Way> .
+
+<http://example.org/way#connectedTo> rdfs:range <http://example.org/way#Way> .
+
+<http://example.org/way#connects> rdfs:range <http://example.org/way#Way>,
+        rdfs:Class .
+
+<http://example.org/way#destination> rdfs:range <http://example.org/way#>,
+        <http://example.org/way#Destination> .
+
+<http://example.org/way#hasDirection> rdfs:range <http://example.org/way#Direction>,
+        <http://example.org/way#Way> .
+
+<http://example.org/way#hasEnd> rdfs:range <http://example.org/way#Location>,
+        <http://example.org/way#Way> .
+
+<http://example.org/way#hasEndPoint> rdfs:range <http://example.org/way#Way>,
+        rdfs:Resource .
+
+<http://example.org/way#hasLength> rdfs:range <http://example.org/way#Way> .
+
+<http://example.org/way#hasMethod> rdfs:range <http://example.org/way#Method>,
+        <http://example.org/way#Way> .
+
+<http://example.org/way#hasName> rdfs:range <http://example.org/way#Way> .
+
+<http://example.org/way#hasStart> rdfs:range <http://example.org/way#Location>,
+        <http://example.org/way#Way> .
+
+<http://example.org/way#hasStartPoint> rdfs:range <http://example.org/way#Way>,
+        rdfs:Resource .
+
+<http://example.org/way#isPartOf> rdfs:range <http://example.org/way#Way> .
+
+<http://example.org/way#length> rdfs:range <http://example.org/way#Way> .
+
+<http://example.org/way#name> rdfs:range <http://example.org/way#Way> .
+
+<http://example.org/way#source> rdfs:range <http://example.org/way#> .
+
+<http://example.org/way#understandsWay> rdfs:range <http://example.org/way#Person>,
+        <http://example.org/way#Way> .
+
+<http://example.org/way/hasDestination> rdfs:range <http://example.org/way/Location>,
+        <http://example.org/way/Way> .
+
+<http://example.org/way/hasDestinationType> rdfs:range <http://example.org/way/>,
+        rdfs:Resource .
+
+<http://example.org/way/hasDistance> rdfs:range <http://example.org/way/Way>,
+        rdf:decimal .
+
+<http://example.org/way/hasLength> rdfs:range <http://example.org/way/> .
+
+<http://example.org/way/hasMedium> rdfs:range <http://example.org/way/>,
+        rdfs:Resource .
+
+<http://example.org/way/hasSource> rdfs:range <http://example.org/way/Location>,
+        <http://example.org/way/Way> .
+
+<http://example.org/way/hasSourceType> rdfs:range <http://example.org/way/>,
+        rdfs:Resource .
+
+<http://example.org/way/hasTraffic> rdfs:range <http://example.org/way/Road>,
+        rdf:boolean .
+
+<http://example.org/way/isAccessible> rdfs:range <http://example.org/way/PedestrianPath>,
+        rdf:boolean .
+
+<http://example.org/way/name> rdfs:range <http://example.org/way/Location>,
+        rdf:langString .
+
+<http://examplenamespace.com/way#hasEnd> rdfs:range <http://examplenamespace.com/way#Way>,
+        rdfs:Resource .
+
+<http://examplenamespace.com/way#hasLength> rdfs:range <http://examplenamespace.com/way#Way> .
+
+<http://examplenamespace.com/way#hasStart> rdfs:range <http://examplenamespace.com/way#Way>,
+        rdfs:Resource .
+
+<http://ontology.example.org/way#hasEnd> rdfs:range <http://ontology.example.org/way#Location>,
+        <http://ontology.example.org/way#Way> .
+
+<http://ontology.example.org/way#hasStart> rdfs:range <http://ontology.example.org/way#Location>,
+        <http://ontology.example.org/way#Way> .
+
+<http://www.example.org/#hasEndPoint> rdfs:range <http://www.example.org/#Point>,
+        <http://www.example.org/#Way> .
+
+<http://www.example.org/#hasStartPoint> rdfs:range <http://www.example.org/#Point>,
+        <http://www.example.org/#Way> .
+
+<http://www.example.org/hasWay> rdfs:range <http://www.example.org/Subject>,
+        <http://www.example.org/Way> .
+
+<http://www.example.org/ontology/way#hasDirection> rdfs:range <http://www.example.org/ontology/way#Direction> .
+
+<http://www.example.org/ontology/way#hasLength> rdfs:range <http://www.example.org/ontology/way#Path> .
+
+<http://www.example.org/ontology/way#hasMethod> rdfs:range <http://www.example.org/ontology/way#Method> .
+
+<http://www.example.org/way#ArriveAt> rdfs:range <http://www.example.org/way#Path> .
+
+<http://www.example.org/way#CoveredBy> rdfs:range <http://www.example.org/way#Path> .
+
+<http://www.example.org/way#DepartFrom> rdfs:range <http://www.example.org/way#Path> .
+
+<http://www.example.org/way#UsedFor> rdfs:range <http://www.example.org/way#Path> .
+
+<http://www.example.org/way#distance> rdfs:range <http://www.example.org/way#Way> .
+
+<http://www.example.org/way#from> rdfs:range <http://www.example.org/way#Way> .
+
+<http://www.example.org/way#name> rdfs:range <http://www.example.org/way#Way> .
+
+<http://www.example.org/way#to> rdfs:range <http://www.example.org/way#Way> .
+

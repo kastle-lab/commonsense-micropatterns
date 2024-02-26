@@ -1,0 +1,99 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/#Father> a rdfs:Class .
+
+<http://example.com/#Human> a rdfs:Class .
+
+<http://example.com/#Person> a rdfs:Class .
+
+<http://example.com/Father> a rdfs:Class .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/Woman> a rdfs:Class .
+
+<http://example.com/family#Father> a rdfs:Class .
+
+<http://example.com/family#Person> a rdfs:Class .
+
+<http://example.org/Father> a rdfs:Class .
+
+<http://example.org/Human> a rdfs:Class .
+
+<http://example.org/Person> a rdfs:Class .
+
+<http://example.org/father> a rdfs:Class .
+
+<http://example.org/father#Daughter> a rdfs:Class .
+
+<http://example.org/father#Father> a rdfs:Class .
+
+<http://example.org/father#Son> a rdfs:Class .
+
+<http://example.org/ontology#Father> a rdfs:Class .
+
+<http://example.org/ontology#Person> a rdfs:Class .
+
+<http://purl.org/vocab/relationship/Father> a rdfs:Class .
+
+<http://www.example.org/Father> a rdfs:Class .
+
+<http://www.example.org/Person> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://example.com/#hasFather> rdfs:range <http://example.com/#Father>,
+        <http://example.com/#Human>,
+        <http://example.com/#Person> .
+
+<http://example.com/#isFatherOf> rdfs:range <http://example.com/#Father>,
+        <http://example.com/#Human>,
+        <http://example.com/#Person> .
+
+<http://example.com/family#hasFather> rdfs:range <http://example.com/family#Father>,
+        <http://example.com/family#Person> .
+
+<http://example.com/family#isFatherOf> rdfs:range <http://example.com/family#Father>,
+        <http://example.com/family#Person> .
+
+<http://example.com/hasChild> rdfs:range <http://example.com/Father>,
+        <http://example.com/Person> .
+
+<http://example.com/hasFather> rdfs:range <http://example.com/Father>,
+        <http://example.com/Person> .
+
+<http://example.com/hasSpouse> rdfs:range <http://example.com/Father>,
+        <http://example.com/Woman> .
+
+<http://example.com/isFatherOf> rdfs:range <http://example.com/Father>,
+        <http://example.com/Person> .
+
+<http://example.org/father#hasDaughter> rdfs:range <http://example.org/father#Daughter>,
+        <http://example.org/father#Father> .
+
+<http://example.org/father#hasSon> rdfs:range <http://example.org/father#Father>,
+        <http://example.org/father#Son> .
+
+<http://example.org/hasFather> rdfs:range <http://example.org/Father>,
+        <http://example.org/Person>,
+        <http://example.org/father> .
+
+<http://example.org/isFatherOf> rdfs:range <http://example.org/Father>,
+        <http://example.org/Human>,
+        <http://example.org/Person> .
+
+<http://example.org/ontology#hasFather> rdfs:range <http://example.org/ontology#Father>,
+        <http://example.org/ontology#Person> .
+
+<http://purl.org/vocab/relationship/childOf> rdfs:range <http://purl.org/vocab/relationship/Father>,
+        rdfs:Resource .
+
+<http://purl.org/vocab/relationship/fatherOf> rdfs:range <http://purl.org/vocab/relationship/Father>,
+        rdfs:Resource .
+
+<http://purl.org/vocab/relationship/hasSpouse> rdfs:range <http://purl.org/vocab/relationship/Father>,
+        rdfs:Resource .
+
+<http://www.example.org/hasFather> rdfs:range <http://www.example.org/Father>,
+        <http://www.example.org/Person> .
+

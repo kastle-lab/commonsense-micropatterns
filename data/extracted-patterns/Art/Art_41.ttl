@@ -1,0 +1,17 @@
+@prefix art: <http://example.com/art#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+art:Art    a rdfs:Class ;
+    rdfs:label "Art"@en ;
+    rdfs:comment "A class representing the concept of art"@en .
+art:painting    a art:Art ;
+    rdfs:label "Painting"@en ;
+    rdfs:comment "A class representing the concept of painting, which is a subtype of art"@en .
+art:sculpture    a art:Art ;
+    rdfs:label "Sculpture"@en ;
+    rdfs:comment "A class representing the concept of sculpture, which is a subtype of art"@en .
+art:music    a art:Art ;
+    rdfs:label "Music"@en ;
+    rdfs:comment "A class representing the concept of music, which is a subtype of art"@en .
+art:performingArt    a art:Art ;
+    rdfs:label "Performing Art"@en ;
+    rdfs:comment "A class representing the concept of performing art, which is a subtype of art"@en .

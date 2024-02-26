@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prg: <http://www.example.org/program#> .
+### Ontology surrounding the concept of Program## Classes
+prg:Programm rdf:type owl:Class ;
+   rdfs:comment "A series of coded software instructions to control the operation of a computer or other machine." ;
+   rdfs:label "Program" .
+prg:Software rdf:type owl:Class ;
+   rdfs:comment "The programs and other operating information used by a computer." ;
+   rdfs:label "Software" ;
+   rdfs:subClassOf prg:Program .
+prg:Script rdf:type owl:Class ;
+   rdfs:comment "A program or sequence of instructions that is interpreted or carried out by another program rather than by the computer processor." ;
+   rdfs:label "Script" ;
+   rdfs:subClassOf prg:Program .
+prg:Algorithm rdf:type owl:Class ;
+   rdfs:comment "A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer." ;
+   rdfs:label "Algorithm" ;
+   rdfs:subClassOf prg:Program .
+## Properties
+prg:isWrittenIn rdf:type owl:ObjectProperty ;
+   rdfs:comment "Specifies the programming language that was used to write the program." ;
+   rdfs:label "is written in" ;
+   rdfs:domain prg:Program ;
+   rdfs:range prg:ProgrammingLanguage .
+prg:hasAuthor rdf:type owl:ObjectProperty ;
+   rdfs:comment "Specifies the author of the program." ;
+   rdfs:label "has author" ;
+   rdfs:domain prg:Program ;
+   rdfs:range prg:Programmer .
+#######################################

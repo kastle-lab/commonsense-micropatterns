@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix o: <http://example.org/ontology/> .
+# Classes
+o:Health rdf:type owl:Class .
+o:Disease rdf:type owl:Class .
+o:Symptom rdf:type owl:Class .
+o:Treatment rdf:type owl:Class .
+o:Medication rdf:type owl:Class .
+# Object Propertieso:hasDisease rdf:type owl:ObjectProperty ;
+    rdf:domain o:Health ;
+    rdf:range o:Disease .
+o:hasSymptom rdf:type owl:ObjectProperty ;
+    rdf:domain o:Disease ;
+    rdf:range o:Symptom .
+o:hasTreatment rdf:type owl:ObjectProperty ;
+    rdf:domain o:Disease ;
+    rdf:range o:Treatment .
+o:treatedBy rdf:type owl:ObjectProperty ;
+    rdf:domain o:Treatment ;
+    rdf:range o:Medication .
+# Data Propertyo:severity rdf:type owl:DatatypeProperty ;
+    rdf:domain o:Disease ;
+    rdf:range xsd:string .
+# Named Individualso:covid_19 rdf:type o:Disease ;
+    o:hasSymptom o:coughing, o:fever, o:loss_of_taste ;
+    o:hasTreatment o:vaccine ;
+    o:severity "High".
+o:coughing rdf:type o:Symptom .
+o:fever rdf:type o:Symptom .
+o:loss_of_taste rdf:type o:Symptom .
+o:vaccine rdf:type o:Treatment ;
+    o:treatedBy o:moderna, o:pfizer, o:johnson_and_johnson .
+o:moderna rdf:type o:Medication .
+o:pfizer rdf:type o:Medication .
+o:johnson_and_johnson rdf:type o:Medication .

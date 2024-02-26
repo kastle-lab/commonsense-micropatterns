@@ -1,0 +1,364 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Community> a rdfs:Class .
+
+<http://example.com/Location> a rdfs:Class .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/community#Community> a rdfs:Class .
+
+<http://example.com/community#Community_Service> a rdfs:Class .
+
+<http://example.com/community#Cultural_Identity> a rdfs:Class .
+
+<http://example.com/community#Event> a rdfs:Class .
+
+<http://example.com/community#Member> a rdfs:Class .
+
+<http://example.com/community#Person> a rdfs:Class .
+
+<http://example.com/community#Role> a rdfs:Class .
+
+<http://example.com/vocab#Community> a rdfs:Class .
+
+<http://example.org#Community> a rdfs:Class .
+
+<http://example.org#Person> a rdfs:Class .
+
+<http://example.org/Community> a rdfs:Class .
+
+<http://example.org/Location> a rdfs:Class .
+
+<http://example.org/MyCommunityOntology#Community> a rdfs:Class .
+
+<http://example.org/MyCommunityOntology#Person> a rdfs:Class .
+
+<http://example.org/Person> a rdfs:Class .
+
+<http://example.org/community#> a rdfs:Class .
+
+<http://example.org/community#Activity> a rdfs:Class .
+
+<http://example.org/community#Community> a rdfs:Class .
+
+<http://example.org/community#Leader> a rdfs:Class .
+
+<http://example.org/community#LocatedIn> a rdfs:Class .
+
+<http://example.org/community#Location> a rdfs:Class .
+
+<http://example.org/community#Member> a rdfs:Class .
+
+<http://example.org/community#Volunteer> a rdfs:Class .
+
+<http://example.org/community/Community> a rdfs:Class .
+
+<http://example.org/ontology/community#Community> a rdfs:Class .
+
+<http://example.org/ontology/community#CommunityMember> a rdfs:Class .
+
+<http://example.org/ontology/community#CommunityRole> a rdfs:Class .
+
+<http://example.org/ontology/community#GeographicalLocation> a rdfs:Class .
+
+<http://www.example.com/communities#Community> a rdfs:Class .
+
+<http://www.example.com/communities#Location> a rdfs:Class .
+
+<http://www.example.com/communities#Member> a rdfs:Class .
+
+<http://www.example.com/communityOntology#Comment> a rdfs:Class .
+
+<http://www.example.com/communityOntology#Community> a rdfs:Class .
+
+<http://www.example.com/communityOntology#Event> a rdfs:Class .
+
+<http://www.example.com/communityOntology#Member> a rdfs:Class .
+
+<http://www.example.com/communityOntology#Post> a rdfs:Class .
+
+<http://www.example.org/community#Activity> a rdfs:Class .
+
+<http://www.example.org/community#Community> a rdfs:Class .
+
+<http://www.example.org/community#Culture> a rdfs:Class .
+
+<http://www.example.org/community#Institution> a rdfs:Class .
+
+<http://www.example.org/community#Member> a rdfs:Class .
+
+<http://www.example.org/community#Person> a rdfs:Class .
+
+<http://www.example.org/community/> a rdfs:Class .
+
+<http://www.example.org/community/CommunityRole> a rdfs:Class .
+
+<http://www.example.org/community/Event> a rdfs:Class .
+
+<http://www.example.org/community/Interest> a rdfs:Class .
+
+<http://www.example.org/community/Location> a rdfs:Class .
+
+<http://www.example.org/community/Member> a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+<http://xmlns.com/foaf/0.1/Person> a rdfs:Class .
+
+<http://example.com/CommunityLocation> rdfs:range <http://example.com/Community>,
+        <http://example.com/Location> .
+
+<http://example.com/community#attendsEvent> rdfs:range <http://example.com/community#Event>,
+        <http://example.com/community#Member> .
+
+<http://example.com/community#belongs> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Person> .
+
+<http://example.com/community#hasCultural_Identity> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Cultural_Identity> .
+
+<http://example.com/community#hasEvent> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Event> .
+
+<http://example.com/community#hasMember> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Member>,
+        <http://example.com/community#Person> .
+
+<http://example.com/community#hasRole> rdfs:range <http://example.com/community#Member>,
+        <http://example.com/community#Role> .
+
+<http://example.com/community#location> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Person> .
+
+<http://example.com/community#memberOf> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Member> .
+
+<http://example.com/community#name> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Person> .
+
+<http://example.com/community#providesService> rdfs:range <http://example.com/community#Community>,
+        <http://example.com/community#Community_Service> .
+
+<http://example.com/communityLeader> rdfs:range <http://example.com/Community>,
+        <http://example.com/Person> .
+
+<http://example.com/hasMember> rdfs:range <http://example.com/Community>,
+        <http://xmlns.com/foaf/0.1/Person> .
+
+<http://example.com/location> rdfs:range <http://example.com/Community> .
+
+<http://example.com/member> rdfs:range <http://example.com/Community>,
+        <http://example.com/Person> .
+
+<http://example.com/memberCount> rdfs:range <http://example.com/Community> .
+
+<http://example.com/name> rdfs:range <http://example.com/Community> .
+
+<http://example.com/vocab#goal> rdfs:range <http://example.com/vocab#Community> .
+
+<http://example.com/vocab#location> rdfs:range <http://example.com/vocab#Community> .
+
+<http://example.com/vocab#member> rdfs:range <http://example.com/vocab#Community> .
+
+<http://example.com/vocab#name> rdfs:range <http://example.com/vocab#Community> .
+
+<http://example.org#communityMember> rdfs:range <http://example.org#Community>,
+        <http://example.org#Person> .
+
+<http://example.org#communityName> rdfs:range <http://example.org#Community> .
+
+<http://example.org#personName> rdfs:range <http://example.org#Person> .
+
+<http://example.org/MyCommunityOntology#hasMember> rdfs:range <http://example.org/MyCommunityOntology#Community>,
+        <http://example.org/MyCommunityOntology#Person> .
+
+<http://example.org/MyCommunityOntology#location> rdfs:range <http://example.org/MyCommunityOntology#Community> .
+
+<http://example.org/MyCommunityOntology#name> rdfs:range <http://example.org/MyCommunityOntology#Community> .
+
+<http://example.org/MyCommunityOntology#personAge> rdfs:range <http://example.org/MyCommunityOntology#Person> .
+
+<http://example.org/MyCommunityOntology#personName> rdfs:range <http://example.org/MyCommunityOntology#Person> .
+
+<http://example.org/community#CommunityName> rdfs:range <http://example.org/community#>,
+        <http://example.org/community#Community> .
+
+<http://example.org/community#LeaderName> rdfs:range <http://example.org/community#Leader> .
+
+<http://example.org/community#MemberName> rdfs:range <http://example.org/community#Member> .
+
+<http://example.org/community#VolunteerName> rdfs:range <http://example.org/community#Volunteer> .
+
+<http://example.org/community#age> rdfs:range <http://example.org/community#Member> .
+
+<http://example.org/community#belongsTo> rdfs:range <http://example.org/community#Community>,
+        <http://example.org/community#Member> .
+
+<http://example.org/community#communityLocation> rdfs:range <http://example.org/community#> .
+
+<http://example.org/community#existsIn> rdfs:range <http://example.org/community#Community>,
+        <http://example.org/community#Location> .
+
+<http://example.org/community#gender> rdfs:range <http://example.org/community#Member> .
+
+<http://example.org/community#hasActivity> rdfs:range <http://example.org/community#Activity>,
+        <http://example.org/community#Community> .
+
+<http://example.org/community#hasAge> rdfs:range <http://example.org/community#Member> .
+
+<http://example.org/community#hasCommonInterest> rdfs:range <http://example.org/community#Community> .
+
+<http://example.org/community#hasGender> rdfs:range <http://example.org/community#Member> .
+
+<http://example.org/community#hasLeader> rdfs:range <http://example.org/community#>,
+        <http://example.org/community#Leader> .
+
+<http://example.org/community#hasLocation> rdfs:range <http://example.org/community#Community>,
+        <http://example.org/community#LocatedIn> .
+
+<http://example.org/community#hasMember> rdfs:range <http://example.org/community#>,
+        <http://example.org/community#Community>,
+        <http://example.org/community#Member> .
+
+<http://example.org/community#hasName> rdfs:range <http://example.org/community#Member> .
+
+<http://example.org/community#hasVolunteer> rdfs:range <http://example.org/community#>,
+        <http://example.org/community#Volunteer> .
+
+<http://example.org/community#leader> rdfs:range <http://example.org/community#Community>,
+        <http://example.org/community#Member> .
+
+<http://example.org/community#location> rdfs:range <http://example.org/community#Community> .
+
+<http://example.org/community#member> rdfs:range <http://example.org/community#Community>,
+        <http://example.org/community#Member> .
+
+<http://example.org/community#memberCount> rdfs:range <http://example.org/community#Community> .
+
+<http://example.org/community#memberOf> rdfs:range <http://example.org/community#Community>,
+        <http://example.org/community#Member> .
+
+<http://example.org/community#name> rdfs:range <http://example.org/community#Community> .
+
+<http://example.org/community#occupation> rdfs:range <http://example.org/community#Member> .
+
+<http://example.org/community#population> rdfs:range <http://example.org/community#Community> .
+
+<http://example.org/community/communityName> rdfs:range <http://example.org/community/Community> .
+
+<http://example.org/community/hasMember> rdfs:range <http://example.org/community/Community>,
+        rdfs:Resource .
+
+<http://example.org/community/locatedIn> rdfs:range <http://example.org/community/Community>,
+        rdfs:Resource .
+
+<http://example.org/hasMember> rdfs:range <http://example.org/Community>,
+        <http://example.org/Person> .
+
+<http://example.org/location> rdfs:range <http://example.org/Community>,
+        <http://example.org/Location> .
+
+<http://example.org/ontology/community#hasCommunityRole> rdfs:range <http://example.org/ontology/community#CommunityMember>,
+        <http://example.org/ontology/community#CommunityRole> .
+
+<http://example.org/ontology/community#hasMember> rdfs:range <http://example.org/ontology/community#Community>,
+        <http://example.org/ontology/community#CommunityMember> .
+
+<http://example.org/ontology/community#isLocatedIn> rdfs:range <http://example.org/ontology/community#Community>,
+        <http://example.org/ontology/community#GeographicalLocation> .
+
+<http://www.example.com/communities#hasMember> rdfs:range <http://www.example.com/communities#Community>,
+        <http://www.example.com/communities#Member> .
+
+<http://www.example.com/communities#locatedIn> rdfs:range <http://www.example.com/communities#Community>,
+        <http://www.example.com/communities#Location> .
+
+<http://www.example.com/communities#name> rdfs:range <http://www.example.com/communities#Community> .
+
+<http://www.example.com/communities#population> rdfs:range <http://www.example.com/communities#Community> .
+
+<http://www.example.com/communityOntology#commentedBy> rdfs:range <http://www.example.com/communityOntology#Comment>,
+        <http://www.example.com/communityOntology#Member> .
+
+<http://www.example.com/communityOntology#communityName> rdfs:range <http://www.example.com/communityOntology#Community> .
+
+<http://www.example.com/communityOntology#eventDate> rdfs:range <http://www.example.com/communityOntology#Event> .
+
+<http://www.example.com/communityOntology#hasComment> rdfs:range <http://www.example.com/communityOntology#Comment>,
+        <http://www.example.com/communityOntology#Post> .
+
+<http://www.example.com/communityOntology#hasMember> rdfs:range <http://www.example.com/communityOntology#Community>,
+        <http://www.example.com/communityOntology#Member> .
+
+<http://www.example.com/communityOntology#hasPost> rdfs:range <http://www.example.com/communityOntology#Community>,
+        <http://www.example.com/communityOntology#Post> .
+
+<http://www.example.com/communityOntology#heldIn> rdfs:range <http://www.example.com/communityOntology#Community>,
+        <http://www.example.com/communityOntology#Event> .
+
+<http://www.example.com/communityOntology#memberName> rdfs:range <http://www.example.com/communityOntology#Member> .
+
+<http://www.example.com/communityOntology#participatesIn> rdfs:range <http://www.example.com/communityOntology#Event>,
+        <http://www.example.com/communityOntology#Member> .
+
+<http://www.example.com/communityOntology#postDate> rdfs:range <http://www.example.com/communityOntology#Post> .
+
+<http://www.example.com/communityOntology#postTitle> rdfs:range <http://www.example.com/communityOntology#Post> .
+
+<http://www.example.com/communityOntology#writtenBy> rdfs:range <http://www.example.com/communityOntology#Member>,
+        <http://www.example.com/communityOntology#Post> .
+
+<http://www.example.org/community#activity> rdfs:range <http://www.example.org/community#Community>,
+        rdfs:Resource .
+
+<http://www.example.org/community#coordinator> rdfs:range <http://www.example.org/community#Activity>,
+        <http://www.example.org/community#Community>,
+        <http://www.example.org/community#Member>,
+        rdfs:Resource .
+
+<http://www.example.org/community#date> rdfs:range <http://www.example.org/community#Activity> .
+
+<http://www.example.org/community#hasCulture> rdfs:range <http://www.example.org/community#Community>,
+        <http://www.example.org/community#Culture> .
+
+<http://www.example.org/community#hasInstitution> rdfs:range <http://www.example.org/community#Community>,
+        <http://www.example.org/community#Institution> .
+
+<http://www.example.org/community#hasMember> rdfs:range <http://www.example.org/community#Community>,
+        <http://www.example.org/community#Person> .
+
+<http://www.example.org/community#joined> rdfs:range <http://www.example.org/community#Community>,
+        <http://www.example.org/community#Member> .
+
+<http://www.example.org/community#joinedDate> rdfs:range <http://www.example.org/community#Member> .
+
+<http://www.example.org/community#location> rdfs:range <http://www.example.org/community#Community>,
+        rdfs:Resource .
+
+<http://www.example.org/community#member> rdfs:range <http://www.example.org/community#Community>,
+        rdfs:Resource .
+
+<http://www.example.org/community#name> rdfs:range <http://www.example.org/community#Community> .
+
+<http://www.example.org/community#organizedBy> rdfs:range <http://www.example.org/community#Activity>,
+        <http://www.example.org/community#Member> .
+
+<http://www.example.org/community#participant> rdfs:range <http://www.example.org/community#Activity>,
+        <http://www.example.org/community#Member> .
+
+<http://www.example.org/community/hasInterest> rdfs:range <http://www.example.org/community/Interest>,
+        <http://www.example.org/community/Member> .
+
+<http://www.example.org/community/hasMember> rdfs:range <http://www.example.org/community/>,
+        <http://www.example.org/community/Member> .
+
+<http://www.example.org/community/hasRole> rdfs:range <http://www.example.org/community/CommunityRole>,
+        <http://www.example.org/community/Member> .
+
+<http://www.example.org/community/holdsEvent> rdfs:range <http://www.example.org/community/>,
+        <http://www.example.org/community/Event> .
+
+<http://www.example.org/community/locatedAt> rdfs:range <http://www.example.org/community/>,
+        <http://www.example.org/community/Location> .
+

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/ontology/chair#> .
+ex:Chair  rdf:type rdfs:Class ;
+  rdfs:label ""Chair"" ;
+  rdfs:comment ""A piece of furniture with a raised surface supported by legs, commonly used to seat a single person."" .
+ex:hasMaterial  rdf:type rdf:Property ;
+  rdfs:label ""has material"" ;
+  rdfs:comment ""The material from which a chair is made."" ;
+  rdfs:domain ex:Chair ;
+  rdfs:range rdfs:Literal .
+ex:hasStyle  rdf:type rdf:Property ;
+  rdfs:label ""has style"" ;
+  rdfs:comment ""The style of the chair, e.g., modern, classic, rustic, etc."" ;
+  rdfs:domain ex:Chair ;
+  rdfs:range rdfs:Literal .
+ex:hasColor  rdf:type rdf:Property ;
+  rdfs:label ""has color"" ;
+  rdfs:comment ""The color of the chair."" ;
+  rdfs:domain ex:Chair ;
+  rdfs:range rdfs:Literal .
+ex:hasHeight  rdf:type rdf:Property ;
+  rdfs:label ""has height"" ;
+  rdfs:comment ""The height of the chair."" ;
+  rdfs:domain ex:Chair ;
+  rdfs:range xsd:decimal .

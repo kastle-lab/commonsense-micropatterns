@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/ex#> .
+# Classes
+ex:Person rdf:type rdfs:Class .
+# Subclassesex:Parent rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+ex:Child rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+ex:Teacher rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+ex:Student rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+# Properties
+ex:hasName rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string .
+ex:hasAge rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:integer .
+ex:hasParent rdf:type rdf:Property ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:Parent .
+ex:hasChild rdf:type rdf:Property ;
+    rdfs:domain ex:Parent ;
+    rdfs:range ex:Child .
+ex:teaches rdf:type rdf:Property ;
+    rdfs:domain ex:Teacher ;
+    rdfs:range ex:Student .
+ex:learnsFrom rdf:type rdf:Property ;
+    rdfs:domain ex:Student ;
+    rdfs:range ex:Teacher .

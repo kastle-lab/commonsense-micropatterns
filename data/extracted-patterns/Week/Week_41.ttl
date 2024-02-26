@@ -1,0 +1,18 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+dbo:Week a owl:Class ;
+    rdfs:label "Week"@en ;
+    rdfs:comment "A period of seven days."@en ;
+    rdfs:subClassOf dbo:TimePeriod .
+dbo:hasDay a owl:ObjectProperty ;
+    rdfs:label "has day"@en ;
+    rdfs:domain dbo:Week ;
+    rdfs:range dbo:Day .
+dbo:Day a owl:Class ;
+    rdfs:label "Day"@en ;
+    rdfs:comment "A period of 24 hours."@en ;
+    rdfs:subClassOf dbo:TimePeriod .
+dbo:Monday, dbo:Tuesday, dbo:Wednesday, dbo:Thursday, dbo:Friday, dbo:Saturday, dbo:Sunday a owl:NamedIndividual, dbo:Day .

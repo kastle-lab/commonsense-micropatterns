@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix others: <http://example.org/others#> .
+# Class definitionothers:Others rdf:type owl:Class ;
+    rdfs:label "Others" ;
+    rdfs:comment "This class encapsulates all entities that are not included in the previous classes."@en .
+# Subclass definition as an exampleothers:Extra rdf:type owl:Class ;
+    rdfs:label "Extra" ;
+    rdfs:comment "This class is for extra entities that are not included in the previous classes."@en ;
+    rdfs:subClassOf others:Others.# Individual definition as an exampleothers:JohnDoe rdf:type others:Others ;
+    rdfs:label "John Doe" .

@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix school: <http://www.school.org/ontology#> .
+# Classes
+school:Student a rdfs:Class .
+school:Teacher a rdfs:Class .
+school:Class a rdfs:Class .
+school:School a rdfs:Class .
+school:Subject a rdfs:Class .
+# Object Propertiesschool:hasStudent a rdf:Property ;
+    rdfs:domain school:School ;
+    rdfs:range school:Student .
+school:hasTeacher a rdf:Property ;
+    rdfs:domain school:School ;
+    rdfs:range school:Teacher .
+school:teachersSubject a rdf:Property ;
+    rdfs:domain school:Teacher ;
+    rdfs:range school:Subject .
+school:studiesSubject a rdf:Property ;
+    rdfs:domain school:Student ;
+    rdfs:range school:Subject .
+school:attendsClass a rdf:Property ;
+    rdfs:domain school:Student ;
+    rdfs:range school:Class .
+school:teachesClass a rdf:Property ;
+    rdfs:domain school:Teacher ;
+    rdfs:range school:Class .
+# Datatype Propertiesschool:hasName a rdf:Property ;
+    rdfs:domain [ school:Student , school:Teacher , school:School , school:Subject , school:Class ] ;
+    rdfs:range xsd:string .
+school:hasAge a rdf:Property ;
+    rdfs:domain [ school:Student , school:Teacher ] ;
+    rdfs:range xsd:integer .
+school:hasGrade a rdf:Property ;
+    rdfs:domain school:Student ;
+    rdfs:range xsd:integer .

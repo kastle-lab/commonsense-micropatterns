@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.org/program#> .
+:Program a rdfs:Class ;
+    rdfs:comment "Any sequence of instructions that can be interpreted by a computer" ;
+    rdfs:label "Program" .
+:hasProgramName a owl:DatatypeProperty ;
+    rdfs:domain :Program ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Denotes the name of a program." ;
+    rdfs:label "has program name" .
+:hasVersion a owl:DatatypeProperty ;
+    rdfs:domain :Program ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Denotes the version of a program." ;
+    rdfs:label "has version" .
+:hasDeveloper a owl:ObjectProperty ;
+    rdfs:domain :Program ;
+    rdfs:range :Developer ;
+    rdfs:comment "Denotes the developer of a program." ;
+    rdfs:label "has developer" .
+:Developer a rdfs:Class ;
+    rdfs:comment "The individual or organization responsible for creating a program." ;
+    rdfs:label "Developer" .
+:hasDeveloperName a owl:DatatypeProperty ;
+    rdfs:domain :Developer ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Denotes the name of a developer." ;
+    rdfs:label "has developer name" .

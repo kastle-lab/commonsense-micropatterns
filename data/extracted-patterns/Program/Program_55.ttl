@@ -1,0 +1,29 @@
+ Please note that this is a very basic and high level ontology. Depending on your specific requirements about Programs, you may need to further extend this ontology to fully capture all the necessary details. Also, you might need to adjust the URIs according to your preferred ontology URI naming conventions.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.com/ontology#> .
+:Program a owl:Class ;
+         rdfs:label "Program" ;
+         rdfs:comment "Represents a computer program or software application" ;
+         rdfs:subClassOf owl:Thing .
+:hasName a owl:DatatypeProperty ;
+         rdfs:label "has name" ;
+         rdfs:comment "Represents the name of a program" ;
+         rdfs:domain :Program ;
+         rdfs:range xsd:string .
+:hasVersion a owl:DatatypeProperty ;
+            rdfs:label "has version" ;
+            rdfs:comment "Represents the version of a program" ;
+            rdfs:domain :Program ;
+            rdfs:range xsd:string .
+:hasDeveloper a owl:ObjectProperty ;
+              rdfs:label "has developer" ;
+              rdfs:comment "Represents the developer of a program" ;
+              rdfs:domain :Program ;
+              rdfs:range :Developer .
+:Developer a owl:Class ;
+           rdfs:label "Developer" ;
+           rdfs:comment "Represents a software developer or development team" ;
+           rdfs:subClassOf owl:Thing .

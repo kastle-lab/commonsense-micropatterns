@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix info: <http://example.org/info#> .
+info:     a rdfs:Class ;
+    rdfs:label "Information" ;
+    rdfs:comment "This class represents any type of information." .
+info:textualInformation     a rdfs:Class ;
+    rdfs:subClassOf info: ;
+    rdfs:label "Textual Information" ;
+    rdfs:comment "This class represents information expressed in textual form." .
+info:numericInformation     a rdfs:Class ;
+    rdfs:subClassOf info: ;
+    rdfs:label "Numeric Information" ;
+    rdfs:comment "This class represents information expressed in numerical form." .
+info:graphicInformation     a rdfs:Class ;
+    rdfs:subClassOf info: ;
+    rdfs:label "Graphic Information" ;
+    rdfs:comment "This class represents information expressed in graphical form." .
+info:soundInformation     a rdfs:Class ;
+    rdfs:subClassOf info: ;
+    rdfs:label "Sound Information" ;
+    rdfs:comment "This class represents information expressed in sound form." .

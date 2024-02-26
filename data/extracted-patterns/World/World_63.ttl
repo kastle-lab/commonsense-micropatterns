@@ -1,0 +1,2 @@
+@prefix ex: <http://example.com/> .
+ex:World ex:provides ex:Resources .

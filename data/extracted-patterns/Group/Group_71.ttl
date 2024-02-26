@@ -1,0 +1,10 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Defining Group as a class
+ex:Group a rdfs:Class ;
+# Defining a property "groupName" that links an instance of Group with its nameex:groupName a rdf:Property ;
+  rdfs:domain ex:Group ;
+  rdfs:range rdfs:Literal .
+# Example of a specific group instanceex:Group1 a ex:Group ;
+  ex:groupName "Example Group 1" .

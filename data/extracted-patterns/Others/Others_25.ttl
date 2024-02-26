@@ -1,0 +1,23 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix others: <http://example.com/ontology/others#> .
+others:     rdf:type rdfs:Class ;
+    rdfs:comment "Represents the concept of Others, individuals or entities separate from the subject" .
+others:individual     rdf:type rdfs:Class ;
+    rdfs:subClassOf others: ;
+    rdfs:comment "Represents a single individual that is not the subject" .
+others:entity    rdf:type rdfs:Class ;
+    rdfs:subClassOf others: ;
+    rdfs:comment "Represents an entity that is not the subject" .
+others:relationshipWithOthers    rdf:type rdf:Property ;
+    rdfs:domain others: ;
+    rdfs:range rdf:Resource ;
+    rdfs:comment "Represents relationship between the subject and Others" .
+others:hasName    rdf:type rdf:Property ;
+    rdfs:domain others:individual ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Represents the name of the individual in Others" .
+others:hasIdentifier    rdf:type rdf:Property ;
+    rdfs:domain others:entity ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Represents the identifier of the entity in Others" .

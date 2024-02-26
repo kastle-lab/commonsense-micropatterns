@@ -1,0 +1,15 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ex:Job rdf:type rdf:Class .
+ex:JobTitle rdf:type rdf:Property ;
+    rdf:domain ex:Job;
+    rdf:range rdf:Literal .
+ex:JobDescription rdf:type rdf:Property;
+    rdf:domain ex:Job;
+    rdf:range rdf:Literal .
+ex:Salary rdf:type rdf:Property;
+    rdf:domain ex:Job;
+    rdf:range rdf:Literal .
+ex:Employee rdf:type rdf:Property;
+    rdf:domain ex:Job;
+    rdf:range rdf:Literal .

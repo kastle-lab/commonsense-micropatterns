@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+:Parent rdf:type rdfs:Class .
+:hasMother rdf:type rdf:Property ;
+  rdfs:domain :Person ;
+  rdfs:range :Parent ;
+  rdfs:label "has mother"@en ;
+  rdfs:comment "The mother of the person"@en .
+:hasFather rdf:type rdf:Property ;
+  rdfs:domain :Person ;
+  rdfs:range :Parent ;
+   rdfs:label "has father"@en ;
+  rdfs:comment "The father of the person"@en .
+:Person rdf:type rdfs:Class .
+:john rdf:type :Person ;
+  :hasFather :david ;
+  :hasMother :mary .
+:mary rdf:type :Parent .
+:david rdf:type :Parent .

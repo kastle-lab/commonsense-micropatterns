@@ -1,0 +1,42 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gov: <http://example.org/government#> .
+# Class termsgov:Government a rdfs:Class ;
+    rdfs:comment "An organized system of ruling and public administration."@en ;
+    rdfs:label "Government"@en .
+gov:Department a rdfs:Class ;
+    rdfs:comment "A specialized division of government."@en ;
+    rdfs:label "Department"@en ;
+    rdfs:subClassOf gov:Government .
+gov:Politician a rdfs:Class ;
+    rdfs:comment "A person who is involved in the political process, often as a chosen representative."@en ;
+    rdfs:label "Politician"@en .
+gov:Citizen a rdfs:Class ;
+    rdfs:comment "A person recognized by the government as a member of the state."@en ;
+    rdfs:label "Citizen"@en .
+# Property termsgov:hasDepartment a rdf:Property ;
+    rdfs:domain gov:Government ;
+    rdfs:range gov:Department ;
+    rdfs:label "has department"@en ;
+    rdfs:comment "A relation describing that a government has a department."@en .
+gov:hasPolitician a rdf:Property ;
+    rdfs:domain gov:Government ;
+    rdfs:range gov:Politician ;
+    rdfs:label "has politician"@en ;
+    rdfs:comment "A relation describing that a government is related to a politician."@en .
+gov:hasCitizen a rdf:Property ;
+    rdfs:domain gov:Government ;
+    rdfs:range gov:Citizen ;
+    rdfs:label "has citizen"@en ;
+    rdfs:comment "A relation describing that a government is related to a citizen."@en .
+# Individuals
+gov:UnitedStates a gov:Government ;
+    gov:hasDepartment gov:DepartmentOfState ;
+    gov:hasPolitician gov:JoeBiden ;
+    gov:hasCitizen gov:JohnSmith .
+gov:DepartmentOfState a gov:Department ;
+    rdfs:label "Department of State"@en .
+gov:JoeBiden a gov:Politician ;
+    rdfs:label "Joe Biden"@en .
+gov:JohnSmith a gov:Citizen ;
+    rdfs:label "John Smith"@en .

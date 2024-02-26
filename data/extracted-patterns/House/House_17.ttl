@@ -1,0 +1,37 @@
+@prefix ex: <http://example.org#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:House a rdfs:Class ;
+   rdfs:label "House"@en ;
+   rdfs:comment "A building that people, usually one family, live in"@en .
+ex:houseAddress a rdfs:Property ;
+   rdfs:range vcard:Address ;
+   rdfs:domain ex:House ;
+   rdfs:label "house address"@en ;
+   rdfs:comment "The address of the house"@en .
+   ex:houseOwner a rdfs:Property ;
+   rdfs:range vcard:Individual ;
+   rdfs:domain ex:House ;
+   rdfs:label "house owner"@en ;
+   rdfs:comment "The person who owns the house"@en .
+   ex:houseBuiltYear a rdfs:Property ;
+   rdfs:range xsd:integer ;
+   rdfs:domain ex:House ;
+   rdfs:label "house built year"@en ;
+   rdfs:comment "The year the house was built"@en .
+     ex:housePrice a rdfs:Property ;
+   rdfs:range xsd:decimal ;
+   rdfs:domain ex:House ;
+   rdfs:label "house price"@en ;
+   rdfs:comment "The price value of the house"@en .
+ex:houseNumberOfRooms a rdfs:Property ;
+   rdfs:range xsd:integer ;
+   rdfs:domain ex:House ;
+   rdfs:label "house number of rooms"@en ;
+   rdfs:comment "The number of rooms in the house"@en .
+   ex:houseSize a rdfs:Property ;
+   rdfs:range xsd:decimal ;
+   rdfs:domain ex:House ;
+   rdfs:label "house size"@en ;
+   rdfs:comment "The size of the house in square feet"@en .

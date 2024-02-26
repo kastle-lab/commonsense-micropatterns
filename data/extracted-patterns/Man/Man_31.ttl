@@ -1,0 +1,26 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix myOnt: <http://www.example.org/myOntology#> .
+myOnt:Man a rdfs:Class ;
+rdfs:subClassOf rdfs:Resource ;
+rdfs:label "Man"@en ;
+rdfs:comment "A person who is an adult male human"@en ;
+         myOnt:hasAge a rdf:Property ;
+         rdfs:domain myOnt:Man ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "The age of the man"@en .
+             myOnt:hasFirstName a rdf:Property ;
+             rdfs:domain myOnt:Man ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The first name of the man"@en .
+              myOnt:hasLastName a rdf:Property ;
+              rdfs:domain myOnt:Man ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The last name of the man"@en .
+               myOnt:hasGender a rdf:Property ;
+               rdfs:domain myOnt:Man ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The gender of the man, typically 'Male'"@en .
+                myOnt:isMarried a rdf:Property ;
+                rdfs:domain myOnt:Man ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "The marital status of the man"@en.

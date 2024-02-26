@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lineOnt: <http://example.org/LineOntology#> .
+# Line classlineOnt:Line a rdfs:Class ;
+    rdfs:label "Line"@en ;
+    rdfs:comment "Class representing a line in geometric space"@en .
+     # Line hasStartPoint propertylineOnt:hasStartPoint a rdf:Property ;
+    rdfs:label "has start point"@en ;
+    rdfs:comment "Property indicating the start point of a line"@en ;
+    rdfs:domain lineOnt:Line ;
+    rdfs:range xsd:decimal .
+# Line hasEndPoint propertylineOnt:hasEndPoint a rdf:Property ;
+    rdfs:label "has end point"@en ;
+    rdfs:comment "Property indicating the end point of a line"@en ;
+    rdfs:domain lineOnt:Line ;
+    rdfs:range xsd:decimal .
+#Line hasLength propertylineOnt:hasLength a rdf:Property ;
+    rdfs:label "has length"@en ;
+    rdfs:comment "Property indicating the length of a line"@en ;
+    rdfs:domain lineOnt:Line ;
+    rdfs:range xsd:decimal .
+# Line hasSlope propertylineOnt:hasSlope a rdf:Property ;
+    rdfs:label "has slope"@en ;
+    rdfs:comment "Property indicating the slope of a line"@en ;
+    rdfs:domain lineOnt:Line ;
+    rdfs:range xsd:decimal .

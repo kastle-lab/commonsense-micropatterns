@@ -1,0 +1,20 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.com/ontology#> .
+:book a rdf:Class .
+:title a rdf:Property ;
+     rdfs:domain :book ;
+     rdfs:range xsd:string .
+:author a rdf:Property ;
+     rdfs:domain :book ;
+     rdfs:range xsd:string .
+:publicationYear a rdf:Property ;
+     rdfs:domain :book ;
+     rdfs:range xsd:integer .
+:Book1 a :book ;
+     :title "The Great Gatsby" ;
+     :author "F. Scott Fitzgerald" ;
+     :publicationYear 1925 .
+:Book2 a :book ;
+     :title "To Kill a Mockingbird" ;
+     :author "Harper Lee" ;
+     :publicationYear 1960 .

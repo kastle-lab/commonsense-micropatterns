@@ -1,0 +1,32 @@
+@prefix sch: <http://www.example.org/school#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+sch:School a owl:Class ;
+  rdfs:label "School" ;
+  rdfs:comment "This entity represents a particular school." .
+sch:Student a owl:Class ;
+  rdfs:label "Student" ;
+  rdfs:subClassOf sch:Person ;
+  rdfs:comment "This entity represents a student who studies at a school." .
+sch:Teacher a owl:Class ;
+  rdfs:label "Teacher" ;
+  rdfs:subClassOf sch:Person ;
+  rdfs:comment "This entity represents a teacher who teaches at a school." .
+sch:Person a owl:Class ;
+  rdfs:label "Person" ;
+  rdfs:comment "This super class represents a person related to the school either as a student or teacher." .
+sch:teaches a owl:ObjectProperty ;
+  rdfs:label "teaches" ;
+  rdfs:domain sch:Teacher ;
+  rdfs:range sch:Student ;
+  rdfs:comment "This property links a teacher to the student they teach." .
+sch:studiesAt a owl:ObjectProperty ;
+  rdfs:label "studiesAt" ;
+  rdfs:domain sch:Student ;
+  rdfs:range sch:School ;
+  rdfs:comment "This property links a student to the school they study at." .
+sch:teachesAt a owl:ObjectProperty ;
+  rdfs:label "teachesAt" ;
+  rdfs:domain sch:Teacher ;
+  rdfs:range sch:School ;
+  rdfs:comment "This property links a teacher to the school they teach at." .

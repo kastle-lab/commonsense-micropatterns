@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/line#> .
+:Line rdf:type owl:Class .
+:hasLength rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Line ;
+    rdfs:range xsd:decimal .
+:hasStartPoint rdf:type owl:ObjectProperty ;
+    rdfs:domain :Line ;
+    rdfs:range :Point .
+:hasEndPoint rdf:type owl:ObjectProperty ;
+    rdfs:domain :Line ;
+    rdfs:range :Point .
+:Point rdf:type owl:Class ;
+    rdfs:subClassOf [        rdf:type owl:Class ;
+        owl:unionOf (:Line :hasStartPoint :hasEndPoint)        ] .
+  :Point rdf:type owl:Restriction ;
+    owl:onProperty :hasCoordinate ;
+    owl:cardinality "2"^^xsd:nonNegativeInteger .
+:hasCoordinate rdf:type owl:DatatypeProperty ;
+   rdfs:domain :Point ;
+   rdfs:range xsd:decimal .
+   :line rdf:type :Line ;
+  :hasLength "7.0"^^xsd:decimal ;
+  :hasStartPoint [ rdf:type :Point ;
+    :hasCoordinate "1.0"^^xsd:decimal ;
+    :hasCoordinate "2.0"^^xsd:decimal ] ;
+  :hasEndPoint [ rdf:type :Point ;
+    :hasCoordinate "4.0"^^xsd:decimal ;
+    :hasCoordinate "6.0"^^xsd:decimal ] .

@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ed: <http://www.example.com/education#> .
+# Classes
+ed:University rdf:type rdfs:Class .
+ed:Professor rdf:type rdfs:Class .
+ed:Student rdf:type rdfs:Class .
+ed:Course rdf:type rdfs:Class .
+# Object Propertiesed:employedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain ed:Professor ;
+    rdfs:range ed:University .
+ed:attends rdf:type owl:ObjectProperty ;
+    rdfs:domain ed:Student ;
+    rdfs:range ed:University .
+ed:teaches rdf:type owl:ObjectProperty ;
+    rdfs:domain ed:Professor ;
+    rdfs:range ed:Course .
+ed:enrolledIn rdf:type owl:ObjectProperty ;
+    rdfs:domain ed:Student ;
+    rdfs:range ed:Course .
+# Data Propertiesed:firstName rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+ owl:unionOf (ed:Professor ed:Student) ] ;
+    rdfs:range xsd:string .
+ed:lastName rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+ owl:unionOf (ed:Professor ed:Student) ] ;
+    rdfs:range xsd:string .
+ed:email rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+ owl:unionOf (ed:Professor ed:Student) ] ;
+    rdfs:range xsd:string .
+ed:courseTitle rdf:type owl:DatatypeProperty ;
+    rdfs:domain ed:Course ;
+    rdfs:range xsd:string .
+ed:courseDescription rdf:type owl:DatatypeProperty ;
+    rdfs:domain ed:Course ;
+    rdfs:range xsd:string .
+ed:universityName rdf:type owl:DatatypeProperty ;
+    rdfs:domain ed:University ;
+    rdfs:range xsd:string .

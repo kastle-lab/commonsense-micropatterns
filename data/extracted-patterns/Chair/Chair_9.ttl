@@ -1,0 +1,33 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix chair: <http://example.com/chair#> .
+# Definition of a Chairchair:Chair rdf:type rdfs:Class ;
+rdfs:label ""Chair""@en ;
+rdfs:comment ""A piece of furniture with a raised surface supported by legs, commonly used to seat a single person.""@en .
+# Definition of a Material for Chairchair:Material rdf:type rdfs:Class ;
+rdfs:label ""Material""@en ;
+rdfs:comment ""The matter from which a chair is or can be made.""@en .
+# Definition of a Style for Chairchair:Style rdf:type rdfs:Class ;
+rdfs:label ""Style""@en ;
+rdfs:comment ""A particular design of chair.""@en .
+# Relationschair:madeOf rdf:type rdf:Property ;
+rdfs:domain chair:Chair ;
+rdfs:range chair:Material ;
+rdfs:label ""made of""@en ;
+rdfs:comment ""Indicates the material that a chair is made of.""@en .
+chair:hasStyle rdf:type rdf:Property ;
+rdfs:domain chair:Chair ;
+rdfs:range chair:Style ;
+rdfs:label ""has style""@en ;
+rdfs:comment ""Indicates the style of a chair.""@en .
+# Example of Chair, Material and Style instanceschair:WoodenChair rdf:type chair:Chair ;
+chair:madeOf chair:Wood ;
+chair:hasStyle chair:Modern .
+chair:Wood rdf:type chair:Material ;
+rdfs:label ""Wood""@en ;
+rdfs:comment ""A hard, fibrous structural tissue found in the stems and roots of trees and other woody plants.""@en .
+chair:Modern rdf:type chair:Style ;
+rdfs:label ""Modern""@en ;
+rdfs:comment ""A modern style or trend of chair design.""@en .
+"

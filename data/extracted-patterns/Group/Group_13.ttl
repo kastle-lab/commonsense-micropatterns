@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix group: <http://example.com/group#> .
+group:Group rdf:type owl:Class ;
+    rdfs:label "Group"^^xsd:string ;
+    rdfs:comment "A collection of individuals or entities who share certain characteristics or beliefs."^^xsd:string ;
+    rdfs:subClassOf owl:Thing .
+group:hasMember rdf:type owl:ObjectProperty ;
+    rdfs:label "has member"^^xsd:string ;
+    rdfs:comment "A property that shows the members of a group."^^xsd:string ;
+    rdfs:domain group:Group ;
+    rdfs:range owl:Thing .
+group:name rdf:type owl:DatatypeProperty ;
+    rdfs:label "name"^^xsd:string ;
+    rdfs:comment "The name of the group."^^xsd:string ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:string .
+group:establishedDate rdf:type owl:DatatypeProperty ;
+    rdfs:label "established date"^^xsd:string ;
+    rdfs:comment "The date when the group was established."^^xsd:string ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:date .
+group:size rdf:type owl:DatatypeProperty ;
+    rdfs:label "size"^^xsd:string ;
+    rdfs:comment "The size of the group (number of members)."^^xsd:string ;
+    rdfs:domain group:Group ;
+    rdfs:range xsd:integer .

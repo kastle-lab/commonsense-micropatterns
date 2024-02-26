@@ -1,0 +1,41 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.com/states#> .
+# Classes
+:State a rdfs:Class ;
+    rdfs:label "State" ;
+    rdfs:comment "A state is a constituent political entity of a country".
+:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A country is a political geographic entity".
+:City a rdfs:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A city is an urban area within a state".
+# Properties
+:hasState a rdf:Property ;
+    rdfs:domain :Country ;
+    rdfs:range :State ;
+    rdfs:label "has state" ;
+    rdfs:comment "A country contains states".
+:hasCity a rdf:Property ;
+    rdfs:domain :State ;
+    rdfs:range :City ;
+    rdfs:label "has city" ;
+    rdfs:comment "A state contains cities".
+:hasPopulation a rdf:Property ;
+    rdfs:domain :State ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has population" ;
+    rdfs:comment "A state has a certain population".
+:name a rdf:Property ;
+    rdfs:domain [:State :Country :City] ;
+    rdfs:range xsd:string ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of the entity".
+    :capital a rdf:Property ;
+    rdfs:domain :State ;
+    rdfs:range :City ;
+    rdfs:label "capital" ;
+    rdfs:comment "A state has a capital city".

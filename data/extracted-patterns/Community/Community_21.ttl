@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix com: <http://example.com/community#> .
+com:Community rdf:type rdfs:Class ;
+    rdfs:label "Community" ;
+    rdfs:comment "Social group of people sharing common interests or values, and living in a specific area." .
+com:Member rdf:type rdfs:Class ;
+    rdfs:label "Member" ;
+    rdfs:comment "Individual who belong to a particular community." ;
+    rdfs:subClassOf com:Person .
+com:Person rdf:type rdfs:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "Individual human being." .
+com:name rdf:type rdf:Property ;
+     rdfs:label "name" ;
+     rdfs:comment "Name of person or community." ;
+     rdfs:domain com:Person, com:Community ;
+     rdfs:range xsd:string .
+com:location rdf:type rdf:Property ;
+     rdfs:label "location" ;
+     rdfs:comment "Location where community is based or person lives." ;
+     rdfs:domain com:Person, com:Community ;
+     rdfs:range xsd:string .
+com:belongs rdf:type rdf:Property ;
+     rdfs:label "belongs" ;
+     rdfs:comment "Signifies membership of a person in a community." ;
+     rdfs:domain com:Person ;
+     rdfs:range com:Community .
+  com:hasMember rdf:type rdf:Property ;
+     rdfs:label "hasMember" ;
+     rdfs:comment "Signifies that a community consists of members." ;
+     rdfs:domain com:Community ;
+     rdfs:range com:Person .

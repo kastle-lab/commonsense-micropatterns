@@ -1,0 +1,35 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fam: <http://example.org/family#> .
+@prefix schema: <http://schema.org/> .
+# Define classesfam:Person a schema:Class .
+fam:Family a schema:Class .
+# Define propertiesfam:hasMember a schema:Property ;
+  schema:domain fam:Family ;
+  schema:range fam:Person .
+fam:hasParent a schema:Property ;
+  schema:domain fam:Person ;
+  schema:range fam:Person .
+fam:hasSibling a schema:Property ;
+  schema:domain fam:Person ;
+  schema:range fam:Person .
+fam:hasSpouse a schema:Property ;
+  schema:domain fam:Person ;
+  schema:range fam:Person .
+fam:hasChild a schema:Property ;
+  schema:domain fam:Person ;
+  schema:range fam:Person .
+fam:gender a schema:Property ;
+  schema:range xsd:string .
+fam:birthDate a schema:Property ;
+  schema:range xsd:date .
+fam:deathDate a schema:Property ;
+  schema:range xsd:date .
+  # Example individualsfam:JohnDoe a fam:Person ;
+  fam:gender "Male" ;
+  fam:birthDate "1970-01-01"^^xsd:date .
+fam:JaneDoe a fam:Person ;
+  fam:gender "Female" ;
+  fam:birthDate "1975-01-01"^^xsd:date ;
+  fam:hasSpouse fam:JohnDoe .
+fam:DoeFamily a fam:Family ;
+  fam:hasMember fam:JohnDoe, fam:JaneDoe.

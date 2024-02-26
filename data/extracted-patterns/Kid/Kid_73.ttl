@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix kidOnt: <http://www.example.org/kid_ontology#> .
+kidOnt:Kid rdf:type rdfs:Class ;
+  rdfs:label "Kid" ;
+  rdfs:comment "The class of all kids" .
+kidOnt:age rdf:type rdf:Property ;
+  rdfs:label "age" ;
+  rdfs:domain kidOnt:Kid ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The age of the kid" .
+kidOnt:Hobbies rdf:type rdf:Property ;
+  rdfs:label "hobbies" ;
+  rdfs:domain kidOnt:Kid ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The hobbies of the kid" .
+kidOnt:School rdf:type rdf:Property ;
+  rdfs:label "school" ;
+  rdfs:domain kidOnt:Kid ;
+  rdfs:range rdfs:Literal ;
+  rdfs:comment "The school of the kid" .

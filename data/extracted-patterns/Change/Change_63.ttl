@@ -1,0 +1,5 @@
+ For example, If we consider "change" in the context of an individual undergoing some transformation. Here might be a basic pattern:
+@prefix ex: <http://example.org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ex:individual ex:beforeChange "State1" ;
+              ex:afterChange "State2" .

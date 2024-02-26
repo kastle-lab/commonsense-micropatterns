@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/power#> .
+:Power a rdfs:Class ;
+    rdfs:comment "The class of all things related to Power" .
+:source a rdf:Property ;
+    rdfs:domain :Power ;
+    rdfs:range xsd:string ;
+    rdfs:comment "defines the source of power" .
+:amount a rdf:Property ;
+    rdfs:domain :Power ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "defines the amount of power" .
+:unit a rdf:Property ;
+    rdfs:domain :Power ;
+    rdfs:range xsd:string ;
+    rdfs:comment "defines the unit of power" .
+:Electricity a :Power ;
+    :source "Generators" ;
+    :amount "1000"^^xsd:integer ;
+    :unit "Watt" .
+:Solar a :Power ;
+    :source "Sunlight" ;
+    :amount "700"^^xsd:integer ;
+    :unit "Watt" .
+:Nuclear a :Power ;
+    :source "Nuclear fusion" ;
+    :amount "1000000"^^xsd:integer ;
+    :unit "Watt" .

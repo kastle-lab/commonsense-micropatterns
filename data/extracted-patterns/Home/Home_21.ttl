@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix home: <http://example.com/home#> .
+#:Homehome:Home rdf:type rdfs:Class ;
+    rdfs:comment "A place where an individual or family lives" .
+#:Roomhome:Room rdf:type rdfs:Class ;
+    rdfs:subClassOf home:Home ;
+    rdfs:comment "A part or division of a building enclosed by walls, floor, and ceiling" .
+#:Kitchenhome:Kitchen rdf:type rdfs:Class ;
+    rdfs:subClassOf home:Room ;
+    rdfs:comment "A room used for cooking and food preparation" .
+#:Bedroomhome:Bedroom rdf:type rdfs:Class ;
+    rdfs:subClassOf home:Room ;
+    rdfs:comment "A room in a house where people sleep" .
+#:Bathroomhome:Bathroom rdf:type rdfs:Class ;
+    rdfs:subClassOf home:Room ;
+    rdfs:comment "A room containing a bath or shower and typically also a washbasin and a toilet" .
+#:LivingRoomhome:LivingRoom rdf:type rdfs:Class ;
+    rdfs:subClassOf home:Room ;
+    rdfs:comment "A room in a house for general and informal everyday use" .
+#:hasRoomhome:hasRoom rdf:type rdf:Property ;
+    rdfs:domain home:Home;
+    rdfs:range home:Room;
+    rdfs:comment "Property to link a Home to its Rooms" .
+#:hasFurniturehome:hasFurniture rdf:type rdf:Property ;
+    rdfs:domain home:Room ;
+    rdfs:range rdfs:Resource ;
+    rdfs:comment "Property to link a Room to its Furniture" .
+#:Furniturehome:Furniture rdf:type rdfs:Class ;
+    rdfs:comment "Movable objects intended to support human activities" .
+#:Tablehome:Table rdf:type home:Furniture ;
+    rdfs:comment "An item of Furniture with a flat top and one or more legs" .
+#:Chairhome:Chair rdf:type home:Furniture ;
+    rdfs:comment "A seat for one person, with a support for the back" .
+#:Bedhome:Bed rdf:type home:Furniture ;
+    rdfs:comment "A piece of Furniture upon which or within which a person sleeps, rests, or stays when not well." .
+#:Couchhome:Couch rdf:type home:Furniture ;
+    rdfs:comment "A large piece of Furniture that can be sat on by several people" .
+#:Cupboardhome:Cupboard rdf:type home:Furniture ;
+    rdfs:comment "A piece of Furniture with shelves that are used for storing items, usually has doors" .
+#:Refrigeratorhome:Refrigerator rdf:type home:Furniture ;
+    rdfs:comment "A large container that uses electricity to keep food cold." .

@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/car#> .
+:Car rdf:type rdfs:Class ;
+    rdfs:comment "A motor vehicle with four wheels;
+ usually propelled by an internal combustion engine" .
+:hasManufacturer rdf:type rdf:Property ;
+    rdfs:domain :Car ;
+    rdfs:range :Manufacturer ;
+    rdfs:comment "The manufacturer of the car." .
+    :Manufacturer rdf:type rdfs:Class ;
+    rdfs:comment "A business engaged in the manufacture of automobiles." .
+:hasModel rdf:type rdf:Property ;
+    rdfs:domain :Car ;
+    rdfs:range :Model ;
+    rdfs:comment "The model of the car." .
+:Model rdf:type rdfs:Class ;
+    rdfs:comment "The specific design of a car, usually determined by the manufacturer." .
+:hasColor rdf:type rdf:Property ;
+    rdfs:domain :Car ;
+    rdfs:range :Color ;
+    rdfs:comment "The color of the car." .
+:Color rdf:type rdfs:Class ;
+    rdfs:comment "The color of the car." .
+:hasYear rdf:type rdf:Property ;
+    rdfs:domain :Car ;
+    rdfs:range :Year ;
+    rdfs:comment "The year the car was manufactured." .
+:Year rdf:type rdfs:Class ;
+    rdfs:comment "The year of manufacture of the car." .
+:hasEngineType rdf:type rdf:Property ;
+    rdfs:domain :Car ;
+    rdfs:range :EngineType ;
+    rdfs:comment "The type of engine the car has." .
+:EngineType rdf:type rdfs:Class ;
+    rdfs:comment "The type of engine in a car." .
+:hasFuelType rdf:type rdf:Property ;
+    rdfs:domain :Car ;
+    rdfs:range :FuelType ;
+    rdfs:comment "The type of fuel the car uses." .
+:FuelType rdf:type rdfs:Class ;
+    rdfs:comment "The type of fuel a car uses." .

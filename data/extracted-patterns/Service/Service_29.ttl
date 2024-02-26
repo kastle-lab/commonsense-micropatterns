@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.@prefix service: <http://example.com/service#>.service:     rdf:type rdfs:Class ;
+    rdfs:comment "A type of professional or beneficial act"^^xsd:string ;
+    rdfs:label "Service"@en .
+service:TypeOfService     rdf:type rdfs:Class ;
+    rdfs:subClassOf service: ;
+    rdfs:comment "A subtype of service, more specifically defined by its nature or purpose"@en ;
+    rdfs:label "Type of Service"@en .
+service:ServiceProvider     rdf:type rdfs:Class ;
+    rdfs:comment "An individual, organization, or entity that provides a particular service"@en ;
+    rdfs:label "Service Provider"@en .
+service:ServiceUser     rdf:type rdfs:Class ;
+    rdfs:comment "An individual, organization, or entity that uses a particular service"@en ;
+    rdfs:label "Service User"@en .
+service:ServiceLocation     rdf:type rdfs:Class ;
+    rdfs:comment "The location where a service is performed or made available"@en ;
+    rdfs:label "Service Location"@en .
+service:ServiceCost    rdf:type rdfs:Class ;
+    rdfs:comment "The cost or price associated with a service"@en ;
+    rdfs:label "Service Cost"@en .
+service:provides     rdf:type rdf:Property ;
+    rdfs:domain service:ServiceProvider ;
+    rdfs:range service: ;
+    rdfs:comment "It links the provider to the service they offer"@en ;
+    rdfs:label "provides"@en .
+service:uses     rdf:type rdf:Property ;
+    rdfs:domain service:ServiceUser ;
+    rdfs:range service: ;
+    rdfs:comment "It links the user to the service they use"@en ;
+    rdfs:label "uses"@en .
+service:locatedAt     rdf:type rdf:Property ;
+    rdfs:domain service: ;
+    rdfs:range service:ServiceLocation ;
+    rdfs:comment "It links the service to the location where it is provided"@en ;
+    rdfs:label "located at"@en .
+service:hasCost     rdf:type rdf:Property ;
+    rdfs:domain service: ;
+    rdfs:range service:ServiceCost ;
+    rdfs:comment "It links the service to its cost"@en ;
+    rdfs:label "has cost"@en .

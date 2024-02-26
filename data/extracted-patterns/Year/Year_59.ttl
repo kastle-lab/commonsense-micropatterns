@@ -1,0 +1,4 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Event1 ex:hasYear "2023"^^xsd:gYear .
+ex:Event2 ex:hasYear "2025"^^xsd:gYear .

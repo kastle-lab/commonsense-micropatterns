@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix health: <http://www.health.org/ontology#> .
+health:Patient rdf:type rdfs:Class .
+health:Doctor rdf:type rdfs:Class .
+health:Disease rdf:type rdfs:Class .
+health:Treatment rdf:type rdfs:Class .
+health:Medication rdf:type rdfs:Class .
+health:hasDisease rdf:type rdf:Property ;
+                  rdfs:domain health:Patient ;
+                  rdfs:range health:Disease .
+health:hasDoctor rdf:type rdf:Property ;
+                 rdfs:domain health:Patient ;
+                 rdfs:range health:Doctor .
+health:prescribes rdf:type rdf:Property ;
+                  rdfs:domain health:Doctor ;
+                  rdfs:range health:Treatment .
+health:includesMedication rdf:type rdf:Property ;
+                          rdfs:domain health:Treatment ;
+                          rdfs:range health:Medication .
+health:Patient rdf:type rdfs:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty health:hasDisease ;
+                                 owl:someValuesFrom health:Disease                               ] .
+health:Doctor rdf:type rdfs:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty health:prescribes ;
+                                owl:someValuesFrom health:Treatment                              ] .

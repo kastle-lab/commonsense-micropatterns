@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+schema:Person a rdf:Class ;
+    rdfs:comment "A person or individual"@en ;
+    rdfs:subClassOf schema:Thing .
+schema:father a rdf:Property ;
+    rdfs:comment "The male parent of an individual" @en ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Person .
+schema:name a rdf:Property ;
+    rdfs:comment "The name of an individual" @en ;
+    rdfs:domain schema:Person ;
+    rdfs:range xsd:string .
+_:b1 a schema:Person ;
+    schema:name "John Doe"^^xsd:string ;
+    schema:father _:b2 .
+_:b2 a schema:Person ;
+    schema:name "Robert Doe"^^xsd:string .

@@ -1,0 +1,13 @@
+@prefix : <http://example.com/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Chair rdf:type rdfs:Class ;
+       rdfs:comment ""A piece of furniture for one person to sit on, with a back, a seat, and four legs."" .
+:Furniture rdf:type rdfs:Class ;
+           rdfs:comment ""Large movable equipment, such as tables and chairs, used to make a house, office, or other space suitable for living or working."" .
+:Chair rdfs:subClassOf :Furniture .
+:hasColor rdf:type rdf:Property ;
+          rdfs:domain :Chair ;
+          rdfs:range :Color .
+          :Color rdf:type rdfs:Class ;
+       rdfs:comment ""Attribute of things that results from the light they reflect, transmit, or emit in so far as this light causes a visual sensation that depends on its wavelengths."" .

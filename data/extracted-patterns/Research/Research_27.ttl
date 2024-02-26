@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix research: <http://example.org/research#> .
+# Classes
+research:Research a rdfs:Class ;
+  rdfs:comment "Represents research in general" .
+research:AcademicResearch a rdfs:Class ;
+  rdfs:subClassOf research:Research ;
+  rdfs:comment "Research conducted in an academic setting" .
+research:ScientificResearch a rdfs:Class ;
+  rdfs:subClassOf research:Research ;
+  rdfs:comment "Research following the scientific method" .
+research:Researcher a rdfs:Class ;
+  rdfs:comment "An individual who conducts research" .
+# Properties
+research:conductsResearch a rdf:Property ;
+  rdfs:domain research:Researcher ;
+  rdfs:range research:Research ;
+  rdfs:comment "Indicates that a researcher conducts research" .
+research:hasPublication a rdf:Property ;
+  rdfs:domain research:Research ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Indicates a publication resulting from research" .
+# Individuals
+research:johnDoe a research:Researcher .
+research:sampleResearch a research:AcademicResearch ;
+  research:hasPublication "Example Publication" .
+# Statementsresearch:johnDoe research:conductsResearch research:sampleResearch .

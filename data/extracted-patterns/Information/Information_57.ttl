@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix info: <http://example.org/info#> .
+info:Information rdf:type rdfs:Class ;
+    rdfs:label "Information" ;
+    rdfs:comment "Data processed or stored by a computer. This may be in any form and can be stored in any way, as long as it is produced and consumed by computer systems." .
+info:data rdf:type info:Information ;
+    rdfs:label "Data" ;
+    rdfs:comment "Raw, unprocessed signals or facts. Data is the plural of datum." .
+info:knowledge rdf:type info:Information ;
+    rdfs:label "Knowledge" ;
+    rdfs:comment "Information that has been interpreted and understood. Knowledge is typically structured in some meaningful way." .

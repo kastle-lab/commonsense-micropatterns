@@ -1,0 +1,11 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:Program rdf:type schema:SoftwareSourceCode ;
+  schema:name "Program" ;
+  schema:softwareVersion "1.0" ;
+  schema:codeRepository <https://github.com/example/program-repo> ;
+  schema:programmingLanguage "Python" ;
+  schema:runtimePlatform "Cross-platform" ;
+  schema:license "MIT License" ;
+  schema:applicationCategory schema:DeveloperApplication ;
+  schema:description "A generic example of a program." .

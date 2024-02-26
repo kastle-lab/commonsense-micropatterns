@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ @prefix time: <http://www.w3.org/2006/time#> .
+@prefix ex: <http://example.org/> .
+ex:Week rdf:type rdfs:Class .
+ex:Day rdf:type rdfs:Class .
+ex:hasDay rdf:type rdf:Property ;
+    rdfs:domain ex:Week ;
+    rdfs:range ex:Day ;
+    rdfs:comment "Relates a week to its seven days."^^xsd:string .
+ex:Week rdfs:subClassOf [    rdf:type owl:Restriction ;
+    owl:onProperty ex:hasDay ;
+    owl:cardinality "7"^^xsd:nonNegativeInteger] .

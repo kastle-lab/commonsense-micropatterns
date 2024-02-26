@@ -1,0 +1,5 @@
+@prefix ex: <http://example.com/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ex:End a rdfs:Class ;
+  rdfs:comment "The final part or conclusion of something." ;
+  rdfs:label "End" .

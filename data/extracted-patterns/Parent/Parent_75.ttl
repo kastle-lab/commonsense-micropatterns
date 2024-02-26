@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Declare a class Personex:Person a rdfs:Class .
+    # Declare a property "hasParent"
+ex:hasParent a rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person .
+# Example of person instancesex:Bruce a ex:Person;
+     ex:hasParent ex:Thomas.           ex:Thomas a ex:Person.ex:Martha a ex:Person;
+     ex:hasParent ex:Thomas.

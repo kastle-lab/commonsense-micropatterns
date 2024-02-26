@@ -1,0 +1,38 @@
+@prefix : <http://example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Home a owl:Class ;
+    rdfs:label "Home" ;
+    rdfs:comment "Class representation of a home" .
+:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address" ;
+    rdfs:comment "The address of the home" ;
+    rdfs:domain :Home ;
+    rdfs:range :Address .
+:hasOwner a owl:ObjectProperty ;
+    rdfs:label "has owner" ;
+    rdfs:comment "The owner of the home" ;
+    rdfs:domain :Home ;
+    rdfs:range :Person .
+:Address a owl:Class ;
+    rdfs:label "Address" ;
+    rdfs:comment "Class representation of an address" .
+:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "Class representation of a person" .
+:Street a owl:DatatypeProperty ;
+    rdfs:label "street" ;
+    rdfs:comment "Street of the address" ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string .
+:City a owl:DatatypeProperty ;
+    rdfs:label "city" ;
+    rdfs:comment "City of the address" ;
+    rdfs:domain :Address ;
+    rdfs:range xsd:string .
+:hasName a owl:DatatypeProperty ;
+    rdfs:label "has name" ;
+    rdfs:comment "The name of a person" ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .

@@ -1,0 +1,23 @@
+@prefix : <http://www.example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+#Class definition:Car rdf:type rdfs:Class .
+#Properties definitions:hasModel rdf:type rdf:Property ;
+         rdfs:domain :Car ;
+         rdfs:range rdfs:Literal .
+:hasManufacturer rdf:type rdf:Property ;
+                 rdfs:domain :Car ;
+                 rdfs:range rdfs:Literal .
+                 :hasColor rdf:type rdf:Property ;
+          rdfs:domain :Car ;
+          rdfs:range rdfs:Literal .
+:hasEngine rdf:type rdf:Property ;
+           rdfs:domain :Car ;
+           rdfs:range :Engine .
+                     #Additional class definition for engine:Engine rdf:type rdfs:Class .
+#Properties definitions for Engine:hasHorsePower rdf:type rdf:Property ;
+               rdfs:domain :Engine ;
+               rdfs:range rdfs:Literal .
+:hasType rdf:type rdf:Property ;
+         rdfs:domain :Engine ;
+         rdfs:range rdfs:Literal .

@@ -1,0 +1,21 @@
+@prefix : <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:History rdf:type rdfs:Class .
+:Event rdf:type rdfs:Class ;
+    rdfs:subClassOf :History .
+:hasEvent rdf:type rdf:Property ;
+    rdfs:domain :History ;
+    rdfs:range :Event .
+:occurredAt rdf:type rdf:Property ;
+    rdfs:domain :Event ;
+    rdfs:range :Date .
+:Date rdf:type rdfs:Class .
+ :Person rdf:type rdfs:Class .
+:involvedPerson rdf:type rdf:Property ;
+    rdfs:domain :Event ;
+    rdfs:range :Person .
+ :hasDescription rdf:type rdf:Property ;
+    rdfs:domain :Event ;
+    rdfs:range rdfs:Literal .
+This ontology pattern captures the concept of "History" as an event with a date, person involved, and description. Each event is linked to the history and each can have additional information including when it occurred and who was involved.

@@ -1,0 +1,4 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:actionA ex:hasEnd ex:endA .
+ex:endA ex:dateTime "2022-02-24T13:00:00Z"^^xsd:dateTime .

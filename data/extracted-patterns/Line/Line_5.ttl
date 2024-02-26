@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix line: <http://example.org/ontology/line#> .
+line: a rdfs:Class ;
+    rdfs:label "Line"@en ;
+    rdfs:comment "A straight one-dimensional figure having no thickness and extending infinitely in both directions."@en .
+line:hasStartPoint a rdf:Property ;
+    rdfs:label "has start point"@en ;
+    rdfs:comment "The start point of a line."@en ;
+    rdfs:domain line: ;
+    rdfs:range xsd:Point .
+line:hasEndPoint a rdf:Property ;
+    rdfs:label "has end point"@en ;
+    rdfs:comment "The end point of a line."@en ;
+    rdfs:domain line: ;
+    rdfs:range xsd:Point .
+line:hasLength a rdf:Property ;
+    rdfs:label "has length"@en ;
+    rdfs:comment "The length of a line."@en ;
+    rdfs:domain line: ;
+    rdfs:range xsd:float .
+line:isParallelTo a rdf:Property ;
+    rdfs:label "is parallel to"@en ;
+    rdfs:comment "Determines if one line is parallel to another."@en ;
+    rdfs:domain line: ;
+    rdfs:range line: .
+line:isPerpendicularTo a rdf:Property ;
+    rdfs:label "is perpendicular to"@en ;
+    rdfs:comment "Determines if one line is perpendicular to another."@en ;
+    rdfs:domain line: ;
+    rdfs:range line:.

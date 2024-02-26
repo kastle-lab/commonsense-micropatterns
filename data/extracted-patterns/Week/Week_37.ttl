@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Week: <http://example.org/Week#> .
+Week:Week rdf:type rdfs:Class .
+Week:Monday rdf:type owl:NamedIndividual , Week:Week .
+Week:Tuesday rdf:type owl:NamedIndividual , Week:Week .
+Week:Wednesday rdf:type owl:NamedIndividual , Week:Week .
+Week:Thursday rdf:type owl:NamedIndividual , Week:Week .
+Week:Friday rdf:type owl:NamedIndividual , Week:Week .
+Week:Saturday rdf:type owl:NamedIndividual , Week:Week .
+Week:Sunday rdf:type owl:NamedIndividual , Week:Week .

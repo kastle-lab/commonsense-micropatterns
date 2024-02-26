@@ -1,0 +1,39 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edu: <http://example.org/edu/> .
+# Classes
+edu:Education a rdfs:Class .
+edu:School a rdfs:Class ;
+    rdfs:subClassOf edu:Education .
+edu:University a rdfs:Class ;
+    rdfs:subClassOf edu:Education .
+edu:Subject a rdfs:Class .
+edu:Teacher a rdfs:Class .
+edu:Student a rdfs:Class .
+# Properties
+edu:teaches a rdf:Property ;
+    rdfs:domain edu:Teacher ;
+    rdfs:range edu:Subject .
+edu:studies a rdf:Property ;
+    rdfs:domain edu:Student ;
+    rdfs:range edu:Subject .
+edu:attends a rdf:Property ;
+    rdfs:domain edu:Student ;
+    rdfs:range edu:School .
+edu:worksAt a rdf:Property ;
+    rdfs:domain edu:Teacher ;
+    rdfs:range edu:School .
+edu:educates a rdf:Property ;
+    rdfs:domain edu:School ;
+    rdfs:range edu:Student .
+# Named Individualsedu:Math a edu:Subject .
+edu:MrSmith a edu:Teacher ;
+    edu:teaches edu:Math ;
+    edu:worksAt edu:HighSchool .
+# Literal Propertiesedu:HighSchool a edu:School ;
+    rdfs:label "High School"^^xsd:string .
+edu:University a edu:University ;
+    rdfs:label "University"^^xsd:string .
+edu:JohnDoe a edu:Student ;
+    edu:studies edu:Math ;
+    edu:attends edu:HighSchool ;
+    rdfs:label "John Doe"^^xsd:string .

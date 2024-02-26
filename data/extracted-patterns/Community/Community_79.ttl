@@ -1,0 +1,16 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Community a rdfs:Class ;
+    rdfs:comment "A community represented within an ontology context" .
+ex:hasMember a rdfs:Property ;
+    rdfs:domain ex:Community ;
+    rdfs:range ex:Person ;
+    rdfs:comment "Property stating a person is a member of a community" .
+ex:hasLocation a rdfs:Property ;
+    rdfs:domain ex:Community ;
+    rdfs:range ex:Location ;
+    rdfs:comment "Property stating a community is located at a specific location" .
+ex:Person a rdfs:Class ;
+    rdfs:comment "A person or individual, could be a member of a community" .
+ex:Location a rdfs:Class ;
+    rdfs:comment "A physical place or location, where a community could be located" .

@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+# Defining the class "Member"
+ex:Member a rdfs:Class ;
+# Defining properties for "Member"
+ex:hasName a rdf:Property ;
+  rdfs:domain ex:Member ;
+  rdfs:range xsd:string .
+ex:hasAge a rdf:Property ;
+  rdfs:domain ex:Member ;
+  rdfs:range xsd:integer .
+ex:hasEmail a rdf:Property ;
+  rdfs:domain ex:Member ;
+  rdfs:range xsd:string .
+ex:joinsClub a rdf:Property ;
+  rdfs:domain ex:Member ;
+  rdfs:range ex:Club .
+# Defining another class "Club"
+ex:Club a rdfs:Class ;
+ex:hasClubName a rdf:Property ;
+  rdfs:domain ex:Club ;
+  rdfs:range xsd:string .

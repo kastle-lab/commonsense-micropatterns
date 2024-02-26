@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix eo: <http://example.org/end_ontology#> .
+# Class definitioneo:End     rdf:type owl:Class ;
+    rdfs:comment "The concept of End as an abstract entity."@en ;
+    rdfs:label "End"@en .
+# Property definitionseo:hasEndTime     rdf:type owl:DatatypeProperty ;
+    rdfs:domain eo:End ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has end time"@en ;
+    rdfs:comment "The specific point in time when something ends."@en .
+eo:isEndOf     rdf:type owl:ObjectProperty ;
+    rdfs:domain eo:End ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "is end of"@en ;
+    rdfs:comment "The thing that comes to an end."@en .

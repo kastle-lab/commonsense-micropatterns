@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix head: <http://example.com/head#> .
+# Class Definitionshead:Head rdf:type rdfs:Class ;
+  rdfs:comment "Represent the head part of a creature"@en ;
+  rdfs:label "Head"@en .
+head:HumanHead rdf:type rdfs:Class ;
+  rdfs:subClassOf head:Head ;
+  rdfs:comment "Head of a human being"@en ;
+  rdfs:label "Human Head"@en .
+head:AnimalHead rdf:type rdfs:Class ;
+  rdfs:subClassOf head:Head ;
+  rdfs:comment "Head of an animal"@en ;
+  rdfs:label "Animal Head"@en .
+# Property Definitionshead:hasHair rdf:type rdf:Property ;
+  rdfs:range xsd:boolean ;
+  rdfs:domain head:Head ;
+  rdfs:comment "Indicates if the head has hair"@en ;
+  rdfs:label "Has Hair"@en .
+head:hasTwoEyes rdf:type rdf:Property ;
+  rdfs:range xsd:boolean ;
+  rdfs:domain head:Head ;
+  rdfs:comment "Indicates if the head has two eyes"@en ;
+  rdfs:label "Has Two Eyes"@en .
+head:belongs rdf:type rdf:Property ;
+  rdfs:comment "Indicates to whom the head belongs"@en ;
+  rdfs:label "Belongs"@en ;
+  rdfs:range rdfs:Class ;
+  rdfs:domain head:Head .
+  head:hasHeadSize rdf:type rdf:Property ;
+  rdfs:range xsd:String ;
+  rdfs:domain head:Head ;
+  rdfs:comment "Indicates the size of the head"@en ;
+  rdfs:label "Has Head Size"@en .
+# Instance Examplehead:johnsHead rdf:type head:HumanHead ;
+  head:hasHair "True"^^xsd:boolean ;
+  head:hasTwoEyes "True"^^xsd:boolean ;
+  head:belongs "John"^^xsd:string ;
+  head:hasHeadSize "Medium"^^xsd:string .

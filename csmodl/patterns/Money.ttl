@@ -1,0 +1,161 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Currency> a rdfs:Class .
+
+<http://example.com/Money> a rdfs:Class .
+
+<http://example.com/money#Money> a rdfs:Class .
+
+<http://example.com/ontology/money#Currency> a rdfs:Class .
+
+<http://example.com/ontology/money#Money> a rdfs:Class .
+
+<http://example.org/Country> a rdfs:Class .
+
+<http://example.org/Currency> a rdfs:Class .
+
+<http://example.org/Entity> a rdfs:Class .
+
+<http://example.org/Money> a rdfs:Class .
+
+<http://example.org/money#Currency> a rdfs:Class .
+
+<http://example.org/money#Money> a rdfs:Class .
+
+<http://example.org/money#Payment> a rdfs:Class .
+
+<http://example.org/money#Person> a rdfs:Class .
+
+<http://example.org/money#Transfer> a rdfs:Class .
+
+<http://example.org/stuff/1.0/Currency> a rdfs:Class .
+
+<http://example.org/stuff/1.0/Money> a rdfs:Class .
+
+<http://somewhere/Money#Coin> a rdfs:Class .
+
+<http://somewhere/Money#Currency> a rdfs:Class .
+
+<http://somewhere/Money#Note> a rdfs:Class .
+
+<http://www.example.org/money#Currency> a rdfs:Class .
+
+<http://www.example.org/money#CurrencyCode> a rdfs:Class .
+
+<http://www.example.org/money#Money> a rdfs:Class .
+
+<http://www.example.org/myvocab#Currency> a rdfs:Class .
+
+<http://www.example.org/myvocab#Money> a rdfs:Class .
+
+<http://www.example.org/ontology/money#Currency> a rdfs:Class .
+
+<http://www.example.org/ontology/money#Money> a rdfs:Class .
+
+<http://www.example.org/ontology/money#Person> a rdfs:Class .
+
+<http://www.example.org/ontology/money#Transaction> a rdfs:Class .
+
+rdf:decimal a rdfs:Class .
+
+rdfs:Class a rdfs:Class .
+
+<http://example.com/hasCurrency> rdfs:range <http://example.com/Currency>,
+        <http://example.com/Money> .
+
+<http://example.com/hasCurrencyCode> rdfs:range <http://example.com/Currency> .
+
+<http://example.com/hasValue> rdfs:range <http://example.com/Money> .
+
+<http://example.com/money#country> rdfs:range <http://example.com/money#Money> .
+
+<http://example.com/money#currency> rdfs:range <http://example.com/money#Money> .
+
+<http://example.com/money#dateIssued> rdfs:range <http://example.com/money#Money> .
+
+<http://example.com/money#issuer> rdfs:range <http://example.com/money#Money> .
+
+<http://example.com/money#value> rdfs:range <http://example.com/money#Money> .
+
+<http://example.com/ontology/money#hasCurrency> rdfs:range <http://example.com/ontology/money#Currency>,
+        <http://example.com/ontology/money#Money> .
+
+<http://example.com/ontology/money#hasValue> rdfs:range <http://example.com/ontology/money#Money> .
+
+<http://example.org/hasAmount> rdfs:range <http://example.org/Money> .
+
+<http://example.org/hasCurrency> rdfs:range <http://example.org/Currency>,
+        <http://example.org/Money> .
+
+<http://example.org/hasDenomination> rdfs:range <http://example.org/Money> .
+
+<http://example.org/isCurrencyOf> rdfs:range <http://example.org/Country>,
+        <http://example.org/Money> .
+
+<http://example.org/money#Amount> rdfs:range <http://example.org/money#Money> .
+
+<http://example.org/money#Code> rdfs:range <http://example.org/money#Currency> .
+
+<http://example.org/money#amount> rdfs:range <http://example.org/money#Money>,
+        rdf:decimal .
+
+<http://example.org/money#hasAmount> rdfs:range <http://example.org/money#Money> .
+
+<http://example.org/money#hasCurrency> rdfs:range <http://example.org/money#Currency>,
+        <http://example.org/money#Money>,
+        <http://example.org/money#Person> .
+
+<http://example.org/money#hasValue> rdfs:range <http://example.org/money#Currency>,
+        <http://example.org/money#Money> .
+
+<http://example.org/money#isLegalTender> rdfs:range <http://example.org/money#Money> .
+
+<http://example.org/money#isLegalTenderIn> rdfs:range <http://example.org/money#Currency>,
+        rdfs:Class .
+
+<http://example.org/money#pays> rdfs:range <http://example.org/money#Money>,
+        <http://example.org/money#Payment> .
+
+<http://example.org/money#transfers> rdfs:range <http://example.org/money#Money>,
+        <http://example.org/money#Transfer> .
+
+<http://example.org/money#value> rdfs:range <http://example.org/money#Money> .
+
+<http://example.org/provides> rdfs:range <http://example.org/Entity>,
+        <http://example.org/Money> .
+
+<http://example.org/stuff/1.0/hasCurrency> rdfs:range <http://example.org/stuff/1.0/Currency>,
+        <http://example.org/stuff/1.0/Money> .
+
+<http://somewhere/Money#coinValue> rdfs:range <http://somewhere/Money#Coin> .
+
+<http://somewhere/Money#country> rdfs:range <http://somewhere/Money#Currency> .
+
+<http://somewhere/Money#denomination> rdfs:range <http://somewhere/Money#Currency> .
+
+<http://somewhere/Money#material> rdfs:range <http://somewhere/Money#Coin> .
+
+<http://somewhere/Money#noteValue> rdfs:range <http://somewhere/Money#Note> .
+
+<http://www.example.org/money#amount> rdfs:range <http://www.example.org/money#Money> .
+
+<http://www.example.org/money#currency> rdfs:range <http://www.example.org/money#Money> .
+
+<http://www.example.org/money#hasCurrencyCode> rdfs:range <http://www.example.org/money#Currency>,
+        <http://www.example.org/money#CurrencyCode> .
+
+<http://www.example.org/money#hasValue> rdfs:range <http://www.example.org/money#Currency> .
+
+<http://www.example.org/myvocab#hasCurrency> rdfs:range <http://www.example.org/myvocab#Currency>,
+        <http://www.example.org/myvocab#Money> .
+
+<http://www.example.org/ontology/money#hasAmount> rdfs:range <http://www.example.org/ontology/money#Money>,
+        <http://www.example.org/ontology/money#Transaction> .
+
+<http://www.example.org/ontology/money#hasCurrency> rdfs:range <http://www.example.org/ontology/money#Currency>,
+        <http://www.example.org/ontology/money#Person> .
+
+<http://www.example.org/ontology/money#performsTransaction> rdfs:range <http://www.example.org/ontology/money#Person>,
+        <http://www.example.org/ontology/money#Transaction> .
+

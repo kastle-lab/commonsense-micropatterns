@@ -1,0 +1,24 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com#> .
+ex:Area a rdfs:Class ;
+    rdfs:label "Area"@en ;
+    rdfs:comment "Class that represents different areas"@en ;
+    rdfs:subClassOf ex:GeographicalLocation .
+ex:AreaCode a rdfs:Property ;
+    rdfs:label "Area Code"@en ;
+    rdfs:range xsd:int ;
+    rdfs:domain ex:Area ;
+    rdfs:comment "Property representing unique area code"@en .
+ex:AreaName a rdfs:Property;
+    rdfs:label "Area Name"@en;
+    rdfs:range xsd:string;
+    rdfs:domain ex:Area ;
+    rdfs:comment "Property representing the name of an area"@en.ex:AreaPopulation a rdfs:Property;
+    rdfs:label "Area Population"@en;
+    rdfs:range xsd:int;
+    rdfs:domain ex:Area ;
+    rdfs:comment "Property representing the population of an area"@en.ex:AreaSize a rdfs:Property;
+    rdfs:label "Area Size"@en;
+    rdfs:range xsd:float;
+    rdfs:domain ex:Area ;
+    rdfs:comment "Property representing the physical size of an area"@en.

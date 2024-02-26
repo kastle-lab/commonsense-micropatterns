@@ -1,0 +1,3 @@
+@prefix ex: <http://example.com/> .
+ex:Sarah a ex:Person ;
+    ex:gender ex:Female .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A region identified as a distinct entity in political geography. A country may be an independent sovereign state or part of a larger state." .
+ex:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of something." ;
+    rdfs:domain ex:Country ;
+    rdfs:range xsd:string .
+ex:population a rdf:Property ;
+    rdfs:label "population" ;
+    rdfs:comment "The number of people who live in a country." ;
+    rdfs:domain ex:Country ;
+    rdfs:range xsd:integer .
+ex:capital a rdf:Property ;
+    rdfs:label "capital" ;
+    rdfs:comment "The city that is the seat of government of a country." ;
+    rdfs:domain ex:Country ;
+    rdfs:range ex:City .
+ex:City a rdfs:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A large human settlement. It can be either the capital or not." .
+ex:area a rdf:Property ;
+    rdfs:label "area" ;
+    rdfs:comment "The quantifiable area a country covers, usually represented in square kilometers." ;
+    rdfs:domain ex:Country ;
+    rdfs:range xsd:float .

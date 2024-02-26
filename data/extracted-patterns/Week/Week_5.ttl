@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+dbo:Week     a rdfs:Class ;
+    rdfs:label "Week"@en ;
+dbo:hasDays    a rdfs:Property ;
+    rdfs:domain dbo:Week ;
+    rdfs:range dbo:Day ;
+    rdfs:label "has days"@en ;
+dbo:Day    a rdfs:Class ;
+    rdfs:label "Day"@en ;
+    rdfs:subClassOf dbo:TimePeriod .
+dbo:TimePeriod    a rdfs:Class ;
+    rdfs:label "Time Period"@en .
+dbo:Monday    a dbo:Day ;
+    rdfs:label "Monday"@en.dbo:Tuesday    a dbo:Day ;
+    rdfs:label "Tuesday"@en.dbo:Wednesday    a dbo:Day ;
+    rdfs:label "Wednesday"@en.dbo:Thursday    a dbo:Day ;
+    rdfs:label "Thursday"@en.dbo:Friday    a dbo:Day ;
+    rdfs:label "Friday"@en.dbo:Saturday    a dbo:Day ;
+    rdfs:label "Saturday"@en.dbo:Sunday    a dbo:Day ;
+    rdfs:label "Sunday"@en.dbo:Week    dbo:hasDays dbo:Monday, dbo:Tuesday, dbo:Wednesday, dbo:Thursday, dbo:Friday, dbo:Saturday, dbo:Sunday.

@@ -1,0 +1,5 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/#> .
+ex:Team a rdfs:Class ;
+  rdfs:label "Team" ;
+  rdfs:comment "Group of individuals who work together to achieve a common goal" .

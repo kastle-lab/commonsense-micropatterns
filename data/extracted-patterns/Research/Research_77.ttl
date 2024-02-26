@@ -1,0 +1,3 @@
+@prefix : <http://example.org/#> .
+:Research a rdfs:Class .
+:Research rdfs:comment "Scientific investigation or study that is designed to obtain new knowledge on a certain topic."@en .

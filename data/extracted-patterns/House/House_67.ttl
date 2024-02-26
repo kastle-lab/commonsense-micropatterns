@@ -1,0 +1,24 @@
+@prefix : <http://example.org/house#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:House a rdfs:Class ;
+    rdfs:label "House" .
+:hasAddress a rdfs:Property ;
+    rdfs:label "hasAddress" ;
+    rdfs:domain :House ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The address of the house" .
+:hasNumberOfRooms a rdfs:Property ;
+    rdfs:label "hasNumberOfRooms" ;
+    rdfs:domain :House ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The number of rooms in the house".
+:hasSquareFootage a rdfs:Property ;
+    rdfs:label "hasSquareFootage" ;
+    rdfs:domain :House ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The square footage of the house".
+:myHouse a :House ;
+    :hasAddress "123 Main St." ;
+    :hasNumberOfRooms 4 ;
+    :hasSquareFootage 2000 .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix money: <http://example.org/money#> .
+money:Money rdf:type rdfs:Class ;
+    rdfs:label "Money" ;
+    rdfs:comment "The medium that a system of exchange uses" .
+money:Currency rdf:type rdfs:Class ;
+    rdfs:label "Currency" ;
+    rdfs:comment "A system of money in general use in a particular country" ;
+    rdfs:subClassOf money:Money .
+money:Coin rdf:type rdfs:Class ;
+    rdfs:label "Coin" ;
+    rdfs:comment "A flat, typically round piece of metal with an official stamp, used as money" ;
+    rdfs:subClassOf money:Money .
+money:Banknote rdf:type rdfs:Class ;
+    rdfs:label "Banknote" ;
+    rdfs:comment "A printed piece of paper that is worth a specific amount of money" ;
+    rdfs:subClassOf money:Money .
+money:value rdf:type rdf:Property ;
+    rdfs:label "value" ;
+    rdfs:comment "The numerical value of the money" ;
+    rdfs:domain money:Money ;
+    rdfs:range xsd:decimal .
+money:hasCurrency rdf:type rdf:Property ;
+    rdfs:label "hasCurrency" ;
+    rdfs:comment "The currency of the money" ;
+    rdfs:domain money:Money ;
+    rdfs:range money:Currency .

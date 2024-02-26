@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix health: <http://example.org/health#> .
+health:Patient a owl:Class ;
+  rdfs:label "Patient" ;
+  rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty health:hasDiagnosis ;
+                      owl:someValuesFrom health:Disease ] .
+health:Doctor a owl:Class ;
+  rdfs:label "Doctor" .
+health:Disease a owl:Class ;
+  rdfs:label "Disease" .
+health:Medicine a owl:Class ;
+  rdfs:label "Medicine" ;
+  rdfs:subClassOf [ a owl:Restriction ;
+                      owl:onProperty health:prescribedFor ;
+                      owl:someValuesFrom health:Disease ] .
+health:hasDiagnosis a owl:ObjectProperty ;
+  rdfs:domain health:Patient ;
+  rdfs:range health:Disease .
+health:prescribedFor a owl:ObjectProperty ;
+  rdfs:domain health:Medicine ;
+  rdfs:range health:Disease .
+health:prescribedBy a owl:ObjectProperty ;
+  rdfs:domain health:Medicine ;
+  rdfs:range health:Doctor .
+health:hasDoctor a owl:ObjectProperty ;
+  rdfs:domain health:Patient ;
+  rdfs:range health:Doctor .
+  health:p1 a health:Patient ;
+  health:hasDiagnosis health:d1 ;
+  health:hasDoctor health:doc1 .
+  health:doc1 a health:Doctor .
+  health:d1 a health:Disease .
+  health:m1 a health:Medicine ;
+  health:prescribedFor health:d1 ;
+  health:prescribedBy health:doc1 .

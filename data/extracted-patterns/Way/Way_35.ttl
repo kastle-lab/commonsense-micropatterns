@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://www.example.org/ontology/way#> .
+way:     a rdfs:Class ;
+    rdfs:comment "The class of all ways" ;
+    rdfs:label "Way" .
+way:Path    a rdfs:Class ;
+    rdfs:subClassOf way: ;
+    rdfs:comment "A sub class of way, specifying a path or route" ;
+    rdfs:label "Path" .
+way:Direction    a rdfs:Class ;
+    rdfs:subClassOf way: ;
+    rdfs:comment "A sub class of way, specifying direction" ;
+    rdfs:label "Direction" .
+way:Method    a rdfs:Class ;
+    rdfs:subClassOf way: ;
+    rdfs:comment "A sub class of way, specifying method or technique" ;
+    rdfs:label "Method" .
+way:hasLength    rdf:type rdf:Property ;
+    rdfs:domain way:Path ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "This property indicates the length of a given way or path" ;
+    rdfs:label "hasLength" .
+way:hasDirection    rdf:type rdf:Property ;
+    rdfs:domain way:Direction ;
+    rdfs:range xsd:string ;
+    rdfs:comment "This property indicates the direction of a given way" ;
+    rdfs:label "hasDirection" .
+way:hasMethod    rdf:type rdf:Property ;
+    rdfs:domain way:Method ;
+    rdfs:range xsd:string ;
+    rdfs:comment "This property indicates the method or technique of a given way" ;
+    rdfs:label "hasMethod" .

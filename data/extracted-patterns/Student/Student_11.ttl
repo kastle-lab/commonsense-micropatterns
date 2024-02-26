@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix univ: <http://www.university.com/ontology#> .
+univ:Student   rdf:type owl:Class ;
+  rdfs:label "Student" ;
+  rdfs:comment "An individual who is enrolled in an educational institution or a particular course" .
+univ:hasStudentID  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has student ID" ;
+  rdfs:comment "The unique ID of a student in university" ;
+  rdfs:domain univ:Student ;
+  rdfs:range xsd:integer .
+univ:studiesCourse  rdf:type owl:ObjectProperty ;
+  rdfs:label "studies course" ;
+  rdfs:comment "The course that the student is currently studying" ;
+  rdfs:domain univ:Student ;
+  rdfs:range univ:Course .
+univ:Course  rdf:type owl:Class ;
+  rdfs:label "Course" ;
+  rdfs:comment "A unit of instruction in one subject, lasting one academic term" .
+ univ:hasCourseCode  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has course code" ;
+  rdfs:comment "The unique code of a course in university" ;
+  rdfs:domain univ:Course ;
+  rdfs:range xsd:string .
+ univ:enrolledAt   rdf:type owl:ObjectProperty ;
+  rdfs:label "enrolled at" ;
+  rdfs:comment "The university or institution where the student is enrolled at" ;
+  rdfs:domain univ:Student ;
+  rdfs:range univ:University .
+univ:University  rdf:type owl:Class ;
+  rdfs:label "University" ;
+  rdfs:comment "An institution of higher education and research that awards academic degrees in various fields" .
+univ:hasUniversityName  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has university name" ;
+  rdfs:comment "The name of a university" ;
+  rdfs:domain univ:University ;
+  rdfs:range xsd:string .

@@ -1,0 +1,21 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:home a owl:Class .
+ex:Bedroom a owl:Class ;
+    rdfs:subClassOf ex:home .
+ex:Kitchen a owl:Class ;
+    rdfs:subClassOf ex:home .
+ex:Bathroom a owl:Class ;
+    rdfs:subClassOf ex:home .
+ex:LivingRoom a owl:Class ;
+    rdfs:subClassOf ex:home .
+ex:Furniture a owl:Class .
+ex:hasRoom a owl:ObjectProperty ;
+    rdfs:domain ex:home ;
+    rdfs:range [        a owl:Class ;
+        owl:unionOf (ex:Bedroom ex:Kitchen ex:Bathroom ex:LivingRoom)    ] .
+ex:hasFurniture a owl:ObjectProperty ;
+    rdfs:domain [        a owl:Class ;
+        owl:unionOf (ex:Bedroom ex:Kitchen ex:Bathroom ex:LivingRoom)    ] ;
+    rdfs:range ex:Furniture .

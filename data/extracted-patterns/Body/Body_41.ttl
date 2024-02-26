@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix body: <http://www.example.org/body#> .
+body:Body a rdfs:Class ;
+    rdfs:label "Body"@en ;
+    rdfs:comment "A class representing the concept of a body"@en .
+body:hasPart a rdf:Property ;
+    rdfs:label "has part"@en ;
+    rdfs:comment "The relation representing that a Body has a part"@en ;
+    rdfs:domain body:Body ;
+    rdfs:range body:BodyPart .
+body:BodyPart a rdfs:Class ;
+    rdfs:label "Body part"@en ;
+    rdfs:comment "A class representing the concept of a part of the body"@en .
+    body:head a body:BodyPart ;
+    rdfs:label "head"@en ;
+    rdfs:comment "A body part representative of the head"@en .
+body:HumanBody a body:Body ;
+    rdfs:label "Human body"@en ;
+    rdfs:comment "A body representative of the human physique"@en ;
+    body:hasPart body:head .

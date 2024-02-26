@@ -1,0 +1,40 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix job: <http://www.example.org/job#> .
+job:Job a rdfs:Class ;
+    rdfs:label "Job" ;
+    rdfs:comment "The entity class Job represents a work or occupation carried out for a specific period of time, in return for monetary compensation."@en .
+job:hasTitle a rdf:Property;
+    rdfs:label "has title" ;
+    rdfs:comment "The property that describes the title of a job."@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string.job:hasSalary a rdf:Property;
+    rdfs:label "has salary" ;
+    rdfs:comment "The property that describes the salary of a job."@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:int.job:performsDuty a rdf:Property;
+    rdfs:label "performs duty" ;
+    rdfs:comment "The property that describes the responsibilities of a job."@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string.job:requiresSkill a rdf:Property;
+    rdfs:label "requires skill" ;
+    rdfs:comment "The property that describes the skills required for a job."@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string.job:isLocatedIn a rdf:Property;
+    rdfs:label "is located in" ;
+    rdfs:comment "The property that describes the location of a job."@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string.job:hasDuration a rdf:Property;
+    rdfs:label "has duration" ;
+    rdfs:comment "The property that describes the duration of a job."@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:int.job:Company a rdfs:Class ;
+    rdfs:label "Company" ;
+    rdfs:comment "Entity class representing a company where a job can be."@en .
+job:isFromCompany a rdf:Property ;
+    rdfs:label "is from company" ;
+    rdfs:comment "Property that represents the relationship of a job to a company."@en ;
+    rdfs:domain job:Job ;
+    rdfs:range job:Company.

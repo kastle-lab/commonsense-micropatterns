@@ -1,0 +1,8 @@
+ Let's take a concept of "University", and the levels could be "Undergraduate" and "Postgraduate".
+ It can be depicted in RDF/Turtle format as following:
+@prefix ex: <http://example.org#> .
+ex:University a owl:Class .
+ex:Level a owl:Class .
+ex:Undergraduate a ex:Level.ex:Postgraduate a ex:Level.ex:universityLevel rdf:type owl:ObjectProperty ;
+               rdfs:domain ex:University ;
+               rdfs:range ex:Level.

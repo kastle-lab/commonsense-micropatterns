@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix business: <http://example.org/business#> .
+business:Business rdf:type rdfs:Class ;
+  rdfs:label "Business"^^xsd:string ;
+  rdfs:comment "The class of all business entities." .
+business:hasEmployee rdf:type rdf:Property ;
+  rdfs:label "has employee"^^xsd:string ;
+  rdfs:range business:Employee ;
+  rdfs:domain business:Business .
+business:Employee rdf:type rdfs:Class ;
+  rdfs:label "Employee"^^xsd:string ;
+  rdfs:comment "The class of all employees." ;
+business:hasPosition rdf:type rdf:Property ;
+  rdfs:range business:Position ;
+  rdfs:domain business:Employee ;
+business:Position rdf:type rdfs:Class ;
+  rdfs:label "Position"^^xsd:string ;
+  rdfs:comment "The class of all business positions." .
+business:Partnership rdf:type rdfs:Class ;
+  rdfs:label "Partnership"^^xsd:string ;
+  rdfs:comment "The class of all business partnerships." .
+business:hasPartner rdf:type rdf:Property ;
+  rdfs:range business:Partnership ;
+  rdfs:domain business:Business .

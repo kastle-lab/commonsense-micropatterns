@@ -1,0 +1,17 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:World a rdfs:Class ;
+  rdfs:label "World" .
+:Continent a rdfs:Class ;
+    rdfs:label "Continent" ;
+    rdfs:subClassOf :World.:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:subClassOf :Continent.:isPartOf rdf:type rdf:Property ;
+  rdfs:domain :Country ;
+  rdfs:range :Continent .
+:Asia a :Continent ;
+  rdfs:label "Asia" .
+:China a :Country ;
+  rdfs:label "China" ;
+  :isPartOf :Asia .

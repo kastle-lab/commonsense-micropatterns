@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/reason#> .
+:Reason a owl:Class ;
+    rdfs:label "Reason" ;
+    rdfs:comment "A cause, explanation, or justification for a fact, action, or phenomenon" .
+:causes a owl:ObjectProperty ;
+    rdfs:label "causes" ;
+    rdfs:comment "Used to express the fact that a reason leads to a certain action or effect" ;
+    rdfs:domain :Reason ;
+    rdfs:range :ActionEffect .
+:justifies a owl:ObjectProperty ;
+    rdfs:label "justifies" ;
+    rdfs:comment "Used to express the fact that a reason validates a certain action or claim" ;
+    rdfs:domain :Reason ;
+    rdfs:range :ActionClaim .
+:explains a owl:ObjectProperty ;
+    rdfs:label "explains" ;
+    rdfs:comment "Used to express the fact that a reason clarifies a certain phenomenon or fact" ;
+    rdfs:domain :Reason ;
+    rdfs:range :PhenomenonFact .
+    :ActionEffect a owl:Class ;
+    rdfs:label "ActionEffect" ;
+    rdfs:comment "An action or event that is a direct result of a cause (or reason)" .
+:ActionClaim a owl:Class ;
+    rdfs:label "ActionClaim" ;
+    rdfs:comment "An action or statement that is validated by a specific reason" .
+:PhenomenonFact a owl:Class ;
+    rdfs:label "PhenomenonFact" ;
+    rdfs:comment "A phenomenon or fact that is clarified or explained by a specific reason" .

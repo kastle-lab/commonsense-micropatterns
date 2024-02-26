@@ -1,0 +1,265 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Child> a rdfs:Class .
+
+<http://example.com/Human> a rdfs:Class .
+
+<http://example.com/Parent> a rdfs:Class .
+
+<http://example.com/Person> a rdfs:Class .
+
+<http://example.com/ontology/child#Child> a rdfs:Class .
+
+<http://example.com/ontology/child#Parent> a rdfs:Class .
+
+<http://example.com/ontology/child#School> a rdfs:Class .
+
+<http://example.org#Child> a rdfs:Class .
+
+<http://example.org#Parent> a rdfs:Class .
+
+<http://example.org/Child> a rdfs:Class .
+
+<http://example.org/ChildOntology#Child> a rdfs:Class .
+
+<http://example.org/ChildOntology#Person> a rdfs:Class .
+
+<http://example.org/ChildOntology#School> a rdfs:Class .
+
+<http://example.org/Human> a rdfs:Class .
+
+<http://example.org/Parent> a rdfs:Class .
+
+<http://example.org/School> a rdfs:Class .
+
+<http://example.org/child#Child> a rdfs:Class .
+
+<http://example.org/child#Parent> a rdfs:Class .
+
+<http://example.org/childOntology#Address> a rdfs:Class .
+
+<http://example.org/childOntology#Adult> a rdfs:Class .
+
+<http://example.org/childOntology#Child> a rdfs:Class .
+
+<http://example.org/childOntology#Parent> a rdfs:Class .
+
+<http://example.org/childOntology#School> a rdfs:Class .
+
+<http://example.org/childOntology#child> a rdfs:Class .
+
+<http://example.org/childOntology#parent> a rdfs:Class ;
+    rdfs:range <http://example.org/childOntology#child>,
+        <http://example.org/childOntology#parent> .
+
+<http://example.org/childOntology#school> a rdfs:Class ;
+    rdfs:range <http://example.org/childOntology#child>,
+        <http://example.org/childOntology#school> .
+
+<http://example.org/ontology#Adult> a rdfs:Class .
+
+<http://example.org/ontology#Child> a rdfs:Class .
+
+<http://example.org/ontology/child#Adult> a rdfs:Class .
+
+<http://example.org/ontology/child#Child> a rdfs:Class .
+
+<http://schema.org/Child> a rdfs:Class .
+
+<http://schema.org/EducationalOrganization> a rdfs:Class .
+
+<http://schema.org/Organization> a rdfs:Class .
+
+<http://schema.org/Person> a rdfs:Class .
+
+<http://www.example.com/childOntology#Child> a rdfs:Class .
+
+<http://www.example.com/ontology/child#Child> a rdfs:Class .
+
+<http://www.example.com/ontology/child#Parent> a rdfs:Class .
+
+<http://www.example.org/ontology#Child> a rdfs:Class .
+
+<http://www.example.org/ontology#Person> a rdfs:Class .
+
+<http://www.example.org/ontology/child#Child> a rdfs:Class .
+
+<http://www.example.org/ontology/child#School> a rdfs:Class .
+
+<http://www.semanticweb.org/ontology/child#Adult> a rdfs:Class .
+
+<http://www.semanticweb.org/ontology/child#Child> a rdfs:Class .
+
+<http://www.semanticweb.org/ontology/child#Human> a rdfs:Class .
+
+<http://www.semanticweb.org/ontology/child#School> a rdfs:Class .
+
+<http://xmlns.com/foaf/0.1/Person> a rdfs:Class .
+
+<http://example.com/hasAge> rdfs:range <http://example.com/Child> .
+
+<http://example.com/hasChild> rdfs:range <http://example.com/Child>,
+        <http://example.com/Human>,
+        <http://example.com/Parent>,
+        <http://example.com/Person> .
+
+<http://example.com/hasName> rdfs:range <http://example.com/Child> .
+
+<http://example.com/hasParent> rdfs:range <http://example.com/Child>,
+        <http://example.com/Parent> .
+
+<http://example.com/isChildOf> rdfs:range <http://example.com/Child>,
+        <http://example.com/Human>,
+        <http://example.com/Person> .
+
+<http://example.com/isMale> rdfs:range <http://example.com/Child> .
+
+<http://example.com/ontology/child#attendsSchool> rdfs:range <http://example.com/ontology/child#Child>,
+        <http://example.com/ontology/child#School> .
+
+<http://example.com/ontology/child#hasAge> rdfs:range <http://example.com/ontology/child#Child> .
+
+<http://example.com/ontology/child#hasGrade> rdfs:range <http://example.com/ontology/child#Child> .
+
+<http://example.com/ontology/child#hasName> rdfs:range <http://example.com/ontology/child#Child> .
+
+<http://example.com/ontology/child#hasParent> rdfs:range <http://example.com/ontology/child#Child>,
+        <http://example.com/ontology/child#Parent> .
+
+<http://example.org#isChildOf> rdfs:range <http://example.org#Child>,
+        <http://example.org#Parent> .
+
+<http://example.org/ChildOntology#attendsSchool> rdfs:range <http://example.org/ChildOntology#Child>,
+        <http://example.org/ChildOntology#School> .
+
+<http://example.org/ChildOntology#hasAge> rdfs:range <http://example.org/ChildOntology#Child> .
+
+<http://example.org/ChildOntology#hasName> rdfs:range <http://example.org/ChildOntology#Child> .
+
+<http://example.org/ChildOntology#hasParent> rdfs:range <http://example.org/ChildOntology#Child>,
+        <http://example.org/ChildOntology#Person> .
+
+<http://example.org/attendsSchool> rdfs:range <http://example.org/Child>,
+        <http://example.org/School> .
+
+<http://example.org/child#hasAge> rdfs:range <http://example.org/child#Child> .
+
+<http://example.org/child#hasFirstName> rdfs:range <http://example.org/child#Child> .
+
+<http://example.org/child#hasLastName> rdfs:range <http://example.org/child#Child> .
+
+<http://example.org/child#hasParent> rdfs:range <http://example.org/child#Child>,
+        <http://example.org/child#Parent> .
+
+<http://example.org/child#hasSibling> rdfs:range <http://example.org/child#Child> .
+
+<http://example.org/child#isParentOf> rdfs:range <http://example.org/child#Child>,
+        <http://example.org/child#Parent> .
+
+<http://example.org/childOntology#AttendsSchool> rdfs:range <http://example.org/childOntology#Child>,
+        <http://example.org/childOntology#School> .
+
+<http://example.org/childOntology#age> rdfs:range <http://example.org/childOntology#child> .
+
+<http://example.org/childOntology#hasAge> rdfs:range <http://example.org/childOntology#Child> .
+
+<http://example.org/childOntology#hasName> rdfs:range <http://example.org/childOntology#Child> .
+
+<http://example.org/childOntology#hasParent> rdfs:range <http://example.org/childOntology#Adult>,
+        <http://example.org/childOntology#Child>,
+        <http://example.org/childOntology#Parent> .
+
+<http://example.org/childOntology#hasSibling> rdfs:range <http://example.org/childOntology#child> .
+
+<http://example.org/childOntology#livesAt> rdfs:range <http://example.org/childOntology#Address>,
+        <http://example.org/childOntology#Child> .
+
+<http://example.org/childOntology#name> rdfs:range <http://example.org/childOntology#child> .
+
+<http://example.org/hasAge> rdfs:range <http://example.org/Child> .
+
+<http://example.org/hasChild> rdfs:range <http://example.org/Child>,
+        <http://example.org/Human>,
+        <http://example.org/Parent> .
+
+<http://example.org/hasParent> rdfs:range <http://example.org/Child>,
+        <http://xmlns.com/foaf/0.1/Person> .
+
+<http://example.org/isChildOf> rdfs:range <http://example.org/Child>,
+        <http://example.org/Human>,
+        <http://example.org/Parent> .
+
+<http://example.org/ontology#hasChild> rdfs:range <http://example.org/ontology#Adult>,
+        <http://example.org/ontology#Child> .
+
+<http://example.org/ontology#isChildOf> rdfs:range <http://example.org/ontology#Adult>,
+        <http://example.org/ontology#Child> .
+
+<http://example.org/ontology/child#birthdate> rdfs:range <http://example.org/ontology/child#Child> .
+
+<http://example.org/ontology/child#hasChild> rdfs:range <http://example.org/ontology/child#Adult>,
+        <http://example.org/ontology/child#Child> .
+
+<http://example.org/ontology/child#hasParent> rdfs:range <http://example.org/ontology/child#Adult>,
+        <http://example.org/ontology/child#Child> .
+
+<http://example.org/ontology/child#name> rdfs:range <http://example.org/ontology/child#Adult>,
+        <http://example.org/ontology/child#Child> .
+
+<http://schema.org/age> rdfs:range <http://schema.org/Child> .
+
+<http://schema.org/enrolledIn> rdfs:range <http://schema.org/Child>,
+        <http://schema.org/EducationalOrganization> .
+
+<http://schema.org/hasSibling> rdfs:range <http://schema.org/Child> .
+
+<http://schema.org/isChildOf> rdfs:range <http://schema.org/Child>,
+        <http://schema.org/Person> .
+
+<http://schema.org/memberOf> rdfs:range <http://schema.org/Child>,
+        <http://schema.org/Organization> .
+
+<http://schema.org/parentOf> rdfs:range <http://schema.org/Child>,
+        <http://schema.org/Person> .
+
+<http://www.example.com/childOntology#age> rdfs:range <http://www.example.com/childOntology#Child> .
+
+<http://www.example.com/childOntology#gender> rdfs:range <http://www.example.com/childOntology#Child> .
+
+<http://www.example.com/childOntology#name> rdfs:range <http://www.example.com/childOntology#Child> .
+
+<http://www.example.com/ontology/child#hasAge> rdfs:range <http://www.example.com/ontology/child#Child> .
+
+<http://www.example.com/ontology/child#hasName> rdfs:range <http://www.example.com/ontology/child#Child> .
+
+<http://www.example.com/ontology/child#hasParent> rdfs:range <http://www.example.com/ontology/child#Child>,
+        <http://www.example.com/ontology/child#Parent> .
+
+<http://www.example.org/ontology#hasAge> rdfs:range <http://www.example.org/ontology#Child> .
+
+<http://www.example.org/ontology#hasName> rdfs:range <http://www.example.org/ontology#Child> .
+
+<http://www.example.org/ontology#hasParent> rdfs:range <http://www.example.org/ontology#Child>,
+        <http://www.example.org/ontology#Person> .
+
+<http://www.example.org/ontology/child#age> rdfs:range <http://www.example.org/ontology/child#Child> .
+
+<http://www.example.org/ontology/child#attendsSchool> rdfs:range <http://www.example.org/ontology/child#Child>,
+        <http://www.example.org/ontology/child#School> .
+
+<http://www.example.org/ontology/child#hasParent> rdfs:range <http://www.example.org/ontology/child#Child>,
+        <http://xmlns.com/foaf/0.1/Person> .
+
+<http://www.semanticweb.org/ontology/child#attendsSchool> rdfs:range <http://www.semanticweb.org/ontology/child#Child>,
+        <http://www.semanticweb.org/ontology/child#School> .
+
+<http://www.semanticweb.org/ontology/child#hasAge> rdfs:range <http://www.semanticweb.org/ontology/child#Child> .
+
+<http://www.semanticweb.org/ontology/child#hasName> rdfs:range <http://www.semanticweb.org/ontology/child#Child> .
+
+<http://www.semanticweb.org/ontology/child#hasParent> rdfs:range <http://www.semanticweb.org/ontology/child#Adult>,
+        <http://www.semanticweb.org/ontology/child#Child> .
+
+<http://www.semanticweb.org/ontology/child#hasSibling> rdfs:range <http://www.semanticweb.org/ontology/child#Child>,
+        <http://www.semanticweb.org/ontology/child#Human> .
+

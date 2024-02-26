@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix head: <http://www.example.org/head#> .
+head:Head rdf:type owl:Class .
+head:hasPart rdf:type owl:ObjectProperty ;
+  rdfs:domain head:Head ;
+  rdfs:range head:HeadPart .
+  head:HeadPart rdf:type owl:Class .
+head:Eyes rdf:type head:HeadPart ;
+  rdfs:label "Eyes" .
+head:Nose rdf:type head:HeadPart ;
+  rdfs:label "Nose" .
+head:Mouth rdf:type head:HeadPart ;
+  rdfs:label "Mouth" .
+head:Ears rdf:type head:HeadPart ;
+  rdfs:label "Ears" .
+head:Forehead rdf:type head:HeadPart ;
+  rdfs:label "Forehead" .
+head:Hair rdf:type head:HeadPart ;
+  rdfs:label "Hair" .
+ head:Face rdf:type owl:Class ;
+  rdfs:subClassOf head:Head ;
+  rdfs:label "Face" .
+   head:Skull rdf:type owl:Class ;
+  rdfs:subClassOf head:Head ;
+  rdfs:label "Skull" .
+ head:Brain rdf:type owl:Class ;
+  rdfs:subClassOf head:Head ;
+  rdfs:label "Brain" .
+   head:hasSensoryOrgan rdf:type owl:ObjectProperty ;
+  rdfs:domain head:Head ;
+  rdfs:range head:SensoryOrgan .
+head:SensoryOrgan rdf:type owl:Class .
+  head:hasSkin rdf:type owl:ObjectProperty ;
+  rdfs:domain head:Head ;
+  rdfs:range head:Skin .
+  head:Skin rdf:type owl:Class .
+head:Individual rdf:type head:Head ;
+  head:hasPart head:Eyes ,                head:Nose ,                head:Mouth ,                head:Ears ,                head:Forehead ,                head:Hair ;
+  head:hasSensoryOrgan head:Eyes ,                       head:Nose ,                       head:Ears ;
+  head:hasSkin head:Skin .

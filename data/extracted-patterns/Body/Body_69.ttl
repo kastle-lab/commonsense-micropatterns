@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hh: <http://humanhealth.org/> .
+hh:Body rdf:type rdfs:Class ;
+  rdfs:label "Body"^^xsd:string ;
+  rdfs:comment "A Human Body."@en ;
+  rdfs:subClassOf hh:AnatomicalStructure ;
+  rdfs:seeAlso <http://en.wikipedia.org/wiki/Human_body> .
+hh:hasPart rdf:type owl:ObjectProperty ;
+  rdfs:label "has part"@en ;
+  rdfs:comment "A relation indicating that a body has an anatomical part."@en ;
+  rdfs:domain hh:Body ;
+  rdfs:range hh:AnatomicalStructure .
+hh:AnatomicalStructure rdf:type rdfs:Class ;
+  rdfs:label "Anatomical structure"@en ;
+  rdfs:comment "Structure that exist as physical part of a body"@en .

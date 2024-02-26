@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix money: <http://example.org/money#> .
+money:Money rdf:type rdfs:Class ;
+    rdfs:comment "Class to represent Money" ;
+    rdfs:label "Money" .
+money:Currency rdf:type rdfs:Class ;
+    rdfs:comment "Class to represent different types of Currencies" ;
+    rdfs:label "Currency" .
+money:Amount rdf:type rdf:Property ;
+    rdf:domain money:Money ;
+    rdf:range xsd:decimal ;
+    rdfs:comment "Decimal value of the money." ;
+    rdfs:label "Amount" .
+    money:hasCurrency rdf:type rdf:Property ;
+    rdf:domain money:Money ;
+    rdf:range money:Currency ;
+    rdfs:comment "The currency of the money." ;
+    rdfs:label "hasCurrency" .
+money:CurrencyName rdf:type rdf:Property ;
+    rdf:domain money:Currency ;
+    rdf:range xsd:string ;
+    rdfs:comment "The name of the currency." ;
+    rdfs:label "CurrencyName" .

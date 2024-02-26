@@ -1,0 +1,29 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Chair rdf:type rdfs:Class .
+ex:Chair rdfs:subClassOf ex:Furniture .
+ex:hasMaterial rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+    rdfs:range rdfs:Literal .
+ ex:hasColour rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+    rdfs:range rdfs:Literal .
+ ex:hasStyle rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+    rdfs:range rdfs:Literal .
+ ex:hasBackrest rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+    rdfs:range rdfs:Literal .
+ ex:hasLegs rdf:type rdf:Property ;
+    rdfs:domain ex:Chair ;
+    rdfs:range rdfs:Literal .
+   In this example, ""
+ex:Chair"" is defined as a type (or class) of ""
+ex:Furniture"".
+ The properties ""
+ex:hasMaterial"", ""
+ex:hasColour"", ""
+ex:hasStyle"", ""
+ex:hasBackrest"" and ""
+ex:hasLegs"" are used to describe attributes of a chair."

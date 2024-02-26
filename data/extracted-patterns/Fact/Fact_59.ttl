@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:Fact a rdfs:Class ;
+  rdfs:label "Fact"@en ;
+  rdfs:comment "A representation of a piece of information that is an objective reality"@en .
+ex:hasFact a rdf:Property ;
+  rdfs:label "has fact"@en ;
+  rdfs:comment "A relationship between a subject and a fact"@en ;
+  rdfs:domain ex:Subject ;
+  rdfs:range ex:Fact .
+ex:Subject a rdfs:Class ;
+  rdfs:label "Subject"@en ;
+  rdfs:comment "The entity about which a fact is stated"@en .
+ex:Subject1 a ex:Subject ;
+  ex:hasFact ex:Fact1 .
+ex:Fact1 a ex:Fact ;
+  rdfs:label "Earth is the 3rd planet from the sun"@en .

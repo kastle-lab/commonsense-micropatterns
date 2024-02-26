@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://www.example.org/way#> .
+way:Way a rdfs:Class;
+       rdfs:label "Way"@en;
+       rdfs:comment "A class representing a path or direction to follow."@en .
+way:name a rdf:Property;
+       rdfs:label "name"@en;
+       rdfs:comment "The name of the way."@en;
+       rdfs:domain way:Way;
+       rdfs:range xsd:string .
+way:distance a rdf:Property;
+       rdfs:label "distance"@en;
+       rdfs:comment "The distance of the way."@en;
+       rdfs:domain way:Way;
+       rdfs:range xsd:float .
+way:from a rdf:Property;
+       rdfs:label "from"@en;
+       rdfs:comment "The starting point of the way."@en;
+       rdfs:domain way:Way;
+       rdfs:range xsd:string .
+way:to a rdf:Property;
+       rdfs:label "to"@en;
+       rdfs:comment "The ending point of the way."@en;
+       rdfs:domain way:Way;
+       rdfs:range xsd:string .

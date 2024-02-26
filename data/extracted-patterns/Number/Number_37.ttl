@@ -1,0 +1,28 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com#> .
+ex:Number a owl:Class ;
+    rdfs:label "Number"@en ;
+    rdfs:comment "Any abstract object used to represent a count or measure in mathematics"@en ;
+    rdfs:subClassOf xsd:decimal .
+ex:RealNumber a owl:Class ;
+    rdfs:label "Real Number"@en ;
+    rdfs:comment "A value that represents a quantity along a line"@en ;
+    rdfs:subClassOf ex:Number .
+ex:Integer a owl:Class ;
+    rdfs:label "Integer"@en ;
+    rdfs:comment "A number that can be written without a fractional or decimal component"@en ;
+    rdfs:subClassOf ex:RealNumber .
+ex:PositiveNumber a owl:Class ;
+    rdfs:label "Positive Number"@en ;
+    rdfs:comment "A number that is greater than zero"@en ;
+    rdfs:subClassOf ex:RealNumber .
+ex:NegativeNumber a owl:Class ;
+    rdfs:label "Negative Number"@en ;
+    rdfs:comment "A number that is less than zero"@en ;
+    rdfs:subClassOf ex:RealNumber .
+ex:ComplexNumber a owl:Class ;
+    rdfs:label "Complex Number"@en ;
+    rdfs:comment "A number that can be expressed in the form a + bi, where a and b are real numbers, and i is a solution of the equation x2 = −1"@en ;
+    rdfs:subClassOf ex:Number .

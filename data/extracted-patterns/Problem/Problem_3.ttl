@@ -1,0 +1,38 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix problem: <http://www.example.org/problem#> .
+problem:Problem a owl:Class ;
+    rdfs:label "Problem"@en ;
+    rdfs:comment "A class representing the concept of a problem"@en ;
+    rdfs:subClassOf owl:Thing .
+problem:hasSolution a owl:ObjectProperty ;
+    rdfs:label "has solution"@en ;
+    rdfs:comment "Property relating a problem to its solutions"@en ;
+    rdfs:range problem:Solution ;
+    rdfs:domain problem:Problem .
+problem:hasComplexity a owl:DatatypeProperty ;
+    rdfs:label "has complexity"@en ;
+    rdfs:comment "Property indicating the complexity of a problem"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain problem:Problem .
+problem:Solution a owl:Class ;
+    rdfs:label "Solution"@en ;
+    rdfs:comment "A class representing the concept of a solution"@en ;
+    rdfs:subClassOf owl:Thing .
+problem:isSolvedBy a owl:ObjectProperty ;
+    rdfs:label "is solved by"@en ;
+    rdfs:comment "Property relating a solution to the problems it solves"@en ;
+    rdfs:range problem:Problem ;
+    rdfs:domain problem:Solution .
+problem:hasDescription a owl:DatatypeProperty ;
+    rdfs:label "has description"@en ;
+    rdfs:comment "Property describing a solution or a problem"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain owl:Thing .
+problem:hasDifficulty a owl:DatatypeProperty ;
+    rdfs:label "has difficulty"@en ;
+    rdfs:comment "Property indicating the difficulty level of a problem"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain problem:Problem .

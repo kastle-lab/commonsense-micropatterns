@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix kind: <http://example.com/kind#> .
+kind:HumanKind rdf:type rdfs:Class ;
+  rdfs:label "Human Kind" ;
+  rdfs:comment "The class of all kinds with human being as their individuals"^^xsd:string .
+kind:AnimalKind rdf:type rdfs:Class ;
+  rdfs:label "Animal Kind" ;
+  rdfs:comment "The class of all kinds with animal as their individuals" .
+kind:PlantKind rdf:type rdfs:Class ;
+  rdfs:label "Plant Kind" ;
+  rdfs:comment "The class of all kinds with plant as their individuals" .
+kind:MineralKind rdf:type rdfs:Class ;
+  rdfs:label "Mineral Kind" ;
+  rdfs:comment "The class of all kinds with mineral as their individuals" .
+kind:hasKind rdf:type rdf:Property ;
+  rdfs:label "has kind" ;
+  rdfs:comment "The property that associates an object with its kind" ;
+  rdfs:domain kind:Kind ;
+  rdfs:range [    a rdfs:Class ;
+    rdfs:unionOf (kind:HumanKind kind:AnimalKind kind:PlantKind kind:MineralKind)  ] .
+kind:Kind rdf:type rdfs:Class ;
+  rdfs:label "Kind" ;
+  rdfs:comment "The class of all kinds (types, species, sorts)" .
+kind:Kingdom rdf:type rdfs:Class ;
+  rdfs:label "Kingdom" ;
+  rdfs:comment "The class of all kingdoms" ;
+  rdfs:subClassOf kind:Kind .

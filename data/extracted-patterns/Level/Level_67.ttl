@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/> .
+:Level a rdfs:Class .
+:hasLevel a rdf:Property ;
+    rdfs:range :Level ;
+    rdfs:domain [        a owl:Class;
+         owl:unionOf (            :Class1            :Class2        )    ].:Level1 a :Level ;
+    rdfs:label "Level 1"^^xsd:string .
+:Level2 a :Level ;
+    rdfs:label "Level 2"^^xsd:string .
+:Class1 a rdfs:Class ;
+    :hasLevel :Level1 .
+:Class2 a rdfs:Class ;
+    :hasLevel :Level2 .

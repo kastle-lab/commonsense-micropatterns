@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+# Class definitionsex:Face rdf:type rdfs:Class .
+ex:Eyebrows rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Face .
+ex:Eyes rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Face .
+ex:Nose rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Face .
+ex:Mouth rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Face .
+ex:Cheeks rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Face .
+ex:Chin rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Face .
+ex:Forehead rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Face .
+# Property definitionsex:hasColor rdf:type rdf:Property ;
+    rdfs:domain ex:Face ;
+    rdfs:range rdfs:Literal .
+ex:containsFeature rdf:type rdf:Property ;
+    rdfs:domain ex:Face ;
+    rdfs:range rdfs:Class .
+# Individuals
+ex:Face1 rdf:type ex:Face ;
+    ex:containsFeature ex:Eyes ;
+    ex:containsFeature ex:Nose ;
+    ex:containsFeature ex:Mouth ;
+    ex:containsFeature ex:Forehead ;
+    ex:containsFeature ex:Eyebrows ;
+    ex:containsFeature ex:Cheeks ;
+    ex:containsFeature ex:Chin ;
+    ex:hasColor "Brown" .

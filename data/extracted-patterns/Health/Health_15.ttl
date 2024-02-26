@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix health: <http://example.com/health#> .
+# Classes
+health:Patient rdf:type owl:Class .
+health:Disease rdf:type owl:Class .
+health:Doctor rdf:type owl:Class .
+health:MedicalCondition rdf:type owl:Class .
+health:Symptom rdf:type owl:Class .
+health:Treatment rdf:type owl:Class .
+health:Hospital rdf:type owl:Class .
+health:Medication rdf:type owl:Class .
+# Subclasseshealth:ChronicDisease rdf:type owl:Class ;
+  rdfs:subClassOf health:Disease .
+health:AcuteDisease rdf:type owl:Class ;
+  rdfs:subClassOf health:Disease .
+# Properties
+health:hasCondition rdf:type owl:ObjectProperty ;
+  rdfs:domain health:Patient ;
+  rdfs:range health:MedicalCondition .
+health:hasSymptom rdf:type owl:ObjectProperty ;
+  rdfs:domain health:MedicalCondition ;
+  rdfs:range health:Symptom .
+health:prescribes rdf:type owl:ObjectProperty ;
+  rdfs:domain health:Doctor ;
+  rdfs:range health:Treatment .
+health:providesTreatment rdf:type owl:ObjectProperty ;
+  rdfs:domain health:Hospital ;
+  rdfs:range health:Treatment .
+health:administersMedication rdf:type owl:ObjectProperty ;
+  rdfs:domain health:Doctor ;
+  rdfs:range health:Medication .
+# Individuals
+health:John rdf:type health:Patient .
+health:Pneumonia rdf:type health:Disease .
+health:DrSmith rdf:type health:Doctor .
+health:Coughing rdf:type health:Symptom .
+health:Antibiotics rdf:type health:Medication ;
+  rdfs:label "Antibiotics"^^xsd:string .
+health:GeneralHospital rdf:type health:Hospital .
+health:BreathingDifficultyTreatment rdf:type health:Treatment .
+# Relationshipshealth:John health:hasCondition health:Pneumonia .
+health:Pneumonia health:hasSymptom health:Coughing .
+health:DrSmith health:prescribes health:BreathingDifficultyTreatment .
+health:GeneralHospital health:providesTreatment health:BreathingDifficultyTreatment .
+health:DrSmith health:administersMedication health:Antibiotics .

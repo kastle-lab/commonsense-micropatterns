@@ -1,0 +1,18 @@
+ Please note that in ontology modeling, the concept of "way" can be abstract and may refer to many different things depending on the context. Here, assuming "way" may mean a path, route, or method to get or achieve something.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://example.org/way#> .
+way:Way   rdf:type rdfs:Class ;
+  rdfs:comment "The class of all ways, methods or paths."@en ;
+  rdfs:label "Way"@en .
+way:hasWay  rdf:type rdf:Property ;
+  rdfs:comment "The relation between something and the way it is done or achieved."@en ;
+  rdfs:label "has way"@en ;
+  rdfs:range way:Way ;
+  rdfs:domain rdfs:Resource .
+way:isWayOf  rdf:type rdf:Property ;
+  rdfs:comment "The inverse relation of 'hasWay', indicating what something is a way of."@en ;
+  rdfs:label "is way of"@en ;
+  rdfs:range rdfs:Resource ;
+  rdfs:domain way:Way .

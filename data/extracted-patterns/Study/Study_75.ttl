@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix study: <http://www.example.org/study#> .
+study:Study    a rdf:Class ;
+    rdfs:label "Study" ;
+    rdfs:comment "Represents a study" .
+study:hasStudyID    a rdf:Property ;
+    rdfs:label "has study ID" ;
+    rdfs:comment "The unique ID of a study" ;
+    rdfs:domain study:Study ;
+    rdfs:range xsd:string .
+study:hasStudyName    a rdf:Property ;
+    rdfs:label "has study name" ;
+    rdfs:comment "The name of a study" ;
+    rdfs:domain study:Study ;
+    rdfs:range xsd:string .
+study:hasStudyTopic    a rdf:Property ;
+    rdfs:label "has study topic" ;
+    rdfs:comment "The topic of a study" ;
+    rdfs:domain study:Study ;
+    rdfs:range xsd:string .
+study:hasStudyDate    a rdf:Property ;
+    rdfs:label "has study date" ;
+    rdfs:comment "The date of a study" ;
+    rdfs:domain study:Study ;
+    rdfs:range xsd:date .

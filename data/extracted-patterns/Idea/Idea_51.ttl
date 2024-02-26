@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.example.org/ontology#> .
+:Idea a rdfs:Class ;
+    rdfs:label "Idea"@en ;
+    rdfs:comment "A thought or suggestion as to a possible course of action."@en .
+:hasIdea a rdf:Property ;
+    rdfs:label "has idea"@en ;
+    rdfs:comment "Property relating an individual to an idea they have."@en ;
+    rdfs:domain :Agent ;
+    rdfs:range :Idea .
+:Agent a rdfs:Class ;
+    rdfs:label "Agent"@en ;
+    rdfs:comment "An entity that has ideas."@en .

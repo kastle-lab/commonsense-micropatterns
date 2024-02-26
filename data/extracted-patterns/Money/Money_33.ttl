@@ -1,0 +1,37 @@
+@prefix : <http://example.org/money#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+: a owl:Ontology ;
+    rdfs:comment "The ontology of the concept of money" .
+:Money a owl:Class ;
+    rdfs:label "Money"@en ;
+    rdfs:comment "A medium of exchange in the form of coins and banknotes"@en .
+:Currency a owl:Class ;
+    rdfs:label "Currency"@en ;
+    rdfs:comment "A system of money in general use in a particular country"@en ;
+    rdfs:subClassOf :Money .
+:DigitalCurrency a owl:Class ;
+    rdfs:label "Digital Currency"@en ;
+    rdfs:comment "A type of currency available in digital form"@en ;
+    rdfs:subClassOf :Money .
+:Coin a owl:Class ;
+    rdfs:label "Coin"@en ;
+    rdfs:comment "A flat, typically round piece of metal that has an official stamp and is used as money"@en ;
+    rdfs:subClassOf :Currency .
+:Banknote a owl:Class ;
+    rdfs:label "Banknote"@en ;
+    rdfs:comment "A piece of paper money"@en ;
+    rdfs:subClassOf :Currency .
+:Cryptocurrency a owl:Class ;
+    rdfs:label "Cryptocurrency"@en ;
+    rdfs:comment "A digital or virtual form of currency that uses cryptography for security"@en ;
+    rdfs:subClassOf :DigitalCurrency .
+:Bitcoin a owl:Class ;
+    rdfs:label "Bitcoin"@en ;
+    rdfs:comment "A type of cryptocurrency"@en ;
+    rdfs:subClassOf :Cryptocurrency .
+:Ether a owl:Class ;
+    rdfs:label "Ether"@en ;
+    rdfs:comment "A type of cryptocurrency"@en ;
+    rdfs:subClassOf :Cryptocurrency .

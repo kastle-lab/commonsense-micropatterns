@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix change: <http://example.com/change#> .
+change:     rdf:type owl:Ontology ;
+    rdfs:comment "An ontology about Changes"@en .
+change:Change    rdf:type owl:Class ;
+    rdfs:label "Change"@en ;
+    rdfs:comment "Represents a general concept of change"@en .
+change:PhysicalChange    rdf:type owl:Class ;
+    rdfs:label "Physical Change"@en ;
+    rdfs:subClassOf change:Change ;
+    rdfs:comment "Represents physical changes"@en .
+change:ChemicalChange    rdf:type owl:Class ;
+    rdfs:label "Chemical Change"@en ;
+    rdfs:subClassOf change:Change ;
+    rdfs:comment "Represents chemical changes"@en .
+change:SocialChange    rdf:type owl:Class ;
+    rdfs:label "Social Change"@en ;
+    rdfs:subClassOf change:Change ;
+    rdfs:comment "Represents social changes"@en .
+change:PersonalChange    rdf:type owl:Class ;
+    rdfs:label "Personal Change"@en ;
+    rdfs:subClassOf change:Change ;
+    rdfs:comment "Represents personal changes"@en .
+change:Impact    rdf:type owl:Class ;
+    rdfs:label "Impact"@en ;
+    rdfs:comment "Represents the impact or effect of a change"@en .
+change:hasImpact    rdf:type owl:ObjectProperty ;
+    rdfs:label "has impact"@en ;
+    rdfs:domain change:Change ;
+    rdfs:range change:Impact ;
+    rdfs:comment "Relation between a change and its impacts"@en .
+change:Cause    rdf:type owl:Class ;
+    rdfs:label "Cause"@en ;
+    rdfs:comment "Represents the cause of a change"@en .
+change:hasCause    rdf:type owl:ObjectProperty ;
+    rdfs:label "has cause"@en ;
+    rdfs:domain change:Change ;
+    rdfs:range change:Cause ;
+    rdfs:comment "Relation between a change and its cause"@en .

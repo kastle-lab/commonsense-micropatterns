@@ -1,0 +1,15 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Mother a owl:Class ;
+  rdfs:subClassOf ex:Person ;
+  rdfs:comment "A person who is a female parent" .
+ex:hasMother a owl:ObjectProperty ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Mother ;
+  rdfs:comment "A property indicating the mother of a particular person." .
+ex:isMotherOf a owl:ObjectProperty ;
+  rdfs:domain ex:Mother ;
+  rdfs:range ex:Person ;
+  rdfs:comment "A property indicating the child of a particular mother." .

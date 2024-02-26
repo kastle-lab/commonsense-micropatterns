@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix art: <http://example.org/art#> .
+art:Artwork a rdfs:Class ;
+    rdfs:label "Artwork"@en .
+art:Artist a rdfs:Class ;
+    rdfs:label "Artist"@en .
+art:Painting a rdfs:Class ;
+    rdfs:subClassOf art:Artwork ;
+    rdfs:label "Painting"@en .
+art:Sculpture a rdfs:Class ;
+    rdfs:subClassOf art:Artwork ;
+    rdfs:label "Sculpture"@en .
+art:createdBy a rdf:Property ;
+    rdfs:domain art:Artwork ;
+    rdfs:range art:Artist ;
+    rdfs:label "created by"@en .
+art:creationDate a rdf:Property ;
+    rdfs:domain art:Artwork ;
+    rdfs:range xsd:date ;
+    rdfs:label "creation date"@en .
+art:ArtGenre a rdfs:Class ;
+    rdfs:label "Art Genre"@en .
+art:artGenre a rdf:Property ;
+    rdfs:domain art:Artwork ;
+    rdfs:range art:ArtGenre ;
+    rdfs:label "art genre"@en .
+art:title a rdf:Property ;
+    rdfs:domain art:Artwork ;
+    rdfs:range xsd:string ;
+    rdfs:label "title"@en .
+art:medium a rdf:Property ;
+    rdfs:domain art:Painting ;
+    rdfs:range xsd:string ;
+    rdfs:label "medium"@en .
+art:mass a rdf:Property ;
+    rdfs:domain art:Sculpture ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "mass"@en .

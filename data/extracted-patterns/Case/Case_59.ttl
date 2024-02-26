@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/case#> .
+ex:Case     rdf:type rdfs:Class ;
+    rdfs:label "Case" ;
+    rdfs:comment "A single case or instance of something" .
+ex:id    rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range xsd:string ;
+    rdfs:label "id" ;
+    rdfs:comment "The unique identifier of a Case" .
+ex:title    rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range xsd:string ;
+    rdfs:label "title" ;
+    rdfs:comment "The title of a Case" .
+ex:description    rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range xsd:string ;
+    rdfs:label "description" ;
+    rdfs:comment "The description of a Case" .
+ ex:dateOpened    rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range xsd:date ;
+    rdfs:label "dateOpened" ;
+    rdfs:comment "The date when the Case was opened" .
+ex:dateClosed    rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range xsd:date ;
+    rdfs:label "dateClosed" ;
+    rdfs:comment "The date when the Case was closed" .

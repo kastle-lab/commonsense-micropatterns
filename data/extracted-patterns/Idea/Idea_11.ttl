@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix idea: <http://www.example.com/idea#> .
+idea:     rdf:type rdfs:Class ;
+    rdfs:label "Idea" ;
+    rdfs:comment "This is a class for capturing Ideas" .
+idea:hasTitle    rdf:type rdf:Property ;
+    rdfs:domain idea: ;
+    rdfs:range xsd:string ;
+    rdfs:label "has Title" ;
+    rdfs:comment "The title or headline of the Idea" .
+idea:hasDescription    rdf:type rdf:Property ;
+    rdfs:domain idea: ;
+    rdfs:range xsd:string ;
+    rdfs:label "has Description" ;
+    rdfs:comment "Detailed description of the Idea" .
+idea:hasAuthor     rdf:type rdf:Property ;
+    rdfs:domain idea: ;
+    rdfs:range foaf:Person ;
+    rdfs:label "has Author" ;
+    rdfs:comment "Person who came up with the Idea" .
+idea:hasDate     rdf:type rdf:Property ;
+    rdfs:domain idea: ;
+    rdfs:range xsd:date ;
+    rdfs:label "has Date" ;
+    rdfs:comment "Date when the Idea was proposed" .
+idea:isRelatedTo    rdf:type rdf:Property ;
+    rdfs:domain idea: ;
+    rdfs:range idea: ;
+    rdfs:label "is related to" ;
+    rdfs:comment "Other ideas that are related to this Idea" .
+idea:hasCategory     rdf:type rdf:Property ;
+    rdfs:domain idea: ;
+    rdfs:range xsd:string ;
+    rdfs:label "has category" ;
+    rdfs:comment "Category or theme the Idea belongs to" .

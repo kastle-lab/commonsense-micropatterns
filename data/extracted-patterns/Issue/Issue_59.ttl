@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/> .
+:Issue rdf:type rdfs:Class ;
+    rdfs:label "Issue" ;
+    rdfs:comment "A matter or problem worth discussing or considering" .
+:hasPriority rdf:type rdf:Property ;
+    rdfs:label "has priority" ;
+    rdfs:domain :Issue ;
+    rdfs:range :Priority .
+    :isReportedBy rdf:type rdf:Property ;
+    rdfs:label "is reported by" ;
+    rdfs:domain :Issue ;
+    rdfs:range :Reporter .
+:hasStatus rdf:type rdf:Property ;
+    rdfs:label "has status" ;
+    rdfs:domain :Issue ;
+    rdfs:range :Status .

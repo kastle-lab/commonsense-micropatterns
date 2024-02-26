@@ -1,0 +1,151 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/hand/Function> a rdfs:Class .
+
+<http://example.com/hand/Hand> a rdfs:Class .
+
+<http://example.com/hand/HumanBody> a rdfs:Class .
+
+<http://example.com/hand/Position> a rdfs:Class .
+
+<http://example.org/#Finger> a rdfs:Class .
+
+<http://example.org/#Fingers> a rdfs:Class .
+
+<http://example.org/#Hand> a rdfs:Class .
+
+<http://example.org/#Human> a rdfs:Class .
+
+<http://example.org/#Palm> a rdfs:Class .
+
+<http://example.org/#Thumb> a rdfs:Class .
+
+<http://example.org/hand#Finger> a rdfs:Class .
+
+<http://example.org/hand#Hand> a rdfs:Class .
+
+<http://example.org/myontology#Arm> a rdfs:Class .
+
+<http://example.org/myontology#Finger> a rdfs:Class .
+
+<http://example.org/myontology#Hand> a rdfs:Class .
+
+<http://example.org/myontology#Nails> a rdfs:Class .
+
+<http://example.org/myontology#Skin> a rdfs:Class .
+
+<http://handontologyexample.org/Hand> a rdfs:Class .
+
+<http://www.example.com/Hand> a rdfs:Class .
+
+<http://www.example.org/hand#Hand> a rdfs:Class .
+
+<http://www.example.org/hand#HandPart> a rdfs:Class .
+
+<http://www.example.org/handontology#Hand> a rdfs:Class .
+
+<http://www.example.org/handontology#finger> a rdfs:Class .
+
+<http://www.example.org/human#Arm> a rdfs:Class .
+
+<http://www.example.org/human#Hand> a rdfs:Class .
+
+<http://www.example.org/human#Palm> a rdfs:Class .
+
+<http://www.example.org/ontology#Hand> a rdfs:Class .
+
+<http://www.example.org/ontology#Object> a rdfs:Class .
+
+<http://example.com/hand/hasFingers> rdfs:range <http://example.com/hand/Hand> .
+
+<http://example.com/hand/hasFunction> rdfs:range <http://example.com/hand/Function>,
+        <http://example.com/hand/Hand> .
+
+<http://example.com/hand/hasPosition> rdfs:range <http://example.com/hand/Hand>,
+        <http://example.com/hand/Position> .
+
+<http://example.com/hand/isPartOf> rdfs:range <http://example.com/hand/Hand>,
+        <http://example.com/hand/HumanBody> .
+
+<http://example.org/#handHasFingers> rdfs:range <http://example.org/#Fingers>,
+        <http://example.org/#Hand> .
+
+<http://example.org/#handHasPalm> rdfs:range <http://example.org/#Hand>,
+        <http://example.org/#Palm> .
+
+<http://example.org/#handHasThumb> rdfs:range <http://example.org/#Hand>,
+        <http://example.org/#Thumb> .
+
+<http://example.org/#hasFingers> rdfs:range <http://example.org/#Finger>,
+        <http://example.org/#Hand> .
+
+<http://example.org/#partOf> rdfs:range <http://example.org/#Hand>,
+        <http://example.org/#Human> .
+
+<http://example.org/hand#canGrasp> rdfs:range <http://example.org/hand#Hand> .
+
+<http://example.org/hand#hasNails> rdfs:range <http://example.org/hand#Finger> .
+
+<http://example.org/hand#hasPart> rdfs:range <http://example.org/hand#Finger>,
+        <http://example.org/hand#Hand> .
+
+<http://example.org/hand#hasParts> rdfs:range <http://example.org/hand#Finger>,
+        <http://example.org/hand#Hand> .
+
+<http://example.org/hand#hasSkin> rdfs:range <http://example.org/hand#Hand> .
+
+<http://example.org/myontology#hasFingers> rdfs:range <http://example.org/myontology#Finger>,
+        <http://example.org/myontology#Hand> .
+
+<http://example.org/myontology#hasNails> rdfs:range <http://example.org/myontology#Hand>,
+        <http://example.org/myontology#Nails> .
+
+<http://example.org/myontology#hasSkin> rdfs:range <http://example.org/myontology#Hand>,
+        <http://example.org/myontology#Skin> .
+
+<http://example.org/myontology#isPartOfArm> rdfs:range <http://example.org/myontology#Arm>,
+        <http://example.org/myontology#Hand> .
+
+<http://handontologyexample.org/canGrasp> rdfs:range <http://handontologyexample.org/Hand> .
+
+<http://handontologyexample.org/hasFingers> rdfs:range <http://handontologyexample.org/Hand> .
+
+<http://handontologyexample.org/hasThumb> rdfs:range <http://handontologyexample.org/Hand> .
+
+<http://www.example.com/canGrasp> rdfs:range <http://www.example.com/Hand> .
+
+<http://www.example.com/hasFingers> rdfs:range <http://www.example.com/Hand> .
+
+<http://www.example.org/hand#hasNumberOfFingers> rdfs:range <http://www.example.org/hand#Hand> .
+
+<http://www.example.org/hand#hasPart> rdfs:range <http://www.example.org/hand#Hand>,
+        <http://www.example.org/hand#HandPart> .
+
+<http://www.example.org/hand#hasSkinColor> rdfs:range <http://www.example.org/hand#Hand> .
+
+<http://www.example.org/handontology#belongsTo> rdfs:range <http://www.example.org/handontology#Hand>,
+        <http://www.example.org/handontology#finger> .
+
+<http://www.example.org/handontology#fingerCount> rdfs:range <http://www.example.org/handontology#Hand> .
+
+<http://www.example.org/handontology#isLeft> rdfs:range <http://www.example.org/handontology#Hand> .
+
+<http://www.example.org/handontology#isRight> rdfs:range <http://www.example.org/handontology#Hand> .
+
+<http://www.example.org/human#canGrip> rdfs:range <http://www.example.org/human#Hand> .
+
+<http://www.example.org/human#hasFiveFingers> rdfs:range <http://www.example.org/human#Hand> .
+
+<http://www.example.org/human#hasPalm> rdfs:range <http://www.example.org/human#Hand>,
+        <http://www.example.org/human#Palm> .
+
+<http://www.example.org/human#isPartOfArm> rdfs:range <http://www.example.org/human#Arm>,
+        <http://www.example.org/human#Hand> .
+
+<http://www.example.org/ontology#CanGrasp> rdfs:range <http://www.example.org/ontology#Hand>,
+        <http://www.example.org/ontology#Object> .
+
+<http://www.example.org/ontology#hasFingers> rdfs:range <http://www.example.org/ontology#Hand> .
+
+<http://www.example.org/ontology#hasThumb> rdfs:range <http://www.example.org/ontology#Hand> .
+

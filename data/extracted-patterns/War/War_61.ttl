@@ -1,0 +1,29 @@
+@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:War a owl:Class ;
+  rdfs:label "War"@en ;
+  rdfs:subClassOf [    a owl:Restriction ;
+    owl:onProperty :involvesCountry ;
+    owl:allValuesFrom :Country  ] , [    a owl:Restriction ;
+    owl:onProperty :hasStartTime ;
+    owl:allValuesFrom :DateTime  ] , [    a owl:Restriction ;
+    owl:onProperty :hasEndTime ;
+    owl:allValuesFrom :DateTime  ] .
+:Country a owl:Class ;
+  rdfs:label "Country"@en .
+  :DateTime a owl:Class ;
+  rdfs:label "DateTime"@en .
+  :involvesCountry a owl:ObjectProperty ;
+  rdfs:label "involves country"@en ;
+  rdfs:domain :War ;
+  rdfs:range :Country .
+:hasStartTime a owl:DatatypeProperty ;
+  rdfs:label "has start time"@en ;
+  rdfs:domain :War ;
+  rdfs:range :DateTime .
+:hasEndTime a owl:DatatypeProperty ;
+  rdfs:label "has end time"@en ;
+  rdfs:domain :War ;
+  rdfs:range :DateTime .

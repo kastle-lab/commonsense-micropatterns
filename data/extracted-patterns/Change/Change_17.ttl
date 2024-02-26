@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix change: <http://example.org/change#> .
+change:     rdf:type owl:Ontology ;
+    rdfs:label "Change"@en ;
+    rdfs:comment "An ontology to represent Change."@en .
+change:Change    rdf:type owl:Class ;
+    rdfs:label "Change"@en ;
+    rdfs:comment "A class representing change or transformation."@en .
+change:TypeOfChange    rdf:type owl:Class ;
+    rdfs:label "Type of Change"@en ;
+    rdfs:comment "A class representing type of change."@en .
+change:hasTypeOfChange    rdf:type owl:ObjectProperty ;
+    rdfs:label "has type of change"@en ;
+    rdfs:domain change:Change ;
+    rdfs:range change:TypeOfChange .
+change:PhysicalChange    rdf:type owl:NamedIndividual, change:TypeOfChange ;
+    rdfs:label "Physical change"@en .
+change:ChemicalChange    rdf:type owl:NamedIndividual, change:TypeOfChange ;
+    rdfs:label "Chemical change"@en .
+change:SocialChange    rdf:type owl:NamedIndividual, change:TypeOfChange ;
+    rdfs:label "Social change"@en .

@@ -1,0 +1,7 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+_:bnode a foaf:Person ;
+  foaf:name "John Doe"^^xsd:string ;
+  foaf:age "35"^^xsd:integer ;
+  foaf:mbox <mailto:john.doe@example.com> .

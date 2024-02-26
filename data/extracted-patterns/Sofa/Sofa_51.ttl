@@ -1,0 +1,18 @@
+@prefix ex: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Define the class 'Sofa'ex:Sofa rdf:type rdfs:Class ;
+       rdfs:label "Sofa"@en .
+# Define the sub class 'TwoSeaterSofa'ex:TwoSeaterSofa rdf:type rdfs:Class ;
+       rdfs:subClassOf ex:Sofa ;
+       rdfs:label "Two Seater Sofa"@en .
+# Define the sub class 'ThreeSeaterSofa'ex:ThreeSeaterSofa rdf:type rdfs:Class ;
+       rdfs:subClassOf ex:Sofa ;
+       rdfs:label "Three Seater Sofa"@en .
+# Define the 'Color' class
+ex:Color rdf:type rdfs:Class ;
+         rdfs:label "Color"@en .
+# Define the 'hasColor' property for 'Sofa'ex:hasColor rdf:type rdf:Property ;
+         rdfs:domain ex:Sofa ;
+         rdfs:range ex:Color ;
+         rdfs:label "has color"@en .

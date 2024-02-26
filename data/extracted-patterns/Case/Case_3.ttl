@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix case: <http://example.org/case#> .
+case: ontology a rdfs:Class ;
+    rdfs:label "Case ontology"@en ;
+    rdfs:comment "An ontology for describing properties and relations of a case in a formal reasoning or research context" .
+case:Case a rdfs:Class ;
+    rdfs:label "Case"@en ;
+    rdfs:comment "A particular situation or event, especially in a formal reasoning or research context"@en ;
+    rdfs:subClassOf case: ontology.case:caseId a rdf:Property ;
+     rdfs:label "Case ID"@en ;
+    rdfs:comment "A unique identifier for a case"@en ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal .
+case:caseTitle a rdf:Property ;
+    rdfs:label "Case Title"@en ;
+    rdfs:comment "The title of a case"@en ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal .
+case:caseDescription a rdf:Property ;
+    rdfs:label "Case Description"@en ;
+    rdfs:comment "A detailed overview about a case"@en ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal .
+case:assignedTo a rdf:Property ;
+    rdfs:label "Assigned to"@en ;
+    rdfs:comment "User(s) or department(s) assigned to a case"@en ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal.case:caseStatus a rdf:Property ;
+    rdfs:label "Case status"@en ;
+    rdfs:comment "The status of a case (e.g., open, closed, pending)"@en ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal.

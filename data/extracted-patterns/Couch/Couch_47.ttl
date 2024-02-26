@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+ex:Couch rdf:type rdfs:Class ;
+         rdfs:label "Couch"@en ;
+         rdfs:comment "A comfortable piece of furniture for seating"@en ;
+         rdfs:subClassOf ex:Furniture .
+         ex:Furniture rdf:type rdfs:Class ;
+             rdfs:label "Furniture"@en ;
+             rdfs:comment "Moveable items that are used to make a room suitable for living or working"@en .

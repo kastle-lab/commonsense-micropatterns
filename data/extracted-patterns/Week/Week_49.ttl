@@ -1,0 +1,31 @@
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix weekOnt: <http://www.example.com/ontology/week#> .
+weekOnt:Week a rdfs:Class ;
+    rdfs:comment "The class of all weeks"^^xsd:string ;
+    rdfs:label "Week"^^xsd:string .
+weekOnt:hasDay a rdf:Property ;
+    rdfs:domain weekOnt:Week ;
+    rdfs:range weekOnt:Day ;
+    rdfs:comment "Relates a week to its days"^^xsd:string ;
+    rdfs:label "has day"^^xsd:string .
+weekOnt:Day a rdfs:Class ;
+    rdfs:subClassOf weekOnt:Week ;
+    rdfs:comment "The class of all days which are part of a week"^^xsd:string ;
+    rdfs:label "Day"^^xsd:string .
+weekOnt:Monday a weekOnt:Day ;
+  rdfs:label "Monday"@en .
+weekOnt:Tuesday a weekOnt:Day ;
+  rdfs:label "Tuesday"@en .
+weekOnt:Wednesday a weekOnt:Day ;
+  rdfs:label "Wednesday"@en .
+weekOnt:Thursday a weekOnt:Day ;
+  rdfs:label "Thursday"@en .
+weekOnt:Friday a weekOnt:Day ;
+  rdfs:label "Friday"@en .
+weekOnt:Saturday a weekOnt:Day ;
+  rdfs:label "Saturday"@en .
+weekOnt:Sunday a weekOnt:Day ;
+  rdfs:label "Sunday"@en .

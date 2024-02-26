@@ -1,0 +1,54 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:Chair rdf:type owl:Class ;
+    rdfs:label ""Chair"" ;
+    rdfs:comment ""A furniture designed to seat one person."" .
+ex:hasMaterial rdf:type owl:DatatypeProperty ;
+    rdfs:label ""has material"" ;
+    rdfs:comment ""Material of the chair."" ;
+    rdfs:range xsd:string ;
+    rdfs:domain ex:Chair .
+ex:hasStyle rdf:type owl:ObjectProperty ;
+    rdfs:label ""has style"" ;
+    rdfs:comment ""The style of the chair."" ;
+    rdfs:range ex:Style ;
+    rdfs:domain ex:Chair .
+ex:Style rdf:type owl:Class ;
+    rdfs:label ""Style"" ;
+    rdfs:comment ""Style of the chair indicating its design."" .
+ex:hasManufacturer rdf:type owl:DatatypeProperty ;
+    rdfs:label ""has manufacturer"" ;
+    rdfs:comment ""Manufacturer of the chair."" ;
+    rdfs:range xsd:string ;
+    rdfs:domain ex:Chair .
+ex:hasColor rdf:type owl:DatatypeProperty ;
+    rdfs:label ""has color"" ;
+    rdfs:comment ""Color of the chair."" ;
+    rdfs:range xsd:string ;
+    rdfs:domain ex:Chair .
+ex:hasWeightCapacity rdf:type owl:DatatypeProperty ;
+    rdfs:label ""has weight capacity"" ;
+    rdfs:comment ""The maximum weight capacity of the chair."" ;
+    rdfs:range xsd:decimal ;
+    rdfs:domain ex:Chair .
+ex:hasDimensions rdf:type owl:DatatypeProperty ;
+    rdfs:label ""has dimensions"" ;
+    rdfs:comment ""Dimensions of the chair."" ;
+    rdfs:range ex:Dimensions ;
+    rdfs:domain ex:Chair .
+ex:Dimensions rdf:type owl:Class ;
+    rdfs:label ""Dimensions"" ;
+    rdfs:comment ""Physical dimensions of the chair."" .
+ex:isUsedIndoor rdf:type owl:DatatypeProperty ;
+    rdfs:label ""is used indoor"" ;
+    rdfs:comment ""If the chair is designed for indoor use."" ;
+    rdfs:range xsd:boolean ;
+    rdfs:domain ex:Chair .
+ex:isUsedOutdoor rdf:type owl:DatatypeProperty ;
+    rdfs:label ""is used outdoor"" ;
+    rdfs:comment ""If the chair is designed for outdoor use."" ;
+    rdfs:range xsd:boolean ;
+    rdfs:domain ex:Chair .
+"

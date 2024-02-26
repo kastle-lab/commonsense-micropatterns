@@ -1,0 +1,21 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix morning: <http://example.org/morning#> .
+morning:SunRise    a rdf:Class .
+morning:SunSet    a rdf:Class .
+morning:Breakfast    a rdf:Class .
+morning:MorningRoutine     a rdf:Class .
+morning:time    a rdf:Property;
+    rdfs:domain morning:MorningRoutine;
+    rdfs:range xsd:time .
+morning:hasActivity    a rdf:Property;
+    rdfs:domain morning:MorningRoutine;
+    rdfs:range rdf:Class .
+morning:breakfastTime    a rdf:Property;
+    rdfs:domain morning:Breakfast;
+    rdfs:range xsd:time .
+morning:SunRiseTime    a rdf:Property;
+    rdfs:domain morning:SunRise;
+    rdfs:range xsd:time .
+morning:SunSetTime    a rdf:Property;
+    rdfs:domain morning:SunSet;
+    rdfs:range xsd:time .

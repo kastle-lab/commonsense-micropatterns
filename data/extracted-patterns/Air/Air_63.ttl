@@ -1,0 +1,9 @@
+ 
+@prefix ex: <http://www.example.org/> .
+# Definition of the "air" resource
+ex:Air    a ex:Resource ;
+    ex:provides ex:Oxygen .
+# Definition of the "provide" property
+ex:provides    a rdf:Property .
+# Definition of the "Oxygen" resource
+ex:Oxygen    a ex:Resource .

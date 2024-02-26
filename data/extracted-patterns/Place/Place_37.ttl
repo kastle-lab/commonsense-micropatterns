@@ -1,0 +1,18 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.com/> .
+# Defining the class 'Place'ex:Place rdf:type rdfs:Class ;
+    # Defining the label 'Place'    rdfs:label "Place"@en ;
+      # Defining the comment for 'Place'    rdfs:comment "A location. This can include countries, cities, towns, villages, streets, buildings, etc."@en .
+# Defining the property 'hasName'ex:hasName rdf:type rdf:Property ;
+          # Defining the label 'hasName'    rdfs:label "has name"@en ;
+    # Defining the comment for 'hasName'    rdfs:comment "The name of the place"@en ;
+    # Defining the domain as 'Place'    rdfs:domain ex:Place ;
+    # Defining the range as string    rdfs:range xsd:string .
+# Defining the property 'locatedIn'ex:locatedIn rdf:type rdf:Property ;
+      # Defining the label 'locatedIn'    rdfs:label "located in"@en ;
+    # Defining the comment for 'locatedIn'    rdfs:comment "The larger geographic entity which contains the place"@en ;
+    # Defining the domain as 'Place'    rdfs:domain ex:Place ;
+    # Defining the range as 'Place'    rdfs:range ex:Place .

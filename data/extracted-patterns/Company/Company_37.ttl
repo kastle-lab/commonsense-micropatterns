@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix companyOntology: <http://example.com/companyOntology#> .
+companyOntology:Company rdf:type owl:Class ;
+    rdfs:comment "A business company or firm."@en ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Company"@en .
+companyOntology:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:domain companyOntology:Company ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The official name of the company."@en ;
+    rdfs:label "hasName"@en .
+companyOntology:hasCEO rdf:type owl:ObjectProperty ;
+    rdfs:domain companyOntology:Company ;
+    rdfs:range companyOntology:Person ;
+    rdfs:comment "The CEO of the company."@en ;
+    rdfs:label "hasCEO"@en .
+companyOntology:hasEmployee rdf:type owl:ObjectProperty ;
+    rdfs:domain companyOntology:Company ;
+    rdfs:range companyOntology:Person ;
+    rdfs:comment "An employee of the company."@en ;
+    rdfs:label "hasEmployee"@en .
+companyOntology:hasFoundingDate rdf:type owl:DatatypeProperty ;
+    rdfs:domain companyOntology:Company ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The date when the company was founded."@en ;
+    rdfs:label "hasFoundingDate"@en .
+companyOntology:Person rdf:type owl:Class ;
+    rdfs:comment "A person or individual."@en ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Person"@en .

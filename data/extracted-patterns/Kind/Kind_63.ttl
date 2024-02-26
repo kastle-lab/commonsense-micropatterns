@@ -1,0 +1,12 @@
+ I use the "Kind" as a Class with few properties here. You can replace the "
+ex:name" or "
+ex:description" predicates and the resources to suit your use-case.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/> .
+ex:Kind rdf:type rdf:Class .
+ex:Kind1 rdf:type ex:Kind ;
+   ex:name "Kind One" ;
+   ex:description "This is the first kind" .
+ex:Kind2 rdf:type ex:Kind ;
+   ex:name "Kind Two" ;
+   ex:description "This is the second kind" .

@@ -1,0 +1,23 @@
+@prefix : <http://www.example.com/history#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+# Defining Classes:HistoryEvent a rdfs:Class ;
+    rdfs:label "Historical Event" .
+:HistoryEra a rdfs:Class ;
+    rdfs:label "Historical Era" .
+:Person a rdfs:Class ;
+    rdfs:label "Person" .
+:Place a rdfs:Class ;
+    rdfs:label "Place" .
+# Object Properties:occurredIn a owl:ObjectProperty ;
+    rdfs:domain :HistoryEvent ;
+    rdfs:range :Place ;
+    rdfs:label "occurred in" .
+:involved a owl:ObjectProperty ;
+    rdfs:domain :HistoryEvent ;
+    rdfs:range :Person ;
+    rdfs:label "involved" .
+:tookPlaceDuring a owl:ObjectProperty ;
+    rdfs:domain :HistoryEvent ;
+    rdfs:range :HistoryEra ;
+    rdfs:label "took place during" .

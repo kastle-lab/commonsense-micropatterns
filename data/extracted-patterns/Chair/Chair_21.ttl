@@ -1,0 +1,52 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ont: <http://www.example.org/ontology#> .
+# Classes
+ont:Chair rdf:type rdfs:Class ;
+          rdfs:label ""Chair""@en ;
+          rdfs:comment ""A piece of furniture designed to accommodate one sitting or reclining person, providing support for the back and often the arms""@en .
+ont:Material rdf:type rdfs:Class ;
+             rdfs:label ""Material""@en ;
+             rdfs:comment ""The substance from which a thing is or can be made""@en .
+ont:Style rdf:type rdfs:Class ;
+          rdfs:label ""Style""@en ;
+          rdfs:comment ""The design or look of a particular object""@en .
+# Properties
+ont:hasMaterial rdf:type rdf:Property ;
+                rdfs:label ""has material""@en ;
+                rdfs:domain ont:Chair ;
+                rdfs:range ont:Material .
+ont:hasStyle rdf:type rdf:Property ;
+             rdfs:label ""has style""@en ;
+             rdfs:domain ont:Chair ;
+             rdfs:range ont:Style .
+ont:hasColor rdf:type rdf:Property ;
+             rdfs:label ""has color""@en ;
+             rdfs:domain ont:Chair ;
+             rdfs:range xsd:string .
+ont:hasWeight rdf:type rdf:Property ;
+              rdfs:label ""has weight""@en ;
+              rdfs:domain ont:Chair ;
+              rdfs:range xsd:decimal .
+# Individuals
+ont:Wood rdf:type ont:Material ;
+         rdfs:label ""Wood""@en .
+ont:Plastic rdf:type ont:Material ;
+            rdfs:label ""Plastic""@en .
+ont:ModernStyle rdf:type ont:Style ;
+                rdfs:label ""Modern""@en .
+ont:TraditionalStyle rdf:type ont:Style ;
+                    rdfs:label ""Traditional""@en .
+ont:Chair1 rdf:type ont:Chair ;
+           ont:hasColor ""Red""@en ;
+           ont:hasWeight ""7.5""^^xsd:decimal ;
+           ont:hasMaterial ont:Wood ;
+           ont:hasStyle ont:ModernStyle .
+ont:Chair2 rdf:type ont:Chair ;
+           ont:hasColor ""Blue""@en ;
+           ont:hasWeight ""5.0""^^xsd:decimal ;
+           ont:hasMaterial ont:Plastic ;
+           ont:hasStyle ont:TraditionalStyle .
+"

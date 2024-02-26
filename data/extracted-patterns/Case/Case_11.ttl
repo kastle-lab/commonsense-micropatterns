@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix case: <http://www.example.com/case#> .
+case:Case rdf:type rdfs:Class ;
+    rdfs:comment "A general term for a proceeding within a judicial system"@en ;
+    rdfs:label "Case" .
+case:isOpen rdf:type rdf:Property ;
+    rdfs:comment "Indicates whether a case is open or not"@en ;
+    rdfs:label "isOpen" ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:boolean .
+case:caseNumber rdf:type rdf:Property ;
+    rdfs:comment "Unique identifier for a case"@en ;
+    rdfs:label "caseNumber" ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:int .
+case:caseType rdf:type rdf:Property ;
+    rdfs:comment "Type or category of a case"@en ;
+    rdfs:label "caseType" ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal .
+case:startDate rdf:type rdf:Property ;
+    rdfs:comment "Date the case was started/opened"@en ;
+    rdfs:label "startDate" ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:dateTime .
+case:endDate rdf:type rdf:Property ;
+    rdfs:comment "Date the case was closed"@en ;
+    rdfs:label "endDate" ;
+    rdfs:domain case:Case ;
+    rdfs:range xsd:dateTime .
+case:involvedParties rdf:type rdf:Property ;
+    rdfs:comment "Parties involved in the case"@en ;
+    rdfs:label "involvedParties" ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal .
+case:judge rdf:type rdf:Property ;
+    rdfs:comment "Judge overseeing the case"@en ;
+    rdfs:label "judge" ;
+    rdfs:domain case:Case ;
+    rdfs:range rdfs:Literal .

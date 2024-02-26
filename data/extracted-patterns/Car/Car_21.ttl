@@ -1,0 +1,33 @@
+@prefix : <http://www.example.org/cars#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+# Classes
+:Car rdf:type owl:Class ;
+     rdfs:label "Car"@en ;
+     rdfs:comment "A motor vehicle with four wheels;
+ usually propelled by an internal combustion engine"@en .
+:Brand rdf:type owl:Class ;
+     rdfs:label "Brand"@en ;
+     rdfs:comment "The make of the car, represented by a registered company name"@en .
+     :Model rdf:type owl:Class ;
+       rdfs:label "Model"@en ;
+       rdfs:comment "The specific design of a car under a brand"@en .
+:Color rdf:type owl:Class ;
+        rdfs:label "Color"@en ;
+        rdfs:comment "The color of a car"@en .
+ # Object Properties   :hasBrand rdf:type owl:ObjectProperty ;
+          rdfs:domain :Car ;
+          rdfs:range :Brand ;
+          rdfs:label "has brand" ;
+          rdfs:comment "Property linking a car to its brand"@en .
+:hasModel rdf:type owl:ObjectProperty ;
+          rdfs:domain :Car ;
+          rdfs:range :Model ;
+          rdfs:label "has model" ;
+          rdfs:comment "Property linking a car to its model"@en .
+:hasColor rdf:type owl:ObjectProperty ;
+          rdfs:domain :Car ;
+          rdfs:range :Color ;
+          rdfs:label "has color" ;
+          rdfs:comment "Property linking a car to its color"@en .

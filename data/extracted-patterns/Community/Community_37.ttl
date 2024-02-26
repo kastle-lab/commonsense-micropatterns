@@ -1,0 +1,36 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix community: <http://example.org/community#> .
+community:   rdf:type owl:Ontology ;
+  rdfs:comment "An ontology representing communities" .
+community:Community   rdf:type owl:Class ;
+  rdfs:comment "A class representing a generic community" ;
+  rdfs:subClassOf owl:Thing .
+community:member   rdf:type owl:ObjectProperty ;
+  rdfs:domain community:Community ;
+  rdfs:range community:Member ;
+  rdfs:comment "A property linking Community with its Members" .
+community:Member   rdf:type owl:Class ;
+  rdfs:comment "A class representing a member of a community" ;
+  rdfs:subClassOf owl:Thing .
+community:hasName   rdf:type owl:DatatypeProperty ;
+  rdfs:domain community:Member ;
+  rdfs:range xsd:string ;
+  rdfs:comment "A property representing the name of a member" .
+community:hasAge   rdf:type owl:DatatypeProperty ;
+  rdfs:domain community:Member ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "A property representing the age of a member" .
+community:hasGender   rdf:type owl:DatatypeProperty ;
+  rdfs:domain community:Member ;
+  rdfs:range xsd:string ;
+   rdfs:comment "A property representing the gender of a member" .
+ community:LocatedIn   rdf:type owl:Class ;
+  rdfs:comment "A class representing the location of a community" ;
+   rdfs:subClassOf owl:Thing .
+community:hasLocation   rdf:type owl:ObjectProperty ;
+  rdfs:domain community:Community ;
+  rdfs:range community:LocatedIn ;
+   rdfs:comment "A property linking a Community to its Location" .

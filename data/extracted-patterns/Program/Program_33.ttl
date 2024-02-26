@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix program: <http://example.org/program#> .
+program:Program rdf:type rdfs:Class ;
+rdfs:label "Program"@en ;
+rdfs:comment "A set of related measures, events, or activities with a particular long-term aim"@en .
+program:hasName rdf:type owl:DatatypeProperty ;
+rdfs:range xsd:string ;
+rdfs:domain program:Program ;
+rdfs:label "has name"@en ;
+rdfs:comment "The name of the program"@en .
+program:hasDescription rdf:type owl:DatatypeProperty ;
+rdfs:range xsd:string ;
+rdfs:domain program:Program ;
+rdfs:label "has description"@en ;
+rdfs:comment "Detailed information about a program"@en .
+program:hasStartDate rdf:type owl:DatatypeProperty ;
+rdfs:range xsd:date ;
+rdfs:domain program:Program ;
+rdfs:label "has start date"@en ;
+rdfs:comment "The start date of the program"@en .
+program:hasEndDate rdf:type owl:DatatypeProperty ;
+rdfs:range xsd:date ;
+rdfs:domain program:Program ;
+rdfs:label "has end date"@en ;
+rdfs:comment "The end date of the program"@en .
+program:hasDuration rdf:type owl:DatatypeProperty ;
+rdfs:range xsd:duration ;
+rdfs:domain program:Program ;
+rdfs:label "has duration"@en ;
+rdfs:comment "The duration of the program"@en .
+program:isPartOf rdf:type owl:ObjectProperty ;
+rdfs:range program:Program ;
+rdfs:domain program:Program ;
+rdfs:label "is part of"@en ;
+rdfs:comment "To designate that a program belongs to another larger program"@en .
+program:hasPart rdf:type owl:ObjectProperty ;
+rdfs:domain program:Program ;
+rdfs:range program:Program ;
+rdfs:label "has part"@en ;
+rdfs:comment "To indicate that a program contains another smaller program"@en .

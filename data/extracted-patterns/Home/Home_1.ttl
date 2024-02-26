@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix home: <http://example.com/ontology/home#> .
+home:     rdf:type owl:Ontology ;
+    rdfs:comment "Ontology dedicated to Home"@en .
+home:Home    rdf:type owl:Class ;
+    rdfs:comment "A class representing homes"@en .
+home:Room    rdf:type owl:Class ;
+    rdfs:comment "A class representing rooms within a home"@en ;
+    rdfs:subClassOf home:Home .
+home:Kitchen     rdf:type owl:Class ;
+    rdfs:comment "A class representing kitchen within a home"@en ;
+    rdfs:subClassOf home:Room .
+    home:Bathroom     rdf:type owl:Class ;
+    rdfs:comment "A class representing bathroom within a home"@en ;
+    rdfs:subClassOf home:Room .
+    home:LivingRoom      rdf:type owl:Class ;
+    rdfs:comment "A class representing living room within a home"@en ;
+    rdfs:subClassOf home:Room .
+home:Bedroom      rdf:type owl:Class ;
+    rdfs:comment "A class representing bedroom within a home"@en ;
+    rdfs:subClassOf home:Room .
+home:containsRoom    rdf:type owl:ObjectProperty ;
+    rdfs:comment "A property linking homes to their rooms"@en ;
+    rdfs:domain home:Home ;
+    rdfs:range home:Room .

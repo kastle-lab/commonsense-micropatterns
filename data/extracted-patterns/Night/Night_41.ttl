@@ -1,0 +1,22 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+# The classesex:Night a rdfs:Class .
+# The propertiesex:hasStartTime a rdf:Property ;
+    rdfs:label "has start time" ;
+    rdfs:comment "The time when the night starts" ;
+    rdfs:domain ex:Night ;
+    rdfs:range xsd:time .
+ex:hasEndTime a rdf:Property ;
+    rdfs:label "has end time" ;
+    rdfs:comment "The time when the night ends" ;
+    rdfs:domain ex:Night ;
+    rdfs:range xsd:time .
+ex:hasDuration a rdf:Property ;
+    rdfs:label "has duration" ;
+    rdfs:comment "The total hours of the night" ;
+    rdfs:domain ex:Night ;
+    rdfs:range xsd:duration .
+    # Example dataex:Night1 a ex:Night ;
+    ex:hasStartTime "21:00:00"^^xsd:time ;
+    ex:hasEndTime "05:00:00"^^xsd:time ;
+    ex:hasDuration "PT8H"^^xsd:duration .

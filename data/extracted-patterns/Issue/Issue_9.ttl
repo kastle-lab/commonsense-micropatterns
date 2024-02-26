@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://www.example.com#> .
+ex:Issue rdf:type rdfs:Class .
+ex:hasIssue rdf:type rdf:Property ;
+           rdfs:domain ex:Person ;
+           rdfs:range ex:Issue .
+          ex:hasDescription rdf:type rdf:Property ;
+                  rdfs:domain ex:Issue ;
+                  rdfs:range rdf:langString .
+     ex:Person rdf:type rdfs:Class .
+ex:issueSeverity rdf:type rdf:Property ;
+                 rdfs:domain ex:Issue ;
+                 rdfs:range ex:IssueSeverity .
+                 ex:IssueSeverity rdf:type rdfs:Class .
+ex:hasResolutionStatus rdf:type rdf:Property ;
+                       rdfs:domain ex:Issue ;
+                       rdfs:range ex:Status .
+ex:Status rdf:type rdfs:Class ;
+          rdfs:subClassOf ex:Issue .
+ex:hasPriority rdf:type rdf:Property ;
+               rdfs:domain ex:Issue ;
+               rdfs:range ex:Priority .
+ex:Priority rdf:type rdfs:Class ;
+            rdfs:subClassOf ex:Issue .
+ex:Moderate rdf:type ex:IssueSeverity .
+ex:Severe rdf:type ex:IssueSeverity .
+ex:Low rdf:type ex:IssueSeverity .
+  ex:Resolved rdf:type ex:Status .
+ex:Unresolved rdf:type ex:Status .
+ex:High rdf:type ex:Priority .
+ex:Medium rdf:type ex:Priority .
+ex:Low rdf:type ex:Priority .

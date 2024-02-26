@@ -1,0 +1,242 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://education.example.org/School> a rdfs:Class .
+
+<http://education.example.org/Subject> a rdfs:Class .
+
+<http://education.example.org/Teacher> a rdfs:Class .
+
+<http://education.org/vocab/Institution> a rdfs:Class .
+
+<http://education.org/vocab/Subject> a rdfs:Class .
+
+<http://education.org/vocab/Teacher> a rdfs:Class .
+
+<http://example.com/Course> a rdfs:Class .
+
+<http://example.com/School> a rdfs:Class .
+
+<http://example.com/Subject> a rdfs:Class .
+
+<http://example.com/Teacher> a rdfs:Class .
+
+<http://example.com/teacher#Teacher> a rdfs:Class .
+
+<http://example.com/teaching#School> a rdfs:Class .
+
+<http://example.com/teaching#Subject> a rdfs:Class .
+
+<http://example.com/teaching#Teacher> a rdfs:Class .
+
+<http://example.org/Course> a rdfs:Class .
+
+<http://example.org/School> a rdfs:Class .
+
+<http://example.org/Student> a rdfs:Class .
+
+<http://example.org/Subject> a rdfs:Class .
+
+<http://example.org/Teacher> a rdfs:Class .
+
+<http://example.org/ontology/teacher#Institution> a rdfs:Class .
+
+<http://example.org/ontology/teacher#Subject> a rdfs:Class .
+
+<http://example.org/ontology/teacher#Teacher> a rdfs:Class .
+
+<http://example.org/teacher#School> a rdfs:Class .
+
+<http://example.org/teacher#Subject> a rdfs:Class .
+
+<http://example.org/teacher#Teacher> a rdfs:Class .
+
+<http://example.org/teachers#Teacher> a rdfs:Class .
+
+<http://www.example.com/onto#School> a rdfs:Class .
+
+<http://www.example.com/onto#Subject> a rdfs:Class .
+
+<http://www.example.com/onto#Teacher> a rdfs:Class .
+
+<http://www.example.com/ontology#Subject> a rdfs:Class .
+
+<http://www.example.com/ontology#Teacher> a rdfs:Class .
+
+<http://www.example.com/teacher#School> a rdfs:Class .
+
+<http://www.example.com/teacher#Subject> a rdfs:Class .
+
+<http://www.example.com/teacher#Teacher> a rdfs:Class .
+
+<http://www.example.org/ontologies/teacher#School> a rdfs:Class .
+
+<http://www.example.org/ontologies/teacher#Subject> a rdfs:Class .
+
+<http://www.example.org/ontologies/teacher#Teacher> a rdfs:Class .
+
+<http://www.example.org/ontology#Degree> a rdfs:Class .
+
+<http://www.example.org/ontology#School> a rdfs:Class .
+
+<http://www.example.org/ontology#Subject> a rdfs:Class .
+
+<http://www.example.org/ontology#Teacher> a rdfs:Class .
+
+<http://www.example.org/ontology/teacher#Subject> a rdfs:Class .
+
+<http://www.example.org/ontology/teacher#Teacher> a rdfs:Class .
+
+<http://education.example.org/teachesSubject> rdfs:range <http://education.example.org/Subject>,
+        <http://education.example.org/Teacher> .
+
+<http://education.example.org/worksIn> rdfs:range <http://education.example.org/School>,
+        <http://education.example.org/Teacher> .
+
+<http://education.org/vocab/teaches> rdfs:range <http://education.org/vocab/Subject>,
+        <http://education.org/vocab/Teacher> .
+
+<http://education.org/vocab/worksAt> rdfs:range <http://education.org/vocab/Institution>,
+        <http://education.org/vocab/Teacher> .
+
+<http://example.com/hasSubject> rdfs:range <http://example.com/Subject>,
+        <http://example.com/Teacher> .
+
+<http://example.com/teacher#hasYearsExperience> rdfs:range <http://example.com/teacher#Teacher> .
+
+<http://example.com/teacher#name> rdfs:range <http://example.com/teacher#Teacher> .
+
+<http://example.com/teacher#teachesSubject> rdfs:range <http://example.com/teacher#Teacher> .
+
+<http://example.com/teacher#worksAtSchool> rdfs:range <http://example.com/teacher#Teacher> .
+
+<http://example.com/teaches> rdfs:range <http://example.com/Course>,
+        <http://example.com/Teacher> .
+
+<http://example.com/teachesAt> rdfs:range <http://example.com/School>,
+        <http://example.com/Teacher> .
+
+<http://example.com/teachesSubject> rdfs:range <http://example.com/Subject>,
+        <http://example.com/Teacher> .
+
+<http://example.com/teaching#age> rdfs:range <http://example.com/teaching#Teacher> .
+
+<http://example.com/teaching#hasName> rdfs:range <http://example.com/teaching#Teacher> .
+
+<http://example.com/teaching#teachSubject> rdfs:range <http://example.com/teaching#Subject>,
+        <http://example.com/teaching#Teacher> .
+
+<http://example.com/teaching#worksIn> rdfs:range <http://example.com/teaching#School>,
+        <http://example.com/teaching#Teacher> .
+
+<http://example.com/worksIn> rdfs:range <http://example.com/School>,
+        <http://example.com/Teacher> .
+
+<http://example.org/hasName> rdfs:range <http://example.org/Teacher> .
+
+<http://example.org/hasStudent> rdfs:range <http://example.org/Student>,
+        <http://example.org/Teacher> .
+
+<http://example.org/isEmployedBy> rdfs:range <http://example.org/School>,
+        <http://example.org/Teacher> .
+
+<http://example.org/ontology/teacher#hasExperience> rdfs:range <http://example.org/ontology/teacher#Teacher> .
+
+<http://example.org/ontology/teacher#hasSubject> rdfs:range <http://example.org/ontology/teacher#Subject>,
+        <http://example.org/ontology/teacher#Teacher> .
+
+<http://example.org/ontology/teacher#teachesIn> rdfs:range <http://example.org/ontology/teacher#Institution>,
+        <http://example.org/ontology/teacher#Teacher> .
+
+<http://example.org/teacher#name> rdfs:range <http://example.org/teacher#Teacher> .
+
+<http://example.org/teacher#school> rdfs:range <http://example.org/teacher#School>,
+        <http://example.org/teacher#Teacher> .
+
+<http://example.org/teacher#subject> rdfs:range <http://example.org/teacher#Subject>,
+        <http://example.org/teacher#Teacher> .
+
+<http://example.org/teacher#yearsOfExperience> rdfs:range <http://example.org/teacher#Teacher> .
+
+<http://example.org/teachers#age> rdfs:range <http://example.org/teachers#Teacher> .
+
+<http://example.org/teachers#name> rdfs:range <http://example.org/teachers#Teacher> .
+
+<http://example.org/teachers#school> rdfs:range <http://example.org/teachers#Teacher> .
+
+<http://example.org/teachers#subject> rdfs:range <http://example.org/teachers#Teacher> .
+
+<http://example.org/teachers#yearsExperience> rdfs:range <http://example.org/teachers#Teacher> .
+
+<http://example.org/teaches> rdfs:range <http://example.org/Course>,
+        <http://example.org/Teacher> .
+
+<http://example.org/teachesSubject> rdfs:range <http://example.org/Subject>,
+        <http://example.org/Teacher> .
+
+<http://example.org/worksAt> rdfs:range <http://example.org/School>,
+        <http://example.org/Teacher> .
+
+<http://example.org/worksIn> rdfs:range <http://example.org/School>,
+        <http://example.org/Teacher> .
+
+<http://www.example.com/onto#hasDegree> rdfs:range <http://www.example.com/onto#Teacher> .
+
+<http://www.example.com/onto#hasSubject> rdfs:range <http://www.example.com/onto#Subject>,
+        <http://www.example.com/onto#Teacher> .
+
+<http://www.example.com/onto#teachesIn> rdfs:range <http://www.example.com/onto#School>,
+        <http://www.example.com/onto#Teacher> .
+
+<http://www.example.com/ontology#hasAge> rdfs:range <http://www.example.com/ontology#Teacher> .
+
+<http://www.example.com/ontology#hasExperienceInYears> rdfs:range <http://www.example.com/ontology#Teacher> .
+
+<http://www.example.com/ontology#hasName> rdfs:range <http://www.example.com/ontology#Teacher> .
+
+<http://www.example.com/ontology#teachesSubject> rdfs:range <http://www.example.com/ontology#Subject>,
+        <http://www.example.com/ontology#Teacher> .
+
+<http://www.example.com/teacher#hasExperience> rdfs:range <http://www.example.com/teacher#Teacher> .
+
+<http://www.example.com/teacher#hasName> rdfs:range <http://www.example.com/teacher#Teacher> .
+
+<http://www.example.com/teacher#teachesSubject> rdfs:range <http://www.example.com/teacher#Subject>,
+        <http://www.example.com/teacher#Teacher> .
+
+<http://www.example.com/teacher#worksAt> rdfs:range <http://www.example.com/teacher#School>,
+        <http://www.example.com/teacher#Teacher> .
+
+<http://www.example.org/ontologies/teacher#hasExperience> rdfs:range <http://www.example.org/ontologies/teacher#Teacher> .
+
+<http://www.example.org/ontologies/teacher#name> rdfs:range <http://www.example.org/ontologies/teacher#Teacher> .
+
+<http://www.example.org/ontologies/teacher#teaches_subject> rdfs:range <http://www.example.org/ontologies/teacher#Subject>,
+        <http://www.example.org/ontologies/teacher#Teacher> .
+
+<http://www.example.org/ontologies/teacher#works_at> rdfs:range <http://www.example.org/ontologies/teacher#School>,
+        <http://www.example.org/ontologies/teacher#Teacher> .
+
+<http://www.example.org/ontology#hasDegree> rdfs:range <http://www.example.org/ontology#Degree>,
+        <http://www.example.org/ontology#Teacher> .
+
+<http://www.example.org/ontology#hasExperience> rdfs:range <http://www.example.org/ontology#Teacher> .
+
+<http://www.example.org/ontology#hasName> rdfs:range <http://www.example.org/ontology#Teacher> .
+
+<http://www.example.org/ontology#teachesSubject> rdfs:range <http://www.example.org/ontology#Subject>,
+        <http://www.example.org/ontology#Teacher> .
+
+<http://www.example.org/ontology#worksIn> rdfs:range <http://www.example.org/ontology#School>,
+        <http://www.example.org/ontology#Teacher> .
+
+<http://www.example.org/ontology/teacher#first_name> rdfs:range <http://www.example.org/ontology/teacher#Teacher> .
+
+<http://www.example.org/ontology/teacher#hasID> rdfs:range <http://www.example.org/ontology/teacher#Teacher> .
+
+<http://www.example.org/ontology/teacher#last_name> rdfs:range <http://www.example.org/ontology/teacher#Teacher> .
+
+<http://www.example.org/ontology/teacher#subjectName> rdfs:range <http://www.example.org/ontology/teacher#Subject> .
+
+<http://www.example.org/ontology/teacher#teachSubject> rdfs:range <http://www.example.org/ontology/teacher#Subject>,
+        <http://www.example.org/ontology/teacher#Teacher> .
+

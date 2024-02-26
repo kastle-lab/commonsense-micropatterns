@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix life: <http://www.example.org/life#> .
+life:Life rdfs:subClassOf rdfs:Resource .
+life:Plant rdfs:subClassOf life:Life .
+life:Animal rdfs:subClassOf life:Life .
+life:Human rdfs:subClassOf life:Animal .
+life:Bird rdfs:subClassOf life:Animal .
+life:Fish rdfs:subClassOf life:Animal .
+life:Flower rdfs:subClassOf life:Plant .
+life:Tree rdfs:subClassOf life:Plant .
+life:hasDNA rdf:type rdfs:Property .
+life:hasDNA rdfs:domain life:Life .
+life:hasDNA rdfs:range rdf:literal .
+life:hasLifeSpan rdf:type rdfs:Property .
+life:hasLifeSpan rdfs:domain life:Life .
+life:hasLifeSpan rdfs:range rdf:literal.life:reproduce rdf:type rdf:Property.life:reproduce rdfs:domain life:Life.life:consume rdf:type rdf:Property.life:consume rdfs:domain life:Life.life:consume rdfs:range life:Life. life:hasEnvironment rdf:type rdf:Property.life:hasEnvironment rdfs:domain life:Life.life:hasEnvironment rdfs:range rdf:Resource.

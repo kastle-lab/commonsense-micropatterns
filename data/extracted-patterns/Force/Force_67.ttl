@@ -1,0 +1,5 @@
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<http://example.com/ontology#Force>  a rdfs:Class ;
+  rdfs:label "Force"@en ;
+  dc:description "A force is any interaction that, when unopposed, will change the motion of an object. A force can cause an object with mass to change its velocity which includes to begin moving from a state of rest"@en.

@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix way: <http://example.org/way#> .
+way:Way rdf:type rdfs:Class ;
+    rdfs:comment "A physical path or route that can be travelled." ;
+    rdfs:label "Way" .
+way:startPoint rdf:type rdf:Property ;
+    rdfs:comment "The starting point of the way." ;
+    rdfs:label "startPoint" ;
+    rdfs:domain way:Way ;
+    rdfs:range rdfs:Literal .
+way:endPoint rdf:type rdf:Property ;
+    rdfs:comment "The ending point of the way." ;
+    rdfs:label "endPoint" ;
+    rdfs:domain way:Way ;
+    rdfs:range rdfs:Literal .
+way:length rdf:type rdf:Property ;
+    rdfs:comment "The length of the way, usually measured in kilometers." ;
+    rdfs:label "length" ;
+    rdfs:domain way:Way ;
+    rdfs:range rdf:Literal .

@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edu: <http://example.org/edu#> .
+## Class declarations ##edu:Course a rdfs:Class ;
+   rdfs:label "Course"@en ;
+   rdfs:comment "A class or course offered by an educational institution."@en .
+edu:Teacher a rdfs:Class ;
+   rdfs:label "Teacher"@en ;
+   rdfs:comment "A person who provides instruction in an educational setting."@en .
+edu:Student a rdfs:Class ;
+   rdfs:label "Student"@en ;
+   rdfs:comment "A learner, or someone who attends an educational institution."@en .
+## Property declarations ##edu:teaches a rdf:Property ;
+   rdfs:label "teaches"@en ;
+   rdfs:comment "Indicates the course a teacher teaches."@en ;
+   rdfs:domain edu:Teacher ;
+   rdfs:range edu:Course .
+edu:enrolledIn a rdf:Property ;
+   rdfs:label "enrolled in"@en ;
+   rdfs:comment "Indicate the course a student is enrolled in."@en ;
+   rdfs:domain edu:Student ;
+   rdfs:range edu:Course .

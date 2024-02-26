@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sys: <http://example.org/system#> .
+sys:System a rdfs:Class ;
+    rdfs:comment "A system is a collection of elements or components that are organized for a common purpose" .
+sys:SubSystem a rdfs:Class ;
+    rdfs:comment "A subsystem is part of a larger system that operates independently or semi-independently" ;
+    rdfs:subClassOf sys:System .
+sys:Component a rdfs:Class ;
+    rdfs:comment "A component is an identifiable part of a larger system or construction" .
+sys:Function a rdfs:Class ;
+    rdfs:comment "A function or functionality of a system or component" .
+sys:hasSubSystem a rdf:Property ;
+    rdfs:domain sys:System ;
+    rdfs:range sys:System .
+sys:hasComponent a rdf:Property ;
+    rdfs:domain sys:System ;
+    rdfs:range sys:Component .
+sys:performsFunction a rdf:Property ;
+    rdfs:domain sys:System ;
+    rdfs:range sys:Function .
+sys:isPartOf a rdf:Property ;
+    rdfs:domain sys:SubSystem ;
+    rdfs:range sys:System .
+sys:isComponentOf a rdf:Property ;
+    rdfs:domain sys:Component ;
+    rdfs:range sys:System .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix job: <http://example.org/job#> .
+job:Job rdfs:subClassOf rdf:Resource .
+job:Job rdfs:label "Job"@en .
+job:hasTitle rdf:type rdf:Property ;
+    rdfs:label "has title"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string .
+job:hasLocation rdf:type rdf:Property ;
+    rdfs:label "has location"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string .
+job:hasDescription rdf:type rdf:Property ;
+    rdfs:label "has description"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string .
+job:hasEmployer rdf:type rdf:Property ;
+    rdfs:label "has employer"@en ;
+    rdfs:domain job:Job ;
+    rdfs:range xsd:string .
+job:Employer rdf:type rdf:Class ;
+    rdfs:label "Employer"@en ;
+    rdfs:subClassOf rdf:Resource .
+job:Employer job:offers job:Job ;
+    rdfs:label "offers job"@en .

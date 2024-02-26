@@ -1,0 +1,21 @@
+ We'll look at this in the sense of changing an object's property. 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix chg: <http://example.com/ontology/change#> .
+# Define Object, Property, and Change as classeschg:Object rdf:type rdfs:Class .
+chg:Property rdf:type rdfs:Class .
+chg:Change rdf:type rdfs:Class ;
+    rdfs:comment "A class representing change in an object's property" .
+# Define properties related to Changechg:changes rdf:type rdf:Property ;
+    rdfs:domain chg:Change ;
+    rdfs:range chg:Object ;
+    rdfs:comment "The object that is changed" .
+chg:befores rdf:type rdf:Property ;
+    rdfs:domain chg:Change ;
+    rdfs:range chg:Property ;
+    rdfs:comment "The property before the change" .
+chg:afters rdf:type rdf:Property ;
+    rdfs:domain chg:Change ;
+    rdfs:range chg:Property ;
+    rdfs:comment "The property after the change" .

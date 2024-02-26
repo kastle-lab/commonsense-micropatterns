@@ -1,0 +1,31 @@
+@prefix sch: <http://example.org/school#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+sch:Class rdf:type rdfs:Class .
+sch:Teacher rdf:type rdfs:Class .
+sch:Student rdf:type rdfs:Class .
+sch:Subject rdf:type rdfs:Class .
+sch:Homework rdf:type rdfs:Class .
+sch:teaches rdf:type rdf:Property ;
+    rdfs:domain sch:Teacher ;
+    rdfs:range sch:Subject .
+sch:learns rdf:type rdf:Property ;
+    rdfs:domain sch:Student ;
+    rdfs:range sch:Subject .
+sch:attends rdf:type rdf:Property ;
+    rdfs:domain sch:Student ;
+    rdfs:range sch:Class .
+sch:teachesIn rdf:type rdf:Property ;
+    rdfs:domain sch:Teacher ;
+    rdfs:range sch:Class .
+sch:assigns rdf:type rdf:Property ;
+    rdfs:domain sch:Teacher ;
+    rdfs:range sch:Homework .
+sch:completes rdf:type rdf:Property ;
+    rdfs:domain sch:Student ;
+    rdfs:range sch:Homework .
+sch:Class rdfs:comment "The category of all school classes" .
+sch:Teacher rdfs:comment "The category of all school teachers" .
+sch:Student rdfs:comment "The category of all school students" .
+sch:Subject rdfs:comment "The category of all school subjects" .
+sch:Homework rdfs:comment "The category of all school homework assignments" .

@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/force#> .
+# Class declarations:Force rdf:type rdfs:Class .
+:GravitationalForce rdf:type rdfs:Class ;
+                    rdfs:subClassOf :Force .
+:ElectromagneticForce rdf:type rdfs:Class ;
+                      rdfs:subClassOf :Force .
+:StrongNuclearForce rdf:type rdfs:Class ;
+                    rdfs:subClassOf :Force .
+:WeakNuclearForce rdf:type rdfs:Class ;
+                  rdfs:subClassOf :Force .
+# Data properties:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Force ;
+       rdfs:range xsd:double .
+       :unit rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Force ;
+      rdfs:range rdfs:Literal .
+      # Object properties:actsOn rdf:type owl:ObjectProperty ;
+        rdfs:domain :Force ;
+        rdfs:range :Object .
+# Class :Object:Object rdf:type rdfs:Class .

@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uni: <http://www.university.com#> .
+uni:Student a rdfs:Class ;
+  rdfs:comment "A student of the University" ;
+  rdfs:label "Student"@en .
+uni:Professor a rdfs:Class ;
+  rdfs:comment "A professor of the University" ;
+  rdfs:label "Professor"@en .
+uni:teaches a rdf:Property ;
+  rdfs:domain uni:Professor ;
+  rdfs:range uni:Student ;
+  rdfs:comment "Represents that a professor teaches a student" ;
+  rdfs:label "teaches"@en .
+uni:John a uni:Professor ;
+  rdfs:label "John"@en .
+uni:Mark a uni:Student ;
+  rdfs:label "Mark"@en .
+uni:John uni:teaches uni:Mark .

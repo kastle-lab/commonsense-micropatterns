@@ -1,0 +1,113 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:n90baca91ce164683a698257d214a9483b1 a rdfs:Class .
+
+_:n90baca91ce164683a698257d214a9483b2 a rdfs:Class .
+
+<http://example.com/levels#Level> a rdfs:Class .
+
+<http://example.org#Level> a rdfs:Class .
+
+<http://example.org#Person> a rdfs:Class .
+
+<http://example.org#Skill> a rdfs:Class .
+
+<http://example.org/Game> a rdfs:Class .
+
+<http://example.org/Level> a rdfs:Class .
+
+<http://example.org/level#Level> a rdfs:Class .
+
+<http://example.org/level/Level> a rdfs:Class .
+
+<http://example.org/ontology#Entity> a rdfs:Class .
+
+<http://example.org/ontology#Level> a rdfs:Class .
+
+<http://www.example.org/#Level> a rdfs:Class .
+
+<http://www.example.org/Level> a rdfs:Class .
+
+<http://www.example.org/Node> a rdfs:Class .
+
+rdf:Integer a rdfs:Class .
+
+rdf:String a rdfs:Class .
+
+rdfs:Resource a rdfs:Class .
+
+owl:Thing a rdfs:Class .
+
+<http://example.com/levels#associatedWith> rdfs:range <http://example.com/levels#Level> .
+
+<http://example.com/levels#hasDifficulty> rdfs:range <http://example.com/levels#Level> .
+
+<http://example.com/levels#hasNumber> rdfs:range <http://example.com/levels#Level> .
+
+<http://example.org#hasLevel> rdfs:range <http://example.org#Level>,
+        <http://example.org#Person> .
+
+<http://example.org#hasSkill> rdfs:range <http://example.org#Person>,
+        <http://example.org#Skill> .
+
+<http://example.org/hasDifficulty> rdfs:range <http://example.org/Level> .
+
+<http://example.org/hasNumber> rdfs:range <http://example.org/Level> .
+
+<http://example.org/hasReward> rdfs:range <http://example.org/Level> .
+
+<http://example.org/inGame> rdfs:range <http://example.org/Game>,
+        <http://example.org/Level> .
+
+<http://example.org/level#associatedWith> rdfs:range <http://example.org/level#Level> .
+
+<http://example.org/level#hasDescription> rdfs:range <http://example.org/level#Level> .
+
+<http://example.org/level#hasLevel> rdfs:range <http://example.org/level#Level>,
+        rdfs:Resource .
+
+<http://example.org/level#hasLevelName> rdfs:range <http://example.org/level#Level> .
+
+<http://example.org/level#hasLevelNumber> rdfs:range <http://example.org/level#Level> .
+
+<http://example.org/level#hasNextLevel> rdfs:range <http://example.org/level#Level> .
+
+<http://example.org/level#levelIndicator> rdfs:range _:n90baca91ce164683a698257d214a9483b2 .
+
+<http://example.org/level#levelOf> rdfs:range _:n90baca91ce164683a698257d214a9483b1,
+        <http://example.org/level#Level> .
+
+<http://example.org/level#levelValue> rdfs:range <http://example.org/level#Level> .
+
+<http://example.org/level/hasLevel> rdfs:range <http://example.org/level/Level>,
+        rdfs:Resource,
+        owl:Thing .
+
+<http://example.org/level/isLevelOf> rdfs:range <http://example.org/level/Level>,
+        rdfs:Resource,
+        owl:Thing .
+
+<http://example.org/level/levelName> rdfs:range <http://example.org/level/Level> .
+
+<http://example.org/level/levelNumber> rdfs:range <http://example.org/level/Level> .
+
+<http://example.org/level/nextLevel> rdfs:range <http://example.org/level/Level> .
+
+<http://example.org/level/previousLevel> rdfs:range <http://example.org/level/Level> .
+
+<http://example.org/ontology#hasLevel> rdfs:range <http://example.org/ontology#Entity>,
+        <http://example.org/ontology#Level> .
+
+<http://www.example.org/#levelDescription> rdfs:range <http://www.example.org/#Level>,
+        rdf:String .
+
+<http://www.example.org/#levelNumber> rdfs:range <http://www.example.org/#Level>,
+        rdf:Integer .
+
+<http://www.example.org/hasLevel> rdfs:range <http://www.example.org/Level>,
+        <http://www.example.org/Node> .
+
+<http://www.example.org/levelNumber> rdfs:range <http://www.example.org/Level> .
+

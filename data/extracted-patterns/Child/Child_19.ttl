@@ -1,0 +1,25 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Child a rdfs:Class ;
+    rdfs:label "Child" ;
+    rdfs:subClassOf ex:Human .
+ex:hasParent a rdfs:Property ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:Adult ;
+    rdfs:label "has parent" .
+ex:hasSibling a rdfs:Property ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:Child ;
+    rdfs:comment "The sibling of a child is another child" ;
+    rdfs:label "has sibling" .
+ex:birthdate a rdfs:Property ;
+    rdfs:domain ex:Child ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment "The birthdate of a child is a literal (date)" ;
+    rdfs:label "Date of birth" .
+ex:enrollsIn a rdfs:Property ;
+    rdfs:domain ex:Child ;
+    rdfs:range ex:School ;
+    rdfs:comment "A child can be enrolled in a school" ;
+    rdfs:label "Enrolls in" .
+ex:Child    rdfs:comment "A child is a young human being below the age of puberty or below the legal age of majority." .

@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://www.example.org/> .
+ex:Party a rdfs:Class ;
+    rdfs:label "Party"@en ;
+    rdfs:comment "A person or group of people recognized as an autonomous entity by law, engaged in some kind of business or legal transaction."@en .
+ex:name a rdf:Property ;
+    rdfs:domain ex:Party ;
+    rdfs:range xsd:string ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The name of the Party."@en .
+ex:PartyActivity a rdfs:Class ;
+    rdfs:label "Party Activity"@en ;
+    rdfs:comment "An activity in which a Party is involved."@en .
+ex:participatesIn a rdf:Property ;
+    rdfs:domain ex:Party ;
+    rdfs:range ex:PartyActivity ;
+    rdfs:label "participates in"@en ;
+    rdfs:comment "a relation between a Party and some activity in which it is involved."@en .

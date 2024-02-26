@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix part: <http://example.org/part#> .
+part:Part rdf:type owl:Class ;
+   rdfs:label "Part" ;
+   rdfs:comment "A component that is a part of something larger" .
+part:partId rdf:type owl:DatatypeProperty ;
+   rdfs:domain part:Part ;
+   rdfs:range xsd:string ;
+   rdfs:label "partId" ;
+   rdfs:comment "A unique identifier for a part" .
+part:partName rdf:type owl:DatatypeProperty ;
+   rdfs:domain part:Part ;
+   rdfs:range xsd:string ;
+   rdfs:label "partName" ;
+   rdfs:comment "The name of a part" .
+part:belongsTo rdf:type owl:ObjectProperty ;
+   rdfs:domain part:Part ;
+   rdfs:range rdfs:Resource ;
+   rdfs:label "belongsTo" ;
+   rdfs:comment "Indicates the larger entity that the part belongs to" .

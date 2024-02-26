@@ -1,0 +1,4 @@
+@prefix : <http://example.org#> .
+:John a :Student ;
+    :study :Biology .
+:Biology a :Subject .

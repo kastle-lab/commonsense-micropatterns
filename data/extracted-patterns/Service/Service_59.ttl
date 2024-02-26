@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/service#> .
+:Service a owl:Class ;
+  rdfs:label "Service" ;
+  rdfs:comment "Represents the concept of services provided in some context" .
+:hasService a owl:ObjectProperty ;
+  rdfs:label "has service" ;
+  rdfs:domain :Consumer ;
+  rdfs:range :Service ;
+  rdfs:comment "Property representing if a consumer has a service".
+:Consumer a owl:Class ;
+  rdfs:label "Consumer" ;
+  rdfs:comment "Represents the concept of consumers who are the recipients of services" .
+  :serviceName a owl:DatatypeProperty ;
+  rdfs:label "service name" ;
+  rdfs:domain :Service ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Property representing the name of a service" .
+  :serviceCost a owl:DatatypeProperty ;
+  rdfs:label "service cost" ;
+  rdfs:domain :Service ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "Property representing the cost of a service" .

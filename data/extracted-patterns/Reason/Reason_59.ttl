@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:Reason     rdf:type rdfs:Class ;
+    rdfs:label "Reason" ;
+    rdfs:comment "The class of all entities which are reasons or justifications for an action, belief, or event." .
+ex:hasReason    rdf:type rdf:Property ;
+    rdfs:label "has reason" ;
+    rdfs:comment "States that an entity has a reason or justification." ;
+    rdfs:domain ex:Entity ;
+    rdfs:range ex:Reason .
+ex:e1     rdf:type ex:Entity ;
+    ex:hasReason ex:r1 .
+ex:r1    rdf:type ex:Reason ;
+    rdfs:label "Need for food" ;
+    rdfs:comment "The entity excused their action due to the need for food." .

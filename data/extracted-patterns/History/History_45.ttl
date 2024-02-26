@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Event rdf:type rdfs:Class .
+ex:hasStartDate rdf:type rdf:Property .
+ex:hasEndDate rdf:type rdf:Property .
+ex:hasLocation rdf:type rdf:Property .
+ex:hasActor rdf:type rdf:Property .
+ex:WorldWarII rdf:type ex:Event .
+ex:WorldWarII ex:hasStartDate "1939-09-01"^^xsd:date .
+ex:WorldWarII ex:hasEndDate "1945-09-02"^^xsd:date .
+ex:WorldWarII ex:hasLocation "Worldwide" .
+ex:WorldWarII ex:hasActor ex:UnitedStates .
+ex:WorldWarII ex:hasActor ex:Germany .
+ex:UnitedStates rdf:type ex:Actor .
+ex:Germany rdf:type ex:Actor .

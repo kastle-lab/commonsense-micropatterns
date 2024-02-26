@@ -1,0 +1,34 @@
+@prefix : <http://www.example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Morning a owl:Class ;
+    rdfs:label "Morning" ;
+    rdfs:subClassOf :DayPart .
+:DayPart a owl:Class ;
+    rdfs:label "Day Part" ;
+    rdfs:subClassOf :TimePeriod .
+:TimePeriod a owl:Class ;
+    rdfs:label "Time Period" .
+:hasStartTime a owl:ObjectProperty ;
+    rdfs:domain :Morning ;
+    rdfs:range xsd:time ;
+    rdfs:label "has start time" .
+:hasEndTime a owl:ObjectProperty ;
+    rdfs:domain :Morning ;
+    rdfs:range xsd:time ;
+    rdfs:label "has end time" .
+:isPartOf a owl:ObjectProperty ;
+    rdfs:domain :Morning ;
+    rdfs:range :Day ;
+    rdfs:label "is part of" .
+:Day a owl:Class ;
+    rdfs:label "Day" ;
+    rdfs:subClassOf :TimePeriod .
+:follows a owl:ObjectProperty ;
+    rdfs:domain :Morning ;
+    rdfs:range :Night ;
+    rdfs:label "follows" .
+:Night a owl:Class ;
+    rdfs:label "Night" ;
+    rdfs:subClassOf :DayPart .

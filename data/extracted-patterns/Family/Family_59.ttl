@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://example.edu/family#> .
+# Classes
+ex:Person a rdfs:Class .
+ex:Man a rdfs:Class ;
+  rdfs:subClassOf ex:Person .
+ex:Woman a rdfs:Class ;
+  rdfs:subClassOf ex:Person .
+ex:Child a rdfs:Class ;
+  rdfs:subClassOf ex:Person .
+ex:Family a rdfs:Class .
+# Properties
+ex:hasFather a rdf:Property ;
+  rdfs:domain ex:Child ;
+  rdfs:range ex:Man .
+ex:hasMother a rdf:Property ;
+  rdfs:domain ex:Child ;
+  rdfs:range ex:Woman .
+ex:hasChild a rdf:Property ;
+  rdfs:domain [ rdf:type rdf:Class ;
+ rdfs:unionOf (ex:Man ex:Woman) ] ;
+  rdfs:range ex:Child .
+ex:hasSpouse a rdf:Property ;
+  rdfs:domain [ rdf:type rdf:Class ;
+ rdfs:unionOf (ex:Man ex:Woman) ] ;
+  rdfs:range [ rdf:type rdf:Class ;
+ rdfs:unionOf (ex:Man ex:Woman) ] .
+ex:partOfFamily a rdf:Property ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Family .

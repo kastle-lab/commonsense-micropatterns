@@ -1,0 +1,17 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Minute a rdfs:Class ;
+  rdfs:label "Minute" ;
+  rdfs:comment "Unit of time measurement" .
+ex:TimeInterval a rdfs:Class ;
+  rdfs:label "Time Interval" ;
+  rdfs:subClassOf ex:Minute ;
+  rdfs:comment  "An amount of minutes" .
+ex:startMinute a rdf:Property ;
+  rdfs:label "starts at minute" ;
+  rdfs:domain ex:TimeInterval ;
+  rdfs:range xsd:nonNegativeInteger .
+ex:endMinute a rdf:Property ;
+  rdfs:label "ends at minute" ;
+  rdfs:domain ex:TimeInterval ;
+  rdfs:range xsd:nonNegativeInteger .

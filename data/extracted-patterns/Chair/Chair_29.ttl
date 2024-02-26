@@ -1,0 +1,28 @@
+"@prefix : <http://www.example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Chair a owl:Class ;
+    rdfs:label ""Chair""@en ;
+    rdfs:comment ""A piece of furniture designed for a single person to sit on""@en ;
+    rdfs:subClassOf :Furniture .
+    :hasMaterial a owl:ObjectProperty ;
+        rdfs:domain :Chair ;
+        rdfs:range :Material .
+    :Material a owl:Class ;
+        rdfs:label ""Material""@en ;
+        rdfs:comment ""The matter from which something is or can be made""@en .
+    :Wood a owl:NamedIndividual , :Material ;
+        rdfs:label ""Wood""@en ;
+        rdfs:comment ""A material made from trees""@en .
+:hasColor a owl:DatatypeProperty ;
+    rdfs:domain :Chair ;
+    rdfs:range xsd:string .
+    :hasLegs a owl:DatatypeProperty ;
+        rdfs:domain :Chair ;
+        rdfs:range xsd:integer .
+:officeChair a :Chair ;
+    :hasMaterial :Wood ;
+    :hasColor ""Brown""@en ;
+    :hasLegs ""4""^^xsd:integer .
+"

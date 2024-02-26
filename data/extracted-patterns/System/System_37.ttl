@@ -1,0 +1,23 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+dbr:System rdf:type schema:Thing ;
+    schema:name "System" ;
+    schema:description "A set of interconnected elements to achieve a specific goal." ;
+    schema:additionalType schema:Product, schema:Intangible .
+ dbr:SystemComponent rdf:type schema:Thing ;
+    schema:name "System Component" ;
+    schema:description "An individual part of a system that aids in the overall functionality." ;
+    schema:isPartOf dbr:System .
+dbr:SystemFunction rdf:type schema:Thing ;
+    schema:name "System Function" ;
+    schema:description "A specific operation or task that a system can perform." ;
+    schema:isPartOf dbr:System .
+dbr:SystemUser rdf:type schema:Thing ;
+    schema:name "System User" ;
+    schema:description "A person or other entity that interfaces with or uses a system." ;
+    schema:interactsWith dbr:System .
+ dbr:SystemGoal rdf:type schema:Thing ;
+    schema:name "System Goal" ;
+    schema:description "The ultimate objective or purpose that a system is designed to achieve." ;
+    schema:about dbr:System .

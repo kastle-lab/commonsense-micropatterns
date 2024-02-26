@@ -1,0 +1,24 @@
+@prefix : <http://example.org/> .
+:Line a owl:Class ;
+      rdfs:label "Line" ;
+      rdfs:comment "A line in a two-dimensional space" ;
+      rdfs:subClassOf :Geometry .
+      :hasStart a owl:ObjectProperty ;
+          rdfs:label "has start" ;
+          rdfs:comment "The start point of the line" ;
+          rdfs:domain :Line ;
+          rdfs:range :Point .
+:hasEnd a owl:ObjectProperty ;
+        rdfs:label "has end" ;
+        rdfs:comment "The end point of the line" ;
+        rdfs:domain :Line ;
+        rdfs:range :Point .
+:Line1 a :Line ;
+       :hasStart :Point1 ;
+       :hasEnd :Point2 .
+:Point1 a :Point ;
+        :x "0"^^xsd:integer ;
+        :y "0"^^xsd:integer .
+:Point2 a :Point ;
+        :x "1"^^xsd:integer ;
+        :y "1"^^xsd:integer .

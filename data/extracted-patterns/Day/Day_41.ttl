@@ -1,0 +1,48 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org#> .
+:Monday a :Day ;
+  :dayOfWeek 1 ;
+  :follows :Sunday ;
+  :followedBy :Tuesday .
+:Tuesday a :Day ;
+  :dayOfWeek 2 ;
+  :follows :Monday ;
+  :followedBy :Wednesday .
+:Wednesday a :Day ;
+  :dayOfWeek 3 ;
+  :follows :Tuesday ;
+  :followedBy :Thursday .
+:Thursday a :Day ;
+  :dayOfWeek 4 ;
+  :follows :Wednesday ;
+  :followedBy :Friday .
+:Friday a :Day ;
+  :dayOfWeek 5 ;
+  :follows :Thursday ;
+  :followedBy :Saturday .
+:Saturday a :Day ;
+  :dayOfWeek 6 ;
+  :follows :Friday ;
+  :followedBy :Sunday .
+:Sunday a :Day ;
+  :dayOfWeek 7 ;
+  :follows :Saturday ;
+  :followedBy :Monday .
+:Day a rdfs:Class ;
+  rdfs:label "Day"@en ;
+  rdfs:comment "A day of the week"@en .
+:follows a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range :Day ;
+  rdfs:label "follows"@en ;
+  rdfs:comment "Indicates which day follows this one"@en .
+:followedBy a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range :Day ;
+  rdfs:label "followed by"@en ;
+  rdfs:comment "Indicates the day that comes after this one"@en .
+:dayOfWeek a rdf:Property ;
+  rdfs:domain :Day ;
+  rdfs:range xsd:integer ;
+  rdfs:label "day of week"@en ;
+  rdfs:comment "The ranking of the day within the week, starting with Monday as 1"@en .

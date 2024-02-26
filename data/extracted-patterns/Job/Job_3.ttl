@@ -1,0 +1,30 @@
+@prefix : <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Job rdf:type owl:Class .
+:hasJob rdf:type owl:ObjectProperty ;
+  rdfs:label "has job"@en ;
+  rdfs:domain :Person ;
+  rdfs:range :Job .
+:Company rdf:type owl:Class .
+:worksFor rdf:type owl:ObjectProperty ;
+  rdfs:label "works for"@en ;
+  rdfs:domain :Person ;
+  rdfs:range :Company .
+:Position rdf:type owl:Class .
+:hasPosition rdf:type owl:ObjectProperty ;
+  rdfs:label "has position"@en ;
+  rdfs:domain :Job ;
+  rdfs:range :Position .
+:Salary rdf:type owl:Class .
+:hasSalary rdf:type owl:ObjectProperty ;
+  rdfs:label "has salary"@en ;
+  rdfs:domain :Job ;
+  rdfs:range :Salary .
+:Person rdf:type owl:Class .
+:jobTitle rdf:type owl:DatatypeProperty ;
+  rdfs:label "job title"@en ;
+  rdfs:domain :Job ;
+  rdfs:range xsd:string .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+ @prefix owl: <http://www.w3.org/2002/07/owl#> .
+ @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ @prefix schema: <http://schema.org/> .
+ schema:Man rdf:type rdfs:Class ;
+ rdfs:label "Man"@en ;
+ rdfs:comment "A male human being."@en ;
+ rdfs:subClassOf schema:Person .
+ schema:hasAge rdf:type rdf:Property ;
+ rdfs:domain schema:Man ;
+ rdfs:range xsd:int .
+ schema:isMarried  rdf:type rdf:Property ;
+ rdfs:domain schema:Man ;
+ rdfs:range xsd:boolean .
+ schema:hasJob rdf:type rdf:Property ;
+ rdfs:domain schema:Man ;
+ rdfs:range schema:Job .
+ schema:hasName rdf:type rdf:Property ;
+ rdfs:domain schema:Man ;
+ rdfs:range xsd:string .
+ schema:hasNationality rdf:type rdf:Property ;
+ rdfs:domain schema:Man ;
+ rdfs:range schema:Country .
+ schema:Job rdf:type rdfs:Class ;
+ rdfs:label "Job"@en ;
+ rdfs:comment "A profession or work held by a person."@en .
+ schema:Country rdf:type rdfs:Class ;
+ rdfs:label "Country"@en ;
+ rdfs:comment "A geographic region recognised as a distinct entity in political geography."@en .

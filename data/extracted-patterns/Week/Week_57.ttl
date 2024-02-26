@@ -1,0 +1,12 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+ex:Week a rdfs:Class ;
+  rdfs:label "Week"@en ;
+  rdfs:comment "A unit of time that is defined as 7 days"@en .
+ex:hasDays a rdf:Property ;
+  rdfs:label "has days"@en ;
+  rdfs:domain ex:Week ;
+  rdfs:range xsd:nonNegativeInteger ;
+  rdfs:comment "Property to represent the number of days in a week"@en .
+ex:Week1 a ex:Week ;
+  ex:hasDays 7 .

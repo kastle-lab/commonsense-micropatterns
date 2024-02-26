@@ -1,0 +1,10 @@
+owl:Class : Hand    rdfs:subClassOf : Body_Part    rdfs:label "Hand"    rdfs:comment "The terminal part of the human arm located below the forearm, used for grasping and holding and consisting of the wrist, palm, four fingers, and an opposable thumb."@enowl:DisjointWith : Leg, Head, Torso:hasFinger a owl:ObjectProperty ;
+    rdfs:domain :Hand ;
+    rdfs:range :Finger ;
+    rdfs:label "has finger" ;
+    rdfs:comment "Property representing the fingers that a hand consists of".
+:belongsTo a owl:ObjectProperty ;
+    rdfs:domain :Hand ;
+    rdfs:range :Human ;
+    rdfs:label "belongs to" ;
+    rdfs:comment "Property representing the human to which the hand belongs".

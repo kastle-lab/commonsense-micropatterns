@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://example.org/#> .
+:Hand a rdf:Class ;
+    rdfs:comment "Class representing the human hand" .
+    :handHasFingers a rdf:Property ;
+    rdfs:domain :Hand ;
+    rdfs:range :Fingers ;
+    rdfs:comment "Property indicating that a hand has fingers" .
+:Fingers a rdf:Class ;
+    rdfs:subClassOf :HandParts ;
+    rdfs:comment "Subclass representing fingers of a hand" .
+    :handHasThumb a rdf:Property ;
+    rdfs:domain :Hand ;
+    rdfs:range :Thumb ;
+    rdfs:comment "Property indicating that a hand has a thumb" .
+:Thumb a rdf:Class ;
+    rdfs:subClassOf :HandParts ;
+    rdfs:comment "Subclass representing the thumb of a hand" .
+:handHasPalm a rdf:Property ;
+    rdfs:domain :Hand ;
+    rdfs:range :Palm ;
+    rdfs:comment "Property indicating that a hand has a palm" .
+:Palm a rdf:Class ;
+    rdfs:subClassOf :HandParts ;
+    rdfs:comment "Subclass representing the palm of a hand" .
+:HandParts a rdf:Class ;
+    rdfs:comment "Class representing the parts of a hand" .

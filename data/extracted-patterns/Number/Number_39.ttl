@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix num: <http://example.com/number#> .
+num:Number a rdfs:Class ;
+  rdfs:label "Number" ;
+  rdfs:comment "A numerical value" .
+num:Integer a rdfs:Class ;
+  rdfs:subClassOf num:Number ;
+  rdfs:label "Integer" ;
+  rdfs:comment "An integer is a number that can be written without a fractional or decimal component" .
+num:Float a rdfs:Class ;
+  rdfs:subClassOf num:Number ;
+  rdfs:label "Float" ;
+  rdfs:comment "A floating point number is a number that has a decimal place" .
+num:Real a rdfs:Class ;
+  rdfs:subClassOf num:Number ;
+  rdfs:label "Real" ;
+  rdfs:comment "A real number is a value that represents a quantity along a continuous line" .
+num:Positive a rdfs:Class ;
+  rdfs:subClassOf num:Number ;
+  rdfs:label "Positive" ;
+  rdfs:comment "A positive number is greater than zero" .
+num:Negative a rdfs:Class ;
+  rdfs:subClassOf num:Number ;
+  rdfs:label "Negative" ;
+  rdfs:comment "A negative number is less than zero" .
+num:hasValue a rdf:Property ;
+  rdfs:label "has value" ;
+  rdfs:domain num:Number ;
+  rdfs:range xsd:decimal .

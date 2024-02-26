@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/people#> .
+ex:Person rdf:type rdfs:Class .
+rdfs:label "Person" .
+ex:hasName rdf:type rdf:Property .
+rdfs:label "has name" .
+rdfs:domain ex:Person .
+rdfs:range rdfs:Literal .
+ex:hasAge rdf:type rdf:Property .
+rdfs:label "has age" .
+rdfs:domain ex:Person .
+rdfs:range rdfs:Literal .
+ex:hasGender rdf:type rdf:Property .
+rdfs:label "has gender" .
+rdfs:domain ex:Person .
+rdfs:range rdfs:Literal .
+ex:isMarriedTo rdf:type rdf:Property .
+rdfs:label "is married to" .
+rdfs:domain ex:Person .
+rdfs:range ex:Person .
+ex:isParentOf rdf:type rdf:Property .
+rdfs:label "is parent of" .
+rdfs:domain ex:Person .
+rdfs:range ex:Person .
+ex:isChildOf rdf:type rdf:Property .
+rdfs:label "is child of" .
+rdfs:domain ex:Person .
+rdfs:range ex:Person .
+ex:Person a rdfs:Class ;
+  rdfs:comment "A person is a human being that has the ability for rational thought." .
+ex:hasName a rdf:Property ;
+  rdfs:comment "The name that a person has been given or has chosen for themselves." .
+ex:hasAge a rdf:Property ;
+  rdfs:comment "The number of years a person has lived." .
+ex:hasGender a rdf:Property ;
+  rdfs:comment "The gender that a person identifies as." .
+ex:isMarriedTo a rdf:Property ;
+  rdfs:comment "The person that a person is married to." .
+ex:isParentOf a rdf:Property ;
+  rdfs:comment "The person or people that a person is a parent of." .
+ex:isChildOf a rdf:Property ;
+  rdfs:comment "The person or people that a person is a child of." .

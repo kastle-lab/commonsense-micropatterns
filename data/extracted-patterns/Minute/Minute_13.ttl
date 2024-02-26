@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.example.com/time#> .
+time:Minute rdf:type owl:Class ;
+      rdfs:label "Minute"@en ;
+      rdfs:comment "A unit of time equal to 60 seconds or 1/60th of an hour"@en ;
+      rdfs:subClassOf time:UnitOfTime .
+time:secondInMinute rdf:type owl:DatatypeProperty ;
+      rdfs:label "has seconds"@en ;
+      rdfs:comment "The number of seconds in a minute"@en ;
+      rdfs:domain time:Minute ;
+      rdfs:range xsd:integer ;
+      owl:cardinality "60"^^xsd:nonNegativeInteger .
+time:minuteInHour rdf:type owl:ObjectProperty ;
+      rdfs:label "has minutes"@en ;
+      rdfs:comment "The number of minutes in an hour"@en ;
+      rdfs:domain time:Hour ;
+      rdfs:range time:Minute ;
+      owl:inverseOf time:isMinuteIn .
+ time:isMinuteIn rdf:type owl:ObjectProperty ;
+      rdfs:label "is minute in"@en ;
+      rdfs:comment "Tells in which hour the minute is"@en ;
+      rdfs:domain time:Minute ;
+      rdfs:range time:Hour .
+time:Hour rdf:type owl:Class ;
+      rdfs:label "Hour"@en ;
+      rdfs:comment "A unit of time equal to 60 minutes or 1/24th of a day"@en ;
+      rdfs:subClassOf time:UnitOfTime .

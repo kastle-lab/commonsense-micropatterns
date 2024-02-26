@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix air: <http://www.example.org/air#> .
+air:     rdf:type owl:Class ;
+    rdfs:comment "The class of all air substances" ;
+    rdfs:label "Air" .
+air:Composition     rdf:type owl:Class ;
+    rdfs:comment "The composition of air" ;
+    rdfs:label "Composition" .
+air:Pollution     rdf:type owl:Class ;
+    rdfs:comment "Air quality and pollution details" ;
+    rdfs:label "Pollution" .
+air:Humidity     rdf:type owl:Class ;
+    rdfs:comment "The percentage of water present in the air" ;
+    rdfs:label "Humidity" .
+air:Pressure     rdf:type owl:Class ;
+    rdfs:comment "The atmospheric pressure of the air" ;
+    rdfs:label "Pressure" .
+air:Temperature     rdf:type owl:Class ;
+    rdfs:comment "The temperature of the air" ;
+    rdfs:label "Temperature" .
+air:containsNitrogen    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The percentage of Nitrogen in the air" ;
+    rdfs:label "containsNitrogen" ;
+    rdfs:domain air:Composition ;
+    rdfs:range xsd:float .
+air:containsOxygen    rdf:type owl:ObjectProperty ;
+    rdfs:comment "The percentage of Oxygen in the air" ;
+    rdfs:label "containsOxygen" ;
+    rdfs:domain air:Composition ;
+    rdfs:range xsd:float .
+air:hasHumidity    rdf:type owl:ObjectProperty ;
+    rdfs:domain air: ;
+    rdfs:range air:Humidity ;
+    rdfs:comment "The humidity level in the air" ;
+    rdfs:label "hasHumidity" .
+air:hasPressure    rdf:type owl:ObjectProperty ;
+    rdfs:domain air: ;
+    rdfs:range air:Pressure ;
+    rdfs:comment "The pressure level in the air" ;
+    rdfs:label "hasPressure" .
+air:hasTemperature    rdf:type owl:ObjectProperty ;
+    rdfs:domain air: ;
+    rdfs:range air:Temperature ;
+    rdfs:comment "The temperature level in the air" ;
+    rdfs:label "hasTemperature" .
+air:hasPollutionLevel    rdf:type owl:ObjectProperty ;
+    rdfs:domain air: ;
+    rdfs:range air:Pollution ;
+    rdfs:comment "The pollution level in the air" ;
+    rdfs:label "hasPollutionLevel" .

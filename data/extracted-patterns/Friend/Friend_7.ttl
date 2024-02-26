@@ -1,0 +1,27 @@
+@prefix : <http://www.example.org/friend#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Person a owl:Class .
+:hasFriend a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+:knowsSince a owl:DatatypeProperty ;
+    rdfs:domain :hasFriend ;
+    rdfs:range xsd:date .
+:location a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+:age a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:integer .
+:Friend a owl:Class ;
+    owl:equivalentClass [      a owl:Restriction ;
+      owl:onProperty :hasFriend ;
+      owl:someValuesFrom :Person    ] .
+:CloseFriend a owl:Class ;
+    rdfs:subClassOf :Friend ;
+    owl:equivalentClass [      a owl:Restriction ;
+      owl:onProperty :knowsSince ;
+      owl:hasValue "2000-01-01"^^xsd:date    ] .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prob: <http://www.example.com/problem#> .
+prob:Problem rdf:type owl:Class ;
+    rdfs:label "Problem"@en ;
+    rdfs:comment "A matter or situation regarded as unwelcome or harmful and needing to be dealt with and overcome"@en ;
+    rdfs:subClassOf rdfs:Resource .
+prob:hasSolution rdf:type owl:ObjectProperty ;
+    rdfs:label "has solution"@en ;
+    rdfs:comment "Denotes the solution for a given problem"@en ;
+    rdfs:range prob:Solution ;
+    rdfs:domain prob:Problem .
+prob:Solution rdf:type owl:Class ;
+    rdfs:label "Solution"@en ;
+    rdfs:comment "A solution is proposed method or process to deal with a problem"@en ;
+    rdfs:subClassOf rdfs:Resource .
+prob:hasDifficultyLevel rdf:type owl:DataProperty ;
+    rdfs:label "has difficulty level"@en ;
+    rdfs:comment "Describes the difficulty level of a problem"@en ;
+    rdfs:range xsd:string ;
+    rdfs:domain prob:Problem.prob:hasProblemID rdf:type owl:DataProperty ;
+    rdfs:label "has problem ID"@en ;
+    rdfs:comment "Denotes the unique identifier of a problem"@en ;
+    rdfs:range xsd:int ;
+    rdfs:domain prob:Problem.

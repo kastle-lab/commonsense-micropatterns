@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix ex: <http://example.com/> .
+ex:Enterprises rdf:type dbo:Company ;
+    rdfs:label "Enterprises" ;
+    rdfs:comment "A for-profit entity conducting commercial activities" .
+ex:Enterprises dbo:industry ex:Technology ;
+ex:Technology rdf:type dbo:Industry ;
+    rdfs:label "Technology" ;
+    rdfs:comment "Sector involving research, development and dissemination of technology" .

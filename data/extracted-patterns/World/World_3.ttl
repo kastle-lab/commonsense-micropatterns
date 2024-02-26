@@ -1,0 +1,25 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ex:World rdfs:subClassOf ex:Universe .
+## Countries as a part of the worldex:Country rdfs:subClassOf ex:World .
+ex:Russia a ex:Country .
+ex:USA a ex:Country .
+ex:Australia a ex:Country .
+ex:Germany a ex:Country .
+## Cities as a part of the world (directly)ex:City rdfs:subClassOf ex:World .
+ex:Moscow a ex:City .
+ex:NewYork a ex:City .
+ex:Berlin a ex:City .
+ex:Sydney a ex:City .
+## Cities also as a part of a countryex:City rdfs:subClassOf ex:Country .
+ex:Moscow rdfs:subClassOf ex:Russia .
+ex:NewYork rdfs:subClassOf ex:USA .
+ex:Berlin rdfs:subClassOf ex:Germany .
+ex:Sydney rdfs:subClassOf ex:Australia .
+## oceans, mountains, and forests as features of the worldex:NaturalFeatures rdfs:subClassOf ex:World .
+ex:Ocean a ex:NaturalFeatures .
+ex:Mountain a ex:NaturalFeatures .
+ex:Forest a ex:NaturalFeatures .
+## specific oceans, mountains, and forestsex:Atlantic a ex:Ocean .
+ex:Himalaya a ex:Mountain .
+ex:Amazon a ex:Forest .

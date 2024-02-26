@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix office: <http://www.example.com/office#> .
+office:Office a rdfs:Class ;
+  rdfs:label "Office" ;
+  rdfs:comment "A place where people work, often in an office building" .
+office:Employee a rdfs:Class ;
+  rdfs:label "Employee" ;
+  rdfs:comment "A person who works for an employer, often in an office building" .
+office:Department a rdfs:Class ;
+  rdfs:label "Department" ;
+  rdfs:comment "A division of a large organization such as a government, university, business, or shop, dealing with a specific subject, commodity, or area of activity" .
+office:Task a rdfs:Class ;
+  rdfs:label "Task" ;
+  rdfs:comment "A piece of work to be done or undertaken by the employees" .
+office:hasEmployee a rdf:Property ;
+  rdfs:range office:Office ;
+  rdfs:domain office:Employee ;
+  rdfs:label "has employee" ;
+  rdfs:comment "The property that connects an office with its employees" .
+office:hasDepartment a rdf:Property ;
+  rdfs:range office:Office ;
+  rdfs:domain office:Department ;
+  rdfs:label "has department" ;
+  rdfs:comment "The property that connects an office with its departments" .
+office:performTask a rdf:Property ;
+  rdfs:range office:Employee ;
+  rdfs:domain office:Task ;
+  rdfs:label "perform task" ;
+  rdfs:comment "The property that connects a employee with its tasks" .
+office:DepartmentHead a rdfs:Class;
+  rdfs:subClassOf office:Employee;
+  rdfs:label "Department Head";
+  rdfs:comment "An employee who leads a department".
+office:leadsDepartment a rdf:Property;
+  rdfs:range office:DepartmentHead;
+  rdfs:domain office:Department;
+  rdfs:label "leads department";
+  rdfs:comment "The property that connects a department head with the department they lead".

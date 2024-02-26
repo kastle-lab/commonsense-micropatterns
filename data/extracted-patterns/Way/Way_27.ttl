@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix way: <http://example.org/way#> .
+way:Way rdf:type rdfs:Class ;
+    rdfs:label "Way" ;
+    rdfs:comment "A course, road, or particular way for travel or direction." .
+way:Highway rdf:type rdfs:Class ;
+    rdfs:subClassOf way:Way ;
+    rdfs:label "Highway" ;
+    rdfs:comment "A main, direct public road, especially a multi-lane, high speed thoroughfare connecting major population centers." .
+way:Path rdf:type rdfs:Class ;
+    rdfs:subClassOf way:Way ;
+    rdfs:label "Path" ;
+    rdfs:comment "A trail or track made by the repeated passage of people or animals." .
+way:hasLength rdf:type rdf:Property ;
+    rdfs:domain way:Way ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has length" ;
+    rdfs:comment "The length of the way in metres." .
+way:connects rdf:type rdf:Property ;
+    rdfs:domain way:Way ;
+    rdfs:range rdfs:Class ;
+    rdfs:label "connects" ;
+    rdfs:comment "The places or locations the way connects." .

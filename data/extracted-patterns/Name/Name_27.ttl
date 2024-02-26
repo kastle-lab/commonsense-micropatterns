@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix name: <http://www.example.org/ontology/name#> .
+name:Name rdf:type owl:Class ;
+  rdfs:label "Name"@en ;
+  rdfs:comment "Class representing the concept of name. It can be an entity's first name, last name, or full name."@en .
+  name:firstName rdf:type owl:DatatypeProperty ;
+  rdfs:label "first name"@en ;
+  rdfs:comment "Property representing the first name of an entity."@en ;
+  rdfs:domain name:Name ;
+  rdfs:range xsd:string .
+  name:lastName rdf:type owl:DatatypeProperty ;
+  rdfs:label "last name"@en ;
+  rdfs:comment "Property representing the last name of an entity."@en ;
+  rdfs:domain name:Name ;
+  rdfs:range xsd:string .
+  name:fullName rdf:type owl:DatatypeProperty ;
+  rdfs:label "full name"@en ;
+  rdfs:comment "Property representing the full name of an entity."@en ;
+  rdfs:domain name:Name ;
+  rdfs:range xsd:string .

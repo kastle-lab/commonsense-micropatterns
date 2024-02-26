@@ -1,0 +1,27 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix hist: <http://www.example.com/history#>hist:HistoricalEvent a rdfs:Class;
+  rdfs:label "Historical event"@en;
+  rdfs:comment "A significant event that took place in the past"@en .
+hist:HistoricalPeriod a rdfs:Class;
+  rdfs:label "Historical period"@en;
+  rdfs:comment "A specific time period recognized for its historical significance"@en .
+hist:Person a rdfs:Class;
+  rdfs:label "Person"@en;
+  rdfs:comment "A human individual as defined in history"@en .
+hist:involves a rdf:Property;
+  rdfs:domain hist:HistoricalEvent;
+  rdfs:range hist:Person;
+  rdfs:label "involves"@en;
+  rdfs:comment "Specifies that a historical event involved a specific person"@en .
+hist:occursDuring a rdf:Property;
+  rdfs:domain hist:HistoricalEvent;
+  rdfs:range hist:HistoricalPeriod;
+  rdfs:label "occurs during"@en;
+  rdfs:comment "Specifies that a historical event occurred during a specific historical period"@en .
+hist:hasDate a rdf:Property;
+    rdfs:domain hist:HistoricalEvent;
+  rdfs:range xsd:date;
+  rdfs:label "has date"@en;
+  rdfs:comment "Specifies the date a historical event happened"@en .

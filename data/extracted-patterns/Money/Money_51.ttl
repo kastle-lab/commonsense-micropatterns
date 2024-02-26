@@ -1,0 +1,16 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix myvoc: <http://www.example.org/myvocab#> .
+myvoc:Money a owl:Class ;
+    rdfs:label "Money"@en ;
+    rdfs:comment "A medium that can be exchanged for goods and services"@en ;
+    .
+myvoc:hasCurrency a owl:ObjectProperty ;
+    rdfs:label "has currency"@en ;
+    rdfs:domain myvoc:Money ;
+    rdfs:range myvoc:Currency ;
+    .
+myvoc:Currency a owl:Class ;
+    rdfs:label "Currency"@en ;
+    rdfs:comment "A system of money in common use"@en ;
+    .

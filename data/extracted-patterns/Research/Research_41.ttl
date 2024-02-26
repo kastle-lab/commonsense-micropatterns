@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+:Research rdf:type owl:Class ;
+    rdfs:comment "Class representing all Researches."@en ;
+    rdfs:subClassOf dct:Work ;
+    rdfs:label "Research"@en .
+:hasResearchTopic rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property representing the research topic of the study."@en ;
+    rdfs:domain :Research ;
+    rdfs:range xsd:string ;
+    rdfs:label "hasResearchTopic"@en .
+:hasResearchMethod rdf:type owl:DatatypeProperty ;
+    rdfs:comment "Property representing the research methodology used in the research."@en ;
+    rdfs:domain :Research ;
+    rdfs:range xsd:string ;
+    rdfs:label "hasResearchMethod"@en .
+:conductedBy rdf:type owl:ObjectProperty ;
+    rdfs:comment "Property denoting the researcher or entity that conducted the research."@en ;
+    rdfs:domain :Research ;
+    rdfs:range foaf:Agent ;
+    rdfs:label "conductedBy"@en .

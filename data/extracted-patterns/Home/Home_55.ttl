@@ -1,0 +1,15 @@
+ Given the limitation on details, I will consider a "Home" to consist of: Its address, the type of home it is (apartment, house, etc.), and the owner. Note that in a real-life scenario, this ontology could be much more complex, containing rooms, furniture, occupants etc.The following is an RDF representation of the ontology in the Turtle format:
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix home: <http://www.example.org/home#> .
+home:Home rdf:type rdfs:Class .
+home:hasAddress rdf:type rdf:Property ;
+    rdfs:domain home:Home ;
+    rdfs:range xsd:string .
+    home:hasType rdf:type rdf:Property ;
+    rdfs:domain home:Home ;
+    rdfs:range xsd:string .
+home:hasOwner rdf:type rdf:Property ;
+    rdfs:domain home:Home ;
+    rdfs:range xsd:string .

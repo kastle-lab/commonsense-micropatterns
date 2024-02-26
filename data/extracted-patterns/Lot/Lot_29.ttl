@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lot: <http://example.org/lot#> .
+lot:   rdf:type rdfs:Class ;
+  rdfs:comment "The class of all Lots" ;
+  rdfs:label "Lot" .
+lot:id   rdf:type rdf:Property ;
+  rdfs:domain lot: ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The ID of a lot" ;
+  rdfs:label "lot id" .
+lot:size   rdf:type rdf:Property ;
+  rdfs:domain lot: ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "The size of a lot" ;
+  rdfs:label "lot size" .
+lot:location   rdf:type rdf:Property ;
+  rdfs:domain lot: ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The location of a lot" ;
+  rdfs:label "lot location" .
+lot:price   rdf:type rdf:Property ;
+  rdfs:domain lot: ;
+  rdfs:range xsd:float ;
+  rdfs:comment "The price of a lot" ;
+  rdfs:label "lot price" .

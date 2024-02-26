@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix war: <http://www.example.org/war#> .
+# Classes
+war:War rdf:type rdfs:Class .
+war:Combatant rdf:type rdfs:Class .
+war:Country rdf:type rdfs:Class .
+war:Causalities rdf:type rdfs:Class .
+# Properties
+war:hasStart rdf:type rdf:Property ;
+    rdfs:domain war:War ;
+    rdfs:range xsd:dateTime .
+    war:hasEnd rdf:type rdf:Property ;
+    rdfs:domain war:War ;
+    rdfs:range xsd:dateTime .
+    war:hasLocation rdf:type rdf:Property ;
+    rdfs:domain war:War ;
+    rdfs:range war:Country .
+    war:hasCombatant rdf:type rdf:Property ;
+    rdfs:domain war:War ;
+    rdfs:range war:Combatant .
+war:hasCausalities rdf:type rdf:Property ;
+    rdfs:domain war:War ;
+    rdfs:range war:Causalities .
+war:hasFatalities rdf:type rdf:Property ;
+    rdfs:domain war:Causalities ;
+    rdfs:range xsd:int .
+war:hasInjuries rdf:type rdf:Property ;
+    rdfs:domain war:Causalities ;
+    rdfs:range xsd:int .
+    # Subclasseswar:CivilWar rdf:type rdfs:Class ;
+    rdfs:subClassOf war:War .
+    war:WorldWar rdf:type rdfs:Class ;
+    rdfs:subClassOf war:War .
+war:GuerrillaWarfare rdf:type rdfs:Class ;
+    rdfs:subClassOf war:War .
+# Subpropertieswar:declarerOfWar rdf:type rdf:Property ;
+    rdfs:subPropertyOf war:hasCombatant ;
+    rdfs:domain war:Country .

@@ -1,0 +1,4 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.:JohnDoe a foaf:Person;
+    foaf:givenName "John"^^xsd:string;
+    foaf:familyName "Doe"^^xsd:string;
+    foaf:name "John Doe"^^xsd:string.

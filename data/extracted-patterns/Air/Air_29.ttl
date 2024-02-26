@@ -1,0 +1,25 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:air    a ex:Element ;
+    ex:hasState ex:gaseous ;
+    ex:composedOf ex:nitrogen, ex:oxygen, ex:argon, ex:carbonDioxide, ex:otherGases ;
+    ex:hasColor "colorless"^^xsd:string ;
+    ex:hasOdor "odorless"^^xsd:string ;
+    ex:hasTaste "tasteless"^^xsd:string ;
+    ex:hasWeight "1.225 kg/m3"^^xsd:string ;
+    ex:hasComposition        [ a ex:Composition ;
+          ex:ofNitrogen "78%"^^xsd:string ;
+          ex:ofOxygen "21%"^^xsd:string ;
+          ex:ofArgon "0.9%"^^xsd:string ;
+          ex:ofCarbonDioxide "0.04%"^^xsd:string ;
+    ex:ofOtherGases "less than 1%"^^xsd:string ] .
+ex:gaseous a ex:State .
+ex:nitrogen a ex:Gas .
+ex:oxygen a ex:Gas .
+ex:argon a ex:Gas .
+ex:carbonDioxide a ex:Gas .
+ex:otherGases a ex:Gas .
+ex:Composition rdfs:subClassOf xsd:string .
+ex:Element rdfs:subClassOf xsd:string .
+ex:Gas rdfs:subClassOf xsd:string .
+ex:State rdfs:subClassOf xsd:string .

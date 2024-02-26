@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix part: <http://example.org/parts#> .
+# Classes
+part:Part rdf:type owl:Class ;
+    rdfs:label "Part" ;
+    rdfs:comment "Represents Part of a specific entity" .
+part:MachinePart rdf:type owl:Class ;
+    rdfs:label "Machine Part" ;
+    rdfs:subClassOf part:Part ;
+    rdfs:comment "Represents parts that are used in machines/equipment" .
+part:VehiclePart rdf:type owl:Class ;
+    rdfs:label "Vehicle Part" ;
+    rdfs:subClassOf part:Part ;
+    rdfs:comment "Represents parts that are used in vehicles" .
+# Object Propertiespart:isPartOf rdf:type owl:ObjectProperty ;
+    rdfs:label "is part of" ;
+    rdfs:domain part:Part ;
+    rdfs:range owl:Thing ;
+    rdfs:comment "Indicates that a Part is part of a particular entity" .
+part:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:label "has part" ;
+    rdfs:domain owl:Thing ;
+    rdfs:range part:Part ;
+    rdfs:comment "Indicates that an entity has a certain Part" .
+# Individualpart:BrakePad rdf:type part:VehiclePart ;
+    rdfs:label "Brake Pad" ;
+    rdfs:comment "A part of a vehicle's brake system" ;
+    part:isPartOf [ rdfs:label "Car's brake system" ] .
