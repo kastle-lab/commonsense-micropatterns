@@ -14,7 +14,7 @@ analysis_path = "../data/pattern-analysis"
 pattern_path = "../csmodl/patterns"
 
 #  Voting parameters
-votingLimit = 1.03 # mean * 103%; only include values that are mean + x
+voting_limit = 1.03 # mean * 103%; only include values that are mean + x
 
 #  Graph parameters (prefix)
 pfs = {
@@ -22,7 +22,8 @@ pfs = {
     "rdfs": RDFS,
     "xsd": XSD,
     "owl": OWL,
-    "time": TIME
+    "time": TIME,
+    "kastle": Namespace("https://kastle.cs.wright.edu/csmodl")
 }
 # predicate shortcut
 a = pfs["rdf"]["type"]
@@ -74,7 +75,7 @@ def strip_uri(uri):
     name = tokens[-1]
     return name
 
-def parse_results():
+def parse_results(verbose=False):
     '''
         Generates noun-specific directories with resultant TTL files
         provided the list of TSV in `resources`.
@@ -113,6 +114,8 @@ def parse_results():
                 try:
                     ontology = split[index]
                 except IndexError:
+                    if verbose:
+                        print(f"No valid ontology found for: {out_name} ")
                     continue
 
                 out = open(os.path.join(noun_dir, out_name), "w")
@@ -170,12 +173,12 @@ def voting_helper(propDict, key):
     filtered_data = [x for x, z_score in zip(values, z_scores) if abs(z_score) <= 1.5]
 
     mean = np.mean(filtered_data)
-    threshold = float(mean*votingLimit)
+    threshold = float(mean*voting_limit)
     if(propDict[key] >= threshold): 
         return True
     return False
 
-def vote_properties():
+def vote_properties(verbose=False):
     '''
         Attempts to parse through generated TTL files from LLM generation
 
@@ -196,23 +199,26 @@ def vote_properties():
             noun, ext = noun_filepath.split(".")
             noun_dir = os.path.join(output_path, noun)
 
-            noun_graph = init_kg()
-            
             analysis_noun_filename = f"{noun}.out"
             analysis_noun_filepath = os.path.join(analysis_path, analysis_noun_filename)
             with open(analysis_filepath, "w") as analysis_noun_file:
                 # All occurences from all nouns
                 noun_properties = dict()
-                for filename in os.listdir(noun_dir): # For each ttl from single Noun
+                noun_files = os.listdir(noun_dir)
+                noun_files.sort()
+                for filename in noun_files: # For each ttl from single Noun
                     stats_total[noun] += 1 # Total available files
                     unique_props = set() # Individual file occurrences per noun
                     curr_graph = init_kg()
                     with open(os.path.join(noun_dir, filename), "r") as f:
                         try:
+                            if verbose:
+                                print(f"Parsing: {filename}")
                             # Try to parse the graph
                             curr_graph.parse(f)
                         except Exception as e:
-                            print(f"\tCould not parse: {filename}")
+                            if verbose:
+                                print(f"\tCould not parse. Skipping")
                             continue
 
                         #  Identifying Type Properties in Noun Ontology
@@ -227,15 +233,17 @@ def vote_properties():
                                 except IndexError as e:
                                     # Consider missing domain/range to be malformed property
                                     # This will accidentally remove all inverses
+                                    if verbose:
+                                        print(f"{prop_name} is malformed.")
                                     continue
 
                                 try:
                                     domain_name = strip_uri(prop_domain)
                                     range_name = strip_uri(prop_range)
                                 except:
-                                    print(prop_domain)
-                                    print(prop_range)
-                                    os.sys.exit()
+                                    if verbose:
+                                        print(prop_domain)
+                                        print(prop_range)
                                 unique_props.add((prop_name, domain_name, range_name))
 
                         for unique_prop in unique_props:
@@ -247,15 +255,19 @@ def vote_properties():
                     # Stats File
                     stats_valid[noun] += 1
 
-                # Voting to add to noun
-                #
-                # for key, value in noun_properties.items():
-                #     sub = value[0]
-                #     pred = key
-                #     obj = value[1]
-                #     property_name = pred.split("/")[-1].split("#")[-1]
-                #     if(voting_helper(noun_properties, property_name)):
-                #         noun_graph.add( (sub, pred, obj) )
+                # The graph that will hold the final combined turtle file
+                noun_graph = init_kg()
+
+                threshold = 0
+                for k, v in noun_properties.items():
+                    p, d, r = k
+
+                    if v > threshold:
+                        noun_graph.add( (pfs["kastle"][p], a, RDF.Property) )
+                        noun_graph.add( (pfs["kastle"][p], RDFS.domain, pfs["kastle"][d]))
+                        noun_graph.add( (pfs["kastle"][p], RDFS.range, pfs["kastle"][r]))
+
+                # Serialize!
                 try:
                     serialization(noun, noun_graph)
                 except Exception as ex:
