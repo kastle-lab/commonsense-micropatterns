@@ -251,42 +251,43 @@ def vote_properties(verbose=False):
                                 noun_properties[unique_prop] += 1
                             except KeyError as e:
                                 noun_properties[unique_prop] = 1    
-                    
                     # Stats File
                     stats_valid[noun] += 1
+                if verbose:
+                    print(noun_properties)
 
-                # The graph that will hold the final combined turtle file
-                noun_graph = init_kg()
+        # The graph that will hold the final combined turtle file
+        noun_graph = init_kg()
 
-                threshold = 0
-                for k, v in noun_properties.items():
-                    p, d, r = k
+        threshold = 0
+        for k, v in noun_properties.items():
+            p, d, r = k
 
-                    if v > threshold:
-                        noun_graph.add( (pfs["kastle"][p], a, RDF.Property) )
-                        noun_graph.add( (pfs["kastle"][p], RDFS.domain, pfs["kastle"][d]))
-                        noun_graph.add( (pfs["kastle"][p], RDFS.range, pfs["kastle"][r]))
+            if v > threshold:
+                noun_graph.add( (pfs["kastle"][p], a, RDF.Property) )
+                noun_graph.add( (pfs["kastle"][p], RDFS.domain, pfs["kastle"][d]))
+                noun_graph.add( (pfs["kastle"][p], RDFS.range, pfs["kastle"][r]))
 
-                # Serialize!
-                try:
-                    serialization(noun, noun_graph)
-                except Exception as ex:
-                    print(noun)
+        # Serialize!
+        try:
+            serialization(noun, noun_graph)
+        except Exception as ex:
+            print(noun)
 
-                #  Sort in descending value order for output
-                noun_properties = {k: v for k, v in sorted(noun_properties.items(), key=lambda item: item[1], reverse=True)}
-                for key, value in noun_properties.items():
-                    analysis_noun_file.write(f"{key} \t {value}\n")
+        #  Sort in descending value order for output
+        # noun_properties = {k: v for k, v in sorted(noun_properties.items(), key=lambda item: item[1], reverse=True)}
+        # for key, value in noun_properties.items():
+        #     analysis_noun_file.write(f"{key} \t {value}\n")
 
-            #  Sort in ascending key order for output
-            stats_valid = dict(sorted(stats_valid.items()))
-            for key,value in stats_valid.items():
-                try:
-                    ratioUsed = round(float(value/stats_total[key]),2) * 100 # represent as percentage
-                    stats_file.write(f"{key}: \t {value}  \t {stats_total[key]} \t {ratioUsed}\n")
-                except Exception as ex:
-                    pass
+        #  Sort in ascending key order for output
+        # stats_valid = dict(sorted(stats_valid.items()))
+        # for key,value in stats_valid.items():
+        #     try:
+        #         ratioUsed = round(float(value/stats_total[key]),2) * 100 # represent as percentage
+        #         stats_file.write(f"{key}: \t {value}  \t {stats_total[key]} \t {ratioUsed}\n")
+        #     except Exception as ex:
+        #         pass
 
 if __name__ == "__main__":
     parse_results()
-    vote_properties()
+    vote_properties(True)

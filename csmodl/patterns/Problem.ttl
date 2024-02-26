@@ -140,7 +140,7 @@ kastle:problemDescription a rdf:Property ;
 
 kastle:problemSolution a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:necc5c9d927c6450c85e3090dd206b622b2 .
+    rdfs:range kastle:ncf2630756a06471faee5b2bd9075df4cb2 .
 
 kastle:severity a rdf:Property ;
     rdfs:domain kastle:Problem ;

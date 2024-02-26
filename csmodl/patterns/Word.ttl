@@ -63,7 +63,7 @@ kastle:hasOrigin a rdf:Property ;
 kastle:hasPartOfSpeech a rdf:Property ;
     rdfs:domain kastle:Word ;
     rdfs:range kastle:PartOfSpeech,
-        kastle:n6ba98a8c6762470fbbe151b9e8d4c6fab1 .
+        kastle:n0e9c658bf4de47078e9efaf28809bf91b1 .
 
 kastle:hasSpelling a rdf:Property ;
     rdfs:domain kastle:,

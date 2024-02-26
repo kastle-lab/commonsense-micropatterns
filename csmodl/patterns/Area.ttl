@@ -37,7 +37,7 @@ kastle:hasUnit a rdf:Property ;
     rdfs:range kastle:AreaUnit,
         kastle:Unit,
         kastle:UnitOfMeasurement,
-        kastle:nd1c852deeb484382a9fbe8e50d2047f2b1 .
+        kastle:n83cb848cdf4c497eb86f2615958dfc76b1 .
 
 kastle:hasValue a rdf:Property ;
     rdfs:domain kastle:Area ;

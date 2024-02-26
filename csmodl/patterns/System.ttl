@@ -107,7 +107,7 @@ kastle:isPartOf a rdf:Property ;
     rdfs:range kastle:System .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:nc62ed671c3ea4af99fcaddd07040a4d8b1 ;
+    rdfs:domain kastle:n786200449b1c49bf8d411a6befee7a69b1 ;
     rdfs:range kastle:string .
 
 kastle:partOf a rdf:Property ;

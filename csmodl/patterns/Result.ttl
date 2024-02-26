@@ -56,7 +56,7 @@ kastle:hasResult a rdf:Property ;
         kastle:Experiment,
         kastle:Process,
         kastle:Test,
-        kastle:nb319ea08a0f0478b91e88f03fd1295a3b1 ;
+        kastle:n23904ab6e7234b409e7da2cd9319ab7bb1 ;
     rdfs:range kastle:Result .
 
 kastle:hasScore a rdf:Property ;
@@ -96,7 +96,7 @@ kastle:hasValue a rdf:Property ;
 kastle:isResultOf a rdf:Property ;
     rdfs:domain kastle:Result ;
     rdfs:range kastle:Process,
-        kastle:nb319ea08a0f0478b91e88f03fd1295a3b4,
+        kastle:n23904ab6e7234b409e7da2cd9319ab7bb4,
         kastle:string .
 
 kastle:isSuccess a rdf:Property ;

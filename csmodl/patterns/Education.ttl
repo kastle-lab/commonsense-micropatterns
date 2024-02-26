@@ -86,8 +86,8 @@ kastle:hasTeacher a rdf:Property ;
     rdfs:range kastle:Teacher .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:nf45bff374bed43cf96efa7da51f3336ab1,
-        kastle:nf9dbbeb636aa4210b582d7c1a730652eb1 ;
+    rdfs:domain kastle:n4e35d6230f204717956facbf0ced25cdb1,
+        kastle:n97b89a6db76e4e85a32097c0772979deb1 ;
     rdfs:range kastle:string .
 
 kastle:offeredBy a rdf:Property ;

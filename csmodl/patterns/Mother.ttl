@@ -3,7 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 kastle:Name a rdf:Property ;
-    rdfs:domain kastle:n4ee091b81c474d91896237cdd736b670b1 ;
+    rdfs:domain kastle:n66e01c2b0dc8455a8cca217bc4460a49b1 ;
     rdfs:range kastle:string .
 
 kastle:age a rdf:Property ;

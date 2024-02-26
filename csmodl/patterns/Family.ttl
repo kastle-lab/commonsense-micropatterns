@@ -66,7 +66,7 @@ kastle:hasChild a rdf:Property ;
     rdfs:domain kastle:Family,
         kastle:Parent,
         kastle:Person,
-        kastle:nfbfbee6b112647daa0e8a17cdffbe529b1 ;
+        kastle:n3ff747ce6a764e3fb5a715ff8daaf29eb1 ;
     rdfs:range kastle:Child,
         kastle:Person .
 
@@ -140,10 +140,10 @@ kastle:hasSon a rdf:Property ;
 kastle:hasSpouse a rdf:Property ;
     rdfs:domain kastle:FamilyMember,
         kastle:Person,
-        kastle:nfbfbee6b112647daa0e8a17cdffbe529b4 ;
+        kastle:n3ff747ce6a764e3fb5a715ff8daaf29eb4 ;
     rdfs:range kastle:FamilyMember,
         kastle:Person,
-        kastle:nfbfbee6b112647daa0e8a17cdffbe529b7 .
+        kastle:n3ff747ce6a764e3fb5a715ff8daaf29eb7 .
 
 kastle:isAlive a rdf:Property ;
     rdfs:domain kastle:Person ;

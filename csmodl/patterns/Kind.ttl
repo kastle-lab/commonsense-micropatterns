@@ -32,7 +32,7 @@ kastle:hasKind a rdf:Property ;
         kastle:Kind,
         kastle:Thing ;
     rdfs:range kastle:Kind,
-        kastle:n543b99f1924f4d278e1f3d5ec8b9ce2eb1 .
+        kastle:n8ccb8c5247d949278059de68386e3d9bb1 .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Kind ;

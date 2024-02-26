@@ -135,7 +135,7 @@ kastle:hasType a rdf:Property ;
 kastle:hasWay a rdf:Property ;
     rdfs:domain kastle:Entity,
         kastle:Subject,
-        kastle:n344669116dd949f78301e63191f03869b1 ;
+        kastle:nacc74c3640734ecba6bb7c55b87bad8eb1 ;
     rdfs:range kastle:Way .
 
 kastle:isAccessible a rdf:Property ;

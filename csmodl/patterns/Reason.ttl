@@ -12,7 +12,7 @@ kastle:actionName a rdf:Property ;
 
 kastle:actionTriggeredBy a rdf:Property ;
     rdfs:domain kastle:Reason ;
-    rdfs:range kastle:nb5072b909aeb4a74858c8962397ecc9fb2 .
+    rdfs:range kastle:nd5aeaae82a9c4342aca8f65054179d63b2 .
 
 kastle:causedBy a rdf:Property ;
     rdfs:domain kastle:Reason ;
@@ -24,7 +24,7 @@ kastle:causes a rdf:Property ;
 
 kastle:causesEvent a rdf:Property ;
     rdfs:domain kastle:Reason ;
-    rdfs:range kastle:nb5072b909aeb4a74858c8962397ecc9fb3 .
+    rdfs:range kastle:nd5aeaae82a9c4342aca8f65054179d63b3 .
 
 kastle:contains a rdf:Property ;
     rdfs:domain kastle:Reason ;

@@ -110,7 +110,7 @@ kastle:locName a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Business,
-        kastle:n0ee93d31be7442dfb02073ab5b43bf25b1 ;
+        kastle:neafbe5a26e96466ea2dcfbdb685cebb0b1 ;
     rdfs:range kastle:string .
 
 kastle:offers a rdf:Property ;
@@ -142,7 +142,7 @@ kastle:owns a rdf:Property ;
 
 kastle:price a rdf:Property ;
     rdfs:domain kastle:Product,
-        kastle:n0ee93d31be7442dfb02073ab5b43bf25b6 ;
+        kastle:neafbe5a26e96466ea2dcfbdb685cebb0b6 ;
     rdfs:range kastle:float .
 
 kastle:prodName a rdf:Property ;

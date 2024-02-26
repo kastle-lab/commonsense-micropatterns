@@ -50,7 +50,7 @@ kastle:hasFloor a rdf:Property ;
 
 kastle:hasFurniture a rdf:Property ;
     rdfs:domain kastle:Room,
-        kastle:n2714b0ed74ab43e1bc1e45f59a12f3f2b6 ;
+        kastle:n55a82965f3074965bbd5184ea5b3bedab6 ;
     rdfs:range kastle:Furniture .
 
 kastle:hasHome a rdf:Property ;
@@ -94,7 +94,7 @@ kastle:hasRoom a rdf:Property ;
         kastle:home ;
     rdfs:range kastle:Resource,
         kastle:Room,
-        kastle:n2714b0ed74ab43e1bc1e45f59a12f3f2b1 .
+        kastle:n55a82965f3074965bbd5184ea5b3bedab1 .
 
 kastle:hasRooms a rdf:Property ;
     rdfs:domain kastle:Home ;

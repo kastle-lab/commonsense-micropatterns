@@ -89,7 +89,7 @@ kastle:hasSpecificDate a rdf:Property ;
 
 kastle:hasText a rdf:Property ;
     rdfs:domain kastle:QuestionEntity,
-        kastle:n7367ba24aac444cc823facc4afcb64e0b1 ;
+        kastle:nadc04ac68a5942ca9bc344fea8360c25b1 ;
     rdfs:range kastle:Literal,
         kastle:string .
 

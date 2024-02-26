@@ -47,7 +47,7 @@ kastle:hasFace a rdf:Property ;
 kastle:hasFacialFeature a rdf:Property ;
     rdfs:domain kastle:Face ;
     rdfs:range kastle:FacialFeature,
-        kastle:n9ad26cb6c1af4b8b8b71dd872516604fb1 .
+        kastle:n37a5cf2441294a88978f1a2ab0295d9db1 .
 
 kastle:hasFeature a rdf:Property ;
     rdfs:domain kastle:Face ;

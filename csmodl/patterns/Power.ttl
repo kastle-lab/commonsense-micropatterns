@@ -4,7 +4,7 @@
 
 kastle:CalculatesPower a rdf:Property ;
     rdfs:domain kastle:Entity ;
-    rdfs:range kastle:n2d132167aea74ff5a4847cee0667c28cb1 .
+    rdfs:range kastle:n77156feb7fa042f6a3923c41518de121b1 .
 
 kastle:PowerMeasure a rdf:Property ;
     rdfs:domain kastle:Power ;

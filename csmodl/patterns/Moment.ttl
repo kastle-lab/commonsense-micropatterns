@@ -144,7 +144,7 @@ kastle:startDate a rdf:Property ;
     rdfs:range kastle:Instant .
 
 kastle:startTime a rdf:Property ;
-    rdfs:domain kastle:ncca62f5d9b2b4eae9c0471f108638a52b1 ;
+    rdfs:domain kastle:n2e4769081ef045788ab0e9942881a92ab1 ;
     rdfs:range kastle:dateTime .
 
 kastle:duration a rdf:Property ;

@@ -71,7 +71,7 @@ kastle:hasTime a rdf:Property ;
 
 kastle:isEndOf a rdf:Property ;
     rdfs:domain kastle:End,
-        kastle:nf4c469668d52493ab3c0cf570642a750b1 ;
+        kastle:n43cb9e8f09ba4c909a72499360987f4cb1 ;
     rdfs:range kastle:End,
         kastle:Resource,
         kastle:Thing .
