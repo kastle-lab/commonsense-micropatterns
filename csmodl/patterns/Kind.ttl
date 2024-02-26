@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -32,7 +32,7 @@ kastle:hasKind a rdf:Property ;
         kastle:Kind,
         kastle:Thing ;
     rdfs:range kastle:Kind,
-        kastle:n8ccb8c5247d949278059de68386e3d9bb1 .
+        kastle:n909de2ed53e2440da42cf9176cb2410ab1 .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Kind ;

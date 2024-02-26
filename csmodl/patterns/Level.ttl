@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -64,7 +64,7 @@ kastle:levelDescription a rdf:Property ;
     rdfs:range kastle:String .
 
 kastle:levelIndicator a rdf:Property ;
-    rdfs:domain kastle:ncc61e2a62c7c4ee280ee91e6728bea35b2 ;
+    rdfs:domain kastle:ndfaa2ca12fa64332ba1d2335db309c50b2 ;
     rdfs:range kastle:string .
 
 kastle:levelName a rdf:Property ;
@@ -78,7 +78,7 @@ kastle:levelNumber a rdf:Property ;
         kastle:integer .
 
 kastle:levelOf a rdf:Property ;
-    rdfs:domain kastle:ncc61e2a62c7c4ee280ee91e6728bea35b1 ;
+    rdfs:domain kastle:ndfaa2ca12fa64332ba1d2335db309c50b1 ;
     rdfs:range kastle:Level .
 
 kastle:levelValue a rdf:Property ;

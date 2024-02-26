@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -66,7 +66,7 @@ kastle:hasChild a rdf:Property ;
     rdfs:domain kastle:Family,
         kastle:Parent,
         kastle:Person,
-        kastle:n3ff747ce6a764e3fb5a715ff8daaf29eb1 ;
+        kastle:nab3a1d9902ae464d86ea9e97631f8a31b1 ;
     rdfs:range kastle:Child,
         kastle:Person .
 
@@ -140,10 +140,10 @@ kastle:hasSon a rdf:Property ;
 kastle:hasSpouse a rdf:Property ;
     rdfs:domain kastle:FamilyMember,
         kastle:Person,
-        kastle:n3ff747ce6a764e3fb5a715ff8daaf29eb4 ;
+        kastle:nab3a1d9902ae464d86ea9e97631f8a31b4 ;
     rdfs:range kastle:FamilyMember,
         kastle:Person,
-        kastle:n3ff747ce6a764e3fb5a715ff8daaf29eb7 .
+        kastle:nab3a1d9902ae464d86ea9e97631f8a31b7 .
 
 kastle:isAlive a rdf:Property ;
     rdfs:domain kastle:Person ;

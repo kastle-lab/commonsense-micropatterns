@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -110,7 +110,7 @@ kastle:locName a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Business,
-        kastle:neafbe5a26e96466ea2dcfbdb685cebb0b1 ;
+        kastle:nc5de13a05dc9461ba670220d78de0facb1 ;
     rdfs:range kastle:string .
 
 kastle:offers a rdf:Property ;
@@ -142,7 +142,7 @@ kastle:owns a rdf:Property ;
 
 kastle:price a rdf:Property ;
     rdfs:domain kastle:Product,
-        kastle:neafbe5a26e96466ea2dcfbdb685cebb0b6 ;
+        kastle:nc5de13a05dc9461ba670220d78de0facb6 ;
     rdfs:range kastle:float .
 
 kastle:prodName a rdf:Property ;

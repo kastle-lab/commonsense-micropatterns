@@ -1,10 +1,10 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 kastle:CalculatesPower a rdf:Property ;
     rdfs:domain kastle:Entity ;
-    rdfs:range kastle:n77156feb7fa042f6a3923c41518de121b1 .
+    rdfs:range kastle:n94da694bc5764be78dde6b1adecb1f29b1 .
 
 kastle:PowerMeasure a rdf:Property ;
     rdfs:domain kastle:Power ;

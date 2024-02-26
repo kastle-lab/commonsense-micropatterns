@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -37,7 +37,7 @@ kastle:hasUnit a rdf:Property ;
     rdfs:range kastle:AreaUnit,
         kastle:Unit,
         kastle:UnitOfMeasurement,
-        kastle:n83cb848cdf4c497eb86f2615958dfc76b1 .
+        kastle:n2b4d19a5695440a78928b971980f60ffb1 .
 
 kastle:hasValue a rdf:Property ;
     rdfs:domain kastle:Area ;

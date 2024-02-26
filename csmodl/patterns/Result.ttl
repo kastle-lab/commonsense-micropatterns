@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -56,7 +56,7 @@ kastle:hasResult a rdf:Property ;
         kastle:Experiment,
         kastle:Process,
         kastle:Test,
-        kastle:n23904ab6e7234b409e7da2cd9319ab7bb1 ;
+        kastle:n0c2256927e8a42418cea220c798f4d7eb1 ;
     rdfs:range kastle:Result .
 
 kastle:hasScore a rdf:Property ;
@@ -96,7 +96,7 @@ kastle:hasValue a rdf:Property ;
 kastle:isResultOf a rdf:Property ;
     rdfs:domain kastle:Result ;
     rdfs:range kastle:Process,
-        kastle:n23904ab6e7234b409e7da2cd9319ab7bb4,
+        kastle:n0c2256927e8a42418cea220c798f4d7eb4,
         kastle:string .
 
 kastle:isSuccess a rdf:Property ;

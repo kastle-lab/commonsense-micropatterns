@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -12,7 +12,7 @@ kastle:actionName a rdf:Property ;
 
 kastle:actionTriggeredBy a rdf:Property ;
     rdfs:domain kastle:Reason ;
-    rdfs:range kastle:nd5aeaae82a9c4342aca8f65054179d63b2 .
+    rdfs:range kastle:n93ceec0b030d46619a11a2a196c5e43cb2 .
 
 kastle:causedBy a rdf:Property ;
     rdfs:domain kastle:Reason ;
@@ -24,7 +24,7 @@ kastle:causes a rdf:Property ;
 
 kastle:causesEvent a rdf:Property ;
     rdfs:domain kastle:Reason ;
-    rdfs:range kastle:nd5aeaae82a9c4342aca8f65054179d63b3 .
+    rdfs:range kastle:n93ceec0b030d46619a11a2a196c5e43cb3 .
 
 kastle:contains a rdf:Property ;
     rdfs:domain kastle:Reason ;

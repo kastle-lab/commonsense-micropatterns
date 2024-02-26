@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -86,8 +86,8 @@ kastle:hasTeacher a rdf:Property ;
     rdfs:range kastle:Teacher .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:n4e35d6230f204717956facbf0ced25cdb1,
-        kastle:n97b89a6db76e4e85a32097c0772979deb1 ;
+    rdfs:domain kastle:n409c75c746b84f6caf6ec37f56508bbeb1,
+        kastle:n67e3faad8fdb4e1ebeb55280a3a38667b1 ;
     rdfs:range kastle:string .
 
 kastle:offeredBy a rdf:Property ;

@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -89,7 +89,7 @@ kastle:hasSpecificDate a rdf:Property ;
 
 kastle:hasText a rdf:Property ;
     rdfs:domain kastle:QuestionEntity,
-        kastle:nadc04ac68a5942ca9bc344fea8360c25b1 ;
+        kastle:ne3b3414615394faeadf63358df78da98b1 ;
     rdfs:range kastle:Literal,
         kastle:string .
 

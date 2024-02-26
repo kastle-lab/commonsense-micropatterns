@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -63,7 +63,7 @@ kastle:hasOrigin a rdf:Property ;
 kastle:hasPartOfSpeech a rdf:Property ;
     rdfs:domain kastle:Word ;
     rdfs:range kastle:PartOfSpeech,
-        kastle:n0e9c658bf4de47078e9efaf28809bf91b1 .
+        kastle:n2bbfbb1531294c95b8adfdd89c73790fb1 .
 
 kastle:hasSpelling a rdf:Property ;
     rdfs:domain kastle:,

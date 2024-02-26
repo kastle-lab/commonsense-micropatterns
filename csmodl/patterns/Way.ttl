@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -135,7 +135,7 @@ kastle:hasType a rdf:Property ;
 kastle:hasWay a rdf:Property ;
     rdfs:domain kastle:Entity,
         kastle:Subject,
-        kastle:nacc74c3640734ecba6bb7c55b87bad8eb1 ;
+        kastle:nbb61ac689cd341a2921a1c0ab2562023b1 ;
     rdfs:range kastle:Way .
 
 kastle:isAccessible a rdf:Property ;

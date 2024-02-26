@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -144,7 +144,7 @@ kastle:startDate a rdf:Property ;
     rdfs:range kastle:Instant .
 
 kastle:startTime a rdf:Property ;
-    rdfs:domain kastle:n2e4769081ef045788ab0e9942881a92ab1 ;
+    rdfs:domain kastle:n2a26df3f24a24b6fa7a004f656cc2a5bb1 ;
     rdfs:range kastle:dateTime .
 
 kastle:duration a rdf:Property ;

@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -49,7 +49,7 @@ kastle:hasDoor a rdf:Property ;
 kastle:hasGarage a rdf:Property ;
     rdfs:domain kastle:House ;
     rdfs:range kastle:boolean,
-        <https://kastle.cs.wright.edu/csmodlres:TrueFalse> .
+        <https://kastle.cs.wright.edu/csmodl#res:TrueFalse> .
 
 kastle:hasGarden a rdf:Property ;
     rdfs:domain kastle:House ;

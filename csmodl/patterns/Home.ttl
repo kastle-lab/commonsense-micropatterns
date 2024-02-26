@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -50,7 +50,7 @@ kastle:hasFloor a rdf:Property ;
 
 kastle:hasFurniture a rdf:Property ;
     rdfs:domain kastle:Room,
-        kastle:n55a82965f3074965bbd5184ea5b3bedab6 ;
+        kastle:n581c47806747464f9a4aa0b3c3d7b864b6 ;
     rdfs:range kastle:Furniture .
 
 kastle:hasHome a rdf:Property ;
@@ -94,7 +94,7 @@ kastle:hasRoom a rdf:Property ;
         kastle:home ;
     rdfs:range kastle:Resource,
         kastle:Room,
-        kastle:n55a82965f3074965bbd5184ea5b3bedab1 .
+        kastle:n581c47806747464f9a4aa0b3c3d7b864b1 .
 
 kastle:hasRooms a rdf:Property ;
     rdfs:domain kastle:Home ;

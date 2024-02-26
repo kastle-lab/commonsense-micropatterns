@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -43,8 +43,8 @@ kastle:hasAge a rdf:Property ;
 
 kastle:hasArea a rdf:Property ;
     rdfs:domain kastle:Country,
-        kastle:n66fab236b9224144824864b25912e0c5b4,
-        kastle:nb51cb93eb1c84013a6c0feda4596bd6bb5 ;
+        kastle:n7b2421ad4d2f47e69970cb7997efc667b5,
+        kastle:n85d0c5b919f047208a35664aee867746b4 ;
     rdfs:range kastle:Area,
         kastle:integer,
         kastle:positiveInteger .
@@ -78,7 +78,7 @@ kastle:hasMountain a rdf:Property ;
     rdfs:range kastle:Mountain .
 
 kastle:hasName a rdf:Property ;
-    rdfs:domain kastle:n574522d131134b4da6c23140d3df86b9b1 ;
+    rdfs:domain kastle:nd43dce6d3d4548cf895ea35716275ff8b1 ;
     rdfs:range kastle:string .
 
 kastle:hasPart a rdf:Property ;
@@ -89,8 +89,8 @@ kastle:hasPart a rdf:Property ;
 kastle:hasPopulation a rdf:Property ;
     rdfs:domain kastle:City,
         kastle:Country,
-        kastle:n66fab236b9224144824864b25912e0c5b1,
-        kastle:nb51cb93eb1c84013a6c0feda4596bd6bb1 ;
+        kastle:n7b2421ad4d2f47e69970cb7997efc667b1,
+        kastle:n85d0c5b919f047208a35664aee867746b1 ;
     rdfs:range kastle:Population,
         kastle:integer,
         kastle:population,
@@ -155,8 +155,8 @@ kastle:memberOf a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:,
-        kastle:n8b0e52e5ffe2470a90c4633f304d9abcb1,
-        kastle:naf4fd74ffb9e4453a3154ecbe239cf30b1 ;
+        kastle:n242e22b68660446b813e5b8d52e9f65ab1,
+        kastle:nadcb42a2ca7d4b8cacf62640ea4f3be9b1 ;
     rdfs:range kastle:Literal,
         kastle:string .
 
@@ -177,7 +177,7 @@ kastle:populationOf a rdf:Property ;
     rdfs:range kastle:Population .
 
 kastle:size a rdf:Property ;
-    rdfs:domain kastle:n8b0e52e5ffe2470a90c4633f304d9abcb6 ;
+    rdfs:domain kastle:n242e22b68660446b813e5b8d52e9f65ab6 ;
     rdfs:range kastle:decimal .
 
 kastle:spokenIn a rdf:Property ;

@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -71,7 +71,7 @@ kastle:hasTime a rdf:Property ;
 
 kastle:isEndOf a rdf:Property ;
     rdfs:domain kastle:End,
-        kastle:n43cb9e8f09ba4c909a72499360987f4cb1 ;
+        kastle:n8c207e37cb034012bfea5353336a6b8cb1 ;
     rdfs:range kastle:End,
         kastle:Resource,
         kastle:Thing .

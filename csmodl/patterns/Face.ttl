@@ -1,4 +1,4 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -47,7 +47,7 @@ kastle:hasFace a rdf:Property ;
 kastle:hasFacialFeature a rdf:Property ;
     rdfs:domain kastle:Face ;
     rdfs:range kastle:FacialFeature,
-        kastle:n37a5cf2441294a88978f1a2ab0295d9db1 .
+        kastle:n786e995b379243dc815fa8b78e6aa1e3b1 .
 
 kastle:hasFeature a rdf:Property ;
     rdfs:domain kastle:Face ;

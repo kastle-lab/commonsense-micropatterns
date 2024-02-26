@@ -1,9 +1,9 @@
-@prefix kastle: <https://kastle.cs.wright.edu/csmodl> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 kastle:Name a rdf:Property ;
-    rdfs:domain kastle:n66e01c2b0dc8455a8cca217bc4460a49b1 ;
+    rdfs:domain kastle:n72901d9bca434db8949a2f45119b9d10b1 ;
     rdfs:range kastle:string .
 
 kastle:age a rdf:Property ;
