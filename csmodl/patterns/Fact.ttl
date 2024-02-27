@@ -1,21 +1,53 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Anyuri a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Fact a rdfs:Class .
+
+kastle:FactCategory a rdfs:Class .
+
+kastle:FactCheck a rdfs:Class .
+
+kastle:FactDescription a rdfs:Class .
+
+kastle:FactSource a rdfs:Class .
+
+kastle:FactTopic a rdfs:Class .
+
+kastle:FactType a rdfs:Class .
+
+kastle:Reporter a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Source a rdfs:Class .
+
+kastle:Subject a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:Truthvalue a rdfs:Class .
+
+kastle:Verification a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Fact> a owl:Ontology ;
     opla-core:hasPatternName "Fact Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Fact-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:assertedBy a rdf:Property ;
     rdfs:domain kastle:Fact ;

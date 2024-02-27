@@ -1,6 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:Fact a rdfs:Class .
-ex:fact1 a ex:Fact ;
-    ex:hasValue "Roses are red"^^xsd:string .
-ex:fact2 a ex:Fact ;
-    ex:hasValue "Sky is blue"^^xsd:string .

@@ -1,4 +1,0 @@
-@prefix : <http://example.org#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-:moment1 a :Moment ;
-    :atTime "2022-07-12T12:00:00"^^xsd:dateTime .

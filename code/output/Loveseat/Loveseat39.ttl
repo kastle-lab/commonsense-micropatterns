@@ -1,4 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix furniture: <http://example.com/furniture#> .
-furniture:Loveseat a furniture:Furniture ;
-    furniture:type "Loveseat"^^xsd:string .

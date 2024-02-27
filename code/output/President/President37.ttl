@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:BarackObama a ex:President ;
-    ex:provides ex:Leadership ;
-    ex:provides ex:NationalPolicy ;
-     ex:provides ex:Security .

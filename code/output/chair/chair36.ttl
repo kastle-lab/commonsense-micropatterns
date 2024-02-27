@@ -1,6 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:Chair a owl:Class ;
-    rdfs:label "Chair" ;
-    rdfs:subClassOf ex:Furniture ;
-    owl:disjointWith ex:Table ;
-    rdfs:comment "A piece of furniture with a raised surface supported by legs, for sitting on." .

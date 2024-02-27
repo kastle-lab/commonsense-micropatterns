@@ -1,3 +1,0 @@
-@prefix : <http://example.org/> .
-:Hand a owl:Class ;
-      rdfs:subClassOf :BodyPart .

@@ -1,21 +1,59 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Anyuri a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Duration a rdfs:Class .
+
+kastle:Event a rdfs:Class .
+
+kastle:Hasevent a rdfs:Class .
+
+kastle:Instant a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Moment a rdfs:Class .
+
+kastle:MomentProperty a rdfs:Class .
+
+kastle:N85f78ebca3cf47fab1f7804296b1167bb1 a rdfs:Class .
+
+kastle:Period a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:Time a rdfs:Class .
+
+kastle:TimeInstant a rdfs:Class .
+
+kastle:TimePoint a rdfs:Class .
+
+kastle:TimePosition a rdfs:Class .
+
+kastle:Timestamp a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Moment> a owl:Ontology ;
     opla-core:hasPatternName "Moment Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Moment-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:date a rdf:Property ;
     rdfs:domain kastle:MomentProperty ;
@@ -170,7 +208,7 @@ kastle:startDate a rdf:Property ;
     rdfs:range kastle:Instant .
 
 kastle:startTime a rdf:Property ;
-    rdfs:domain kastle:Nebba3ce86cbc4e06b16aa6e8ee16576eb1 ;
+    rdfs:domain kastle:N85f78ebca3cf47fab1f7804296b1167bb1 ;
     rdfs:range kastle:Datetime .
 
 kastle:time a rdf:Property ;

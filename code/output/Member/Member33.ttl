@@ -1,2 +1,0 @@
-@prefix : <http://www.example.org/> .
-:John a :Member .

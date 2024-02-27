@@ -1,2 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:Day a rdf:Class .

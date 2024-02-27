@@ -1,3 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-ex:year1 a xsd:gYear .

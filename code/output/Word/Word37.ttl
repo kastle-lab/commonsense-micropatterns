@@ -1,6 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix o: <http://example.com/ontology#> .
-o:Word a rdfs:Class ;
-       rdfs:label "Word" ;
-       rdfs:comment "A unit of language that native speakers can identify" .

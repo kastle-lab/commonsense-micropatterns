@@ -1,6 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix ex: <http://example.com/> .
-ex:Air rdf:type owl:Class ;
-    owl:disjointWith ex:Solid, ex:Liquid ;
-    ex:hasState ex:GaseousState .

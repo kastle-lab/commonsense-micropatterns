@@ -1,3 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:Guy a ex:Person ;
-  ex:provides ex:Service .

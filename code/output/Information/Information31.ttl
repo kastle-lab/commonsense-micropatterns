@@ -1,2 +1,0 @@
-@prefix : <http://example.org#> .
-:information a rdf:Property .

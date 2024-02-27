@@ -1,6 +1,0 @@
-@prefix : <http://example.org/law#> .
-:Law a owl:Class .
-:provides a owl:ObjectProperty ;
-    rdfs:domain :Law ;
-    rdfs:range :Service .
-    :Service a owl:Class .

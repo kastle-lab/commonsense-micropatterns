@@ -1,6 +1,0 @@
-@prefix : <http://example.org/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-:Girl a rdfs:Class ;
-  rdfs:label "Girl"^^xsd:string ;
-  rdfs:subClassOf :Human .

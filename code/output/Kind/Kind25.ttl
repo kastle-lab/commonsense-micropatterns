@@ -1,5 +1,0 @@
-@prefix dbpedia: <http://dbpedia.org/ontology/> .
-@prefix ex: <http://example.org#> .
-ex:Cat a dbpedia:Species;
-  dbpedia:kind ex:Mammal .
-ex:Mammal a dbpedia:Kind .

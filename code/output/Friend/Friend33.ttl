@@ -1,4 +1,0 @@
-@base <http://example.org/people/> .
-@prefix rel: <http://example.org/relationships/> .
-<#Alice> rel:friend <#Bob> .
-<#Bob> rel:friend <#Alice> .

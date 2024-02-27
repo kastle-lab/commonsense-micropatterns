@@ -1,6 +1,0 @@
-@prefix : <http://example.org/back#> .
-:Entity a owl:Class .
-:Action a owl:Class ;
-    rdfs:subClassOf :Entity .
-:Back a :Action ;
-    rdfs:label "Back"@en .

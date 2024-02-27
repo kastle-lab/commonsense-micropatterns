@@ -1,8 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix furniture: <http://example.com/furniture#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-furniture:loveseat rdf:type rdfs:Class ;
-    rdfs:subClassOf furniture:sofa ;
-    rdfs:label "Loveseat"^^xsd:string ;
-    rdfs:comment "A loveseat is a type of sofa that is designed to seat two people, typically providing two individual seat cushions."^^xsd:string .

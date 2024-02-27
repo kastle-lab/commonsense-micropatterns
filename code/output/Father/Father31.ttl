@@ -1,6 +1,0 @@
-@prefix ex: <http://example.com/> .
-@prefix rel: <http://purl.org/vocab/relationship/> .
-ex:John a ex:Person ;
-  rel:fatherOf ex:Mike .
-ex:Mike a ex:Person ;
-  rel:childOf ex:John .

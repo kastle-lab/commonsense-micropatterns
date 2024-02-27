@@ -1,6 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-ex:fact1 a rdf:Statement ;
-    rdf:subject ex:Subject ;
-    rdf:predicate ex:Predicate ;
-    rdf:object ex:Object .

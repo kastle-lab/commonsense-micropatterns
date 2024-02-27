@@ -1,21 +1,65 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Activity a rdfs:Class .
+
+kastle:Alarm a rdfs:Class .
+
+kastle:Breakfast a rdfs:Class .
+
+kastle:Coffee a rdfs:Class .
+
+kastle:Day a rdfs:Class .
+
+kastle:Early a rdfs:Class .
+
+kastle:EarlyMorning a rdfs:Class .
+
+kastle:Exercise a rdfs:Class .
+
+kastle:MORNING a rdfs:Class .
+
+kastle:Meal a rdfs:Class .
+
+kastle:Morning a rdfs:Class .
+
+kastle:MorningActivity a rdfs:Class .
+
+kastle:MorningTime a rdfs:Class .
+
+kastle:Mornings a rdfs:Class .
+
+kastle:Night a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Routine a rdfs:Class .
+
+kastle:Siunarise a rdfs:Class .
+
+kastle:Sunrise a rdfs:Class .
+
+kastle:Time a rdfs:Class .
+
+kastle:WakeUp a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Morning> a owl:Ontology ;
     opla-core:hasPatternName "Morning Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Morning-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:breakfast a rdf:Property ;
     rdfs:domain kastle:Morning ;

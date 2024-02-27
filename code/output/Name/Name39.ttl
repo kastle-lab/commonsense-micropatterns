@@ -1,7 +1,0 @@
-@prefix : <http://example.org/> .
-:Person a rdfs:Class ;
-   rdfs:comment "A person or people." .
-:hasName a rdf:Property ;
-   rdfs:domain :Person ;
-   rdfs:range xsd:string ;
-   rdfs:comment "The name that a person has." .

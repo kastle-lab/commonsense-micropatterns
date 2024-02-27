@@ -1,4 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:Right a rdfs:Class ;
-    rdfs:label "Right" ;
-    rdfs:comment "Represents the concept of rights or permissions" .

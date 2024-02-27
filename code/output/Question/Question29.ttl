@@ -1,4 +1,0 @@
-Certainly, I will provide an ontological representation for a question in the Turtle/RDF format.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/> .
-ex:Question 

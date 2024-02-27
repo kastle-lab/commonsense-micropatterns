@@ -1,21 +1,67 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Activity a rdfs:Class .
+
+kastle:ChemicalElement a rdfs:Class .
+
+kastle:Double a rdfs:Class .
+
+kastle:Form a rdfs:Class .
+
+kastle:Lake a rdfs:Class .
+
+kastle:Life a rdfs:Class .
+
+kastle:Organism a rdfs:Class .
+
+kastle:PhysicalState a rdfs:Class .
+
+kastle:PollutedWater a rdfs:Class .
+
+kastle:Recipient a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Source a rdfs:Class .
+
+kastle:State a rdfs:Class .
+
+kastle:StateOfMatter a rdfs:Class .
+
+kastle:Substance a rdfs:Class .
+
+kastle:Temperature a rdfs:Class .
+
+kastle:Type a rdfs:Class .
+
+kastle:Use a rdfs:Class .
+
+kastle:Water a rdfs:Class .
+
+kastle:WaterForm a rdfs:Class .
+
+kastle:WaterProperty a rdfs:Class .
+
+kastle:WaterSource a rdfs:Class .
+
+kastle:Water_Properties a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Water> a owl:Ontology ;
     opla-core:hasPatternName "Water Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Water-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:boilingPoint a rdf:Property ;
     rdfs:domain kastle:State,

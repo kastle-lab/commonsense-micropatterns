@@ -1,7 +1,0 @@
- 
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ex: <http://example.org/stuff/1.0/> .
-ex:Case1 a ex:Case ;
-   ex:hasID "Case123" ;
-   ex:hasDateOpened "2021-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
-   ex:hasStatus "Open" .

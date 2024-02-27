@@ -1,9 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-ex:Way rdf:type owl:Class .
-ex:provide rdf:type owl:ObjectProperty ;
-    rdfs:domain ex:Way ;
-    rdfs:range ex:Thing .
-    ex:way1 rdf:type ex:Way ;
-    ex:provide ex:thing1 .

@@ -1,6 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://example.com/resource/> .
-:ServiceProvider a :Service ;
-    :providesService "Example Service"^^xsd:string ;
-    :providerName "Provider Name"^^xsd:string ;
-    :location "Provider Location"^^xsd:string .

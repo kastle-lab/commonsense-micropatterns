@@ -1,7 +1,0 @@
-
-@prefix : <http://example.org/> .
-:Person a rdfs:Class .
-:hasMoney a rdf:Property ;
-    rdfs:domain :Person ;
-    rdfs:range xsd:decimal .
-:Money a rdfs:Class .

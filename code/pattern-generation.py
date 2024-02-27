@@ -295,6 +295,10 @@ def vote_properties(verbose=False):
                     if r in rdfs_pfx:
                         r_pfx = "rdfs"
                     
+                    if(d_pfx == "kastle"):
+                        noun_graph.add( (pfs[f"{d_pfx}"][d], a, pfs["rdfs"]["Class"]) )
+                    if(r_pfx == "kastle"):
+                        noun_graph.add( (pfs[f"{r_pfx}"][r], a, pfs["rdfs"]["Class"]) )
                     noun_graph.add( (pfs["kastle"][p], RDFS.domain, pfs[f"{d_pfx}"][d]))
                     noun_graph.add( (pfs["kastle"][p], RDFS.range, pfs[f"{r_pfx}"][r]))
 
@@ -319,6 +323,8 @@ def generate_opla_annotations():
     opla_noun_namespace = "https://archive.org/services/purl/domain/modular_ontology_design_library/"
 
     for filename in os.listdir(pattern_path): # For each Noun
+        if(os.path.isdir(os.path.join(pattern_path, filename))):
+            continue
         noun, ext = filename.split(".")
         noun = noun.replace(" ", "")
         noun_ontology = f"{opla_noun_namespace}{noun}"
@@ -337,12 +343,20 @@ def generate_opla_annotations():
         
         # Add OPLA Properties
         graph.add( (noun_onto_uri, opla_pfs["opla-core"]["hasPatternName"], Literal(f"{noun} Pattern", datatype=XSD.string)) )
-        graph.add( (noun_onto_uri, opla_pfs["opla-cp"]["addressesScenario"], Literal(f"", datatype=XSD.string)) )
-        graph.add( (noun_onto_uri, opla_pfs["opla-cp"]["hasCompentencyQuestion"], Literal(f"", datatype=XSD.string)) )
-        graph.add( (noun_onto_uri, opla_pfs["opla-sd"]["hasSchemaDiagramFileName"], Literal(f"{noun}-pattern.pdf", datatype=XSD.string)) )
-        graph.add( (noun_onto_uri, opla_pfs["opla-sd"]["hasConnections"], Literal(f"", datatype=XSD.string)) )
-        graph.add( (noun_onto_uri, opla_pfs["dc"]["contributor"], Literal(f"", datatype=XSD.string)) )
-        graph.add( (noun_onto_uri, opla_pfs["dc"]["creator"], Literal(f"", datatype=XSD.string)) )
+        # graph.add( (noun_onto_uri, opla_pfs["opla-cp"]["addressesScenario"], Literal(f"", datatype=XSD.string)) )
+        # graph.add( (noun_onto_uri, opla_pfs["opla-cp"]["hasCompentencyQuestion"], Literal(f"", datatype=XSD.string)) )
+        # graph.add( (noun_onto_uri, opla_pfs["opla-sd"]["hasSchemaDiagramFileName"], Literal(f"{noun}-pattern.pdf", datatype=XSD.string)) )
+        # graph.add( (noun_onto_uri, opla_pfs["opla-sd"]["hasConnections"], Literal(f"", datatype=XSD.string)) )
+        
+        ##  Contributor/Creator Individuals added
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["contributor"], Literal(f"Dr. Cogan Shimizu", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["contributor"], Literal(f"Dr. Pascal Hitzler", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["contributor"], Literal(f"Brandon Dave", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["contributor"], Literal(f"Andrew Eells", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["creator"], Literal(f"Dr. Cogan Shimizu", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["creator"], Literal(f"Dr. Pascal Hitzler", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["creator"], Literal(f"Brandon Dave", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["creator"], Literal(f"Andrew Eells", datatype=XSD.string)) )
         
         # Overwrite original TTL file with new additions
         serialization(noun, graph)

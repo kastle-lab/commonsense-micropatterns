@@ -1,6 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.com/> .
-ex:Year a rdfs:Class.ex:hasYear a rdf:Property ;
-  rdfs:domain ex:Entity ;
-  rdfs:range ex:Year.ex:Entity a rdfs:Class.ex:e1 a ex:Entity ;
-  ex:hasYear "2022"^^xsd:gYear.

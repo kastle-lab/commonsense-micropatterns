@@ -1,5 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-<http://example.org/year/2022>     rdf:type time:Year ;
-    time:year "2022"^^xsd:integer .

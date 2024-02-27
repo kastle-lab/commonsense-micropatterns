@@ -1,6 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.com/> .
-ex:Minute a rdfs:Class ;
-    rdfs:comment "A unit of time equal to 60 seconds" ;
-    rdfs:label "Minute" ;
-    rdfs:subClassOf xsd:integer .

@@ -1,5 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-ex:Idea123 a ex:Idea ;
-    rdfs:label "Innovation in AI" ;
-    ex:hasDescription """This idea represents a revolutionary approach to developing AI systems.""" ;
-    ex:wasContributedBy ex:User456 .

@@ -1,1 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.@prefix ex: <http://example.org/>.ex:Morning a rdfs:Class.ex:hasSunrise rdfs:domain ex:Morning.ex:hasSunrise rdfs:range ex:Time.ex:hasBreakfast rdfs:domain ex:Morning.ex:hasBreakfast rdfs:range ex:Food.ex:hasMorningActivity rdfs:domain ex:Morning.ex:hasMorningActivity rdfs:range ex:Activity.

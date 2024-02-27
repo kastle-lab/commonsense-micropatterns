@@ -1,4 +1,0 @@
-Yes, it's possible to depict the Year ontologically using Turtle/RDF format.Here is an example:
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/> .
-ex:year a rdf:Property ;

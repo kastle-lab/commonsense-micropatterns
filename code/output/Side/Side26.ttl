@@ -1,7 +1,0 @@
-@prefix : <http://example.org/#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-:Side rdf:type owl:Class ;
-    rdfs:label "Side" ;
-    rdfs:comment "A class to encapsulate the concept of side in a 2D or 3D space." .

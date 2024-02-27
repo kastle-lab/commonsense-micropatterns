@@ -1,21 +1,51 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Consumer a rdfs:Class .
+
+kastle:Customer a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Duration a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:OfflineService a rdfs:Class .
+
+kastle:Price a rdfs:Class .
+
+kastle:Provider a rdfs:Class .
+
+kastle:Service a rdfs:Class .
+
+kastle:ServiceConsumer a rdfs:Class .
+
+kastle:ServiceCost a rdfs:Class .
+
+kastle:ServiceLocation a rdfs:Class .
+
+kastle:ServiceProvider a rdfs:Class .
+
+kastle:ServiceType a rdfs:Class .
+
+kastle:ServiceUser a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Service> a owl:Ontology ;
     opla-core:hasPatternName "Service Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Service-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:cost a rdf:Property ;
     rdfs:domain kastle:Service ;

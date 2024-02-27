@@ -1,4 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:Minute a rdfs:Class ;
-    rdfs:label "Minute"@en ;
-    rdfs:comment "A unit of time equal to 60 seconds"@en .

@@ -1,21 +1,59 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:AcademicInstitution a rdfs:Class .
+
+kastle:Course a rdfs:Class .
+
+kastle:Degree a rdfs:Class .
+
+kastle:Education a rdfs:Class .
+
+kastle:EducationCourse a rdfs:Class .
+
+kastle:EducationalInstitution a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:Grade a rdfs:Class .
+
+kastle:Institution a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:KnowledgeArea a rdfs:Class .
+
+kastle:N7e834ba46d21425b8569bae18c184339b1 a rdfs:Class .
+
+kastle:N82a3e901cfc3429c9a44f4858c66befcb1 a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:School a rdfs:Class .
+
+kastle:Student a rdfs:Class .
+
+kastle:Subject a rdfs:Class .
+
+kastle:Teacher a rdfs:Class .
+
+kastle:University a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Education> a owl:Ontology ;
     opla-core:hasPatternName "Education Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Education-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:age a rdf:Property ;
     rdfs:domain kastle:Student ;
@@ -101,8 +139,8 @@ kastle:hasTeacher a rdf:Property ;
     rdfs:range kastle:Teacher .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:N2df419ac98bb49ac891a5be1d26bf5edb1,
-        kastle:Nb28c758f3092461888a1ba18ff65161bb1 ;
+    rdfs:domain kastle:N7e834ba46d21425b8569bae18c184339b1,
+        kastle:N82a3e901cfc3429c9a44f4858c66befcb1 ;
     rdfs:range xsd:string .
 
 kastle:offeredBy a rdf:Property ;

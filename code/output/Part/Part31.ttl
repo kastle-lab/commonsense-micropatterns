@@ -1,3 +1,0 @@
-@prefix ex: <http://example.com#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-ex:Whole rdf:type ex:Thing.ex:Part rdf:type ex:Thing.ex:Whole ex:hasPart ex:Part.

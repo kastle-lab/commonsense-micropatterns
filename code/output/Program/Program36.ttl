@@ -1,5 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://example.org#> .
-:Program a rdfs:Class ;
-    rdfs:label "Program"^^xsd:string ;
-    rdfs:comment "A course of study or a software application"^^xsd:string .

@@ -1,21 +1,63 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:AnyEntity a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Issue a rdfs:Class .
+
+kastle:IssueDateCreated a rdfs:Class .
+
+kastle:IssueDescription a rdfs:Class .
+
+kastle:IssueIdentifier a rdfs:Class .
+
+kastle:IssueResolution a rdfs:Class .
+
+kastle:IssueSeverity a rdfs:Class .
+
+kastle:IssueStatus a rdfs:Class .
+
+kastle:IssueStatusEnum a rdfs:Class .
+
+kastle:IssueTitle a rdfs:Class .
+
+kastle:Langstring a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Priority a rdfs:Class .
+
+kastle:Something a rdfs:Class .
+
+kastle:Status a rdfs:Class .
+
+kastle:Subject a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:User a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Issue> a owl:Ontology ;
     opla-core:hasPatternName "Issue Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Issue-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:assignedTo a rdf:Property ;
     rdfs:domain kastle:Issue ;

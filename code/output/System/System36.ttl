@@ -1,5 +1,0 @@
-:system a owl:Class .
-:provides a owl:ObjectProperty ;
-    rdfs:domain :system ;
-    rdfs:range :service .
-:service a owl:Class .

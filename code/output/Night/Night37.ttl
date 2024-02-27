@@ -1,4 +1,0 @@
-@prefix : <http://example.org/> .
-:Night a :PeriodOfTime ;
-    :hasCharacteristic :Darkness ;
-    :oppositeOf :Day .

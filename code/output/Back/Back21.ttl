@@ -1,5 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:Back a owl:Class ;
-  rdfs:label "Back"@en ;
-  rdfs:comment "The rear part of the human body, extending from the neck to the lower end of the spine"@en ;
-  rdfs:subClassOf ex:BodyPart .

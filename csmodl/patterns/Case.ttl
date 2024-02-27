@@ -1,21 +1,67 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Case a rdfs:Class .
+
+kastle:CaseStatus a rdfs:Class .
+
+kastle:CaseType a rdfs:Class .
+
+kastle:CaseWorker a rdfs:Class .
+
+kastle:Client a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Description a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:EntityRole a rdfs:Class .
+
+kastle:Identifier a rdfs:Class .
+
+kastle:Investigation a rdfs:Class .
+
+kastle:Investigator a rdfs:Class .
+
+kastle:Judge a rdfs:Class .
+
+kastle:Lawyer a rdfs:Class .
+
+kastle:LegalCase a rdfs:Class .
+
+kastle:Legalcase a rdfs:Class .
+
+kastle:Party a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Status a rdfs:Class .
+
+kastle:Subject a rdfs:Class .
+
+kastle:Title a rdfs:Class .
+
+kastle:XMLLiteral a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Case> a owl:Ontology ;
     opla-core:hasPatternName "Case Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Case-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:assignedTo a rdf:Property ;
     rdfs:domain kastle:Case ;

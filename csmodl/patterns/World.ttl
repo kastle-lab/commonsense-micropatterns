@@ -1,21 +1,81 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Area a rdfs:Class .
+
+kastle:Car a rdfs:Class .
+
+kastle:City a rdfs:Class .
+
+kastle:Continent a rdfs:Class .
+
+kastle:Country a rdfs:Class .
+
+kastle:House a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Island a rdfs:Class .
+
+kastle:Landmark a rdfs:Class .
+
+kastle:Language a rdfs:Class .
+
+kastle:Mountain a rdfs:Class .
+
+kastle:N333dc2831a044fd09e76fff2769096d2b1 a rdfs:Class .
+
+kastle:N333dc2831a044fd09e76fff2769096d2b5 a rdfs:Class .
+
+kastle:N8348453f7ffd48f49028bf51f8ec9753b1 a rdfs:Class .
+
+kastle:N8348453f7ffd48f49028bf51f8ec9753b4 a rdfs:Class .
+
+kastle:Ne17d5fca63a941579e06d760c778adbeb1 a rdfs:Class .
+
+kastle:Nf1cd638452f943b286376083fc2ac462b1 a rdfs:Class .
+
+kastle:Nf5302061636c49efa8b7ea45030d64c6b1 a rdfs:Class .
+
+kastle:Nf5302061636c49efa8b7ea45030d64c6b6 a rdfs:Class .
+
+kastle:Ocean a rdfs:Class .
+
+kastle:Organization a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Place a rdfs:Class .
+
+kastle:Population a rdfs:Class .
+
+kastle:Positiveinteger a rdfs:Class .
+
+kastle:Religion a rdfs:Class .
+
+kastle:River a rdfs:Class .
+
+kastle:Sea a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:World a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/World> a owl:Ontology ;
     opla-core:hasPatternName "World Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "World-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:area a rdf:Property ;
     rdfs:domain kastle:Country ;
@@ -54,8 +114,8 @@ kastle:hasAge a rdf:Property ;
 
 kastle:hasArea a rdf:Property ;
     rdfs:domain kastle:Country,
-        kastle:N3861cf9d757c4fe39adcc044de60bea6b5,
-        kastle:Nfa937a6c665647d0b8d8aef6ccfbfa15b4 ;
+        kastle:N333dc2831a044fd09e76fff2769096d2b5,
+        kastle:N8348453f7ffd48f49028bf51f8ec9753b4 ;
     rdfs:range kastle:Area,
         kastle:Integer,
         kastle:Positiveinteger .
@@ -89,7 +149,7 @@ kastle:hasMountain a rdf:Property ;
     rdfs:range kastle:Mountain .
 
 kastle:hasName a rdf:Property ;
-    rdfs:domain kastle:N9c7f39c1ab5246438995c20da2ff787ab1 ;
+    rdfs:domain kastle:Nf1cd638452f943b286376083fc2ac462b1 ;
     rdfs:range xsd:string .
 
 kastle:hasPart a rdf:Property ;
@@ -100,8 +160,8 @@ kastle:hasPart a rdf:Property ;
 kastle:hasPopulation a rdf:Property ;
     rdfs:domain kastle:City,
         kastle:Country,
-        kastle:N3861cf9d757c4fe39adcc044de60bea6b1,
-        kastle:Nfa937a6c665647d0b8d8aef6ccfbfa15b1 ;
+        kastle:N333dc2831a044fd09e76fff2769096d2b1,
+        kastle:N8348453f7ffd48f49028bf51f8ec9753b1 ;
     rdfs:range kastle:Integer,
         kastle:Population,
         kastle:Positiveinteger .
@@ -168,8 +228,8 @@ kastle:memberOf a rdf:Property ;
     rdfs:range kastle:Organization .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:N078a360edb66443990b645389fffbb30b1,
-        kastle:N3cf9b845d7b14bf49d9bda4badcc8d55b1,
+    rdfs:domain kastle:Ne17d5fca63a941579e06d760c778adbeb1,
+        kastle:Nf5302061636c49efa8b7ea45030d64c6b1,
         kastle:World ;
     rdfs:range rdfs:Literal,
         xsd:string .
@@ -196,7 +256,7 @@ kastle:populationOf a rdf:Property ;
     rdfs:range kastle:Population .
 
 kastle:size a rdf:Property ;
-    rdfs:domain kastle:N078a360edb66443990b645389fffbb30b6 ;
+    rdfs:domain kastle:Nf5302061636c49efa8b7ea45030d64c6b6 ;
     rdfs:range xsd:decimal .
 
 kastle:spokenIn a rdf:Property ;

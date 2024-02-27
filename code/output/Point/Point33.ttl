@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org/> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-ex:Point1 a geo:Point ;
-    geo:lat "40.7128" ;
-    geo:long "-74.0060" .

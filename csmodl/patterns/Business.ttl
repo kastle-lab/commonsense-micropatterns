@@ -1,21 +1,73 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Business a rdfs:Class .
+
+kastle:BusinessPerson a rdfs:Class .
+
+kastle:BusinessSector a rdfs:Class .
+
+kastle:Client a rdfs:Class .
+
+kastle:Company a rdfs:Class .
+
+kastle:Customer a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Department a rdfs:Class .
+
+kastle:Employee a rdfs:Class .
+
+kastle:Employer a rdfs:Class .
+
+kastle:Industry a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Investor a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Manager a rdfs:Class .
+
+kastle:Market a rdfs:Class .
+
+kastle:Na116fa118982467d97308239d4701387b1 a rdfs:Class .
+
+kastle:Na116fa118982467d97308239d4701387b6 a rdfs:Class .
+
+kastle:Owner a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Place a rdfs:Class .
+
+kastle:Product a rdfs:Class .
+
+kastle:Revenue a rdfs:Class .
+
+kastle:Service a rdfs:Class .
+
+kastle:ServiceOrProduct a rdfs:Class .
+
+kastle:Supplier a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Business> a owl:Ontology ;
     opla-core:hasPatternName "Business Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Business-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:buys a rdf:Property ;
     rdfs:domain kastle:Customer,
@@ -125,7 +177,7 @@ kastle:locName a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Business,
-        kastle:Ndc68ef9b882c4b4f92d5b80052e5729bb1 ;
+        kastle:Na116fa118982467d97308239d4701387b1 ;
     rdfs:range xsd:string .
 
 kastle:offers a rdf:Property ;
@@ -156,7 +208,7 @@ kastle:owns a rdf:Property ;
     rdfs:range kastle:Business .
 
 kastle:price a rdf:Property ;
-    rdfs:domain kastle:Ndc68ef9b882c4b4f92d5b80052e5729bb6,
+    rdfs:domain kastle:Na116fa118982467d97308239d4701387b6,
         kastle:Product ;
     rdfs:range xsd:float .
 

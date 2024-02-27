@@ -1,4 +1,0 @@
-@prefix : <http://www.example.org/#> .
-:World  a :Entity ;
-  rdfs:label "World"@en ;
-  rdfs:comment "Entity that represents the whole of everything that exists including all physical matter and energy"@en .

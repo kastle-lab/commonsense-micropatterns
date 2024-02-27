@@ -1,21 +1,45 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Datetime a rdfs:Class .
+
+kastle:End a rdfs:Class .
+
+kastle:EndEvent a rdfs:Class .
+
+kastle:EndLocation a rdfs:Class .
+
+kastle:EndTime a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:Event a rdfs:Class .
+
+kastle:N39d4cd082d924effb88de8a7b3eb6b84b1 a rdfs:Class .
+
+kastle:Process a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:Time a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/End> a owl:Ontology ;
     opla-core:hasPatternName "End Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "End-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:associatedWith a rdf:Property ;
     rdfs:domain kastle:End ;
@@ -86,7 +110,7 @@ kastle:hasTime a rdf:Property ;
 
 kastle:isEndOf a rdf:Property ;
     rdfs:domain kastle:End,
-        kastle:Nc842cdef54c74c578a542d990d58ba7bb1 ;
+        kastle:N39d4cd082d924effb88de8a7b3eb6b84b1 ;
     rdfs:range kastle:End,
         kastle:Resource,
         kastle:Thing .

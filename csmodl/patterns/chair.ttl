@@ -41,6 +41,14 @@
     opla-cp:hasCompentencyQuestion ""^^xsd:string ;
     opla-sd:hasConnections ""^^xsd:string ;
     opla-sd:hasSchemaDiagramFileName "chair-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor ""^^xsd:string,
+        "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator ""^^xsd:string,
+        "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 

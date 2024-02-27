@@ -1,7 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-<#JohnDoe> a foaf:Person ;
-  foaf:name "John Doe" ;
-  foaf:knows <#JaneDoe> .
-<#JaneDoe> a foaf:Person ;
-  foaf:name "Jane Doe" ;

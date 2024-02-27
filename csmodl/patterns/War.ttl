@@ -1,21 +1,91 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Actor a rdfs:Class .
+
+kastle:Agent a rdfs:Class .
+
+kastle:Army a rdfs:Class .
+
+kastle:Battle a rdfs:Class .
+
+kastle:Battles a rdfs:Class .
+
+kastle:Belligerent a rdfs:Class .
+
+kastle:Casualties a rdfs:Class .
+
+kastle:Cause a rdfs:Class .
+
+kastle:Combatant a rdfs:Class .
+
+kastle:Conflicts a rdfs:Class .
+
+kastle:Countries a rdfs:Class .
+
+kastle:Country a rdfs:Class .
+
+kastle:DateTime a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:Event a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Langstring a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Military a rdfs:Class .
+
+kastle:Nation a rdfs:Class .
+
+kastle:Outcome a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Place a rdfs:Class .
+
+kastle:Reason a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Result a rdfs:Class .
+
+kastle:Soldier a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:TimePeriod a rdfs:Class .
+
+kastle:Treaty a rdfs:Class .
+
+kastle:War a rdfs:Class .
+
+kastle:WarPart a rdfs:Class .
+
+kastle:Weapon a rdfs:Class .
+
+kastle:Weapons a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/War> a owl:Ontology ;
     opla-core:hasPatternName "War Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "War-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:beganOn a rdf:Property ;
     rdfs:domain kastle:War ;

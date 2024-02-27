@@ -1,6 +1,0 @@
-@prefix ex: <http://example.org/#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-ex:Number a rdfs:Class .
-ex:valueOf a rdf:Property ;
-  rdfs:domain ex:Number ;
-  rdfs:range xsd:integer .

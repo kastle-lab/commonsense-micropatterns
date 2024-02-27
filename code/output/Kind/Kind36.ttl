@@ -1,6 +1,0 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <http://example.com/> .
-:Kind a rdfs:Class .
-:someIndividual a :Kind ;
-  rdfs:label "Some Individual"^^xsd:string .

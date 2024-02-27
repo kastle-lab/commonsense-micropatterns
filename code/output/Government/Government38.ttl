@@ -1,2 +1,0 @@
-@prefix ns: <http://example.org/> .
-ns:Government ns:provides ns:Service .

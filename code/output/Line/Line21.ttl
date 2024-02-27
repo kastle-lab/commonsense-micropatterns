@@ -1,2 +1,0 @@
-@prefix : <http://example.org/> .
-:point1 :hasStraightLineInBetween :point2 .

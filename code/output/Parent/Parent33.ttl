@@ -1,4 +1,0 @@
-@prefix : <http://example.org/> .
-:John a :Parent .
-:Mary a :Child .
-:John :hasChild :Mary .

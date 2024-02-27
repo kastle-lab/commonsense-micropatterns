@@ -1,2 +1,0 @@
-@prefix ex: <http://example.com/> .
-ex:Idea a rdfs:Class .

@@ -1,5 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ex: <http://example.com/> .
-ex:JohnDoe a ex:Student ;
-    ex:hasStudentId "12345"^^<http://www.w3.org/2001/XMLSchema#string> ;
-    ex:isEnrolledIn ex:Course001, ex:Course002 .

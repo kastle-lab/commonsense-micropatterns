@@ -1,21 +1,63 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Address a rdfs:Class .
+
+kastle:Appliance a rdfs:Class .
+
+kastle:Building a rdfs:Class .
+
+kastle:City a rdfs:Class .
+
+kastle:Door a rdfs:Class .
+
+kastle:Floor a rdfs:Class .
+
+kastle:Furniture a rdfs:Class .
+
+kastle:Home a rdfs:Class .
+
+kastle:HomeOwner a rdfs:Class .
+
+kastle:HomePart a rdfs:Class .
+
+kastle:House a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:N4308745a3945461dbb8d66734798ab40b1 a rdfs:Class .
+
+kastle:N4308745a3945461dbb8d66734798ab40b6 a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Resident a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Roof a rdfs:Class .
+
+kastle:Room a rdfs:Class .
+
+kastle:Window a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Home> a owl:Ontology ;
     opla-core:hasPatternName "Home Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Home-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:address a rdf:Property ;
     rdfs:domain kastle:Home ;
@@ -64,7 +106,7 @@ kastle:hasFloor a rdf:Property ;
     rdfs:range kastle:Floor .
 
 kastle:hasFurniture a rdf:Property ;
-    rdfs:domain kastle:N9f635a13678342e188972d72f86d6d73b6,
+    rdfs:domain kastle:N4308745a3945461dbb8d66734798ab40b6,
         kastle:Room ;
     rdfs:range kastle:Furniture .
 
@@ -105,7 +147,7 @@ kastle:hasRoom a rdf:Property ;
     rdfs:domain kastle:Building,
         kastle:Home,
         kastle:House ;
-    rdfs:range kastle:N9f635a13678342e188972d72f86d6d73b1,
+    rdfs:range kastle:N4308745a3945461dbb8d66734798ab40b1,
         kastle:Resource,
         kastle:Room .
 

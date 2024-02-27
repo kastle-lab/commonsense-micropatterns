@@ -1,7 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/> .
-ex:Power rdf:type rdf:Class .
-ex:provide rdf:type rdf:Property ;
-  rdf:domain ex:Entity ;
-  rdf:range ex:Power .

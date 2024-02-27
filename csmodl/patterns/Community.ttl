@@ -1,21 +1,65 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Activity a rdfs:Class .
+
+kastle:Comment a rdfs:Class .
+
+kastle:Community a rdfs:Class .
+
+kastle:CommunityMember a rdfs:Class .
+
+kastle:CommunityRole a rdfs:Class .
+
+kastle:Community_Service a rdfs:Class .
+
+kastle:Cultural_Identity a rdfs:Class .
+
+kastle:Culture a rdfs:Class .
+
+kastle:Event a rdfs:Class .
+
+kastle:GeographicalLocation a rdfs:Class .
+
+kastle:Institution a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Interest a rdfs:Class .
+
+kastle:Leader a rdfs:Class .
+
+kastle:LocatedIn a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Member a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Post a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Role a rdfs:Class .
+
+kastle:Volunteer a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Community> a owl:Ontology ;
     opla-core:hasPatternName "Community Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Community-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:activity a rdf:Property ;
     rdfs:domain kastle:Community ;

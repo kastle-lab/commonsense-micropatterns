@@ -1,4 +1,0 @@
-@prefix ex: <http://example.org/> .
-ex:Mary a ex:Mother ;
-    ex:hasChild ex:Jill .
-ex:Jill a ex:Human.

@@ -1,6 +1,0 @@
- This is a very straightforward and basic pattern that might vary based on the actual requirements or complexity of the ontology.
-@prefix : <http://example.org/ontology#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-:Issue rdf:type rdfs:Class .
-:Issue rdfs:comment "A matter or problem that needs to be solved, resolved or dealt with" .

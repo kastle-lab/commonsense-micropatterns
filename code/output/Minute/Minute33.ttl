@@ -1,4 +1,0 @@
-@prefix : <http://example.org/> .
-:Minute a rdfs:Class .
-:aMinute a :Minute .
-:aMinute :hasValue "60"^^xsd:int .

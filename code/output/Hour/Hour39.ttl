@@ -1,8 +1,0 @@
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/> .
-ex:Hour rdf:type rdfs:Class ;
-    rdfs:comment "A class to represent an hour of the day"^^xsd:string ;
-    rdfs:label "Hour"^^xsd:string .
-ex:specificHour rdf:type ex:Hour ;
-    rdfs:comment "An instance of the Hour class representing a specific hour"^^xsd:string ;
-    ex:value "12"^^xsd:int .

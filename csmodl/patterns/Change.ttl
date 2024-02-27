@@ -1,21 +1,53 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Agent a rdfs:Class .
+
+kastle:AgentCausingChange a rdfs:Class .
+
+kastle:CausalEvent a rdfs:Class .
+
+kastle:Cause a rdfs:Class .
+
+kastle:Change a rdfs:Class .
+
+kastle:ChangeAgent a rdfs:Class .
+
+kastle:ChangeType a rdfs:Class .
+
+kastle:DateTime a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:Impact a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:State a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:Transition a rdfs:Class .
+
+kastle:TypeOfChange a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Change> a owl:Ontology ;
     opla-core:hasPatternName "Change Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Change-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:affectsEntity a rdf:Property ;
     rdfs:domain kastle:Change ;

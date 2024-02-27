@@ -1,21 +1,85 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+kastle:Anyuri a rdfs:Class .
+
+kastle:Author a rdfs:Class .
+
+kastle:BusinessInformation a rdfs:Class .
+
+kastle:Class a rdfs:Class .
+
+kastle:Communication a rdfs:Class .
+
+kastle:Data a rdfs:Class .
+
+kastle:DataType a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:DigitalInformation a rdfs:Class .
+
+kastle:Document a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:Fact a rdfs:Class .
+
+kastle:Format a rdfs:Class .
+
+kastle:Info a rdfs:Class .
+
+kastle:Information a rdfs:Class .
+
+kastle:InformationProcessing a rdfs:Class .
+
+kastle:InformationRepresentation a rdfs:Class .
+
+kastle:InformationSecurity a rdfs:Class .
+
+kastle:Knowledge a rdfs:Class .
+
+kastle:Media a rdfs:Class .
+
+kastle:Medium a rdfs:Class .
+
+kastle:Metadata a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:PersonalInformation a rdfs:Class .
+
+kastle:Professor a rdfs:Class .
+
+kastle:Reference a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Source a rdfs:Class .
+
+kastle:Student a rdfs:Class .
+
+kastle:Subject a rdfs:Class .
+
+kastle:TextInfo a rdfs:Class .
+
+kastle:Topic a rdfs:Class .
+
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Information> a owl:Ontology ;
     opla-core:hasPatternName "Information Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "Information-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string ;
-    dc:creator ""^^xsd:string .
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
 
 kastle:address a rdf:Property ;
     rdfs:domain kastle:PersonalInformation ;
