@@ -1,14 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:ChangeIntensity a rdf:Property ;
-    rdfs:domain kastle:Change ;
-    rdfs:range kastle:int .
-
-kastle:OccurrenceTime a rdf:Property ;
-    rdfs:domain kastle:Change ;
-    rdfs:range kastle:dateTime .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Change> a owl:Ontology ;
+    opla-core:hasPatternName "Change Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Change-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:affectsEntity a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -28,6 +35,10 @@ kastle:causes a rdf:Property ;
 kastle:changeCausedBy a rdf:Property ;
     rdfs:domain kastle:Change ;
     rdfs:range kastle:Thing .
+
+kastle:changeIntensity a rdf:Property ;
+    rdfs:domain kastle:Change ;
+    rdfs:range xsd:int .
 
 kastle:changeOccursIn a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -59,7 +70,7 @@ kastle:hasChangeAgent a rdf:Property ;
 
 kastle:hasChangeDate a rdf:Property ;
     rdfs:domain kastle:Change ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasChangeEnd a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -92,11 +103,11 @@ kastle:hasEndState a rdf:Property ;
 kastle:hasEndTime a rdf:Property ;
     rdfs:domain kastle:Change ;
     rdfs:range kastle:DateTime,
-        kastle:dateTime .
+        kastle:Datetime .
 
 kastle:hasFinalValue a rdf:Property ;
     rdfs:domain kastle:Change ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasImpact a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -104,7 +115,7 @@ kastle:hasImpact a rdf:Property ;
 
 kastle:hasInitialValue a rdf:Property ;
     rdfs:domain kastle:Change ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasInitiator a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -112,15 +123,15 @@ kastle:hasInitiator a rdf:Property ;
 
 kastle:hasLocation a rdf:Property ;
     rdfs:domain kastle:Change ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasNewState a rdf:Property ;
     rdfs:domain kastle:Transition ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasOldState a rdf:Property ;
     rdfs:domain kastle:Transition ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasResult a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -137,7 +148,7 @@ kastle:hasStartState a rdf:Property ;
 kastle:hasStartTime a rdf:Property ;
     rdfs:domain kastle:Change ;
     rdfs:range kastle:DateTime,
-        kastle:dateTime .
+        kastle:Datetime .
 
 kastle:hasTarget a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -145,7 +156,7 @@ kastle:hasTarget a rdf:Property ;
 
 kastle:hasTime a rdf:Property ;
     rdfs:domain kastle:Change ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:hasTypeOfChange a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -167,10 +178,14 @@ kastle:leadsTo a rdf:Property ;
     rdfs:domain kastle:Change ;
     rdfs:range kastle:Change .
 
+kastle:occurrenceTime a rdf:Property ;
+    rdfs:domain kastle:Change ;
+    rdfs:range kastle:Datetime .
+
 kastle:occursAt a rdf:Property ;
     rdfs:domain kastle:Change ;
-    rdfs:range kastle:Resource,
-        kastle:dateTime .
+    rdfs:range kastle:Datetime,
+        kastle:Resource .
 
 kastle:resultsIn a rdf:Property ;
     rdfs:domain kastle:Change ;
@@ -178,5 +193,5 @@ kastle:resultsIn a rdf:Property ;
 
 kastle:type a rdf:Property ;
     rdfs:domain kastle:Change ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 

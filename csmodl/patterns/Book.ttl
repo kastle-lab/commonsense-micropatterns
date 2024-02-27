@@ -1,116 +1,121 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:ISBN a rdf:Property ;
-    rdfs:domain kastle:Book ;
-    rdfs:range kastle:string .
-
-kastle:PublicationDate a rdf:Property ;
-    rdfs:domain kastle:Book ;
-    rdfs:range kastle:date .
-
-kastle:Title a rdf:Property ;
-    rdfs:domain kastle:Book ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Book> a owl:Ontology ;
+    opla-core:hasPatternName "Book Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Book-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:author a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Author,
-        kastle:Literal,
-        kastle:Person,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Author,
+        kastle:Person .
 
 kastle:birthDate a rdf:Property ;
     rdfs:domain kastle:Author ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:company a rdf:Property ;
     rdfs:domain kastle:Publisher ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:deathDate a rdf:Property ;
     rdfs:domain kastle:Author ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:genre a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Genre,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Genre .
 
 kastle:hasAddress a rdf:Property ;
     rdfs:domain kastle:Publisher ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasAuthor a rdf:Property ;
-    rdfs:domain kastle:Book,
-        kastle:book ;
-    rdfs:range kastle:Author,
-        kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:Book ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Author .
 
 kastle:hasGenre a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Genre,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Genre .
 
 kastle:hasISBN a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Author ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPageCount a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasPublicationDate a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasPublisher a rdf:Property ;
     rdfs:domain kastle:Book ;
     rdfs:range kastle:Publisher .
 
 kastle:hasTitle a rdf:Property ;
-    rdfs:domain kastle:Book,
-        kastle:book ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:Book ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:iSBN a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range xsd:string .
 
 kastle:isbn a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:language a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Author ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:numberOfPages a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:pages a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:publicationDate a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Literal,
-        kastle:date .
+    rdfs:range rdfs:Literal,
+        xsd:date .
 
 kastle:publicationYear a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:publishBy a rdf:Property ;
     rdfs:domain kastle:Book ;
@@ -118,34 +123,26 @@ kastle:publishBy a rdf:Property ;
 
 kastle:publishedDate a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:publishedIn a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:publishedYear a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Literal,
-        kastle:gYear,
-        kastle:integer .
+    rdfs:range rdfs:Literal,
+        kastle:Gyear,
+        kastle:Integer .
 
 kastle:publisher a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Literal,
-        kastle:Organization,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Organization .
 
 kastle:title a rdf:Property ;
     rdfs:domain kastle:Book ;
-    rdfs:range kastle:Literal,
-        kastle:string .
-
-kastle:Publisher a rdf:Property ;
-    rdfs:domain kastle:Book ;
-    rdfs:range kastle:string .
-
-kastle:Author a rdf:Property ;
-    rdfs:domain kastle:Book ;
-    rdfs:range kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 

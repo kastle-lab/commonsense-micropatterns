@@ -1,4 +1,10 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/#Chair> a rdfs:Class .
 
@@ -28,4 +34,13 @@
 
 <http://example.org/stuff/1.0/manufacturer> rdfs:range <http://example.org/stuff/1.0/Chair>,
         <http://example.org/stuff/1.0/Company> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/chair> a owl:Ontology ;
+    opla-core:hasPatternName "chair Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "chair-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 

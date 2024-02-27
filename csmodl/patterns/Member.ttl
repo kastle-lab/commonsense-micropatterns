@@ -1,26 +1,25 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:GroupID a rdf:Property ;
-    rdfs:domain kastle:Group ;
-    rdfs:range kastle:string .
-
-kastle:GroupName a rdf:Property ;
-    rdfs:domain kastle:Group ;
-    rdfs:range kastle:string .
-
-kastle:MemberID a rdf:Property ;
-    rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
-
-kastle:MemberName a rdf:Property ;
-    rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Member> a owl:Ontology ;
+    opla-core:hasPatternName "Member Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Member-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:age a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:belongsGroup a rdf:Property ;
     rdfs:domain kastle:Member ;
@@ -36,37 +35,45 @@ kastle:belongsToGroup a rdf:Property ;
 
 kastle:email a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:groupHasName a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:groupID a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range xsd:string .
+
+kastle:groupName a rdf:Property ;
+    rdfs:domain kastle:Group ;
+    rdfs:range xsd:string .
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:Literal,
-        kastle:integer .
+    rdfs:range rdfs:Literal,
+        kastle:Integer .
 
 kastle:hasBirthday a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasDateOfBirth a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasEmail a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasID a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasJoinedDate a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasMember a rdf:Property ;
     rdfs:domain kastle:Group,
@@ -76,29 +83,29 @@ kastle:hasMember a rdf:Property ;
 
 kastle:hasMemberID a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasMembershipDate a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasMembershipSince a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasMembershipType a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:id a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:isMemberOf a rdf:Property ;
     rdfs:domain kastle:Member ;
@@ -106,23 +113,24 @@ kastle:isMemberOf a rdf:Property ;
 
 kastle:joinedDate a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:joinedOn a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:livesInCity a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:memberID a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:integer .
+    rdfs:range xsd:string,
+        kastle:Integer .
 
 kastle:memberName a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:memberOf a rdf:Property ;
     rdfs:domain kastle:Member ;
@@ -131,15 +139,15 @@ kastle:memberOf a rdf:Property ;
 
 kastle:membershipType a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:MembershipType,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:MembershipType .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:prov a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:resource .
+    rdfs:range kastle:Resource .
 

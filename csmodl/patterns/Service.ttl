@@ -1,33 +1,40 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:ProviderLocation a rdf:Property ;
-    rdfs:domain kastle:ServiceProvider ;
-    rdfs:range kastle:string .
-
-kastle:ProviderName a rdf:Property ;
-    rdfs:domain kastle:ServiceProvider ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Service> a owl:Ontology ;
+    opla-core:hasPatternName "Service Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Service-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:cost a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:description a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:endTime a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:hasConsumer a rdf:Property ;
     rdfs:domain kastle:Service ;
     rdfs:range kastle:Consumer .
 
 kastle:hasCost a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Service ;
     rdfs:range kastle:ServiceCost .
 
 kastle:hasCustomer a rdf:Property ;
@@ -36,20 +43,20 @@ kastle:hasCustomer a rdf:Property ;
 
 kastle:hasDuration a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:duration .
+    rdfs:range kastle:Duration .
 
 kastle:hasLocation a rdf:Property ;
     rdfs:domain kastle:OfflineService ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPrice a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:Price,
-        kastle:decimal .
+    rdfs:range xsd:decimal,
+        kastle:Price .
 
 kastle:hasProvider a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -57,7 +64,7 @@ kastle:hasProvider a rdf:Property ;
 
 kastle:hasRate a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasServiceConsumer a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -65,7 +72,7 @@ kastle:hasServiceConsumer a rdf:Property ;
 
 kastle:hasServiceDuration a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:duration .
+    rdfs:range kastle:Duration .
 
 kastle:hasServiceProvider a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -77,24 +84,24 @@ kastle:hasType a rdf:Property ;
 
 kastle:isPaid a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isProvidedBy a rdf:Property ;
     rdfs:domain kastle:Service ;
     rdfs:range kastle:ServiceProvider .
 
 kastle:locatedAt a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Service ;
     rdfs:range kastle:ServiceLocation .
 
 kastle:location a rdf:Property ;
     rdfs:domain kastle:ServiceProvider ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:offeredBy a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -102,7 +109,7 @@ kastle:offeredBy a rdf:Property ;
 
 kastle:price a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:providedBy a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -110,18 +117,21 @@ kastle:providedBy a rdf:Property ;
 
 kastle:provider a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:Provider,
-        kastle:ServiceProvider,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Provider,
+        kastle:ServiceProvider .
+
+kastle:providerLocation a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range xsd:string .
 
 kastle:providerName a rdf:Property ;
     rdfs:domain kastle:ServiceProvider ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:provides a rdf:Property ;
     rdfs:domain kastle:ServiceProvider ;
-    rdfs:range kastle:,
-        kastle:Service .
+    rdfs:range kastle:Service .
 
 kastle:providesService a rdf:Property ;
     rdfs:domain kastle:Entity,
@@ -131,7 +141,7 @@ kastle:providesService a rdf:Property ;
 
 kastle:rating a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:serviceConsumer a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -139,11 +149,11 @@ kastle:serviceConsumer a rdf:Property ;
 
 kastle:serviceCost a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:serviceName a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:serviceProvider a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -151,15 +161,15 @@ kastle:serviceProvider a rdf:Property ;
 
 kastle:serviceRating a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:serviceType a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:startTime a rdf:Property ;
     rdfs:domain kastle:Service ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:type a rdf:Property ;
     rdfs:domain kastle:Service ;
@@ -167,7 +177,7 @@ kastle:type a rdf:Property ;
 
 kastle:uses a rdf:Property ;
     rdfs:domain kastle:ServiceUser ;
-    rdfs:range kastle: .
+    rdfs:range kastle:Service .
 
 kastle:usesService a rdf:Property ;
     rdfs:domain kastle:Customer ;

@@ -1,27 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:CommunityLocation a rdf:Property ;
-    rdfs:domain kastle:Community ;
-    rdfs:range kastle:Location .
-
-kastle:CommunityName a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Community ;
-    rdfs:range kastle:string .
-
-kastle:LeaderName a rdf:Property ;
-    rdfs:domain kastle:Leader ;
-    rdfs:range kastle:string .
-
-kastle:MemberName a rdf:Property ;
-    rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
-
-kastle:VolunteerName a rdf:Property ;
-    rdfs:domain kastle:Volunteer ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Community> a owl:Ontology ;
+    opla-core:hasPatternName "Community Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Community-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:activity a rdf:Property ;
     rdfs:domain kastle:Community ;
@@ -29,7 +23,7 @@ kastle:activity a rdf:Property ;
 
 kastle:age a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:attendsEvent a rdf:Property ;
     rdfs:domain kastle:Member ;
@@ -52,8 +46,9 @@ kastle:communityLeader a rdf:Property ;
     rdfs:range kastle:Person .
 
 kastle:communityLocation a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Community ;
+    rdfs:range xsd:string,
+        kastle:Location .
 
 kastle:communityMember a rdf:Property ;
     rdfs:domain kastle:Community ;
@@ -61,15 +56,19 @@ kastle:communityMember a rdf:Property ;
 
 kastle:communityName a rdf:Property ;
     rdfs:domain kastle:Community ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:coordinator a rdf:Property ;
     rdfs:domain kastle:Community ;
     rdfs:range kastle:Resource .
 
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:Activity ;
+    rdfs:range xsd:date .
+
 kastle:eventDate a rdf:Property ;
     rdfs:domain kastle:Event ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:existsIn a rdf:Property ;
     rdfs:domain kastle:Community ;
@@ -77,11 +76,11 @@ kastle:existsIn a rdf:Property ;
 
 kastle:gender a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:goal a rdf:Property ;
     rdfs:domain kastle:Community ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasActivity a rdf:Property ;
     rdfs:domain kastle:Community ;
@@ -89,8 +88,8 @@ kastle:hasActivity a rdf:Property ;
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:hasComment a rdf:Property ;
     rdfs:domain kastle:Post ;
@@ -98,7 +97,7 @@ kastle:hasComment a rdf:Property ;
 
 kastle:hasCommonInterest a rdf:Property ;
     rdfs:domain kastle:Community ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasCommunityRole a rdf:Property ;
     rdfs:domain kastle:CommunityMember ;
@@ -118,7 +117,7 @@ kastle:hasEvent a rdf:Property ;
 
 kastle:hasGender a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasInstitution a rdf:Property ;
     rdfs:domain kastle:Community ;
@@ -129,7 +128,7 @@ kastle:hasInterest a rdf:Property ;
     rdfs:range kastle:Interest .
 
 kastle:hasLeader a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Community ;
     rdfs:range kastle:Leader .
 
 kastle:hasLocation a rdf:Property ;
@@ -137,8 +136,7 @@ kastle:hasLocation a rdf:Property ;
     rdfs:range kastle:LocatedIn .
 
 kastle:hasMember a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Community ;
+    rdfs:domain kastle:Community ;
     rdfs:range kastle:CommunityMember,
         kastle:Member,
         kastle:Person,
@@ -148,8 +146,8 @@ kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Community,
         kastle:Member,
         kastle:Person ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasPost a rdf:Property ;
     rdfs:domain kastle:Community ;
@@ -161,7 +159,7 @@ kastle:hasRole a rdf:Property ;
         kastle:Role .
 
 kastle:hasVolunteer a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Community ;
     rdfs:range kastle:Volunteer .
 
 kastle:heldIn a rdf:Property ;
@@ -169,7 +167,7 @@ kastle:heldIn a rdf:Property ;
     rdfs:range kastle:Community .
 
 kastle:holdsEvent a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Community ;
     rdfs:range kastle:Event .
 
 kastle:isLocatedIn a rdf:Property ;
@@ -182,14 +180,18 @@ kastle:joined a rdf:Property ;
 
 kastle:joinedDate a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:leader a rdf:Property ;
     rdfs:domain kastle:Community ;
     rdfs:range kastle:Member .
 
+kastle:leaderName a rdf:Property ;
+    rdfs:domain kastle:Leader ;
+    rdfs:range xsd:string .
+
 kastle:locatedAt a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Community ;
     rdfs:range kastle:Location .
 
 kastle:locatedIn a rdf:Property ;
@@ -200,24 +202,24 @@ kastle:locatedIn a rdf:Property ;
 kastle:location a rdf:Property ;
     rdfs:domain kastle:Community,
         kastle:Person ;
-    rdfs:range kastle:Location,
-        kastle:Resource,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Location,
+        kastle:Resource .
 
 kastle:member a rdf:Property ;
     rdfs:domain kastle:Community ;
-    rdfs:range kastle:Member,
+    rdfs:range xsd:string,
+        kastle:Member,
         kastle:Person,
-        kastle:Resource,
-        kastle:string .
+        kastle:Resource .
 
 kastle:memberCount a rdf:Property ;
     rdfs:domain kastle:Community ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:memberName a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:memberOf a rdf:Property ;
     rdfs:domain kastle:Member ;
@@ -226,12 +228,12 @@ kastle:memberOf a rdf:Property ;
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Community,
         kastle:Person ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:occupation a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:organizedBy a rdf:Property ;
     rdfs:domain kastle:Activity ;
@@ -247,34 +249,34 @@ kastle:participatesIn a rdf:Property ;
 
 kastle:personAge a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:personName a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:population a rdf:Property ;
     rdfs:domain kastle:Community ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:postDate a rdf:Property ;
     rdfs:domain kastle:Post ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:postTitle a rdf:Property ;
     rdfs:domain kastle:Post ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:providesService a rdf:Property ;
     rdfs:domain kastle:Community ;
     rdfs:range kastle:Community_Service .
 
+kastle:volunteerName a rdf:Property ;
+    rdfs:domain kastle:Volunteer ;
+    rdfs:range xsd:string .
+
 kastle:writtenBy a rdf:Property ;
     rdfs:domain kastle:Post ;
     rdfs:range kastle:Member .
-
-kastle:date a rdf:Property ;
-    rdfs:domain kastle:Activity ;
-    rdfs:range kastle:date .
 

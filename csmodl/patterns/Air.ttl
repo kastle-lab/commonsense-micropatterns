@@ -1,50 +1,33 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:ContainsCarbonDioxide a rdf:Property ;
-    rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
-
-kastle:ContainsOxygen a rdf:Property ;
-    rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
-
-kastle:HasHumidity a rdf:Property ;
-    rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
-
-kastle:HasPressure a rdf:Property ;
-    rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
-
-kastle:HasQualityIndex a rdf:Property ;
-    rdfs:domain kastle:Air ;
-    rdfs:range kastle:int .
-
-kastle:HasTemperature a rdf:Property ;
-    rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
-
-kastle:IsPolluted a rdf:Property ;
-    rdfs:domain kastle:Air ;
-    rdfs:range kastle:boolean .
-
-kastle:Quality a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Air> a owl:Ontology ;
+    opla-core:hasPatternName "Air Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Air-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:components a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Air ;
     rdfs:range kastle:Component .
 
 kastle:composition a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:string .
 
 kastle:consistsOf a rdf:Property ;
-    rdfs:domain kastle:component ;
-    rdfs:range kastle: .
+    rdfs:domain kastle:Component ;
+    rdfs:range kastle:Air .
 
 kastle:contains a rdf:Property ;
     rdfs:domain kastle:Air,
@@ -54,96 +37,97 @@ kastle:contains a rdf:Property ;
 
 kastle:containsCarbonDioxide a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean,
+        xsd:float .
 
 kastle:containsNitrogen a rdf:Property ;
     rdfs:domain kastle:Air,
         kastle:Composition ;
-    rdfs:range kastle:ChemicalElement,
-        kastle:boolean,
-        kastle:float .
+    rdfs:range xsd:boolean,
+        xsd:float,
+        kastle:ChemicalElement .
 
 kastle:containsOxygen a rdf:Property ;
     rdfs:domain kastle:Air,
         kastle:Composition ;
-    rdfs:range kastle:ChemicalElement,
-        kastle:boolean,
-        kastle:float .
+    rdfs:range xsd:boolean,
+        xsd:float,
+        kastle:ChemicalElement .
 
 kastle:hasAirPollution a rdf:Property ;
     rdfs:domain kastle:Air ;
     rdfs:range kastle:AirPollution .
 
 kastle:hasComponent a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Air ;
-    rdfs:range kastle:Component,
-        kastle:component .
+    rdfs:domain kastle:Air ;
+    rdfs:range kastle:Component .
 
 kastle:hasComposition a rdf:Property ;
     rdfs:domain kastle:Air ;
     rdfs:range kastle:AirComposition .
 
 kastle:hasHumidity a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Air ;
-    rdfs:range kastle:Humidity,
-        kastle:float .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:float,
+        kastle:Humidity .
 
 kastle:hasNitrogen a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasOtherGases a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasOxygen a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasPart a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Air ;
     rdfs:range kastle:Composition .
 
 kastle:hasPollutants a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPollutionLevel a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Air ;
     rdfs:range kastle:Pollution .
 
 kastle:hasPressure a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Air ;
-    rdfs:range kastle:Pressure,
-        kastle:decimal,
-        kastle:float .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:decimal,
+        xsd:float,
+        kastle:Pressure .
 
 kastle:hasQuality a rdf:Property ;
     rdfs:domain kastle:Air ;
     rdfs:range kastle:AirQuality .
 
+kastle:hasQualityIndex a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:int .
+
 kastle:hasTemperature a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Air ;
-    rdfs:range kastle:Temperature,
-        kastle:decimal,
-        kastle:float .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:decimal,
+        xsd:float,
+        kastle:Temperature .
 
 kastle:hasVolume a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:humidity a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:float .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:isComposedOf a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:Gas,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Gas .
 
 kastle:isConditioned a rdf:Property ;
     rdfs:domain kastle:Air ;
@@ -151,27 +135,32 @@ kastle:isConditioned a rdf:Property ;
 
 kastle:isInArea a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:isPolluted a rdf:Property ;
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:boolean .
 
 kastle:percentage a rdf:Property ;
     rdfs:domain kastle:Composition ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:pollutant a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:Literal .
+    rdfs:domain kastle:Air ;
+    rdfs:range rdfs:Literal .
 
 kastle:polluted a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:boolean .
 
 kastle:pollution a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:string .
 
 kastle:pressure a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:float .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:provides a rdf:Property ;
     rdfs:domain kastle:Air ;
@@ -179,21 +168,10 @@ kastle:provides a rdf:Property ;
 
 kastle:quality a rdf:Property ;
     rdfs:domain kastle:Air ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:temperature a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:float .
-
-kastle:Humidity a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:decimal .
-
-kastle:Pressure a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:decimal .
-
-kastle:Temperature a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:decimal .
+    rdfs:domain kastle:Air ;
+    rdfs:range xsd:decimal,
+        xsd:float .
 

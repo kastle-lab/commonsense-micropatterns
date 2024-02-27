@@ -1,72 +1,79 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:NumberOfRooms a rdf:Property ;
-    rdfs:domain kastle:House ;
-    rdfs:range kastle:integer .
-
-kastle:OwnedBy a rdf:Property ;
-    rdfs:domain kastle:House ;
-    rdfs:range kastle:Owner .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/House> a owl:Ontology ;
+    opla-core:hasPatternName "House Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "House-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:address a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:area a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasAddress a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:Address,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Address .
 
 kastle:hasArea a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:Area,
-        kastle:decimal,
-        kastle:float .
+    rdfs:range xsd:decimal,
+        xsd:float,
+        kastle:Area .
 
 kastle:hasBackyard a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:hasBathrooms a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasBedrooms a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasDoor a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:hasGarage a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean,
-        <https://kastle.cs.wright.edu/csmodl#res:TrueFalse> .
+    rdfs:range xsd:boolean,
+        <https://kastle.cs.wright.edu/csmodl#Res:truefalse> .
 
 kastle:hasGarden a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:hasLivingRoom a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasNumberOfRooms a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:hasOwner a rdf:Property ;
     rdfs:domain kastle:House ;
@@ -82,17 +89,17 @@ kastle:hasRoom a rdf:Property ;
 
 kastle:hasRooms a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:Literal,
-        kastle:Room,
-        kastle:integer .
+    rdfs:range rdfs:Literal,
+        kastle:Integer,
+        kastle:Room .
 
 kastle:hasWindow a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isDetached a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isLocatedIn a rdf:Property ;
     rdfs:domain kastle:House ;
@@ -100,7 +107,7 @@ kastle:isLocatedIn a rdf:Property ;
 
 kastle:isOccupied a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isOwnedBy a rdf:Property ;
     rdfs:domain kastle:House ;
@@ -108,15 +115,16 @@ kastle:isOwnedBy a rdf:Property ;
 
 kastle:numberOfRooms a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:ownedBy a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:Person .
+    rdfs:range kastle:Owner,
+        kastle:Person .
 
 kastle:owner a rdf:Property ;
     rdfs:domain kastle:House ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:owns a rdf:Property ;
     rdfs:domain kastle:Person ;
@@ -124,5 +132,5 @@ kastle:owns a rdf:Property ;
 
 kastle:roomType a rdf:Property ;
     rdfs:domain kastle:Room ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 

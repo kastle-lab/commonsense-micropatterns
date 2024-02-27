@@ -1,42 +1,49 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:BoilingPoint a rdf:Property ;
-    rdfs:domain kastle:State,
-        kastle:Water ;
-    rdfs:range kastle:decimal,
-        kastle:float .
-
-kastle:Depth a rdf:Property ;
-    rdfs:domain kastle:WaterForm ;
-    rdfs:range kastle:decimal .
-
-kastle:FreezingPoint a rdf:Property ;
-    rdfs:domain kastle:State,
-        kastle:Water ;
-    rdfs:range kastle:decimal,
-        kastle:float .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Water> a owl:Ontology ;
+    opla-core:hasPatternName "Water Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Water-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:boilingPoint a rdf:Property ;
-    rdfs:domain kastle:Water ;
-    rdfs:range kastle:float .
+    rdfs:domain kastle:State,
+        kastle:Water ;
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:containMinerals a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:containsSalt a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Water ;
+    rdfs:range xsd:boolean .
+
+kastle:depth a rdf:Property ;
+    rdfs:domain kastle:WaterForm ;
+    rdfs:range xsd:decimal .
 
 kastle:freezingPoint a rdf:Property ;
-    rdfs:domain kastle:Water ;
-    rdfs:range kastle:float .
+    rdfs:domain kastle:State,
+        kastle:Water ;
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:hardness a rdf:Property ;
     rdfs:domain kastle:Water_Properties ;
-    rdfs:range kastle:int .
+    rdfs:range xsd:int .
 
 kastle:hasForm a rdf:Property ;
     rdfs:domain kastle:Water ;
@@ -44,15 +51,15 @@ kastle:hasForm a rdf:Property ;
 
 kastle:hasPH a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:double .
+    rdfs:range kastle:Double .
 
 kastle:hasPHValue a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:hasPh a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasPhysicalState a rdf:Property ;
     rdfs:domain kastle:Water ;
@@ -60,15 +67,14 @@ kastle:hasPhysicalState a rdf:Property ;
 
 kastle:hasSalinity a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasSaltContent a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasSource a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Water ;
+    rdfs:domain kastle:Water ;
     rdfs:range kastle:Source,
         kastle:WaterSource .
 
@@ -79,14 +85,14 @@ kastle:hasState a rdf:Property ;
 
 kastle:hasTemperature a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:Literal,
-        kastle:Temperature,
-        kastle:decimal,
-        kastle:double,
-        kastle:float .
+    rdfs:range rdfs:Literal,
+        xsd:decimal,
+        xsd:float,
+        kastle:Double,
+        kastle:Temperature .
 
 kastle:hasType a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Water ;
     rdfs:range kastle:Type .
 
 kastle:hasWaterProperty a rdf:Property ;
@@ -99,7 +105,7 @@ kastle:isComposedOf a rdf:Property ;
 
 kastle:isDrinkingSource a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isEssentialFor a rdf:Property ;
     rdfs:domain kastle:Water ;
@@ -107,11 +113,11 @@ kastle:isEssentialFor a rdf:Property ;
 
 kastle:isFreshWater a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isFrozen a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isHabitatFor a rdf:Property ;
     rdfs:domain kastle:Water ;
@@ -119,28 +125,28 @@ kastle:isHabitatFor a rdf:Property ;
 
 kastle:isPolluted a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isPotable a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isSaltWater a rdf:Property ;
     rdfs:domain kastle:Water ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isSourceOf a rdf:Property ;
     rdfs:domain kastle:WaterSource ;
     rdfs:range kastle:Water .
 
 kastle:pH a rdf:Property ;
-    rdfs:domain kastle:,
+    rdfs:domain kastle:Water,
         kastle:Water_Properties ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:pollutants a rdf:Property ;
     rdfs:domain kastle:PollutedWater ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:provides a rdf:Property ;
     rdfs:domain kastle:Water ;
@@ -148,26 +154,24 @@ kastle:provides a rdf:Property ;
 
 kastle:salinity a rdf:Property ;
     rdfs:domain kastle:Water_Properties ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:source a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Water ;
     rdfs:range kastle:Resource .
 
 kastle:temperature a rdf:Property ;
-    rdfs:domain kastle:,
+    rdfs:domain kastle:Water,
         kastle:Water_Properties ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:usedIn a rdf:Property ;
     rdfs:domain kastle:Water ;
     rdfs:range kastle:Activity .
 
-kastle: a rdf:Property ;
-    rdfs:domain kastle:Substance ;
-    rdfs:range kastle:string .
-
-kastle:Water a rdf:Property ;
-    rdfs:domain kastle:Source ;
-    rdfs:range kastle:Recipient .
+kastle:water a rdf:Property ;
+    rdfs:domain kastle:Source,
+        kastle:Substance ;
+    rdfs:range xsd:string,
+        kastle:Recipient .
 

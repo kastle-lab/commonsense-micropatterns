@@ -1,14 +1,29 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Kind> a owl:Ontology ;
+    opla-core:hasPatternName "Kind Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Kind-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:description a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:example a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasCategory a rdf:Property ;
     rdfs:domain kastle:Kind ;
@@ -16,27 +31,27 @@ kastle:hasCategory a rdf:Property ;
 
 kastle:hasCharacteristic a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasExample a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasInstances a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasKind a rdf:Property ;
     rdfs:domain kastle:Entity,
         kastle:Kind,
         kastle:Thing ;
     rdfs:range kastle:Kind,
-        kastle:n909de2ed53e2440da42cf9176cb2410ab1 .
+        kastle:N912e7ea6c4434d6c9a1799e4949b323db1 .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPart a rdf:Property ;
     rdfs:domain kastle:Kind ;
@@ -44,12 +59,12 @@ kastle:hasPart a rdf:Property ;
 
 kastle:hasProperty a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:Property,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Property .
 
 kastle:hasQuality a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasSubKind a rdf:Property ;
     rdfs:domain kastle:Kind ;
@@ -61,7 +76,7 @@ kastle:hasSuperKind a rdf:Property ;
 
 kastle:hasType a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isKindOf a rdf:Property ;
     rdfs:domain kastle:Kind ;
@@ -70,7 +85,7 @@ kastle:isKindOf a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Kind ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:provide a rdf:Property ;
     rdfs:domain kastle:Kind ;

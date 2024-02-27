@@ -1,14 +1,25 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Name a rdf:Property ;
-    rdfs:domain kastle:n72901d9bca434db8949a2f45119b9d10b1 ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Mother> a owl:Ontology ;
+    opla-core:hasPatternName "Mother Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Mother-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:age a rdf:Property ;
     rdfs:domain kastle:Mother ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:daughterOf a rdf:Property ;
     rdfs:domain kastle:Person ;
@@ -24,7 +35,7 @@ kastle:givesBirthTo a rdf:Property ;
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Mother ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasChild a rdf:Property ;
     rdfs:domain kastle:Mother ;
@@ -40,11 +51,11 @@ kastle:hasMother a rdf:Property ;
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Mother ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasOccupation a rdf:Property ;
     rdfs:domain kastle:Mother ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasOffspring a rdf:Property ;
     rdfs:domain kastle:Person ;
@@ -82,19 +93,20 @@ kastle:isSonOf a rdf:Property ;
 
 kastle:isWidowed a rdf:Property ;
     rdfs:domain kastle:Mother ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:motherOf a rdf:Property ;
     rdfs:domain kastle:Person ;
     rdfs:range kastle:Person .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:Mother ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Mother,
+        kastle:N911974681cd0444abba59cf2768de5d4b1 ;
+    rdfs:range xsd:string .
 
 kastle:occupation a rdf:Property ;
     rdfs:domain kastle:Mother ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:sonOf a rdf:Property ;
     rdfs:domain kastle:Person ;

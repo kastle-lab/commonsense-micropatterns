@@ -1,32 +1,43 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:CalculatesPower a rdf:Property ;
-    rdfs:domain kastle:Entity ;
-    rdfs:range kastle:n94da694bc5764be78dde6b1adecb1f29b1 .
-
-kastle:PowerMeasure a rdf:Property ;
-    rdfs:domain kastle:Power ;
-    rdfs:range kastle:float .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Power> a owl:Ontology ;
+    opla-core:hasPatternName "Power Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Power-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:affectEnvironment a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:amount a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:amountOfPower a rdf:Property ;
     rdfs:domain kastle:PhysicalPower,
         kastle:Power ;
-    rdfs:range kastle:decimal,
-        kastle:integer .
+    rdfs:range xsd:decimal,
+        kastle:Integer .
+
+kastle:calculatesPower a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range kastle:N726c269be48640708655763bbfcc1108b1 .
 
 kastle:capacity a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:control a rdf:Property ;
     rdfs:domain kastle:Power ;
@@ -43,8 +54,8 @@ kastle:generate a rdf:Property ;
 kastle:hasMagnitude a rdf:Property ;
     rdfs:domain kastle:Power,
         kastle:PowerConcept ;
-    rdfs:range kastle:decimal,
-        kastle:float .
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:hasPower a rdf:Property ;
     rdfs:domain kastle:Device,
@@ -68,14 +79,14 @@ kastle:hasSource a rdf:Property ;
 kastle:hasUnit a rdf:Property ;
     rdfs:domain kastle:Power,
         kastle:PowerConcept ;
-    rdfs:range kastle:Literal,
-        kastle:Unit,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Unit .
 
 kastle:hasValue a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:decimal,
-        kastle:float .
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:isGeneratedBy a rdf:Property ;
     rdfs:domain kastle:Power ;
@@ -83,7 +94,7 @@ kastle:isGeneratedBy a rdf:Property ;
 
 kastle:isMeasuredIn a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:isUsedIn a rdf:Property ;
     rdfs:domain kastle:PowerConcept ;
@@ -91,17 +102,21 @@ kastle:isUsedIn a rdf:Property ;
 
 kastle:measuredIn a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:powerGeneration a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
+
+kastle:powerMeasure a rdf:Property ;
+    rdfs:domain kastle:Power ;
+    rdfs:range xsd:float .
 
 kastle:source a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:unit a rdf:Property ;
     rdfs:domain kastle:Power ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 

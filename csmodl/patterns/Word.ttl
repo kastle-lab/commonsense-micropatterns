@@ -1,26 +1,33 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Author a rdf:Property ;
-    rdfs:domain kastle:TextDocument ;
-    rdfs:range kastle:string .
-
-kastle:DocumentTitle a rdf:Property ;
-    rdfs:domain kastle:TextDocument ;
-    rdfs:range kastle:string .
-
-kastle:Length a rdf:Property ;
-    rdfs:domain kastle:Word ;
-    rdfs:range kastle:integer .
-
-kastle:WordVersion a rdf:Property ;
-    rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Word> a owl:Ontology ;
+    opla-core:hasPatternName "Word Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Word-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:appliesPageLayout a rdf:Property ;
     rdfs:domain kastle:TextDocument ;
     rdfs:range kastle:PageLayout .
+
+kastle:author a rdf:Property ;
+    rdfs:domain kastle:TextDocument ;
+    rdfs:range xsd:string .
+
+kastle:documentTitle a rdf:Property ;
+    rdfs:domain kastle:TextDocument ;
+    rdfs:range xsd:string .
 
 kastle:hasAntonym a rdf:Property ;
     rdfs:domain kastle:Word ;
@@ -28,49 +35,45 @@ kastle:hasAntonym a rdf:Property ;
 
 kastle:hasContent a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasDefinition a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Word ;
-    rdfs:range kastle:Definition,
-        kastle:string .
+    rdfs:domain kastle:Word ;
+    rdfs:range xsd:string,
+        kastle:Definition .
 
 kastle:hasLanguage a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasLemma a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasLength a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:hasMeaning a rdf:Property ;
-    rdfs:domain kastle:Word,
-        kastle:word ;
-    rdfs:range kastle:Literal,
-        kastle:Meaning,
-        kastle:string .
+    rdfs:domain kastle:Word ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Meaning .
 
 kastle:hasOrigin a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPartOfSpeech a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:PartOfSpeech,
-        kastle:n2bbfbb1531294c95b8adfdd89c73790fb1 .
+    rdfs:range kastle:Nf77b8af647714b82ba645482b28effb0b1,
+        kastle:PartOfSpeech .
 
 kastle:hasSpelling a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Word,
-        kastle:word ;
-    rdfs:range kastle:Spelling,
-        kastle:string .
+    rdfs:domain kastle:Word ;
+    rdfs:range xsd:string,
+        kastle:Spelling .
 
 kastle:hasSpellingCorrector a rdf:Property ;
     rdfs:domain kastle:Word ;
@@ -98,51 +101,52 @@ kastle:isInLanguage a rdf:Property ;
 
 kastle:isPartOfSpeech a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:PartOfSpeech,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:PartOfSpeech .
 
 kastle:isSynonymOf a rdf:Property ;
-    rdfs:domain kastle:word ;
-    rdfs:range kastle:word .
+    rdfs:domain kastle:Word ;
+    rdfs:range kastle:Word .
 
 kastle:language a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:length a rdf:Property ;
+    rdfs:domain kastle:Word ;
+    rdfs:range kastle:Integer .
 
 kastle:partOfSpeech a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:PartOfSpeech,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:PartOfSpeech,
+        kastle:PartOfSpeechClass .
 
 kastle:sentence a rdf:Property ;
     rdfs:domain kastle:Phrase ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:spelling a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:upos a rdf:Property ;
-    rdfs:domain kastle:word ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Word ;
+    rdfs:range xsd:string .
 
 kastle:usedIn a rdf:Property ;
     rdfs:domain kastle:Word ;
     rdfs:range kastle:Phrase .
 
 kastle:usedInSentence a rdf:Property ;
-    rdfs:domain kastle:word ;
+    rdfs:domain kastle:Word ;
     rdfs:range kastle:Sentence .
 
 kastle:usesMailMerge a rdf:Property ;
     rdfs:domain kastle:TextDocument ;
     rdfs:range kastle:MailMerge .
 
-kastle:Spelling a rdf:Property ;
+kastle:wordVersion a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:string .
-
-kastle:PartOfSpeech a rdf:Property ;
-    rdfs:domain kastle:Word ;
-    rdfs:range kastle:PartOfSpeechClass .
+    rdfs:range xsd:string .
 

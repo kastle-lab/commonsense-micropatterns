@@ -1,26 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:GovernedBy a rdf:Property ;
-    rdfs:domain kastle:State ;
-    rdfs:range kastle:Government .
-
-kastle:GovernmentName a rdf:Property ;
-    rdfs:domain kastle:Government ;
-    rdfs:range kastle:string .
-
-kastle:HasLaws a rdf:Property ;
-    rdfs:domain kastle:Government ;
-    rdfs:range kastle:Laws .
-
-kastle:LocatedIn a rdf:Property ;
-    rdfs:domain kastle:State ;
-    rdfs:range kastle:Country .
-
-kastle:Population a rdf:Property ;
-    rdfs:domain kastle:Government ;
-    rdfs:range kastle:positiveInteger .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Government> a owl:Ontology ;
+    opla-core:hasPatternName "Government Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Government-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:belongs a rdf:Property ;
     rdfs:domain kastle:Citizen ;
@@ -28,7 +23,7 @@ kastle:belongs a rdf:Property ;
 
 kastle:citizenAge a rdf:Property ;
     rdfs:domain kastle:Citizen ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:consistsOf a rdf:Property ;
     rdfs:domain kastle:Government ;
@@ -36,7 +31,7 @@ kastle:consistsOf a rdf:Property ;
 
 kastle:country a rdf:Property ;
     rdfs:domain kastle:Government ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:createsLaw a rdf:Property ;
     rdfs:domain kastle:Legislative ;
@@ -51,7 +46,7 @@ kastle:departmentOf a rdf:Property ;
     rdfs:range kastle:Department .
 
 kastle:director a rdf:Property ;
-    rdfs:domain kastle:diff ;
+    rdfs:domain kastle:Diff ;
     rdfs:range kastle:Official .
 
 kastle:enforcesLaw a rdf:Property ;
@@ -61,11 +56,19 @@ kastle:enforcesLaw a rdf:Property ;
 
 kastle:established a rdf:Property ;
     rdfs:domain kastle:Government ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
+
+kastle:governedBy a rdf:Property ;
+    rdfs:domain kastle:State ;
+    rdfs:range kastle:Government .
+
+kastle:governmentName a rdf:Property ;
+    rdfs:domain kastle:Government ;
+    rdfs:range xsd:string .
 
 kastle:governmentType a rdf:Property ;
     rdfs:domain kastle:Government ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:governs a rdf:Property ;
     rdfs:domain kastle:Government ;
@@ -75,7 +78,7 @@ kastle:governs a rdf:Property ;
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasBranch a rdf:Property ;
     rdfs:domain kastle:Government ;
@@ -109,6 +112,10 @@ kastle:hasLaw a rdf:Property ;
     rdfs:domain kastle:Government ;
     rdfs:range kastle:Law .
 
+kastle:hasLaws a rdf:Property ;
+    rdfs:domain kastle:Government ;
+    rdfs:range kastle:Laws .
+
 kastle:hasLeader a rdf:Property ;
     rdfs:domain kastle:Government ;
     rdfs:range kastle:Leader,
@@ -121,7 +128,7 @@ kastle:hasMember a rdf:Property ;
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPolicy a rdf:Property ;
     rdfs:domain kastle:Government ;
@@ -169,7 +176,8 @@ kastle:legislation a rdf:Property ;
     rdfs:range kastle:Law .
 
 kastle:locatedIn a rdf:Property ;
-    rdfs:domain kastle:Government ;
+    rdfs:domain kastle:Government,
+        kastle:State ;
     rdfs:range kastle:Country .
 
 kastle:mayorOf a rdf:Property ;
@@ -178,7 +186,7 @@ kastle:mayorOf a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Resource ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:official a rdf:Property ;
     rdfs:domain kastle:Government ;
@@ -188,6 +196,10 @@ kastle:passes a rdf:Property ;
     rdfs:domain kastle:Government,
         kastle:Politician ;
     rdfs:range kastle:Legislation .
+
+kastle:population a rdf:Property ;
+    rdfs:domain kastle:Government ;
+    rdfs:range kastle:Positiveinteger .
 
 kastle:positionIn a rdf:Property ;
     rdfs:domain kastle:Department ;

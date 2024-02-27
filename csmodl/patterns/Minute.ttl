@@ -1,10 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:HasMinutes a rdf:Property ;
-    rdfs:domain kastle:Event ;
-    rdfs:range kastle:TotalMinutes .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Minute> a owl:Ontology ;
+    opla-core:hasPatternName "Minute Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Minute-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:hasDuration a rdf:Property ;
     rdfs:domain kastle:TimeEntity,
@@ -18,26 +29,28 @@ kastle:hasMinute a rdf:Property ;
         kastle:MinuteOfTime .
 
 kastle:hasMinutes a rdf:Property ;
-    rdfs:domain kastle:Hour,
+    rdfs:domain kastle:Event,
+        kastle:Hour,
         kastle:TimePeriod ;
-    rdfs:range kastle:Minute,
-        kastle:integer .
+    rdfs:range kastle:Integer,
+        kastle:Minute,
+        kastle:TotalMinutes .
 
 kastle:hasNumber a rdf:Property ;
     rdfs:domain kastle:Minute ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasNumberOfMinutes a rdf:Property ;
     rdfs:domain kastle:Hour ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasNumberOfSeconds a rdf:Property ;
     rdfs:domain kastle:Minute ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasNumericValue a rdf:Property ;
     rdfs:domain kastle:Duration ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:hasSeconds a rdf:Property ;
     rdfs:domain kastle:Minute ;
@@ -49,11 +62,11 @@ kastle:hasTemporalDuration a rdf:Property ;
 
 kastle:hasUnit a rdf:Property ;
     rdfs:domain kastle:Duration ;
-    rdfs:range kastle:unitMinute .
+    rdfs:range kastle:Unitminute .
 
 kastle:isEquivalentTo a rdf:Property ;
     rdfs:domain kastle:Minute ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:isMinuteIn a rdf:Property ;
     rdfs:domain kastle:Minute ;
@@ -69,11 +82,11 @@ kastle:minuteInTime a rdf:Property ;
 
 kastle:numericDuration a rdf:Property ;
     rdfs:domain kastle:TemporalUnit ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:ofHour a rdf:Property ;
     rdfs:domain kastle:Minute ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:partOfHour a rdf:Property ;
     rdfs:domain kastle:MinuteOfTime ;
@@ -81,8 +94,7 @@ kastle:partOfHour a rdf:Property ;
 
 kastle:secondInMinute a rdf:Property ;
     rdfs:domain kastle:Minute ;
-    rdfs:range kastle:Integer,
-        kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:secondInTime a rdf:Property ;
     rdfs:domain kastle:Time ;
@@ -90,5 +102,5 @@ kastle:secondInTime a rdf:Property ;
 
 kastle:unitMinute a rdf:Property ;
     rdfs:domain kastle:Minute ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 

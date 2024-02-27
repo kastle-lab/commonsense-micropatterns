@@ -1,26 +1,46 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:ArtistName a rdf:Property ;
-    rdfs:domain kastle:Artist ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Art> a owl:Ontology ;
+    opla-core:hasPatternName "Art Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Art-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:abstract a rdf:Property ;
     rdfs:domain kastle:Art ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:artGenre a rdf:Property ;
     rdfs:domain kastle:Artwork ;
     rdfs:range kastle:ArtGenre .
 
+kastle:artist a rdf:Property ;
+    rdfs:domain kastle:Art ;
+    rdfs:range kastle:Artist,
+        kastle:Person .
+
+kastle:artistName a rdf:Property ;
+    rdfs:domain kastle:Artist ;
+    rdfs:range xsd:string .
+
 kastle:artistNationality a rdf:Property ;
     rdfs:domain kastle:Artist ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:artworkTitle a rdf:Property ;
     rdfs:domain kastle:Art ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:belongsGenre a rdf:Property ;
     rdfs:domain kastle:Art ;
@@ -32,12 +52,12 @@ kastle:belongsTo a rdf:Property ;
 
 kastle:birthDate a rdf:Property ;
     rdfs:domain kastle:Artist ;
-    rdfs:range kastle:Literal,
-        kastle:date .
+    rdfs:range rdfs:Literal,
+        xsd:date .
 
 kastle:bornIn a rdf:Property ;
     rdfs:domain kastle:Artist ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:created a rdf:Property ;
     rdfs:domain kastle:Artist ;
@@ -57,19 +77,18 @@ kastle:created_by a rdf:Property ;
     rdfs:range kastle:Artist .
 
 kastle:creates a rdf:Property ;
-    rdfs:domain kastle:Artist,
-        kastle:artist ;
+    rdfs:domain kastle:Artist ;
     rdfs:range kastle:Art .
 
 kastle:creationDate a rdf:Property ;
     rdfs:domain kastle:Art,
         kastle:Artwork ;
-    rdfs:range kastle:date,
-        kastle:dateTime .
+    rdfs:range xsd:date,
+        kastle:Datetime .
 
 kastle:deathDate a rdf:Property ;
     rdfs:domain kastle:Artist ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:display a rdf:Property ;
     rdfs:domain kastle:Gallery ;
@@ -81,7 +100,7 @@ kastle:displayed_at a rdf:Property ;
 
 kastle:endDate a rdf:Property ;
     rdfs:domain kastle:Exhibition ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:exhibitedIn a rdf:Property ;
     rdfs:domain kastle:Art ;
@@ -93,7 +112,7 @@ kastle:exhibits a rdf:Property ;
 
 kastle:genre a rdf:Property ;
     rdfs:domain kastle:Artwork ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasArtStyle a rdf:Property ;
     rdfs:domain kastle:Art ;
@@ -105,11 +124,11 @@ kastle:hasArtist a rdf:Property ;
 
 kastle:hasAuthor a rdf:Property ;
     rdfs:domain kastle:Painting ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasBirthDate a rdf:Property ;
     rdfs:domain kastle:Artist ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasCreated a rdf:Property ;
     rdfs:domain kastle:Artist ;
@@ -122,39 +141,39 @@ kastle:hasCreator a rdf:Property ;
 
 kastle:hasMedium a rdf:Property ;
     rdfs:domain kastle:Art ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Artist,
         kastle:Person ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasPeriod a rdf:Property ;
     rdfs:domain kastle:Art ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasStyle a rdf:Property ;
     rdfs:domain kastle:Art,
         kastle:Artwork ;
-    rdfs:range kastle:ArtStyle,
-        kastle:Style,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:ArtStyle,
+        kastle:Style .
 
 kastle:hasTitle a rdf:Property ;
     rdfs:domain kastle:Art,
         kastle:Artwork,
         kastle:WorkOfArt ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasYear a rdf:Property ;
     rdfs:domain kastle:Art,
         kastle:Artwork,
         kastle:Painting ;
-    rdfs:range kastle:Literal,
-        kastle:date,
-        kastle:integer .
+    rdfs:range rdfs:Literal,
+        xsd:date,
+        kastle:Integer .
 
 kastle:has_genre a rdf:Property ;
     rdfs:domain kastle:Artwork ;
@@ -174,11 +193,11 @@ kastle:inspiredBy a rdf:Property ;
 
 kastle:locatedIn a rdf:Property ;
     rdfs:domain kastle:Museum ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:location a rdf:Property ;
     rdfs:domain kastle:Exhibition ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:madeOf a rdf:Property ;
     rdfs:domain kastle:Art ;
@@ -186,44 +205,44 @@ kastle:madeOf a rdf:Property ;
 
 kastle:mass a rdf:Property ;
     rdfs:domain kastle:Sculpture ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:medium a rdf:Property ;
     rdfs:domain kastle:Art,
         kastle:ArtWork,
         kastle:Artwork,
         kastle:Painting ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:mediumName a rdf:Property ;
     rdfs:domain kastle:Medium ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:modern a rdf:Property ;
     rdfs:domain kastle:Art ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Art,
         kastle:Artist ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:nationality a rdf:Property ;
     rdfs:domain kastle:Artist ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:periodEnd a rdf:Property ;
     rdfs:domain kastle:Period ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:periodName a rdf:Property ;
     rdfs:domain kastle:Period ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:periodStart a rdf:Property ;
     rdfs:domain kastle:Period ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:shownAt a rdf:Property ;
     rdfs:domain kastle:Artwork ;
@@ -231,21 +250,21 @@ kastle:shownAt a rdf:Property ;
 
 kastle:startDate a rdf:Property ;
     rdfs:domain kastle:Exhibition ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:style a rdf:Property ;
     rdfs:domain kastle:Art,
         kastle:ArtWork ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:styleName a rdf:Property ;
     rdfs:domain kastle:Style ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:title a rdf:Property ;
     rdfs:domain kastle:Artwork ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:usesMedium a rdf:Property ;
     rdfs:domain kastle:Artwork ;
@@ -257,10 +276,5 @@ kastle:uses_medium a rdf:Property ;
 
 kastle:year a rdf:Property ;
     rdfs:domain kastle:Painting ;
-    rdfs:range kastle:integer .
-
-kastle:artist a rdf:Property ;
-    rdfs:domain kastle:Art ;
-    rdfs:range kastle:Artist,
-        kastle:Person .
+    rdfs:range kastle:Integer .
 

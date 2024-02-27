@@ -1,80 +1,94 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:EventType a rdf:Property ;
-    rdfs:domain kastle:Event ;
-    rdfs:range kastle:Literal .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Day> a owl:Ontology ;
+    opla-core:hasPatternName "Day Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Day-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:beginningOfDay a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:dayOfMonth a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:int .
+    rdfs:range xsd:int .
 
 kastle:dayOfWeek a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:dayOfYear a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:int .
+    rdfs:range xsd:int .
 
 kastle:endOfDay a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:endsAt a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:time .
+    rdfs:range kastle:Time .
+
+kastle:eventType a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range rdfs:Literal .
 
 kastle:hasActivity a rdf:Property ;
     rdfs:domain kastle:Time ;
     rdfs:range kastle:Activity .
 
 kastle:hasAfternoon a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Day ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Day ;
+    rdfs:range xsd:boolean .
 
 kastle:hasDate a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasDay a rdf:Property ;
     rdfs:domain kastle:Calendar,
         kastle:Day ;
-    rdfs:range kastle:date,
-        kastle:string .
+    rdfs:range xsd:date,
+        xsd:string .
 
 kastle:hasDayName a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasDayNumber a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasDayOfMonth a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasDayOfTheWeek a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasDayOfWeek a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:DayOfWeek,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:DayOfWeek .
 
 kastle:hasDayOfYear a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:integer,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Integer .
 
 kastle:hasDayPart a rdf:Property ;
     rdfs:domain kastle:Day ;
@@ -82,20 +96,19 @@ kastle:hasDayPart a rdf:Property ;
 
 kastle:hasDaylight a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:hasDaylightDuration a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:duration .
+    rdfs:range kastle:Duration .
 
 kastle:hasEndTime a rdf:Property ;
     rdfs:domain kastle:DayPart ;
-    rdfs:range kastle:time .
+    rdfs:range kastle:Time .
 
 kastle:hasEvening a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Day ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Day ;
+    rdfs:range xsd:boolean .
 
 kastle:hasEvent a rdf:Property ;
     rdfs:domain kastle:Day ;
@@ -107,25 +120,23 @@ kastle:hasHours a rdf:Property ;
 
 kastle:hasHumidity a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasMinutes a rdf:Property ;
     rdfs:domain kastle:Hour ;
     rdfs:range kastle:Minute .
 
 kastle:hasMorning a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Day ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Day ;
+    rdfs:range xsd:boolean .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasNight a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Day ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Day ;
+    rdfs:range xsd:boolean .
 
 kastle:hasPartOfDay a rdf:Property ;
     rdfs:domain kastle:Day ;
@@ -133,7 +144,7 @@ kastle:hasPartOfDay a rdf:Property ;
 
 kastle:hasPrecipitation a rdf:Property ;
     rdfs:domain kastle:Weather ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasSeconds a rdf:Property ;
     rdfs:domain kastle:Minute ;
@@ -141,21 +152,21 @@ kastle:hasSeconds a rdf:Property ;
 
 kastle:hasStartTime a rdf:Property ;
     rdfs:domain kastle:DayPart ;
-    rdfs:range kastle:time .
+    rdfs:range kastle:Time .
 
 kastle:hasSunrise a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:time .
+    rdfs:range kastle:Time .
 
 kastle:hasSunset a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:time .
+    rdfs:range kastle:Time .
 
 kastle:hasTemperature a rdf:Property ;
     rdfs:domain kastle:Day,
         kastle:Weather ;
-    rdfs:range kastle:float,
-        kastle:integer .
+    rdfs:range xsd:float,
+        kastle:Integer .
 
 kastle:hasTime a rdf:Property ;
     rdfs:domain kastle:Day ;
@@ -163,25 +174,25 @@ kastle:hasTime a rdf:Property ;
 
 kastle:hasTimeOfDay a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasWeather a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:Literal,
+    rdfs:range rdfs:Literal,
         kastle:Weather .
 
 kastle:hasWeatherCondition a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:Literal,
+    rdfs:range rdfs:Literal,
         kastle:WeatherCondition .
 
 kastle:hasWeekday a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isHoliday a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Day ;
+    rdfs:range xsd:boolean .
 
 kastle:isPartOfWeek a rdf:Property ;
     rdfs:domain kastle:Day ;
@@ -189,22 +200,21 @@ kastle:isPartOfWeek a rdf:Property ;
 
 kastle:isWeekday a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isWeekend a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Day ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Day ;
+    rdfs:range xsd:boolean .
 
 kastle:startsAt a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:time .
+    rdfs:range kastle:Time .
 
 kastle:sunriseTime a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:sunsetTime a rdf:Property ;
     rdfs:domain kastle:Day ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 

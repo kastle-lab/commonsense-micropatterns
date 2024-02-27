@@ -1,22 +1,29 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Applies a rdf:Property ;
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Law> a owl:Ontology ;
+    opla-core:hasPatternName "Law Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Law-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
+
+kastle:applies a rdf:Property ;
     rdfs:domain kastle:Court ;
     rdfs:range kastle:Legislation .
 
-kastle:Decides a rdf:Property ;
-    rdfs:domain kastle:Judge ;
-    rdfs:range kastle:LegalEntity .
-
-kastle:Represents a rdf:Property ;
-    rdfs:domain kastle:Lawyer ;
-    rdfs:range kastle:Client .
-
 kastle:appliesIn a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:jurisdiction .
+    rdfs:range kastle:Jurisdiction .
 
 kastle:appliesTo a rdf:Property ;
     rdfs:domain kastle:Law ;
@@ -30,13 +37,17 @@ kastle:correspondsTo a rdf:Property ;
     rdfs:domain kastle:Case ;
     rdfs:range kastle:Statute .
 
+kastle:decides a rdf:Property ;
+    rdfs:domain kastle:Judge ;
+    rdfs:range kastle:LegalEntity .
+
 kastle:defendedIn a rdf:Property ;
     rdfs:domain kastle:Lawyer ;
     rdfs:range kastle:Case .
 
 kastle:enactedDate a rdf:Property ;
     rdfs:domain kastle:Statute ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:enforces a rdf:Property ;
     rdfs:domain kastle:EnforcementBody,
@@ -66,11 +77,11 @@ kastle:hasCase a rdf:Property ;
 
 kastle:hasCaseNumber a rdf:Property ;
     rdfs:domain kastle:Case ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasCitation a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasConstitution a rdf:Property ;
     rdfs:domain kastle:Law ;
@@ -82,8 +93,8 @@ kastle:hasCourt a rdf:Property ;
 
 kastle:hasEffectiveDate a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:date,
-        kastle:dateTime .
+    rdfs:range xsd:date,
+        kastle:Datetime .
 
 kastle:hasEnactingBody a rdf:Property ;
     rdfs:domain kastle:Law ;
@@ -95,16 +106,16 @@ kastle:hasExperienceIn a rdf:Property ;
 
 kastle:hasIdentifier a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasJurisdiction a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:Jurisdiction,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Jurisdiction .
 
 kastle:hasLawNumber a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasLegalIssue a rdf:Property ;
     rdfs:domain kastle:Client ;
@@ -112,17 +123,17 @@ kastle:hasLegalIssue a rdf:Property ;
 
 kastle:hasLocation a rdf:Property ;
     rdfs:domain kastle:Court ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Court ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasNumber a rdf:Property ;
     rdfs:domain kastle:Article,
         kastle:Law ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:hasRepresented a rdf:Property ;
     rdfs:domain kastle:Lawyer ;
@@ -130,7 +141,7 @@ kastle:hasRepresented a rdf:Property ;
 
 kastle:hasStatus a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasStatute a rdf:Property ;
     rdfs:domain kastle:Law ;
@@ -138,19 +149,19 @@ kastle:hasStatute a rdf:Property ;
 
 kastle:hasText a rdf:Property ;
     rdfs:domain kastle:Article ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasTitle a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasYear a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasYearImplemented a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:gYear .
+    rdfs:range kastle:Gyear .
 
 kastle:involves a rdf:Property ;
     rdfs:domain kastle:Case,
@@ -183,12 +194,12 @@ kastle:judgedIn a rdf:Property ;
     rdfs:range kastle:Case .
 
 kastle:judges a rdf:Property ;
-    rdfs:domain kastle:court ;
+    rdfs:domain kastle:Court ;
     rdfs:range kastle:Resource .
 
 kastle:juridiction a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:judge .
+    rdfs:range kastle:Judge .
 
 kastle:lawSpeciality a rdf:Property ;
     rdfs:domain kastle:Lawyer ;
@@ -196,7 +207,7 @@ kastle:lawSpeciality a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Lawyer ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:passedBy a rdf:Property ;
     rdfs:domain kastle:StatutoryLaw ;
@@ -204,7 +215,7 @@ kastle:passedBy a rdf:Property ;
 
 kastle:practice a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:lawyer .
+    rdfs:range kastle:Lawyer .
 
 kastle:practices a rdf:Property ;
     rdfs:domain kastle:Lawyer ;
@@ -225,9 +236,10 @@ kastle:relatedTo a rdf:Property ;
 
 kastle:represents a rdf:Property ;
     rdfs:domain kastle:Lawyer ;
-    rdfs:range kastle:Law .
+    rdfs:range kastle:Client,
+        kastle:Law .
 
 kastle:title a rdf:Property ;
     rdfs:domain kastle:Law ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 

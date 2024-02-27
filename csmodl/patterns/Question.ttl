@@ -1,18 +1,25 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:HasAnswer a rdf:Property ;
-    rdfs:domain kastle:Question ;
-    rdfs:range kastle:Answer .
-
-kastle:TopicOf a rdf:Property ;
-    rdfs:domain kastle:QuestionTopic ;
-    rdfs:range kastle:Question .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Question> a owl:Ontology ;
+    opla-core:hasPatternName "Question Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Question-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:answerText a rdf:Property ;
     rdfs:domain kastle:Answer ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:asked a rdf:Property ;
     rdfs:domain kastle:User ;
@@ -28,25 +35,25 @@ kastle:askedIn a rdf:Property ;
 
 kastle:drawsFromSource a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasAnswer a rdf:Property ;
     rdfs:domain kastle:Question,
         kastle:QuestionEntity ;
-    rdfs:range kastle:Answer,
-        kastle:AnswerEntity,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Answer,
+        kastle:AnswerEntity .
 
 kastle:hasAnswerText a rdf:Property ;
     rdfs:domain kastle:Answer,
         kastle:AnswerEntity ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasBody a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasCategory a rdf:Property ;
     rdfs:domain kastle:QuestionEntity ;
@@ -58,12 +65,12 @@ kastle:hasChoice a rdf:Property ;
 
 kastle:hasContent a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasDifficultyLevel a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:Literal,
-        kastle:int .
+    rdfs:range rdfs:Literal,
+        xsd:int .
 
 kastle:hasQuestion a rdf:Property ;
     rdfs:domain kastle:Entity,
@@ -73,7 +80,7 @@ kastle:hasQuestion a rdf:Property ;
 
 kastle:hasQuestionText a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasResponse a rdf:Property ;
     rdfs:domain kastle:Entity ;
@@ -85,42 +92,42 @@ kastle:hasSource a rdf:Property ;
 
 kastle:hasSpecificDate a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasText a rdf:Property ;
-    rdfs:domain kastle:QuestionEntity,
-        kastle:ne3b3414615394faeadf63358df78da98b1 ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:N57362dd10112467889bedbe766da88ddb1,
+        kastle:QuestionEntity ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasTitle a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasType a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isAnsweredBy a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:isAskedBy a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:isCorrect a rdf:Property ;
     rdfs:domain kastle:Answer ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isCorrectAnswer a rdf:Property ;
     rdfs:domain kastle:Answer ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isRelatedToTopic a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isResponseTo a rdf:Property ;
     rdfs:domain kastle:Response ;
@@ -132,7 +139,7 @@ kastle:possibleAnswer a rdf:Property ;
 
 kastle:questionText a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:relatedToTopic a rdf:Property ;
     rdfs:domain kastle:Question ;
@@ -140,19 +147,23 @@ kastle:relatedToTopic a rdf:Property ;
 
 kastle:sourceName a rdf:Property ;
     rdfs:domain kastle:Source ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:sourceType a rdf:Property ;
     rdfs:domain kastle:Source ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:sourceURL a rdf:Property ;
     rdfs:domain kastle:Source ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:text a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:topicOf a rdf:Property ;
+    rdfs:domain kastle:QuestionTopic ;
+    rdfs:range kastle:Question .
 
 kastle:type a rdf:Property ;
     rdfs:domain kastle:Question ;
@@ -160,5 +171,5 @@ kastle:type a rdf:Property ;
 
 kastle:weight a rdf:Property ;
     rdfs:domain kastle:Question ;
-    rdfs:range kastle:int .
+    rdfs:range xsd:int .
 

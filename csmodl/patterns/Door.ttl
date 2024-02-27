@@ -1,51 +1,65 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Door> a owl:Ontology ;
+    opla-core:hasPatternName "Door Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Door-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:color a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Door ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:Door ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:dimension a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:doorType a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasColor a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:Color,
-        kastle:DoorColor,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Color,
+        kastle:DoorColor .
 
 kastle:hasDimension a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:Dimension,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Dimension .
 
 kastle:hasHandle a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasHeight a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasLock a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:Lock,
-        kastle:boolean .
+    rdfs:range xsd:boolean,
+        kastle:Lock .
 
 kastle:hasMaterial a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:Literal,
-        kastle:Material,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Material .
 
 kastle:hasSecurityLevel a rdf:Property ;
     rdfs:domain kastle:Door ;
@@ -53,7 +67,7 @@ kastle:hasSecurityLevel a rdf:Property ;
 
 kastle:hasWidth a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:isAccessTo a rdf:Property ;
     rdfs:domain kastle:Door ;
@@ -61,7 +75,7 @@ kastle:isAccessTo a rdf:Property ;
 
 kastle:isBarrier a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isClosed a rdf:Property ;
     rdfs:domain kastle:Door ;
@@ -74,19 +88,17 @@ kastle:isEntranceTo a rdf:Property ;
 kastle:isLocked a rdf:Property ;
     rdfs:domain kastle:Door,
         kastle:Lock ;
-    rdfs:range kastle:Literal,
-        kastle:boolean .
+    rdfs:range rdfs:Literal,
+        xsd:boolean .
 
 kastle:isMadeOf a rdf:Property ;
     rdfs:domain kastle:Door ;
     rdfs:range kastle:DoorMaterial .
 
 kastle:isOpen a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Door ;
-    rdfs:range kastle:Boolean,
-        kastle:Literal,
-        kastle:boolean .
+    rdfs:domain kastle:Door ;
+    rdfs:range rdfs:Literal,
+        xsd:boolean .
 
 kastle:isOpenedBy a rdf:Property ;
     rdfs:domain kastle:Door ;
@@ -98,7 +110,7 @@ kastle:locatedIn a rdf:Property ;
 
 kastle:lockType a rdf:Property ;
     rdfs:domain kastle:Lock ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:madeOf a rdf:Property ;
     rdfs:domain kastle:Door ;
@@ -106,11 +118,10 @@ kastle:madeOf a rdf:Property ;
 
 kastle:manufacturer a rdf:Property ;
     rdfs:domain kastle:Door ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:material a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Door ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:Door ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
 

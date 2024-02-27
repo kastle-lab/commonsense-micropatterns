@@ -1,17 +1,24 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:EndDate a rdf:Property ;
-    rdfs:domain kastle:End ;
-    rdfs:range kastle:date .
-
-kastle:Endtime a rdf:Property ;
-    rdfs:domain kastle:End ;
-    rdfs:range kastle:dateTime .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/End> a owl:Ontology ;
+    opla-core:hasPatternName "End Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "End-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:associatedWith a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:End ;
     rdfs:range kastle:Resource .
 
 kastle:cause a rdf:Property ;
@@ -26,9 +33,18 @@ kastle:consequence a rdf:Property ;
     rdfs:domain kastle:End ;
     rdfs:range kastle:Resource .
 
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range rdfs:Literal .
+
 kastle:endDate a rdf:Property ;
     rdfs:domain kastle:End ;
-    rdfs:range kastle:dateTime .
+    rdfs:range xsd:date,
+        kastle:Datetime .
+
+kastle:endtime a rdf:Property ;
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Datetime .
 
 kastle:event a rdf:Property ;
     rdfs:domain kastle:End ;
@@ -40,7 +56,7 @@ kastle:hasActor a rdf:Property ;
 
 kastle:hasDate a rdf:Property ;
     rdfs:domain kastle:End ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasEnd a rdf:Property ;
     rdfs:domain kastle:Entity,
@@ -52,7 +68,7 @@ kastle:hasEnd a rdf:Property ;
 
 kastle:hasEndDate a rdf:Property ;
     rdfs:domain kastle:Event ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:hasEndLocation a rdf:Property ;
     rdfs:domain kastle:End ;
@@ -60,18 +76,17 @@ kastle:hasEndLocation a rdf:Property ;
 
 kastle:hasEndTime a rdf:Property ;
     rdfs:domain kastle:End ;
-    rdfs:range kastle:EndTime,
-        kastle:dateTime .
+    rdfs:range kastle:Datetime,
+        kastle:EndTime .
 
 kastle:hasTime a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:End ;
-    rdfs:range kastle:dateTime,
-        kastle:time .
+    rdfs:domain kastle:End ;
+    rdfs:range kastle:Datetime,
+        kastle:Time .
 
 kastle:isEndOf a rdf:Property ;
     rdfs:domain kastle:End,
-        kastle:n8c207e37cb034012bfea5353336a6b8cb1 ;
+        kastle:Nc842cdef54c74c578a542d990d58ba7bb1 ;
     rdfs:range kastle:End,
         kastle:Resource,
         kastle:Thing .
@@ -94,13 +109,9 @@ kastle:ofEvent a rdf:Property ;
 
 kastle:startDate a rdf:Property ;
     rdfs:domain kastle:End ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:timePoint a rdf:Property ;
     rdfs:domain kastle:End ;
-    rdfs:range kastle:dateTime .
-
-kastle:date a rdf:Property ;
-    rdfs:domain kastle:End ;
-    rdfs:range kastle:Literal .
+    rdfs:range kastle:Datetime .
 

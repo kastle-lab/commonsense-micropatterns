@@ -1,22 +1,37 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Woman> a owl:Ontology ;
+    opla-core:hasPatternName "Woman Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Woman-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Human,
         kastle:Woman ;
-    rdfs:range kastle:Age,
-        kastle:int,
-        kastle:integer,
-        kastle:nonNegativeInteger .
+    rdfs:range xsd:int,
+        kastle:Age,
+        kastle:Integer,
+        kastle:Nonnegativeinteger .
 
 kastle:hasBirthDate a rdf:Property ;
     rdfs:domain kastle:Woman ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasBirthdate a rdf:Property ;
     rdfs:domain kastle:Woman ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:hasChild a rdf:Property ;
     rdfs:domain kastle:Mother,
@@ -27,14 +42,14 @@ kastle:hasChild a rdf:Property ;
 
 kastle:hasChildren a rdf:Property ;
     rdfs:domain kastle:Woman ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasGender a rdf:Property ;
     rdfs:domain kastle:Human,
         kastle:Person,
         kastle:Woman ;
-    rdfs:range kastle:Gender,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Gender .
 
 kastle:hasMother a rdf:Property ;
     rdfs:domain kastle:Daughter ;
@@ -43,17 +58,17 @@ kastle:hasMother a rdf:Property ;
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Human,
         kastle:Woman ;
-    rdfs:range kastle:Name,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Name .
 
 kastle:hasNationality a rdf:Property ;
     rdfs:domain kastle:Woman ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasOccupation a rdf:Property ;
     rdfs:domain kastle:Woman ;
-    rdfs:range kastle:Occupation,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Occupation .
 
 kastle:isDaughter a rdf:Property ;
     rdfs:domain kastle:Woman ;
@@ -65,12 +80,12 @@ kastle:isEducatedIn a rdf:Property ;
 
 kastle:isEmployed a rdf:Property ;
     rdfs:domain kastle:Woman ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isMarried a rdf:Property ;
     rdfs:domain kastle:Woman ;
-    rdfs:range kastle:Person,
-        kastle:boolean .
+    rdfs:range xsd:boolean,
+        kastle:Person .
 
 kastle:isMother a rdf:Property ;
     rdfs:domain kastle:Woman ;
@@ -89,16 +104,16 @@ kastle:isWoman a rdf:Property ;
     rdfs:range kastle:Woman .
 
 kastle:womanhasAge a rdf:Property ;
-    rdfs:domain kastle:woman ;
-    rdfs:range kastle:integer .
+    rdfs:domain kastle:Woman ;
+    rdfs:range kastle:Integer .
 
 kastle:womanhasName a rdf:Property ;
-    rdfs:domain kastle:woman ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Woman ;
+    rdfs:range xsd:string .
 
 kastle:womanhasNationality a rdf:Property ;
-    rdfs:domain kastle:woman ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Woman ;
+    rdfs:range xsd:string .
 
 kastle:worksIn a rdf:Property ;
     rdfs:domain kastle:Woman ;

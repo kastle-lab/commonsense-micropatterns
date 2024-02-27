@@ -1,6 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Part> a owl:Ontology ;
+    opla-core:hasPatternName "Part Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Part-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 <https://kastle.cs.wright.edu/csmodl#:hasPart> a rdf:Property ;
     rdfs:domain kastle:Automobile ;
@@ -21,15 +36,15 @@ kastle:belongs_in a rdf:Property ;
 
 kastle:categoryName a rdf:Property ;
     rdfs:domain kastle:Category ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:description a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasDescription a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasManufacturer a rdf:Property ;
     rdfs:domain kastle:Part ;
@@ -37,7 +52,7 @@ kastle:hasManufacturer a rdf:Property ;
 
 kastle:hasManufacturerName a rdf:Property ;
     rdfs:domain kastle:Manufacturer ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPart a rdf:Property ;
     rdfs:domain kastle:Assembly,
@@ -49,19 +64,19 @@ kastle:hasPart a rdf:Property ;
 
 kastle:hasPartNumber a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasSize a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:hasWeight a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:has_material a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:has_part a rdf:Property ;
     rdfs:domain kastle:Assembly ;
@@ -69,7 +84,7 @@ kastle:has_part a rdf:Property ;
 
 kastle:id a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isPartOf a rdf:Property ;
     rdfs:domain kastle:Engine,
@@ -84,8 +99,8 @@ kastle:isPartOf a rdf:Property ;
 kastle:madeOf a rdf:Property ;
     rdfs:domain kastle:MechanicalPart,
         kastle:Part ;
-    rdfs:range kastle:Material,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Material .
 
 kastle:manufacturedBy a rdf:Property ;
     rdfs:domain kastle:Part ;
@@ -93,29 +108,29 @@ kastle:manufacturedBy a rdf:Property ;
 
 kastle:manufacturer a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:manufacturerName a rdf:Property ;
     rdfs:domain kastle:Manufacturer ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:manufacturerWebsite a rdf:Property ;
     rdfs:domain kastle:Manufacturer ;
-    rdfs:range kastle:anyURI .
+    rdfs:range kastle:Anyuri .
 
 kastle:manufacturingDate a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:objectID a rdf:Property ;
     rdfs:domain kastle:Object ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:partCategory a rdf:Property ;
     rdfs:domain kastle:Part ;
@@ -123,38 +138,38 @@ kastle:partCategory a rdf:Property ;
 
 kastle:partDescription a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:partID a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:integer,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Integer .
 
 kastle:partId a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:partManufactureDate a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:partManufacturer a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:Manufacturer,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Manufacturer .
 
 kastle:partModel a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:partName a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:partNumber a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:integer,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Integer .
 
 kastle:partOf a rdf:Property ;
     rdfs:domain kastle:Part ;
@@ -164,7 +179,7 @@ kastle:partOf a rdf:Property ;
 
 kastle:processID a rdf:Property ;
     rdfs:domain kastle:Process ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:provides a rdf:Property ;
     rdfs:domain kastle:Part ;
@@ -173,7 +188,7 @@ kastle:provides a rdf:Property ;
 
 kastle:serialNumber a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:subPart a rdf:Property ;
     rdfs:domain kastle:Part ;
@@ -189,5 +204,5 @@ kastle:usesPart a rdf:Property ;
 
 kastle:weight a rdf:Property ;
     rdfs:domain kastle:Part ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 

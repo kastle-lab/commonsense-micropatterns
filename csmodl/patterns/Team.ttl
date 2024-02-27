@@ -1,14 +1,29 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Team> a owl:Ontology ;
+    opla-core:hasPatternName "Team Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Team-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:endDate a rdf:Property ;
     rdfs:domain kastle:Team ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:firstName a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasCaptain a rdf:Property ;
     rdfs:domain kastle:Team ;
@@ -21,51 +36,50 @@ kastle:hasCoach a rdf:Property ;
 
 kastle:hasDeadline a rdf:Property ;
     rdfs:domain kastle:Task ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasExperience a rdf:Property ;
     rdfs:domain kastle:Member,
         kastle:Person ;
-    rdfs:range kastle:int,
-        kastle:string .
+    rdfs:range xsd:int,
+        xsd:string .
 
 kastle:hasLeader a rdf:Property ;
     rdfs:domain kastle:Team ;
     rdfs:range kastle:Person .
 
 kastle:hasMember a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Team ;
+    rdfs:domain kastle:Team ;
     rdfs:range kastle:Member,
         kastle:Person,
         kastle:TeamMember .
 
 kastle:hasMemberExperience a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasMemberName a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasMemberRole a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Member,
         kastle:Resource,
         kastle:Team ;
-    rdfs:range kastle:Name,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Name .
 
 kastle:hasNumberOfPlayers a rdf:Property ;
     rdfs:domain kastle:Team ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasPosition a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasProject a rdf:Property ;
     rdfs:domain kastle:Team ;
@@ -73,18 +87,17 @@ kastle:hasProject a rdf:Property ;
 
 kastle:hasProjectDeadline a rdf:Property ;
     rdfs:domain kastle:Project ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasProjectName a rdf:Property ;
     rdfs:domain kastle:Project ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasRole a rdf:Property ;
     rdfs:domain kastle:Member,
         kastle:Team ;
-    rdfs:range kastle:Role,
-        kastle:role,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Role .
 
 kastle:hasSport a rdf:Property ;
     rdfs:domain kastle:Team ;
@@ -104,19 +117,19 @@ kastle:hasTeamLeader a rdf:Property ;
 
 kastle:hasTeamName a rdf:Property ;
     rdfs:domain kastle:Team ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:isOfAge a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:lastName a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:league a rdf:Property ;
     rdfs:domain kastle:Team ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:locatedIn a rdf:Property ;
     rdfs:domain kastle:Team ;
@@ -124,19 +137,18 @@ kastle:locatedIn a rdf:Property ;
 
 kastle:location a rdf:Property ;
     rdfs:domain kastle:Team ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:member a rdf:Property ;
     rdfs:domain kastle:Team ;
     rdfs:range kastle:Member,
         kastle:Person,
         kastle:Resource,
-        kastle:TeamMember,
-        kastle:resource .
+        kastle:TeamMember .
 
 kastle:memberName a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:memberOf a rdf:Property ;
     rdfs:domain kastle:Person ;
@@ -144,17 +156,16 @@ kastle:memberOf a rdf:Property ;
 
 kastle:memberRole a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Person,
         kastle:Team,
         kastle:TeamMember ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:participatesIn a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Team ;
+    rdfs:domain kastle:Team ;
     rdfs:range kastle:Game,
         kastle:TeamLeague .
 
@@ -168,34 +179,34 @@ kastle:playsSport a rdf:Property ;
 
 kastle:position a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
-
-kastle:sport a rdf:Property ;
-    rdfs:domain kastle:Team ;
-    rdfs:range kastle:string .
-
-kastle:sportName a rdf:Property ;
-    rdfs:domain kastle:Sport ;
-    rdfs:range kastle:string .
-
-kastle:startDate a rdf:Property ;
-    rdfs:domain kastle:Team ;
-    rdfs:range kastle:date .
-
-kastle:teamLeader a rdf:Property ;
-    rdfs:domain kastle:Team ;
-    rdfs:range kastle:Resource,
-        kastle:string .
-
-kastle:teamName a rdf:Property ;
-    rdfs:domain kastle:Team ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:role a rdf:Property ;
     rdfs:domain kastle:Member,
         kastle:Person,
-        kastle:TeamMember,
-        kastle:resource ;
-    rdfs:range kastle:Role,
-        kastle:string .
+        kastle:Resource,
+        kastle:TeamMember ;
+    rdfs:range xsd:string,
+        kastle:Role .
+
+kastle:sport a rdf:Property ;
+    rdfs:domain kastle:Team ;
+    rdfs:range xsd:string .
+
+kastle:sportName a rdf:Property ;
+    rdfs:domain kastle:Sport ;
+    rdfs:range xsd:string .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:Team ;
+    rdfs:range xsd:date .
+
+kastle:teamLeader a rdf:Property ;
+    rdfs:domain kastle:Team ;
+    rdfs:range xsd:string,
+        kastle:Resource .
+
+kastle:teamName a rdf:Property ;
+    rdfs:domain kastle:Team ;
+    rdfs:range xsd:string .
 

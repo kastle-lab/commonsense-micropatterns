@@ -1,30 +1,33 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:ArriveAt a rdf:Property ;
-    rdfs:domain kastle:Path ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Way> a owl:Ontology ;
+    opla-core:hasPatternName "Way Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Way-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
-kastle:CoveredBy a rdf:Property ;
+kastle:arriveAt a rdf:Property ;
     rdfs:domain kastle:Path ;
-    rdfs:range kastle:string .
-
-kastle:DepartFrom a rdf:Property ;
-    rdfs:domain kastle:Path ;
-    rdfs:range kastle:string .
-
-kastle:UsedFor a rdf:Property ;
-    rdfs:domain kastle:Path ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:aspectOfWay a rdf:Property ;
     rdfs:domain kastle:Way ;
     rdfs:range kastle:Way .
 
 kastle:condition a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:Literal .
+    rdfs:domain kastle:Way ;
+    rdfs:range rdfs:Literal .
 
 kastle:connectedTo a rdf:Property ;
     rdfs:domain kastle:Way ;
@@ -34,40 +37,48 @@ kastle:connects a rdf:Property ;
     rdfs:domain kastle:Way ;
     rdfs:range kastle:Class .
 
+kastle:coveredBy a rdf:Property ;
+    rdfs:domain kastle:Path ;
+    rdfs:range xsd:string .
+
+kastle:departFrom a rdf:Property ;
+    rdfs:domain kastle:Path ;
+    rdfs:range xsd:string .
+
 kastle:destination a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Way ;
     rdfs:range kastle:Destination .
 
 kastle:distance a rdf:Property ;
     rdfs:domain kastle:Way ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:endPoint a rdf:Property ;
     rdfs:domain kastle:Way ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:from a rdf:Property ;
     rdfs:domain kastle:Way ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasDestination a rdf:Property ;
     rdfs:domain kastle:Way ;
     rdfs:range kastle:Location .
 
 kastle:hasDestinationType a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Way ;
     rdfs:range kastle:Resource .
 
 kastle:hasDirection a rdf:Property ;
     rdfs:domain kastle:Direction,
         kastle:Way ;
-    rdfs:range kastle:Direction,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Direction .
 
 kastle:hasDistance a rdf:Property ;
     rdfs:domain kastle:Way ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:hasEnd a rdf:Property ;
     rdfs:domain kastle:Way ;
@@ -81,36 +92,35 @@ kastle:hasEndPoint a rdf:Property ;
         kastle:Resource .
 
 kastle:hasLength a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Path,
+    rdfs:domain kastle:Path,
         kastle:Road,
         kastle:Way ;
-    rdfs:range kastle:Literal,
-        kastle:double,
-        kastle:float,
-        kastle:integer .
+    rdfs:range rdfs:Literal,
+        xsd:float,
+        kastle:Double,
+        kastle:Integer .
 
 kastle:hasMedium a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Way ;
     rdfs:range kastle:Resource .
 
 kastle:hasMethod a rdf:Property ;
     rdfs:domain kastle:Method,
         kastle:Way ;
-    rdfs:range kastle:Literal,
-        kastle:Method,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Method .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Way ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasSource a rdf:Property ;
     rdfs:domain kastle:Way ;
     rdfs:range kastle:Location .
 
 kastle:hasSourceType a rdf:Property ;
-    rdfs:domain kastle: ;
+    rdfs:domain kastle:Way ;
     rdfs:range kastle:Resource .
 
 kastle:hasStart a rdf:Property ;
@@ -126,21 +136,21 @@ kastle:hasStartPoint a rdf:Property ;
 
 kastle:hasTraffic a rdf:Property ;
     rdfs:domain kastle:Road ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:hasType a rdf:Property ;
     rdfs:domain kastle:Road ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasWay a rdf:Property ;
     rdfs:domain kastle:Entity,
-        kastle:Subject,
-        kastle:nbb61ac689cd341a2921a1c0ab2562023b1 ;
+        kastle:N63dec552ea014f1f88649c3fecadca1fb1,
+        kastle:Subject ;
     rdfs:range kastle:Way .
 
 kastle:isAccessible a rdf:Property ;
     rdfs:domain kastle:PedestrianPath ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isPartOf a rdf:Property ;
     rdfs:domain kastle:Way ;
@@ -151,24 +161,23 @@ kastle:leadsTo a rdf:Property ;
     rdfs:range kastle:Place .
 
 kastle:length a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Way ;
-    rdfs:range kastle:Literal,
-        kastle:float .
+    rdfs:domain kastle:Way ;
+    rdfs:range rdfs:Literal,
+        xsd:float .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Location,
         kastle:Way ;
-    rdfs:range kastle:langString,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Langstring .
 
 kastle:source a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle: .
+    rdfs:domain kastle:Way ;
+    rdfs:range kastle:Way .
 
 kastle:startPoint a rdf:Property ;
     rdfs:domain kastle:Way ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:takenBy a rdf:Property ;
     rdfs:domain kastle:Way ;
@@ -176,9 +185,13 @@ kastle:takenBy a rdf:Property ;
 
 kastle:to a rdf:Property ;
     rdfs:domain kastle:Way ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:understandsWay a rdf:Property ;
     rdfs:domain kastle:Person ;
     rdfs:range kastle:Way .
+
+kastle:usedFor a rdf:Property ;
+    rdfs:domain kastle:Path ;
+    rdfs:range xsd:string .
 

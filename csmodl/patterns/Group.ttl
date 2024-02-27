@@ -1,42 +1,45 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:GroupID a rdf:Property ;
-    rdfs:domain kastle:Group ;
-    rdfs:range kastle:integer .
-
-kastle:GroupName a rdf:Property ;
-    rdfs:domain kastle:Group ;
-    rdfs:range kastle:string .
-
-kastle:GroupSize a rdf:Property ;
-    rdfs:domain kastle:Group ;
-    rdfs:range kastle:integer .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Group> a owl:Ontology ;
+    opla-core:hasPatternName "Group Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Group-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:createdOn a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:creationDate a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:description a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:establishedDate a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:groupDescription a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:groupID a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:groupMember a rdf:Property ;
     rdfs:domain kastle:Group ;
@@ -44,26 +47,26 @@ kastle:groupMember a rdf:Property ;
 
 kastle:groupName a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:groupSize a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:int,
-        kastle:integer,
-        kastle:positiveInteger .
+    rdfs:range xsd:int,
+        kastle:Integer,
+        kastle:Positiveinteger .
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasGroupName a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasGroupSize a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasLeader a rdf:Property ;
     rdfs:domain kastle:Group ;
@@ -81,7 +84,7 @@ kastle:hasMember a rdf:Property ;
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasRole a rdf:Property ;
     rdfs:domain kastle:Member ;
@@ -102,7 +105,7 @@ kastle:member a rdf:Property ;
 
 kastle:memberName a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:memberOf a rdf:Property ;
     rdfs:domain kastle:Member ;
@@ -110,13 +113,13 @@ kastle:memberOf a rdf:Property ;
 
 kastle:memberRole a rdf:Property ;
     rdfs:domain kastle:Member ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Group,
         kastle:Person ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:ofType a rdf:Property ;
     rdfs:domain kastle:Group ;
@@ -124,5 +127,5 @@ kastle:ofType a rdf:Property ;
 
 kastle:size a rdf:Property ;
     rdfs:domain kastle:Group ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 

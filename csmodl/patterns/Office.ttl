@@ -1,38 +1,25 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Email a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
-
-kastle:EmployeeName a rdf:Property ;
-    rdfs:domain kastle:Employee ;
-    rdfs:range kastle:string .
-
-kastle:EmployeeRole a rdf:Property ;
-    rdfs:domain kastle:Employee ;
-    rdfs:range kastle:string .
-
-kastle:Employees a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:Employee .
-
-kastle:Location a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
-
-kastle:Name a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
-
-kastle:PhoneNumber a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Office> a owl:Ontology ;
+    opla-core:hasPatternName "Office Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Office-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:address a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:belongsToOffice a rdf:Property ;
     rdfs:domain kastle:Department ;
@@ -44,19 +31,32 @@ kastle:computerOn a rdf:Property ;
 
 kastle:departmentName a rdf:Property ;
     rdfs:domain kastle:Department ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:departmentResponsibility a rdf:Property ;
     rdfs:domain kastle:Department ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:deskIn a rdf:Property ;
     rdfs:domain kastle:Desk ;
     rdfs:range kastle:Office .
 
 kastle:email a rdf:Property ;
-    rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Office,
+        kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:employeeName a rdf:Property ;
+    rdfs:domain kastle:Employee ;
+    rdfs:range xsd:string .
+
+kastle:employeeRole a rdf:Property ;
+    rdfs:domain kastle:Employee ;
+    rdfs:range xsd:string .
+
+kastle:employees a rdf:Property ;
+    rdfs:domain kastle:Office ;
+    rdfs:range kastle:Employee .
 
 kastle:hasChair a rdf:Property ;
     rdfs:domain kastle:Desk,
@@ -97,12 +97,12 @@ kastle:hasFurniture a rdf:Property ;
 
 kastle:hasLocation a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Employee,
         kastle:Office ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasOffice a rdf:Property ;
     rdfs:domain kastle:Person ;
@@ -114,9 +114,9 @@ kastle:hasOfficeEquipment a rdf:Property ;
 
 kastle:hasOfficeNumber a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:Literal,
-        kastle:integer,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Integer .
 
 kastle:hasRole a rdf:Property ;
     rdfs:domain kastle:Employee ;
@@ -160,23 +160,24 @@ kastle:locatedIn a rdf:Property ;
 
 kastle:location a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:manages a rdf:Property ;
     rdfs:domain kastle:Manager ;
     rdfs:range kastle:Employee .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Office,
+        kastle:Person ;
+    rdfs:range xsd:string .
 
 kastle:numberOfEmployees a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:nonNegativeInteger .
+    rdfs:range kastle:Nonnegativeinteger .
 
 kastle:officeID a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:officeManager a rdf:Property ;
     rdfs:domain kastle:Office ;
@@ -184,11 +185,11 @@ kastle:officeManager a rdf:Property ;
 
 kastle:officeNumber a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:officeSize a rdf:Property ;
     rdfs:domain kastle:Office ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:partOf a rdf:Property ;
     rdfs:domain kastle:Department ;
@@ -198,13 +199,17 @@ kastle:performTask a rdf:Property ;
     rdfs:domain kastle:Task ;
     rdfs:range kastle:Employee .
 
+kastle:phoneNumber a rdf:Property ;
+    rdfs:domain kastle:Office ;
+    rdfs:range xsd:string .
+
 kastle:staffName a rdf:Property ;
     rdfs:domain kastle:StaffMember ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:staffRole a rdf:Property ;
     rdfs:domain kastle:StaffMember ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:useFurniture a rdf:Property ;
     rdfs:domain kastle:Employee ;

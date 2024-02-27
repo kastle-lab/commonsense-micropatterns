@@ -1,10 +1,25 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Body> a owl:Ontology ;
+    opla-core:hasPatternName "Body Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Body-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:hasArm a rdf:Property ;
     rdfs:domain kastle:Body ;
-    rdfs:range kastle:arm .
+    rdfs:range kastle:Arm .
 
 kastle:hasBodyPart a rdf:Property ;
     rdfs:domain kastle:Body,
@@ -16,13 +31,11 @@ kastle:hasBodyPart a rdf:Property ;
 
 kastle:hasHead a rdf:Property ;
     rdfs:domain kastle:Body ;
-    rdfs:range kastle:Head,
-        kastle:head .
+    rdfs:range kastle:Head .
 
 kastle:hasLeg a rdf:Property ;
     rdfs:domain kastle:Body ;
-    rdfs:range kastle:Leg,
-        kastle:leg .
+    rdfs:range kastle:Leg .
 
 kastle:hasLimbs a rdf:Property ;
     rdfs:domain kastle:Body ;
@@ -32,8 +45,7 @@ kastle:hasOrgan a rdf:Property ;
     rdfs:domain kastle:Body,
         kastle:BodyPart,
         kastle:HumanBody ;
-    rdfs:range kastle:Organ,
-        kastle:organ .
+    rdfs:range kastle:Organ .
 
 kastle:hasPart a rdf:Property ;
     rdfs:domain kastle:Body,
@@ -45,8 +57,7 @@ kastle:hasPart a rdf:Property ;
 
 kastle:hasTorso a rdf:Property ;
     rdfs:domain kastle:Body ;
-    rdfs:range kastle:Torso,
-        kastle:torso .
+    rdfs:range kastle:Torso .
 
 kastle:isPartOf a rdf:Property ;
     rdfs:domain kastle:BodyPart ;

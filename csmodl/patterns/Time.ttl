@@ -1,6 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Time> a owl:Ontology ;
+    opla-core:hasPatternName "Time Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Time-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:atTime a rdf:Property ;
     rdfs:domain kastle:Thing ;
@@ -10,13 +25,27 @@ kastle:begin a rdf:Property ;
     rdfs:domain kastle:Interval ;
     rdfs:range kastle:Instant .
 
+kastle:dateTime a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:Datetime .
+
+kastle:dateTimeStamp a rdf:Property ;
+    rdfs:domain kastle:Instant ;
+    rdfs:range kastle:DateTime .
+
 kastle:days a rdf:Property ;
     rdfs:domain kastle:Duration ;
-    rdfs:range kastle:int .
+    rdfs:range xsd:int .
 
 kastle:description a rdf:Property ;
     rdfs:domain kastle:TimeEvent ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:duration a rdf:Property ;
+    rdfs:domain kastle:Interval,
+        kastle:TimePeriod ;
+    rdfs:range rdfs:Literal,
+        kastle:Duration .
 
 kastle:during a rdf:Property ;
     rdfs:domain kastle:Thing ;
@@ -34,11 +63,11 @@ kastle:endTime a rdf:Property ;
     rdfs:domain kastle:Interval,
         kastle:TimeEvent ;
     rdfs:range kastle:DateTime,
-        kastle:dateTime .
+        kastle:Datetime .
 
 kastle:endedAt a rdf:Property ;
     rdfs:domain kastle:TimePeriod ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:endsWith a rdf:Property ;
     rdfs:domain kastle:Interval ;
@@ -53,15 +82,14 @@ kastle:hasBeginning a rdf:Property ;
 
 kastle:hasDateTime a rdf:Property ;
     rdfs:domain kastle:Time ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:hasDuration a rdf:Property ;
     rdfs:domain kastle:Interval,
         kastle:Thing,
         kastle:TimePeriod ;
     rdfs:range kastle:Duration,
-        kastle:TemporalUnit,
-        kastle:duration .
+        kastle:TemporalUnit .
 
 kastle:hasEnd a rdf:Property ;
     rdfs:domain kastle:Interval,
@@ -73,29 +101,29 @@ kastle:hasEnd a rdf:Property ;
 kastle:hasEndTime a rdf:Property ;
     rdfs:domain kastle:TimeInterval,
         kastle:TimePeriod ;
-    rdfs:range kastle:Literal,
-        kastle:dateTime .
+    rdfs:range rdfs:Literal,
+        kastle:Datetime .
 
 kastle:hasHour a rdf:Property ;
     rdfs:domain kastle:Time ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:hasMinute a rdf:Property ;
     rdfs:domain kastle:Time ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:hasSecond a rdf:Property ;
     rdfs:domain kastle:Time ;
-    rdfs:range kastle:int,
-        kastle:integer .
+    rdfs:range xsd:int,
+        kastle:Integer .
 
 kastle:hasStartTime a rdf:Property ;
     rdfs:domain kastle:TimeInterval,
         kastle:TimePeriod ;
-    rdfs:range kastle:Literal,
-        kastle:dateTime .
+    rdfs:range rdfs:Literal,
+        kastle:Datetime .
 
 kastle:hasTemporalUnit a rdf:Property ;
     rdfs:domain kastle:Instant ;
@@ -104,16 +132,16 @@ kastle:hasTemporalUnit a rdf:Property ;
 kastle:hasTime a rdf:Property ;
     rdfs:domain kastle:Event,
         kastle:Thing ;
-    rdfs:range kastle:Time,
-        kastle:dateTime .
+    rdfs:range kastle:Datetime,
+        kastle:Time .
 
 kastle:hasTimezone a rdf:Property ;
     rdfs:domain kastle:Time ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:inDateTime a rdf:Property ;
     rdfs:domain kastle:Instant ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:inFuture a rdf:Property ;
     rdfs:domain kastle:Thing ;
@@ -128,15 +156,15 @@ kastle:inXSDDateTime a rdf:Property ;
         kastle:Instant,
         kastle:Time ;
     rdfs:range kastle:DateTimeDescription,
-        kastle:dateTime .
+        kastle:Datetime .
 
 kastle:inXSDDateTimeStamp a rdf:Property ;
     rdfs:domain kastle:TemporalPosition ;
-    rdfs:range kastle:dateTimeStamp .
+    rdfs:range kastle:Datetimestamp .
 
 kastle:inXSDDuration a rdf:Property ;
     rdfs:domain kastle:Interval ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isPartOf a rdf:Property ;
     rdfs:domain kastle:Interval ;
@@ -158,11 +186,11 @@ kastle:startTime a rdf:Property ;
     rdfs:domain kastle:Interval,
         kastle:TimeEvent ;
     rdfs:range kastle:DateTime,
-        kastle:dateTime .
+        kastle:Datetime .
 
 kastle:startedAt a rdf:Property ;
     rdfs:domain kastle:TimePeriod ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:startsWith a rdf:Property ;
     rdfs:domain kastle:Interval ;
@@ -170,19 +198,5 @@ kastle:startsWith a rdf:Property ;
 
 kastle:title a rdf:Property ;
     rdfs:domain kastle:TimeEvent ;
-    rdfs:range kastle:string .
-
-kastle:dateTimeStamp a rdf:Property ;
-    rdfs:domain kastle:Instant ;
-    rdfs:range kastle:DateTime .
-
-kastle:duration a rdf:Property ;
-    rdfs:domain kastle:Interval,
-        kastle:TimePeriod ;
-    rdfs:range kastle:Literal,
-        kastle:duration .
-
-kastle:DateTime a rdf:Property ;
-    rdfs:domain kastle:Instant ;
-    rdfs:range kastle:dateTime .
+    rdfs:range xsd:string .
 

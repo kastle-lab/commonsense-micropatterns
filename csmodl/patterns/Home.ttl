@@ -1,14 +1,29 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Street a rdf:Property ;
-    rdfs:domain kastle:Address ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Home> a owl:Ontology ;
+    opla-core:hasPatternName "Home Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Home-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:address a rdf:Property ;
     rdfs:domain kastle:Home ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:city a rdf:Property ;
+    rdfs:domain kastle:Address ;
+    rdfs:range xsd:string .
 
 kastle:contains a rdf:Property ;
     rdfs:domain kastle:Home ;
@@ -24,17 +39,17 @@ kastle:equippedWith a rdf:Property ;
 
 kastle:hasAddress a rdf:Property ;
     rdfs:domain kastle:Home ;
-    rdfs:range kastle:Address,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Address .
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasArea a rdf:Property ;
     rdfs:domain kastle:Room ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasCity a rdf:Property ;
     rdfs:domain kastle:Home ;
@@ -49,8 +64,8 @@ kastle:hasFloor a rdf:Property ;
     rdfs:range kastle:Floor .
 
 kastle:hasFurniture a rdf:Property ;
-    rdfs:domain kastle:Room,
-        kastle:n581c47806747464f9a4aa0b3c3d7b864b6 ;
+    rdfs:domain kastle:N9f635a13678342e188972d72f86d6d73b6,
+        kastle:Room ;
     rdfs:range kastle:Furniture .
 
 kastle:hasHome a rdf:Property ;
@@ -63,12 +78,12 @@ kastle:hasLocation a rdf:Property ;
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasNumberOfRooms a rdf:Property ;
     rdfs:domain kastle:Home,
         kastle:House ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasOwner a rdf:Property ;
     rdfs:domain kastle:Home ;
@@ -87,14 +102,12 @@ kastle:hasRoof a rdf:Property ;
     rdfs:range kastle:Roof .
 
 kastle:hasRoom a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Building,
+    rdfs:domain kastle:Building,
         kastle:Home,
-        kastle:House,
-        kastle:home ;
-    rdfs:range kastle:Resource,
-        kastle:Room,
-        kastle:n581c47806747464f9a4aa0b3c3d7b864b1 .
+        kastle:House ;
+    rdfs:range kastle:N9f635a13678342e188972d72f86d6d73b1,
+        kastle:Resource,
+        kastle:Room .
 
 kastle:hasRooms a rdf:Property ;
     rdfs:domain kastle:Home ;
@@ -102,11 +115,11 @@ kastle:hasRooms a rdf:Property ;
 
 kastle:hasSize a rdf:Property ;
     rdfs:domain kastle:Room ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:hasType a rdf:Property ;
     rdfs:domain kastle:Room ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasWindow a rdf:Property ;
     rdfs:domain kastle:Home ;
@@ -114,7 +127,7 @@ kastle:hasWindow a rdf:Property ;
 
 kastle:inCity a rdf:Property ;
     rdfs:domain kastle:Home ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:isHomeOf a rdf:Property ;
     rdfs:domain kastle:Person ;
@@ -144,9 +157,9 @@ kastle:owns a rdf:Property ;
 
 kastle:residesIn a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle: .
+    rdfs:range kastle:Home .
 
-kastle:City a rdf:Property ;
+kastle:street a rdf:Property ;
     rdfs:domain kastle:Address ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 

@@ -1,25 +1,39 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Couch> a owl:Ontology ;
+    opla-core:hasPatternName "Couch Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Couch-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:brand a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:color a rdf:Property ;
-    rdfs:domain kastle:Couch,
-        kastle:couch ;
-    rdfs:range kastle:Literal,
-        kastle:colorType,
-        kastle:string .
+    rdfs:domain kastle:Couch ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Colortype .
 
 kastle:colour a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:depth a rdf:Property ;
     rdfs:domain kastle:Dimensions ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:dimensions a rdf:Property ;
     rdfs:domain kastle:Couch ;
@@ -27,25 +41,24 @@ kastle:dimensions a rdf:Property ;
 
 kastle:hasBrand a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasColor a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:Color,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Color .
 
 kastle:hasCushion a rdf:Property ;
-    rdfs:domain kastle:Couch,
-        kastle:couch ;
-    rdfs:range kastle:Literal,
-        kastle:cushion .
+    rdfs:domain kastle:Couch ;
+    rdfs:range rdfs:Literal,
+        kastle:Cushion .
 
 kastle:hasCushions a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:boolean,
-        kastle:integer .
+    rdfs:range xsd:boolean,
+        kastle:Integer .
 
 kastle:hasDimension a rdf:Property ;
     rdfs:domain kastle:Couch ;
@@ -53,106 +66,101 @@ kastle:hasDimension a rdf:Property ;
 
 kastle:hasDimensions a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasManufacturer a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:Literal,
+    rdfs:range rdfs:Literal,
         kastle:Manufacturer .
 
 kastle:hasMaterial a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Couch ;
-    rdfs:range kastle:Literal,
-        kastle:Material,
-        kastle:material,
-        kastle:string .
+    rdfs:domain kastle:Couch ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Material .
 
 kastle:hasPrice a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:decimal,
-        kastle:float .
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:hasSeatDepth a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasSize a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Couch ;
-    rdfs:range kastle:Literal,
-        kastle:Size,
-        kastle:string .
+    rdfs:domain kastle:Couch ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Size .
 
 kastle:hasStyle a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:Literal,
-        kastle:Style,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Style .
 
 kastle:hasType a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:type .
+    rdfs:domain kastle:Couch ;
+    rdfs:range kastle:Type .
 
 kastle:hasUpholstery a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:Literal,
+    rdfs:range rdfs:Literal,
         kastle:Upholstery .
 
 kastle:hasUpholsteryMaterial a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:height a rdf:Property ;
     rdfs:domain kastle:Dimension,
         kastle:Dimensions ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:isConvertible a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isInLivingRoom a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isUpholstered a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:length a rdf:Property ;
     rdfs:domain kastle:Dimension ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:manufacturer a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:material a rdf:Property ;
+    rdfs:domain kastle:Couch ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Materialtype .
 
 kastle:model a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:size a rdf:Property ;
-    rdfs:domain kastle:Couch,
-        kastle:couch ;
-    rdfs:range kastle:Literal,
-        kastle:decimal,
-        kastle:nonNegativeInteger,
-        kastle:string .
+    rdfs:domain kastle:Couch ;
+    rdfs:range rdfs:Literal,
+        xsd:decimal,
+        xsd:string,
+        kastle:Nonnegativeinteger .
 
 kastle:style a rdf:Property ;
     rdfs:domain kastle:Couch ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:width a rdf:Property ;
     rdfs:domain kastle:Dimension,
         kastle:Dimensions ;
-    rdfs:range kastle:decimal .
-
-kastle:material a rdf:Property ;
-    rdfs:domain kastle:Couch,
-        kastle:couch ;
-    rdfs:range kastle:Literal,
-        kastle:materialType,
-        kastle:string .
+    rdfs:range xsd:decimal .
 

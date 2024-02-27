@@ -1,26 +1,25 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:HasEars a rdf:Property ;
-    rdfs:domain kastle:Head ;
-    rdfs:range kastle:Ear .
-
-kastle:HasEyes a rdf:Property ;
-    rdfs:domain kastle:Head ;
-    rdfs:range kastle:Eye .
-
-kastle:HasMouth a rdf:Property ;
-    rdfs:domain kastle:Head ;
-    rdfs:range kastle:Mouth .
-
-kastle:HasNose a rdf:Property ;
-    rdfs:domain kastle:Head ;
-    rdfs:range kastle:Nose .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Head> a owl:Ontology ;
+    opla-core:hasPatternName "Head Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Head-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:eyeCount a rdf:Property ;
     rdfs:domain kastle:Head ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasEar a rdf:Property ;
     rdfs:domain kastle:Head ;
@@ -28,8 +27,9 @@ kastle:hasEar a rdf:Property ;
 
 kastle:hasEars a rdf:Property ;
     rdfs:domain kastle:Head ;
-    rdfs:range kastle:Ears,
-        kastle:literal .
+    rdfs:range rdfs:Literal,
+        kastle:Ear,
+        kastle:Ears .
 
 kastle:hasEye a rdf:Property ;
     rdfs:domain kastle:Head ;
@@ -37,14 +37,14 @@ kastle:hasEye a rdf:Property ;
 
 kastle:hasEyeColor a rdf:Property ;
     rdfs:domain kastle:Head ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasEyes a rdf:Property ;
     rdfs:domain kastle:Face,
         kastle:Head ;
-    rdfs:range kastle:Eye,
-        kastle:Eyes,
-        kastle:literal .
+    rdfs:range rdfs:Literal,
+        kastle:Eye,
+        kastle:Eyes .
 
 kastle:hasFace a rdf:Property ;
     rdfs:domain kastle:Head ;
@@ -56,12 +56,12 @@ kastle:hasForehead a rdf:Property ;
 
 kastle:hasHair a rdf:Property ;
     rdfs:domain kastle:Head ;
-    rdfs:range kastle:Hair,
-        kastle:literal .
+    rdfs:range rdfs:Literal,
+        kastle:Hair .
 
 kastle:hasHairColor a rdf:Property ;
     rdfs:domain kastle:Head ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasHead a rdf:Property ;
     rdfs:domain kastle:Human,
@@ -71,18 +71,17 @@ kastle:hasHead a rdf:Property ;
 kastle:hasMouth a rdf:Property ;
     rdfs:domain kastle:Face,
         kastle:Head ;
-    rdfs:range kastle:Mouth,
-        kastle:literal .
+    rdfs:range rdfs:Literal,
+        kastle:Mouth .
 
 kastle:hasNose a rdf:Property ;
     rdfs:domain kastle:Face,
         kastle:Head ;
-    rdfs:range kastle:Nose,
-        kastle:literal .
+    rdfs:range rdfs:Literal,
+        kastle:Nose .
 
 kastle:hasPart a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Head ;
+    rdfs:domain kastle:Head ;
     rdfs:range kastle:BodyPart,
         kastle:Class,
         kastle:Head,
@@ -97,6 +96,6 @@ kastle:hasSkin a rdf:Property ;
     rdfs:range kastle:Skin .
 
 kastle:provides a rdf:Property ;
-    rdfs:domain kastle:head ;
-    rdfs:range kastle:it .
+    rdfs:domain kastle:Head ;
+    rdfs:range kastle:It .
 

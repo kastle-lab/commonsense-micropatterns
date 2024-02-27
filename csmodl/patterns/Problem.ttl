@@ -1,18 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:HasCause a rdf:Property ;
-    rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Cause .
-
-kastle:HasEffect a rdf:Property ;
-    rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Effect .
-
-kastle:HasSolution a rdf:Property ;
-    rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Solution .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Problem> a owl:Ontology ;
+    opla-core:hasPatternName "Problem Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Problem-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:belongsToDomain a rdf:Property ;
     rdfs:domain kastle:Problem ;
@@ -20,12 +23,12 @@ kastle:belongsToDomain a rdf:Property ;
 
 kastle:causeDescription a rdf:Property ;
     rdfs:domain kastle:Cause ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:description a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasCause a rdf:Property ;
     rdfs:domain kastle:Problem ;
@@ -33,32 +36,36 @@ kastle:hasCause a rdf:Property ;
 
 kastle:hasComplexity a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:integer,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Integer .
 
 kastle:hasDescription a rdf:Property ;
     rdfs:domain kastle:Problem,
         kastle:Solution,
         kastle:Thing ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasDetails a rdf:Property ;
     rdfs:domain kastle:Cause,
         kastle:Solution ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasDifficulty a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:langString,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Langstring .
 
 kastle:hasDifficultyLevel a rdf:Property ;
     rdfs:domain kastle:Problem ;
     rdfs:range kastle:DifficultyLevel .
 
+kastle:hasEffect a rdf:Property ;
+    rdfs:domain kastle:Problem ;
+    rdfs:range kastle:Effect .
+
 kastle:hasId a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasImpact a rdf:Property ;
     rdfs:domain kastle:Problem ;
@@ -75,11 +82,11 @@ kastle:hasRelatedProblem a rdf:Property ;
 
 kastle:hasResult a rdf:Property ;
     rdfs:domain kastle:Solution ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasSeverity a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasSolution a rdf:Property ;
     rdfs:domain kastle:Problem ;
@@ -88,19 +95,19 @@ kastle:hasSolution a rdf:Property ;
 
 kastle:hasStep a rdf:Property ;
     rdfs:domain kastle:Solution ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasTimeToSolve a rdf:Property ;
     rdfs:domain kastle:Solution ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasTitle a rdf:Property ;
     rdfs:domain kastle:Solution ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:id a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isCausedBy a rdf:Property ;
     rdfs:domain kastle:Problem ;
@@ -108,7 +115,7 @@ kastle:isCausedBy a rdf:Property ;
 
 kastle:isComplex a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isSolutionOf a rdf:Property ;
     rdfs:domain kastle:Solution ;
@@ -124,11 +131,11 @@ kastle:isTypeOf a rdf:Property ;
 
 kastle:issueName a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:problem a rdf:Property ;
     rdfs:domain kastle:Context ;
@@ -136,27 +143,27 @@ kastle:problem a rdf:Property ;
 
 kastle:problemDescription a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:problemSolution a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:ncfe9b49a12e747efa3b8e4d054dd393ab2 .
+    rdfs:range kastle:N4dc4ed49f54e482a9f107c635d04d7afb2 .
 
 kastle:severity a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Literal,
-        kastle:integer .
+    rdfs:range rdfs:Literal,
+        kastle:Integer .
 
 kastle:solution a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:solutionDescription a rdf:Property ;
     rdfs:domain kastle:Solution ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:timeToSolve a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:time .
+    rdfs:range kastle:Time .
 

@@ -1,6 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Game> a owl:Ontology ;
+    opla-core:hasPatternName "Game Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Game-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:developedBy a rdf:Property ;
     rdfs:domain kastle:Game ;
@@ -8,38 +23,36 @@ kastle:developedBy a rdf:Property ;
         kastle:GameDeveloper .
 
 kastle:developer a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Game ;
-    rdfs:range kastle:Developer,
-        kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:Game ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Developer .
 
 kastle:genre a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Game ;
-    rdfs:range kastle:Genre,
-        kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:Game ;
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Genre .
 
 kastle:hasAgeRating a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasDeveloper a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Developer,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Developer .
 
 kastle:hasGenre a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Genre,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Genre .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Game,
         kastle:Player ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasPlatform a rdf:Property ;
     rdfs:domain kastle:Game ;
@@ -47,13 +60,13 @@ kastle:hasPlatform a rdf:Property ;
 
 kastle:hasPlayer a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Person,
-        kastle:Player,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Person,
+        kastle:Player .
 
 kastle:hasPlayerCount a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasPlayerMode a rdf:Property ;
     rdfs:domain kastle:Game ;
@@ -61,17 +74,16 @@ kastle:hasPlayerMode a rdf:Property ;
 
 kastle:hasPrice a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:hasRating a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:decimal,
-        kastle:float .
+    rdfs:range xsd:decimal,
+        xsd:float .
 
 kastle:hasReleaseDate a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Date,
-        kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasReview a rdf:Property ;
     rdfs:domain kastle:Game ;
@@ -79,19 +91,18 @@ kastle:hasReview a rdf:Property ;
 
 kastle:hasRule a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Rule,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Rule .
 
 kastle:hasSkillLevel a rdf:Property ;
     rdfs:domain kastle:Player ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasTitle a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Literal,
-        kastle:String,
-        kastle:langString,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Langstring .
 
 kastle:isAvailableOn a rdf:Property ;
     rdfs:domain kastle:Game ;
@@ -102,16 +113,14 @@ kastle:isDevelopedBy a rdf:Property ;
     rdfs:range kastle:Developer .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Game,
+    rdfs:domain kastle:Game,
         kastle:Publisher ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:platform a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Game ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:domain kastle:Game ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:player a rdf:Property ;
     rdfs:domain kastle:Game ;
@@ -119,7 +128,7 @@ kastle:player a rdf:Property ;
 
 kastle:playerName a rdf:Property ;
     rdfs:domain kastle:Player ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:plays a rdf:Property ;
     rdfs:domain kastle:Player ;
@@ -135,18 +144,17 @@ kastle:publisher a rdf:Property ;
 
 kastle:rating a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Literal,
-        kastle:float .
+    rdfs:range rdfs:Literal,
+        xsd:float .
 
 kastle:releaseDate a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Game ;
-    rdfs:range kastle:Literal,
-        kastle:date .
+    rdfs:domain kastle:Game ;
+    rdfs:range rdfs:Literal,
+        xsd:date .
 
 kastle:releaseYear a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:year .
+    rdfs:range kastle:Year .
 
 kastle:reviewOf a rdf:Property ;
     rdfs:domain kastle:GameReview ;
@@ -154,22 +162,22 @@ kastle:reviewOf a rdf:Property ;
 
 kastle:reviewRating a rdf:Property ;
     rdfs:domain kastle:GameReview ;
-    rdfs:range kastle:int .
+    rdfs:range xsd:int .
 
 kastle:reviewScore a rdf:Property ;
     rdfs:domain kastle:GameReview ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:reviewText a rdf:Property ;
     rdfs:domain kastle:GameReview ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:title a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:wasReleasedIn a rdf:Property ;
     rdfs:domain kastle:Game ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 

@@ -1,24 +1,35 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Population a rdf:Property ;
-    rdfs:domain kastle:City ;
-    rdfs:range kastle:integer .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/City> a owl:Ontology ;
+    opla-core:hasPatternName "City Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "City-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:area a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:Literal,
-        kastle:decimal,
-        kastle:float .
+    rdfs:range rdfs:Literal,
+        xsd:decimal,
+        xsd:float .
 
 kastle:areaInSqKm a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:decimal .
 
 kastle:capital a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:capitalOf a rdf:Property ;
     rdfs:domain kastle:City ;
@@ -30,23 +41,23 @@ kastle:cityContainedInCountry a rdf:Property ;
 
 kastle:country a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:Country,
-        kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string,
+        kastle:Country .
 
 kastle:countryName a rdf:Property ;
     rdfs:domain kastle:Country ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:elevation a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:float .
+    rdfs:range xsd:float .
 
 kastle:hasArea a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:float,
-        kastle:integer,
-        kastle:nonNegativeInteger .
+    rdfs:range xsd:float,
+        kastle:Integer,
+        kastle:Nonnegativeinteger .
 
 kastle:hasMayor a rdf:Property ;
     rdfs:domain kastle:City ;
@@ -54,19 +65,19 @@ kastle:hasMayor a rdf:Property ;
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:hasPopulation a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:Literal,
-        kastle:int,
-        kastle:integer,
-        kastle:nonNegativeInteger .
+    rdfs:range rdfs:Literal,
+        xsd:int,
+        kastle:Integer,
+        kastle:Nonnegativeinteger .
 
 kastle:isCapital a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:isCapitalOf a rdf:Property ;
     rdfs:domain kastle:City ;
@@ -95,8 +106,8 @@ kastle:locatedInCountry a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:Literal,
-        kastle:string .
+    rdfs:range rdfs:Literal,
+        xsd:string .
 
 kastle:partOfCountry a rdf:Property ;
     rdfs:domain kastle:City ;
@@ -104,10 +115,10 @@ kastle:partOfCountry a rdf:Property ;
 
 kastle:population a rdf:Property ;
     rdfs:domain kastle:City ;
-    rdfs:range kastle:Literal,
-        kastle:int,
-        kastle:integer,
-        kastle:nonNegativeInteger .
+    rdfs:range rdfs:Literal,
+        xsd:int,
+        kastle:Integer,
+        kastle:Nonnegativeinteger .
 
 kastle:provide a rdf:Property ;
     rdfs:domain kastle:City ;

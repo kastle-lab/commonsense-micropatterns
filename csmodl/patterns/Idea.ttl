@@ -1,22 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:IdeaCreationDate a rdf:Property ;
-    rdfs:domain kastle:Idea ;
-    rdfs:range kastle:Date .
-
-kastle:IdeaOriginator a rdf:Property ;
-    rdfs:domain kastle:Idea ;
-    rdfs:range kastle:Person .
-
-kastle:IdeaSummary a rdf:Property ;
-    rdfs:domain kastle:Idea ;
-    rdfs:range kastle:Literal .
-
-kastle:Practicality a rdf:Property ;
-    rdfs:domain kastle:Idea ;
-    rdfs:range kastle:Applicability .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Idea> a owl:Ontology ;
+    opla-core:hasPatternName "Idea Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Idea-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:associatedWithConcept a rdf:Property ;
     rdfs:domain kastle:Idea ;
@@ -24,55 +23,52 @@ kastle:associatedWithConcept a rdf:Property ;
 
 kastle:dateOfIdea a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:description a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Idea ;
+    rdfs:range xsd:string .
 
 kastle:descriptionOfIdea a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:evaluation a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:integer .
+    rdfs:domain kastle:Idea ;
+    rdfs:range kastle:Integer .
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Person ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasAuthor a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:Author,
-        kastle:Person,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Author,
+        kastle:Person .
 
 kastle:hasCreationDate a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:date,
-        kastle:dateTime .
+    rdfs:range xsd:date,
+        kastle:Datetime .
 
 kastle:hasCreator a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Idea ;
+    rdfs:domain kastle:Idea ;
     rdfs:range kastle:Creator,
         kastle:Resource .
 
 kastle:hasDate a rdf:Property ;
-    rdfs:domain kastle:,
-        kastle:Idea ;
-    rdfs:range kastle:date,
-        kastle:dateTime .
+    rdfs:domain kastle:Idea ;
+    rdfs:range xsd:date,
+        kastle:Datetime .
 
 kastle:hasDateCreated a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:dateTime .
+    rdfs:range kastle:Datetime .
 
 kastle:hasDescription a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasIdea a rdf:Property ;
     rdfs:domain kastle:Agent,
@@ -82,20 +78,20 @@ kastle:hasIdea a rdf:Property ;
 
 kastle:hasIdeaValue a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasImpact a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Creator,
         kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasOrigin a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasOriginality a rdf:Property ;
     rdfs:domain kastle:Idea ;
@@ -115,7 +111,7 @@ kastle:hasResultingAction a rdf:Property ;
 
 kastle:hasTitle a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:ideaBelongsTo a rdf:Property ;
     rdfs:domain kastle:Idea ;
@@ -123,23 +119,35 @@ kastle:ideaBelongsTo a rdf:Property ;
 
 kastle:ideaContent a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:ideaCreationDate a rdf:Property ;
+    rdfs:domain kastle:Idea ;
+    rdfs:range xsd:date .
+
+kastle:ideaOriginator a rdf:Property ;
+    rdfs:domain kastle:Idea ;
+    rdfs:range kastle:Person .
+
+kastle:ideaSummary a rdf:Property ;
+    rdfs:domain kastle:Idea ;
+    rdfs:range rdfs:Literal .
 
 kastle:implementationStatus a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Idea ;
+    rdfs:range xsd:string .
 
 kastle:inspirationSource a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Idea ;
+    rdfs:range xsd:string .
 
 kastle:inspiredBy a rdf:Property ;
     rdfs:domain kastle:Idea ;
     rdfs:range kastle:Event .
 
 kastle:isImplemented a rdf:Property ;
-    rdfs:domain kastle: ;
-    rdfs:range kastle:boolean .
+    rdfs:domain kastle:Idea ;
+    rdfs:range xsd:boolean .
 
 kastle:isInspiredBy a rdf:Property ;
     rdfs:domain kastle:Idea ;
@@ -147,7 +155,7 @@ kastle:isInspiredBy a rdf:Property ;
 
 kastle:isOriginal a rdf:Property ;
     rdfs:domain kastle:Idea ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:isRelatedTo a rdf:Property ;
     rdfs:domain kastle:Idea ;
@@ -156,4 +164,8 @@ kastle:isRelatedTo a rdf:Property ;
 kastle:leadTo a rdf:Property ;
     rdfs:domain kastle:Idea ;
     rdfs:range kastle:Action .
+
+kastle:practicality a rdf:Property ;
+    rdfs:domain kastle:Idea ;
+    rdfs:range kastle:Applicability .
 

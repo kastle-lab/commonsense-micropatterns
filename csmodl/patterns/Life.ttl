@@ -1,50 +1,54 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Breathe a rdf:Property ;
-    rdfs:domain kastle:Animal ;
-    rdfs:range kastle:Literal .
-
-kastle:Eat a rdf:Property ;
-    rdfs:domain kastle:Animal ;
-    rdfs:range kastle:Life .
-
-kastle:Grow a rdf:Property ;
-    rdfs:domain kastle:Life ;
-    rdfs:range kastle:Literal .
-
-kastle:HasCells a rdf:Property ;
-    rdfs:domain kastle:Organism ;
-    rdfs:range kastle:Cell .
-
-kastle:Reproduce a rdf:Property ;
-    rdfs:domain kastle:Life ;
-    rdfs:range kastle:Life .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Life> a owl:Ontology ;
+    opla-core:hasPatternName "Life Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Life-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:birthDate a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:Date .
+    rdfs:range xsd:date .
+
+kastle:breathe a rdf:Property ;
+    rdfs:domain kastle:Animal ;
+    rdfs:range rdfs:Literal .
 
 kastle:consume a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:boolean .
+    rdfs:range xsd:boolean .
 
 kastle:deathDate a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:Date .
+    rdfs:range xsd:date .
+
+kastle:eat a rdf:Property ;
+    rdfs:domain kastle:Animal ;
+    rdfs:range kastle:Life .
 
 kastle:grow a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:boolean .
+    rdfs:range rdfs:Literal,
+        xsd:boolean .
 
 kastle:habitat a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasAge a rdf:Property ;
     rdfs:domain kastle:Organism ;
-    rdfs:range kastle:integer .
+    rdfs:range kastle:Integer .
 
 kastle:hasBeginning a rdf:Property ;
     rdfs:domain kastle:Life ;
@@ -53,6 +57,10 @@ kastle:hasBeginning a rdf:Property ;
 kastle:hasBirth a rdf:Property ;
     rdfs:domain kastle:Life ;
     rdfs:range kastle:Birth .
+
+kastle:hasCells a rdf:Property ;
+    rdfs:domain kastle:Organism ;
+    rdfs:range kastle:Cell .
 
 kastle:hasChild a rdf:Property ;
     rdfs:domain kastle:Life ;
@@ -86,8 +94,8 @@ kastle:hasLifeCycle a rdf:Property ;
 
 kastle:hasLifeSpan a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:LifeSpan,
-        kastle:Literal .
+    rdfs:range rdfs:Literal,
+        kastle:LifeSpan .
 
 kastle:hasLifeStage a rdf:Property ;
     rdfs:domain kastle:Life,
@@ -96,7 +104,7 @@ kastle:hasLifeStage a rdf:Property ;
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasOrganism a rdf:Property ;
     rdfs:domain kastle:Life ;
@@ -115,26 +123,27 @@ kastle:hasSibling a rdf:Property ;
 kastle:hasSpecies a rdf:Property ;
     rdfs:domain kastle:Life,
         kastle:Organism ;
-    rdfs:range kastle:Species,
-        kastle:string .
+    rdfs:range xsd:string,
+        kastle:Species .
 
 kastle:hasTaxonomicRank a rdf:Property ;
     rdfs:domain kastle:Organism ;
     rdfs:range kastle:TaxonomicRank .
 
+kastle:lifeSpan a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range xsd:decimal .
+
 kastle:lifespan a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Organism ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:reproduce a rdf:Property ;
     rdfs:domain kastle:Life ;
-    rdfs:range kastle:boolean .
-
-kastle:LifeSpan a rdf:Property ;
-    rdfs:domain kastle:Entity ;
-    rdfs:range kastle:decimal .
+    rdfs:range xsd:boolean,
+        kastle:Life .
 

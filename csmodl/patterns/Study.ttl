@@ -1,10 +1,21 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
+@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:UniName a rdf:Property ;
-    rdfs:domain kastle:University ;
-    rdfs:range kastle:string .
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Study> a owl:Ontology ;
+    opla-core:hasPatternName "Study Pattern"^^xsd:string ;
+    opla-cp:addressesScenario ""^^xsd:string ;
+    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
+    opla-sd:hasConnections ""^^xsd:string ;
+    opla-sd:hasSchemaDiagramFileName "Study-pattern.pdf"^^xsd:string ;
+    dc:contributor ""^^xsd:string ;
+    dc:creator ""^^xsd:string .
 
 kastle:atLocation a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -22,6 +33,13 @@ kastle:courseOfStudy a rdf:Property ;
     rdfs:domain kastle:Study ;
     rdfs:range kastle:Course .
 
+kastle:duration a rdf:Property ;
+    rdfs:domain kastle:Course,
+        kastle:Study ;
+    rdfs:range kastle:Duration,
+        kastle:Integer,
+        kastle:Positiveinteger .
+
 kastle:enrolledIn a rdf:Property ;
     rdfs:domain kastle:Student ;
     rdfs:range kastle:Course .
@@ -36,11 +54,11 @@ kastle:hasCourse a rdf:Property ;
 
 kastle:hasDuration a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasID a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasInvestigator a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -48,11 +66,11 @@ kastle:hasInvestigator a rdf:Property ;
 
 kastle:hasLevel a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:Literal .
+    rdfs:range rdfs:Literal .
 
 kastle:hasLocation a rdf:Property ;
-    rdfs:domain kastle:course ;
-    rdfs:range kastle:string .
+    rdfs:domain kastle:Course ;
+    rdfs:range xsd:string .
 
 kastle:hasMethod a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -60,7 +78,7 @@ kastle:hasMethod a rdf:Property ;
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasPublication a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -88,31 +106,31 @@ kastle:hasStudyArea a rdf:Property ;
 
 kastle:hasStudyDate a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:date .
+    rdfs:range xsd:date .
 
 kastle:hasStudyID a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasStudyName a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasStudyTopic a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasSubject a rdf:Property ;
     rdfs:domain kastle:Course,
         kastle:Study ;
-    rdfs:range kastle:Literal,
+    rdfs:range rdfs:Literal,
+        xsd:string,
         kastle:Resource,
-        kastle:Subject,
-        kastle:string .
+        kastle:Subject .
 
 kastle:hasTitle a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:hasTopic a rdf:Property ;
     rdfs:domain kastle:Course,
@@ -125,8 +143,8 @@ kastle:isCourseOf a rdf:Property ;
     rdfs:range kastle:Course .
 
 kastle:isEnrolledIn a rdf:Property ;
-    rdfs:domain kastle:student ;
-    rdfs:range kastle:course .
+    rdfs:domain kastle:Student ;
+    rdfs:range kastle:Course .
 
 kastle:isInInstitution a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -137,8 +155,8 @@ kastle:isPartOf a rdf:Property ;
     rdfs:range kastle:Study .
 
 kastle:isStudiedBy a rdf:Property ;
-    rdfs:domain kastle:course ;
-    rdfs:range kastle:student .
+    rdfs:domain kastle:Course ;
+    rdfs:range kastle:Student .
 
 kastle:isStudyBy a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -149,8 +167,8 @@ kastle:isStudying a rdf:Property ;
     rdfs:range kastle:Subject .
 
 kastle:isTaughtBy a rdf:Property ;
-    rdfs:domain kastle:course ;
-    rdfs:range kastle:teacher .
+    rdfs:domain kastle:Course ;
+    rdfs:range kastle:Teacher .
 
 kastle:isTutoredBy a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -158,7 +176,7 @@ kastle:isTutoredBy a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Student ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:partOfCurriculum a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -172,13 +190,17 @@ kastle:researcher a rdf:Property ;
     rdfs:domain kastle:Study ;
     rdfs:range kastle:Person .
 
+kastle:student a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Student .
+
 kastle:studentID a rdf:Property ;
     rdfs:domain kastle:Student ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:studentName a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:studiedBy a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -190,7 +212,7 @@ kastle:studies a rdf:Property ;
 
 kastle:subject a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
 
 kastle:takesPlaceAt a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -206,7 +228,11 @@ kastle:teaches a rdf:Property ;
 
 kastle:title a rdf:Property ;
     rdfs:domain kastle:Study ;
-    rdfs:range kastle:string .
+    rdfs:range xsd:string .
+
+kastle:uniName a rdf:Property ;
+    rdfs:domain kastle:University ;
+    rdfs:range xsd:string .
 
 kastle:uses a rdf:Property ;
     rdfs:domain kastle:Study ;
@@ -215,15 +241,4 @@ kastle:uses a rdf:Property ;
 kastle:usesSourceMaterial a rdf:Property ;
     rdfs:domain kastle:Study ;
     rdfs:range kastle:SourceMaterial .
-
-kastle:duration a rdf:Property ;
-    rdfs:domain kastle:Course,
-        kastle:Study ;
-    rdfs:range kastle:duration,
-        kastle:integer,
-        kastle:positiveInteger .
-
-kastle:student a rdf:Property ;
-    rdfs:domain kastle:Study ;
-    rdfs:range kastle:Student .
 

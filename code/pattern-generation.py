@@ -1,3 +1,4 @@
+import sys
 import os
 from rdflib import URIRef, Graph, Namespace, Literal
 from rdflib import OWL, RDF, RDFS, XSD, TIME
@@ -73,6 +74,9 @@ def markdown_cleanup(ontology):
 def strip_uri(uri):
     tokens = re.split("[#/]", uri)
     name = tokens[-1]
+    if tokens[-1]=="":
+        name = tokens[len(tokens)-2]
+
     return name
 
 def parse_results(verbose=False):
@@ -200,7 +204,7 @@ def vote_properties(verbose=False):
             noun_dir = os.path.join(output_path, noun)
 
             analysis_noun_filename = f"{noun}.out"
-            analysis_noun_filepath = os.path.join(analysis_path, analysis_noun_filename)
+            analysis_filepath = os.path.join(analysis_path, analysis_noun_filename)
             with open(analysis_filepath, "w") as analysis_noun_file:
                 # All occurences from all nouns
                 noun_properties = dict()
@@ -240,10 +244,18 @@ def vote_properties(verbose=False):
                                 try:
                                     domain_name = strip_uri(prop_domain)
                                     range_name = strip_uri(prop_range)
+                                    
+                                    # Convert URIs to Pascal Case
+                                    if domain_name[0].islower():
+                                        domain_name = domain_name.capitalize()
+                                    if range_name[0].islower():
+                                        range_name = range_name.capitalize()
+                                    
                                 except:
                                     if verbose:
                                         print(prop_domain)
                                         print(prop_range)
+                                
                                 unique_props.add((prop_name, domain_name, range_name))
 
                         for unique_prop in unique_props:
@@ -264,9 +276,27 @@ def vote_properties(verbose=False):
                 p, d, r = k
 
                 if v > threshold:
+                    # Use correct prefix where applicable
+                    xsd_pfx = ["boolean", 
+                               "float", "int", "decimal", 
+                               "string", "date"]
+                    rdfs_pfx = ["Literal"]
+                    d_pfx = "kastle"
+                    r_pfx = "kastle"
+
+                    #  Convert predicate to camelcase
+                    p = p[0].lower() + p[1:]
+
                     noun_graph.add( (pfs["kastle"][p], a, RDF.Property) )
-                    noun_graph.add( (pfs["kastle"][p], RDFS.domain, pfs["kastle"][d]))
-                    noun_graph.add( (pfs["kastle"][p], RDFS.range, pfs["kastle"][r]))
+
+                    if str(r).lower() in xsd_pfx:
+                        r_pfx = "xsd"
+                        r = r.lower()
+                    if r in rdfs_pfx:
+                        r_pfx = "rdfs"
+                    
+                    noun_graph.add( (pfs["kastle"][p], RDFS.domain, pfs[f"{d_pfx}"][d]))
+                    noun_graph.add( (pfs["kastle"][p], RDFS.range, pfs[f"{r_pfx}"][r]))
 
             # Serialize!
             try:
@@ -274,6 +304,50 @@ def vote_properties(verbose=False):
             except Exception as ex:
                 print(noun)
 
+def generate_opla_annotations():
+    # Predicate shortcut
+    a = pfs["rdf"]["type"]
+
+    opla_pfs = {
+        "dc": Namespace("http://purl.org/dc/elements/1.1/"),
+        "opla": Namespace("http://ontologydesignpatterns.org/opla#"),
+        "opla-core": Namespace("http://ontologydesignpatterns.org/opla-core#"),
+        "opla-sd": Namespace("http://ontologydesignpatterns.org/opla-sd#"),
+        "opla-cp": Namespace("http://ontologydesignpatterns.org/opla-cp#")
+    }
+
+    opla_noun_namespace = "https://archive.org/services/purl/domain/modular_ontology_design_library/"
+
+    for filename in os.listdir(pattern_path): # For each Noun
+        noun, ext = filename.split(".")
+        noun = noun.replace(" ", "")
+        noun_ontology = f"{opla_noun_namespace}{noun}"
+
+        graph = init_kg()
+        for opla_pf in opla_pfs:
+            graph.bind(opla_pf, opla_pfs[opla_pf])
+        
+        graph.parse(os.path.join(pattern_path,filename))
+
+        # Mint URI
+        noun_onto_uri = Namespace(noun_ontology)[""]
+        
+        # Add to graph
+        graph.add((noun_onto_uri, a, OWL.Ontology))
+        
+        # Add OPLA Properties
+        graph.add( (noun_onto_uri, opla_pfs["opla-core"]["hasPatternName"], Literal(f"{noun} Pattern", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["opla-cp"]["addressesScenario"], Literal(f"", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["opla-cp"]["hasCompentencyQuestion"], Literal(f"", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["opla-sd"]["hasSchemaDiagramFileName"], Literal(f"{noun}-pattern.pdf", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["opla-sd"]["hasConnections"], Literal(f"", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["contributor"], Literal(f"", datatype=XSD.string)) )
+        graph.add( (noun_onto_uri, opla_pfs["dc"]["creator"], Literal(f"", datatype=XSD.string)) )
+        
+        # Overwrite original TTL file with new additions
+        serialization(noun, graph)
+
 if __name__ == "__main__":
     parse_results()
     vote_properties()
+    generate_opla_annotations()
