@@ -38,9 +38,9 @@ kastle:Manager a rdfs:Class .
 
 kastle:Market a rdfs:Class .
 
-kastle:Na116fa118982467d97308239d4701387b1 a rdfs:Class .
+kastle:N02ad3a2163c64a9493196f7a7dea4889b1 a rdfs:Class .
 
-kastle:Na116fa118982467d97308239d4701387b6 a rdfs:Class .
+kastle:N02ad3a2163c64a9493196f7a7dea4889b6 a rdfs:Class .
 
 kastle:Owner a rdfs:Class .
 
@@ -177,7 +177,7 @@ kastle:locName a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Business,
-        kastle:Na116fa118982467d97308239d4701387b1 ;
+        kastle:N02ad3a2163c64a9493196f7a7dea4889b1 ;
     rdfs:range xsd:string .
 
 kastle:offers a rdf:Property ;
@@ -208,7 +208,7 @@ kastle:owns a rdf:Property ;
     rdfs:range kastle:Business .
 
 kastle:price a rdf:Property ;
-    rdfs:domain kastle:Na116fa118982467d97308239d4701387b6,
+    rdfs:domain kastle:N02ad3a2163c64a9493196f7a7dea4889b6,
         kastle:Product ;
     rdfs:range xsd:float .
 

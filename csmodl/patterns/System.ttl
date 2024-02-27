@@ -22,7 +22,7 @@ kastle:Functionality a rdfs:Class .
 
 kastle:Hardware a rdfs:Class .
 
-kastle:Nfdb78c28c7c6414796d4536bdf6c9e44b1 a rdfs:Class .
+kastle:N0e458e3e278a42569bd10282b3313a82b1 a rdfs:Class .
 
 kastle:Objective a rdfs:Class .
 
@@ -160,7 +160,7 @@ kastle:isPartOf a rdf:Property ;
     rdfs:range kastle:System .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:Nfdb78c28c7c6414796d4536bdf6c9e44b1 ;
+    rdfs:domain kastle:N0e458e3e278a42569bd10282b3313a82b1 ;
     rdfs:range xsd:string .
 
 kastle:partOf a rdf:Property ;

@@ -20,7 +20,7 @@ kastle:Entity a rdfs:Class .
 
 kastle:Event a rdfs:Class .
 
-kastle:N39d4cd082d924effb88de8a7b3eb6b84b1 a rdfs:Class .
+kastle:N94730cb181d24a70a609651db0faf9a1b1 a rdfs:Class .
 
 kastle:Process a rdfs:Class .
 
@@ -110,7 +110,7 @@ kastle:hasTime a rdf:Property ;
 
 kastle:isEndOf a rdf:Property ;
     rdfs:domain kastle:End,
-        kastle:N39d4cd082d924effb88de8a7b3eb6b84b1 ;
+        kastle:N94730cb181d24a70a609651db0faf9a1b1 ;
     rdfs:range kastle:End,
         kastle:Resource,
         kastle:Thing .

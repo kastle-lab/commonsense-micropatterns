@@ -24,7 +24,7 @@ kastle:Moment a rdfs:Class .
 
 kastle:MomentProperty a rdfs:Class .
 
-kastle:N85f78ebca3cf47fab1f7804296b1167bb1 a rdfs:Class .
+kastle:N561ea2ac4a724edea0554e4e7b70ae28b1 a rdfs:Class .
 
 kastle:Period a rdfs:Class .
 
@@ -208,7 +208,7 @@ kastle:startDate a rdf:Property ;
     rdfs:range kastle:Instant .
 
 kastle:startTime a rdf:Property ;
-    rdfs:domain kastle:N85f78ebca3cf47fab1f7804296b1167bb1 ;
+    rdfs:domain kastle:N561ea2ac4a724edea0554e4e7b70ae28b1 ;
     rdfs:range kastle:Datetime .
 
 kastle:time a rdf:Property ;

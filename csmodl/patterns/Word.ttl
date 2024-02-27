@@ -16,7 +16,7 @@ kastle:MailMerge a rdfs:Class .
 
 kastle:Meaning a rdfs:Class .
 
-kastle:Ne74ed9a392954f9ba0809a674706a299b1 a rdfs:Class .
+kastle:N2cddea4bea084cd085abec5c5e0d1631b1 a rdfs:Class .
 
 kastle:PageLayout a rdfs:Class .
 
@@ -101,7 +101,7 @@ kastle:hasOrigin a rdf:Property ;
 
 kastle:hasPartOfSpeech a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:Ne74ed9a392954f9ba0809a674706a299b1,
+    rdfs:range kastle:N2cddea4bea084cd085abec5c5e0d1631b1,
         kastle:PartOfSpeech .
 
 kastle:hasSpelling a rdf:Property ;

@@ -24,7 +24,7 @@ kastle:Location a rdfs:Class .
 
 kastle:Method a rdfs:Class .
 
-kastle:N8dcd3b3aefe14a0787ae9a8d07196903b1 a rdfs:Class .
+kastle:N2a55b1dbfb6d41e59fd96be9b0796581b1 a rdfs:Class .
 
 kastle:Path a rdfs:Class .
 
@@ -182,7 +182,7 @@ kastle:hasType a rdf:Property ;
 
 kastle:hasWay a rdf:Property ;
     rdfs:domain kastle:Entity,
-        kastle:N8dcd3b3aefe14a0787ae9a8d07196903b1,
+        kastle:N2a55b1dbfb6d41e59fd96be9b0796581b1,
         kastle:Subject ;
     rdfs:range kastle:Way .
 

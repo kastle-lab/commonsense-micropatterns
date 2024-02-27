@@ -24,9 +24,9 @@ kastle:Grade a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:N1281d2c891154f1c8ff9bcfc559fb528b1 a rdfs:Class .
+kastle:Nceb8452f06ee405bb5b0408f01697fe9b1 a rdfs:Class .
 
-kastle:N1281d2c891154f1c8ff9bcfc559fb528b4 a rdfs:Class .
+kastle:Nceb8452f06ee405bb5b0408f01697fe9b4 a rdfs:Class .
 
 kastle:Process a rdfs:Class .
 
@@ -101,7 +101,7 @@ kastle:hasResult a rdf:Property ;
         kastle:Activity,
         kastle:Event,
         kastle:Experiment,
-        kastle:N1281d2c891154f1c8ff9bcfc559fb528b1,
+        kastle:Nceb8452f06ee405bb5b0408f01697fe9b1,
         kastle:Process,
         kastle:Test ;
     rdfs:range kastle:Result .
@@ -143,7 +143,7 @@ kastle:hasValue a rdf:Property ;
 kastle:isResultOf a rdf:Property ;
     rdfs:domain kastle:Result ;
     rdfs:range xsd:string,
-        kastle:N1281d2c891154f1c8ff9bcfc559fb528b4,
+        kastle:Nceb8452f06ee405bb5b0408f01697fe9b4,
         kastle:Process .
 
 kastle:isSuccess a rdf:Property ;

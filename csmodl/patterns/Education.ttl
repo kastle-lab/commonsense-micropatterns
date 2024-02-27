@@ -28,9 +28,9 @@ kastle:Integer a rdfs:Class .
 
 kastle:KnowledgeArea a rdfs:Class .
 
-kastle:N7e834ba46d21425b8569bae18c184339b1 a rdfs:Class .
+kastle:N5bbd6e29530947beb8f615fc5dbf6f2db1 a rdfs:Class .
 
-kastle:N82a3e901cfc3429c9a44f4858c66befcb1 a rdfs:Class .
+kastle:N9d79204b39c044319b53b8fe12f6e978b1 a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
@@ -139,8 +139,8 @@ kastle:hasTeacher a rdf:Property ;
     rdfs:range kastle:Teacher .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:N7e834ba46d21425b8569bae18c184339b1,
-        kastle:N82a3e901cfc3429c9a44f4858c66befcb1 ;
+    rdfs:domain kastle:N5bbd6e29530947beb8f615fc5dbf6f2db1,
+        kastle:N9d79204b39c044319b53b8fe12f6e978b1 ;
     rdfs:range xsd:string .
 
 kastle:offeredBy a rdf:Property ;

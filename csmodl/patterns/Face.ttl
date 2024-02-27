@@ -28,7 +28,7 @@ kastle:Integer a rdfs:Class .
 
 kastle:Mouth a rdfs:Class .
 
-kastle:Na4b88395667a43da8205d5d1ce1b8298b1 a rdfs:Class .
+kastle:N525336bfa75d4f78a24d7e253f4a81deb1 a rdfs:Class .
 
 kastle:Nose a rdfs:Class .
 
@@ -92,7 +92,7 @@ kastle:hasFace a rdf:Property ;
 kastle:hasFacialFeature a rdf:Property ;
     rdfs:domain kastle:Face ;
     rdfs:range kastle:FacialFeature,
-        kastle:Na4b88395667a43da8205d5d1ce1b8298b1 .
+        kastle:N525336bfa75d4f78a24d7e253f4a81deb1 .
 
 kastle:hasFeature a rdf:Property ;
     rdfs:domain kastle:Face ;

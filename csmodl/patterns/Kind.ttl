@@ -12,7 +12,7 @@ kastle:Kind a rdfs:Class .
 
 kastle:KindCategory a rdfs:Class .
 
-kastle:N1150a710ba4c4c32880061d2bd478b3db1 a rdfs:Class .
+kastle:N65ddc27a3c544c6782e39e483e7e3f90b1 a rdfs:Class .
 
 kastle:Property a rdfs:Class .
 
@@ -63,7 +63,7 @@ kastle:hasKind a rdf:Property ;
         kastle:Kind,
         kastle:Thing ;
     rdfs:range kastle:Kind,
-        kastle:N1150a710ba4c4c32880061d2bd478b3db1 .
+        kastle:N65ddc27a3c544c6782e39e483e7e3f90b1 .
 
 kastle:hasName a rdf:Property ;
     rdfs:domain kastle:Kind ;

@@ -16,7 +16,7 @@ kastle:Double a rdfs:Class .
 
 kastle:GeographicalEntity a rdfs:Class .
 
-kastle:N9507cf52957b411bbdfd5d5f13141164b1 a rdfs:Class .
+kastle:Nb00870737ad34eacbb9d0be7341efb98b1 a rdfs:Class .
 
 kastle:PhysicalEntity a rdfs:Class .
 
@@ -84,7 +84,7 @@ kastle:hasType a rdf:Property ;
 kastle:hasUnit a rdf:Property ;
     rdfs:domain kastle:Area ;
     rdfs:range kastle:AreaUnit,
-        kastle:N9507cf52957b411bbdfd5d5f13141164b1,
+        kastle:Nb00870737ad34eacbb9d0be7341efb98b1,
         kastle:Unit,
         kastle:UnitOfMeasurement .
 

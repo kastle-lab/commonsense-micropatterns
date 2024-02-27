@@ -26,11 +26,11 @@ kastle:Male a rdfs:Class .
 
 kastle:Man a rdfs:Class .
 
-kastle:N0490cd754b4c4a65b376ad0b7b22fa8fb1 a rdfs:Class .
+kastle:Nd8b5031520b94b15b941a62c03efd064b1 a rdfs:Class .
 
-kastle:N0490cd754b4c4a65b376ad0b7b22fa8fb4 a rdfs:Class .
+kastle:Nd8b5031520b94b15b941a62c03efd064b4 a rdfs:Class .
 
-kastle:N0490cd754b4c4a65b376ad0b7b22fa8fb7 a rdfs:Class .
+kastle:Nd8b5031520b94b15b941a62c03efd064b7 a rdfs:Class .
 
 kastle:Parent a rdfs:Class .
 
@@ -111,7 +111,7 @@ kastle:hasBirthDate a rdf:Property ;
 
 kastle:hasChild a rdf:Property ;
     rdfs:domain kastle:Family,
-        kastle:N0490cd754b4c4a65b376ad0b7b22fa8fb1,
+        kastle:Nd8b5031520b94b15b941a62c03efd064b1,
         kastle:Parent,
         kastle:Person ;
     rdfs:range kastle:Child,
@@ -186,10 +186,10 @@ kastle:hasSon a rdf:Property ;
 
 kastle:hasSpouse a rdf:Property ;
     rdfs:domain kastle:FamilyMember,
-        kastle:N0490cd754b4c4a65b376ad0b7b22fa8fb4,
+        kastle:Nd8b5031520b94b15b941a62c03efd064b4,
         kastle:Person ;
     rdfs:range kastle:FamilyMember,
-        kastle:N0490cd754b4c4a65b376ad0b7b22fa8fb7,
+        kastle:Nd8b5031520b94b15b941a62c03efd064b7,
         kastle:Person .
 
 kastle:isAlive a rdf:Property ;

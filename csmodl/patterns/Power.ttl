@@ -24,7 +24,7 @@ kastle:Integer a rdfs:Class .
 
 kastle:Machine a rdfs:Class .
 
-kastle:N55354bb11c7549b799dd72a03e38cda1b1 a rdfs:Class .
+kastle:N6b3e4ac5b9644f0a91f68b360a183030b1 a rdfs:Class .
 
 kastle:Object a rdfs:Class .
 
@@ -75,7 +75,7 @@ kastle:amountOfPower a rdf:Property ;
 
 kastle:calculatesPower a rdf:Property ;
     rdfs:domain kastle:Entity ;
-    rdfs:range kastle:N55354bb11c7549b799dd72a03e38cda1b1 .
+    rdfs:range kastle:N6b3e4ac5b9644f0a91f68b360a183030b1 .
 
 kastle:capacity a rdf:Property ;
     rdfs:domain kastle:Power ;

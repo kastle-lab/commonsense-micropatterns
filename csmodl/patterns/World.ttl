@@ -28,21 +28,21 @@ kastle:Language a rdfs:Class .
 
 kastle:Mountain a rdfs:Class .
 
-kastle:N333dc2831a044fd09e76fff2769096d2b1 a rdfs:Class .
+kastle:N02b5492f6a564e758bc3dce6b8bca3e8b1 a rdfs:Class .
 
-kastle:N333dc2831a044fd09e76fff2769096d2b5 a rdfs:Class .
+kastle:N04932e907f214dc2b954d6126b24d67eb1 a rdfs:Class .
 
-kastle:N8348453f7ffd48f49028bf51f8ec9753b1 a rdfs:Class .
+kastle:N04932e907f214dc2b954d6126b24d67eb4 a rdfs:Class .
 
-kastle:N8348453f7ffd48f49028bf51f8ec9753b4 a rdfs:Class .
+kastle:N295be23ef7d2447893cd694843c33d9bb1 a rdfs:Class .
 
-kastle:Ne17d5fca63a941579e06d760c778adbeb1 a rdfs:Class .
+kastle:Nd85ecf40e0b049b79a5aeee380e8af59b1 a rdfs:Class .
 
-kastle:Nf1cd638452f943b286376083fc2ac462b1 a rdfs:Class .
+kastle:Nd85ecf40e0b049b79a5aeee380e8af59b6 a rdfs:Class .
 
-kastle:Nf5302061636c49efa8b7ea45030d64c6b1 a rdfs:Class .
+kastle:Ndf17663bb5e340ca80a0111283fd9046b1 a rdfs:Class .
 
-kastle:Nf5302061636c49efa8b7ea45030d64c6b6 a rdfs:Class .
+kastle:Ndf17663bb5e340ca80a0111283fd9046b5 a rdfs:Class .
 
 kastle:Ocean a rdfs:Class .
 
@@ -114,8 +114,8 @@ kastle:hasAge a rdf:Property ;
 
 kastle:hasArea a rdf:Property ;
     rdfs:domain kastle:Country,
-        kastle:N333dc2831a044fd09e76fff2769096d2b5,
-        kastle:N8348453f7ffd48f49028bf51f8ec9753b4 ;
+        kastle:N04932e907f214dc2b954d6126b24d67eb4,
+        kastle:Ndf17663bb5e340ca80a0111283fd9046b5 ;
     rdfs:range kastle:Area,
         kastle:Integer,
         kastle:Positiveinteger .
@@ -149,7 +149,7 @@ kastle:hasMountain a rdf:Property ;
     rdfs:range kastle:Mountain .
 
 kastle:hasName a rdf:Property ;
-    rdfs:domain kastle:Nf1cd638452f943b286376083fc2ac462b1 ;
+    rdfs:domain kastle:N295be23ef7d2447893cd694843c33d9bb1 ;
     rdfs:range xsd:string .
 
 kastle:hasPart a rdf:Property ;
@@ -160,8 +160,8 @@ kastle:hasPart a rdf:Property ;
 kastle:hasPopulation a rdf:Property ;
     rdfs:domain kastle:City,
         kastle:Country,
-        kastle:N333dc2831a044fd09e76fff2769096d2b1,
-        kastle:N8348453f7ffd48f49028bf51f8ec9753b1 ;
+        kastle:N04932e907f214dc2b954d6126b24d67eb1,
+        kastle:Ndf17663bb5e340ca80a0111283fd9046b1 ;
     rdfs:range kastle:Integer,
         kastle:Population,
         kastle:Positiveinteger .
@@ -228,8 +228,8 @@ kastle:memberOf a rdf:Property ;
     rdfs:range kastle:Organization .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:Ne17d5fca63a941579e06d760c778adbeb1,
-        kastle:Nf5302061636c49efa8b7ea45030d64c6b1,
+    rdfs:domain kastle:N02b5492f6a564e758bc3dce6b8bca3e8b1,
+        kastle:Nd85ecf40e0b049b79a5aeee380e8af59b1,
         kastle:World ;
     rdfs:range rdfs:Literal,
         xsd:string .
@@ -256,7 +256,7 @@ kastle:populationOf a rdf:Property ;
     rdfs:range kastle:Population .
 
 kastle:size a rdf:Property ;
-    rdfs:domain kastle:Nf5302061636c49efa8b7ea45030d64c6b6 ;
+    rdfs:domain kastle:Nd85ecf40e0b049b79a5aeee380e8af59b6 ;
     rdfs:range xsd:decimal .
 
 kastle:spokenIn a rdf:Property ;
