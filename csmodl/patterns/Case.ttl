@@ -34,7 +34,8 @@ kastle:Judge a rdfs:Class .
 
 kastle:Lawyer a rdfs:Class .
 
-kastle:LegalCase a rdfs:Class .
+kastle:LegalCase a rdfs:Class ;
+    rdfs:subClassOf kastle:Case .
 
 kastle:Legalcase a rdfs:Class .
 

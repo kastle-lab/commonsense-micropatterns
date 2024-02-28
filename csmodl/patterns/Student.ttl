@@ -8,7 +8,8 @@
 
 kastle:AcademicSubject a rdfs:Class .
 
-kastle:Course a rdfs:Class .
+kastle:Course a rdfs:Class ;
+    rdfs:subClassOf kastle:Academicsubject .
 
 kastle:Exam a rdfs:Class .
 
@@ -20,7 +21,8 @@ kastle:Person a rdfs:Class .
 
 kastle:Professor a rdfs:Class .
 
-kastle:Student a rdfs:Class .
+kastle:Student a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 kastle:Subject a rdfs:Class .
 

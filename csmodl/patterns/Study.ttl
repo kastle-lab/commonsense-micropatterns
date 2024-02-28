@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Course a rdfs:Class .
+kastle:Course a rdfs:Class ;
+    rdfs:subClassOf kastle:Study .
 
 kastle:Duration a rdfs:Class .
 
@@ -14,7 +15,8 @@ kastle:Institution a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:LearningMaterial a rdfs:Class .
+kastle:LearningMaterial a rdfs:Class ;
+    rdfs:subClassOf kastle:Study .
 
 kastle:Location a rdfs:Class .
 
@@ -36,19 +38,24 @@ kastle:Result a rdfs:Class .
 
 kastle:SourceMaterial a rdfs:Class .
 
-kastle:Student a rdfs:Class .
+kastle:Student a rdfs:Class ;
+    rdfs:subClassOf kastle:Study .
 
-kastle:Study a rdfs:Class .
+kastle:Study a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
 
 kastle:StudyArea a rdfs:Class .
 
-kastle:Subject a rdfs:Class .
+kastle:Subject a rdfs:Class ;
+    rdfs:subClassOf kastle:Study .
 
 kastle:SubjectArea a rdfs:Class .
 
-kastle:Teacher a rdfs:Class .
+kastle:Teacher a rdfs:Class ;
+    rdfs:subClassOf kastle:Study .
 
-kastle:Topic a rdfs:Class .
+kastle:Topic a rdfs:Class ;
+    rdfs:subClassOf kastle:Course .
 
 kastle:Tutor a rdfs:Class .
 

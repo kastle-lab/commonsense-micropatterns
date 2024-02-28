@@ -10,7 +10,8 @@ kastle:Address a rdfs:Class .
 
 kastle:Area a rdfs:Class .
 
-kastle:House a rdfs:Class .
+kastle:House a rdfs:Class ;
+    rdfs:subClassOf kastle:Building .
 
 kastle:Integer a rdfs:Class .
 

@@ -20,11 +20,14 @@ kastle:Floor a rdfs:Class .
 
 kastle:Furniture a rdfs:Class .
 
-kastle:Home a rdfs:Class .
+kastle:Home a rdfs:Class ;
+    rdfs:subClassOf kastle:Physicalplace,
+        kastle:Resource .
 
 kastle:HomeOwner a rdfs:Class .
 
-kastle:HomePart a rdfs:Class .
+kastle:HomePart a rdfs:Class ;
+    rdfs:subClassOf kastle:Home .
 
 kastle:House a rdfs:Class .
 
@@ -32,11 +35,12 @@ kastle:Integer a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:N4f30f0375be545408d8bd555becad914b1 a rdfs:Class .
+kastle:Nb5db0bf0382546febdc9e57a1d782fd7b1 a rdfs:Class .
 
-kastle:N4f30f0375be545408d8bd555becad914b6 a rdfs:Class .
+kastle:Nb5db0bf0382546febdc9e57a1d782fd7b6 a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Resident a rdfs:Class .
 
@@ -44,7 +48,8 @@ kastle:Resource a rdfs:Class .
 
 kastle:Roof a rdfs:Class .
 
-kastle:Room a rdfs:Class .
+kastle:Room a rdfs:Class ;
+    rdfs:subClassOf kastle:Home .
 
 kastle:Window a rdfs:Class .
 
@@ -106,7 +111,7 @@ kastle:hasFloor a rdf:Property ;
     rdfs:range kastle:Floor .
 
 kastle:hasFurniture a rdf:Property ;
-    rdfs:domain kastle:N4f30f0375be545408d8bd555becad914b6,
+    rdfs:domain kastle:Nb5db0bf0382546febdc9e57a1d782fd7b6,
         kastle:Room ;
     rdfs:range kastle:Furniture .
 
@@ -147,7 +152,7 @@ kastle:hasRoom a rdf:Property ;
     rdfs:domain kastle:Building,
         kastle:Home,
         kastle:House ;
-    rdfs:range kastle:N4f30f0375be545408d8bd555becad914b1,
+    rdfs:range kastle:Nb5db0bf0382546febdc9e57a1d782fd7b1,
         kastle:Resource,
         kastle:Room .
 

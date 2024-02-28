@@ -14,15 +14,20 @@ kastle:BusinessSector a rdfs:Class .
 
 kastle:Client a rdfs:Class .
 
-kastle:Company a rdfs:Class .
+kastle:Company a rdfs:Class ;
+    rdfs:subClassOf kastle:Class,
+        kastle:Organisation .
 
-kastle:Customer a rdfs:Class .
+kastle:Customer a rdfs:Class ;
+    rdfs:subClassOf kastle:Class .
 
 kastle:Datetime a rdfs:Class .
 
 kastle:Department a rdfs:Class .
 
-kastle:Employee a rdfs:Class .
+kastle:Employee a rdfs:Class ;
+    rdfs:subClassOf kastle:Class,
+        kastle:Person .
 
 kastle:Employer a rdfs:Class .
 
@@ -34,13 +39,15 @@ kastle:Investor a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Manager a rdfs:Class .
+kastle:Manager a rdfs:Class ;
+    rdfs:subClassOf kastle:Employee .
 
-kastle:Market a rdfs:Class .
+kastle:Market a rdfs:Class ;
+    rdfs:subClassOf kastle:Class .
 
-kastle:N02ad3a2163c64a9493196f7a7dea4889b1 a rdfs:Class .
+kastle:N517a9d207453411ba145ed6669f5127ab1 a rdfs:Class .
 
-kastle:N02ad3a2163c64a9493196f7a7dea4889b6 a rdfs:Class .
+kastle:N517a9d207453411ba145ed6669f5127ab6 a rdfs:Class .
 
 kastle:Owner a rdfs:Class .
 
@@ -48,7 +55,8 @@ kastle:Person a rdfs:Class .
 
 kastle:Place a rdfs:Class .
 
-kastle:Product a rdfs:Class .
+kastle:Product a rdfs:Class ;
+    rdfs:subClassOf kastle:Class .
 
 kastle:Revenue a rdfs:Class .
 
@@ -177,7 +185,7 @@ kastle:locName a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Business,
-        kastle:N02ad3a2163c64a9493196f7a7dea4889b1 ;
+        kastle:N517a9d207453411ba145ed6669f5127ab1 ;
     rdfs:range xsd:string .
 
 kastle:offers a rdf:Property ;
@@ -208,7 +216,7 @@ kastle:owns a rdf:Property ;
     rdfs:range kastle:Business .
 
 kastle:price a rdf:Property ;
-    rdfs:domain kastle:N02ad3a2163c64a9493196f7a7dea4889b6,
+    rdfs:domain kastle:N517a9d207453411ba145ed6669f5127ab6,
         kastle:Product ;
     rdfs:range xsd:float .
 

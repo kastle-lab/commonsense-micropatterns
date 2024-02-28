@@ -6,27 +6,34 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Academic_Institution a rdfs:Class .
+kastle:Academic_Institution a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
 
 kastle:AreaOfResearch a rdfs:Class .
 
-kastle:Author a rdfs:Class .
+kastle:Author a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
 
 kastle:Datetime a rdfs:Class .
 
-kastle:Diploma a rdfs:Class .
+kastle:Diploma a rdfs:Class ;
+    rdfs:subClassOf kastle:Product .
 
-kastle:Field a rdfs:Class .
+kastle:Field a rdfs:Class ;
+    rdfs:subClassOf kastle:Nee65374329444a1d9f62767ddcbde88ab1 .
 
-kastle:FieldOfStudy a rdfs:Class .
+kastle:FieldOfStudy a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:Field_of_Study a rdfs:Class .
+kastle:Field_of_Study a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
 
 kastle:Institution a rdfs:Class .
 
 kastle:Journal a rdfs:Class .
 
-kastle:Methodology a rdfs:Class .
+kastle:Methodology a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
 
 kastle:Organization a rdfs:Class .
 
@@ -34,21 +41,34 @@ kastle:Person a rdfs:Class .
 
 kastle:Product a rdfs:Class .
 
-kastle:Publication a rdfs:Class .
+kastle:Publication a rdfs:Class ;
+    rdfs:subClassOf kastle:Product,
+        kastle:Research .
 
-kastle:Research a rdfs:Class .
+kastle:Research a rdfs:Class ;
+    rdfs:subClassOf kastle:Academicactivity,
+        kastle:Resource .
 
 kastle:ResearchField a rdfs:Class .
 
-kastle:ResearchMethod a rdfs:Class .
+kastle:ResearchMethod a rdfs:Class ;
+    rdfs:subClassOf kastle:Research,
+        kastle:Resource .
 
-kastle:ResearchPaper a rdfs:Class .
+kastle:ResearchPaper a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
 
-kastle:ResearchProject a rdfs:Class .
+kastle:ResearchProject a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
 
-kastle:ResearchTopic a rdfs:Class .
+kastle:ResearchTopic a rdfs:Class ;
+    rdfs:subClassOf kastle:Research,
+        kastle:Topic .
 
-kastle:Researcher a rdfs:Class .
+kastle:Researcher a rdfs:Class ;
+    rdfs:subClassOf kastle:Nee65374329444a1d9f62767ddcbde88ab3,
+        kastle:Person,
+        kastle:Resource .
 
 kastle:Subject a rdfs:Class .
 

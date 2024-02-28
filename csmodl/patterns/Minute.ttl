@@ -6,13 +6,17 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Duration a rdfs:Class .
+kastle:Duration a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporalentity .
 
-kastle:DurationDescription a rdfs:Class .
+kastle:DurationDescription a rdfs:Class ;
+    rdfs:subClassOf kastle:N32fde1c5c0fb45e4a3ec8849897d55dcb1 .
 
 kastle:Event a rdfs:Class .
 
-kastle:Hour a rdfs:Class .
+kastle:Hour a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporalunit,
+        kastle:Unitoftime .
 
 kastle:HourOfTime a rdfs:Class .
 
@@ -20,7 +24,11 @@ kastle:Integer a rdfs:Class .
 
 kastle:Interval a rdfs:Class .
 
-kastle:Minute a rdfs:Class .
+kastle:Minute a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporalunit,
+        kastle:Time,
+        kastle:Timeperiod,
+        kastle:Unitoftime .
 
 kastle:MinuteOfTime a rdfs:Class .
 
@@ -36,9 +44,11 @@ kastle:TimeEvent a rdfs:Class .
 
 kastle:TimePeriod a rdfs:Class .
 
-kastle:TotalMinutes a rdfs:Class .
+kastle:TotalMinutes a rdfs:Class ;
+    rdfs:subClassOf kastle:Integer .
 
-kastle:Unitminute a rdfs:Class .
+kastle:Unitminute a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporalunit .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Minute> a owl:Ontology ;
     opla-core:hasPatternName "Minute Pattern"^^xsd:string ;

@@ -16,7 +16,9 @@ kastle:Hobby a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Kid a rdfs:Class .
+kastle:Kid a rdfs:Class ;
+    rdfs:subClassOf kastle:Human,
+        kastle:Person .
 
 kastle:Langstring a rdfs:Class .
 
@@ -28,7 +30,8 @@ kastle:Pet a rdfs:Class .
 
 kastle:Resource a rdfs:Class .
 
-kastle:School a rdfs:Class .
+kastle:School a rdfs:Class ;
+    rdfs:subClassOf kastle:Educationalinstitution .
 
 kastle:Sport a rdfs:Class .
 

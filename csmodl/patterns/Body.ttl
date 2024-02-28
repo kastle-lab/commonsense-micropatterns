@@ -8,27 +8,43 @@
 
 kastle:AnatomicalStructure a rdfs:Class .
 
-kastle:Arm a rdfs:Class .
+kastle:Arm a rdfs:Class ;
+    rdfs:subClassOf kastle:Body .
 
-kastle:Body a rdfs:Class .
+kastle:Body a rdfs:Class ;
+    rdfs:subClassOf kastle:Anatomicalstructure,
+        kastle:Na17aa21561fa4878864ee13118c956b4b1,
+        kastle:Physicalentity,
+        kastle:Physicalobject .
 
-kastle:BodyPart a rdfs:Class .
+kastle:BodyPart a rdfs:Class ;
+    rdfs:subClassOf kastle:Body,
+        kastle:Humanbody,
+        kastle:Na17aa21561fa4878864ee13118c956b4b2,
+        kastle:Physicalentity,
+        kastle:Physicalobject .
 
-kastle:Head a rdfs:Class .
+kastle:Head a rdfs:Class ;
+    rdfs:subClassOf kastle:Body .
 
 kastle:Human a rdfs:Class .
 
 kastle:HumanBody a rdfs:Class .
 
-kastle:Leg a rdfs:Class .
+kastle:Leg a rdfs:Class ;
+    rdfs:subClassOf kastle:Body .
 
-kastle:Limbs a rdfs:Class .
+kastle:Limbs a rdfs:Class ;
+    rdfs:subClassOf kastle:Body .
 
-kastle:Organ a rdfs:Class .
+kastle:Organ a rdfs:Class ;
+    rdfs:subClassOf kastle:Bodypart,
+        kastle:Humanbody .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Torso a rdfs:Class .
+kastle:Torso a rdfs:Class ;
+    rdfs:subClassOf kastle:Body .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Body> a owl:Ontology ;
     opla-core:hasPatternName "Body Pattern"^^xsd:string ;

@@ -14,11 +14,13 @@ kastle:Breakfast a rdfs:Class .
 
 kastle:Coffee a rdfs:Class .
 
-kastle:Day a rdfs:Class .
+kastle:Day a rdfs:Class ;
+    rdfs:subClassOf kastle:Timeperiod .
 
 kastle:Early a rdfs:Class .
 
-kastle:EarlyMorning a rdfs:Class .
+kastle:EarlyMorning a rdfs:Class ;
+    rdfs:subClassOf kastle:Morning .
 
 kastle:Exercise a rdfs:Class .
 
@@ -26,7 +28,11 @@ kastle:MORNING a rdfs:Class .
 
 kastle:Meal a rdfs:Class .
 
-kastle:Morning a rdfs:Class .
+kastle:Morning a rdfs:Class ;
+    rdfs:subClassOf kastle:Daypart,
+        kastle:Daytime,
+        kastle:Temporalentity,
+        kastle:Timeofday .
 
 kastle:MorningActivity a rdfs:Class .
 
@@ -34,7 +40,8 @@ kastle:MorningTime a rdfs:Class .
 
 kastle:Mornings a rdfs:Class .
 
-kastle:Night a rdfs:Class .
+kastle:Night a rdfs:Class ;
+    rdfs:subClassOf kastle:Daypart .
 
 kastle:Person a rdfs:Class .
 

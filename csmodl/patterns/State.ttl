@@ -8,13 +8,18 @@
 
 kastle:City a rdfs:Class .
 
-kastle:Country a rdfs:Class .
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Feature,
+        kastle:Geographicalentity .
 
 kastle:Entity a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:State a rdfs:Class .
+kastle:State a rdfs:Class ;
+    rdfs:subClassOf kastle:Administrativeregion,
+        kastle:Feature,
+        kastle:Geographicalentity .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/State> a owl:Ontology ;
     opla-core:hasPatternName "State Pattern"^^xsd:string ;

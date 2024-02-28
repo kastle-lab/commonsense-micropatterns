@@ -6,7 +6,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:DateTime a rdfs:Class .
+kastle:DateTime a rdfs:Class ;
+    rdfs:subClassOf kastle:Datetime,
+        kastle:Time .
 
 kastle:DateTimeDescription a rdfs:Class .
 
@@ -14,33 +16,50 @@ kastle:Datetime a rdfs:Class .
 
 kastle:Datetimestamp a rdfs:Class .
 
-kastle:Duration a rdfs:Class .
+kastle:Duration a rdfs:Class ;
+    rdfs:subClassOf kastle:Time .
 
-kastle:Event a rdfs:Class .
+kastle:Event a rdfs:Class ;
+    rdfs:subClassOf kastle:Time .
 
-kastle:Instant a rdfs:Class .
+kastle:Instant a rdfs:Class ;
+    rdfs:subClassOf kastle:Datetime,
+        kastle:Instant,
+        kastle:Temporalentity,
+        kastle:Time .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Interval a rdfs:Class .
+kastle:Interval a rdfs:Class ;
+    rdfs:subClassOf kastle:Datetime,
+        kastle:Duration,
+        kastle:Interval,
+        kastle:Temporalentity,
+        kastle:Time .
 
-kastle:IntervalTime a rdfs:Class .
+kastle:IntervalTime a rdfs:Class ;
+    rdfs:subClassOf kastle:Time .
 
-kastle:SpecificTime a rdfs:Class .
+kastle:SpecificTime a rdfs:Class ;
+    rdfs:subClassOf kastle:Time .
 
-kastle:TemporalInterval a rdfs:Class .
+kastle:TemporalInterval a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporalentity .
 
-kastle:TemporalPosition a rdfs:Class .
+kastle:TemporalPosition a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporalentity .
 
 kastle:TemporalUnit a rdfs:Class .
 
 kastle:Thing a rdfs:Class .
 
-kastle:Time a rdfs:Class .
+kastle:Time a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:TimeEvent a rdfs:Class .
 
-kastle:TimeInterval a rdfs:Class .
+kastle:TimeInterval a rdfs:Class ;
+    rdfs:subClassOf kastle:Time .
 
 kastle:TimePeriod a rdfs:Class .
 

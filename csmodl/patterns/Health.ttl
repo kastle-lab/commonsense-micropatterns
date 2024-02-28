@@ -12,19 +12,24 @@ kastle:Diagnosis a rdfs:Class .
 
 kastle:DietRestriction a rdfs:Class .
 
-kastle:Disease a rdfs:Class .
+kastle:Disease a rdfs:Class ;
+    rdfs:subClassOf kastle:Health .
 
-kastle:Diseases a rdfs:Class .
+kastle:Diseases a rdfs:Class ;
+    rdfs:subClassOf kastle:Health .
 
 kastle:Doctor a rdfs:Class .
 
 kastle:GymMembership a rdfs:Class .
 
-kastle:Health a rdfs:Class .
+kastle:Health a rdfs:Class ;
+    rdfs:subClassOf kastle:Class .
 
-kastle:HealthCareProvider a rdfs:Class .
+kastle:HealthCareProvider a rdfs:Class ;
+    rdfs:subClassOf kastle:Class .
 
-kastle:HealthCondition a rdfs:Class .
+kastle:HealthCondition a rdfs:Class ;
+    rdfs:subClassOf kastle:Health .
 
 kastle:HealthRecord a rdfs:Class .
 
@@ -38,25 +43,32 @@ kastle:MedicalCondition a rdfs:Class .
 
 kastle:Medication a rdfs:Class .
 
-kastle:Medicine a rdfs:Class .
+kastle:Medicine a rdfs:Class ;
+    rdfs:subClassOf kastle:Na6c8faa1793241568387aff63ac2d7b4b2 .
 
-kastle:MentalHealth a rdfs:Class .
+kastle:MentalHealth a rdfs:Class ;
+    rdfs:subClassOf kastle:Health .
 
 kastle:MentalHealthStatus a rdfs:Class .
 
-kastle:Patient a rdfs:Class .
+kastle:Patient a rdfs:Class ;
+    rdfs:subClassOf kastle:Class,
+        kastle:Na6c8faa1793241568387aff63ac2d7b4b1 .
 
 kastle:Person a rdfs:Class .
 
-kastle:PhysicalHealth a rdfs:Class .
+kastle:PhysicalHealth a rdfs:Class ;
+    rdfs:subClassOf kastle:Health .
 
 kastle:PhysicalHealthStatus a rdfs:Class .
 
 kastle:SideEffect a rdfs:Class .
 
-kastle:Symptom a rdfs:Class .
+kastle:Symptom a rdfs:Class ;
+    rdfs:subClassOf kastle:Health .
 
-kastle:Treatment a rdfs:Class .
+kastle:Treatment a rdfs:Class ;
+    rdfs:subClassOf kastle:Health .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Health> a owl:Ontology ;
     opla-core:hasPatternName "Health Pattern"^^xsd:string ;

@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Child a rdfs:Class .
+kastle:Child a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 kastle:Human a rdfs:Class .
 
@@ -16,11 +17,17 @@ kastle:Husband a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Mother a rdfs:Class .
+kastle:Mother a rdfs:Class ;
+    rdfs:subClassOf kastle:Female,
+        kastle:Femalehuman,
+        kastle:Human,
+        kastle:Person,
+        kastle:Woman .
 
-kastle:N43889758b2c242558ac4a03fe63e6596b1 a rdfs:Class .
+kastle:N0d5e305adf3b4a2da06b22287d484de3b1 a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:N0d29d15ecbe642f980ed0a7ca64ba58ab1 .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Mother> a owl:Ontology ;
     opla-core:hasPatternName "Mother Pattern"^^xsd:string ;
@@ -117,7 +124,7 @@ kastle:motherOf a rdf:Property ;
 
 kastle:name a rdf:Property ;
     rdfs:domain kastle:Mother,
-        kastle:N43889758b2c242558ac4a03fe63e6596b1 ;
+        kastle:N0d5e305adf3b4a2da06b22287d484de3b1 ;
     rdfs:range xsd:string .
 
 kastle:occupation a rdf:Property ;

@@ -10,23 +10,31 @@ kastle:Anyuri a rdfs:Class .
 
 kastle:Datetime a rdfs:Class .
 
-kastle:Duration a rdfs:Class .
+kastle:Duration a rdfs:Class ;
+    rdfs:subClassOf kastle:Timestamp .
 
-kastle:Event a rdfs:Class .
+kastle:Event a rdfs:Class ;
+    rdfs:subClassOf kastle:Timestamp .
 
 kastle:Hasevent a rdfs:Class .
 
-kastle:Instant a rdfs:Class .
+kastle:Instant a rdfs:Class ;
+    rdfs:subClassOf kastle:Timestamp .
 
 kastle:Location a rdfs:Class .
 
-kastle:Moment a rdfs:Class .
+kastle:Moment a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporal,
+        kastle:Temporalentity,
+        kastle:Timepoint .
 
 kastle:MomentProperty a rdfs:Class .
 
-kastle:N561ea2ac4a724edea0554e4e7b70ae28b1 a rdfs:Class .
+kastle:N4e8130ac0170445eae2683015c4785e3b1 a rdfs:Class .
 
-kastle:Period a rdfs:Class .
+kastle:Period a rdfs:Class ;
+    rdfs:subClassOf kastle:Instant,
+        kastle:Timestamp .
 
 kastle:Person a rdfs:Class .
 
@@ -34,7 +42,8 @@ kastle:Resource a rdfs:Class .
 
 kastle:Thing a rdfs:Class .
 
-kastle:Time a rdfs:Class .
+kastle:Time a rdfs:Class ;
+    rdfs:subClassOf kastle:Timestamp .
 
 kastle:TimeInstant a rdfs:Class .
 
@@ -54,6 +63,8 @@ kastle:Timestamp a rdfs:Class .
         "Brandon Dave"^^xsd:string,
         "Dr. Cogan Shimizu"^^xsd:string,
         "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:Date rdfs:subClassOf kastle:Timestamp .
 
 kastle:date a rdf:Property ;
     rdfs:domain kastle:MomentProperty ;
@@ -208,7 +219,7 @@ kastle:startDate a rdf:Property ;
     rdfs:range kastle:Instant .
 
 kastle:startTime a rdf:Property ;
-    rdfs:domain kastle:N561ea2ac4a724edea0554e4e7b70ae28b1 ;
+    rdfs:domain kastle:N4e8130ac0170445eae2683015c4785e3b1 ;
     rdfs:range kastle:Datetime .
 
 kastle:time a rdf:Property ;

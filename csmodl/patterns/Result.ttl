@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Action a rdfs:Class .
+kastle:Action a rdfs:Class ;
+    rdfs:subClassOf kastle:Result .
 
 kastle:Activity a rdfs:Class .
 
@@ -16,7 +17,8 @@ kastle:Course a rdfs:Class .
 
 kastle:Datetime a rdfs:Class .
 
-kastle:Event a rdfs:Class .
+kastle:Event a rdfs:Class ;
+    rdfs:subClassOf kastle:Result .
 
 kastle:Experiment a rdfs:Class .
 
@@ -24,15 +26,17 @@ kastle:Grade a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Nceb8452f06ee405bb5b0408f01697fe9b1 a rdfs:Class .
+kastle:N6575d1a5e5144dccb4939dfa85e606c9b1 a rdfs:Class .
 
-kastle:Nceb8452f06ee405bb5b0408f01697fe9b4 a rdfs:Class .
+kastle:N6575d1a5e5144dccb4939dfa85e606c9b4 a rdfs:Class .
 
 kastle:Process a rdfs:Class .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Result a rdfs:Class .
+kastle:Result a rdfs:Class ;
+    rdfs:subClassOf kastle:Eventoutcome,
+        kastle:N2aab17e7ce23426c91bcafb9bf128f85b1 .
 
 kastle:Student a rdfs:Class .
 
@@ -101,7 +105,7 @@ kastle:hasResult a rdf:Property ;
         kastle:Activity,
         kastle:Event,
         kastle:Experiment,
-        kastle:Nceb8452f06ee405bb5b0408f01697fe9b1,
+        kastle:N6575d1a5e5144dccb4939dfa85e606c9b1,
         kastle:Process,
         kastle:Test ;
     rdfs:range kastle:Result .
@@ -143,7 +147,7 @@ kastle:hasValue a rdf:Property ;
 kastle:isResultOf a rdf:Property ;
     rdfs:domain kastle:Result ;
     rdfs:range xsd:string,
-        kastle:Nceb8452f06ee405bb5b0408f01697fe9b4,
+        kastle:N6575d1a5e5144dccb4939dfa85e606c9b4,
         kastle:Process .
 
 kastle:isSuccess a rdf:Property ;

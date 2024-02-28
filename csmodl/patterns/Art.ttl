@@ -16,9 +16,12 @@ kastle:ArtStyle a rdfs:Class .
 
 kastle:ArtWork a rdfs:Class .
 
-kastle:Artist a rdfs:Class .
+kastle:Artist a rdfs:Class ;
+    rdfs:subClassOf kastle:Art,
+        kastle:Person .
 
-kastle:Artwork a rdfs:Class .
+kastle:Artwork a rdfs:Class ;
+    rdfs:subClassOf kastle:Art .
 
 kastle:Creator a rdfs:Class .
 
@@ -26,7 +29,8 @@ kastle:Datetime a rdfs:Class .
 
 kastle:Exhibition a rdfs:Class .
 
-kastle:Gallery a rdfs:Class .
+kastle:Gallery a rdfs:Class ;
+    rdfs:subClassOf kastle:Place .
 
 kastle:Genre a rdfs:Class .
 
@@ -38,17 +42,20 @@ kastle:Medium a rdfs:Class .
 
 kastle:Museum a rdfs:Class .
 
-kastle:Painting a rdfs:Class .
+kastle:Painting a rdfs:Class ;
+    rdfs:subClassOf kastle:Artwork .
 
 kastle:Period a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
-kastle:Sculpture a rdfs:Class .
+kastle:Sculpture a rdfs:Class ;
+    rdfs:subClassOf kastle:Artwork .
 
 kastle:Style a rdfs:Class .
 
-kastle:WorkOfArt a rdfs:Class .
+kastle:WorkOfArt a rdfs:Class ;
+    rdfs:subClassOf kastle:Art .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Art> a owl:Ontology ;
     opla-core:hasPatternName "Art Pattern"^^xsd:string ;

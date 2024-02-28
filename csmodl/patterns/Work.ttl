@@ -14,33 +14,45 @@ kastle:Datetime a rdfs:Class .
 
 kastle:Duration a rdfs:Class .
 
-kastle:Employee a rdfs:Class .
+kastle:Employee a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Work .
 
-kastle:Employer a rdfs:Class .
+kastle:Employer a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Work .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Job a rdfs:Class .
+kastle:Job a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Work .
 
-kastle:JobPosting a rdfs:Class .
+kastle:JobPosting a rdfs:Class ;
+    rdfs:subClassOf kastle:Work .
 
 kastle:Location a rdfs:Class .
 
 kastle:Occupation a rdfs:Class .
 
-kastle:Organization a rdfs:Class .
+kastle:Organization a rdfs:Class ;
+    rdfs:subClassOf kastle:Work .
 
 kastle:Person a rdfs:Class .
 
-kastle:Position a rdfs:Class .
+kastle:Position a rdfs:Class ;
+    rdfs:subClassOf kastle:Work .
 
 kastle:Salary a rdfs:Class .
 
-kastle:Task a rdfs:Class .
+kastle:Task a rdfs:Class ;
+    rdfs:subClassOf kastle:Work .
 
 kastle:Time a rdfs:Class .
 
-kastle:Work a rdfs:Class .
+kastle:Work a rdfs:Class ;
+    rdfs:subClassOf kastle:N4e52b9b4c1e34764a08b304b2a1f71cbb1,
+        kastle:Resource .
 
 kastle:Worker a rdfs:Class .
 

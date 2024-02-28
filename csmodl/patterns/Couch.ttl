@@ -8,13 +8,16 @@
 
 kastle:Color a rdfs:Class .
 
-kastle:Colortype a rdfs:Class .
+kastle:Colortype a rdfs:Class ;
+    rdfs:subClassOf kastle:String .
 
-kastle:Couch a rdfs:Class .
+kastle:Couch a rdfs:Class ;
+    rdfs:subClassOf kastle:Furniture .
 
 kastle:Cushion a rdfs:Class .
 
-kastle:Dimension a rdfs:Class .
+kastle:Dimension a rdfs:Class ;
+    rdfs:subClassOf kastle:Seq .
 
 kastle:Dimensions a rdfs:Class .
 
@@ -22,9 +25,11 @@ kastle:Integer a rdfs:Class .
 
 kastle:Manufacturer a rdfs:Class .
 
-kastle:Material a rdfs:Class .
+kastle:Material a rdfs:Class ;
+    rdfs:subClassOf kastle:Couch .
 
-kastle:Materialtype a rdfs:Class .
+kastle:Materialtype a rdfs:Class ;
+    rdfs:subClassOf kastle:String .
 
 kastle:Nonnegativeinteger a rdfs:Class .
 
@@ -32,7 +37,8 @@ kastle:Size a rdfs:Class .
 
 kastle:Style a rdfs:Class .
 
-kastle:Type a rdfs:Class .
+kastle:Type a rdfs:Class ;
+    rdfs:subClassOf kastle:Couch .
 
 kastle:Upholstery a rdfs:Class .
 

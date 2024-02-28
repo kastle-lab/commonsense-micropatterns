@@ -8,27 +8,33 @@
 
 kastle:Date a rdfs:Class .
 
-kastle:Day a rdfs:Class .
+kastle:Day a rdfs:Class ;
+    rdfs:subClassOf kastle:Month .
 
 kastle:Document a rdfs:Class .
 
 kastle:Entity a rdfs:Class .
 
-kastle:Event a rdfs:Class .
+kastle:Event a rdfs:Class ;
+    rdfs:subClassOf kastle:Day .
 
 kastle:Gday a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Month a rdfs:Class .
+kastle:Month a rdfs:Class ;
+    rdfs:subClassOf kastle:Year .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Season a rdfs:Class .
+kastle:Season a rdfs:Class ;
+    rdfs:subClassOf kastle:Year .
 
 kastle:Something a rdfs:Class .
 
-kastle:Year a rdfs:Class .
+kastle:Year a rdfs:Class ;
+    rdfs:subClassOf kastle:Integer,
+        kastle:Timeperiod .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Year> a owl:Ontology ;
     opla-core:hasPatternName "Year Pattern"^^xsd:string ;

@@ -12,9 +12,14 @@ kastle:Double a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Line a rdfs:Class .
+kastle:Line a rdfs:Class ;
+    rdfs:subClassOf kastle:Geometricobject,
+        kastle:Shape .
 
-kastle:Point a rdfs:Class .
+kastle:Point a rdfs:Class ;
+    rdfs:subClassOf kastle:Datatype,
+        kastle:N1b318c35c92a45f984edc46b58ab6237b1,
+        kastle:Shape .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Line> a owl:Ontology ;
     opla-core:hasPatternName "Line Pattern"^^xsd:string ;

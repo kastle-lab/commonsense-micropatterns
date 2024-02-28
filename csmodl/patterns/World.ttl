@@ -10,41 +10,51 @@ kastle:Area a rdfs:Class .
 
 kastle:Car a rdfs:Class .
 
-kastle:City a rdfs:Class .
+kastle:City a rdfs:Class ;
+    rdfs:subClassOf kastle:Country,
+        kastle:Resource .
 
-kastle:Continent a rdfs:Class .
+kastle:Continent a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:World .
 
-kastle:Country a rdfs:Class .
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Continent,
+        kastle:Resource,
+        kastle:World .
 
 kastle:House a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Island a rdfs:Class .
+kastle:Island a rdfs:Class ;
+    rdfs:subClassOf kastle:World .
 
 kastle:Landmark a rdfs:Class .
 
 kastle:Language a rdfs:Class .
 
-kastle:Mountain a rdfs:Class .
+kastle:Mountain a rdfs:Class ;
+    rdfs:subClassOf kastle:World .
 
-kastle:N02b5492f6a564e758bc3dce6b8bca3e8b1 a rdfs:Class .
+kastle:N1fbb52f8279840bcb8abe2928c0e799eb1 a rdfs:Class .
 
-kastle:N04932e907f214dc2b954d6126b24d67eb1 a rdfs:Class .
+kastle:N32dde6b843af4e6097e43944894402c3b1 a rdfs:Class .
 
-kastle:N04932e907f214dc2b954d6126b24d67eb4 a rdfs:Class .
+kastle:N32dde6b843af4e6097e43944894402c3b4 a rdfs:Class .
 
-kastle:N295be23ef7d2447893cd694843c33d9bb1 a rdfs:Class .
+kastle:Nb05b6e3683674341805f13bb3b9b3ec4b1 a rdfs:Class .
 
-kastle:Nd85ecf40e0b049b79a5aeee380e8af59b1 a rdfs:Class .
+kastle:Ncaf99f213f9f43fb885dc6fef0b494e3b1 a rdfs:Class .
 
-kastle:Nd85ecf40e0b049b79a5aeee380e8af59b6 a rdfs:Class .
+kastle:Ncaf99f213f9f43fb885dc6fef0b494e3b5 a rdfs:Class .
 
-kastle:Ndf17663bb5e340ca80a0111283fd9046b1 a rdfs:Class .
+kastle:Nd47b0ba34776481a845f76187fc4a6aab1 a rdfs:Class .
 
-kastle:Ndf17663bb5e340ca80a0111283fd9046b5 a rdfs:Class .
+kastle:Nd47b0ba34776481a845f76187fc4a6aab6 a rdfs:Class .
 
-kastle:Ocean a rdfs:Class .
+kastle:Ocean a rdfs:Class ;
+    rdfs:subClassOf kastle:World .
 
 kastle:Organization a rdfs:Class .
 
@@ -58,9 +68,11 @@ kastle:Positiveinteger a rdfs:Class .
 
 kastle:Religion a rdfs:Class .
 
-kastle:River a rdfs:Class .
+kastle:River a rdfs:Class ;
+    rdfs:subClassOf kastle:World .
 
-kastle:Sea a rdfs:Class .
+kastle:Sea a rdfs:Class ;
+    rdfs:subClassOf kastle:Ocean .
 
 kastle:Thing a rdfs:Class .
 
@@ -114,8 +126,8 @@ kastle:hasAge a rdf:Property ;
 
 kastle:hasArea a rdf:Property ;
     rdfs:domain kastle:Country,
-        kastle:N04932e907f214dc2b954d6126b24d67eb4,
-        kastle:Ndf17663bb5e340ca80a0111283fd9046b5 ;
+        kastle:N32dde6b843af4e6097e43944894402c3b4,
+        kastle:Ncaf99f213f9f43fb885dc6fef0b494e3b5 ;
     rdfs:range kastle:Area,
         kastle:Integer,
         kastle:Positiveinteger .
@@ -149,7 +161,7 @@ kastle:hasMountain a rdf:Property ;
     rdfs:range kastle:Mountain .
 
 kastle:hasName a rdf:Property ;
-    rdfs:domain kastle:N295be23ef7d2447893cd694843c33d9bb1 ;
+    rdfs:domain kastle:Nb05b6e3683674341805f13bb3b9b3ec4b1 ;
     rdfs:range xsd:string .
 
 kastle:hasPart a rdf:Property ;
@@ -160,8 +172,8 @@ kastle:hasPart a rdf:Property ;
 kastle:hasPopulation a rdf:Property ;
     rdfs:domain kastle:City,
         kastle:Country,
-        kastle:N04932e907f214dc2b954d6126b24d67eb1,
-        kastle:Ndf17663bb5e340ca80a0111283fd9046b1 ;
+        kastle:N32dde6b843af4e6097e43944894402c3b1,
+        kastle:Ncaf99f213f9f43fb885dc6fef0b494e3b1 ;
     rdfs:range kastle:Integer,
         kastle:Population,
         kastle:Positiveinteger .
@@ -228,8 +240,8 @@ kastle:memberOf a rdf:Property ;
     rdfs:range kastle:Organization .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:N02b5492f6a564e758bc3dce6b8bca3e8b1,
-        kastle:Nd85ecf40e0b049b79a5aeee380e8af59b1,
+    rdfs:domain kastle:N1fbb52f8279840bcb8abe2928c0e799eb1,
+        kastle:Nd47b0ba34776481a845f76187fc4a6aab1,
         kastle:World ;
     rdfs:range rdfs:Literal,
         xsd:string .
@@ -256,7 +268,7 @@ kastle:populationOf a rdf:Property ;
     rdfs:range kastle:Population .
 
 kastle:size a rdf:Property ;
-    rdfs:domain kastle:Nd85ecf40e0b049b79a5aeee380e8af59b6 ;
+    rdfs:domain kastle:Nd47b0ba34776481a845f76187fc4a6aab6 ;
     rdfs:range xsd:decimal .
 
 kastle:spokenIn a rdf:Property ;

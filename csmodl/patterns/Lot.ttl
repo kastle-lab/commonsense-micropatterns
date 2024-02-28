@@ -14,9 +14,12 @@ kastle:Entity a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Lot a rdfs:Class .
+kastle:Lot a rdfs:Class ;
+    rdfs:subClassOf kastle:Property,
+        kastle:Resource .
 
-kastle:ParkingLot a rdfs:Class .
+kastle:ParkingLot a rdfs:Class ;
+    rdfs:subClassOf kastle:Lot .
 
 kastle:Person a rdfs:Class .
 

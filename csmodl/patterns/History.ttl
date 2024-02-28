@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Character a rdfs:Class .
+kastle:Character a rdfs:Class ;
+    rdfs:subClassOf kastle:History .
 
 kastle:Class a rdfs:Class .
 
@@ -16,9 +17,12 @@ kastle:Datetime a rdfs:Class .
 
 kastle:Description a rdfs:Class .
 
-kastle:Era a rdfs:Class .
+kastle:Era a rdfs:Class ;
+    rdfs:subClassOf kastle:History .
 
-kastle:Event a rdfs:Class .
+kastle:Event a rdfs:Class ;
+    rdfs:subClassOf kastle:History,
+        kastle:Period .
 
 kastle:HistoricalArtifact a rdfs:Class .
 
@@ -26,7 +30,8 @@ kastle:HistoricalEra a rdfs:Class .
 
 kastle:HistoricalEvent a rdfs:Class .
 
-kastle:HistoricalFigure a rdfs:Class .
+kastle:HistoricalFigure a rdfs:Class ;
+    rdfs:subClassOf kastle:History .
 
 kastle:HistoricalPeriod a rdfs:Class .
 
@@ -36,7 +41,9 @@ kastle:HistoryEvent a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Period a rdfs:Class .
+kastle:Period a rdfs:Class ;
+    rdfs:subClassOf kastle:Era,
+        kastle:History .
 
 kastle:Person a rdfs:Class .
 

@@ -6,19 +6,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Air a rdfs:Class .
+kastle:Air a rdfs:Class ;
+    rdfs:subClassOf kastle:Physicalsubstance .
 
 kastle:AirComposition a rdfs:Class .
 
 kastle:AirCondition a rdfs:Class .
 
-kastle:AirPollution a rdfs:Class .
+kastle:AirPollution a rdfs:Class ;
+    rdfs:subClassOf kastle:Environmentalimpact .
 
 kastle:AirQuality a rdfs:Class .
 
 kastle:Benefit a rdfs:Class .
 
-kastle:ChemicalElement a rdfs:Class .
+kastle:ChemicalElement a rdfs:Class ;
+    rdfs:subClassOf kastle:Physicalsubstance .
 
 kastle:Component a rdfs:Class .
 

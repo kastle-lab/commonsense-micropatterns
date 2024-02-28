@@ -10,7 +10,9 @@ kastle:Date a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Month a rdfs:Class .
+kastle:Month a rdfs:Class ;
+    rdfs:subClassOf kastle:Temporalentity,
+        kastle:Timeperiod .
 
 kastle:Number a rdfs:Class .
 

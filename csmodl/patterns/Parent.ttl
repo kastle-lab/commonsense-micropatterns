@@ -6,9 +6,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Child a rdfs:Class .
+kastle:Child a rdfs:Class ;
+    rdfs:subClassOf kastle:N1c93b68e14c547a9ad82d4c50942ee5eb3 .
 
-kastle:Father a rdfs:Class .
+kastle:Father a rdfs:Class ;
+    rdfs:subClassOf kastle:Parent .
 
 kastle:Gender a rdfs:Class .
 
@@ -18,11 +20,13 @@ kastle:Integer a rdfs:Class .
 
 kastle:Man a rdfs:Class .
 
-kastle:Mother a rdfs:Class .
+kastle:Mother a rdfs:Class ;
+    rdfs:subClassOf kastle:Parent .
 
 kastle:Nonnegativeinteger a rdfs:Class .
 
-kastle:Parent a rdfs:Class .
+kastle:Parent a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 kastle:Person a rdfs:Class .
 

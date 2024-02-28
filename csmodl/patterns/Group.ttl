@@ -6,21 +6,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Group a rdfs:Class .
+kastle:Group a rdfs:Class ;
+    rdfs:subClassOf kastle:N5cf3df7a2b5740c48d8e01924d30125ab3,
+        kastle:N6fd89a71a44f46dab2a3aa8d52f58970b1,
+        kastle:Na02b249382f24ea1aa0683a71eb84cd7b2,
+        kastle:Ne1bda3da70704b05a03cd314f2618192b1,
+        kastle:Resource .
 
-kastle:GroupLeader a rdfs:Class .
+kastle:GroupLeader a rdfs:Class ;
+    rdfs:subClassOf kastle:Groupmember .
 
-kastle:GroupMember a rdfs:Class .
+kastle:GroupMember a rdfs:Class ;
+    rdfs:subClassOf kastle:Group .
 
-kastle:GroupType a rdfs:Class .
+kastle:GroupType a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Individual a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Member a rdfs:Class .
+kastle:Member a rdfs:Class ;
+    rdfs:subClassOf kastle:N5cf3df7a2b5740c48d8e01924d30125ab1,
+        kastle:Resource .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Na02b249382f24ea1aa0683a71eb84cd7b1 .
 
 kastle:Positiveinteger a rdfs:Class .
 

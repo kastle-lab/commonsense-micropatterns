@@ -8,7 +8,8 @@
 
 kastle:Continent a rdfs:Class .
 
-kastle:Country a rdfs:Class .
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Geographicalentity .
 
 kastle:Datetime a rdfs:Class .
 
@@ -22,9 +23,13 @@ kastle:Person a rdfs:Class .
 
 kastle:PoliticalEntity a rdfs:Class .
 
-kastle:Presidency a rdfs:Class .
+kastle:Presidency a rdfs:Class ;
+    rdfs:subClassOf kastle:Office .
 
-kastle:President a rdfs:Class .
+kastle:President a rdfs:Class ;
+    rdfs:subClassOf kastle:Person,
+        kastle:Politicalleader,
+        kastle:Politician .
 
 kastle:PresidentialTerm a rdfs:Class .
 

@@ -14,7 +14,8 @@ kastle:Army a rdfs:Class .
 
 kastle:Battle a rdfs:Class .
 
-kastle:Battles a rdfs:Class .
+kastle:Battles a rdfs:Class ;
+    rdfs:subClassOf kastle:War .
 
 kastle:Belligerent a rdfs:Class .
 
@@ -24,7 +25,8 @@ kastle:Cause a rdfs:Class .
 
 kastle:Combatant a rdfs:Class .
 
-kastle:Conflicts a rdfs:Class .
+kastle:Conflicts a rdfs:Class ;
+    rdfs:subClassOf kastle:War .
 
 kastle:Countries a rdfs:Class .
 
@@ -68,11 +70,14 @@ kastle:TimePeriod a rdfs:Class .
 
 kastle:Treaty a rdfs:Class .
 
-kastle:War a rdfs:Class .
+kastle:War a rdfs:Class ;
+    rdfs:subClassOf kastle:Conflict,
+        kastle:Nf2b2a9998bbe48aea39bcc4fde01a0deb1 .
 
 kastle:WarPart a rdfs:Class .
 
-kastle:Weapon a rdfs:Class .
+kastle:Weapon a rdfs:Class ;
+    rdfs:subClassOf kastle:Object .
 
 kastle:Weapons a rdfs:Class .
 

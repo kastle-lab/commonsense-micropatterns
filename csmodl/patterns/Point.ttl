@@ -10,7 +10,8 @@ kastle:Double a rdfs:Class .
 
 kastle:Plane a rdfs:Class .
 
-kastle:Point a rdfs:Class .
+kastle:Point a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Real a rdfs:Class .
 

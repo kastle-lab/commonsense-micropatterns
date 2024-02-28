@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Definition a rdfs:Class .
+kastle:Definition a rdfs:Class ;
+    rdfs:subClassOf kastle:Word .
 
 kastle:Integer a rdfs:Class .
 
@@ -16,19 +17,22 @@ kastle:MailMerge a rdfs:Class .
 
 kastle:Meaning a rdfs:Class .
 
-kastle:N2cddea4bea084cd085abec5c5e0d1631b1 a rdfs:Class .
+kastle:Nd4a8cee1fde447c999e3f88be934a859b1 a rdfs:Class .
 
 kastle:PageLayout a rdfs:Class .
 
-kastle:PartOfSpeech a rdfs:Class .
+kastle:PartOfSpeech a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:PartOfSpeechClass a rdfs:Class .
 
-kastle:Phrase a rdfs:Class .
+kastle:Phrase a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Sentence a rdfs:Class .
 
-kastle:Spelling a rdfs:Class .
+kastle:Spelling a rdfs:Class ;
+    rdfs:subClassOf kastle:Word .
 
 kastle:SpellingCorrector a rdfs:Class .
 
@@ -36,9 +40,12 @@ kastle:TextDocument a rdfs:Class .
 
 kastle:Thesaurus a rdfs:Class .
 
-kastle:Word a rdfs:Class .
+kastle:Word a rdfs:Class ;
+    rdfs:subClassOf kastle:Entity,
+        kastle:Resource .
 
-kastle:WordProperty a rdfs:Class .
+kastle:WordProperty a rdfs:Class ;
+    rdfs:subClassOf kastle:Property .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Word> a owl:Ontology ;
     opla-core:hasPatternName "Word Pattern"^^xsd:string ;
@@ -101,7 +108,7 @@ kastle:hasOrigin a rdf:Property ;
 
 kastle:hasPartOfSpeech a rdf:Property ;
     rdfs:domain kastle:Word ;
-    rdfs:range kastle:N2cddea4bea084cd085abec5c5e0d1631b1,
+    rdfs:range kastle:Nd4a8cee1fde447c999e3f88be934a859b1,
         kastle:PartOfSpeech .
 
 kastle:hasSpelling a rdf:Property ;

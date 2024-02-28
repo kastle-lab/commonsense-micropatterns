@@ -32,7 +32,8 @@ kastle:MechanicalPart a rdfs:Class .
 
 kastle:Object a rdfs:Class .
 
-kastle:Part a rdfs:Class .
+kastle:Part a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Process a rdfs:Class .
 

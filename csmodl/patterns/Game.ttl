@@ -8,7 +8,9 @@
 
 kastle:Developer a rdfs:Class .
 
-kastle:Game a rdfs:Class .
+kastle:Game a rdfs:Class ;
+    rdfs:subClassOf kastle:Entertainment,
+        kastle:Resource .
 
 kastle:GameDeveloper a rdfs:Class .
 

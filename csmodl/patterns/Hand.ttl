@@ -10,13 +10,21 @@ kastle:Arm a rdfs:Class .
 
 kastle:Body a rdfs:Class .
 
-kastle:Finger a rdfs:Class .
+kastle:Finger a rdfs:Class ;
+    rdfs:subClassOf kastle:Bodypart,
+        kastle:Hand,
+        kastle:Handpart,
+        kastle:Resource .
 
-kastle:Fingers a rdfs:Class .
+kastle:Fingers a rdfs:Class ;
+    rdfs:subClassOf kastle:Handparts .
 
 kastle:Function a rdfs:Class .
 
-kastle:Hand a rdfs:Class .
+kastle:Hand a rdfs:Class ;
+    rdfs:subClassOf kastle:Body_part,
+        kastle:Bodypart,
+        kastle:Class .
 
 kastle:HandPart a rdfs:Class .
 
@@ -32,13 +40,16 @@ kastle:Nonnegativeinteger a rdfs:Class .
 
 kastle:Object a rdfs:Class .
 
-kastle:Palm a rdfs:Class .
+kastle:Palm a rdfs:Class ;
+    rdfs:subClassOf kastle:Hand,
+        kastle:Handparts .
 
 kastle:Position a rdfs:Class .
 
 kastle:Skin a rdfs:Class .
 
-kastle:Thumb a rdfs:Class .
+kastle:Thumb a rdfs:Class ;
+    rdfs:subClassOf kastle:Handparts .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Hand> a owl:Ontology ;
     opla-core:hasPatternName "Hand Pattern"^^xsd:string ;

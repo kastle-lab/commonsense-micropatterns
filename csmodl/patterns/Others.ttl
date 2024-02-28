@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Animal a rdfs:Class .
+kastle:Animal a rdfs:Class ;
+    rdfs:subClassOf kastle:Others .
 
 kastle:Attribute a rdfs:Class .
 
@@ -24,13 +25,15 @@ kastle:Gender a rdfs:Class .
 
 kastle:Group a rdfs:Class .
 
-kastle:Human a rdfs:Class .
+kastle:Human a rdfs:Class ;
+    rdfs:subClassOf kastle:Others .
 
 kastle:Integer a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Machine a rdfs:Class .
+kastle:Machine a rdfs:Class ;
+    rdfs:subClassOf kastle:Others .
 
 kastle:Manufacturer a rdfs:Class .
 
@@ -38,13 +41,15 @@ kastle:Object a rdfs:Class .
 
 kastle:Occupation a rdfs:Class .
 
-kastle:Other a rdfs:Class .
+kastle:Other a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 kastle:Others a rdfs:Class .
 
 kastle:Parameter a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Others .
 
 kastle:Provider a rdfs:Class .
 

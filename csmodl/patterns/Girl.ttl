@@ -10,9 +10,12 @@ kastle:Adult a rdfs:Class .
 
 kastle:Education a rdfs:Class .
 
-kastle:Gender a rdfs:Class .
+kastle:Gender a rdfs:Class ;
+    rdfs:subClassOf kastle:Gender .
 
-kastle:Girl a rdfs:Class .
+kastle:Girl a rdfs:Class ;
+    rdfs:subClassOf kastle:Human,
+        kastle:Person .
 
 kastle:Hobby a rdfs:Class .
 

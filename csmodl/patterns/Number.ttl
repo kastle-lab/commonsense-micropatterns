@@ -6,17 +6,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Complex a rdfs:Class .
+kastle:Complex a rdfs:Class ;
+    rdfs:subClassOf kastle:Number .
 
-kastle:Floatnumber a rdfs:Class .
+kastle:Floatnumber a rdfs:Class ;
+    rdfs:subClassOf kastle:Number .
 
-kastle:Integer a rdfs:Class .
+kastle:Integer a rdfs:Class ;
+    rdfs:subClassOf kastle:Number .
 
-kastle:Integernumber a rdfs:Class .
+kastle:Integernumber a rdfs:Class ;
+    rdfs:subClassOf kastle:Number .
 
 kastle:Number a rdfs:Class .
 
-kastle:Real a rdfs:Class .
+kastle:Real a rdfs:Class ;
+    rdfs:subClassOf kastle:Number .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Number> a owl:Ontology ;
     opla-core:hasPatternName "Number Pattern"^^xsd:string ;

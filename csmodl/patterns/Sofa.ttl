@@ -12,9 +12,11 @@ kastle:Furniture a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Manufacturer a rdfs:Class .
+kastle:Manufacturer a rdfs:Class ;
+    rdfs:subClassOf kastle:String .
 
-kastle:Material a rdfs:Class .
+kastle:Material a rdfs:Class ;
+    rdfs:subClassOf kastle:String .
 
 kastle:Nonnegativeinteger a rdfs:Class .
 
@@ -22,7 +24,8 @@ kastle:Room a rdfs:Class .
 
 kastle:Size a rdfs:Class .
 
-kastle:Sofa a rdfs:Class .
+kastle:Sofa a rdfs:Class ;
+    rdfs:subClassOf kastle:Furniture .
 
 kastle:Style a rdfs:Class .
 

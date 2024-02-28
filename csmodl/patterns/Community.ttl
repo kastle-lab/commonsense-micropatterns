@@ -10,11 +10,14 @@ kastle:Activity a rdfs:Class .
 
 kastle:Comment a rdfs:Class .
 
-kastle:Community a rdfs:Class .
+kastle:Community a rdfs:Class ;
+    rdfs:subClassOf kastle:Group,
+        kastle:Resource .
 
 kastle:CommunityMember a rdfs:Class .
 
-kastle:CommunityRole a rdfs:Class .
+kastle:CommunityRole a rdfs:Class ;
+    rdfs:subClassOf kastle:Member .
 
 kastle:Community_Service a rdfs:Class .
 
@@ -22,7 +25,9 @@ kastle:Cultural_Identity a rdfs:Class .
 
 kastle:Culture a rdfs:Class .
 
-kastle:Event a rdfs:Class .
+kastle:Event a rdfs:Class ;
+    rdfs:subClassOf kastle:Community,
+        kastle:Resource .
 
 kastle:GeographicalLocation a rdfs:Class .
 
@@ -32,13 +37,17 @@ kastle:Integer a rdfs:Class .
 
 kastle:Interest a rdfs:Class .
 
-kastle:Leader a rdfs:Class .
+kastle:Leader a rdfs:Class ;
+    rdfs:subClassOf kastle:Member .
 
 kastle:LocatedIn a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Member a rdfs:Class .
+kastle:Member a rdfs:Class ;
+    rdfs:subClassOf kastle:Community,
+        kastle:Person,
+        kastle:Resource .
 
 kastle:Person a rdfs:Class .
 
@@ -46,9 +55,11 @@ kastle:Post a rdfs:Class .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Role a rdfs:Class .
+kastle:Role a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:Volunteer a rdfs:Class .
+kastle:Volunteer a rdfs:Class ;
+    rdfs:subClassOf kastle:Member .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Community> a owl:Ontology ;
     opla-core:hasPatternName "Community Pattern"^^xsd:string ;

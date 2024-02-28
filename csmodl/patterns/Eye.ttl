@@ -14,7 +14,9 @@ kastle:BodyPart a rdfs:Class .
 
 kastle:Class a rdfs:Class .
 
-kastle:Color a rdfs:Class .
+kastle:Color a rdfs:Class ;
+    rdfs:subClassOf kastle:Eye,
+        kastle:String .
 
 kastle:Cornea a rdfs:Class .
 
@@ -24,7 +26,9 @@ kastle:Disorder a rdfs:Class .
 
 kastle:Double a rdfs:Class .
 
-kastle:Eye a rdfs:Class .
+kastle:Eye a rdfs:Class ;
+    rdfs:subClassOf kastle:Bodypart,
+        kastle:Humanorgan .
 
 kastle:EyeDisease a rdfs:Class .
 
@@ -40,19 +44,23 @@ kastle:HumanEye a rdfs:Class .
 
 kastle:Iris a rdfs:Class .
 
-kastle:Lens a rdfs:Class .
+kastle:Lens a rdfs:Class ;
+    rdfs:subClassOf kastle:Eye .
 
 kastle:Organism a rdfs:Class .
 
 kastle:Retina a rdfs:Class .
 
-kastle:Shape a rdfs:Class .
+kastle:Shape a rdfs:Class ;
+    rdfs:subClassOf kastle:Eye .
 
-kastle:Size a rdfs:Class .
+kastle:Size a rdfs:Class ;
+    rdfs:subClassOf kastle:Eye .
 
 kastle:Treatment a rdfs:Class .
 
-kastle:Vision a rdfs:Class .
+kastle:Vision a rdfs:Class ;
+    rdfs:subClassOf kastle:Eye .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Eye> a owl:Ontology ;
     opla-core:hasPatternName "Eye Pattern"^^xsd:string ;

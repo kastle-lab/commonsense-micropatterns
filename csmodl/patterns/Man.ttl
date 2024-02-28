@@ -20,7 +20,12 @@ kastle:Integer a rdfs:Class .
 
 kastle:Job a rdfs:Class .
 
-kastle:Man a rdfs:Class .
+kastle:Man a rdfs:Class ;
+    rdfs:subClassOf kastle:Homosapien,
+        kastle:Human,
+        kastle:Humanbeing,
+        kastle:Nd52675bb2f2f4a4fa3deed365bcd185cb1,
+        kastle:Person .
 
 kastle:Manman a rdfs:Class .
 

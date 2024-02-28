@@ -12,7 +12,11 @@ kastle:Coin a rdfs:Class .
 
 kastle:Country a rdfs:Class .
 
-kastle:Currency a rdfs:Class .
+kastle:Currency a rdfs:Class ;
+    rdfs:subClassOf kastle:Concept,
+        kastle:Money,
+        kastle:N9832494bbc394d12b54840a7f84078c4b1,
+        kastle:Resource .
 
 kastle:CurrencyCode a rdfs:Class .
 
@@ -20,17 +24,22 @@ kastle:Double a rdfs:Class .
 
 kastle:Entity a rdfs:Class .
 
-kastle:Money a rdfs:Class .
+kastle:Money a rdfs:Class ;
+    rdfs:subClassOf kastle:Economicconcept,
+        kastle:Literal,
+        kastle:Resource .
 
 kastle:Note a rdfs:Class .
 
-kastle:Payment a rdfs:Class .
+kastle:Payment a rdfs:Class ;
+    rdfs:subClassOf kastle:Transaction .
 
 kastle:Person a rdfs:Class .
 
 kastle:Transaction a rdfs:Class .
 
-kastle:Transfer a rdfs:Class .
+kastle:Transfer a rdfs:Class ;
+    rdfs:subClassOf kastle:Transaction .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Money> a owl:Ontology ;
     opla-core:hasPatternName "Money Pattern"^^xsd:string ;

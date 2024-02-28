@@ -10,7 +10,10 @@ kastle:Color a rdfs:Class .
 
 kastle:Dimension a rdfs:Class .
 
-kastle:Door a rdfs:Class .
+kastle:Door a rdfs:Class ;
+    rdfs:subClassOf kastle:Architectural_element,
+        kastle:Architecturalelement,
+        kastle:Buildingcomponent .
 
 kastle:DoorColor a rdfs:Class .
 

@@ -18,7 +18,8 @@ kastle:Furniture a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Loveseat a rdfs:Class .
+kastle:Loveseat a rdfs:Class ;
+    rdfs:subClassOf kastle:Furniture .
 
 kastle:Manufacturer a rdfs:Class .
 

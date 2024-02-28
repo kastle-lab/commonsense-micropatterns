@@ -10,25 +10,31 @@ kastle:Anyuri a rdfs:Class .
 
 kastle:Datetime a rdfs:Class .
 
-kastle:Fact a rdfs:Class .
+kastle:Fact a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Statement .
 
 kastle:FactCategory a rdfs:Class .
 
-kastle:FactCheck a rdfs:Class .
+kastle:FactCheck a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:FactDescription a rdfs:Class .
 
 kastle:FactSource a rdfs:Class .
 
-kastle:FactTopic a rdfs:Class .
+kastle:FactTopic a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:FactType a rdfs:Class .
+kastle:FactType a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Reporter a rdfs:Class .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Source a rdfs:Class .
+kastle:Source a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Subject a rdfs:Class .
 

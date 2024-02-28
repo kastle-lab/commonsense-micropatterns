@@ -10,33 +10,46 @@ kastle:Alive a rdfs:Class .
 
 kastle:BirthDate a rdfs:Class .
 
-kastle:Child a rdfs:Class .
+kastle:Child a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
-kastle:Family a rdfs:Class .
+kastle:Family a rdfs:Class ;
+    rdfs:subClassOf kastle:Person,
+        kastle:Resource .
 
 kastle:FamilyMember a rdfs:Class .
 
-kastle:Female a rdfs:Class .
+kastle:Female a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 kastle:Gender a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Male a rdfs:Class .
+kastle:Male a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
-kastle:Man a rdfs:Class .
+kastle:Man a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
-kastle:Nd8b5031520b94b15b941a62c03efd064b1 a rdfs:Class .
+kastle:N8ca0438ee5f0405c84803fcf346123bbb1 a rdfs:Class .
 
-kastle:Nd8b5031520b94b15b941a62c03efd064b4 a rdfs:Class .
+kastle:N8ca0438ee5f0405c84803fcf346123bbb4 a rdfs:Class .
 
-kastle:Nd8b5031520b94b15b941a62c03efd064b7 a rdfs:Class .
+kastle:N8ca0438ee5f0405c84803fcf346123bbb7 a rdfs:Class .
 
-kastle:Parent a rdfs:Class .
+kastle:Parent a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Family,
+        kastle:Hasmember,
+        kastle:Member,
+        kastle:N151dbb48d95b4a24ab0768191aa63adfb1,
+        kastle:Resource .
 
-kastle:Woman a rdfs:Class .
+kastle:Woman a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Family> a owl:Ontology ;
     opla-core:hasPatternName "Family Pattern"^^xsd:string ;
@@ -111,7 +124,7 @@ kastle:hasBirthDate a rdf:Property ;
 
 kastle:hasChild a rdf:Property ;
     rdfs:domain kastle:Family,
-        kastle:Nd8b5031520b94b15b941a62c03efd064b1,
+        kastle:N8ca0438ee5f0405c84803fcf346123bbb1,
         kastle:Parent,
         kastle:Person ;
     rdfs:range kastle:Child,
@@ -186,10 +199,10 @@ kastle:hasSon a rdf:Property ;
 
 kastle:hasSpouse a rdf:Property ;
     rdfs:domain kastle:FamilyMember,
-        kastle:Nd8b5031520b94b15b941a62c03efd064b4,
+        kastle:N8ca0438ee5f0405c84803fcf346123bbb4,
         kastle:Person ;
     rdfs:range kastle:FamilyMember,
-        kastle:Nd8b5031520b94b15b941a62c03efd064b7,
+        kastle:N8ca0438ee5f0405c84803fcf346123bbb7,
         kastle:Person .
 
 kastle:isAlive a rdf:Property ;

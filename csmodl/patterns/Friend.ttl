@@ -10,7 +10,9 @@ kastle:Datetime a rdfs:Class .
 
 kastle:Duration a rdfs:Class .
 
-kastle:Friend a rdfs:Class .
+kastle:Friend a rdfs:Class ;
+    rdfs:subClassOf kastle:Person,
+        kastle:Resource .
 
 kastle:Hasfriend a rdfs:Class .
 

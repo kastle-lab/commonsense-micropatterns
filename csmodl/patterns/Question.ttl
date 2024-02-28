@@ -6,23 +6,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Answer a rdfs:Class .
+kastle:Answer a rdfs:Class ;
+    rdfs:subClassOf kastle:Intangible,
+        kastle:Question,
+        kastle:Resource .
 
 kastle:AnswerEntity a rdfs:Class .
 
 kastle:Entity a rdfs:Class .
 
-kastle:Ne47c140f79c84a538afc759075f18f11b1 a rdfs:Class .
+kastle:N1283ff7681a64ce5822eb63668931477b1 a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
-kastle:Question a rdfs:Class .
+kastle:Question a rdfs:Class ;
+    rdfs:subClassOf kastle:Intangible,
+        kastle:Resource .
 
 kastle:QuestionCategory a rdfs:Class .
 
 kastle:QuestionEntity a rdfs:Class .
 
-kastle:QuestionTopic a rdfs:Class .
+kastle:QuestionTopic a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:QuestionType a rdfs:Class .
 
@@ -125,7 +131,7 @@ kastle:hasSpecificDate a rdf:Property ;
     rdfs:range xsd:date .
 
 kastle:hasText a rdf:Property ;
-    rdfs:domain kastle:Ne47c140f79c84a538afc759075f18f11b1,
+    rdfs:domain kastle:N1283ff7681a64ce5822eb63668931477b1,
         kastle:QuestionEntity ;
     rdfs:range rdfs:Literal,
         xsd:string .

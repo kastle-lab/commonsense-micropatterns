@@ -6,9 +6,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Back a rdfs:Class .
+kastle:Back a rdfs:Class ;
+    rdfs:subClassOf kastle:Place .
 
-kastle:BackDisease a rdfs:Class .
+kastle:BackDisease a rdfs:Class ;
+    rdfs:subClassOf kastle:Disease .
 
 kastle:BackPain a rdfs:Class .
 
@@ -16,7 +18,8 @@ kastle:BackPart a rdfs:Class .
 
 kastle:Back_Condition a rdfs:Class .
 
-kastle:Backpain a rdfs:Class .
+kastle:Backpain a rdfs:Class ;
+    rdfs:subClassOf kastle:Disease .
 
 kastle:Human a rdfs:Class .
 

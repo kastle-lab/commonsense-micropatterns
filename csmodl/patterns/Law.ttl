@@ -8,13 +8,18 @@
 
 kastle:Article a rdfs:Class .
 
-kastle:Case a rdfs:Class .
+kastle:Case a rdfs:Class ;
+    rdfs:subClassOf kastle:Class,
+        kastle:Law .
 
-kastle:Client a rdfs:Class .
+kastle:Client a rdfs:Class ;
+    rdfs:subClassOf kastle:Legalentity .
 
-kastle:Constitution a rdfs:Class .
+kastle:Constitution a rdfs:Class ;
+    rdfs:subClassOf kastle:Law .
 
-kastle:Court a rdfs:Class .
+kastle:Court a rdfs:Class ;
+    rdfs:subClassOf kastle:Legalentity .
 
 kastle:CourtCase a rdfs:Class .
 
@@ -30,31 +35,41 @@ kastle:Gyear a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Judge a rdfs:Class .
+kastle:Judge a rdfs:Class ;
+    rdfs:subClassOf kastle:Legalentity .
 
 kastle:Jurisdiction a rdfs:Class .
 
-kastle:Law a rdfs:Class .
+kastle:Law a rdfs:Class ;
+    rdfs:subClassOf kastle:Class .
 
-kastle:Lawyer a rdfs:Class .
+kastle:Lawyer a rdfs:Class ;
+    rdfs:subClassOf kastle:Class,
+        kastle:Legalentity .
 
-kastle:LegalEntity a rdfs:Class .
+kastle:LegalEntity a rdfs:Class ;
+    rdfs:subClassOf kastle:Law .
 
 kastle:LegalIssue a rdfs:Class .
 
 kastle:LegalRule a rdfs:Class .
 
-kastle:Legislation a rdfs:Class .
+kastle:Legislation a rdfs:Class ;
+    rdfs:subClassOf kastle:Law .
 
-kastle:Prosecutor a rdfs:Class .
+kastle:Prosecutor a rdfs:Class ;
+    rdfs:subClassOf kastle:Lawyer .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Rule a rdfs:Class .
+kastle:Rule a rdfs:Class ;
+    rdfs:subClassOf kastle:Class .
 
-kastle:Statute a rdfs:Class .
+kastle:Statute a rdfs:Class ;
+    rdfs:subClassOf kastle:Law .
 
-kastle:StatutoryLaw a rdfs:Class .
+kastle:StatutoryLaw a rdfs:Class ;
+    rdfs:subClassOf kastle:Law .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Law> a owl:Ontology ;
     opla-core:hasPatternName "Law Pattern"^^xsd:string ;

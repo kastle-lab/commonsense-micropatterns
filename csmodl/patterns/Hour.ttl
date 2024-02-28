@@ -8,31 +8,42 @@
 
 kastle:Day a rdfs:Class .
 
-kastle:Duration a rdfs:Class .
+kastle:Duration a rdfs:Class ;
+    rdfs:subClassOf kastle:Property .
 
 kastle:Entity a rdfs:Class .
 
-kastle:Hour a rdfs:Class .
+kastle:Hour a rdfs:Class ;
+    rdfs:subClassOf kastle:Instant,
+        kastle:Resource,
+        kastle:Temporalunit .
 
-kastle:Instant a rdfs:Class .
+kastle:Instant a rdfs:Class ;
+    rdfs:subClassOf kastle:Timeline .
 
 kastle:Integer a rdfs:Class .
 
 kastle:Measure a rdfs:Class .
 
-kastle:Minute a rdfs:Class .
+kastle:Minute a rdfs:Class ;
+    rdfs:subClassOf kastle:Hour,
+        kastle:Temporalunit .
 
-kastle:PartOfDay a rdfs:Class .
+kastle:PartOfDay a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:Second a rdfs:Class .
+kastle:Second a rdfs:Class ;
+    rdfs:subClassOf kastle:Minute .
 
 kastle:TemporalEntity a rdfs:Class .
 
 kastle:TemporalUnit a rdfs:Class .
 
-kastle:Time a rdfs:Class .
+kastle:Time a rdfs:Class ;
+    rdfs:subClassOf kastle:Period .
 
-kastle:TimePeriod a rdfs:Class .
+kastle:TimePeriod a rdfs:Class ;
+    rdfs:subClassOf kastle:Property .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Hour> a owl:Ontology ;
     opla-core:hasPatternName "Hour Pattern"^^xsd:string ;

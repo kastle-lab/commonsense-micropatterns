@@ -8,7 +8,8 @@
 
 kastle:Gender a rdfs:Class .
 
-kastle:Guy a rdfs:Class .
+kastle:Guy a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 kastle:Hobby a rdfs:Class .
 

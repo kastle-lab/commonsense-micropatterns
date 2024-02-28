@@ -8,9 +8,12 @@
 
 kastle:Address a rdfs:Class .
 
-kastle:Adult a rdfs:Class .
+kastle:Adult a rdfs:Class ;
+    rdfs:subClassOf kastle:Human .
 
-kastle:Child a rdfs:Class .
+kastle:Child a rdfs:Class ;
+    rdfs:subClassOf kastle:Human,
+        kastle:Person .
 
 kastle:EducationalOrganization a rdfs:Class .
 

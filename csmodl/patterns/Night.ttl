@@ -22,7 +22,9 @@ kastle:Moon a rdfs:Class .
 
 kastle:MoonPhase a rdfs:Class .
 
-kastle:Night a rdfs:Class .
+kastle:Night a rdfs:Class ;
+    rdfs:subClassOf kastle:Periodofday,
+        kastle:Timeperiod .
 
 kastle:Nighttimeactivity a rdfs:Class .
 

@@ -6,23 +6,34 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Author a rdfs:Class .
+kastle:Author a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:Character a rdfs:Class .
+kastle:Character a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Story .
 
-kastle:Genre a rdfs:Class .
+kastle:Genre a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Integer a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:Plot a rdfs:Class .
+kastle:Plot a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Story .
 
-kastle:Setting a rdfs:Class .
+kastle:Setting a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Story .
 
-kastle:Story a rdfs:Class .
+kastle:Story a rdfs:Class ;
+    rdfs:subClassOf kastle:Creativework,
+        kastle:Resource .
 
 kastle:Theme a rdfs:Class .
 

@@ -8,7 +8,8 @@
 
 kastle:Address a rdfs:Class .
 
-kastle:Gender a rdfs:Class .
+kastle:Gender a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:GenderType a rdfs:Class .
 
@@ -18,7 +19,9 @@ kastle:Location a rdfs:Class .
 
 kastle:Nonnegativeinteger a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Person,
+        kastle:Resource .
 
 kastle:Place a rdfs:Class .
 

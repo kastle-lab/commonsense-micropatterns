@@ -10,17 +10,22 @@ kastle:Capital a rdfs:Class .
 
 kastle:CapitalCity a rdfs:Class .
 
-kastle:City a rdfs:Class .
+kastle:City a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Continent a rdfs:Class .
 
-kastle:Country a rdfs:Class .
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Place,
+        kastle:Resource .
 
-kastle:Currency a rdfs:Class .
+kastle:Currency a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Language a rdfs:Class .
+kastle:Language a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Nonnegativeinteger a rdfs:Class .
 

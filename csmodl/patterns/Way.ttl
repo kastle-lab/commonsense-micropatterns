@@ -8,9 +8,11 @@
 
 kastle:Class a rdfs:Class .
 
-kastle:Destination a rdfs:Class .
+kastle:Destination a rdfs:Class ;
+    rdfs:subClassOf kastle:Way .
 
-kastle:Direction a rdfs:Class .
+kastle:Direction a rdfs:Class ;
+    rdfs:subClassOf kastle:Way .
 
 kastle:Double a rdfs:Class .
 
@@ -22,13 +24,16 @@ kastle:Langstring a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Method a rdfs:Class .
+kastle:Method a rdfs:Class ;
+    rdfs:subClassOf kastle:Way .
 
-kastle:N2a55b1dbfb6d41e59fd96be9b0796581b1 a rdfs:Class .
+kastle:N3958bad6ceaf4788b924b221d14c02a3b1 a rdfs:Class .
 
-kastle:Path a rdfs:Class .
+kastle:Path a rdfs:Class ;
+    rdfs:subClassOf kastle:Way .
 
-kastle:PedestrianPath a rdfs:Class .
+kastle:PedestrianPath a rdfs:Class ;
+    rdfs:subClassOf kastle:Way .
 
 kastle:Person a rdfs:Class .
 
@@ -38,11 +43,14 @@ kastle:Point a rdfs:Class .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Road a rdfs:Class .
+kastle:Road a rdfs:Class ;
+    rdfs:subClassOf kastle:Way .
 
 kastle:Subject a rdfs:Class .
 
-kastle:Way a rdfs:Class .
+kastle:Way a rdfs:Class ;
+    rdfs:subClassOf kastle:Property,
+        kastle:Resource .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Way> a owl:Ontology ;
     opla-core:hasPatternName "Way Pattern"^^xsd:string ;
@@ -182,7 +190,7 @@ kastle:hasType a rdf:Property ;
 
 kastle:hasWay a rdf:Property ;
     rdfs:domain kastle:Entity,
-        kastle:N2a55b1dbfb6d41e59fd96be9b0796581b1,
+        kastle:N3958bad6ceaf4788b924b221d14c02a3b1,
         kastle:Subject ;
     rdfs:range kastle:Way .
 

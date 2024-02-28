@@ -274,11 +274,19 @@ def vote_properties(verbose=False):
                                     unique_scos.add((domain_name, RDFS.subClassOf, d_sco_name))
                                 except:
                                     pass
+
                         for unique_prop in unique_props:
                             try: 
                                 noun_properties[unique_prop] += 1
                             except KeyError as e:
-                                noun_properties[unique_prop] = 1    
+                                noun_properties[unique_prop] = 1  
+
+                        for unique_sco in unique_scos:
+                            try:
+                                noun_scos[unique_sco] += 1
+                            except KeyError as e:
+                                noun_scos[unique_sco] = 1
+
                     # Stats File
                     stats_valid[noun] += 1
                 if verbose:
@@ -318,6 +326,16 @@ def vote_properties(verbose=False):
                     noun_graph.add( (pfs["kastle"][p], RDFS.domain, pfs[f"{d_pfx}"][d]))
                     noun_graph.add( (pfs["kastle"][p], RDFS.range, pfs[f"{r_pfx}"][r]))
 
+            for k, v in noun_scos.items():
+                s, sco, o = k
+                if(s == "Thing"):
+                    continue
+                if(o == "Thing"):
+                    continue
+                if v > threshold:
+                    noun_graph.add( (pfs["kastle"][s], RDFS.subClassOf, pfs["kastle"][o]))
+                    noun_graph.add( (pfs["kastle"][s], RDFS.subClassOf, pfs["kastle"][o]))
+                    
             # Serialize!
             try:
                 serialization(noun, noun_graph)

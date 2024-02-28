@@ -6,11 +6,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Application a rdfs:Class .
+kastle:Application a rdfs:Class ;
+    rdfs:subClassOf kastle:Software .
 
-kastle:Component a rdfs:Class .
+kastle:Component a rdfs:Class ;
+    rdfs:subClassOf kastle:System .
 
-kastle:ComputerSystem a rdfs:Class .
+kastle:ComputerSystem a rdfs:Class ;
+    rdfs:subClassOf kastle:Hardware .
 
 kastle:Configuration a rdfs:Class .
 
@@ -20,13 +23,16 @@ kastle:Function a rdfs:Class .
 
 kastle:Functionality a rdfs:Class .
 
-kastle:Hardware a rdfs:Class .
+kastle:Hardware a rdfs:Class ;
+    rdfs:subClassOf kastle:Component .
 
-kastle:N0e458e3e278a42569bd10282b3313a82b1 a rdfs:Class .
+kastle:Nb264d2cc31194a64bfd5dcf9bb6bc55fb1 a rdfs:Class .
 
 kastle:Objective a rdfs:Class .
 
-kastle:OperatingSystem a rdfs:Class .
+kastle:OperatingSystem a rdfs:Class ;
+    rdfs:subClassOf kastle:Software,
+        kastle:System .
 
 kastle:Part a rdfs:Class .
 
@@ -34,15 +40,19 @@ kastle:Resource a rdfs:Class .
 
 kastle:Service a rdfs:Class .
 
-kastle:Software a rdfs:Class .
+kastle:Software a rdfs:Class ;
+    rdfs:subClassOf kastle:Component .
 
-kastle:SubSystem a rdfs:Class .
+kastle:SubSystem a rdfs:Class ;
+    rdfs:subClassOf kastle:System .
 
-kastle:Subsystem a rdfs:Class .
+kastle:Subsystem a rdfs:Class ;
+    rdfs:subClassOf kastle:System .
 
 kastle:System a rdfs:Class .
 
-kastle:SystemComponent a rdfs:Class .
+kastle:SystemComponent a rdfs:Class ;
+    rdfs:subClassOf kastle:System .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/System> a owl:Ontology ;
     opla-core:hasPatternName "System Pattern"^^xsd:string ;
@@ -160,7 +170,7 @@ kastle:isPartOf a rdf:Property ;
     rdfs:range kastle:System .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:N0e458e3e278a42569bd10282b3313a82b1 ;
+    rdfs:domain kastle:Nb264d2cc31194a64bfd5dcf9bb6bc55fb1 ;
     rdfs:range xsd:string .
 
 kastle:partOf a rdf:Property ;

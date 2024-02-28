@@ -16,7 +16,8 @@ kastle:Duration a rdfs:Class .
 
 kastle:Entity a rdfs:Class .
 
-kastle:OfflineService a rdfs:Class .
+kastle:OfflineService a rdfs:Class ;
+    rdfs:subClassOf kastle:Service .
 
 kastle:Price a rdfs:Class .
 
@@ -30,7 +31,8 @@ kastle:ServiceCost a rdfs:Class .
 
 kastle:ServiceLocation a rdfs:Class .
 
-kastle:ServiceProvider a rdfs:Class .
+kastle:ServiceProvider a rdfs:Class ;
+    rdfs:subClassOf kastle:Entity .
 
 kastle:ServiceType a rdfs:Class .
 

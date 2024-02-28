@@ -8,9 +8,11 @@
 
 kastle:Address a rdfs:Class .
 
-kastle:City a rdfs:Class .
+kastle:City a rdfs:Class ;
+    rdfs:subClassOf kastle:Place .
 
-kastle:Country a rdfs:Class .
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Place .
 
 kastle:Double a rdfs:Class .
 
@@ -22,9 +24,11 @@ kastle:Location a rdfs:Class .
 
 kastle:Long a rdfs:Class .
 
-kastle:Park a rdfs:Class .
+kastle:Park a rdfs:Class ;
+    rdfs:subClassOf kastle:Place .
 
-kastle:Place a rdfs:Class .
+kastle:Place a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:PostalAddress a rdfs:Class .
 

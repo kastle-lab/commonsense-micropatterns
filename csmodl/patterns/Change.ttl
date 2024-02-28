@@ -14,7 +14,9 @@ kastle:CausalEvent a rdfs:Class .
 
 kastle:Cause a rdfs:Class .
 
-kastle:Change a rdfs:Class .
+kastle:Change a rdfs:Class ;
+    rdfs:subClassOf kastle:Process,
+        kastle:Resource .
 
 kastle:ChangeAgent a rdfs:Class .
 

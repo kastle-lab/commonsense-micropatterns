@@ -16,7 +16,8 @@ kastle:Integer a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Party a rdfs:Class .
+kastle:Party a rdfs:Class ;
+    rdfs:subClassOf kastle:Event .
 
 kastle:PartyActivity a rdfs:Class .
 
@@ -28,7 +29,8 @@ kastle:PartyOrganiser a rdfs:Class .
 
 kastle:PartyType a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Resource a rdfs:Class .
 

@@ -10,13 +10,18 @@ kastle:Cheek a rdfs:Class .
 
 kastle:Class a rdfs:Class .
 
-kastle:Expression a rdfs:Class .
+kastle:Expression a rdfs:Class ;
+    rdfs:subClassOf kastle:Face .
 
-kastle:Eye a rdfs:Class .
+kastle:Eye a rdfs:Class ;
+    rdfs:subClassOf kastle:Face .
 
-kastle:Eyes a rdfs:Class .
+kastle:Eyes a rdfs:Class ;
+    rdfs:subClassOf kastle:Face .
 
-kastle:Face a rdfs:Class .
+kastle:Face a rdfs:Class ;
+    rdfs:subClassOf kastle:Bodypart,
+        kastle:Resource .
 
 kastle:FacePart a rdfs:Class .
 
@@ -26,13 +31,16 @@ kastle:Human a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Mouth a rdfs:Class .
+kastle:Mouth a rdfs:Class ;
+    rdfs:subClassOf kastle:Face .
 
-kastle:N525336bfa75d4f78a24d7e253f4a81deb1 a rdfs:Class .
+kastle:Nbb17d2cede1240a8adad1d8587390239b1 a rdfs:Class .
 
-kastle:Nose a rdfs:Class .
+kastle:Nose a rdfs:Class ;
+    rdfs:subClassOf kastle:Face .
 
-kastle:Skin a rdfs:Class .
+kastle:Skin a rdfs:Class ;
+    rdfs:subClassOf kastle:Face .
 
 kastle:SkinType a rdfs:Class .
 
@@ -92,7 +100,7 @@ kastle:hasFace a rdf:Property ;
 kastle:hasFacialFeature a rdf:Property ;
     rdfs:domain kastle:Face ;
     rdfs:range kastle:FacialFeature,
-        kastle:N525336bfa75d4f78a24d7e253f4a81deb1 .
+        kastle:Nbb17d2cede1240a8adad1d8587390239b1 .
 
 kastle:hasFeature a rdf:Property ;
     rdfs:domain kastle:Face ;

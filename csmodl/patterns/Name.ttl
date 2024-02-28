@@ -8,7 +8,8 @@
 
 kastle:Entity a rdfs:Class .
 
-kastle:Name a rdfs:Class .
+kastle:Name a rdfs:Class ;
+    rdfs:subClassOf kastle:Literal .
 
 kastle:NameEntity a rdfs:Class .
 

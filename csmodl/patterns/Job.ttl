@@ -20,7 +20,8 @@ kastle:Industry a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Job a rdfs:Class .
+kastle:Job a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:JobPosting a rdfs:Class .
 

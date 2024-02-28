@@ -14,7 +14,9 @@ kastle:Entity a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Issue a rdfs:Class .
+kastle:Issue a rdfs:Class ;
+    rdfs:subClassOf kastle:Concern,
+        kastle:Entity .
 
 kastle:IssueDateCreated a rdfs:Class .
 
@@ -28,19 +30,24 @@ kastle:IssueSeverity a rdfs:Class .
 
 kastle:IssueStatus a rdfs:Class .
 
-kastle:IssueStatusEnum a rdfs:Class .
+kastle:IssueStatusEnum a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:IssueTitle a rdfs:Class .
 
 kastle:Langstring a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Entity .
 
-kastle:Priority a rdfs:Class .
+kastle:Priority a rdfs:Class ;
+    rdfs:subClassOf kastle:Issue .
 
 kastle:Something a rdfs:Class .
 
-kastle:Status a rdfs:Class .
+kastle:Status a rdfs:Class ;
+    rdfs:subClassOf kastle:Entity,
+        kastle:Issue .
 
 kastle:Subject a rdfs:Class .
 

@@ -10,7 +10,8 @@ kastle:Age a rdfs:Class .
 
 kastle:Datetime a rdfs:Class .
 
-kastle:Daughter a rdfs:Class .
+kastle:Daughter a rdfs:Class ;
+    rdfs:subClassOf kastle:Woman .
 
 kastle:Gender a rdfs:Class .
 
@@ -20,7 +21,8 @@ kastle:Integer a rdfs:Class .
 
 kastle:Man a rdfs:Class .
 
-kastle:Mother a rdfs:Class .
+kastle:Mother a rdfs:Class ;
+    rdfs:subClassOf kastle:Woman .
 
 kastle:Name a rdfs:Class .
 
@@ -32,7 +34,9 @@ kastle:Person a rdfs:Class .
 
 kastle:Thing a rdfs:Class .
 
-kastle:Woman a rdfs:Class .
+kastle:Woman a rdfs:Class ;
+    rdfs:subClassOf kastle:Human,
+        kastle:Nf85cde7178e84accb0cd4a81578c936db1 .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Woman> a owl:Ontology ;
     opla-core:hasPatternName "Woman Pattern"^^xsd:string ;

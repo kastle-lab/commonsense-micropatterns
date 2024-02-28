@@ -6,31 +6,39 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Action a rdfs:Class .
+kastle:Action a rdfs:Class ;
+    rdfs:subClassOf kastle:Concept .
 
 kastle:ActionClaim a rdfs:Class .
 
 kastle:ActionEffect a rdfs:Class .
 
-kastle:Argument a rdfs:Class .
+kastle:Argument a rdfs:Class ;
+    rdfs:subClassOf kastle:Statement .
 
 kastle:Entity a rdfs:Class .
 
-kastle:Event a rdfs:Class .
+kastle:Event a rdfs:Class ;
+    rdfs:subClassOf kastle:Concept .
 
 kastle:IdeaOrActionOrTheory a rdfs:Class .
 
-kastle:Na7d411b1414449ee8a7d87120f33f9ddb2 a rdfs:Class .
+kastle:Ned9a1f3809314a4a9e7bb4c5a3d7f240b2 a rdfs:Class .
 
-kastle:Na7d411b1414449ee8a7d87120f33f9ddb3 a rdfs:Class .
+kastle:Ned9a1f3809314a4a9e7bb4c5a3d7f240b3 a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
 kastle:PhenomenonFact a rdfs:Class .
 
-kastle:Reason a rdfs:Class .
+kastle:Reason a rdfs:Class ;
+    rdfs:subClassOf kastle:Concept,
+        kastle:Ned9a1f3809314a4a9e7bb4c5a3d7f240b1,
+        kastle:Resource,
+        kastle:Statement .
 
-kastle:ReasoningenType a rdfs:Class .
+kastle:ReasoningenType a rdfs:Class ;
+    rdfs:subClassOf kastle:Reason .
 
 kastle:Resource a rdfs:Class .
 
@@ -53,7 +61,7 @@ kastle:actionName a rdf:Property ;
 
 kastle:actionTriggeredBy a rdf:Property ;
     rdfs:domain kastle:Reason ;
-    rdfs:range kastle:Na7d411b1414449ee8a7d87120f33f9ddb2 .
+    rdfs:range kastle:Ned9a1f3809314a4a9e7bb4c5a3d7f240b2 .
 
 kastle:causedBy a rdf:Property ;
     rdfs:domain kastle:Reason ;
@@ -65,7 +73,7 @@ kastle:causes a rdf:Property ;
 
 kastle:causesEvent a rdf:Property ;
     rdfs:domain kastle:Reason ;
-    rdfs:range kastle:Na7d411b1414449ee8a7d87120f33f9ddb3 .
+    rdfs:range kastle:Ned9a1f3809314a4a9e7bb4c5a3d7f240b3 .
 
 kastle:contains a rdf:Property ;
     rdfs:domain kastle:Reason ;

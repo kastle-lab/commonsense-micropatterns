@@ -10,17 +10,22 @@ kastle:Agent a rdfs:Class .
 
 kastle:Change a rdfs:Class .
 
-kastle:Direction a rdfs:Class .
+kastle:Direction a rdfs:Class ;
+    rdfs:subClassOf kastle:Physicalconcept .
 
 kastle:Entity a rdfs:Class .
 
-kastle:Force a rdfs:Class .
+kastle:Force a rdfs:Class ;
+    rdfs:subClassOf kastle:Physicalconcept,
+        kastle:Physicalphenomenon,
+        kastle:Physicalquantity .
 
 kastle:ForceType a rdfs:Class .
 
 kastle:ForceUnit a rdfs:Class .
 
-kastle:Magnitude a rdfs:Class .
+kastle:Magnitude a rdfs:Class ;
+    rdfs:subClassOf kastle:Physicalconcept .
 
 kastle:Object a rdfs:Class .
 

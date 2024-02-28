@@ -6,15 +6,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:City a rdfs:Class .
+kastle:City a rdfs:Class ;
+    rdfs:subClassOf kastle:Feature,
+        kastle:Geologicalplace,
+        kastle:Geonamesfeature,
+        kastle:Resource .
 
-kastle:Country a rdfs:Class .
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Integer a rdfs:Class .
 
 kastle:Nonnegativeinteger a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Resource a rdfs:Class .
 

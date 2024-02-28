@@ -24,7 +24,8 @@ kastle:Forehead a rdfs:Class .
 
 kastle:Hair a rdfs:Class .
 
-kastle:Head a rdfs:Class .
+kastle:Head a rdfs:Class ;
+    rdfs:subClassOf kastle:Bodypart .
 
 kastle:HeadPart a rdfs:Class .
 

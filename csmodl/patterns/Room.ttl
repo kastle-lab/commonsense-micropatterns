@@ -20,11 +20,14 @@ kastle:Langstring a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
-kastle:Room a rdfs:Class .
+kastle:Room a rdfs:Class ;
+    rdfs:subClassOf kastle:Architecturalstructure,
+        kastle:Physicalspace .
 
 kastle:RoomFunction a rdfs:Class .
 
-kastle:RoomType a rdfs:Class .
+kastle:RoomType a rdfs:Class ;
+    rdfs:subClassOf kastle:Room .
 
 kastle:RoomTypeEnumeration a rdfs:Class .
 

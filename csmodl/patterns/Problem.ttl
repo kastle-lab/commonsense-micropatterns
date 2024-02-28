@@ -22,13 +22,16 @@ kastle:Integer a rdfs:Class .
 
 kastle:Langstring a rdfs:Class .
 
-kastle:N6ab684fcf7e145b98722e3667610e598b2 a rdfs:Class .
+kastle:Nf39575439bc741078cab2d5916c663acb2 a rdfs:Class .
 
-kastle:Problem a rdfs:Class .
+kastle:Problem a rdfs:Class ;
+    rdfs:subClassOf kastle:Concept,
+        kastle:Situation .
 
 kastle:ProblemType a rdfs:Class .
 
-kastle:Solution a rdfs:Class .
+kastle:Solution a rdfs:Class ;
+    rdfs:subClassOf kastle:Situation .
 
 kastle:Solving a rdfs:Class .
 
@@ -177,7 +180,7 @@ kastle:problemDescription a rdf:Property ;
 
 kastle:problemSolution a rdf:Property ;
     rdfs:domain kastle:Problem ;
-    rdfs:range kastle:N6ab684fcf7e145b98722e3667610e598b2 .
+    rdfs:range kastle:Nf39575439bc741078cab2d5916c663acb2 .
 
 kastle:severity a rdf:Property ;
     rdfs:domain kastle:Problem ;

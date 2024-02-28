@@ -8,15 +8,23 @@
 
 kastle:Class a rdfs:Class .
 
-kastle:Day a rdfs:Class .
+kastle:Day a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Temporalunit,
+        kastle:Timeperiod,
+        kastle:Week .
 
-kastle:Hour a rdfs:Class .
+kastle:Hour a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Integer a rdfs:Class .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Week a rdfs:Class .
+kastle:Week a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource,
+        kastle:Temporalunit,
+        kastle:Timeperiod .
 
 kastle:Year a rdfs:Class .
 

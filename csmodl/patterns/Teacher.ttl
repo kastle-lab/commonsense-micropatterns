@@ -20,7 +20,8 @@ kastle:Student a rdfs:Class .
 
 kastle:Subject a rdfs:Class .
 
-kastle:Teacher a rdfs:Class .
+kastle:Teacher a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Teacher> a owl:Ontology ;
     opla-core:hasPatternName "Teacher Pattern"^^xsd:string ;

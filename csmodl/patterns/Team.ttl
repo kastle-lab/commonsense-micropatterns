@@ -14,7 +14,8 @@ kastle:Integer a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Member a rdfs:Class .
+kastle:Member a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 kastle:Name a rdfs:Class .
 
@@ -30,11 +31,13 @@ kastle:Sport a rdfs:Class .
 
 kastle:Task a rdfs:Class .
 
-kastle:Team a rdfs:Class .
+kastle:Team a rdfs:Class ;
+    rdfs:subClassOf kastle:Organization .
 
 kastle:TeamLeague a rdfs:Class .
 
-kastle:TeamMember a rdfs:Class .
+kastle:TeamMember a rdfs:Class ;
+    rdfs:subClassOf kastle:Team .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Team> a owl:Ontology ;
     opla-core:hasPatternName "Team Pattern"^^xsd:string ;

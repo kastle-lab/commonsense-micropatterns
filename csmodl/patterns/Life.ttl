@@ -6,13 +6,17 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Animal a rdfs:Class .
+kastle:Animal a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
-kastle:Birth a rdfs:Class .
+kastle:Birth a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
-kastle:Cell a rdfs:Class .
+kastle:Cell a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
-kastle:Death a rdfs:Class .
+kastle:Death a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
 kastle:Entity a rdfs:Class .
 
@@ -20,21 +24,29 @@ kastle:Environment a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Life a rdfs:Class .
+kastle:Life a rdfs:Class ;
+    rdfs:subClassOf kastle:Entity,
+        kastle:Resource .
 
-kastle:LifeCycle a rdfs:Class .
+kastle:LifeCycle a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
-kastle:LifeForm a rdfs:Class .
+kastle:LifeForm a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
 kastle:LifeSpan a rdfs:Class .
 
-kastle:LifeStage a rdfs:Class .
+kastle:LifeStage a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:Organism a rdfs:Class .
+kastle:Organism a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
-kastle:Species a rdfs:Class .
+kastle:Species a rdfs:Class ;
+    rdfs:subClassOf kastle:Life .
 
-kastle:TaxonomicRank a rdfs:Class .
+kastle:TaxonomicRank a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Life> a owl:Ontology ;
     opla-core:hasPatternName "Life Pattern"^^xsd:string ;

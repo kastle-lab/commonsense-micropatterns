@@ -8,17 +8,26 @@
 
 kastle:Building a rdfs:Class .
 
-kastle:Chair a rdfs:Class .
+kastle:Chair a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
-kastle:Computer a rdfs:Class .
+kastle:Computer a rdfs:Class ;
+    rdfs:subClassOf kastle:Desk .
 
 kastle:Department a rdfs:Class .
 
-kastle:DepartmentHead a rdfs:Class .
+kastle:DepartmentHead a rdfs:Class ;
+    rdfs:subClassOf kastle:Employee .
 
-kastle:Desk a rdfs:Class .
+kastle:Desk a rdfs:Class ;
+    rdfs:subClassOf kastle:Office,
+        kastle:Resource,
+        kastle:Room .
 
-kastle:Employee a rdfs:Class .
+kastle:Employee a rdfs:Class ;
+    rdfs:subClassOf kastle:Office,
+        kastle:Person,
+        kastle:Resource .
 
 kastle:Equipment a rdfs:Class .
 
@@ -28,11 +37,16 @@ kastle:Furniture a rdfs:Class .
 
 kastle:Integer a rdfs:Class .
 
-kastle:Manager a rdfs:Class .
+kastle:Manager a rdfs:Class ;
+    rdfs:subClassOf kastle:Employee .
 
 kastle:Nonnegativeinteger a rdfs:Class .
 
-kastle:Office a rdfs:Class .
+kastle:Office a rdfs:Class ;
+    rdfs:subClassOf kastle:Building,
+        kastle:N9c60bb77ee764160bee8687aa0e6f628b1,
+        kastle:Nbbc8d28a00714441ab43a52128d4ba8db1,
+        kastle:Resource .
 
 kastle:OfficeEquipment a rdfs:Class .
 
@@ -40,7 +54,8 @@ kastle:Person a rdfs:Class .
 
 kastle:Role a rdfs:Class .
 
-kastle:Room a rdfs:Class .
+kastle:Room a rdfs:Class ;
+    rdfs:subClassOf kastle:Office .
 
 kastle:StaffMember a rdfs:Class .
 

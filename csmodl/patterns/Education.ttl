@@ -6,13 +6,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:AcademicInstitution a rdfs:Class .
+kastle:AcademicInstitution a rdfs:Class ;
+    rdfs:subClassOf kastle:Education .
 
-kastle:Course a rdfs:Class .
+kastle:Course a rdfs:Class ;
+    rdfs:subClassOf kastle:Education,
+        kastle:Subject .
 
-kastle:Degree a rdfs:Class .
+kastle:Degree a rdfs:Class ;
+    rdfs:subClassOf kastle:Education .
 
-kastle:Education a rdfs:Class .
+kastle:Education a rdfs:Class ;
+    rdfs:subClassOf kastle:Process .
 
 kastle:EducationCourse a rdfs:Class .
 
@@ -22,27 +27,33 @@ kastle:Entity a rdfs:Class .
 
 kastle:Grade a rdfs:Class .
 
-kastle:Institution a rdfs:Class .
+kastle:Institution a rdfs:Class ;
+    rdfs:subClassOf kastle:Organization .
 
 kastle:Integer a rdfs:Class .
 
 kastle:KnowledgeArea a rdfs:Class .
 
-kastle:N5bbd6e29530947beb8f615fc5dbf6f2db1 a rdfs:Class .
+kastle:N05aaffae578e46e1bf0ef74db699036ab1 a rdfs:Class .
 
-kastle:N9d79204b39c044319b53b8fe12f6e978b1 a rdfs:Class .
+kastle:N7daede8dfec54e3784e36650d13b75e9b1 a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
-kastle:School a rdfs:Class .
+kastle:School a rdfs:Class ;
+    rdfs:subClassOf kastle:Education .
 
-kastle:Student a rdfs:Class .
+kastle:Student a rdfs:Class ;
+    rdfs:subClassOf kastle:Education .
 
 kastle:Subject a rdfs:Class .
 
-kastle:Teacher a rdfs:Class .
+kastle:Teacher a rdfs:Class ;
+    rdfs:subClassOf kastle:Education .
 
-kastle:University a rdfs:Class .
+kastle:University a rdfs:Class ;
+    rdfs:subClassOf kastle:Education,
+        kastle:School .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Education> a owl:Ontology ;
     opla-core:hasPatternName "Education Pattern"^^xsd:string ;
@@ -139,8 +150,8 @@ kastle:hasTeacher a rdf:Property ;
     rdfs:range kastle:Teacher .
 
 kastle:name a rdf:Property ;
-    rdfs:domain kastle:N5bbd6e29530947beb8f615fc5dbf6f2db1,
-        kastle:N9d79204b39c044319b53b8fe12f6e978b1 ;
+    rdfs:domain kastle:N05aaffae578e46e1bf0ef74db699036ab1,
+        kastle:N7daede8dfec54e3784e36650d13b75e9b1 ;
     rdfs:range xsd:string .
 
 kastle:offeredBy a rdf:Property ;

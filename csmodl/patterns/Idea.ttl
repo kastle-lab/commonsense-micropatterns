@@ -22,7 +22,8 @@ kastle:Datetime a rdfs:Class .
 
 kastle:Event a rdfs:Class .
 
-kastle:Idea a rdfs:Class .
+kastle:Idea a rdfs:Class ;
+    rdfs:subClassOf kastle:Concept .
 
 kastle:Integer a rdfs:Class .
 

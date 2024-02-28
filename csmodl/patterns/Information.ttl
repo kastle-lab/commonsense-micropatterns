@@ -10,39 +10,52 @@ kastle:Anyuri a rdfs:Class .
 
 kastle:Author a rdfs:Class .
 
-kastle:BusinessInformation a rdfs:Class .
+kastle:BusinessInformation a rdfs:Class ;
+    rdfs:subClassOf kastle:Information .
 
 kastle:Class a rdfs:Class .
 
-kastle:Communication a rdfs:Class .
+kastle:Communication a rdfs:Class ;
+    rdfs:subClassOf kastle:Info .
 
-kastle:Data a rdfs:Class .
+kastle:Data a rdfs:Class ;
+    rdfs:subClassOf kastle:Info .
 
-kastle:DataType a rdfs:Class .
+kastle:DataType a rdfs:Class ;
+    rdfs:subClassOf kastle:Information .
 
 kastle:Datetime a rdfs:Class .
 
-kastle:DigitalInformation a rdfs:Class .
+kastle:DigitalInformation a rdfs:Class ;
+    rdfs:subClassOf kastle:Information .
 
-kastle:Document a rdfs:Class .
+kastle:Document a rdfs:Class ;
+    rdfs:subClassOf kastle:Information .
 
 kastle:Entity a rdfs:Class .
 
-kastle:Fact a rdfs:Class .
+kastle:Fact a rdfs:Class ;
+    rdfs:subClassOf kastle:Info .
 
 kastle:Format a rdfs:Class .
 
 kastle:Info a rdfs:Class .
 
-kastle:Information a rdfs:Class .
+kastle:Information a rdfs:Class ;
+    rdfs:subClassOf kastle:Data .
 
-kastle:InformationProcessing a rdfs:Class .
+kastle:InformationProcessing a rdfs:Class ;
+    rdfs:subClassOf kastle:Info .
 
-kastle:InformationRepresentation a rdfs:Class .
+kastle:InformationRepresentation a rdfs:Class ;
+    rdfs:subClassOf kastle:Information .
 
-kastle:InformationSecurity a rdfs:Class .
+kastle:InformationSecurity a rdfs:Class ;
+    rdfs:subClassOf kastle:Information .
 
-kastle:Knowledge a rdfs:Class .
+kastle:Knowledge a rdfs:Class ;
+    rdfs:subClassOf kastle:Info,
+        kastle:Information .
 
 kastle:Media a rdfs:Class .
 
@@ -52,7 +65,8 @@ kastle:Metadata a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
-kastle:PersonalInformation a rdfs:Class .
+kastle:PersonalInformation a rdfs:Class ;
+    rdfs:subClassOf kastle:Information .
 
 kastle:Professor a rdfs:Class .
 
@@ -66,7 +80,8 @@ kastle:Student a rdfs:Class .
 
 kastle:Subject a rdfs:Class .
 
-kastle:TextInfo a rdfs:Class .
+kastle:TextInfo a rdfs:Class ;
+    rdfs:subClassOf kastle:Info .
 
 kastle:Topic a rdfs:Class .
 

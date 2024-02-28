@@ -12,13 +12,15 @@ kastle:Agent a rdfs:Class .
 
 kastle:Authority a rdfs:Class .
 
-kastle:CivilRight a rdfs:Class .
+kastle:CivilRight a rdfs:Class ;
+    rdfs:subClassOf kastle:Right .
 
 kastle:Entity a rdfs:Class .
 
 kastle:Human a rdfs:Class .
 
-kastle:HumanRight a rdfs:Class .
+kastle:HumanRight a rdfs:Class ;
+    rdfs:subClassOf kastle:Right .
 
 kastle:Institution a rdfs:Class .
 
@@ -26,19 +28,24 @@ kastle:Jurisdiction a rdfs:Class .
 
 kastle:Law a rdfs:Class .
 
-kastle:LegalRight a rdfs:Class .
+kastle:LegalRight a rdfs:Class ;
+    rdfs:subClassOf kastle:N6e82713b336940008622e00652df59bfb1 .
 
 kastle:LegalSystem a rdfs:Class .
 
 kastle:Person a rdfs:Class .
 
-kastle:PoliticalRight a rdfs:Class .
+kastle:PoliticalRight a rdfs:Class ;
+    rdfs:subClassOf kastle:Right .
 
-kastle:ReligiousRight a rdfs:Class .
+kastle:ReligiousRight a rdfs:Class ;
+    rdfs:subClassOf kastle:Right .
 
 kastle:Resource a rdfs:Class .
 
-kastle:Right a rdfs:Class .
+kastle:Right a rdfs:Class ;
+    rdfs:subClassOf kastle:Law,
+        kastle:Property .
 
 kastle:RightHolder a rdfs:Class .
 

@@ -22,7 +22,9 @@ kastle:Occupation a rdfs:Class .
 
 kastle:People a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Person,
+        kastle:Resource .
 
 kastle:PhoneNumber a rdfs:Class .
 

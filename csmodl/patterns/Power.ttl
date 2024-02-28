@@ -10,7 +10,8 @@ kastle:Country a rdfs:Class .
 
 kastle:Device a rdfs:Class .
 
-kastle:ElectricPower a rdfs:Class .
+kastle:ElectricPower a rdfs:Class ;
+    rdfs:subClassOf kastle:Power .
 
 kastle:ElectricalPower a rdfs:Class .
 
@@ -24,15 +25,19 @@ kastle:Integer a rdfs:Class .
 
 kastle:Machine a rdfs:Class .
 
-kastle:N6b3e4ac5b9644f0a91f68b360a183030b1 a rdfs:Class .
+kastle:Na20871d4cee24edc99d33cff0ce65d10b1 a rdfs:Class .
 
 kastle:Object a rdfs:Class .
 
-kastle:PhysicalPower a rdfs:Class .
+kastle:PhysicalPower a rdfs:Class ;
+    rdfs:subClassOf kastle:Power .
 
-kastle:PoliticalPower a rdfs:Class .
+kastle:PoliticalPower a rdfs:Class ;
+    rdfs:subClassOf kastle:Power .
 
-kastle:Power a rdfs:Class .
+kastle:Power a rdfs:Class ;
+    rdfs:subClassOf kastle:Integer,
+        kastle:Physicalquantity .
 
 kastle:PowerConcept a rdfs:Class .
 
@@ -75,7 +80,7 @@ kastle:amountOfPower a rdf:Property ;
 
 kastle:calculatesPower a rdf:Property ;
     rdfs:domain kastle:Entity ;
-    rdfs:range kastle:N6b3e4ac5b9644f0a91f68b360a183030b1 .
+    rdfs:range kastle:Na20871d4cee24edc99d33cff0ce65d10b1 .
 
 kastle:capacity a rdf:Property ;
     rdfs:domain kastle:Power ;

@@ -10,17 +10,20 @@ kastle:Datetime a rdfs:Class .
 
 kastle:End a rdfs:Class .
 
-kastle:EndEvent a rdfs:Class .
+kastle:EndEvent a rdfs:Class ;
+    rdfs:subClassOf kastle:End .
 
-kastle:EndLocation a rdfs:Class .
+kastle:EndLocation a rdfs:Class ;
+    rdfs:subClassOf kastle:End .
 
-kastle:EndTime a rdfs:Class .
+kastle:EndTime a rdfs:Class ;
+    rdfs:subClassOf kastle:End .
 
 kastle:Entity a rdfs:Class .
 
 kastle:Event a rdfs:Class .
 
-kastle:N94730cb181d24a70a609651db0faf9a1b1 a rdfs:Class .
+kastle:N6368b32855bb4934b0d678c8956ceef6b1 a rdfs:Class .
 
 kastle:Process a rdfs:Class .
 
@@ -110,7 +113,7 @@ kastle:hasTime a rdf:Property ;
 
 kastle:isEndOf a rdf:Property ;
     rdfs:domain kastle:End,
-        kastle:N94730cb181d24a70a609651db0faf9a1b1 ;
+        kastle:N6368b32855bb4934b0d678c8956ceef6b1 ;
     rdfs:range kastle:End,
         kastle:Resource,
         kastle:Thing .

@@ -8,7 +8,8 @@
 
 kastle:Address a rdfs:Class .
 
-kastle:CEO a rdfs:Class .
+kastle:CEO a rdfs:Class ;
+    rdfs:subClassOf kastle:Employee .
 
 kastle:Company a rdfs:Class .
 
@@ -24,13 +25,15 @@ kastle:Integer a rdfs:Class .
 
 kastle:Location a rdfs:Class .
 
-kastle:Person a rdfs:Class .
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Company .
 
 kastle:PlainLiteral a rdfs:Class .
 
 kastle:Product a rdfs:Class .
 
-kastle:Role a rdfs:Class .
+kastle:Role a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Company> a owl:Ontology ;
     opla-core:hasPatternName "Company Pattern"^^xsd:string ;

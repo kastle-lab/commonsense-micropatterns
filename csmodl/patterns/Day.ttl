@@ -6,13 +6,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-kastle:Activity a rdfs:Class .
+kastle:Activity a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Calendar a rdfs:Class .
 
 kastle:Datetime a rdfs:Class .
 
-kastle:Day a rdfs:Class .
+kastle:Day a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:DayOfWeek a rdfs:Class .
 
@@ -32,7 +34,8 @@ kastle:PartOfDay a rdfs:Class .
 
 kastle:Second a rdfs:Class .
 
-kastle:Time a rdfs:Class .
+kastle:Time a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
 
 kastle:Weather a rdfs:Class .
 

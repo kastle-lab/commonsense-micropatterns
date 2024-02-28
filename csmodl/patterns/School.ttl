@@ -8,9 +8,11 @@
 
 kastle:Class a rdfs:Class .
 
-kastle:Classroom a rdfs:Class .
+kastle:Classroom a rdfs:Class ;
+    rdfs:subClassOf kastle:N31c47115fe5c47c9bca04a884c5ab0c2b2 .
 
-kastle:Course a rdfs:Class .
+kastle:Course a rdfs:Class ;
+    rdfs:subClassOf kastle:School .
 
 kastle:Department a rdfs:Class .
 
@@ -26,7 +28,11 @@ kastle:Integer a rdfs:Class .
 
 kastle:Principal a rdfs:Class .
 
-kastle:School a rdfs:Class .
+kastle:School a rdfs:Class ;
+    rdfs:subClassOf kastle:Educationalinstitution,
+        kastle:Educationalorganization,
+        kastle:Institution,
+        kastle:N31c47115fe5c47c9bca04a884c5ab0c2b4 .
 
 kastle:Schoolgrade a rdfs:Class .
 
@@ -40,11 +46,16 @@ kastle:Schoolsubject a rdfs:Class .
 
 kastle:Schoolteacher a rdfs:Class .
 
-kastle:Student a rdfs:Class .
+kastle:Student a rdfs:Class ;
+    rdfs:subClassOf kastle:Person,
+        kastle:School .
 
 kastle:Subject a rdfs:Class .
 
-kastle:Teacher a rdfs:Class .
+kastle:Teacher a rdfs:Class ;
+    rdfs:subClassOf kastle:N31c47115fe5c47c9bca04a884c5ab0c2b1,
+        kastle:Person,
+        kastle:School .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/School> a owl:Ontology ;
     opla-core:hasPatternName "School Pattern"^^xsd:string ;

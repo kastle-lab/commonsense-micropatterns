@@ -22,7 +22,8 @@ kastle:Organism a rdfs:Class .
 
 kastle:PhysicalState a rdfs:Class .
 
-kastle:PollutedWater a rdfs:Class .
+kastle:PollutedWater a rdfs:Class ;
+    rdfs:subClassOf kastle:Water .
 
 kastle:Recipient a rdfs:Class .
 
@@ -30,7 +31,8 @@ kastle:Resource a rdfs:Class .
 
 kastle:Source a rdfs:Class .
 
-kastle:State a rdfs:Class .
+kastle:State a rdfs:Class ;
+    rdfs:subClassOf kastle:N22b89b7ccc754b57a7dc4fd05bd81ec7b1 .
 
 kastle:StateOfMatter a rdfs:Class .
 
@@ -42,15 +44,18 @@ kastle:Type a rdfs:Class .
 
 kastle:Use a rdfs:Class .
 
-kastle:Water a rdfs:Class .
+kastle:Water a rdfs:Class ;
+    rdfs:subClassOf kastle:Substance .
 
 kastle:WaterForm a rdfs:Class .
 
 kastle:WaterProperty a rdfs:Class .
 
-kastle:WaterSource a rdfs:Class .
+kastle:WaterSource a rdfs:Class ;
+    rdfs:subClassOf kastle:Location .
 
-kastle:Water_Properties a rdfs:Class .
+kastle:Water_Properties a rdfs:Class ;
+    rdfs:subClassOf kastle:Water .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/Water> a owl:Ontology ;
     opla-core:hasPatternName "Water Pattern"^^xsd:string ;
