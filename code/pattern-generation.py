@@ -1,4 +1,3 @@
-import sys
 import os
 from rdflib import URIRef, Graph, Namespace, Literal
 from rdflib import OWL, RDF, RDFS, XSD, TIME
