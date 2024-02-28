@@ -208,11 +208,14 @@ def vote_properties(verbose=False):
             with open(analysis_filepath, "w") as analysis_noun_file:
                 # All occurences from all nouns
                 noun_properties = dict()
+                noun_scos = dict()
+
                 noun_files = os.listdir(noun_dir)
                 noun_files.sort()
                 for filename in noun_files: # For each ttl from single Noun
                     stats_total[noun] += 1 # Total available files
                     unique_props = set() # Individual file occurrences per noun
+                    unique_scos = set() 
                     curr_graph = init_kg()
                     with open(os.path.join(noun_dir, filename), "r") as f:
                         try:
@@ -230,7 +233,7 @@ def vote_properties(verbose=False):
                             for s,p,o in (curr_graph.triples( (None, pfs["rdf"]["type"], prop_type) )):
                                 predicate = s
                                 prop_name = strip_uri(predicate)
-                            
+                                ##  Identifying Range and Domain of Properties
                                 try:
                                     _,_,prop_range = list(curr_graph.triples((predicate, RDFS.range,  None)))[0]
                                     _,_,prop_domain = list(curr_graph.triples((predicate, RDFS.domain,  None)))[0]
@@ -244,7 +247,6 @@ def vote_properties(verbose=False):
                                 try:
                                     domain_name = strip_uri(prop_domain)
                                     range_name = strip_uri(prop_range)
-                                    
                                     # Convert URIs to Pascal Case
                                     if domain_name[0].islower():
                                         domain_name = domain_name.capitalize()
@@ -258,6 +260,20 @@ def vote_properties(verbose=False):
                                 
                                 unique_props.add((prop_name, domain_name, range_name))
 
+                                ##  Identifying Range and Domain subClassOf
+                                try:
+                                    _,_,r_sco = list(curr_graph.triples((prop_range, RDFS.subClassOf, None)))[0]
+                                    r_sco_name = (strip_uri(r_sco)).capitalize()
+                                    unique_scos.add((range_name, RDFS.subClassOf, r_sco_name))
+                                except:
+                                    pass
+
+                                try:
+                                    _,_,d_sco = list(curr_graph.triples((prop_domain, RDFS.subClassOf, None)))[0]
+                                    d_sco_name = (strip_uri(d_sco)).capitalize()
+                                    unique_scos.add((domain_name, RDFS.subClassOf, d_sco_name))
+                                except:
+                                    pass
                         for unique_prop in unique_props:
                             try: 
                                 noun_properties[unique_prop] += 1
