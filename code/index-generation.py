@@ -64,6 +64,12 @@ def generate_index():
         graph.add( (noun_pattern_uri, a, OWL.NamedIndividual) )
         graph.add( (noun_pattern_uri, a, pattern_uri) )
 
+        ### Added artifact for CoModIDE
+        path = pattern_path.split("../")[-1]
+        path = path+f"/{filename}"
+        print(path)
+        graph.add( (noun_pattern_uri, pfs["opla"]["owlRepresentation"], Literal(f"{path}", datatype=XSD.string)) )
+
     output_name = "csmodl.owl"
     output_path = os.path.join("../csmodl", output_name)
     graph.serialize(format="turtle", encoding="utf-8", destination=output_path)

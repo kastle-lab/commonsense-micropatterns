@@ -3,11 +3,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix opla: <http://ontologydesignpatterns.org/opla#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
 @base <https://archive.org/services/purl/purl/modular_ontology_design_library#> .
 
-<https://archive.org/services/purl/purl/modular_ontology_design_library/> rdf:type owl:Ontology ;
+<https://archive.org/services/purl/purl/modular_ontology_design_library#> rdf:type owl:Ontology ;
                                                                            opla-core:hasPatternName "Commonsense Modular Ontology Design Library" .
 
 #################################################################
@@ -19,30 +20,18 @@ opla-core:hasPatternName rdf:type owl:AnnotationProperty .
 
 
 #################################################################
-#    Object Properties
+#    Data properties
 #################################################################
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/hasMODLCategory
-:hasMODLCategory rdf:type owl:ObjectProperty .
-
-
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/hasRelatedPattern
-:hasRelatedPattern rdf:type owl:ObjectProperty .
-
-
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/specializationOfPattern
-:specializationOfPattern rdf:type owl:ObjectProperty .
+###  http://ontologydesignpatterns.org/opla#owlRepresentation
+opla:owlRepresentation rdf:type owl:DatatypeProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Category
-:Category rdf:type owl:Class .
-
-
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Pattern
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Pattern
 :Pattern rdf:type owl:Class .
 
 
@@ -50,529 +39,634 @@ opla-core:hasPatternName rdf:type owl:AnnotationProperty .
 #    Individuals
 #################################################################
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Air
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Air
 :Air rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Air.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Area
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Area
 :Area rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Area.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Art
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Art
 :Art rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Art.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Back
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Back
 :Back rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Back.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Body
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Body
 :Body rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Body.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Book
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Book
 :Book rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Book.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Business
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Business
 :Business rdf:type owl:NamedIndividual ,
-                   :Pattern .
+                   :Pattern ;
+          opla:owlRepresentation "csmodl/patterns/Business.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Car
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Car
 :Car rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Car.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Case
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Case
 :Case rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Case.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Chair
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Chair
 :Chair rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Chair.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Change
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Change
 :Change rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Change.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Child
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Child
 :Child rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Child.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/City
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#City
 :City rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/City.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Community
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Community
 :Community rdf:type owl:NamedIndividual ,
-                    :Pattern .
+                    :Pattern ;
+           opla:owlRepresentation "csmodl/patterns/Community.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Company
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Company
 :Company rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Company.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Couch
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Couch
 :Couch rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Couch.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Country
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Country
 :Country rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Country.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Day
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Day
 :Day rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Day.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Door
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Door
 :Door rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Door.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Education
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Education
 :Education rdf:type owl:NamedIndividual ,
-                    :Pattern .
+                    :Pattern ;
+           opla:owlRepresentation "csmodl/patterns/Education.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/End
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#End
 :End rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/End.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Eye
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Eye
 :Eye rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Eye.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Face
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Face
 :Face rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Face.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Fact
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Fact
 :Fact rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Fact.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Family
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Family
 :Family rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Family.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Father
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Father
 :Father rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Father.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Force
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Force
 :Force rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Force.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Friend
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Friend
 :Friend rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Friend.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Game
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Game
 :Game rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Game.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Girl
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Girl
 :Girl rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Girl.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Government
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Government
 :Government rdf:type owl:NamedIndividual ,
-                     :Pattern .
+                     :Pattern ;
+            opla:owlRepresentation "csmodl/patterns/Government.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Group
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Group
 :Group rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Group.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Guy
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Guy
 :Guy rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Guy.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Hand
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Hand
 :Hand rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Hand.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Head
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Head
 :Head rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Head.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Health
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Health
 :Health rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Health.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/History
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#History
 :History rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/History.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Home
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Home
 :Home rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Home.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Hour
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Hour
 :Hour rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Hour.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/House
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#House
 :House rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/House.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Idea
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Idea
 :Idea rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Idea.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Information
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Information
 :Information rdf:type owl:NamedIndividual ,
-                      :Pattern .
+                      :Pattern ;
+             opla:owlRepresentation "csmodl/patterns/Information.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Issue
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Issue
 :Issue rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Issue.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Job
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Job
 :Job rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Job.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Kid
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Kid
 :Kid rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Kid.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Kind
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Kind
 :Kind rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Kind.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Law
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Law
 :Law rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Law.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Level
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Level
 :Level rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Level.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Life
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Life
 :Life rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Life.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Line
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Line
 :Line rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Line.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Lot
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Lot
 :Lot rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Lot.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Loveseat
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Loveseat
 :Loveseat rdf:type owl:NamedIndividual ,
-                   :Pattern .
+                   :Pattern ;
+          opla:owlRepresentation "csmodl/patterns/Loveseat.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Man
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Man
 :Man rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Man.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Member
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Member
 :Member rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Member.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Minute
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Minute
 :Minute rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Minute.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Moment
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Moment
 :Moment rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Moment.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Money
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Money
 :Money rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Money.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Month
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Month
 :Month rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Month.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Morning
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Morning
 :Morning rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Morning.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Mother
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Mother
 :Mother rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Mother.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Name
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Name
 :Name rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Name.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Night
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Night
 :Night rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Night.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Number
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Number
 :Number rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Number.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Office
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Office
 :Office rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Office.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Others
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Others
 :Others rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Others.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Parent
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Parent
 :Parent rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Parent.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Part
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Part
 :Part rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Part.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Party
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Party
 :Party rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Party.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/People
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#People
 :People rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/People.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Person
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Person
 :Person rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Person.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Place
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Place
 :Place rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Place.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Point
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Point
 :Point rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Point.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Power
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Power
 :Power rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Power.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/President
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#President
 :President rdf:type owl:NamedIndividual ,
-                    :Pattern .
+                    :Pattern ;
+           opla:owlRepresentation "csmodl/patterns/President.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Problem
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Problem
 :Problem rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Problem.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Program
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Program
 :Program rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Program.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Question
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Question
 :Question rdf:type owl:NamedIndividual ,
-                   :Pattern .
+                   :Pattern ;
+          opla:owlRepresentation "csmodl/patterns/Question.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Reason
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Reason
 :Reason rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Reason.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Research
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Research
 :Research rdf:type owl:NamedIndividual ,
-                   :Pattern .
+                   :Pattern ;
+          opla:owlRepresentation "csmodl/patterns/Research.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Result
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Result
 :Result rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/Result.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Right
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Right
 :Right rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Right.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Room
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Room
 :Room rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Room.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/School
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#School
 :School rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/School.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Service
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Service
 :Service rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Service.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Side
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Side
 :Side rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Side.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Sofa
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Sofa
 :Sofa rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Sofa.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/State
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#State
 :State rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/State.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Story
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Story
 :Story rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Story.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Student
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Student
 :Student rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Student.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Study
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Study
 :Study rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Study.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/System
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#System
 :System rdf:type owl:NamedIndividual ,
-                 :Pattern .
+                 :Pattern ;
+        opla:owlRepresentation "csmodl/patterns/System.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Teacher
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Teacher
 :Teacher rdf:type owl:NamedIndividual ,
-                  :Pattern .
+                  :Pattern ;
+         opla:owlRepresentation "csmodl/patterns/Teacher.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Team
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Team
 :Team rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Team.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Thing
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Thing
 :Thing rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Thing.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Time
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Time
 :Time rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Time.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/War
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#War
 :War rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/War.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Water
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Water
 :Water rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Water.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Way
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Way
 :Way rdf:type owl:NamedIndividual ,
-              :Pattern .
+              :Pattern ;
+     opla:owlRepresentation "csmodl/patterns/Way.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Week
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Week
 :Week rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Week.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Woman
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Woman
 :Woman rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/Woman.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Word
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Word
 :Word rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Word.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Work
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Work
 :Work rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Work.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/World
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#World
 :World rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/World.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/Year
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#Year
 :Year rdf:type owl:NamedIndividual ,
-               :Pattern .
+               :Pattern ;
+      opla:owlRepresentation "csmodl/patterns/Year.ttl" .
 
 
-###  https://archive.org/services/purl/purl/modular_ontology_design_library/chair
+###  https://archive.org/services/purl/purl/modular_ontology_design_library#chair
 :chair rdf:type owl:NamedIndividual ,
-                :Pattern .
+                :Pattern ;
+       opla:owlRepresentation "csmodl/patterns/chair.ttl" .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
