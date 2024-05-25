@@ -66,9 +66,19 @@ def generate_index():
 
         ### Added artifact for CoModIDE
         path = pattern_path.split("../")[-1]
-        path = path+f"/{filename}"
-        print(path)
-        graph.add( (noun_pattern_uri, pfs["opla"]["owlRepresentation"], Literal(f"{path}", datatype=XSD.string)) )
+        ttl_path = path+f"/{filename}"
+        schema_path = path+f"/schema-diagrams/{noun}.pdf"
+
+        graph.add( (noun_pattern_uri, pfs["opla"]["owlRepresentation"], Literal(f"{ttl_path}", datatype=XSD.string)) )
+        graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
+        graph.add( (noun_pattern_uri, pfs["opla"]["renderedSchemaDiagram"], Literal(f"{schema_path}", datatype=XSD.string)) )
+        graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
+        
+    ###  Add specific property type
+    graph.add( (pfs["opla"]["owlRepresentation"], a, pfs["owl"]["DatatypeProperty"]) )
+    graph.add( (pfs["opla"]["owlRepresentation"], pfs["rdfs"]["label"], Literal(f"Owl Representation", lang="en")) )
+    graph.add( (pfs["opla"]["renderedSchemaDiagram"], a, pfs["owl"]["DatatypeProperty"]) )
+    graph.add( (pfs["opla"]["renderedSchemaDiagram"], pfs["rdfs"]["label"], Literal(f"Rendered Schema Diagram", lang="en")) )
 
     output_name = "csmodl.owl"
     output_path = os.path.join("../csmodl", output_name)
