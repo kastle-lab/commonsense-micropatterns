@@ -53,6 +53,16 @@ def generate_index():
     graph.add( (noun_onto_uri, a, OWL.Ontology) )
     graph.add( (noun_onto_uri, pfs["opla-core"]["hasPatternName"], Literal("Commonsense Modular Ontology Design Library")) )
 
+    ###  Add specific OPLA annotation+property type
+    graph.add( (pfs["opla"]["owlRepresentation"], a, pfs["owl"]["DatatypeProperty"]) )
+    graph.add( (pfs["opla"]["owlRepresentation"], pfs["rdfs"]["label"], Literal(f"Owl Representation", lang="en")) )
+    graph.add( (pfs["opla"]["renderedSchemaDiagram"], a, pfs["owl"]["DatatypeProperty"]) )
+    graph.add( (pfs["opla"]["renderedSchemaDiagram"], pfs["rdfs"]["label"], Literal(f"Rendered Schema Diagram", lang="en")) )
+
+    graph.add( (pfs["opla"]["owlRepresentation"], pfs["rdfs"]["domain"], pattern_uri) )
+    graph.add( (pfs["opla"]["owlRepresentation"], pfs["rdfs"]["range"], pfs["xsd"]["string"]) )
+    graph.add( (pfs["opla"]["renderedSchemaDiagram"], pfs["rdfs"]["domain"], pattern_uri) )
+    graph.add( (pfs["opla"]["renderedSchemaDiagram"], pfs["rdfs"]["range"], pfs["xsd"]["string"]) )
     
     for filename in result_files: # For each Noun
         if(os.path.isdir(os.path.join(pattern_path, filename))):
@@ -74,12 +84,6 @@ def generate_index():
         graph.add( (noun_pattern_uri, pfs["opla"]["renderedSchemaDiagram"], Literal(f"{schema_path}", datatype=XSD.string)) )
         graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
         
-    ###  Add specific property type
-    graph.add( (pfs["opla"]["owlRepresentation"], a, pfs["owl"]["DatatypeProperty"]) )
-    graph.add( (pfs["opla"]["owlRepresentation"], pfs["rdfs"]["label"], Literal(f"Owl Representation", lang="en")) )
-    graph.add( (pfs["opla"]["renderedSchemaDiagram"], a, pfs["owl"]["DatatypeProperty"]) )
-    graph.add( (pfs["opla"]["renderedSchemaDiagram"], pfs["rdfs"]["label"], Literal(f"Rendered Schema Diagram", lang="en")) )
-
     output_name = "csmodl.owl"
     output_path = os.path.join("../csmodl", output_name)
     graph.serialize(format="turtle", encoding="utf-8", destination=output_path)

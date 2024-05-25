@@ -6,10 +6,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 opla:owlRepresentation a owl:DatatypeProperty ;
-    rdfs:label "Owl Representation"@en .
+    rdfs:label "Owl Representation"@en ;
+    rdfs:domain :Pattern ;
+    rdfs:range xsd:string .
 
 opla:renderedSchemaDiagram a owl:DatatypeProperty ;
-    rdfs:label "Rendered Schema Diagram"@en .
+    rdfs:label "Rendered Schema Diagram"@en ;
+    rdfs:domain :Pattern ;
+    rdfs:range xsd:string .
 
 : a owl:Ontology ;
     opla-core:hasPatternName "Commonsense Modular Ontology Design Library" .
