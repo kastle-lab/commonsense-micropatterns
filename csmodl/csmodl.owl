@@ -1,9 +1,14 @@
-@prefix : <https://archive.org/services/purl/purl/modular_ontology_design_library#> .
+@prefix : <https://ontologydesignpatterns.org/> .
 @prefix opla: <http://ontologydesignpatterns.org/opla#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+opla:categorization a owl:DatatypeProperty ;
+    rdfs:label "Owl Representation"@en ;
+    rdfs:domain :Pattern ;
+    rdfs:range xsd:string .
 
 opla:htmlDocumentation a owl:DatatypeProperty ;
     rdfs:label "Owl HTML Documentation"@en ;
@@ -26,6 +31,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Air a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Air"@en ;
+    opla:categorization "csmodl/patterns/Air.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -41,6 +47,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Area a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Area"@en ;
+    opla:categorization "csmodl/patterns/Area.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -56,6 +63,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Art a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Art"@en ;
+    opla:categorization "csmodl/patterns/Art.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -71,6 +79,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Back a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Back"@en ;
+    opla:categorization "csmodl/patterns/Back.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -86,6 +95,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Body a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Body"@en ;
+    opla:categorization "csmodl/patterns/Body.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -101,6 +111,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Book a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Book"@en ;
+    opla:categorization "csmodl/patterns/Book.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -116,6 +127,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Business a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Business"@en ;
+    opla:categorization "csmodl/patterns/Business.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -131,6 +143,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Car a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Car"@en ;
+    opla:categorization "csmodl/patterns/Car.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -146,6 +159,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Case a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Case"@en ;
+    opla:categorization "csmodl/patterns/Case.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
@@ -158,28 +172,14 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Case.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Case.pdf"^^xsd:string .
 
-:Chair a owl:NamedIndividual,
+:Change a owl:NamedIndividual,
         :Pattern ;
-    rdfs:label "Chair"@en ;
+    rdfs:label "Change"@en ;
+    opla:categorization "csmodl/patterns/Change.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
             <h3 class="sectionHead"><span class="titlemark">10
-            </span> <a id="x1-10001"></a>Chair</h3>
-
-            <body/>
-            <html/>
-        """^^xsd:string ;
-    opla:owlRepresentation "csmodl/patterns/Chair.ttl"^^xsd:string ;
-    opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Chair.pdf"^^xsd:string .
-
-:Change a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Change"@en ;
-    opla:htmlDocumentation """
-            <html>
-            <body>
-            <h3 class="sectionHead"><span class="titlemark">11
             </span> <a id="x1-10001"></a>Change</h3>
 
             <body/>
@@ -191,10 +191,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Child a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Child"@en ;
+    opla:categorization "csmodl/patterns/Child.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">12
+            <h3 class="sectionHead"><span class="titlemark">11
             </span> <a id="x1-10001"></a>Child</h3>
 
             <body/>
@@ -206,10 +207,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :City a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "City"@en ;
+    opla:categorization "csmodl/patterns/City.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">13
+            <h3 class="sectionHead"><span class="titlemark">12
             </span> <a id="x1-10001"></a>City</h3>
 
             <body/>
@@ -221,10 +223,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Community a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Community"@en ;
+    opla:categorization "csmodl/patterns/Community.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">14
+            <h3 class="sectionHead"><span class="titlemark">13
             </span> <a id="x1-10001"></a>Community</h3>
 
             <body/>
@@ -236,10 +239,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Company a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Company"@en ;
+    opla:categorization "csmodl/patterns/Company.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">15
+            <h3 class="sectionHead"><span class="titlemark">14
             </span> <a id="x1-10001"></a>Company</h3>
 
             <body/>
@@ -251,10 +255,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Couch a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Couch"@en ;
+    opla:categorization "csmodl/patterns/Couch.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">16
+            <h3 class="sectionHead"><span class="titlemark">15
             </span> <a id="x1-10001"></a>Couch</h3>
 
             <body/>
@@ -266,10 +271,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Country a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Country"@en ;
+    opla:categorization "csmodl/patterns/Country.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">17
+            <h3 class="sectionHead"><span class="titlemark">16
             </span> <a id="x1-10001"></a>Country</h3>
 
             <body/>
@@ -281,10 +287,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Day a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Day"@en ;
+    opla:categorization "csmodl/patterns/Day.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">18
+            <h3 class="sectionHead"><span class="titlemark">17
             </span> <a id="x1-10001"></a>Day</h3>
 
             <body/>
@@ -296,10 +303,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Door a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Door"@en ;
+    opla:categorization "csmodl/patterns/Door.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">19
+            <h3 class="sectionHead"><span class="titlemark">18
             </span> <a id="x1-10001"></a>Door</h3>
 
             <body/>
@@ -311,10 +319,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Education a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Education"@en ;
+    opla:categorization "csmodl/patterns/Education.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">20
+            <h3 class="sectionHead"><span class="titlemark">19
             </span> <a id="x1-10001"></a>Education</h3>
 
             <body/>
@@ -326,10 +335,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :End a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "End"@en ;
+    opla:categorization "csmodl/patterns/End.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">21
+            <h3 class="sectionHead"><span class="titlemark">20
             </span> <a id="x1-10001"></a>End</h3>
 
             <body/>
@@ -341,10 +351,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Eye a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Eye"@en ;
+    opla:categorization "csmodl/patterns/Eye.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">22
+            <h3 class="sectionHead"><span class="titlemark">21
             </span> <a id="x1-10001"></a>Eye</h3>
 
             <body/>
@@ -356,10 +367,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Face a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Face"@en ;
+    opla:categorization "csmodl/patterns/Face.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">23
+            <h3 class="sectionHead"><span class="titlemark">22
             </span> <a id="x1-10001"></a>Face</h3>
 
             <body/>
@@ -371,10 +383,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Fact a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Fact"@en ;
+    opla:categorization "csmodl/patterns/Fact.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">24
+            <h3 class="sectionHead"><span class="titlemark">23
             </span> <a id="x1-10001"></a>Fact</h3>
 
             <body/>
@@ -386,10 +399,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Family a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Family"@en ;
+    opla:categorization "csmodl/patterns/Family.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">25
+            <h3 class="sectionHead"><span class="titlemark">24
             </span> <a id="x1-10001"></a>Family</h3>
 
             <body/>
@@ -401,10 +415,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Father a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Father"@en ;
+    opla:categorization "csmodl/patterns/Father.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">26
+            <h3 class="sectionHead"><span class="titlemark">25
             </span> <a id="x1-10001"></a>Father</h3>
 
             <body/>
@@ -416,10 +431,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Force a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Force"@en ;
+    opla:categorization "csmodl/patterns/Force.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">27
+            <h3 class="sectionHead"><span class="titlemark">26
             </span> <a id="x1-10001"></a>Force</h3>
 
             <body/>
@@ -431,10 +447,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Friend a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Friend"@en ;
+    opla:categorization "csmodl/patterns/Friend.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">28
+            <h3 class="sectionHead"><span class="titlemark">27
             </span> <a id="x1-10001"></a>Friend</h3>
 
             <body/>
@@ -446,10 +463,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Game a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Game"@en ;
+    opla:categorization "csmodl/patterns/Game.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">29
+            <h3 class="sectionHead"><span class="titlemark">28
             </span> <a id="x1-10001"></a>Game</h3>
 
             <body/>
@@ -461,10 +479,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Girl a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Girl"@en ;
+    opla:categorization "csmodl/patterns/Girl.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">30
+            <h3 class="sectionHead"><span class="titlemark">29
             </span> <a id="x1-10001"></a>Girl</h3>
 
             <body/>
@@ -476,10 +495,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Government a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Government"@en ;
+    opla:categorization "csmodl/patterns/Government.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">31
+            <h3 class="sectionHead"><span class="titlemark">30
             </span> <a id="x1-10001"></a>Government</h3>
 
             <body/>
@@ -491,10 +511,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Group a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Group"@en ;
+    opla:categorization "csmodl/patterns/Group.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">32
+            <h3 class="sectionHead"><span class="titlemark">31
             </span> <a id="x1-10001"></a>Group</h3>
 
             <body/>
@@ -506,10 +527,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Guy a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Guy"@en ;
+    opla:categorization "csmodl/patterns/Guy.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">33
+            <h3 class="sectionHead"><span class="titlemark">32
             </span> <a id="x1-10001"></a>Guy</h3>
 
             <body/>
@@ -521,10 +543,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Hand a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Hand"@en ;
+    opla:categorization "csmodl/patterns/Hand.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">34
+            <h3 class="sectionHead"><span class="titlemark">33
             </span> <a id="x1-10001"></a>Hand</h3>
 
             <body/>
@@ -536,10 +559,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Head a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Head"@en ;
+    opla:categorization "csmodl/patterns/Head.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">35
+            <h3 class="sectionHead"><span class="titlemark">34
             </span> <a id="x1-10001"></a>Head</h3>
 
             <body/>
@@ -551,10 +575,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Health a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Health"@en ;
+    opla:categorization "csmodl/patterns/Health.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">36
+            <h3 class="sectionHead"><span class="titlemark">35
             </span> <a id="x1-10001"></a>Health</h3>
 
             <body/>
@@ -566,10 +591,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :History a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "History"@en ;
+    opla:categorization "csmodl/patterns/History.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">37
+            <h3 class="sectionHead"><span class="titlemark">36
             </span> <a id="x1-10001"></a>History</h3>
 
             <body/>
@@ -581,10 +607,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Home a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Home"@en ;
+    opla:categorization "csmodl/patterns/Home.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">38
+            <h3 class="sectionHead"><span class="titlemark">37
             </span> <a id="x1-10001"></a>Home</h3>
 
             <body/>
@@ -596,10 +623,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Hour a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Hour"@en ;
+    opla:categorization "csmodl/patterns/Hour.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">39
+            <h3 class="sectionHead"><span class="titlemark">38
             </span> <a id="x1-10001"></a>Hour</h3>
 
             <body/>
@@ -611,10 +639,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :House a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "House"@en ;
+    opla:categorization "csmodl/patterns/House.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">40
+            <h3 class="sectionHead"><span class="titlemark">39
             </span> <a id="x1-10001"></a>House</h3>
 
             <body/>
@@ -626,10 +655,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Idea a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Idea"@en ;
+    opla:categorization "csmodl/patterns/Idea.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">41
+            <h3 class="sectionHead"><span class="titlemark">40
             </span> <a id="x1-10001"></a>Idea</h3>
 
             <body/>
@@ -641,10 +671,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Information a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Information"@en ;
+    opla:categorization "csmodl/patterns/Information.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">42
+            <h3 class="sectionHead"><span class="titlemark">41
             </span> <a id="x1-10001"></a>Information</h3>
 
             <body/>
@@ -656,10 +687,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Issue a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Issue"@en ;
+    opla:categorization "csmodl/patterns/Issue.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">43
+            <h3 class="sectionHead"><span class="titlemark">42
             </span> <a id="x1-10001"></a>Issue</h3>
 
             <body/>
@@ -671,10 +703,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Job a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Job"@en ;
+    opla:categorization "csmodl/patterns/Job.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">44
+            <h3 class="sectionHead"><span class="titlemark">43
             </span> <a id="x1-10001"></a>Job</h3>
 
             <body/>
@@ -686,10 +719,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Kid a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Kid"@en ;
+    opla:categorization "csmodl/patterns/Kid.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">45
+            <h3 class="sectionHead"><span class="titlemark">44
             </span> <a id="x1-10001"></a>Kid</h3>
 
             <body/>
@@ -701,10 +735,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Kind a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Kind"@en ;
+    opla:categorization "csmodl/patterns/Kind.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">46
+            <h3 class="sectionHead"><span class="titlemark">45
             </span> <a id="x1-10001"></a>Kind</h3>
 
             <body/>
@@ -716,10 +751,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Law a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Law"@en ;
+    opla:categorization "csmodl/patterns/Law.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">47
+            <h3 class="sectionHead"><span class="titlemark">46
             </span> <a id="x1-10001"></a>Law</h3>
 
             <body/>
@@ -731,10 +767,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Level a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Level"@en ;
+    opla:categorization "csmodl/patterns/Level.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">48
+            <h3 class="sectionHead"><span class="titlemark">47
             </span> <a id="x1-10001"></a>Level</h3>
 
             <body/>
@@ -746,10 +783,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Life a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Life"@en ;
+    opla:categorization "csmodl/patterns/Life.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">49
+            <h3 class="sectionHead"><span class="titlemark">48
             </span> <a id="x1-10001"></a>Life</h3>
 
             <body/>
@@ -761,10 +799,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Line a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Line"@en ;
+    opla:categorization "csmodl/patterns/Line.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">50
+            <h3 class="sectionHead"><span class="titlemark">49
             </span> <a id="x1-10001"></a>Line</h3>
 
             <body/>
@@ -776,10 +815,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Lot a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Lot"@en ;
+    opla:categorization "csmodl/patterns/Lot.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">51
+            <h3 class="sectionHead"><span class="titlemark">50
             </span> <a id="x1-10001"></a>Lot</h3>
 
             <body/>
@@ -791,10 +831,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Loveseat a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Loveseat"@en ;
+    opla:categorization "csmodl/patterns/Loveseat.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">52
+            <h3 class="sectionHead"><span class="titlemark">51
             </span> <a id="x1-10001"></a>Loveseat</h3>
 
             <body/>
@@ -806,10 +847,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Man a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Man"@en ;
+    opla:categorization "csmodl/patterns/Man.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">53
+            <h3 class="sectionHead"><span class="titlemark">52
             </span> <a id="x1-10001"></a>Man</h3>
 
             <body/>
@@ -821,10 +863,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Member a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Member"@en ;
+    opla:categorization "csmodl/patterns/Member.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">54
+            <h3 class="sectionHead"><span class="titlemark">53
             </span> <a id="x1-10001"></a>Member</h3>
 
             <body/>
@@ -836,10 +879,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Minute a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Minute"@en ;
+    opla:categorization "csmodl/patterns/Minute.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">55
+            <h3 class="sectionHead"><span class="titlemark">54
             </span> <a id="x1-10001"></a>Minute</h3>
 
             <body/>
@@ -851,10 +895,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Moment a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Moment"@en ;
+    opla:categorization "csmodl/patterns/Moment.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">56
+            <h3 class="sectionHead"><span class="titlemark">55
             </span> <a id="x1-10001"></a>Moment</h3>
 
             <body/>
@@ -866,10 +911,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Money a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Money"@en ;
+    opla:categorization "csmodl/patterns/Money.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">57
+            <h3 class="sectionHead"><span class="titlemark">56
             </span> <a id="x1-10001"></a>Money</h3>
 
             <body/>
@@ -881,10 +927,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Month a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Month"@en ;
+    opla:categorization "csmodl/patterns/Month.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">58
+            <h3 class="sectionHead"><span class="titlemark">57
             </span> <a id="x1-10001"></a>Month</h3>
 
             <body/>
@@ -896,10 +943,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Morning a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Morning"@en ;
+    opla:categorization "csmodl/patterns/Morning.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">59
+            <h3 class="sectionHead"><span class="titlemark">58
             </span> <a id="x1-10001"></a>Morning</h3>
 
             <body/>
@@ -911,10 +959,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Mother a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Mother"@en ;
+    opla:categorization "csmodl/patterns/Mother.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">60
+            <h3 class="sectionHead"><span class="titlemark">59
             </span> <a id="x1-10001"></a>Mother</h3>
 
             <body/>
@@ -926,10 +975,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Name a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Name"@en ;
+    opla:categorization "csmodl/patterns/Name.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">61
+            <h3 class="sectionHead"><span class="titlemark">60
             </span> <a id="x1-10001"></a>Name</h3>
 
             <body/>
@@ -941,10 +991,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Night a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Night"@en ;
+    opla:categorization "csmodl/patterns/Night.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">62
+            <h3 class="sectionHead"><span class="titlemark">61
             </span> <a id="x1-10001"></a>Night</h3>
 
             <body/>
@@ -956,10 +1007,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Number a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Number"@en ;
+    opla:categorization "csmodl/patterns/Number.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">63
+            <h3 class="sectionHead"><span class="titlemark">62
             </span> <a id="x1-10001"></a>Number</h3>
 
             <body/>
@@ -971,10 +1023,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Office a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Office"@en ;
+    opla:categorization "csmodl/patterns/Office.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">64
+            <h3 class="sectionHead"><span class="titlemark">63
             </span> <a id="x1-10001"></a>Office</h3>
 
             <body/>
@@ -986,10 +1039,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Others a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Others"@en ;
+    opla:categorization "csmodl/patterns/Others.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">65
+            <h3 class="sectionHead"><span class="titlemark">64
             </span> <a id="x1-10001"></a>Others</h3>
 
             <body/>
@@ -1001,10 +1055,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Parent a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Parent"@en ;
+    opla:categorization "csmodl/patterns/Parent.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">66
+            <h3 class="sectionHead"><span class="titlemark">65
             </span> <a id="x1-10001"></a>Parent</h3>
 
             <body/>
@@ -1016,10 +1071,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Part a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Part"@en ;
+    opla:categorization "csmodl/patterns/Part.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">67
+            <h3 class="sectionHead"><span class="titlemark">66
             </span> <a id="x1-10001"></a>Part</h3>
 
             <body/>
@@ -1031,10 +1087,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Party a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Party"@en ;
+    opla:categorization "csmodl/patterns/Party.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">68
+            <h3 class="sectionHead"><span class="titlemark">67
             </span> <a id="x1-10001"></a>Party</h3>
 
             <body/>
@@ -1046,10 +1103,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :People a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "People"@en ;
+    opla:categorization "csmodl/patterns/People.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">69
+            <h3 class="sectionHead"><span class="titlemark">68
             </span> <a id="x1-10001"></a>People</h3>
 
             <body/>
@@ -1061,10 +1119,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Person a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Person"@en ;
+    opla:categorization "csmodl/patterns/Person.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">70
+            <h3 class="sectionHead"><span class="titlemark">69
             </span> <a id="x1-10001"></a>Person</h3>
 
             <body/>
@@ -1076,10 +1135,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Place a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Place"@en ;
+    opla:categorization "csmodl/patterns/Place.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">71
+            <h3 class="sectionHead"><span class="titlemark">70
             </span> <a id="x1-10001"></a>Place</h3>
 
             <body/>
@@ -1091,10 +1151,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Point a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Point"@en ;
+    opla:categorization "csmodl/patterns/Point.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">72
+            <h3 class="sectionHead"><span class="titlemark">71
             </span> <a id="x1-10001"></a>Point</h3>
 
             <body/>
@@ -1106,10 +1167,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Power a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Power"@en ;
+    opla:categorization "csmodl/patterns/Power.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">73
+            <h3 class="sectionHead"><span class="titlemark">72
             </span> <a id="x1-10001"></a>Power</h3>
 
             <body/>
@@ -1121,10 +1183,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :President a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "President"@en ;
+    opla:categorization "csmodl/patterns/President.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">74
+            <h3 class="sectionHead"><span class="titlemark">73
             </span> <a id="x1-10001"></a>President</h3>
 
             <body/>
@@ -1136,10 +1199,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Problem a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Problem"@en ;
+    opla:categorization "csmodl/patterns/Problem.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">75
+            <h3 class="sectionHead"><span class="titlemark">74
             </span> <a id="x1-10001"></a>Problem</h3>
 
             <body/>
@@ -1151,10 +1215,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Program a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Program"@en ;
+    opla:categorization "csmodl/patterns/Program.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">76
+            <h3 class="sectionHead"><span class="titlemark">75
             </span> <a id="x1-10001"></a>Program</h3>
 
             <body/>
@@ -1166,10 +1231,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Question a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Question"@en ;
+    opla:categorization "csmodl/patterns/Question.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">77
+            <h3 class="sectionHead"><span class="titlemark">76
             </span> <a id="x1-10001"></a>Question</h3>
 
             <body/>
@@ -1181,10 +1247,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Reason a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Reason"@en ;
+    opla:categorization "csmodl/patterns/Reason.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">78
+            <h3 class="sectionHead"><span class="titlemark">77
             </span> <a id="x1-10001"></a>Reason</h3>
 
             <body/>
@@ -1196,10 +1263,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Research a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Research"@en ;
+    opla:categorization "csmodl/patterns/Research.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">79
+            <h3 class="sectionHead"><span class="titlemark">78
             </span> <a id="x1-10001"></a>Research</h3>
 
             <body/>
@@ -1211,10 +1279,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Result a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Result"@en ;
+    opla:categorization "csmodl/patterns/Result.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">80
+            <h3 class="sectionHead"><span class="titlemark">79
             </span> <a id="x1-10001"></a>Result</h3>
 
             <body/>
@@ -1226,10 +1295,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Right a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Right"@en ;
+    opla:categorization "csmodl/patterns/Right.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">81
+            <h3 class="sectionHead"><span class="titlemark">80
             </span> <a id="x1-10001"></a>Right</h3>
 
             <body/>
@@ -1241,10 +1311,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Room a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Room"@en ;
+    opla:categorization "csmodl/patterns/Room.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">82
+            <h3 class="sectionHead"><span class="titlemark">81
             </span> <a id="x1-10001"></a>Room</h3>
 
             <body/>
@@ -1256,10 +1327,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :School a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "School"@en ;
+    opla:categorization "csmodl/patterns/School.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">83
+            <h3 class="sectionHead"><span class="titlemark">82
             </span> <a id="x1-10001"></a>School</h3>
 
             <body/>
@@ -1271,10 +1343,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Service a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Service"@en ;
+    opla:categorization "csmodl/patterns/Service.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">84
+            <h3 class="sectionHead"><span class="titlemark">83
             </span> <a id="x1-10001"></a>Service</h3>
 
             <body/>
@@ -1286,10 +1359,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Side a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Side"@en ;
+    opla:categorization "csmodl/patterns/Side.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">85
+            <h3 class="sectionHead"><span class="titlemark">84
             </span> <a id="x1-10001"></a>Side</h3>
 
             <body/>
@@ -1301,10 +1375,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Sofa a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Sofa"@en ;
+    opla:categorization "csmodl/patterns/Sofa.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">86
+            <h3 class="sectionHead"><span class="titlemark">85
             </span> <a id="x1-10001"></a>Sofa</h3>
 
             <body/>
@@ -1316,10 +1391,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :State a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "State"@en ;
+    opla:categorization "csmodl/patterns/State.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">87
+            <h3 class="sectionHead"><span class="titlemark">86
             </span> <a id="x1-10001"></a>State</h3>
 
             <body/>
@@ -1331,10 +1407,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Story a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Story"@en ;
+    opla:categorization "csmodl/patterns/Story.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">88
+            <h3 class="sectionHead"><span class="titlemark">87
             </span> <a id="x1-10001"></a>Story</h3>
 
             <body/>
@@ -1346,10 +1423,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Student a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Student"@en ;
+    opla:categorization "csmodl/patterns/Student.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">89
+            <h3 class="sectionHead"><span class="titlemark">88
             </span> <a id="x1-10001"></a>Student</h3>
 
             <body/>
@@ -1361,10 +1439,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Study a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Study"@en ;
+    opla:categorization "csmodl/patterns/Study.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">90
+            <h3 class="sectionHead"><span class="titlemark">89
             </span> <a id="x1-10001"></a>Study</h3>
 
             <body/>
@@ -1376,10 +1455,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :System a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "System"@en ;
+    opla:categorization "csmodl/patterns/System.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">91
+            <h3 class="sectionHead"><span class="titlemark">90
             </span> <a id="x1-10001"></a>System</h3>
 
             <body/>
@@ -1391,10 +1471,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Teacher a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Teacher"@en ;
+    opla:categorization "csmodl/patterns/Teacher.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">92
+            <h3 class="sectionHead"><span class="titlemark">91
             </span> <a id="x1-10001"></a>Teacher</h3>
 
             <body/>
@@ -1406,10 +1487,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Team a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Team"@en ;
+    opla:categorization "csmodl/patterns/Team.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">93
+            <h3 class="sectionHead"><span class="titlemark">92
             </span> <a id="x1-10001"></a>Team</h3>
 
             <body/>
@@ -1421,10 +1503,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Thing a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Thing"@en ;
+    opla:categorization "csmodl/patterns/Thing.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">94
+            <h3 class="sectionHead"><span class="titlemark">93
             </span> <a id="x1-10001"></a>Thing</h3>
 
             <body/>
@@ -1436,10 +1519,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Time a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Time"@en ;
+    opla:categorization "csmodl/patterns/Time.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">95
+            <h3 class="sectionHead"><span class="titlemark">94
             </span> <a id="x1-10001"></a>Time</h3>
 
             <body/>
@@ -1451,10 +1535,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :War a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "War"@en ;
+    opla:categorization "csmodl/patterns/War.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">96
+            <h3 class="sectionHead"><span class="titlemark">95
             </span> <a id="x1-10001"></a>War</h3>
 
             <body/>
@@ -1466,10 +1551,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Water a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Water"@en ;
+    opla:categorization "csmodl/patterns/Water.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">97
+            <h3 class="sectionHead"><span class="titlemark">96
             </span> <a id="x1-10001"></a>Water</h3>
 
             <body/>
@@ -1481,10 +1567,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Way a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Way"@en ;
+    opla:categorization "csmodl/patterns/Way.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">98
+            <h3 class="sectionHead"><span class="titlemark">97
             </span> <a id="x1-10001"></a>Way</h3>
 
             <body/>
@@ -1496,10 +1583,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Week a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Week"@en ;
+    opla:categorization "csmodl/patterns/Week.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">99
+            <h3 class="sectionHead"><span class="titlemark">98
             </span> <a id="x1-10001"></a>Week</h3>
 
             <body/>
@@ -1511,10 +1599,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Woman a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Woman"@en ;
+    opla:categorization "csmodl/patterns/Woman.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">100
+            <h3 class="sectionHead"><span class="titlemark">99
             </span> <a id="x1-10001"></a>Woman</h3>
 
             <body/>
@@ -1526,10 +1615,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Word a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Word"@en ;
+    opla:categorization "csmodl/patterns/Word.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">101
+            <h3 class="sectionHead"><span class="titlemark">100
             </span> <a id="x1-10001"></a>Word</h3>
 
             <body/>
@@ -1541,10 +1631,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Work a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Work"@en ;
+    opla:categorization "csmodl/patterns/Work.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">102
+            <h3 class="sectionHead"><span class="titlemark">101
             </span> <a id="x1-10001"></a>Work</h3>
 
             <body/>
@@ -1556,10 +1647,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :World a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "World"@en ;
+    opla:categorization "csmodl/patterns/World.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">103
+            <h3 class="sectionHead"><span class="titlemark">102
             </span> <a id="x1-10001"></a>World</h3>
 
             <body/>
@@ -1571,10 +1663,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :Year a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "Year"@en ;
+    opla:categorization "csmodl/patterns/Year.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">104
+            <h3 class="sectionHead"><span class="titlemark">103
             </span> <a id="x1-10001"></a>Year</h3>
 
             <body/>
@@ -1586,10 +1679,11 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
 :chair a owl:NamedIndividual,
         :Pattern ;
     rdfs:label "chair"@en ;
+    opla:categorization "csmodl/patterns/chair.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">105
+            <h3 class="sectionHead"><span class="titlemark">104
             </span> <a id="x1-10001"></a>chair</h3>
 
             <body/>
