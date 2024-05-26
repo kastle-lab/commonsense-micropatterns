@@ -12,7 +12,7 @@ pattern_path = "../csmodl/patterns"
 # Prefix Configurations
 name_space = "https://kastle-lab.org/"
 opla_namespace = "https://ontologydesignpatterns.org/"
-
+purl_namespace="https://archive.org/services/purl/purl/modular_ontology_design_library/"
 pfs = {
 "": Namespace(f"{opla_namespace}"),
 "kl-res": Namespace(f"{name_space}lod/resource/"),
@@ -46,7 +46,7 @@ def generate_index():
 
     # Noun CSMODL Ontology 
     ## Minting URIs
-    noun_ontology = f"{opla_namespace}"
+    noun_ontology = f"{purl_namespace}"
     noun_onto_uri = Namespace(noun_ontology)[""]
     
     pattern_uri = pfs["opla"]["Pattern"]
