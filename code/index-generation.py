@@ -48,6 +48,7 @@ def generate_index():
     ## Minting URIs
     noun_ontology = f"{opla_namespace}"
     noun_onto_uri = Namespace(noun_ontology)[""]
+    
     pattern_uri = pfs["opla"]["Pattern"]
    
     ## Bind
