@@ -1,4 +1,3 @@
-@prefix : <https://ontologydesignpatterns.org/> .
 @prefix opla: <http://ontologydesignpatterns.org/opla#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -25,10 +24,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     rdfs:domain opla:Pattern ;
     rdfs:range xsd:string .
 
-: a owl:Ontology ;
+<https://archive.org/services/purl/purl/modular_ontology_design_library/> a owl:Ontology ;
     opla-core:hasPatternName "Commonsense Modular Ontology Design Library" .
 
-:Air a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Air> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Air"@en ;
     opla:htmlDocumentation """
@@ -43,7 +42,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Air.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Air.pdf"^^xsd:string .
 
-:Area a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Area> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Area"@en ;
     opla:htmlDocumentation """
@@ -58,7 +57,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Area.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Area.pdf"^^xsd:string .
 
-:Art a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Art> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Art"@en ;
     opla:htmlDocumentation """
@@ -73,7 +72,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Art.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Art.pdf"^^xsd:string .
 
-:Back a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Back> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Back"@en ;
     opla:htmlDocumentation """
@@ -88,7 +87,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Back.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Back.pdf"^^xsd:string .
 
-:Body a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Body> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Body"@en ;
     opla:htmlDocumentation """
@@ -103,7 +102,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Body.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Body.pdf"^^xsd:string .
 
-:Book a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Book> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Book"@en ;
     opla:htmlDocumentation """
@@ -118,7 +117,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Book.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Book.pdf"^^xsd:string .
 
-:Business a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Business> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Business"@en ;
     opla:htmlDocumentation """
@@ -133,7 +132,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Business.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Business.pdf"^^xsd:string .
 
-:Car a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Car> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Car"@en ;
     opla:htmlDocumentation """
@@ -148,7 +147,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Car.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Car.pdf"^^xsd:string .
 
-:Case a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Case> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Case"@en ;
     opla:htmlDocumentation """
@@ -163,7 +162,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Case.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Case.pdf"^^xsd:string .
 
-:Change a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Change> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Change"@en ;
     opla:htmlDocumentation """
@@ -178,7 +177,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Change.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Change.pdf"^^xsd:string .
 
-:Child a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Child> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Child"@en ;
     opla:htmlDocumentation """
@@ -193,7 +192,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Child.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Child.pdf"^^xsd:string .
 
-:City a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/City> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "City"@en ;
     opla:htmlDocumentation """
@@ -208,7 +207,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/City.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/City.pdf"^^xsd:string .
 
-:Community a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Community> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Community"@en ;
     opla:htmlDocumentation """
@@ -223,7 +222,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Community.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Community.pdf"^^xsd:string .
 
-:Company a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Company> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Company"@en ;
     opla:htmlDocumentation """
@@ -238,7 +237,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Company.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Company.pdf"^^xsd:string .
 
-:Couch a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Couch> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Couch"@en ;
     opla:htmlDocumentation """
@@ -253,7 +252,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Couch.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Couch.pdf"^^xsd:string .
 
-:Country a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Country> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Country"@en ;
     opla:htmlDocumentation """
@@ -268,7 +267,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Country.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Country.pdf"^^xsd:string .
 
-:Day a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Day> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Day"@en ;
     opla:htmlDocumentation """
@@ -283,7 +282,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Day.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Day.pdf"^^xsd:string .
 
-:Door a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Door> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Door"@en ;
     opla:htmlDocumentation """
@@ -298,7 +297,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Door.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Door.pdf"^^xsd:string .
 
-:Education a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Education> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Education"@en ;
     opla:htmlDocumentation """
@@ -313,7 +312,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Education.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Education.pdf"^^xsd:string .
 
-:End a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/End> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "End"@en ;
     opla:htmlDocumentation """
@@ -328,7 +327,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/End.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/End.pdf"^^xsd:string .
 
-:Eye a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Eye> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Eye"@en ;
     opla:htmlDocumentation """
@@ -343,7 +342,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Eye.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Eye.pdf"^^xsd:string .
 
-:Face a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Face> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Face"@en ;
     opla:htmlDocumentation """
@@ -358,7 +357,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Face.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Face.pdf"^^xsd:string .
 
-:Fact a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Fact> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Fact"@en ;
     opla:htmlDocumentation """
@@ -373,7 +372,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Fact.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Fact.pdf"^^xsd:string .
 
-:Family a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Family> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Family"@en ;
     opla:htmlDocumentation """
@@ -388,7 +387,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Family.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Family.pdf"^^xsd:string .
 
-:Father a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Father> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Father"@en ;
     opla:htmlDocumentation """
@@ -403,7 +402,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Father.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Father.pdf"^^xsd:string .
 
-:Force a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Force> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Force"@en ;
     opla:htmlDocumentation """
@@ -418,7 +417,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Force.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Force.pdf"^^xsd:string .
 
-:Friend a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Friend> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Friend"@en ;
     opla:htmlDocumentation """
@@ -433,7 +432,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Friend.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Friend.pdf"^^xsd:string .
 
-:Game a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Game> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Game"@en ;
     opla:htmlDocumentation """
@@ -448,7 +447,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Game.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Game.pdf"^^xsd:string .
 
-:Girl a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Girl> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Girl"@en ;
     opla:htmlDocumentation """
@@ -463,7 +462,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Girl.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Girl.pdf"^^xsd:string .
 
-:Government a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Government> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Government"@en ;
     opla:htmlDocumentation """
@@ -478,7 +477,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Government.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Government.pdf"^^xsd:string .
 
-:Group a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Group> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Group"@en ;
     opla:htmlDocumentation """
@@ -493,7 +492,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Group.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Group.pdf"^^xsd:string .
 
-:Guy a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Guy> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Guy"@en ;
     opla:htmlDocumentation """
@@ -508,7 +507,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Guy.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Guy.pdf"^^xsd:string .
 
-:Hand a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Hand> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Hand"@en ;
     opla:htmlDocumentation """
@@ -523,7 +522,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Hand.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Hand.pdf"^^xsd:string .
 
-:Head a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Head> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Head"@en ;
     opla:htmlDocumentation """
@@ -538,7 +537,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Head.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Head.pdf"^^xsd:string .
 
-:Health a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Health> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Health"@en ;
     opla:htmlDocumentation """
@@ -553,7 +552,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Health.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Health.pdf"^^xsd:string .
 
-:History a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/History> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "History"@en ;
     opla:htmlDocumentation """
@@ -568,7 +567,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/History.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/History.pdf"^^xsd:string .
 
-:Home a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Home> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Home"@en ;
     opla:htmlDocumentation """
@@ -583,7 +582,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Home.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Home.pdf"^^xsd:string .
 
-:Hour a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Hour> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Hour"@en ;
     opla:htmlDocumentation """
@@ -598,7 +597,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Hour.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Hour.pdf"^^xsd:string .
 
-:House a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/House> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "House"@en ;
     opla:htmlDocumentation """
@@ -613,7 +612,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/House.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/House.pdf"^^xsd:string .
 
-:Idea a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Idea> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Idea"@en ;
     opla:htmlDocumentation """
@@ -628,7 +627,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Idea.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Idea.pdf"^^xsd:string .
 
-:Information a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Information> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Information"@en ;
     opla:htmlDocumentation """
@@ -643,7 +642,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Information.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Information.pdf"^^xsd:string .
 
-:Issue a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Issue> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Issue"@en ;
     opla:htmlDocumentation """
@@ -658,7 +657,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Issue.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Issue.pdf"^^xsd:string .
 
-:Job a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Job> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Job"@en ;
     opla:htmlDocumentation """
@@ -673,7 +672,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Job.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Job.pdf"^^xsd:string .
 
-:Kid a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Kid> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Kid"@en ;
     opla:htmlDocumentation """
@@ -688,7 +687,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Kid.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Kid.pdf"^^xsd:string .
 
-:Kind a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Kind> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Kind"@en ;
     opla:htmlDocumentation """
@@ -703,7 +702,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Kind.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Kind.pdf"^^xsd:string .
 
-:Law a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Law> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Law"@en ;
     opla:htmlDocumentation """
@@ -718,7 +717,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Law.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Law.pdf"^^xsd:string .
 
-:Level a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Level> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Level"@en ;
     opla:htmlDocumentation """
@@ -733,7 +732,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Level.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Level.pdf"^^xsd:string .
 
-:Life a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Life> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Life"@en ;
     opla:htmlDocumentation """
@@ -748,7 +747,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Life.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Life.pdf"^^xsd:string .
 
-:Line a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Line> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Line"@en ;
     opla:htmlDocumentation """
@@ -763,7 +762,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Line.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Line.pdf"^^xsd:string .
 
-:Lot a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Lot> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Lot"@en ;
     opla:htmlDocumentation """
@@ -778,7 +777,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Lot.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Lot.pdf"^^xsd:string .
 
-:Loveseat a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Loveseat> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Loveseat"@en ;
     opla:htmlDocumentation """
@@ -793,7 +792,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Loveseat.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Loveseat.pdf"^^xsd:string .
 
-:Man a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Man> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Man"@en ;
     opla:htmlDocumentation """
@@ -808,7 +807,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Man.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Man.pdf"^^xsd:string .
 
-:Member a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Member> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Member"@en ;
     opla:htmlDocumentation """
@@ -823,7 +822,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Member.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Member.pdf"^^xsd:string .
 
-:Minute a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Minute> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Minute"@en ;
     opla:htmlDocumentation """
@@ -838,7 +837,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Minute.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Minute.pdf"^^xsd:string .
 
-:Moment a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Moment> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Moment"@en ;
     opla:htmlDocumentation """
@@ -853,7 +852,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Moment.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Moment.pdf"^^xsd:string .
 
-:Money a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Money> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Money"@en ;
     opla:htmlDocumentation """
@@ -868,7 +867,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Money.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Money.pdf"^^xsd:string .
 
-:Month a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Month> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Month"@en ;
     opla:htmlDocumentation """
@@ -883,7 +882,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Month.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Month.pdf"^^xsd:string .
 
-:Morning a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Morning> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Morning"@en ;
     opla:htmlDocumentation """
@@ -898,7 +897,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Morning.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Morning.pdf"^^xsd:string .
 
-:Mother a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Mother> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Mother"@en ;
     opla:htmlDocumentation """
@@ -913,7 +912,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Mother.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Mother.pdf"^^xsd:string .
 
-:Name a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Name> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Name"@en ;
     opla:htmlDocumentation """
@@ -928,7 +927,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Name.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Name.pdf"^^xsd:string .
 
-:Night a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Night> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Night"@en ;
     opla:htmlDocumentation """
@@ -943,7 +942,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Night.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Night.pdf"^^xsd:string .
 
-:Number a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Number> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Number"@en ;
     opla:htmlDocumentation """
@@ -958,7 +957,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Number.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Number.pdf"^^xsd:string .
 
-:Office a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Office> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Office"@en ;
     opla:htmlDocumentation """
@@ -973,7 +972,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Office.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Office.pdf"^^xsd:string .
 
-:Others a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Others> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Others"@en ;
     opla:htmlDocumentation """
@@ -988,7 +987,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Others.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Others.pdf"^^xsd:string .
 
-:Parent a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Parent> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Parent"@en ;
     opla:htmlDocumentation """
@@ -1003,7 +1002,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Parent.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Parent.pdf"^^xsd:string .
 
-:Part a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Part> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Part"@en ;
     opla:htmlDocumentation """
@@ -1018,7 +1017,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Part.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Part.pdf"^^xsd:string .
 
-:Party a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Party> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Party"@en ;
     opla:htmlDocumentation """
@@ -1033,7 +1032,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Party.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Party.pdf"^^xsd:string .
 
-:People a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/People> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "People"@en ;
     opla:htmlDocumentation """
@@ -1048,7 +1047,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/People.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/People.pdf"^^xsd:string .
 
-:Person a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Person> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Person"@en ;
     opla:htmlDocumentation """
@@ -1063,7 +1062,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Person.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Person.pdf"^^xsd:string .
 
-:Place a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Place> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Place"@en ;
     opla:htmlDocumentation """
@@ -1078,7 +1077,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Place.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Place.pdf"^^xsd:string .
 
-:Point a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Point> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Point"@en ;
     opla:htmlDocumentation """
@@ -1093,7 +1092,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Point.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Point.pdf"^^xsd:string .
 
-:Power a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Power> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Power"@en ;
     opla:htmlDocumentation """
@@ -1108,7 +1107,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Power.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Power.pdf"^^xsd:string .
 
-:President a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/President> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "President"@en ;
     opla:htmlDocumentation """
@@ -1123,7 +1122,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/President.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/President.pdf"^^xsd:string .
 
-:Problem a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Problem> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Problem"@en ;
     opla:htmlDocumentation """
@@ -1138,7 +1137,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Problem.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Problem.pdf"^^xsd:string .
 
-:Program a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Program> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Program"@en ;
     opla:htmlDocumentation """
@@ -1153,7 +1152,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Program.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Program.pdf"^^xsd:string .
 
-:Question a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Question> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Question"@en ;
     opla:htmlDocumentation """
@@ -1168,7 +1167,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Question.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Question.pdf"^^xsd:string .
 
-:Reason a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Reason> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Reason"@en ;
     opla:htmlDocumentation """
@@ -1183,7 +1182,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Reason.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Reason.pdf"^^xsd:string .
 
-:Research a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Research> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Research"@en ;
     opla:htmlDocumentation """
@@ -1198,7 +1197,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Research.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Research.pdf"^^xsd:string .
 
-:Result a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Result> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Result"@en ;
     opla:htmlDocumentation """
@@ -1213,7 +1212,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Result.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Result.pdf"^^xsd:string .
 
-:Right a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Right> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Right"@en ;
     opla:htmlDocumentation """
@@ -1228,7 +1227,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Right.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Right.pdf"^^xsd:string .
 
-:Room a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Room> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Room"@en ;
     opla:htmlDocumentation """
@@ -1243,7 +1242,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Room.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Room.pdf"^^xsd:string .
 
-:School a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/School> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "School"@en ;
     opla:htmlDocumentation """
@@ -1258,7 +1257,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/School.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/School.pdf"^^xsd:string .
 
-:Service a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Service> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Service"@en ;
     opla:htmlDocumentation """
@@ -1273,7 +1272,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Service.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Service.pdf"^^xsd:string .
 
-:Side a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Side> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Side"@en ;
     opla:htmlDocumentation """
@@ -1288,7 +1287,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Side.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Side.pdf"^^xsd:string .
 
-:Sofa a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Sofa> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Sofa"@en ;
     opla:htmlDocumentation """
@@ -1303,7 +1302,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Sofa.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Sofa.pdf"^^xsd:string .
 
-:State a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/State> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "State"@en ;
     opla:htmlDocumentation """
@@ -1318,7 +1317,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/State.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/State.pdf"^^xsd:string .
 
-:Story a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Story> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Story"@en ;
     opla:htmlDocumentation """
@@ -1333,7 +1332,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Story.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Story.pdf"^^xsd:string .
 
-:Student a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Student> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Student"@en ;
     opla:htmlDocumentation """
@@ -1348,7 +1347,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Student.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Student.pdf"^^xsd:string .
 
-:Study a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Study> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Study"@en ;
     opla:htmlDocumentation """
@@ -1363,7 +1362,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Study.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Study.pdf"^^xsd:string .
 
-:System a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/System> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "System"@en ;
     opla:htmlDocumentation """
@@ -1378,7 +1377,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/System.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/System.pdf"^^xsd:string .
 
-:Teacher a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Teacher> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Teacher"@en ;
     opla:htmlDocumentation """
@@ -1393,7 +1392,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Teacher.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Teacher.pdf"^^xsd:string .
 
-:Team a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Team> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Team"@en ;
     opla:htmlDocumentation """
@@ -1408,7 +1407,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Team.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Team.pdf"^^xsd:string .
 
-:Thing a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Thing> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Thing"@en ;
     opla:htmlDocumentation """
@@ -1423,7 +1422,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Thing.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Thing.pdf"^^xsd:string .
 
-:Time a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Time> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Time"@en ;
     opla:htmlDocumentation """
@@ -1438,7 +1437,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Time.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Time.pdf"^^xsd:string .
 
-:War a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/War> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "War"@en ;
     opla:htmlDocumentation """
@@ -1453,7 +1452,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/War.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/War.pdf"^^xsd:string .
 
-:Water a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Water> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Water"@en ;
     opla:htmlDocumentation """
@@ -1468,7 +1467,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Water.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Water.pdf"^^xsd:string .
 
-:Way a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Way> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Way"@en ;
     opla:htmlDocumentation """
@@ -1483,7 +1482,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Way.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Way.pdf"^^xsd:string .
 
-:Week a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Week> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Week"@en ;
     opla:htmlDocumentation """
@@ -1498,7 +1497,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Week.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Week.pdf"^^xsd:string .
 
-:Woman a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Woman> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Woman"@en ;
     opla:htmlDocumentation """
@@ -1513,7 +1512,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Woman.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Woman.pdf"^^xsd:string .
 
-:Word a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Word> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Word"@en ;
     opla:htmlDocumentation """
@@ -1528,7 +1527,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Word.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Word.pdf"^^xsd:string .
 
-:Work a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Work> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Work"@en ;
     opla:htmlDocumentation """
@@ -1543,7 +1542,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Work.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Work.pdf"^^xsd:string .
 
-:World a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/World> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "World"@en ;
     opla:htmlDocumentation """
@@ -1558,7 +1557,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/World.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/World.pdf"^^xsd:string .
 
-:Year a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/Year> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Year"@en ;
     opla:htmlDocumentation """
@@ -1573,7 +1572,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Year.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Year.pdf"^^xsd:string .
 
-:chair a opla:Pattern,
+<https://archive.org/services/purl/purl/modular_ontology_design_library/chair> a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "chair"@en ;
     opla:htmlDocumentation """
