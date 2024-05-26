@@ -11,7 +11,7 @@ pattern_path = "../csmodl/patterns"
 
 # Prefix Configurations
 name_space = "https://kastle-lab.org/"
-opla_namespace = "https://archive.org/services/purl/purl/modular_ontology_design_library#"
+opla_namespace = "https://ontologydesignpatterns.org/"
 
 pfs = {
 "": Namespace(f"{opla_namespace}"),
@@ -49,6 +49,7 @@ def generate_index():
     noun_ontology = f"{opla_namespace}"
     noun_onto_uri = Namespace(noun_ontology)[""]
     pattern_uri = Namespace(noun_ontology)["Pattern"]
+   
     ## Bind
     graph.add( (noun_onto_uri, a, OWL.Ontology) )
     graph.add( (noun_onto_uri, pfs["opla-core"]["hasPatternName"], Literal("Commonsense Modular Ontology Design Library")) )
@@ -67,6 +68,14 @@ def generate_index():
     graph.add( (pfs["opla"]["renderedSchemaDiagram"], pfs["rdfs"]["range"], pfs["xsd"]["string"]) )
     graph.add( (pfs["opla"]["htmlDocumentation"], pfs["rdfs"]["domain"], pattern_uri) )
     graph.add( (pfs["opla"]["htmlDocumentation"], pfs["rdfs"]["range"], pfs["xsd"]["string"]) )
+
+
+    #Add categorization
+
+    graph.add( (pfs["opla"]["categorization"], a, pfs["owl"]["DatatypeProperty"]) )
+    graph.add( (pfs["opla"]["categorization"], pfs["rdfs"]["label"], Literal(f"Owl Representation", lang="en")) )
+    graph.add((pfs["opla"]["categorization"],pfs["rdfs"]["domain"],pattern_uri))
+    graph.add( (pfs["opla"]["categorization"], pfs["rdfs"]["range"], pfs["xsd"]["string"]) )
 
 
     html_counter=1
@@ -89,6 +98,10 @@ def generate_index():
         graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
         graph.add( (noun_pattern_uri, pfs["opla"]["renderedSchemaDiagram"], Literal(f"{schema_path}", datatype=XSD.string)) )
         graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
+
+        graph.add( (noun_pattern_uri, pfs["opla"]["categorization"], Literal(f"{ttl_path}", datatype=XSD.string)) )
+        graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
+        
         noun_html = f'''
             <html>
             <body>
