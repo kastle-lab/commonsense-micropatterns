@@ -3,34 +3,35 @@
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 opla:categorization a owl:DatatypeProperty ;
     rdfs:label "Owl Representation"@en ;
-    rdfs:domain :Pattern ;
+    rdfs:domain opla:Pattern ;
     rdfs:range xsd:string .
 
 opla:htmlDocumentation a owl:DatatypeProperty ;
     rdfs:label "Owl HTML Documentation"@en ;
-    rdfs:domain :Pattern ;
+    rdfs:domain opla:Pattern ;
     rdfs:range xsd:string .
 
 opla:owlRepresentation a owl:DatatypeProperty ;
     rdfs:label "Owl Representation"@en ;
-    rdfs:domain :Pattern ;
+    rdfs:domain opla:Pattern ;
     rdfs:range xsd:string .
 
 opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     rdfs:label "Rendered Schema Diagram"@en ;
-    rdfs:domain :Pattern ;
+    rdfs:domain opla:Pattern ;
     rdfs:range xsd:string .
 
 : a owl:Ontology ;
     opla-core:hasPatternName "Commonsense Modular Ontology Design Library" .
 
-:Air a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Air"@en ;
+:Air a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Air"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Air.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -44,9 +45,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Air.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Air.pdf"^^xsd:string .
 
-:Area a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Area"@en ;
+:Area a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Area"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Area.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -60,9 +62,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Area.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Area.pdf"^^xsd:string .
 
-:Art a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Art"@en ;
+:Art a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Art"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Art.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -76,9 +79,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Art.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Art.pdf"^^xsd:string .
 
-:Back a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Back"@en ;
+:Back a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Back"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Back.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -92,9 +96,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Back.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Back.pdf"^^xsd:string .
 
-:Body a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Body"@en ;
+:Body a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Body"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Body.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -108,9 +113,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Body.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Body.pdf"^^xsd:string .
 
-:Book a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Book"@en ;
+:Book a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Book"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Book.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -124,9 +130,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Book.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Book.pdf"^^xsd:string .
 
-:Business a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Business"@en ;
+:Business a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Business"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Business.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -140,9 +147,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Business.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Business.pdf"^^xsd:string .
 
-:Car a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Car"@en ;
+:Car a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Car"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Car.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -156,9 +164,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Car.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Car.pdf"^^xsd:string .
 
-:Case a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Case"@en ;
+:Case a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Case"@en,
+        "Category"@en ;
     opla:categorization "csmodl/patterns/Case.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -172,9 +181,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Case.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Case.pdf"^^xsd:string .
 
-:Change a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Change"@en ;
+:Change a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Change"@en ;
     opla:categorization "csmodl/patterns/Change.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -188,9 +198,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Change.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Change.pdf"^^xsd:string .
 
-:Child a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Child"@en ;
+:Child a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Child"@en ;
     opla:categorization "csmodl/patterns/Child.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -204,9 +215,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Child.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Child.pdf"^^xsd:string .
 
-:City a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "City"@en ;
+:City a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "City"@en ;
     opla:categorization "csmodl/patterns/City.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -220,9 +232,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/City.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/City.pdf"^^xsd:string .
 
-:Community a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Community"@en ;
+:Community a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Community"@en ;
     opla:categorization "csmodl/patterns/Community.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -236,9 +249,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Community.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Community.pdf"^^xsd:string .
 
-:Company a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Company"@en ;
+:Company a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Company"@en ;
     opla:categorization "csmodl/patterns/Company.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -252,9 +266,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Company.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Company.pdf"^^xsd:string .
 
-:Couch a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Couch"@en ;
+:Couch a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Couch"@en ;
     opla:categorization "csmodl/patterns/Couch.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -268,9 +283,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Couch.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Couch.pdf"^^xsd:string .
 
-:Country a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Country"@en ;
+:Country a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Country"@en ;
     opla:categorization "csmodl/patterns/Country.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -284,9 +300,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Country.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Country.pdf"^^xsd:string .
 
-:Day a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Day"@en ;
+:Day a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Day"@en ;
     opla:categorization "csmodl/patterns/Day.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -300,9 +317,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Day.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Day.pdf"^^xsd:string .
 
-:Door a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Door"@en ;
+:Door a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Door"@en ;
     opla:categorization "csmodl/patterns/Door.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -316,9 +334,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Door.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Door.pdf"^^xsd:string .
 
-:Education a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Education"@en ;
+:Education a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Education"@en ;
     opla:categorization "csmodl/patterns/Education.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -332,9 +351,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Education.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Education.pdf"^^xsd:string .
 
-:End a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "End"@en ;
+:End a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "End"@en ;
     opla:categorization "csmodl/patterns/End.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -348,9 +368,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/End.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/End.pdf"^^xsd:string .
 
-:Eye a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Eye"@en ;
+:Eye a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Eye"@en ;
     opla:categorization "csmodl/patterns/Eye.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -364,9 +385,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Eye.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Eye.pdf"^^xsd:string .
 
-:Face a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Face"@en ;
+:Face a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Face"@en ;
     opla:categorization "csmodl/patterns/Face.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -380,9 +402,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Face.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Face.pdf"^^xsd:string .
 
-:Fact a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Fact"@en ;
+:Fact a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Fact"@en ;
     opla:categorization "csmodl/patterns/Fact.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -396,9 +419,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Fact.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Fact.pdf"^^xsd:string .
 
-:Family a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Family"@en ;
+:Family a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Family"@en ;
     opla:categorization "csmodl/patterns/Family.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -412,9 +436,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Family.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Family.pdf"^^xsd:string .
 
-:Father a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Father"@en ;
+:Father a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Father"@en ;
     opla:categorization "csmodl/patterns/Father.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -428,9 +453,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Father.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Father.pdf"^^xsd:string .
 
-:Force a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Force"@en ;
+:Force a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Force"@en ;
     opla:categorization "csmodl/patterns/Force.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -444,9 +470,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Force.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Force.pdf"^^xsd:string .
 
-:Friend a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Friend"@en ;
+:Friend a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Friend"@en ;
     opla:categorization "csmodl/patterns/Friend.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -460,9 +487,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Friend.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Friend.pdf"^^xsd:string .
 
-:Game a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Game"@en ;
+:Game a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Game"@en ;
     opla:categorization "csmodl/patterns/Game.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -476,9 +504,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Game.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Game.pdf"^^xsd:string .
 
-:Girl a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Girl"@en ;
+:Girl a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Girl"@en ;
     opla:categorization "csmodl/patterns/Girl.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -492,9 +521,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Girl.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Girl.pdf"^^xsd:string .
 
-:Government a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Government"@en ;
+:Government a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Government"@en ;
     opla:categorization "csmodl/patterns/Government.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -508,9 +538,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Government.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Government.pdf"^^xsd:string .
 
-:Group a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Group"@en ;
+:Group a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Group"@en ;
     opla:categorization "csmodl/patterns/Group.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -524,9 +555,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Group.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Group.pdf"^^xsd:string .
 
-:Guy a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Guy"@en ;
+:Guy a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Guy"@en ;
     opla:categorization "csmodl/patterns/Guy.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -540,9 +572,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Guy.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Guy.pdf"^^xsd:string .
 
-:Hand a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Hand"@en ;
+:Hand a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Hand"@en ;
     opla:categorization "csmodl/patterns/Hand.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -556,9 +589,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Hand.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Hand.pdf"^^xsd:string .
 
-:Head a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Head"@en ;
+:Head a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Head"@en ;
     opla:categorization "csmodl/patterns/Head.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -572,9 +606,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Head.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Head.pdf"^^xsd:string .
 
-:Health a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Health"@en ;
+:Health a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Health"@en ;
     opla:categorization "csmodl/patterns/Health.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -588,9 +623,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Health.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Health.pdf"^^xsd:string .
 
-:History a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "History"@en ;
+:History a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "History"@en ;
     opla:categorization "csmodl/patterns/History.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -604,9 +640,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/History.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/History.pdf"^^xsd:string .
 
-:Home a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Home"@en ;
+:Home a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Home"@en ;
     opla:categorization "csmodl/patterns/Home.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -620,9 +657,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Home.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Home.pdf"^^xsd:string .
 
-:Hour a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Hour"@en ;
+:Hour a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Hour"@en ;
     opla:categorization "csmodl/patterns/Hour.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -636,9 +674,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Hour.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Hour.pdf"^^xsd:string .
 
-:House a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "House"@en ;
+:House a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "House"@en ;
     opla:categorization "csmodl/patterns/House.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -652,9 +691,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/House.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/House.pdf"^^xsd:string .
 
-:Idea a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Idea"@en ;
+:Idea a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Idea"@en ;
     opla:categorization "csmodl/patterns/Idea.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -668,9 +708,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Idea.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Idea.pdf"^^xsd:string .
 
-:Information a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Information"@en ;
+:Information a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Information"@en ;
     opla:categorization "csmodl/patterns/Information.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -684,9 +725,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Information.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Information.pdf"^^xsd:string .
 
-:Issue a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Issue"@en ;
+:Issue a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Issue"@en ;
     opla:categorization "csmodl/patterns/Issue.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -700,9 +742,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Issue.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Issue.pdf"^^xsd:string .
 
-:Job a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Job"@en ;
+:Job a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Job"@en ;
     opla:categorization "csmodl/patterns/Job.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -716,9 +759,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Job.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Job.pdf"^^xsd:string .
 
-:Kid a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Kid"@en ;
+:Kid a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Kid"@en ;
     opla:categorization "csmodl/patterns/Kid.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -732,9 +776,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Kid.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Kid.pdf"^^xsd:string .
 
-:Kind a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Kind"@en ;
+:Kind a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Kind"@en ;
     opla:categorization "csmodl/patterns/Kind.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -748,9 +793,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Kind.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Kind.pdf"^^xsd:string .
 
-:Law a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Law"@en ;
+:Law a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Law"@en ;
     opla:categorization "csmodl/patterns/Law.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -764,9 +810,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Law.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Law.pdf"^^xsd:string .
 
-:Level a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Level"@en ;
+:Level a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Level"@en ;
     opla:categorization "csmodl/patterns/Level.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -780,9 +827,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Level.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Level.pdf"^^xsd:string .
 
-:Life a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Life"@en ;
+:Life a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Life"@en ;
     opla:categorization "csmodl/patterns/Life.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -796,9 +844,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Life.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Life.pdf"^^xsd:string .
 
-:Line a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Line"@en ;
+:Line a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Line"@en ;
     opla:categorization "csmodl/patterns/Line.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -812,9 +861,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Line.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Line.pdf"^^xsd:string .
 
-:Lot a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Lot"@en ;
+:Lot a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Lot"@en ;
     opla:categorization "csmodl/patterns/Lot.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -828,9 +878,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Lot.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Lot.pdf"^^xsd:string .
 
-:Loveseat a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Loveseat"@en ;
+:Loveseat a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Loveseat"@en ;
     opla:categorization "csmodl/patterns/Loveseat.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -844,9 +895,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Loveseat.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Loveseat.pdf"^^xsd:string .
 
-:Man a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Man"@en ;
+:Man a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Man"@en ;
     opla:categorization "csmodl/patterns/Man.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -860,9 +912,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Man.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Man.pdf"^^xsd:string .
 
-:Member a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Member"@en ;
+:Member a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Member"@en ;
     opla:categorization "csmodl/patterns/Member.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -876,9 +929,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Member.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Member.pdf"^^xsd:string .
 
-:Minute a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Minute"@en ;
+:Minute a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Minute"@en ;
     opla:categorization "csmodl/patterns/Minute.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -892,9 +946,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Minute.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Minute.pdf"^^xsd:string .
 
-:Moment a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Moment"@en ;
+:Moment a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Moment"@en ;
     opla:categorization "csmodl/patterns/Moment.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -908,9 +963,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Moment.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Moment.pdf"^^xsd:string .
 
-:Money a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Money"@en ;
+:Money a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Money"@en ;
     opla:categorization "csmodl/patterns/Money.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -924,9 +980,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Money.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Money.pdf"^^xsd:string .
 
-:Month a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Month"@en ;
+:Month a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Month"@en ;
     opla:categorization "csmodl/patterns/Month.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -940,9 +997,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Month.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Month.pdf"^^xsd:string .
 
-:Morning a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Morning"@en ;
+:Morning a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Morning"@en ;
     opla:categorization "csmodl/patterns/Morning.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -956,9 +1014,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Morning.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Morning.pdf"^^xsd:string .
 
-:Mother a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Mother"@en ;
+:Mother a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Mother"@en ;
     opla:categorization "csmodl/patterns/Mother.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -972,9 +1031,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Mother.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Mother.pdf"^^xsd:string .
 
-:Name a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Name"@en ;
+:Name a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Name"@en ;
     opla:categorization "csmodl/patterns/Name.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -988,9 +1048,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Name.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Name.pdf"^^xsd:string .
 
-:Night a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Night"@en ;
+:Night a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Night"@en ;
     opla:categorization "csmodl/patterns/Night.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1004,9 +1065,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Night.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Night.pdf"^^xsd:string .
 
-:Number a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Number"@en ;
+:Number a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Number"@en ;
     opla:categorization "csmodl/patterns/Number.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1020,9 +1082,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Number.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Number.pdf"^^xsd:string .
 
-:Office a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Office"@en ;
+:Office a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Office"@en ;
     opla:categorization "csmodl/patterns/Office.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1036,9 +1099,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Office.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Office.pdf"^^xsd:string .
 
-:Others a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Others"@en ;
+:Others a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Others"@en ;
     opla:categorization "csmodl/patterns/Others.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1052,9 +1116,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Others.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Others.pdf"^^xsd:string .
 
-:Parent a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Parent"@en ;
+:Parent a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Parent"@en ;
     opla:categorization "csmodl/patterns/Parent.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1068,9 +1133,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Parent.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Parent.pdf"^^xsd:string .
 
-:Part a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Part"@en ;
+:Part a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Part"@en ;
     opla:categorization "csmodl/patterns/Part.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1084,9 +1150,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Part.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Part.pdf"^^xsd:string .
 
-:Party a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Party"@en ;
+:Party a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Party"@en ;
     opla:categorization "csmodl/patterns/Party.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1100,9 +1167,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Party.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Party.pdf"^^xsd:string .
 
-:People a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "People"@en ;
+:People a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "People"@en ;
     opla:categorization "csmodl/patterns/People.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1116,9 +1184,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/People.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/People.pdf"^^xsd:string .
 
-:Person a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Person"@en ;
+:Person a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Person"@en ;
     opla:categorization "csmodl/patterns/Person.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1132,9 +1201,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Person.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Person.pdf"^^xsd:string .
 
-:Place a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Place"@en ;
+:Place a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Place"@en ;
     opla:categorization "csmodl/patterns/Place.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1148,9 +1218,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Place.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Place.pdf"^^xsd:string .
 
-:Point a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Point"@en ;
+:Point a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Point"@en ;
     opla:categorization "csmodl/patterns/Point.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1164,9 +1235,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Point.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Point.pdf"^^xsd:string .
 
-:Power a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Power"@en ;
+:Power a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Power"@en ;
     opla:categorization "csmodl/patterns/Power.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1180,9 +1252,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Power.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Power.pdf"^^xsd:string .
 
-:President a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "President"@en ;
+:President a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "President"@en ;
     opla:categorization "csmodl/patterns/President.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1196,9 +1269,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/President.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/President.pdf"^^xsd:string .
 
-:Problem a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Problem"@en ;
+:Problem a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Problem"@en ;
     opla:categorization "csmodl/patterns/Problem.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1212,9 +1286,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Problem.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Problem.pdf"^^xsd:string .
 
-:Program a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Program"@en ;
+:Program a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Program"@en ;
     opla:categorization "csmodl/patterns/Program.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1228,9 +1303,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Program.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Program.pdf"^^xsd:string .
 
-:Question a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Question"@en ;
+:Question a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Question"@en ;
     opla:categorization "csmodl/patterns/Question.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1244,9 +1320,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Question.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Question.pdf"^^xsd:string .
 
-:Reason a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Reason"@en ;
+:Reason a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Reason"@en ;
     opla:categorization "csmodl/patterns/Reason.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1260,9 +1337,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Reason.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Reason.pdf"^^xsd:string .
 
-:Research a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Research"@en ;
+:Research a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Research"@en ;
     opla:categorization "csmodl/patterns/Research.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1276,9 +1354,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Research.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Research.pdf"^^xsd:string .
 
-:Result a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Result"@en ;
+:Result a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Result"@en ;
     opla:categorization "csmodl/patterns/Result.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1292,9 +1371,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Result.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Result.pdf"^^xsd:string .
 
-:Right a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Right"@en ;
+:Right a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Right"@en ;
     opla:categorization "csmodl/patterns/Right.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1308,9 +1388,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Right.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Right.pdf"^^xsd:string .
 
-:Room a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Room"@en ;
+:Room a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Room"@en ;
     opla:categorization "csmodl/patterns/Room.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1324,9 +1405,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Room.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Room.pdf"^^xsd:string .
 
-:School a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "School"@en ;
+:School a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "School"@en ;
     opla:categorization "csmodl/patterns/School.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1340,9 +1422,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/School.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/School.pdf"^^xsd:string .
 
-:Service a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Service"@en ;
+:Service a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Service"@en ;
     opla:categorization "csmodl/patterns/Service.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1356,9 +1439,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Service.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Service.pdf"^^xsd:string .
 
-:Side a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Side"@en ;
+:Side a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Side"@en ;
     opla:categorization "csmodl/patterns/Side.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1372,9 +1456,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Side.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Side.pdf"^^xsd:string .
 
-:Sofa a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Sofa"@en ;
+:Sofa a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Sofa"@en ;
     opla:categorization "csmodl/patterns/Sofa.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1388,9 +1473,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Sofa.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Sofa.pdf"^^xsd:string .
 
-:State a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "State"@en ;
+:State a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "State"@en ;
     opla:categorization "csmodl/patterns/State.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1404,9 +1490,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/State.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/State.pdf"^^xsd:string .
 
-:Story a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Story"@en ;
+:Story a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Story"@en ;
     opla:categorization "csmodl/patterns/Story.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1420,9 +1507,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Story.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Story.pdf"^^xsd:string .
 
-:Student a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Student"@en ;
+:Student a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Student"@en ;
     opla:categorization "csmodl/patterns/Student.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1436,9 +1524,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Student.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Student.pdf"^^xsd:string .
 
-:Study a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Study"@en ;
+:Study a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Study"@en ;
     opla:categorization "csmodl/patterns/Study.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1452,9 +1541,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Study.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Study.pdf"^^xsd:string .
 
-:System a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "System"@en ;
+:System a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "System"@en ;
     opla:categorization "csmodl/patterns/System.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1468,9 +1558,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/System.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/System.pdf"^^xsd:string .
 
-:Teacher a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Teacher"@en ;
+:Teacher a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Teacher"@en ;
     opla:categorization "csmodl/patterns/Teacher.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1484,9 +1575,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Teacher.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Teacher.pdf"^^xsd:string .
 
-:Team a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Team"@en ;
+:Team a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Team"@en ;
     opla:categorization "csmodl/patterns/Team.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1500,9 +1592,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Team.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Team.pdf"^^xsd:string .
 
-:Thing a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Thing"@en ;
+:Thing a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Thing"@en ;
     opla:categorization "csmodl/patterns/Thing.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1516,9 +1609,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Thing.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Thing.pdf"^^xsd:string .
 
-:Time a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Time"@en ;
+:Time a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Time"@en ;
     opla:categorization "csmodl/patterns/Time.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1532,9 +1626,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Time.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Time.pdf"^^xsd:string .
 
-:War a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "War"@en ;
+:War a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "War"@en ;
     opla:categorization "csmodl/patterns/War.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1548,9 +1643,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/War.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/War.pdf"^^xsd:string .
 
-:Water a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Water"@en ;
+:Water a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Water"@en ;
     opla:categorization "csmodl/patterns/Water.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1564,9 +1660,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Water.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Water.pdf"^^xsd:string .
 
-:Way a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Way"@en ;
+:Way a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Way"@en ;
     opla:categorization "csmodl/patterns/Way.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1580,9 +1677,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Way.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Way.pdf"^^xsd:string .
 
-:Week a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Week"@en ;
+:Week a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Week"@en ;
     opla:categorization "csmodl/patterns/Week.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1596,9 +1694,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Week.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Week.pdf"^^xsd:string .
 
-:Woman a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Woman"@en ;
+:Woman a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Woman"@en ;
     opla:categorization "csmodl/patterns/Woman.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1612,9 +1711,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Woman.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Woman.pdf"^^xsd:string .
 
-:Word a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Word"@en ;
+:Word a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Word"@en ;
     opla:categorization "csmodl/patterns/Word.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1628,9 +1728,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Word.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Word.pdf"^^xsd:string .
 
-:Work a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Work"@en ;
+:Work a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Work"@en ;
     opla:categorization "csmodl/patterns/Work.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1644,9 +1745,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Work.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Work.pdf"^^xsd:string .
 
-:World a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "World"@en ;
+:World a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "World"@en ;
     opla:categorization "csmodl/patterns/World.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1660,9 +1762,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/World.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/World.pdf"^^xsd:string .
 
-:Year a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "Year"@en ;
+:Year a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "Year"@en ;
     opla:categorization "csmodl/patterns/Year.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>
@@ -1676,9 +1779,10 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Year.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Year.pdf"^^xsd:string .
 
-:chair a owl:NamedIndividual,
-        :Pattern ;
-    rdfs:label "chair"@en ;
+:chair a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Category"@en,
+        "chair"@en ;
     opla:categorization "csmodl/patterns/chair.ttl"^^xsd:string ;
     opla:htmlDocumentation """
             <html>

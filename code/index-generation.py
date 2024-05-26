@@ -48,7 +48,8 @@ def generate_index():
     ## Minting URIs
     noun_ontology = f"{opla_namespace}"
     noun_onto_uri = Namespace(noun_ontology)[""]
-    pattern_uri = Namespace(noun_ontology)["Pattern"]
+    
+    pattern_uri = pfs["opla"]["Pattern"]
    
     ## Bind
     graph.add( (noun_onto_uri, a, OWL.Ontology) )
@@ -100,7 +101,7 @@ def generate_index():
         graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
 
         graph.add( (noun_pattern_uri, pfs["opla"]["categorization"], Literal(f"{ttl_path}", datatype=XSD.string)) )
-        graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
+        graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal("Category", lang="en")) )
         
         noun_html = f'''
             <html>
