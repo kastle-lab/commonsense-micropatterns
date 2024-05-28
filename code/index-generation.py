@@ -65,7 +65,7 @@ def generate_index():
     graph.add( (pfs["opla"]["renderedSchemaDiagram"], pfs["rdfs"]["label"], Literal(f"Rendered Schema Diagram", lang="en")) )
     graph.add( (pfs["opla"]["htmlDocumentation"], a, pfs["owl"]["DatatypeProperty"]) )
     graph.add( (pfs["opla"]["htmlDocumentation"], pfs["rdfs"]["label"], Literal(f"Owl HTML Documentation", lang="en")) )
-    graph.add( (pfs["opla"]["categorization"], a, pfs["owl"]["DatatypeProperty"]) )
+#    graph.add( (pfs["opla"]["categorization"], a, pfs["owl"]["DatatypeProperty"]) )
 
     graph.add( (pfs["opla"]["owlRepresentation"], pfs["rdfs"]["domain"], pattern_uri) )
     graph.add( (pfs["opla"]["owlRepresentation"], pfs["rdfs"]["range"], pfs["xsd"]["string"]) )
