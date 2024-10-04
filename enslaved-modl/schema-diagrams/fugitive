@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Fugitive [label="kastle:Fugitive"]
+	Integer [label="kastle:Integer"]
+	Fugitive -> Integer [label="kastle:age"]
+	Warrant [label="kastle:Warrant"]
+	Fugitive -> Warrant [label="kastle:hasWarrant"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Fugitive -> string [label="kastle:name"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Fugitive -> string [label="kastle:wantedFor"]
+}

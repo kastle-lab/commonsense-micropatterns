@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	TimePeriod [label="kastle:TimePeriod"]
+	Datetime [label="kastle:Datetime"]
+	TimePeriod -> Datetime [label="kastle:hasEndTime"]
+	Datetime [label="kastle:Datetime"]
+	TimePeriod -> Datetime [label="kastle:hasStartTime"]
+	N7048638ddbe744ef92b7ef71d2bc54beb1 [label="kastle:N7048638ddbe744ef92b7ef71d2bc54beb1"]
+	Timezone [label="kastle:Timezone"]
+	N7048638ddbe744ef92b7ef71d2bc54beb1 -> Timezone [label="kastle:isInTimezone"]
+}

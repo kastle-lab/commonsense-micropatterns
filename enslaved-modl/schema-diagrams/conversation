@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Conversation [label="kastle:Conversation"]
+	Message [label="kastle:Message"]
+	Conversation -> Message [label="kastle:hasMessage"]
+	Participant [label="kastle:Participant"]
+	Conversation -> Participant [label="kastle:hasParticipant"]
+	Message [label="kastle:Message"]
+	Participant [label="kastle:Participant"]
+	Message -> Participant [label="kastle:hasSender"]
+	Topic [label="kastle:Topic"]
+	Conversation -> Topic [label="kastle:hasTopic"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Message -> Literal [label="kastle:timestamp"]
+}

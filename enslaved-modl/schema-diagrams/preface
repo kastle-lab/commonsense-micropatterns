@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Preface [label="kastle:Preface"]
+	Author [label="kastle:Author"]
+	Preface -> Author [label="kastle:hasAuthor"]
+	Content [label="kastle:Content"]
+	Preface -> Content [label="kastle:hasContent"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Preface -> date [label="kastle:hasDate"]
+}

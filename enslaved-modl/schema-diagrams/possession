@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Possession [label="kastle:Possession"]
+	Duration [label="kastle:Duration"]
+	Possession -> Duration [label="kastle:durationOfPossession"]
+	Resource [label="kastle:Resource"]
+	Possession -> Resource [label="kastle:possessed"]
+	Resource [label="kastle:Resource"]
+	Possession -> Resource [label="kastle:possessor"]
+}

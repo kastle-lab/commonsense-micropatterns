@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Judge [label="kastle:Judge"]
+	Agent [label="kastle:Agent"]
+	Judge -> Agent [label="kastle:appointedBy"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Judge -> date [label="kastle:appointmentDate"]
+	Judgment [label="kastle:Judgment"]
+	Judge -> Judgment [label="kastle:hasJudgment"]
+	LegalCase [label="kastle:LegalCase"]
+	Judge -> LegalCase [label="kastle:judges"]
+}

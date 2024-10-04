@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Genius [label="kastle:Genius"]
+	Integer [label="kastle:Integer"]
+	Genius -> Integer [label="kastle:creativity"]
+	Integer [label="kastle:Integer"]
+	Genius -> Integer [label="kastle:intellectualAbility"]
+	Integer [label="kastle:Integer"]
+	Genius -> Integer [label="kastle:originality"]
+}

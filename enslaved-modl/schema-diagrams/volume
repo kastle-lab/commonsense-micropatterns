@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	VolumeMeasurement [label="kastle:VolumeMeasurement"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	VolumeMeasurement -> decimal [label="kastle:height"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	VolumeMeasurement -> decimal [label="kastle:length"]
+	Unit [label="kastle:Unit"]
+	VolumeMeasurement -> Unit [label="kastle:unit"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	VolumeMeasurement -> decimal [label="kastle:width"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Mean [label="kastle:Mean"]
+	Resource [label="kastle:Resource"]
+	Mean -> Resource [label="kastle:computationMethod"]
+	NumberSet [label="kastle:NumberSet"]
+	Double [label="kastle:Double"]
+	NumberSet -> Double [label="kastle:hasIndividualNumber"]
+	Double [label="kastle:Double"]
+	Mean -> Double [label="kastle:hasMeanValue"]
+	Mean -> NumberSet [label="kastle:hasNumberSet"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Mean -> decimal [label="kastle:value"]
+}

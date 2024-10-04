@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Character [label="kastle:Character"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Character -> string [label="kastle:hasAbility"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Character -> string [label="kastle:hasOrigin"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Character -> boolean [label="kastle:isHero"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Character -> string [label="kastle:name"]
+}

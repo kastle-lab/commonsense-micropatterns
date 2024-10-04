@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Militia [label="kastle:Militia"]
+	Member [label="kastle:Member"]
+	Militia -> Member [label="kastle:hasMember"]
+	Member [label="kastle:Member"]
+	Role [label="kastle:Role"]
+	Member -> Role [label="kastle:hasRole"]
+	Weapon [label="kastle:Weapon"]
+	Member -> Weapon [label="kastle:hasWeapon"]
+}

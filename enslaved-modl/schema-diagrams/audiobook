@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	AudioBook [label="kastle:AudioBook"]
+	Author [label="kastle:Author"]
+	AudioBook -> Author [label="kastle:hasAuthor"]
+	Narrator [label="kastle:Narrator"]
+	AudioBook -> Narrator [label="kastle:hasNarrator"]
+	Publisher [label="kastle:Publisher"]
+	AudioBook -> Publisher [label="kastle:publishedBy"]
+}

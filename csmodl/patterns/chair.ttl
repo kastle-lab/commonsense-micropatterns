@@ -1,54 +1,72 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
-@prefix opla-cp: <http://ontologydesignpatterns.org/opla-cp#> .
-@prefix opla-sd: <http://ontologydesignpatterns.org/opla-sd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/#Chair> a rdfs:Class .
+kastle:Chair a rdfs:Class .
 
-<http://example.org/ns#Chair> a rdfs:Class .
+kastle:Company a rdfs:Class .
 
-<http://example.org/stuff/1.0/Chair> a rdfs:Class .
+kastle:Integer a rdfs:Class .
 
-<http://example.org/stuff/1.0/Company> a rdfs:Class .
-
-<http://example.org/#hasColor> rdfs:range <http://example.org/#Chair> .
-
-<http://example.org/#hasDepth> rdfs:range <http://example.org/#Chair> .
-
-<http://example.org/#hasHeight> rdfs:range <http://example.org/#Chair> .
-
-<http://example.org/#hasMaterial> rdfs:range <http://example.org/#Chair> .
-
-<http://example.org/#hasStyle> rdfs:range <http://example.org/#Chair> .
-
-<http://example.org/#hasWidth> rdfs:range <http://example.org/#Chair> .
-
-<http://example.org/ns#hasColour> rdfs:range <http://example.org/ns#Chair> .
-
-<http://example.org/ns#hasMaterial> rdfs:range <http://example.org/ns#Chair> .
-
-<http://example.org/ns#hasWeightCapacity> rdfs:range <http://example.org/ns#Chair> .
-
-<http://example.org/stuff/1.0/manufacturer> rdfs:range <http://example.org/stuff/1.0/Chair>,
-        <http://example.org/stuff/1.0/Company> .
-
-<https://archive.org/services/purl/domain/modular_ontology_design_library/chair> a owl:Ontology ;
-    opla-core:hasPatternName "chair Pattern"^^xsd:string ;
-    opla-cp:addressesScenario ""^^xsd:string ;
-    opla-cp:hasCompentencyQuestion ""^^xsd:string ;
-    opla-sd:hasConnections ""^^xsd:string ;
-    opla-sd:hasSchemaDiagramFileName "chair-pattern.pdf"^^xsd:string ;
-    dc:contributor ""^^xsd:string,
-        "Andrew Eells"^^xsd:string,
+<https://archive.org/services/purl/domain/modular_ontology_design_library/Chair> a owl:Ontology ;
+    opla-core:hasPatternName "Chair Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
         "Brandon Dave"^^xsd:string,
         "Dr. Cogan Shimizu"^^xsd:string,
         "Dr. Pascal Hitzler"^^xsd:string ;
-    dc:creator ""^^xsd:string,
-        "Andrew Eells"^^xsd:string,
+    dc:creator "Andrew Eells"^^xsd:string,
         "Brandon Dave"^^xsd:string,
         "Dr. Cogan Shimizu"^^xsd:string,
         "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasColor a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:hasColour a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range xsd:string .
+
+kastle:hasDepth a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range xsd:float .
+
+kastle:hasHeight a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range xsd:float .
+
+kastle:hasMaterial a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:hasPrice a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasStyle a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:hasWeightCapacity a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range kastle:Integer .
+
+kastle:hasWidth a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range xsd:float .
+
+kastle:manufacturer a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range kastle:Company .
+
+kastle:material a rdf:Property ;
+    rdfs:domain kastle:Chair ;
+    rdfs:range rdfs:Literal .
 

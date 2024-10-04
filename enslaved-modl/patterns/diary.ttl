@@ -1,0 +1,77 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Diary a rdfs:Class ;
+    rdfs:subClassOf kastle:Book .
+
+kastle:Entry a rdfs:Class ;
+    rdfs:subClassOf kastle:Diary .
+
+kastle:Person a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/diary> a owl:Ontology ;
+    opla-core:hasPatternName "diary Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:author a rdf:Property ;
+    rdfs:domain kastle:Diary ;
+    rdfs:range kastle:Person .
+
+kastle:content a rdf:Property ;
+    rdfs:domain kastle:Entry ;
+    rdfs:range rdfs:Literal .
+
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:Diary,
+        kastle:Entry ;
+    rdfs:range xsd:date,
+        xsd:string .
+
+kastle:entry a rdf:Property ;
+    rdfs:domain kastle:Diary ;
+    rdfs:range xsd:string .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Diary ;
+    rdfs:range xsd:string .
+
+kastle:hasContent a rdf:Property ;
+    rdfs:domain kastle:Entry ;
+    rdfs:range xsd:string .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Entry ;
+    rdfs:range xsd:date .
+
+kastle:hasEntry a rdf:Property ;
+    rdfs:domain kastle:Diary ;
+    rdfs:range kastle:Entry .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Entry ;
+    rdfs:range xsd:string .
+
+kastle:isWrittenBy a rdf:Property ;
+    rdfs:domain kastle:Entry ;
+    rdfs:range xsd:string .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Diary ;
+    rdfs:range rdfs:Literal .
+
+kastle:writer a rdf:Property ;
+    rdfs:domain kastle:Diary ;
+    rdfs:range kastle:Person .
+

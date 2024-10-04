@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Slaveholder [label="kastle:Slaveholder"]
+	Slave [label="kastle:Slave"]
+	Slaveholder -> Slave [label="kastle:hasSlave"]
+	Origin [label="kastle:Origin"]
+	Slaveholder -> Origin [label="kastle:isFrom"]
+	Property [label="kastle:Property"]
+	Slaveholder -> Property [label="kastle:ownsProperty"]
+}

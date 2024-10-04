@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Priest [label="kastle:Priest"]
+	Religion [label="kastle:Religion"]
+	Priest -> Religion [label="kastle:believerOf"]
+	Diocese [label="kastle:Diocese"]
+	Priest -> Diocese [label="kastle:belongs"]
+	Duties [label="kastle:Duties"]
+	Priest -> Duties [label="kastle:hasDuty"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Priest -> date [label="kastle:ordinationDate"]
+	Church [label="kastle:Church"]
+	Priest -> Church [label="kastle:serves"]
+}

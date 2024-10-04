@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Reputation [label="kastle:Reputation"]
+	Resource [label="kastle:Resource"]
+	Reputation -> Resource [label="kastle:associatedWith"]
+	Resource [label="kastle:Resource"]
+	Reputation -> Resource [label="kastle:contributedBy"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Reputation -> string [label="kastle:hasComment"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Reputation -> float [label="kastle:hasRating"]
+}

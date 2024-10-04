@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Investment [label="kastle:Investment"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Investment -> decimal [label="kastle:amount"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Investment -> string [label="kastle:currency"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Investment -> string [label="kastle:description"]
+	Fund [label="kastle:Fund"]
+	Fund -> Investment [label="kastle:hasInvestment"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Fund -> string [label="kastle:name"]
+}

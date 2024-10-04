@@ -1,0 +1,81 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Battle a rdfs:Class .
+
+kastle:Combatant a rdfs:Class .
+
+kastle:Participant a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/battle> a owl:Ontology ;
+    opla-core:hasPatternName "battle Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:casualties a rdf:Property ;
+    rdfs:domain kastle:Combatant ;
+    rdfs:range xsd:int .
+
+kastle:combatant a rdf:Property ;
+    rdfs:domain kastle:Participant ;
+    rdfs:range kastle:Combatant .
+
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range xsd:date .
+
+kastle:forceSize a rdf:Property ;
+    rdfs:domain kastle:Combatant ;
+    rdfs:range xsd:int .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range xsd:date .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range xsd:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range xsd:string .
+
+kastle:hasParticipatingCountry a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range xsd:string .
+
+kastle:hasResult a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range xsd:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Combatant ;
+    rdfs:range xsd:string .
+
+kastle:participant a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range kastle:Participant .
+
+kastle:place a rdf:Property ;
+    rdfs:domain kastle:Battle ;
+    rdfs:range xsd:string .
+
+kastle:sideA a rdf:Property ;
+    rdfs:domain kastle:Participant ;
+    rdfs:range xsd:string .
+
+kastle:sideB a rdf:Property ;
+    rdfs:domain kastle:Participant ;
+    rdfs:range xsd:string .
+

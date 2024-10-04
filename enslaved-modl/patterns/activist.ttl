@@ -1,0 +1,96 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:ActivismType a rdfs:Class .
+
+kastle:Activist a rdfs:Class .
+
+kastle:Bag a rdfs:Class .
+
+kastle:Movement a rdfs:Class .
+
+kastle:Organisation a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:SocialIssue a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/activist> a owl:Ontology ;
+    opla-core:hasPatternName "activist Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:activismType a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range kastle:ActivismType .
+
+kastle:belongsTo a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range kastle:Movement .
+
+kastle:birthdate a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:date .
+
+kastle:campaignsFor a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string,
+        kastle:Resource .
+
+kastle:causesSupported a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range kastle:Bag .
+
+kastle:fightsFor a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string .
+
+kastle:hasActivity a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Activist .
+
+kastle:isAbout a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range kastle:SocialIssue .
+
+kastle:isAffiliatedWith a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range kastle:Organisation .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string .
+
+kastle:nationality a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string .
+
+kastle:organisationAffiliated a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string .
+
+kastle:organizes a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string .
+
+kastle:participatesIn a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string .
+
+kastle:protests a rdf:Property ;
+    rdfs:domain kastle:Activist ;
+    rdfs:range xsd:string .
+

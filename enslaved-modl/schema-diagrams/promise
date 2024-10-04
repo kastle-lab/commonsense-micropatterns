@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Promise [label="kastle:Promise"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Promise -> boolean [label="kastle:hasFulfilled"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Promise -> string [label="kastle:hasPromiseContent"]
+	Person [label="kastle:Person"]
+	Promise -> Person [label="kastle:hasPromisee"]
+	Person [label="kastle:Person"]
+	Promise -> Person [label="kastle:hasPromisor"]
+}

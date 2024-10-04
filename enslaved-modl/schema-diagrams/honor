@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Entity [label="kastle:Entity"]
+	Honor [label="kastle:Honor"]
+	Entity -> Honor [label="kastle:displayHonor"]
+	Honor [label="kastle:Honor"]
+	Entity -> Honor [label="kastle:hasHonor"]
+}

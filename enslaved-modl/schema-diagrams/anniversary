@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Anniversary [label="kastle:Anniversary"]
+	Resource [label="kastle:Resource"]
+	Anniversary -> Resource [label="kastle:celebratedBy"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Anniversary -> date [label="kastle:hasDate"]
+	Resource [label="kastle:Resource"]
+	Anniversary -> Resource [label="kastle:isAnniversaryOf"]
+}

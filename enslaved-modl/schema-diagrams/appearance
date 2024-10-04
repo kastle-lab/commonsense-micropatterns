@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Appearance [label="kastle:Appearance"]
+	Color [label="kastle:Color"]
+	Appearance -> Color [label="kastle:hasColor"]
+	Shape [label="kastle:Shape"]
+	Appearance -> Shape [label="kastle:hasShape"]
+	Size [label="kastle:Size"]
+	Appearance -> Size [label="kastle:hasSize"]
+}

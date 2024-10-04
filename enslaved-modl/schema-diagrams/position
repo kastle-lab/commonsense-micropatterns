@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Position [label="kastle:Position"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Position -> decimal [label="kastle:xCoordinate"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Position -> decimal [label="kastle:yCoordinate"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Position -> decimal [label="kastle:zCoordinate"]
+}

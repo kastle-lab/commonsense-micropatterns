@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Statement [label="kastle:Statement"]
+	Truth [label="kastle:Truth"]
+	Statement -> Truth [label="kastle:hasTruthValue"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Statement -> boolean [label="kastle:isTrue"]
+}

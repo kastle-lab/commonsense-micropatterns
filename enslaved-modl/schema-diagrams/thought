@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Thought [label="kastle:Thought"]
+	Resource [label="kastle:Resource"]
+	Thought -> Resource [label="kastle:hasSubject"]
+	Resource [label="kastle:Resource"]
+	Thought -> Resource [label="kastle:hasType"]
+}

@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Vessel [label="kastle:Vessel"]
+	Integer [label="kastle:Integer"]
+	Vessel -> Integer [label="kastle:capacity"]
+	Material [label="kastle:Material"]
+	Vessel -> Material [label="kastle:madeOf"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Vessel -> string [label="kastle:name"]
+	Vessel -> Vessel [label="kastle:partOf"]
+	Double [label="kastle:Double"]
+	Vessel -> Double [label="kastle:size"]
+}

@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Witness [label="kastle:Witness"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Witness -> string [label="kastle:gaveTestimony"]
+	Event [label="kastle:Event"]
+	Event -> Witness [label="kastle:hasWitness"]
+}

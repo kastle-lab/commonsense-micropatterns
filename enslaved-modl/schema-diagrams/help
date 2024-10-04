@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Help [label="kastle:Help"]
+	Person [label="kastle:Person"]
+	Help -> Person [label="kastle:helpProvider"]
+	Person [label="kastle:Person"]
+	Help -> Person [label="kastle:helpReceiver"]
+}

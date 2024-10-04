@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	FreedomConcept [label="kastle:FreedomConcept"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	FreedomConcept -> string [label="kastle:country"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	FreedomConcept -> float [label="kastle:freedomIndex"]
+	Freedom [label="kastle:Freedom"]
+	Dimension [label="kastle:Dimension"]
+	Freedom -> Dimension [label="kastle:isAssociatedWith"]
+}

@@ -1,0 +1,56 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Cause a rdfs:Class ;
+    rdfs:subClassOf kastle:Rebellion .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Outcome a rdfs:Class ;
+    rdfs:subClassOf kastle:Rebellion .
+
+kastle:Rebel a rdfs:Class ;
+    rdfs:subClassOf kastle:Rebellion .
+
+kastle:Rebellion a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/rebellion> a owl:Ontology ;
+    opla-core:hasPatternName "rebellion Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:endYear a rdf:Property ;
+    rdfs:domain kastle:Rebellion ;
+    rdfs:range kastle:Integer .
+
+kastle:hasCause a rdf:Property ;
+    rdfs:domain kastle:Rebellion ;
+    rdfs:range kastle:Cause .
+
+kastle:hasOutcome a rdf:Property ;
+    rdfs:domain kastle:Rebellion ;
+    rdfs:range kastle:Outcome .
+
+kastle:hasRebel a rdf:Property ;
+    rdfs:domain kastle:Rebellion ;
+    rdfs:range kastle:Rebel .
+
+kastle:leadToRevolution a rdf:Property ;
+    rdfs:domain kastle:Rebellion ;
+    rdfs:range xsd:boolean .
+
+kastle:startYear a rdf:Property ;
+    rdfs:domain kastle:Rebellion ;
+    rdfs:range kastle:Integer .
+

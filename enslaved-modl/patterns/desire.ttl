@@ -1,0 +1,60 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Desire a rdfs:Class .
+
+kastle:DesireSatisfaction a rdfs:Class ;
+    rdfs:subClassOf kastle:Desire .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Object a rdfs:Class .
+
+kastle:Subject a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/desire> a owl:Ontology ;
+    opla-core:hasPatternName "desire Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:desireIntensity a rdf:Property ;
+    rdfs:domain kastle:Desire ;
+    rdfs:range kastle:Integer .
+
+kastle:desireObject a rdf:Property ;
+    rdfs:domain kastle:Desire ;
+    rdfs:range kastle:Object .
+
+kastle:fulfillsDesire a rdf:Property ;
+    rdfs:domain kastle:Object ;
+    rdfs:range kastle:DesireSatisfaction .
+
+kastle:hasDesire a rdf:Property ;
+    rdfs:domain kastle:Subject ;
+    rdfs:range kastle:Desire .
+
+kastle:hasIntensity a rdf:Property ;
+    rdfs:domain kastle:Desire ;
+    rdfs:range xsd:float .
+
+kastle:hasObject a rdf:Property ;
+    rdfs:domain kastle:Desire ;
+    rdfs:range kastle:Thing .
+
+kastle:hasSubject a rdf:Property ;
+    rdfs:domain kastle:Desire ;
+    rdfs:range kastle:Thing .
+

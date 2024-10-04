@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Historian [label="kastle:Historian"]
+	Publication [label="kastle:Publication"]
+	Historian -> Publication [label="kastle:hasPublished"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Historian -> string [label="kastle:studiesPeriod"]
+	HistoricalTopic [label="kastle:HistoricalTopic"]
+	Historian -> HistoricalTopic [label="kastle:writesAbout"]
+}

@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	River [label="kastle:River"]
+	Location [label="kastle:Location"]
+	River -> Location [label="kastle:delta"]
+	BodiesOfWater [label="kastle:BodiesOfWater"]
+	River -> BodiesOfWater [label="kastle:dischargesInto"]
+	Location [label="kastle:Location"]
+	River -> Location [label="kastle:drainageBasin"]
+	Location [label="kastle:Location"]
+	River -> Location [label="kastle:flowsThrough"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Double [label="kastle:Double"]
+	River -> Double [label="kastle:length"]
+	Location [label="kastle:Location"]
+	River -> Location [label="kastle:origin"]
+}

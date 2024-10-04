@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Use [label="kastle:Use"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Use -> Literal [label="kastle:forPurpose"]
+	Resource [label="kastle:Resource"]
+	Resource -> Use [label="kastle:hasUse"]
+}

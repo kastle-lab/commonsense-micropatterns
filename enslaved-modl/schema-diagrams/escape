@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Escape [label="kastle:Escape"]
+	Resource [label="kastle:Resource"]
+	Escape -> Resource [label="kastle:from"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Escape -> Literal [label="kastle:method"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Escape -> Literal [label="kastle:reason"]
+	Datetime [label="kastle:Datetime"]
+	Escape -> Datetime [label="kastle:time"]
+	Resource [label="kastle:Resource"]
+	Escape -> Resource [label="kastle:to"]
+}

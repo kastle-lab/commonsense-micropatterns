@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Queen_Consort [label="kastle:Queen_Consort"]
+	King [label="kastle:King"]
+	Queen_Consort -> King [label="kastle:hasHusband"]
+	King [label="kastle:King"]
+	King -> Queen_Consort [label="kastle:hasWife"]
+}

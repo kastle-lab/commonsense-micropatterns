@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Attempt [label="kastle:Attempt"]
+	Datetime [label="kastle:Datetime"]
+	Attempt -> Datetime [label="kastle:endTime"]
+	Individual [label="kastle:Individual"]
+	Individual -> Attempt [label="kastle:hasAttempt"]
+	Objective [label="kastle:Objective"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Objective -> string [label="kastle:hasDescription"]
+	Attempt -> Objective [label="kastle:hasObjective"]
+	Datetime [label="kastle:Datetime"]
+	Attempt -> Datetime [label="kastle:startTime"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Attempt -> boolean [label="kastle:success"]
+}

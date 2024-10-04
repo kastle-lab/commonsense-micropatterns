@@ -1,0 +1,43 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Drag a rdfs:Class .
+
+kastle:DragCostume a rdfs:Class .
+
+kastle:DragMakeup a rdfs:Class .
+
+kastle:DragShow a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/drag> a owl:Ontology ;
+    opla-core:hasPatternName "drag Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:applies a rdf:Property ;
+    rdfs:domain kastle:Drag ;
+    rdfs:range kastle:DragMakeup .
+
+kastle:hasDragName a rdf:Property ;
+    rdfs:domain kastle:Drag ;
+    rdfs:range xsd:string .
+
+kastle:performer a rdf:Property ;
+    rdfs:domain kastle:DragShow ;
+    rdfs:range kastle:Drag .
+
+kastle:wears a rdf:Property ;
+    rdfs:domain kastle:Drag ;
+    rdfs:range kastle:DragCostume .
+

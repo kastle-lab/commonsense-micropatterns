@@ -1,0 +1,43 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Author a rdfs:Class ;
+    rdfs:subClassOf kastle:Ncbc19e54e6ff4dcd87266bab720beecbb1 .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Poem a rdfs:Class ;
+    rdfs:subClassOf kastle:Ncbc19e54e6ff4dcd87266bab720beecbb2 .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/poem> a owl:Ontology ;
+    opla-core:hasPatternName "poem Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Poem ;
+    rdfs:range kastle:Author .
+
+kastle:hasLineCount a rdf:Property ;
+    rdfs:domain kastle:Poem ;
+    rdfs:range kastle:Integer .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Author ;
+    rdfs:range xsd:string .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Poem ;
+    rdfs:range xsd:string .
+

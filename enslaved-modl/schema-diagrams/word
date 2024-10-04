@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Word [label="kastle:Word"]
+	Integer [label="kastle:Integer"]
+	Word -> Integer [label="kastle:hasLength"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Word -> string [label="kastle:hasSpelling"]
+	Word -> Word [label="kastle:isAntonymOf"]
+	Word -> Word [label="kastle:isSynonymOf"]
+}

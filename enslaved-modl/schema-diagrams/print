@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Ink [label="kastle:Ink"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Ink -> string [label="kastle:color"]
+	Printer [label="kastle:Printer"]
+	Printer -> Ink [label="kastle:hasInk"]
+	PrintJob [label="kastle:PrintJob"]
+	Printer -> PrintJob [label="kastle:prints"]
+}

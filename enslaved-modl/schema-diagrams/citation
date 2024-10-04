@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Citation [label="kastle:Citation"]
+	Person [label="kastle:Person"]
+	Citation -> Person [label="kastle:hasAuthor"]
+	Person [label="kastle:Person"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:hasName"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Citation -> string [label="kastle:hasTitle"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Citation -> date [label="kastle:hasYear"]
+}

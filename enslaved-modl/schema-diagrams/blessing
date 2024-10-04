@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Blessing [label="kastle:Blessing"]
+	BlessingType [label="kastle:BlessingType"]
+	Blessing -> BlessingType [label="kastle:blessingType"]
+	Person [label="kastle:Person"]
+	Blessing -> Person [label="kastle:givenBy"]
+	Person [label="kastle:Person"]
+	Person -> Blessing [label="kastle:hasBlessing"]
+	BlessingType [label="kastle:BlessingType"]
+	Blessing -> BlessingType [label="kastle:hasBlessingType"]
+	Blessing -> Person [label="kastle:isBlessedBy"]
+	Blessing -> Person [label="kastle:receivedBy"]
+}

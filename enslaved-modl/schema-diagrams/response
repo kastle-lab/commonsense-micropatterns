@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Response [label="kastle:Response"]
+	Person -> Response [label="kastle:hasResponse"]
+}

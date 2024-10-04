@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Session [label="kastle:Session"]
+	Bill [label="kastle:Bill"]
+	Session -> Bill [label="kastle:discussesBill"]
+	Legislature [label="kastle:Legislature"]
+	Member [label="kastle:Member"]
+	Legislature -> Member [label="kastle:hasMember"]
+	Bill [label="kastle:Bill"]
+	Legislature -> Bill [label="kastle:passesBill"]
+	Member [label="kastle:Member"]
+	Bill [label="kastle:Bill"]
+	Member -> Bill [label="kastle:proposesBill"]
+}

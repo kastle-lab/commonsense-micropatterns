@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Overseer [label="kastle:Overseer"]
+	Integer [label="kastle:Integer"]
+	Overseer -> Integer [label="kastle:hasExperience"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Overseer -> string [label="kastle:hasName"]
+	Department [label="kastle:Department"]
+	Integer [label="kastle:Integer"]
+	Department -> Integer [label="kastle:hasNumberOfEmployees"]
+	Responsibility [label="kastle:Responsibility"]
+	Overseer -> Responsibility [label="kastle:hasResponsibility"]
+	Person [label="kastle:Person"]
+	Person -> Overseer [label="kastle:hasRole"]
+	Overseer -> Department [label="kastle:overseesDepartment"]
+}

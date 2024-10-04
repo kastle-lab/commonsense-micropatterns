@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Bank [label="kastle:Bank"]
+	Currency [label="kastle:Currency"]
+	Bank -> Currency [label="kastle:hasCurrency"]
+	Currency [label="kastle:Currency"]
+	ExchangeRate [label="kastle:ExchangeRate"]
+	Currency -> ExchangeRate [label="kastle:hasExchangeRate"]
+	Transaction [label="kastle:Transaction"]
+	Money [label="kastle:Money"]
+	Transaction -> Money [label="kastle:involves"]
+}

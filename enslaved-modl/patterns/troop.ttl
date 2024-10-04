@@ -1,0 +1,48 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Commander a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Soldier a rdfs:Class ;
+    rdfs:subClassOf kastle:Troop .
+
+kastle:Troop a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/troop> a owl:Ontology ;
+    opla-core:hasPatternName "troop Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasCommander a rdf:Property ;
+    rdfs:domain kastle:Troop ;
+    rdfs:range kastle:Commander .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Troop ;
+    rdfs:range xsd:string .
+
+kastle:hasSoldier a rdf:Property ;
+    rdfs:domain kastle:Troop ;
+    rdfs:range kastle:Soldier .
+
+kastle:numberOfSoldiers a rdf:Property ;
+    rdfs:domain kastle:Troop ;
+    rdfs:range kastle:Integer .
+
+kastle:rank a rdf:Property ;
+    rdfs:domain kastle:Soldier ;
+    rdfs:range xsd:string .
+

@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	String [label="kastle:String"]
+	Struggle [label="kastle:Struggle"]
+	String -> Struggle [label="kastle:endureStruggle"]
+	Struggle [label="kastle:Struggle"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Struggle -> string [label="kastle:hasCause"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Struggle -> string [label="kastle:hasImpact"]
+	String -> Struggle [label="kastle:overcomeStruggle"]
+}

@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Person -> Person [label="kastle:hasFamilialLoveFor"]
+	Person -> Person [label="kastle:hasPlatonicLoveFor"]
+	Person -> Person [label="kastle:hasRomanticLoveFor"]
+	SelfLove [label="kastle:SelfLove"]
+	Person -> SelfLove [label="kastle:hasSelfLove"]
+}

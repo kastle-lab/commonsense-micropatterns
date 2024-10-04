@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Speech [label="kastle:Speech"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Speech -> string [label="kastle:content"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Speech -> date [label="kastle:date"]
+	Location [label="kastle:Location"]
+	Speech -> Location [label="kastle:location"]
+	Person [label="kastle:Person"]
+	Speech -> Person [label="kastle:speaker"]
+}

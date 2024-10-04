@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Country [label="kastle:Country"]
+	EconomicIndependence [label="kastle:EconomicIndependence"]
+	Country -> EconomicIndependence [label="kastle:hasEconomicIndependence"]
+	Person [label="kastle:Person"]
+	IndividualIndependence [label="kastle:IndividualIndependence"]
+	Person -> IndividualIndependence [label="kastle:hasIndividualIndependence"]
+	Independence [label="kastle:Independence"]
+	Level [label="kastle:Level"]
+	Independence -> Level [label="kastle:hasLevel"]
+	PoliticalIndependence [label="kastle:PoliticalIndependence"]
+	Country -> PoliticalIndependence [label="kastle:hasPoliticalIndependence"]
+}

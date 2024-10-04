@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Troop [label="kastle:Troop"]
+	Commander [label="kastle:Commander"]
+	Troop -> Commander [label="kastle:hasCommander"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Troop -> string [label="kastle:hasLocation"]
+	Soldier [label="kastle:Soldier"]
+	Troop -> Soldier [label="kastle:hasSoldier"]
+	Integer [label="kastle:Integer"]
+	Troop -> Integer [label="kastle:numberOfSoldiers"]
+	Soldier [label="kastle:Soldier"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Soldier -> string [label="kastle:rank"]
+}

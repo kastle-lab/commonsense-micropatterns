@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Cave [label="kastle:Cave"]
+	Class [label="kastle:Class"]
+	Cave -> Class [label="kastle:contains"]
+	Stalactite [label="kastle:Stalactite"]
+	Cave -> Stalactite [label="kastle:hasFormation"]
+	Bats [label="kastle:Bats"]
+	Cave -> Bats [label="kastle:hasInhabitant"]
+}

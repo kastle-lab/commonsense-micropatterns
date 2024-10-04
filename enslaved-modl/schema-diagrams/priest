@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Priest [label="kastle:Priest"]
+	Church [label="kastle:Church"]
+	Priest -> Church [label="kastle:belongsChurch"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Priest -> string [label="kastle:performsRituals"]
+}

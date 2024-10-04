@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Branch [label="kastle:Branch"]
+	Entity [label="kastle:Entity"]
+	Branch -> Entity [label="kastle:belongsTo"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Branch -> string [label="kastle:branchAddress"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Branch -> string [label="kastle:branchID"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Branch -> string [label="kastle:branchManager"]
+	Entity [label="kastle:Entity"]
+	Entity -> Branch [label="kastle:hasBranch"]
+	Location [label="kastle:Location"]
+	Branch -> Location [label="kastle:hasLocation"]
+}

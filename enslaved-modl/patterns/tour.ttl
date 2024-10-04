@@ -1,0 +1,69 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Destination a rdfs:Class .
+
+kastle:Duration a rdfs:Class .
+
+kastle:Guide a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Tour a rdfs:Class .
+
+kastle:TourGuide a rdfs:Class .
+
+kastle:Tourist a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/tour> a owl:Ontology ;
+    opla-core:hasPatternName "tour Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:cost a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range xsd:decimal .
+
+kastle:destinations a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range kastle:Destination .
+
+kastle:duration a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range kastle:Duration .
+
+kastle:guide a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range kastle:Guide .
+
+kastle:hasGuide a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range kastle:TourGuide .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range kastle:Location .
+
+kastle:hasTourist a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range kastle:Tourist .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range xsd:string .
+
+kastle:rating a rdf:Property ;
+    rdfs:domain kastle:Tour ;
+    rdfs:range xsd:float .
+

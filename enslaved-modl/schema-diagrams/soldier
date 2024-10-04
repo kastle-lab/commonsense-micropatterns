@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Soldier [label="kastle:Soldier"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Soldier -> string [label="kastle:hasID"]
+	Rank [label="kastle:Rank"]
+	Soldier -> Rank [label="kastle:hasRank"]
+	Weapon [label="kastle:Weapon"]
+	Soldier -> Weapon [label="kastle:hasWeapon"]
+	War [label="kastle:War"]
+	Soldier -> War [label="kastle:servedInWar"]
+	Regiment [label="kastle:Regiment"]
+	Soldier -> Regiment [label="kastle:servesIn"]
+}

@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Entity [label="kastle:Entity"]
+	Medium [label="kastle:Medium"]
+	Entity -> Medium [label="kastle:hasMedium"]
+	Medium [label="kastle:Medium"]
+	Medium -> Entity [label="kastle:usedIn"]
+}

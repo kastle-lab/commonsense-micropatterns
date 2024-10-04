@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Member [label="kastle:Member"]
+	Community [label="kastle:Community"]
+	Member -> Community [label="kastle:belongsIn"]
+	Community [label="kastle:Community"]
+	Community -> Member [label="kastle:hasMember"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Community -> string [label="kastle:location"]
+	N16101d8486ed4e8aab7370f30699e93cb1 [label="kastle:N16101d8486ed4e8aab7370f30699e93cb1"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	N16101d8486ed4e8aab7370f30699e93cb1 -> string [label="kastle:name"]
+}

@@ -1,0 +1,103 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Attendee a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Organizer a rdfs:Class .
+
+kastle:Party a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
+
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Theme a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/party> a owl:Ontology ;
+    opla-core:hasPatternName "party Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:atDate a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range kastle:Datetime .
+
+kastle:atLocation a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range kastle:Location .
+
+kastle:attends a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Party .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Integer .
+
+kastle:hasAttendee a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range kastle:Attendee,
+        kastle:Person .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range kastle:Datetime .
+
+kastle:hasEndDate a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range xsd:date .
+
+kastle:hasGuest a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range kastle:Person .
+
+kastle:hasHost a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range kastle:Person .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range xsd:string,
+        kastle:Resource .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:hasOrganizer a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range kastle:Organizer,
+        kastle:Person .
+
+kastle:hasStartDate a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range xsd:date .
+
+kastle:hasTheme a rdf:Property ;
+    rdfs:domain kastle:Party ;
+    rdfs:range xsd:string,
+        kastle:Theme .
+
+kastle:organizes a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Party .
+

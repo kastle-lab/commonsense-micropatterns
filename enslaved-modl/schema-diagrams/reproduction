@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Reproduction [label="kastle:Reproduction"]
+	Plant [label="kastle:Plant"]
+	Reproduction -> Plant [label="kastle:asexualReproduction"]
+	N99268126faf248afb7c7defbbb7a9a3eb1 [label="kastle:N99268126faf248afb7c7defbbb7a9a3eb1"]
+	Reproduction -> N99268126faf248afb7c7defbbb7a9a3eb1 [label="kastle:hasParent"]
+	ReproductiveOrganism [label="kastle:ReproductiveOrganism"]
+	ReproductiveOrganism -> Reproduction [label="kastle:reproduces"]
+	Animal [label="kastle:Animal"]
+	Reproduction -> Animal [label="kastle:sexualReproduction"]
+}

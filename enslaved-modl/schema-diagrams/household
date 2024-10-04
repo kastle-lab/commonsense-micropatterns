@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Integer [label="kastle:Integer"]
+	Person -> Integer [label="kastle:hasAge"]
+	Na3773eb7098347bbac15ca20ee75c694b6 [label="kastle:Na3773eb7098347bbac15ca20ee75c694b6"]
+	Furniture [label="kastle:Furniture"]
+	Na3773eb7098347bbac15ca20ee75c694b6 -> Furniture [label="kastle:hasFurniture"]
+	Household [label="kastle:Household"]
+	Household -> Person [label="kastle:hasMember"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:hasName"]
+	Na3773eb7098347bbac15ca20ee75c694b1 [label="kastle:Na3773eb7098347bbac15ca20ee75c694b1"]
+	Household -> Na3773eb7098347bbac15ca20ee75c694b1 [label="kastle:hasRoom"]
+}

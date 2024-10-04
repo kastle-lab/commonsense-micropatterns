@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Grandparent [label="kastle:Grandparent"]
+	Grandchild [label="kastle:Grandchild"]
+	Grandparent -> Grandchild [label="kastle:hasGrandchild"]
+	Grandchild [label="kastle:Grandchild"]
+	Grandchild -> Grandparent [label="kastle:isGrandchildOf"]
+}

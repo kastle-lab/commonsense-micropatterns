@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Enemy [label="kastle:Enemy"]
+	Person [label="kastle:Person"]
+	Enemy -> Person [label="kastle:hasConflictWith"]
+	Person [label="kastle:Person"]
+	Person -> Enemy [label="kastle:hasEnemy"]
+}

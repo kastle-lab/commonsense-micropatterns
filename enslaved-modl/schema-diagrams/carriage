@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Carriage [label="kastle:Carriage"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Manufacturer [label="kastle:Manufacturer"]
+	Carriage -> Manufacturer [label="kastle:hasManufacturer"]
+	Material [label="kastle:Material"]
+	Carriage -> Material [label="kastle:hasMaterial"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Carriage -> Literal [label="kastle:hasModel"]
+	Integer [label="kastle:Integer"]
+	Carriage -> Integer [label="kastle:hasPassengerCapacity"]
+	Gyear [label="kastle:Gyear"]
+	Carriage -> Gyear [label="kastle:hasYear"]
+	Material [label="kastle:Material"]
+	Material -> Carriage [label="kastle:isUsedIn"]
+}

@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Attack [label="kastle:Attack"]
+	Integer [label="kastle:Integer"]
+	Attack -> Integer [label="kastle:dealsDamage"]
+	Target [label="kastle:Target"]
+	Attack -> Target [label="kastle:hasTarget"]
+}

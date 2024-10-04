@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Entity [label="kastle:Entity"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Entity -> string [label="kastle:lack"]
+}

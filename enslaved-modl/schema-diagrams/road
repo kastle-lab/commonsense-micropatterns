@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Road [label="kastle:Road"]
+	Integer [label="kastle:Integer"]
+	Road -> Integer [label="kastle:hasLength"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Road -> string [label="kastle:hasName"]
+	Integer [label="kastle:Integer"]
+	Road -> Integer [label="kastle:hasNumberOfLanes"]
+	SurfaceType [label="kastle:SurfaceType"]
+	Road -> SurfaceType [label="kastle:hasSurfaceType"]
+	Integer [label="kastle:Integer"]
+	Road -> Integer [label="kastle:hasTrafficVolume"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Road -> string [label="kastle:isInCountry"]
+}

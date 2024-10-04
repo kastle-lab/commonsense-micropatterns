@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	BlogPost [label="kastle:BlogPost"]
+	Book [label="kastle:Book"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Author [label="kastle:Author"]
+	Book -> Author [label="kastle:author"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	BlogPost -> string [label="kastle:body"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	BlogPost -> date [label="kastle:date"]
+	Person [label="kastle:Person"]
+	Dessert [label="kastle:Dessert"]
+	Person -> Dessert [label="kastle:likes"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Book -> string [label="kastle:title"]
+}

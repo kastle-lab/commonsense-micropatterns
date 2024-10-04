@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Abolitionist [label="kastle:Abolitionist"]
+	AntislaveryMovement [label="kastle:AntislaveryMovement"]
+	Abolitionist -> AntislaveryMovement [label="kastle:abolitionActivity"]
+	AntislaveryMovement [label="kastle:AntislaveryMovement"]
+	Abolitionist -> AntislaveryMovement [label="kastle:participatesInActivity"]
+	Antislaverypublication [label="kastle:Antislaverypublication"]
+	Abolitionist -> Antislaverypublication [label="kastle:wrotePublication"]
+}

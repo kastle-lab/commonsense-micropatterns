@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Artery [label="kastle:Artery"]
+	Blood [label="kastle:Blood"]
+	Resource [label="kastle:Resource"]
+	Artery -> Resource [label="kastle:carries"]
+	BloodVessel [label="kastle:BloodVessel"]
+	BodyPart [label="kastle:BodyPart"]
+	BloodVessel -> BodyPart [label="kastle:connectsTo"]
+	Blood [label="kastle:Blood"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Blood -> boolean [label="kastle:oxygenated"]
+}

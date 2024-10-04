@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Duty [label="kastle:Duty"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Duty -> boolean [label="kastle:completed"]
+	Person [label="kastle:Person"]
+	Person -> Duty [label="kastle:hasDuty"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:role"]
+}

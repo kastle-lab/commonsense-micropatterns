@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Election [label="kastle:Election"]
+	Politician [label="kastle:Politician"]
+	Election -> Politician [label="kastle:hasCandidate"]
+	Party [label="kastle:Party"]
+	Politician [label="kastle:Politician"]
+	Party -> Politician [label="kastle:hasMember"]
+	Government [label="kastle:Government"]
+	Government -> Party [label="kastle:hasParty"]
+	Politician [label="kastle:Politician"]
+	Government -> Politician [label="kastle:hasPolitician"]
+}

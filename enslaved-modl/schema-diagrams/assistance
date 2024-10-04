@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Assistance [label="kastle:Assistance"]
+	Provider [label="kastle:Provider"]
+	Assistance -> Provider [label="kastle:assistanceProvider"]
+	Receiver [label="kastle:Receiver"]
+	Assistance -> Receiver [label="kastle:assistanceReceiver"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Assistance -> string [label="kastle:assistanceType"]
+	Provider [label="kastle:Provider"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Provider -> string [label="kastle:providerName"]
+	Receiver [label="kastle:Receiver"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Receiver -> string [label="kastle:receiverName"]
+}

@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Sale [label="kastle:Sale"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Sale -> date [label="kastle:dateOfSale"]
+	Customer [label="kastle:Customer"]
+	Sale -> Customer [label="kastle:hasCustomer"]
+	Item [label="kastle:Item"]
+	Sale -> Item [label="kastle:hasItem"]
+	Item [label="kastle:Item"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Item -> decimal [label="kastle:itemPrice"]
+}

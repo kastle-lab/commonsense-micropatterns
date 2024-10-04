@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Poem [label="kastle:Poem"]
+	Author [label="kastle:Author"]
+	Poem -> Author [label="kastle:hasAuthor"]
+	Integer [label="kastle:Integer"]
+	Poem -> Integer [label="kastle:hasLineCount"]
+	Author [label="kastle:Author"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Author -> string [label="kastle:hasName"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Poem -> string [label="kastle:hasTitle"]
+}

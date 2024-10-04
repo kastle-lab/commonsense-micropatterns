@@ -1,0 +1,70 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Obituary a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
+
+kastle:Person a rdfs:Class ;
+    rdfs:subClassOf kastle:Nbbdcaa839c5e49d4af2ba05033c56790b1 .
+
+kastle:Publisher a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/obituary> a owl:Ontology ;
+    opla-core:hasPatternName "obituary Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range kastle:Integer .
+
+kastle:hasBiography a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasCauseOfDeath a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range xsd:date .
+
+kastle:hasDateOfDeath a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasDateOfPublication a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:hasObituary a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Obituary .
+
+kastle:hasPlaceOfDeath a rdf:Property ;
+    rdfs:domain kastle:Obituary ;
+    rdfs:range rdfs:Literal .
+
+kastle:publishes a rdf:Property ;
+    rdfs:domain kastle:Publisher ;
+    rdfs:range kastle:Obituary .
+

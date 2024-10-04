@@ -1,0 +1,8 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Basis [label="kastle:Basis"]
+	Basis -> Basis [label="kastle:hasBasis"]
+	Basis -> Basis [label="kastle:hasPhysicalBasis"]
+	Basis -> Basis [label="kastle:hasTheoreticalBasis"]
+}

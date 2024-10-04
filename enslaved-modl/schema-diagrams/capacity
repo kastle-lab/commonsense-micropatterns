@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	VolumeCapacity [label="kastle:VolumeCapacity"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	VolumeCapacity -> float [label="kastle:hasVolume"]
+	WeightCapacity [label="kastle:WeightCapacity"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	WeightCapacity -> float [label="kastle:hasWeight"]
+}

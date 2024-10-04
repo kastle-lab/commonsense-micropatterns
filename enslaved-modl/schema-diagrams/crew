@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Crew [label="kastle:Crew"]
+	Person [label="kastle:Person"]
+	Crew -> Person [label="kastle:hasMember"]
+	Person [label="kastle:Person"]
+	Role [label="kastle:Role"]
+	Person -> Role [label="kastle:hasRole"]
+	Vehicle [label="kastle:Vehicle"]
+	Crew -> Vehicle [label="kastle:worksOn"]
+}

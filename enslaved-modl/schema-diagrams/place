@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Place [label="kastle:Place"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Place -> string [label="kastle:coordinate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Place -> string [label="kastle:name"]
+}

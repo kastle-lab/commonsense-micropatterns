@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Group [label="kastle:Group"]
+	Majority [label="kastle:Majority"]
+	Group -> Majority [label="kastle:hasMajority"]
+	Majority [label="kastle:Majority"]
+	Integer [label="kastle:Integer"]
+	Majority -> Integer [label="kastle:voteCount"]
+}

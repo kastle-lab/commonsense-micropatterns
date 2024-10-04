@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	President [label="kastle:President"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	President -> Literal [label="kastle:belongsCountry"]
+	Position [label="kastle:Position"]
+	President -> Position [label="kastle:hadPreviousPosition"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	President -> Literal [label="kastle:hasTerm"]
+}

@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Event [label="kastle:Event"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Event -> Literal [label="kastle:hasAttendee"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Event -> date [label="kastle:hasDate"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Event -> Literal [label="kastle:hasLocation"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Event -> Literal [label="kastle:hasOrganizer"]
+}

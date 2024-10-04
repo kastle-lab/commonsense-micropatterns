@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	KidnappingEvent [label="kastle:KidnappingEvent"]
+	Datetime [label="kastle:Datetime"]
+	KidnappingEvent -> Datetime [label="kastle:hasDateTime"]
+	Duration [label="kastle:Duration"]
+	KidnappingEvent -> Duration [label="kastle:hasDuration"]
+	Person [label="kastle:Person"]
+	KidnappingEvent -> Person [label="kastle:hasKidnapper"]
+	Location [label="kastle:Location"]
+	KidnappingEvent -> Location [label="kastle:hasLocation"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	KidnappingEvent -> boolean [label="kastle:hasRansom"]
+	Person [label="kastle:Person"]
+	KidnappingEvent -> Person [label="kastle:hasVictim"]
+}

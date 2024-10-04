@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Wage [label="kastle:Wage"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Wage -> decimal [label="kastle:amount"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Wage -> string [label="kastle:currency"]
+	Frequency [label="kastle:Frequency"]
+	Wage -> Frequency [label="kastle:frequency"]
+}

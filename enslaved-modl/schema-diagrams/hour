@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Hour [label="kastle:Hour"]
+	Integer [label="kastle:Integer"]
+	Hour -> Integer [label="kastle:hasMinutes"]
+	Integer [label="kastle:Integer"]
+	Hour -> Integer [label="kastle:hasSeconds"]
+}

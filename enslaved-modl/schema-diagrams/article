@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Article [label="kastle:Article"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Article -> string [label="kastle:author"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Article -> string [label="kastle:content"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Article -> date [label="kastle:publicationDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Article -> string [label="kastle:title"]
+}

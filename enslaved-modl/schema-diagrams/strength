@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Individual [label="kastle:Individual"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Individual -> int [label="kastle:hasMentalStrength"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Individual -> int [label="kastle:hasPhysicalStrength"]
+	Strength [label="kastle:Strength"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Strength -> Literal [label="kastle:strengthLevel"]
+}

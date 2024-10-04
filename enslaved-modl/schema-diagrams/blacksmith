@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Blacksmith [label="kastle:Blacksmith"]
+	Metallurgy [label="kastle:Metallurgy"]
+	Blacksmith -> Metallurgy [label="kastle:knowledge"]
+	Tool [label="kastle:Tool"]
+	Blacksmith -> Tool [label="kastle:tool"]
+}

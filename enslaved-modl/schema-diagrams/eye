@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Eye [label="kastle:Eye"]
+	Color [label="kastle:Color"]
+	Eye -> Color [label="kastle:hasColor"]
+	Shape [label="kastle:Shape"]
+	Eye -> Shape [label="kastle:hasShape"]
+	Perception [label="kastle:Perception"]
+	Eye -> Perception [label="kastle:perceives"]
+}

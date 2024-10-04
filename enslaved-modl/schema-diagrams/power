@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	PowerEntity [label="kastle:PowerEntity"]
+	Energy [label="kastle:Energy"]
+	PowerEntity -> Energy [label="kastle:generates"]
+	PowerLine [label="kastle:PowerLine"]
+	PowerPlant [label="kastle:PowerPlant"]
+	PowerLine -> PowerPlant [label="kastle:transfers"]
+}

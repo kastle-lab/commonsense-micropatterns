@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	View [label="kastle:View"]
+	Resource [label="kastle:Resource"]
+	View -> Resource [label="kastle:fromLocation"]
+	Resource [label="kastle:Resource"]
+	View -> Resource [label="kastle:hasSubject"]
+	Resource [label="kastle:Resource"]
+	View -> Resource [label="kastle:hasTime"]
+	Resource [label="kastle:Resource"]
+	View -> Resource [label="kastle:hasViewer"]
+	Viewpoint [label="kastle:Viewpoint"]
+	Resource [label="kastle:Resource"]
+	Viewpoint -> Resource [label="kastle:hasViewpointExpression"]
+	Resource [label="kastle:Resource"]
+	Viewpoint -> Resource [label="kastle:hasViewpointSubject"]
+}

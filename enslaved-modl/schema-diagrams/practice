@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Practice [label="kastle:Practice"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Practice -> int [label="kastle:hasDuration"]
+	Skill [label="kastle:Skill"]
+	Practice -> Skill [label="kastle:hasSkill"]
+	SkillLevel [label="kastle:SkillLevel"]
+	Practice -> SkillLevel [label="kastle:hasSkillLevel"]
+}

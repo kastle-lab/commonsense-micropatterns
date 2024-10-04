@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Contribution [label="kastle:Contribution"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Contribution -> decimal [label="kastle:amount"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Contribution -> string [label="kastle:contributor"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Contribution -> date [label="kastle:date"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Contribution -> string [label="kastle:recipient"]
+}

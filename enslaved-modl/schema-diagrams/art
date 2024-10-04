@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Artwork [label="kastle:Artwork"]
+	Artist [label="kastle:Artist"]
+	Artwork -> Artist [label="kastle:createdBy"]
+	Style [label="kastle:Style"]
+	Artwork -> Style [label="kastle:hasStyle"]
+}

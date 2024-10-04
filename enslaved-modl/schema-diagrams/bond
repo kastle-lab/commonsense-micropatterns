@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	FinancialBond [label="kastle:FinancialBond"]
+	InterestRate [label="kastle:InterestRate"]
+	FinancialBond -> InterestRate [label="kastle:hasInterestRate"]
+	Datetime [label="kastle:Datetime"]
+	FinancialBond -> Datetime [label="kastle:hasMaturityDate"]
+	Issuer [label="kastle:Issuer"]
+	FinancialBond -> Issuer [label="kastle:issuedBy"]
+	Holder [label="kastle:Holder"]
+	FinancialBond -> Holder [label="kastle:ownedBy"]
+}

@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Infant [label="kastle:Infant"]
+	Person [label="kastle:Person"]
+	Infant -> Person [label="kastle:hasFather"]
+	Person [label="kastle:Person"]
+	Infant -> Person [label="kastle:hasMother"]
+	Datetime [label="kastle:Datetime"]
+	Infant -> Datetime [label="kastle:humanBirth"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Infant -> float [label="kastle:weightAtBirth"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Care [label="kastle:Care"]
+	CareLocation [label="kastle:CareLocation"]
+	Care -> CareLocation [label="kastle:atLocation"]
+	CareProvider [label="kastle:CareProvider"]
+	Care -> CareProvider [label="kastle:hasProvider"]
+	CareRecipient [label="kastle:CareRecipient"]
+	Care -> CareRecipient [label="kastle:hasRecipient"]
+	CareActivity [label="kastle:CareActivity"]
+	Care -> CareActivity [label="kastle:involvesActivity"]
+	HealthcareProfessional [label="kastle:HealthcareProfessional"]
+	HealthcareProfessional -> Care [label="kastle:providesCare"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Treatment [label="kastle:Treatment"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Treatment -> string [label="kastle:duration"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Treatment -> string [label="kastle:name"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Treatment -> string [label="kastle:sideEffects"]
+	Disease [label="kastle:Disease"]
+	Treatment -> Disease [label="kastle:treats"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Treatment -> string [label="kastle:type"]
+}

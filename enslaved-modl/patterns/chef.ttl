@@ -1,0 +1,64 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Chef a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
+
+kastle:Cuisine a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Restaurant a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/chef> a owl:Ontology ;
+    opla-core:hasPatternName "chef Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:cuisine a rdf:Property ;
+    rdfs:domain kastle:Restaurant ;
+    rdfs:range kastle:Cuisine .
+
+kastle:dish a rdf:Property ;
+    rdfs:domain kastle:Chef ;
+    rdfs:range xsd:string .
+
+kastle:experience a rdf:Property ;
+    rdfs:domain kastle:Chef ;
+    rdfs:range kastle:Integer .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Restaurant ;
+    rdfs:range xsd:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Chef ;
+    rdfs:range xsd:string .
+
+kastle:specialty a rdf:Property ;
+    rdfs:domain kastle:Chef ;
+    rdfs:range xsd:string .
+
+kastle:worksAt a rdf:Property ;
+    rdfs:domain kastle:Chef ;
+    rdfs:range kastle:Restaurant .
+
+kastle:worksIn a rdf:Property ;
+    rdfs:domain kastle:Chef ;
+    rdfs:range xsd:string .
+
+kastle:yearsOfExperience a rdf:Property ;
+    rdfs:domain kastle:Chef ;
+    rdfs:range kastle:Integer .
+

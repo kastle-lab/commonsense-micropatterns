@@ -1,0 +1,55 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Brigade a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Regiment a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/regiment> a owl:Ontology ;
+    opla-core:hasPatternName "regiment Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:activeSince a rdf:Property ;
+    rdfs:domain kastle:Regiment ;
+    rdfs:range xsd:date .
+
+kastle:assignedTo a rdf:Property ;
+    rdfs:domain kastle:Regiment ;
+    rdfs:range kastle:Brigade .
+
+kastle:comprisingOf a rdf:Property ;
+    rdfs:domain kastle:Brigade ;
+    rdfs:range kastle:Regiment .
+
+kastle:hasCommander a rdf:Property ;
+    rdfs:domain kastle:Regiment ;
+    rdfs:range kastle:Person .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:rank a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:regimentNumber a rdf:Property ;
+    rdfs:domain kastle:Regiment ;
+    rdfs:range kastle:Integer .
+

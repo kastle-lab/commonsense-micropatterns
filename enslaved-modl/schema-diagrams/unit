@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Unit [label="kastle:Unit"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Unit -> string [label="kastle:abbreviation"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Unit -> float [label="kastle:conversionFactor"]
+	UnitSystem [label="kastle:UnitSystem"]
+	Unit -> UnitSystem [label="kastle:unitsOf"]
+}

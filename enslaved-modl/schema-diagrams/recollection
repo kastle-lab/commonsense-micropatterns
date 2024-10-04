@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Recollection [label="kastle:Recollection"]
+	Person -> Recollection [label="kastle:hasRecollection"]
+	Recollection [label="kastle:Recollection"]
+	Datetime [label="kastle:Datetime"]
+	Recollection -> Datetime [label="kastle:recollectionDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Recollection -> string [label="kastle:recollectionEvent"]
+}

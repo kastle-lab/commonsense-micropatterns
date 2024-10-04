@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Movement [label="kastle:Movement"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Movement -> string [label="kastle:direction"]
+	Integer [label="kastle:Integer"]
+	Movement -> Integer [label="kastle:distance"]
+	Integer [label="kastle:Integer"]
+	Movement -> Integer [label="kastle:duration"]
+	Integer [label="kastle:Integer"]
+	Movement -> Integer [label="kastle:speed"]
+}

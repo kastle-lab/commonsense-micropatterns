@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Level [label="kastle:Level"]
+	Datetime [label="kastle:Datetime"]
+	Level -> Datetime [label="kastle:beginsAtTime"]
+	Datetime [label="kastle:Datetime"]
+	Level -> Datetime [label="kastle:endsAtTime"]
+	Person [label="kastle:Person"]
+	SkillLevel [label="kastle:SkillLevel"]
+	Person -> SkillLevel [label="kastle:hasLevel"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Level -> string [label="kastle:hasName"]
+	Integer [label="kastle:Integer"]
+	Level -> Integer [label="kastle:hasValue"]
+}

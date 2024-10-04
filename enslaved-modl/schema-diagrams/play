@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Play [label="kastle:Play"]
+	Actor [label="kastle:Actor"]
+	Play -> Actor [label="kastle:hasActor"]
+	Performance [label="kastle:Performance"]
+	Director [label="kastle:Director"]
+	Performance -> Director [label="kastle:hasDirector"]
+	Location [label="kastle:Location"]
+	Performance -> Location [label="kastle:hasLocation"]
+	Script [label="kastle:Script"]
+	Play -> Script [label="kastle:hasScript"]
+	Play -> Performance [label="kastle:performance"]
+}

@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Request [label="kastle:Request"]
+	Detail [label="kastle:Detail"]
+	Request -> Detail [label="kastle:hasDetail"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Request -> int [label="kastle:hasId"]
+	Status [label="kastle:Status"]
+	Request -> Status [label="kastle:hasStatus"]
+	Datetime [label="kastle:Datetime"]
+	Request -> Datetime [label="kastle:hasTimestamp"]
+}

@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Ground [label="kastle:Ground"]
+	Class [label="kastle:Class"]
+	Ground -> Class [label="kastle:groundType"]
+	Class [label="kastle:Class"]
+	Ground -> Class [label="kastle:hasGroundComposition"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Ground -> Literal [label="kastle:hasSurfaceTexture"]
+}

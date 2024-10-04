@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Rebel [label="kastle:Rebel"]
+	RebelGroup [label="kastle:RebelGroup"]
+	Rebel -> RebelGroup [label="kastle:belongsGroup"]
+	Cause [label="kastle:Cause"]
+	Rebel -> Cause [label="kastle:hasCause"]
+	Weapon [label="kastle:Weapon"]
+	Rebel -> Weapon [label="kastle:usesWeapon"]
+}

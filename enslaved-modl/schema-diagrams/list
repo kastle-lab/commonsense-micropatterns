@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Item [label="kastle:Item"]
+	Integer [label="kastle:Integer"]
+	Item -> Integer [label="kastle:hasOrder"]
+	List [label="kastle:List"]
+	Resource [label="kastle:Resource"]
+	List -> Resource [label="kastle:item"]
+}

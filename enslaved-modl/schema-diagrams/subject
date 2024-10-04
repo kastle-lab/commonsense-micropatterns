@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Student [label="kastle:Student"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Student -> string [label="kastle:hasName"]
+	Subject [label="kastle:Subject"]
+	Student -> Subject [label="kastle:hasSubject"]
+	Subject [label="kastle:Subject"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Subject -> boolean [label="kastle:isMandatory"]
+}

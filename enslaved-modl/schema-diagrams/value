@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	ValueNumeric [label="kastle:ValueNumeric"]
+	Double [label="kastle:Double"]
+	ValueNumeric -> Double [label="kastle:hasNumericValue"]
+	N3f1fcd8fe7834504a1b4b47305dd5dc5b1 [label="kastle:N3f1fcd8fe7834504a1b4b47305dd5dc5b1"]
+	Nb1a34d8e9ab046da8d71d7b2bd1ff877b1 [label="kastle:Nb1a34d8e9ab046da8d71d7b2bd1ff877b1"]
+	Value [label="kastle:Value"]
+	Nb1a34d8e9ab046da8d71d7b2bd1ff877b1 -> Value [label="kastle:hasValue"]
+}

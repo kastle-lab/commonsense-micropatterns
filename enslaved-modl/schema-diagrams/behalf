@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Acter [label="kastle:Acter"]
+	Beneficiary [label="kastle:Beneficiary"]
+	Acter -> Beneficiary [label="kastle:actsOnBehalfOf"]
+	Behalf [label="kastle:Behalf"]
+	Resource [label="kastle:Resource"]
+	Behalf -> Resource [label="kastle:represents"]
+}

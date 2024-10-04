@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Resident [label="kastle:Resident"]
+	Integer [label="kastle:Integer"]
+	Resident -> Integer [label="kastle:hasAge"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Resident -> string [label="kastle:hasName"]
+	Location [label="kastle:Location"]
+	Resident -> Location [label="kastle:residesIn"]
+}

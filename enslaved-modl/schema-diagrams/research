@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Publication [label="kastle:Publication"]
+	Researcher [label="kastle:Researcher"]
+	Publication -> Researcher [label="kastle:hasAuthor"]
+	Project [label="kastle:Project"]
+	Researcher [label="kastle:Researcher"]
+	Project -> Researcher [label="kastle:hasLead"]
+	Research [label="kastle:Research"]
+	Field [label="kastle:Field"]
+	Research -> Field [label="kastle:relatedField"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Research -> Literal [label="kastle:researchOutcome"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Research -> Literal [label="kastle:researchTopic"]
+}

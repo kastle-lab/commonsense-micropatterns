@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Baptism [label="kastle:Baptism"]
+	Person [label="kastle:Person"]
+	Baptism -> Person [label="kastle:baptisedBy"]
+	Person [label="kastle:Person"]
+	Baptism -> Person [label="kastle:baptisedPerson"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Baptism -> date [label="kastle:baptismDate"]
+	Location [label="kastle:Location"]
+	Baptism -> Location [label="kastle:baptismLocation"]
+	Person [label="kastle:Person"]
+	Baptism -> Person [label="kastle:performedBaptism"]
+	Person [label="kastle:Person"]
+	Baptism -> Person [label="kastle:receivedBaptism"]
+}

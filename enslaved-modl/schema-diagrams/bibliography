@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Book [label="kastle:Book"]
+	Author [label="kastle:Author"]
+	Book -> Author [label="kastle:hasAuthor"]
+	Author [label="kastle:Author"]
+	Author -> Book [label="kastle:hasBook"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Author -> string [label="kastle:name"]
+	Integer [label="kastle:Integer"]
+	Book -> Integer [label="kastle:publicationYear"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Book -> string [label="kastle:title"]
+}

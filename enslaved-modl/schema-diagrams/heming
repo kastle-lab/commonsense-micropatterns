@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Heming [label="kastle:Heming"]
+	Fabric [label="kastle:Fabric"]
+	Heming -> Fabric [label="kastle:hasMaterial"]
+	Sewingmachine [label="kastle:Sewingmachine"]
+	Heming -> Sewingmachine [label="kastle:usesTool"]
+}

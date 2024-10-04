@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Nfd2d608153154bdfae3c4153c1c73b17b1 [label="kastle:Nfd2d608153154bdfae3c4153c1c73b17b1"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Nfd2d608153154bdfae3c4153c1c73b17b1 -> float [label="kastle:calculateArea"]
+	Area [label="kastle:Area"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Area -> float [label="kastle:height"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Area -> float [label="kastle:width"]
+}

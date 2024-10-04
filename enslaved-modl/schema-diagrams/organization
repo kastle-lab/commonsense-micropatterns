@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Organization [label="kastle:Organization"]
+	Person [label="kastle:Person"]
+	Organization -> Person [label="kastle:hasMember"]
+	Ned963e32258d4cdc9f9dee88e0432c79b1 [label="kastle:Ned963e32258d4cdc9f9dee88e0432c79b1"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Ned963e32258d4cdc9f9dee88e0432c79b1 -> Literal [label="kastle:hasName"]
+	Person [label="kastle:Person"]
+	Position [label="kastle:Position"]
+	Person -> Position [label="kastle:hasPosition"]
+}

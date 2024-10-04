@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Reader [label="kastle:Reader"]
+	Integer [label="kastle:Integer"]
+	Reader -> Integer [label="kastle:hasAge"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Reader -> string [label="kastle:hasName"]
+	Book [label="kastle:Book"]
+	Reader -> Book [label="kastle:reads"]
+}

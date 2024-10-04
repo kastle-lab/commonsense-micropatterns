@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Foot [label="kastle:Foot"]
+	Toe [label="kastle:Toe"]
+	Foot -> Toe [label="kastle:hasToe"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Foot -> float [label="kastle:length"]
+	Resource [label="kastle:Resource"]
+	Foot -> Resource [label="kastle:partOf"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Foot -> float [label="kastle:width"]
+}

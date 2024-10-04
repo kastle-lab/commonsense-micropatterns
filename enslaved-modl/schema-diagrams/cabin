@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Cabin [label="kastle:Cabin"]
+	Integer [label="kastle:Integer"]
+	Cabin -> Integer [label="kastle:hasBathrooms"]
+	Integer [label="kastle:Integer"]
+	Cabin -> Integer [label="kastle:hasBedrooms"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Cabin -> string [label="kastle:hasLocation"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Cabin -> string [label="kastle:hasSize"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Cabin -> string [label="kastle:location"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Cabin -> string [label="kastle:owner"]
+}

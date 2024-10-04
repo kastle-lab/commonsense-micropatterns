@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Resource [label="kastle:Resource"]
+	Class [label="kastle:Class"]
+	Resource -> Class [label="kastle:hasType"]
+	Quantity [label="kastle:Quantity"]
+	Unit [label="kastle:Unit"]
+	Quantity -> Unit [label="kastle:hasUnit"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Resource -> float [label="kastle:quantity"]
+}

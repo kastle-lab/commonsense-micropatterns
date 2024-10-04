@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Congregation [label="kastle:Congregation"]
+	Service [label="kastle:Service"]
+	Congregation -> Service [label="kastle:conductsService"]
+	Member [label="kastle:Member"]
+	Congregation -> Member [label="kastle:hasMember"]
+	Church [label="kastle:Church"]
+	Congregation -> Church [label="kastle:location"]
+}

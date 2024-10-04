@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Symbol [label="kastle:Symbol"]
+	Representation [label="kastle:Representation"]
+	Symbol -> Representation [label="kastle:hasRepresentation"]
+	Context [label="kastle:Context"]
+	Symbol -> Context [label="kastle:isUsedIn"]
+}

@@ -1,0 +1,35 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Acter a rdfs:Class .
+
+kastle:Behalf a rdfs:Class .
+
+kastle:Beneficiary a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/behalf> a owl:Ontology ;
+    opla-core:hasPatternName "behalf Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:actsOnBehalfOf a rdf:Property ;
+    rdfs:domain kastle:Acter ;
+    rdfs:range kastle:Beneficiary .
+
+kastle:represents a rdf:Property ;
+    rdfs:domain kastle:Behalf ;
+    rdfs:range kastle:Resource .
+

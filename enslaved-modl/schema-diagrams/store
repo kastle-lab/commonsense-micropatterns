@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Store [label="kastle:Store"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Store -> string [label="kastle:address"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Store -> string [label="kastle:name"]
+	Product [label="kastle:Product"]
+	Store -> Product [label="kastle:product"]
+	Product [label="kastle:Product"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Product -> string [label="kastle:productDescription"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Product -> string [label="kastle:productName"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Product -> decimal [label="kastle:productPrice"]
+}

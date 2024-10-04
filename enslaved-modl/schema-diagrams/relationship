@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Relationship [label="kastle:Relationship"]
+	Person -> Relationship [label="kastle:hasRelationship"]
+	Relationship [label="kastle:Relationship"]
+	RelationshipType [label="kastle:RelationshipType"]
+	Relationship -> RelationshipType [label="kastle:isTypeOf"]
+}

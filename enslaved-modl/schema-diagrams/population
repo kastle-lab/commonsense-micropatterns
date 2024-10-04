@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Population [label="kastle:Population"]
+	AgeDistribution [label="kastle:AgeDistribution"]
+	Population -> AgeDistribution [label="kastle:hasAgeDistribution"]
+	GenderRatio [label="kastle:GenderRatio"]
+	Population -> GenderRatio [label="kastle:hasGenderRatio"]
+	Place [label="kastle:Place"]
+	Integer [label="kastle:Integer"]
+	Place -> Integer [label="kastle:totalPopulation"]
+}

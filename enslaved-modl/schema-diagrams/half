@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Thing [label="kastle:Thing"]
+	Thing -> Thing [label="kastle:halfOf"]
+	Fraction [label="kastle:Fraction"]
+	Integer [label="kastle:Integer"]
+	Fraction -> Integer [label="kastle:hasDenominator"]
+	Resource [label="kastle:Resource"]
+	Half [label="kastle:Half"]
+	Resource -> Half [label="kastle:hasHalf"]
+	Integer [label="kastle:Integer"]
+	Fraction -> Integer [label="kastle:hasNumerator"]
+	Half [label="kastle:Half"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Half -> decimal [label="kastle:hasValue"]
+	Half -> Resource [label="kastle:isHalfOf"]
+}

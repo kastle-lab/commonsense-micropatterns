@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	University [label="kastle:University"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	University -> string [label="kastle:hasDepartment"]
+	OfficialInstitution [label="kastle:OfficialInstitution"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	OfficialInstitution -> string [label="kastle:hasFunction"]
+	School [label="kastle:School"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	School -> string [label="kastle:hasGrade"]
+	Institution [label="kastle:Institution"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Institution -> string [label="kastle:hasName"]
+}

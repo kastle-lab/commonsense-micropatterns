@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Bishop [label="kastle:Bishop"]
+	Church [label="kastle:Church"]
+	Bishop -> Church [label="kastle:appointedBy"]
+	AuthorityArea [label="kastle:AuthorityArea"]
+	Bishop -> AuthorityArea [label="kastle:diocese"]
+}

@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Star [label="kastle:Star"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Star -> decimal [label="kastle:hasMass"]
+	Integer [label="kastle:Integer"]
+	Star -> Integer [label="kastle:hasTemperature"]
+	Constellation [label="kastle:Constellation"]
+	Star -> Constellation [label="kastle:isPartOfConstellation"]
+}

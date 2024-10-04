@@ -1,0 +1,99 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Cemetery a rdfs:Class .
+
+kastle:Grave a rdfs:Class .
+
+kastle:Memorial a rdfs:Class .
+
+kastle:Occupant a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/cemetery> a owl:Ontology ;
+    opla-core:hasPatternName "cemetery Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range rdfs:Literal .
+
+kastle:born a rdf:Property ;
+    rdfs:domain kastle:Occupant ;
+    rdfs:range rdfs:Literal .
+
+kastle:burialDate a rdf:Property ;
+    rdfs:domain kastle:Grave ;
+    rdfs:range rdfs:Literal .
+
+kastle:containsGraves a rdf:Property ;
+    rdfs:domain kastle:Cemetery ;
+    rdfs:range kastle:Grave .
+
+kastle:dateOfBurial a rdf:Property ;
+    rdfs:domain kastle:Grave ;
+    rdfs:range rdfs:Literal .
+
+kastle:deathDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range rdfs:Literal .
+
+kastle:died a rdf:Property ;
+    rdfs:domain kastle:Occupant ;
+    rdfs:range rdfs:Literal .
+
+kastle:established a rdf:Property ;
+    rdfs:domain kastle:Cemetery ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasGrave a rdf:Property ;
+    rdfs:domain kastle:Cemetery ;
+    rdfs:range kastle:Grave .
+
+kastle:hasMemorial a rdf:Property ;
+    rdfs:domain kastle:Occupant ;
+    rdfs:range kastle:Memorial .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Grave ;
+    rdfs:range rdfs:Literal .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Cemetery ;
+    rdfs:range rdfs:Literal .
+
+kastle:memorialText a rdf:Property ;
+    rdfs:domain kastle:Memorial ;
+    rdfs:range rdfs:Literal .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Cemetery,
+        kastle:Person ;
+    rdfs:range rdfs:Literal .
+
+kastle:occupant a rdf:Property ;
+    rdfs:domain kastle:Grave ;
+    rdfs:range rdfs:Literal,
+        kastle:Person .
+
+kastle:occupantDOB a rdf:Property ;
+    rdfs:domain kastle:Grave ;
+    rdfs:range rdfs:Literal .
+
+kastle:occupantDOD a rdf:Property ;
+    rdfs:domain kastle:Grave ;
+    rdfs:range rdfs:Literal .
+

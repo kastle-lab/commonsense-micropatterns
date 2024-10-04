@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Laborer [label="kastle:Laborer"]
+	Integer [label="kastle:Integer"]
+	Laborer -> Integer [label="kastle:hasExperience"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Laborer -> string [label="kastle:hasSkill"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Laborer -> string [label="kastle:name"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Laborer -> string [label="kastle:worksInIndustry"]
+}

@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Website [label="kastle:Website"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Website -> string [label="kastle:hasName"]
+	Owner [label="kastle:Owner"]
+	Website -> Owner [label="kastle:hasOwner"]
+	Anyuri [label="kastle:Anyuri"]
+	Website -> Anyuri [label="kastle:hasURL"]
+	Owner [label="kastle:Owner"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Owner -> string [label="kastle:ownerEmail"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Owner -> string [label="kastle:ownerName"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Address [label="kastle:Address"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Address -> string [label="kastle:hasCity"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Address -> string [label="kastle:hasCountry"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Address -> string [label="kastle:hasState"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Address -> string [label="kastle:hasStreet"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Address -> string [label="kastle:hasZipCode"]
+}

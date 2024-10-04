@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	AstronomicalNight [label="kastle:AstronomicalNight"]
+	LightPollution [label="kastle:LightPollution"]
+	AstronomicalNight -> LightPollution [label="kastle:hasLightPollution"]
+	FullMoonNight [label="kastle:FullMoonNight"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	FullMoonNight -> boolean [label="kastle:isFullMoon"]
+	StarryNight [label="kastle:StarryNight"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	StarryNight -> boolean [label="kastle:starVisibility"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	AstronomicalNight -> string [label="kastle:typicalAnimalsActive"]
+	CivilNight [label="kastle:CivilNight"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	CivilNight -> string [label="kastle:typicalHumanActivities"]
+}

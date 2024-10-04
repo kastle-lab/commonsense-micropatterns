@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Acquisition [label="kastle:Acquisition"]
+	Person -> Acquisition [label="kastle:acquires"]
+	Distribution [label="kastle:Distribution"]
+	Person -> Distribution [label="kastle:distributes"]
+	Knowledge [label="kastle:Knowledge"]
+	DomainArea [label="kastle:DomainArea"]
+	Knowledge -> DomainArea [label="kastle:hasDomainArea"]
+	Person -> Knowledge [label="kastle:hasKnowledge"]
+	Source [label="kastle:Source"]
+	Knowledge -> Source [label="kastle:hasSource"]
+	Resource [label="kastle:Resource"]
+	Resource -> Knowledge [label="kastle:knowsAbout"]
+}

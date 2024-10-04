@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Novel [label="kastle:Novel"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Novel -> string [label="kastle:author"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Novel -> string [label="kastle:genre"]
+	Integer [label="kastle:Integer"]
+	Novel -> Integer [label="kastle:numberOfPages"]
+	Integer [label="kastle:Integer"]
+	Novel -> Integer [label="kastle:publicationYear"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Novel -> string [label="kastle:title"]
+}

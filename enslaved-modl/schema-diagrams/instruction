@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Instruction [label="kastle:Instruction"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Instruction -> string [label="kastle:instructionTool"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Instruction -> string [label="kastle:step"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Instruction -> string [label="kastle:targetAudience"]
+}

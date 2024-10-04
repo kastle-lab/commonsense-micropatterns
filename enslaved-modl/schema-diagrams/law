@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Plaintiff [label="kastle:Plaintiff"]
+	Defendant [label="kastle:Defendant"]
+	Plaintiff -> Defendant [label="kastle:accuses"]
+	Lawyer [label="kastle:Lawyer"]
+	Defendant [label="kastle:Defendant"]
+	Lawyer -> Defendant [label="kastle:defends"]
+	Judge [label="kastle:Judge"]
+	Court [label="kastle:Court"]
+	Judge -> Court [label="kastle:presides"]
+	Lawyer -> Plaintiff [label="kastle:represents"]
+}

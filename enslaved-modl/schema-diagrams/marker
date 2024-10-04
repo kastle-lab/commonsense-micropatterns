@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Marker [label="kastle:Marker"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Marker -> string [label="kastle:brand"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Marker -> string [label="kastle:color"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Marker -> boolean [label="kastle:hasCap"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Marker -> boolean [label="kastle:isPermanent"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Marker -> string [label="kastle:tipType"]
+}

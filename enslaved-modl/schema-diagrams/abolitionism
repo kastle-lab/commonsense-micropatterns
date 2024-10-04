@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Abolitionism [label="kastle:Abolitionism"]
+	SocialMovement [label="kastle:SocialMovement"]
+	Abolitionism -> SocialMovement [label="kastle:hasInfluenceOn"]
+	Person [label="kastle:Person"]
+	Abolitionism -> Person [label="kastle:hasOriginator"]
+	Practice [label="kastle:Practice"]
+	Abolitionism -> Practice [label="kastle:isAimedAt"]
+}

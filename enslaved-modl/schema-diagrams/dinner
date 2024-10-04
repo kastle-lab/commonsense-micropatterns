@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Dinner [label="kastle:Dinner"]
+	Dish [label="kastle:Dish"]
+	Dinner -> Dish [label="kastle:dish"]
+	Ingredient [label="kastle:Ingredient"]
+	Dinner -> Ingredient [label="kastle:hasIngredient"]
+}

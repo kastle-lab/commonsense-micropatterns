@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Opportunity [label="kastle:Opportunity"]
+	Datetime [label="kastle:Datetime"]
+	Opportunity -> Datetime [label="kastle:hasDeadline"]
+	Person [label="kastle:Person"]
+	Subject [label="kastle:Subject"]
+	Subject -> Opportunity [label="kastle:hasOpportunity"]
+}

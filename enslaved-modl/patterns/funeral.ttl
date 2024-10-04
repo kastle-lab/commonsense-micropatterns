@@ -1,0 +1,65 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Cemetery a rdfs:Class .
+
+kastle:Deceased a rdfs:Class .
+
+kastle:Funeral a rdfs:Class .
+
+kastle:FuneralDirector a rdfs:Class .
+
+kastle:FuneralService a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/funeral> a owl:Ontology ;
+    opla-core:hasPatternName "funeral Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:attendees a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range xsd:string .
+
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range xsd:date .
+
+kastle:deceased a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range xsd:string .
+
+kastle:hasDeceased a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range kastle:Deceased .
+
+kastle:hasFuneralDirector a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range kastle:FuneralDirector .
+
+kastle:hasFuneralService a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range kastle:FuneralService .
+
+kastle:heldAt a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range kastle:Cemetery .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range xsd:string .
+
+kastle:officiant a rdf:Property ;
+    rdfs:domain kastle:Funeral ;
+    rdfs:range xsd:string .
+

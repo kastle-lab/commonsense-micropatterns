@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Case [label="kastle:Case"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Case -> string [label="kastle:caseID"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Case -> string [label="kastle:caseName"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Case -> string [label="kastle:caseStatus"]
+}

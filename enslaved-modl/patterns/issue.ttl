@@ -1,0 +1,90 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Cause a rdfs:Class .
+
+kastle:Comment a rdfs:Class .
+
+kastle:Entity a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Issue a rdfs:Class .
+
+kastle:Issuestatus a rdfs:Class ;
+    rdfs:subClassOf kastle:String .
+
+kastle:Resolution a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/issue> a owl:Ontology ;
+    opla-core:hasPatternName "issue Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:commentary a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range kastle:Comment .
+
+kastle:commenter a rdf:Property ;
+    rdfs:domain kastle:Comment ;
+    rdfs:range xsd:string .
+
+kastle:content a rdf:Property ;
+    rdfs:domain kastle:Comment ;
+    rdfs:range xsd:string .
+
+kastle:hasAssignee a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range xsd:string .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range xsd:string .
+
+kastle:hasIssue a rdf:Property ;
+    rdfs:domain kastle:Entity ;
+    rdfs:range kastle:Issue .
+
+kastle:hasPriority a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range kastle:Integer .
+
+kastle:hasSubmitter a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range xsd:string .
+
+kastle:isOpen a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range xsd:boolean .
+
+kastle:issueCause a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range kastle:Cause .
+
+kastle:issueDescription a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range xsd:string .
+
+kastle:issueID a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range xsd:string .
+
+kastle:issueResolution a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range kastle:Resolution .
+
+kastle:issueStatus a rdf:Property ;
+    rdfs:domain kastle:Issue ;
+    rdfs:range kastle:Issuestatus .
+

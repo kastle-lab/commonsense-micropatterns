@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Loss [label="kastle:Loss"]
+	Resource [label="kastle:Resource"]
+	Loss -> Resource [label="kastle:causes"]
+	Datetime [label="kastle:Datetime"]
+	Loss -> Datetime [label="kastle:date"]
+	Resource [label="kastle:Resource"]
+	Loss -> Resource [label="kastle:dueTo"]
+	Class [label="kastle:Class"]
+	Loss -> Class [label="kastle:isMeasuredIn"]
+}

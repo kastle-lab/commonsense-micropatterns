@@ -1,0 +1,97 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Photo a rdfs:Class .
+
+kastle:Photographer a rdfs:Class .
+
+kastle:Portfolio a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/photo> a owl:Ontology ;
+    opla-core:hasPatternName "photo Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:containsPhoto a rdf:Property ;
+    rdfs:domain kastle:Portfolio ;
+    rdfs:range kastle:Photo .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range kastle:Datetime .
+
+kastle:hasDateTaken a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range kastle:Datetime .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+
+kastle:hasFileFormat a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+
+kastle:hasFileName a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Photographer ;
+    rdfs:range xsd:string .
+
+kastle:hasPhotographer a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range kastle:Photographer .
+
+kastle:hasPortfolio a rdf:Property ;
+    rdfs:domain kastle:Photographer ;
+    rdfs:range kastle:Portfolio .
+
+kastle:hasResolution a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+
+kastle:hasSize a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range kastle:Integer .
+
+kastle:hasSubject a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+
+kastle:isPublic a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:boolean .
+
+kastle:isTakenOn a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:date .
+
+kastle:takenBy a rdf:Property ;
+    rdfs:domain kastle:Photo ;
+    rdfs:range xsd:string .
+

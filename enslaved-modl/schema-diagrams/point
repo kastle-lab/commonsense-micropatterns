@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Point [label="kastle:Point"]
+	Double [label="kastle:Double"]
+	Point -> Double [label="kastle:xCoordinate"]
+	Double [label="kastle:Double"]
+	Point -> Double [label="kastle:yCoordinate"]
+	Double [label="kastle:Double"]
+	Point -> Double [label="kastle:zCoordinate"]
+}

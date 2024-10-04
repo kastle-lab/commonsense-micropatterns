@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Manner [label="kastle:Manner"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Manner -> string [label="kastle:hasCharacteristics"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Manner -> string [label="kastle:hasIntensity"]
+	Manner -> Manner [label="kastle:isOppositeTo"]
+	Manner -> Manner [label="kastle:isSimilarTo"]
+}

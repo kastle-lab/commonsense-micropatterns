@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Organization [label="kastle:Organization"]
+	Person [label="kastle:Person"]
+	Organization -> Person [label="kastle:member"]
+}

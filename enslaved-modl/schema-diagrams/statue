@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Statue [label="kastle:Statue"]
+	Creator [label="kastle:Creator"]
+	Statue -> Creator [label="kastle:hasCreator"]
+	Location [label="kastle:Location"]
+	Statue -> Location [label="kastle:hasLocation"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Statue -> string [label="kastle:hasMaterial"]
+}

@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Courthouse [label="kastle:Courthouse"]
+	Case [label="kastle:Case"]
+	Courthouse -> Case [label="kastle:hasCase"]
+	Courtroom [label="kastle:Courtroom"]
+	Courthouse -> Courtroom [label="kastle:hasCourtroom"]
+	Judge [label="kastle:Judge"]
+	Courthouse -> Judge [label="kastle:hasJudge"]
+	Lawyer [label="kastle:Lawyer"]
+	Courthouse -> Lawyer [label="kastle:hasLawyer"]
+}

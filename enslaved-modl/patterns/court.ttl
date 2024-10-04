@@ -1,0 +1,63 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Case a rdfs:Class .
+
+kastle:Court a rdfs:Class .
+
+kastle:CourtCase a rdfs:Class .
+
+kastle:Defendant a rdfs:Class .
+
+kastle:Judge a rdfs:Class .
+
+kastle:Jurisdiction a rdfs:Class .
+
+kastle:Lawyer a rdfs:Class .
+
+kastle:Plaintiff a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/court> a owl:Ontology ;
+    opla-core:hasPatternName "court Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:courtCase a rdf:Property ;
+    rdfs:domain kastle:Court ;
+    rdfs:range kastle:CourtCase .
+
+kastle:dealsWith a rdf:Property ;
+    rdfs:domain kastle:Judge ;
+    rdfs:range kastle:Case .
+
+kastle:defends a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Defendant .
+
+kastle:hasJurisdiction a rdf:Property ;
+    rdfs:domain kastle:Court ;
+    rdfs:range kastle:Jurisdiction .
+
+kastle:hears a rdf:Property ;
+    rdfs:domain kastle:Court ;
+    rdfs:range kastle:Case .
+
+kastle:judge a rdf:Property ;
+    rdfs:domain kastle:Court ;
+    rdfs:range kastle:Judge .
+
+kastle:represents a rdf:Property ;
+    rdfs:domain kastle:Lawyer ;
+    rdfs:range kastle:Plaintiff .
+

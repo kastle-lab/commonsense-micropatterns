@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Biography [label="kastle:Biography"]
+	Author [label="kastle:Author"]
+	Biography -> Author [label="kastle:hasAuthor"]
+	Person [label="kastle:Person"]
+	Person -> Biography [label="kastle:hasBiography"]
+	PublicationDate [label="kastle:PublicationDate"]
+	Biography -> PublicationDate [label="kastle:hasPublicationDate"]
+	Subject [label="kastle:Subject"]
+	Biography -> Subject [label="kastle:hasSubject"]
+}

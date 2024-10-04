@@ -1,0 +1,52 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Field a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
+
+kastle:Project a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
+
+kastle:Publication a rdfs:Class ;
+    rdfs:subClassOf kastle:Research .
+
+kastle:Research a rdfs:Class .
+
+kastle:Researcher a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/research> a owl:Ontology ;
+    opla-core:hasPatternName "research Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Publication ;
+    rdfs:range kastle:Researcher .
+
+kastle:hasLead a rdf:Property ;
+    rdfs:domain kastle:Project ;
+    rdfs:range kastle:Researcher .
+
+kastle:relatedField a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range kastle:Field .
+
+kastle:researchOutcome a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range rdfs:Literal .
+
+kastle:researchTopic a rdf:Property ;
+    rdfs:domain kastle:Research ;
+    rdfs:range rdfs:Literal .
+

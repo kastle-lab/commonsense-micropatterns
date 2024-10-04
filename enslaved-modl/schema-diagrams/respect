@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Respect [label="kastle:Respect"]
+	Person [label="kastle:Person"]
+	Respect -> Person [label="kastle:forPerson"]
+	Value [label="kastle:Value"]
+	Respect -> Value [label="kastle:forValue"]
+	Action [label="kastle:Action"]
+	Respect -> Action [label="kastle:inAction"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Respect -> boolean [label="kastle:isMutual"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Respect -> boolean [label="kastle:isSelf"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Respect -> decimal [label="kastle:levelOfRespect"]
+}

@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Painter [label="kastle:Painter"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Painter -> date [label="kastle:hasBirthDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Painter -> string [label="kastle:hasName"]
+	PaintingStyle [label="kastle:PaintingStyle"]
+	Painter -> PaintingStyle [label="kastle:hasStyle"]
+}

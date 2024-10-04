@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Raid [label="kastle:Raid"]
+	Participant [label="kastle:Participant"]
+	Raid -> Participant [label="kastle:conductedBy"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Raid -> date [label="kastle:date"]
+	Target [label="kastle:Target"]
+	Raid -> Target [label="kastle:targets"]
+}

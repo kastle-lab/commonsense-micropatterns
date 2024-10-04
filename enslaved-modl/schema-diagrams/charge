@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Entity [label="kastle:Entity"]
+	Charge [label="kastle:Charge"]
+	Entity -> Charge [label="kastle:hasCharge"]
+}

@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Idea [label="kastle:Idea"]
+	XMLLiteral [label="kastle:XMLLiteral"]
+	Idea -> XMLLiteral [label="kastle:belongsToDomain"]
+	XMLLiteral [label="kastle:XMLLiteral"]
+	Idea -> XMLLiteral [label="kastle:hasDateCreated"]
+	Person [label="kastle:Person"]
+	Person -> Idea [label="kastle:hasIdea"]
+	N152f29b4aa5841d69cbcac4e611774a4b5 [label="kastle:N152f29b4aa5841d69cbcac4e611774a4b5"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	N152f29b4aa5841d69cbcac4e611774a4b5 -> string [label="kastle:hasName"]
+	XMLLiteral [label="kastle:XMLLiteral"]
+	Idea -> XMLLiteral [label="kastle:hasOriginator"]
+	N152f29b4aa5841d69cbcac4e611774a4b1 [label="kastle:N152f29b4aa5841d69cbcac4e611774a4b1"]
+	Idea -> N152f29b4aa5841d69cbcac4e611774a4b1 [label="kastle:relatedTo"]
+}

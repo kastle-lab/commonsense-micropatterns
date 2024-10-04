@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Event [label="kastle:Event"]
+	Chance [label="kastle:Chance"]
+	Event -> Chance [label="kastle:eventHasChance"]
+	Chance [label="kastle:Chance"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Chance -> float [label="kastle:hasChance"]
+}

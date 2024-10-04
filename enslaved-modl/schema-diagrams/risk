@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Risk [label="kastle:Risk"]
+	Impact [label="kastle:Impact"]
+	Risk -> Impact [label="kastle:hasImpact"]
+	Probability [label="kastle:Probability"]
+	Risk -> Probability [label="kastle:hasProbability"]
+	RiskAssessment [label="kastle:RiskAssessment"]
+	Risk -> RiskAssessment [label="kastle:hasRiskAssessment"]
+	RiskFactor [label="kastle:RiskFactor"]
+	Risk -> RiskFactor [label="kastle:hasRiskFactor"]
+	RiskLevel [label="kastle:RiskLevel"]
+	Risk -> RiskLevel [label="kastle:hasRiskLevel"]
+	RiskManagement [label="kastle:RiskManagement"]
+	Risk -> RiskManagement [label="kastle:hasRiskManagement"]
+}

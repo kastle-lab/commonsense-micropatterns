@@ -1,0 +1,63 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Task a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/task> a owl:Ontology ;
+    opla-core:hasPatternName "task Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:assignedTo a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:string .
+
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:string .
+
+kastle:dueDate a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:date .
+
+kastle:hasAssignee a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:string .
+
+kastle:hasDeadline a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range kastle:Datetime .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:string .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:string .
+
+kastle:isAssignedTo a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:string .
+
+kastle:isCompleted a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:boolean .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:string .
+

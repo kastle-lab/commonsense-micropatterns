@@ -1,0 +1,56 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Food a rdfs:Class ;
+    rdfs:subClassOf kastle:Resource .
+
+kastle:FoodGroup a rdfs:Class .
+
+kastle:FoodItem a rdfs:Class .
+
+kastle:Ingredient a rdfs:Class .
+
+kastle:NutritionInfo a rdfs:Class .
+
+kastle:Recipe a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/food> a owl:Ontology ;
+    opla-core:hasPatternName "food Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:calories a rdf:Property ;
+    rdfs:domain kastle:Food ;
+    rdfs:range xsd:decimal .
+
+kastle:containsFat a rdf:Property ;
+    rdfs:domain kastle:Food ;
+    rdfs:range xsd:boolean .
+
+kastle:containsIngredient a rdf:Property ;
+    rdfs:domain kastle:FoodItem ;
+    rdfs:range kastle:Ingredient .
+
+kastle:hasFoodItem a rdf:Property ;
+    rdfs:domain kastle:FoodGroup ;
+    rdfs:range kastle:FoodItem .
+
+kastle:hasNutritionInfo a rdf:Property ;
+    rdfs:domain kastle:FoodItem ;
+    rdfs:range kastle:NutritionInfo .
+
+kastle:hasRecipe a rdf:Property ;
+    rdfs:domain kastle:FoodItem ;
+    rdfs:range kastle:Recipe .
+

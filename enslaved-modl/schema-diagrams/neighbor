@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	House [label="kastle:House"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	House -> string [label="kastle:hasAddress"]
+	Street [label="kastle:Street"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Street -> string [label="kastle:hasName"]
+	Person [label="kastle:Person"]
+	Neighbor [label="kastle:Neighbor"]
+	Person -> Neighbor [label="kastle:hasNeighbor"]
+	House -> Street [label="kastle:locatedOn"]
+	Person -> House [label="kastle:residesIn"]
+}

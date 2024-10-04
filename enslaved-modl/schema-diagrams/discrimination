@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Discrimination [label="kastle:Discrimination"]
+	Person [label="kastle:Person"]
+	Discrimination -> Person [label="kastle:perpetrator"]
+	Individual [label="kastle:Individual"]
+	Individual -> Discrimination [label="kastle:propagatorOfDiscrimination"]
+	Individual -> Discrimination [label="kastle:recipientOfDiscrimination"]
+	Person [label="kastle:Person"]
+	Discrimination -> Person [label="kastle:victim"]
+}

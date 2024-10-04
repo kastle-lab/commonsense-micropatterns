@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Region [label="kastle:Region"]
+	City [label="kastle:City"]
+	Region -> City [label="kastle:hasCity"]
+	Homeland [label="kastle:Homeland"]
+	Country [label="kastle:Country"]
+	Homeland -> Country [label="kastle:hasCountry"]
+	City [label="kastle:City"]
+	Population [label="kastle:Population"]
+	City -> Population [label="kastle:hasPopulation"]
+	Country [label="kastle:Country"]
+	Country -> Region [label="kastle:hasRegion"]
+	Language [label="kastle:Language"]
+	Country -> Language [label="kastle:officialLanguage"]
+}

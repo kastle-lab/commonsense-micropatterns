@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Language [label="kastle:Language"]
+	Alphabet [label="kastle:Alphabet"]
+	Language -> Alphabet [label="kastle:hasAlphabet"]
+	Dialect [label="kastle:Dialect"]
+	Language -> Dialect [label="kastle:hasDialect"]
+	Script [label="kastle:Script"]
+	Language -> Script [label="kastle:usesScript"]
+}

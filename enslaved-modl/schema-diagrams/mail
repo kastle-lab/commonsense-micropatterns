@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Mail [label="kastle:Mail"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Mail -> string [label="kastle:hasBody"]
+	Person [label="kastle:Person"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:hasEmail"]
+	Mail -> Person [label="kastle:hasRecipient"]
+	Mail -> Person [label="kastle:hasSender"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Mail -> string [label="kastle:hasSubject"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Mail -> boolean [label="kastle:isRead"]
+	Datetime [label="kastle:Datetime"]
+	Mail -> Datetime [label="kastle:isSentOn"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Ship [label="kastle:Ship"]
+	Captain [label="kastle:Captain"]
+	Ship -> Captain [label="kastle:hasCaptain"]
+	Crew [label="kastle:Crew"]
+	Ship -> Crew [label="kastle:hasCrew"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Ship -> Literal [label="kastle:hasName"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Ship -> Literal [label="kastle:hasSize"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Ship -> Literal [label="kastle:hasSpeed"]
+}

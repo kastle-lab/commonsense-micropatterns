@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Ceremony [label="kastle:Ceremony"]
+	Datetime [label="kastle:Datetime"]
+	Ceremony -> Datetime [label="kastle:date"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Ceremony -> string [label="kastle:location"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Ceremony -> string [label="kastle:participants"]
+}

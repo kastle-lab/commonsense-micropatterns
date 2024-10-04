@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Horse [label="kastle:Horse"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Horse -> Literal [label="kastle:age"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Horse -> Literal [label="kastle:breed"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Horse -> Literal [label="kastle:color"]
+}

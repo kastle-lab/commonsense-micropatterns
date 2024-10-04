@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Enslavement [label="kastle:Enslavement"]
+	Integer [label="kastle:Integer"]
+	Enslavement -> Integer [label="kastle:durationOfEnslavement"]
+	Resource [label="kastle:Resource"]
+	Enslavement -> Resource [label="kastle:placeOfEnslavement"]
+}

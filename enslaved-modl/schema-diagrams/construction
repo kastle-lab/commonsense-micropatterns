@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Material [label="kastle:Material"]
+	Construction [label="kastle:Construction"]
+	Material -> Construction [label="kastle:employedIn"]
+	Contractor [label="kastle:Contractor"]
+	Construction [label="kastle:Construction"]
+	Contractor -> Construction [label="kastle:manages"]
+	Construction [label="kastle:Construction"]
+	ConstructionMaterials [label="kastle:ConstructionMaterials"]
+	Construction -> ConstructionMaterials [label="kastle:usesMaterial"]
+	ConstructionWorker [label="kastle:ConstructionWorker"]
+	ConstructionWorker -> Construction [label="kastle:worksOn"]
+}

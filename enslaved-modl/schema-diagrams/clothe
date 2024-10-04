@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Clothe [label="kastle:Clothe"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Clothe -> string [label="kastle:color"]
+	Material [label="kastle:Material"]
+	Clothe -> Material [label="kastle:madeOf"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Clothe -> string [label="kastle:size"]
+}

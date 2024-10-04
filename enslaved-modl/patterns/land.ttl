@@ -1,0 +1,55 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:City a rdfs:Class .
+
+kastle:Country a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Landspot a rdfs:Class .
+
+kastle:Parcel a rdfs:Class .
+
+kastle:State a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/land> a owl:Ontology ;
+    opla-core:hasPatternName "land Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasCity a rdf:Property ;
+    rdfs:domain kastle:State ;
+    rdfs:range kastle:City .
+
+kastle:hasCountry a rdf:Property ;
+    rdfs:domain kastle:Landspot ;
+    rdfs:range kastle:Country .
+
+kastle:hasParcel a rdf:Property ;
+    rdfs:domain kastle:City ;
+    rdfs:range kastle:Parcel .
+
+kastle:hasState a rdf:Property ;
+    rdfs:domain kastle:Country ;
+    rdfs:range kastle:State .
+
+kastle:population a rdf:Property ;
+    rdfs:domain kastle:Landspot ;
+    rdfs:range kastle:Integer .
+
+kastle:size a rdf:Property ;
+    rdfs:domain kastle:Landspot ;
+    rdfs:range xsd:decimal .
+

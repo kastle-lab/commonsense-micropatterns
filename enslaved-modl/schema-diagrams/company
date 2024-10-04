@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Company [label="kastle:Company"]
+	Person [label="kastle:Person"]
+	Company -> Person [label="kastle:hasCEO"]
+	Integer [label="kastle:Integer"]
+	Company -> Integer [label="kastle:hasEmployeeCount"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Company -> string [label="kastle:hasIndustry"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Company -> string [label="kastle:hasLocation"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Company -> string [label="kastle:hasName"]
+}

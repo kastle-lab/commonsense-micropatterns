@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Suit [label="kastle:Suit"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Suit -> Literal [label="kastle:hasColor"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Suit -> Literal [label="kastle:hasDesigner"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Suit -> Literal [label="kastle:hasMaterial"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Suit -> Literal [label="kastle:hasStyle"]
+}

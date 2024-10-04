@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Pair [label="kastle:Pair"]
+	Resource [label="kastle:Resource"]
+	Pair -> Resource [label="kastle:hasFirst"]
+	Resource [label="kastle:Resource"]
+	Pair -> Resource [label="kastle:hasSecond"]
+}

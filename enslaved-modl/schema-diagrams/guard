@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Guard [label="kastle:Guard"]
+	Place [label="kastle:Place"]
+	Guard -> Place [label="kastle:guardsPlace"]
+	Duty [label="kastle:Duty"]
+	Guard -> Duty [label="kastle:hasDuty"]
+	Equipment [label="kastle:Equipment"]
+	Guard -> Equipment [label="kastle:hasEquipped"]
+	Location [label="kastle:Location"]
+	Guard -> Location [label="kastle:hasLocation"]
+	Shift [label="kastle:Shift"]
+	Guard -> Shift [label="kastle:hasShift"]
+}

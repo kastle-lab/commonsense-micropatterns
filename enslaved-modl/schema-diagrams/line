@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Line [label="kastle:Line"]
+	Point [label="kastle:Point"]
+	Line -> Point [label="kastle:endPoint"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Line -> decimal [label="kastle:length"]
+	Point [label="kastle:Point"]
+	Line -> Point [label="kastle:startPoint"]
+	Point [label="kastle:Point"]
+	Line -> Point [label="kastle:startingPoint"]
+	Point [label="kastle:Point"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Point -> decimal [label="kastle:x"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Point -> decimal [label="kastle:y"]
+}

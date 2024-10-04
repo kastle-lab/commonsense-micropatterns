@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Wagon [label="kastle:Wagon"]
+	Axle [label="kastle:Axle"]
+	Wagon -> Axle [label="kastle:hasAxle"]
+	Wheel [label="kastle:Wheel"]
+	Wagon -> Wheel [label="kastle:hasWheel"]
+}

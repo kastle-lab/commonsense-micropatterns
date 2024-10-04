@@ -1,0 +1,49 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Blessing a rdfs:Class .
+
+kastle:BlessingType a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/blessing> a owl:Ontology ;
+    opla-core:hasPatternName "blessing Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:blessingType a rdf:Property ;
+    rdfs:domain kastle:Blessing ;
+    rdfs:range kastle:BlessingType .
+
+kastle:givenBy a rdf:Property ;
+    rdfs:domain kastle:Blessing ;
+    rdfs:range kastle:Person .
+
+kastle:hasBlessing a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Blessing .
+
+kastle:hasBlessingType a rdf:Property ;
+    rdfs:domain kastle:Blessing ;
+    rdfs:range kastle:BlessingType .
+
+kastle:isBlessedBy a rdf:Property ;
+    rdfs:domain kastle:Blessing ;
+    rdfs:range kastle:Person .
+
+kastle:receivedBy a rdf:Property ;
+    rdfs:domain kastle:Blessing ;
+    rdfs:range kastle:Person .
+

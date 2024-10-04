@@ -1,0 +1,69 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Hospital a rdfs:Class .
+
+kastle:Patient a rdfs:Class .
+
+kastle:Physician a rdfs:Class .
+
+kastle:Specialization a rdfs:Class .
+
+kastle:Specialty a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/physician> a owl:Ontology ;
+    opla-core:hasPatternName "physician Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:dateOfBirth a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range xsd:date .
+
+kastle:email a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range xsd:string .
+
+kastle:firstName a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range xsd:string .
+
+kastle:gender a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range xsd:string .
+
+kastle:hasPatient a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range kastle:Patient .
+
+kastle:hasSpecialization a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range kastle:Specialization .
+
+kastle:lastName a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range xsd:string .
+
+kastle:phone a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range xsd:string .
+
+kastle:specialty a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range kastle:Specialty .
+
+kastle:worksIn a rdf:Property ;
+    rdfs:domain kastle:Physician ;
+    rdfs:range kastle:Hospital .
+

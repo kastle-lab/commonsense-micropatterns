@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Punishment [label="kastle:Punishment"]
+	Offence [label="kastle:Offence"]
+	Punishment -> Offence [label="kastle:forOffence"]
+	Class [label="kastle:Class"]
+	Class -> Class [label="kastle:hasPurpose"]
+	Authority [label="kastle:Authority"]
+	Authority -> Punishment [label="kastle:imposes"]
+	Class -> Class [label="kastle:isFormOf"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Punishment -> int [label="kastle:severity"]
+}

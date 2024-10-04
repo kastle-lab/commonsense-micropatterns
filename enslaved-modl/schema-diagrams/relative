@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Person -> Person [label="kastle:auntOf"]
+	Person -> Person [label="kastle:cousinOf"]
+	Person -> Person [label="kastle:fatherOf"]
+	Person -> Person [label="kastle:grandFatherOf"]
+	Person -> Person [label="kastle:grandMotherOf"]
+	Person -> Person [label="kastle:motherOf"]
+	Person -> Person [label="kastle:siblingOf"]
+	Person -> Person [label="kastle:uncleOf"]
+}

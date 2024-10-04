@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Style [label="kastle:Style"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Style -> string [label="kastle:field"]
+	Person [label="kastle:Person"]
+	Style -> Person [label="kastle:hasStyle"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Style -> string [label="kastle:period"]
+}

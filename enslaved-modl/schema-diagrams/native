@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Country [label="kastle:Country"]
+	Person -> Country [label="kastle:bornIn"]
+	Locations [label="kastle:Locations"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Locations -> string [label="kastle:countryOfOrigin"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:name"]
+	Native [label="kastle:Native"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Native -> string [label="kastle:nativeLanguage"]
+	Native -> Locations [label="kastle:origin"]
+	Language [label="kastle:Language"]
+	Person -> Language [label="kastle:speaks"]
+}

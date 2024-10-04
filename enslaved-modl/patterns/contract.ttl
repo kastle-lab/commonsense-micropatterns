@@ -1,0 +1,53 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Contract a rdfs:Class ;
+    rdfs:subClassOf kastle:Nc0327303d0b9427fbc0bde474f20a665b1 .
+
+kastle:ContractType a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Signatory a rdfs:Class ;
+    rdfs:subClassOf kastle:Nc0327303d0b9427fbc0bde474f20a665b2 .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/contract> a owl:Ontology ;
+    opla-core:hasPatternName "contract Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:Contract ;
+    rdfs:range xsd:date .
+
+kastle:hasContract a rdf:Property ;
+    rdfs:domain kastle:Signatory ;
+    rdfs:range kastle:Contract .
+
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Contract ;
+    rdfs:range kastle:ContractType .
+
+kastle:parties a rdf:Property ;
+    rdfs:domain kastle:Contract ;
+    rdfs:range kastle:Resource .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:Contract ;
+    rdfs:range xsd:date .
+
+kastle:terms a rdf:Property ;
+    rdfs:domain kastle:Contract ;
+    rdfs:range rdfs:Literal .
+

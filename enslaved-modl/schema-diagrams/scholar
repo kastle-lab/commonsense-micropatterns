@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Scholar [label="kastle:Scholar"]
+	FieldOfStudy [label="kastle:FieldOfStudy"]
+	Scholar -> FieldOfStudy [label="kastle:hasFieldOfStudy"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Scholar -> string [label="kastle:name"]
+	Integer [label="kastle:Integer"]
+	Scholar -> Integer [label="kastle:publishedPapers"]
+	Institution [label="kastle:Institution"]
+	Scholar -> Institution [label="kastle:worksAt"]
+}

@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Room [label="kastle:Room"]
+	Furniture [label="kastle:Furniture"]
+	Room -> Furniture [label="kastle:hasFurniture"]
+	Building [label="kastle:Building"]
+	Room -> Building [label="kastle:isPartOf"]
+}

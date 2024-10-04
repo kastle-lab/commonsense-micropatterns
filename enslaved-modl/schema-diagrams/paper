@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Paper [label="kastle:Paper"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Paper -> string [label="kastle:hasAuthor"]
+	Integer [label="kastle:Integer"]
+	Paper -> Integer [label="kastle:hasPageCount"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Paper -> date [label="kastle:hasPublicationDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Paper -> string [label="kastle:hasTitle"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Paper -> boolean [label="kastle:isPublished"]
+}

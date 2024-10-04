@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Event [label="kastle:Event"]
+	Year [label="kastle:Year"]
+	Event -> Year [label="kastle:endOfYear"]
+	Resource [label="kastle:Resource"]
+	Year [label="kastle:Year"]
+	Resource -> Year [label="kastle:hasYear"]
+}

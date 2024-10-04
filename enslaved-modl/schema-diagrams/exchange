@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Exchange [label="kastle:Exchange"]
+	Datetime [label="kastle:Datetime"]
+	Exchange -> Datetime [label="kastle:hasEndTime"]
+	Item [label="kastle:Item"]
+	Exchange -> Item [label="kastle:hasItem"]
+	Entity [label="kastle:Entity"]
+	Exchange -> Entity [label="kastle:hasParticipant"]
+	Datetime [label="kastle:Datetime"]
+	Exchange -> Datetime [label="kastle:hasStartTime"]
+}

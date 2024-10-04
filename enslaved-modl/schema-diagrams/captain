@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Captain [label="kastle:Captain"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Captain -> string [label="kastle:awardsReceived"]
+	Integer [label="kastle:Integer"]
+	Captain -> Integer [label="kastle:experience"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Captain -> string [label="kastle:name"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Captain -> string [label="kastle:rank"]
+	Integer [label="kastle:Integer"]
+	Captain -> Integer [label="kastle:shipsCommanded"]
+}

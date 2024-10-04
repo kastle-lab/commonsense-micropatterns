@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Man [label="kastle:Man"]
+	Integer [label="kastle:Integer"]
+	Man -> Integer [label="kastle:hasAge"]
+	Integer [label="kastle:Integer"]
+	Man -> Integer [label="kastle:hasChildren"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Man -> float [label="kastle:hasHeight"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Man -> string [label="kastle:hasName"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Man -> boolean [label="kastle:isMarried"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Entity [label="kastle:Entity"]
+	InfluenceFactor [label="kastle:InfluenceFactor"]
+	Entity -> InfluenceFactor [label="kastle:affectedBy"]
+	Influence [label="kastle:Influence"]
+	Entity -> Influence [label="kastle:hasInfluence"]
+	Influence [label="kastle:Influence"]
+	InfluenceFactor [label="kastle:InfluenceFactor"]
+	Influence -> InfluenceFactor [label="kastle:hasInfluenceFactor"]
+	InfluencePower [label="kastle:InfluencePower"]
+	Entity -> InfluencePower [label="kastle:hasInfluencePower"]
+	Entity -> Influence [label="kastle:influencedBy"]
+}

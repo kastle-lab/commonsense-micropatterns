@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Girl [label="kastle:Girl"]
+	Integer [label="kastle:Integer"]
+	Girl -> Integer [label="kastle:hasAge"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Girl -> string [label="kastle:hasName"]
+	Person [label="kastle:Person"]
+	Girl -> Person [label="kastle:isChildOf"]
+	School [label="kastle:School"]
+	Girl -> School [label="kastle:isStudentAt"]
+}

@@ -1,0 +1,43 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Audience a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Speaker a rdfs:Class .
+
+kastle:Topic a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/speaker> a owl:Ontology ;
+    opla-core:hasPatternName "speaker Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Speaker ;
+    rdfs:range kastle:Integer .
+
+kastle:hasAudience a rdf:Property ;
+    rdfs:domain kastle:Speaker ;
+    rdfs:range kastle:Audience .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Speaker ;
+    rdfs:range xsd:string .
+
+kastle:hasTopic a rdf:Property ;
+    rdfs:domain kastle:Speaker ;
+    rdfs:range kastle:Topic .
+

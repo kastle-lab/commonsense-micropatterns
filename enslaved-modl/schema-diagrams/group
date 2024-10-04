@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Group [label="kastle:Group"]
+	Person [label="kastle:Person"]
+	Group -> Person [label="kastle:hasMember"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Group -> int [label="kastle:memberCount"]
+	Nd3d404c3d0fe4e05bfe67f9531eb5770b1 [label="kastle:Nd3d404c3d0fe4e05bfe67f9531eb5770b1"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Nd3d404c3d0fe4e05bfe67f9531eb5770b1 -> string [label="kastle:name"]
+}

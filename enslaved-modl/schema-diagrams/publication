@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Publication [label="kastle:Publication"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Publication -> string [label="kastle:author"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Publication -> string [label="kastle:isbn"]
+	Integer [label="kastle:Integer"]
+	Publication -> Integer [label="kastle:pageCount"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Publication -> string [label="kastle:publisher"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Publication -> string [label="kastle:title"]
+	Integer [label="kastle:Integer"]
+	Publication -> Integer [label="kastle:year"]
+}

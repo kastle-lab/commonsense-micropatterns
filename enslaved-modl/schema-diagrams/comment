@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Comment [label="kastle:Comment"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Comment -> string [label="kastle:hasAuthor"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Comment -> string [label="kastle:hasContent"]
+	Datetime [label="kastle:Datetime"]
+	Comment -> Datetime [label="kastle:hasDate"]
+	Anyuri [label="kastle:Anyuri"]
+	Comment -> Anyuri [label="kastle:isCommentedOn"]
+}

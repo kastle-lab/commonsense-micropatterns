@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Torso [label="kastle:Torso"]
+	Arm [label="kastle:Arm"]
+	Torso -> Arm [label="kastle:hasPart"]
+	Arm [label="kastle:Arm"]
+	Arm -> Torso [label="kastle:isPartOf"]
+}

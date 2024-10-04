@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Agent [label="kastle:Agent"]
+	Environment [label="kastle:Environment"]
+	Agent -> Environment [label="kastle:actsIn"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Agent -> Literal [label="kastle:hasAbility"]
+	Action [label="kastle:Action"]
+	Agent -> Action [label="kastle:performs"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Agent -> Literal [label="kastle:worksIn"]
+}

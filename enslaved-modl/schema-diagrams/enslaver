@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	N3e77a9a39e704894af3d5867ca88d92bb1 [label="kastle:N3e77a9a39e704894af3d5867ca88d92bb1"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	N3e77a9a39e704894af3d5867ca88d92bb1 -> string [label="kastle:hasName"]
+	Enslaver [label="kastle:Enslaver"]
+	Slave [label="kastle:Slave"]
+	Enslaver -> Slave [label="kastle:hasSlave"]
+}

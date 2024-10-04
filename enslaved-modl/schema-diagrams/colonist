@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Colonist [label="kastle:Colonist"]
+	Country [label="kastle:Country"]
+	Colonist -> Country [label="kastle:originCountry"]
+	Colony [label="kastle:Colony"]
+	Colonist -> Colony [label="kastle:settledIn"]
+}

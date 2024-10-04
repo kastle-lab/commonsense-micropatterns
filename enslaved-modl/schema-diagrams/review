@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Review [label="kastle:Review"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Review -> string [label="kastle:content"]
+	User [label="kastle:User"]
+	Review -> User [label="kastle:postedBy"]
+	Integer [label="kastle:Integer"]
+	Review -> Integer [label="kastle:rating"]
+	Product [label="kastle:Product"]
+	Review -> Product [label="kastle:reviewOf"]
+}

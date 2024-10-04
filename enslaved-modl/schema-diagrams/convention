@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Convention [label="kastle:Convention"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Convention -> date [label="kastle:date"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Convention -> string [label="kastle:location"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Convention -> string [label="kastle:name"]
+	Organizer [label="kastle:Organizer"]
+	Convention -> Organizer [label="kastle:organizer"]
+	Organizer [label="kastle:Organizer"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Organizer -> string [label="kastle:organizerName"]
+}

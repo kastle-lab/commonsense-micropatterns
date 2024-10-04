@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Building [label="kastle:Building"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Building -> string [label="kastle:hasAddress"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Building -> date [label="kastle:hasConstructionDate"]
+	Integer [label="kastle:Integer"]
+	Building -> Integer [label="kastle:hasFloors"]
+	Integer [label="kastle:Integer"]
+	Building -> Integer [label="kastle:hasNumberOfFloors"]
+	Person [label="kastle:Person"]
+	Building -> Person [label="kastle:hasOwner"]
+	BuildingType [label="kastle:BuildingType"]
+	Building -> BuildingType [label="kastle:hasType"]
+}

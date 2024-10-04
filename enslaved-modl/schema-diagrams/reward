@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Reward [label="kastle:Reward"]
+	Recipient [label="kastle:Recipient"]
+	Reward -> Recipient [label="kastle:hasRecipient"]
+	RewardType [label="kastle:RewardType"]
+	Reward -> RewardType [label="kastle:hasRewardType"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Reward -> decimal [label="kastle:hasValue"]
+}

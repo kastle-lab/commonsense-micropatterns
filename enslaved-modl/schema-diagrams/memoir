@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Memoir [label="kastle:Memoir"]
+	Person [label="kastle:Person"]
+	Memoir -> Person [label="kastle:author"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Memoir -> date [label="kastle:publishedYear"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Memoir -> string [label="kastle:title"]
+}

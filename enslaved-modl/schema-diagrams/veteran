@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Veteran [label="kastle:Veteran"]
+	MilitaryRank [label="kastle:MilitaryRank"]
+	Veteran -> MilitaryRank [label="kastle:hasRank"]
+	Medal [label="kastle:Medal"]
+	Veteran -> Medal [label="kastle:hasReceivedMedal"]
+	War [label="kastle:War"]
+	Veteran -> War [label="kastle:hasServedInWar"]
+	Integer [label="kastle:Integer"]
+	Veteran -> Integer [label="kastle:hasServiceLength"]
+}

@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Prison [label="kastle:Prison"]
+	Inmate [label="kastle:Inmate"]
+	Prison -> Inmate [label="kastle:hasInmate"]
+	SecurityLevel [label="kastle:SecurityLevel"]
+	Prison -> SecurityLevel [label="kastle:hasSecurityLevel"]
+	Guard [label="kastle:Guard"]
+	Prison -> Guard [label="kastle:isGuarded"]
+	Inmate [label="kastle:Inmate"]
+	Inmate -> Prison [label="kastle:isImprisoned"]
+	Inmate -> Prison [label="kastle:isInmateOf"]
+}

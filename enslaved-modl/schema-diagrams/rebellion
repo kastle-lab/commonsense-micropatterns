@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Rebellion [label="kastle:Rebellion"]
+	Integer [label="kastle:Integer"]
+	Rebellion -> Integer [label="kastle:endYear"]
+	Cause [label="kastle:Cause"]
+	Rebellion -> Cause [label="kastle:hasCause"]
+	Outcome [label="kastle:Outcome"]
+	Rebellion -> Outcome [label="kastle:hasOutcome"]
+	Rebel [label="kastle:Rebel"]
+	Rebellion -> Rebel [label="kastle:hasRebel"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Rebellion -> boolean [label="kastle:leadToRevolution"]
+	Integer [label="kastle:Integer"]
+	Rebellion -> Integer [label="kastle:startYear"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Student [label="kastle:Student"]
+	University [label="kastle:University"]
+	Student -> University [label="kastle:attends"]
+	Course [label="kastle:Course"]
+	Student -> Course [label="kastle:enrolls"]
+	GPA [label="kastle:GPA"]
+	Student -> GPA [label="kastle:hasGPA"]
+	Major [label="kastle:Major"]
+	Student -> Major [label="kastle:hasMajor"]
+	Minor [label="kastle:Minor"]
+	Student -> Minor [label="kastle:hasMinor"]
+}

@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Violence [label="kastle:Violence"]
+	DateTime [label="kastle:DateTime"]
+	Violence -> DateTime [label="kastle:hasDateTime"]
+	Location [label="kastle:Location"]
+	Violence -> Location [label="kastle:hasLocation"]
+	Person [label="kastle:Person"]
+	Violence -> Person [label="kastle:isDirectTowards"]
+	Person [label="kastle:Person"]
+	Violence -> Person [label="kastle:isExecutedBy"]
+}

@@ -1,0 +1,35 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Area a rdfs:Class .
+
+kastle:Nfd2d608153154bdfae3c4153c1c73b17b1 a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/area> a owl:Ontology ;
+    opla-core:hasPatternName "area Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:calculateArea a rdf:Property ;
+    rdfs:domain kastle:Nfd2d608153154bdfae3c4153c1c73b17b1 ;
+    rdfs:range xsd:float .
+
+kastle:height a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range xsd:float .
+
+kastle:width a rdf:Property ;
+    rdfs:domain kastle:Area ;
+    rdfs:range xsd:float .
+

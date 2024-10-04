@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Skill [label="kastle:Skill"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Skill -> string [label="kastle:hasName"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Skill -> string [label="kastle:hasProficiency"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Skill -> string [label="kastle:hasSkillLevel"]
+	Skill -> Skill [label="kastle:isRelatedTo"]
+	SkillOwner [label="kastle:SkillOwner"]
+	SkillOwner -> Skill [label="kastle:ownsSkill"]
+	Skill -> Skill [label="kastle:relatedTo"]
+	Field [label="kastle:Field"]
+	Skill -> Field [label="kastle:usedInField"]
+}

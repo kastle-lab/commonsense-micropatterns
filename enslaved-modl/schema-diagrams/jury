@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Jury [label="kastle:Jury"]
+	Juror [label="kastle:Juror"]
+	Jury -> Juror [label="kastle:containsJuror"]
+	Juror [label="kastle:Juror"]
+	Juror -> Jury [label="kastle:isJurorIn"]
+	Integer [label="kastle:Integer"]
+	Juror -> Integer [label="kastle:jurorDutyDays"]
+	Seq [label="kastle:Seq"]
+	Jury -> Seq [label="kastle:jurorSelectionProcess"]
+	Integer [label="kastle:Integer"]
+	Jury -> Integer [label="kastle:jurySizeOf"]
+}

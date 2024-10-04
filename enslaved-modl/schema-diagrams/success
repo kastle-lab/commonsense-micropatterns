@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Success [label="kastle:Success"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Success -> Literal [label="kastle:hasFactor"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Success -> decimal [label="kastle:hasMetric"]
+	Datetime [label="kastle:Datetime"]
+	Success -> Datetime [label="kastle:hasTimeframe"]
+}

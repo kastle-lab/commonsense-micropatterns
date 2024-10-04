@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	RailLine [label="kastle:RailLine"]
+	Station [label="kastle:Station"]
+	RailLine -> Station [label="kastle:connectsStation"]
+	Railroad [label="kastle:Railroad"]
+	Station [label="kastle:Station"]
+	Railroad -> Station [label="kastle:hasStation"]
+	RailroadTrack [label="kastle:RailroadTrack"]
+	Railroad -> RailroadTrack [label="kastle:hasTrack"]
+	Train [label="kastle:Train"]
+	Train -> Railroad [label="kastle:operatesOn"]
+	Train -> RailLine [label="kastle:runsOn"]
+	Station [label="kastle:Station"]
+	Station -> Railroad [label="kastle:servedBy"]
+	Train -> Station [label="kastle:stopsAt"]
+}

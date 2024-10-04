@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Professor [label="kastle:Professor"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Professor -> string [label="kastle:hasFirstName"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Professor -> string [label="kastle:hasLastName"]
+	Subject [label="kastle:Subject"]
+	Professor -> Subject [label="kastle:teachesSubject"]
+	Department [label="kastle:Department"]
+	Professor -> Department [label="kastle:worksIn"]
+}

@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Human [label="kastle:Human"]
+	Integer [label="kastle:Integer"]
+	Human -> Integer [label="kastle:hasAge"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Human -> string [label="kastle:hasName"]
+	Woman [label="kastle:Woman"]
+	Woman -> Human [label="kastle:isMotherOf"]
+}

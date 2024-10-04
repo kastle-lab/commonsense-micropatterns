@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Integer [label="kastle:Integer"]
+	Person -> Integer [label="kastle:age"]
+	Place [label="kastle:Place"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Place -> string [label="kastle:city"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Place -> string [label="kastle:country"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Person -> boolean [label="kastle:isMarried"]
+	Person -> Place [label="kastle:livesIn"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:name"]
+}

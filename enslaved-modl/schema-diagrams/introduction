@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Part [label="kastle:Part"]
+	Greeting [label="kastle:Greeting"]
+	Part -> Greeting [label="kastle:hasGreeting"]
+	Document [label="kastle:Document"]
+	Introduction [label="kastle:Introduction"]
+	Document -> Introduction [label="kastle:hasIntroduction"]
+	Overview [label="kastle:Overview"]
+	Part -> Overview [label="kastle:hasOverview"]
+	Introduction [label="kastle:Introduction"]
+	Introduction -> Part [label="kastle:hasPart"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Introduction -> Literal [label="kastle:size"]
+}

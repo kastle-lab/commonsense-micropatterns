@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Item [label="kastle:Item"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Item -> decimal [label="kastle:hasPrice"]
+	Invoice [label="kastle:Invoice"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Invoice -> decimal [label="kastle:hasTotal"]
+	Item -> Invoice [label="kastle:isItemOf"]
+}

@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Color [label="kastle:Color"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Color -> int [label="kastle:hasBlue"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Color -> int [label="kastle:hasGreen"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Color -> string [label="kastle:hasHexCode"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Color -> string [label="kastle:hasRGBCode"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Color -> int [label="kastle:hasRed"]
+	Color -> Color [label="kastle:isPrimaryColor"]
+}

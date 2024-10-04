@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Kingdom [label="kastle:Kingdom"]
+	Castle [label="kastle:Castle"]
+	Kingdom -> Castle [label="kastle:hasCastle"]
+	King [label="kastle:King"]
+	Kingdom -> King [label="kastle:hasKing"]
+	Prince [label="kastle:Prince"]
+	Kingdom -> Prince [label="kastle:hasPrince"]
+	Princess [label="kastle:Princess"]
+	Kingdom -> Princess [label="kastle:hasPrincess"]
+	Queen [label="kastle:Queen"]
+	Kingdom -> Queen [label="kastle:hasQueen"]
+}

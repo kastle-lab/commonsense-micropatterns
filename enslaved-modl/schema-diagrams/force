@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Force [label="kastle:Force"]
+	XMLLiteral [label="kastle:XMLLiteral"]
+	Force -> XMLLiteral [label="kastle:hasDirection"]
+	XMLLiteral [label="kastle:XMLLiteral"]
+	Force -> XMLLiteral [label="kastle:hasMagnitude"]
+	XMLLiteral [label="kastle:XMLLiteral"]
+	Force -> XMLLiteral [label="kastle:isTypeOf"]
+}

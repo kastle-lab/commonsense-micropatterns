@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Food [label="kastle:Food"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Food -> decimal [label="kastle:calories"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Food -> boolean [label="kastle:containsFat"]
+	FoodItem [label="kastle:FoodItem"]
+	Ingredient [label="kastle:Ingredient"]
+	FoodItem -> Ingredient [label="kastle:containsIngredient"]
+	FoodGroup [label="kastle:FoodGroup"]
+	FoodGroup -> FoodItem [label="kastle:hasFoodItem"]
+	NutritionInfo [label="kastle:NutritionInfo"]
+	FoodItem -> NutritionInfo [label="kastle:hasNutritionInfo"]
+	Recipe [label="kastle:Recipe"]
+	FoodItem -> Recipe [label="kastle:hasRecipe"]
+}

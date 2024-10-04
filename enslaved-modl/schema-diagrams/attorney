@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Attorney [label="kastle:Attorney"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Attorney -> boolean [label="kastle:hasAttorneyLicense"]
+	PracticeArea [label="kastle:PracticeArea"]
+	Attorney -> PracticeArea [label="kastle:hasPracticeArea"]
+	Integer [label="kastle:Integer"]
+	Attorney -> Integer [label="kastle:hasYearsOfExperience"]
+}

@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Location [label="kastle:Location"]
+	City [label="kastle:City"]
+	Location -> City [label="kastle:hasCity"]
+	Coordinates [label="kastle:Coordinates"]
+	Location -> Coordinates [label="kastle:hasCoordinates"]
+	Country [label="kastle:Country"]
+	Location -> Country [label="kastle:hasCountry"]
+	Street [label="kastle:Street"]
+	Location -> Street [label="kastle:hasStreet"]
+}

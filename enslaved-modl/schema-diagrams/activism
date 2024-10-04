@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Activism [label="kastle:Activism"]
+	Issue [label="kastle:Issue"]
+	Activism -> Issue [label="kastle:isFocusedOn"]
+	Location [label="kastle:Location"]
+	Activism -> Location [label="kastle:isLocatedIn"]
+	Activist [label="kastle:Activist"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Activist -> string [label="kastle:name"]
+	Activist -> Activism [label="kastle:participatesIn"]
+}

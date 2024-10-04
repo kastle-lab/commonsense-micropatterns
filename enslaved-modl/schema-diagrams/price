@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Price [label="kastle:Price"]
+	Double [label="kastle:Double"]
+	Price -> Double [label="kastle:amount"]
+	Product [label="kastle:Product"]
+	Product -> Price [label="kastle:hasPrice"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Price -> string [label="kastle:inCurrency"]
+}

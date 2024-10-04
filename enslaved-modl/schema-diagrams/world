@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	World [label="kastle:World"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	World -> Literal [label="kastle:areaInSquareKm"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	World -> Literal [label="kastle:population"]
+}

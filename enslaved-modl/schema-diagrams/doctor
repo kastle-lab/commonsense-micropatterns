@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Doctor [label="kastle:Doctor"]
+	MedicalField [label="kastle:MedicalField"]
+	Doctor -> MedicalField [label="kastle:hasSpecialization"]
+	Hospital [label="kastle:Hospital"]
+	Doctor -> Hospital [label="kastle:worksAt"]
+}

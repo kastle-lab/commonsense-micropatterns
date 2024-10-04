@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Drag [label="kastle:Drag"]
+	DragMakeup [label="kastle:DragMakeup"]
+	Drag -> DragMakeup [label="kastle:applies"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Drag -> string [label="kastle:hasDragName"]
+	DragShow [label="kastle:DragShow"]
+	DragShow -> Drag [label="kastle:performer"]
+	DragCostume [label="kastle:DragCostume"]
+	Drag -> DragCostume [label="kastle:wears"]
+}

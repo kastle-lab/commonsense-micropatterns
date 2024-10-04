@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Favor [label="kastle:Favor"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Favor -> string [label="kastle:description"]
+	Individual [label="kastle:Individual"]
+	Individual -> Favor [label="kastle:performs"]
+	Individual -> Favor [label="kastle:receives"]
+}

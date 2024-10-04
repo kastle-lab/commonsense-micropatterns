@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Event [label="kastle:Event"]
+	Person -> Event [label="kastle:causes"]
+	Change [label="kastle:Change"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Change -> decimal [label="kastle:hasChangeMagnitude"]
+	ChangeType [label="kastle:ChangeType"]
+	Change -> ChangeType [label="kastle:hasChangeType"]
+	Datetime [label="kastle:Datetime"]
+	Change -> Datetime [label="kastle:occursAt"]
+	Person -> Change [label="kastle:undergoes"]
+}

@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	PopulationCensus [label="kastle:PopulationCensus"]
+	Country [label="kastle:Country"]
+	PopulationCensus -> Country [label="kastle:conductedIn"]
+	Country [label="kastle:Country"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Country -> string [label="kastle:name"]
+	Integer [label="kastle:Integer"]
+	PopulationCensus -> Integer [label="kastle:totalPopulation"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	PopulationCensus -> date [label="kastle:year"]
+}

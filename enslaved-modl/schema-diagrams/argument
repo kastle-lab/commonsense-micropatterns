@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Argument [label="kastle:Argument"]
+	Conclusion [label="kastle:Conclusion"]
+	Argument -> Conclusion [label="kastle:hasConclusion"]
+	Premise [label="kastle:Premise"]
+	Argument -> Premise [label="kastle:hasPremise"]
+}

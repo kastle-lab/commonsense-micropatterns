@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	RescueOperation [label="kastle:RescueOperation"]
+	RescueTeam [label="kastle:RescueTeam"]
+	RescueOperation -> RescueTeam [label="kastle:conductedBy"]
+	Emergency [label="kastle:Emergency"]
+	RescueOperation -> Emergency [label="kastle:forEmergency"]
+	Victim [label="kastle:Victim"]
+	RescueOperation -> Victim [label="kastle:hasVictim"]
+}

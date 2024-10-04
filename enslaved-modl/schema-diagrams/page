@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Page [label="kastle:Page"]
+	Author [label="kastle:Author"]
+	Page -> Author [label="kastle:hasAuthor"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Page -> string [label="kastle:hasContent"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Page -> date [label="kastle:hasDate"]
+	Author [label="kastle:Author"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Author -> string [label="kastle:hasName"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Page -> string [label="kastle:hasTitle"]
+}

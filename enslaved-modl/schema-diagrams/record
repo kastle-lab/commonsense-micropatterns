@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Record [label="kastle:Record"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Record -> string [label="kastle:hasAuthor"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Record -> Literal [label="kastle:hasContent"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Record -> date [label="kastle:hasCreationDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Record -> string [label="kastle:hasIdentifier"]
+}

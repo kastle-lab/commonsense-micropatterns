@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Birth [label="kastle:Birth"]
+	Person -> Birth [label="kastle:hasBirth"]
+	Birth [label="kastle:Birth"]
+	BirthDate [label="kastle:BirthDate"]
+	Birth -> BirthDate [label="kastle:hasBirthDate"]
+	BirthPlace [label="kastle:BirthPlace"]
+	Birth -> BirthPlace [label="kastle:hasBirthPlace"]
+	Father [label="kastle:Father"]
+	Birth -> Father [label="kastle:hasFather"]
+	Mother [label="kastle:Mother"]
+	Birth -> Mother [label="kastle:hasMother"]
+}

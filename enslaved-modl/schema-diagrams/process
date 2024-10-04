@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Process [label="kastle:Process"]
+	Datetime [label="kastle:Datetime"]
+	Process -> Datetime [label="kastle:endsAt"]
+	Input [label="kastle:Input"]
+	Process -> Input [label="kastle:hasInput"]
+	Output [label="kastle:Output"]
+	Process -> Output [label="kastle:hasOutput"]
+	Datetime [label="kastle:Datetime"]
+	Process -> Datetime [label="kastle:startsAt"]
+}

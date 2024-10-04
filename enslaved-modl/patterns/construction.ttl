@@ -1,0 +1,45 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Construction a rdfs:Class .
+
+kastle:ConstructionMaterials a rdfs:Class .
+
+kastle:ConstructionWorker a rdfs:Class .
+
+kastle:Contractor a rdfs:Class .
+
+kastle:Material a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/construction> a owl:Ontology ;
+    opla-core:hasPatternName "construction Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:employedIn a rdf:Property ;
+    rdfs:domain kastle:Material ;
+    rdfs:range kastle:Construction .
+
+kastle:manages a rdf:Property ;
+    rdfs:domain kastle:Contractor ;
+    rdfs:range kastle:Construction .
+
+kastle:usesMaterial a rdf:Property ;
+    rdfs:domain kastle:Construction ;
+    rdfs:range kastle:ConstructionMaterials .
+
+kastle:worksOn a rdf:Property ;
+    rdfs:domain kastle:ConstructionWorker ;
+    rdfs:range kastle:Construction .
+

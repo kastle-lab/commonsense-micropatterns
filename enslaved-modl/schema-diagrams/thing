@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Thing [label="kastle:Thing"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Thing -> Literal [label="kastle:color"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Thing -> Literal [label="kastle:material"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Thing -> Literal [label="kastle:shape"]
+}

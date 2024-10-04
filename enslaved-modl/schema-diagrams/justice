@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Case [label="kastle:Case"]
+	Principle [label="kastle:Principle"]
+	Case -> Principle [label="kastle:appliesPrinciple"]
+	LegalSystem [label="kastle:LegalSystem"]
+	Court [label="kastle:Court"]
+	LegalSystem -> Court [label="kastle:hasCourt"]
+	Court [label="kastle:Court"]
+	Judge [label="kastle:Judge"]
+	Court -> Judge [label="kastle:hasJudge"]
+	Lawyer [label="kastle:Lawyer"]
+	Court -> Lawyer [label="kastle:hasLawyer"]
+	Justice [label="kastle:Justice"]
+	Justice -> LegalSystem [label="kastle:hasLegalSystem"]
+	Court -> Case [label="kastle:hearsCase"]
+}

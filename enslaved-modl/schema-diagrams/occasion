@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Occasion [label="kastle:Occasion"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Occasion -> date [label="kastle:date"]
+	Person [label="kastle:Person"]
+	Occasion -> Person [label="kastle:hosts"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Occasion -> string [label="kastle:location"]
+}

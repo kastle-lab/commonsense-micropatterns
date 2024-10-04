@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Practitioner [label="kastle:Practitioner"]
+	TypeOfBondage [label="kastle:TypeOfBondage"]
+	Practitioner -> TypeOfBondage [label="kastle:specializesIn"]
+	Bondage [label="kastle:Bondage"]
+	Practitioner -> Bondage [label="kastle:usesBondage"]
+}

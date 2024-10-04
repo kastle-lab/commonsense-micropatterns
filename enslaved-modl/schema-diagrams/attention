@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Attention [label="kastle:Attention"]
+	Focus [label="kastle:Focus"]
+	Attention -> Focus [label="kastle:focus"]
+	NonNegativeInteger [label="kastle:NonNegativeInteger"]
+	Attention -> NonNegativeInteger [label="kastle:focusDuration"]
+	NonNegativeInteger [label="kastle:NonNegativeInteger"]
+	Attention -> NonNegativeInteger [label="kastle:focusIntensity"]
+}

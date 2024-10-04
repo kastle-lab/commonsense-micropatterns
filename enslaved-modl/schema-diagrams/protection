@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Protection [label="kastle:Protection"]
+	SecuritySystem [label="kastle:SecuritySystem"]
+	Protection -> SecuritySystem [label="kastle:isImplementedBy"]
+	SecuritySystem [label="kastle:SecuritySystem"]
+	SecuritySystem -> Protection [label="kastle:isUsedFor"]
+}

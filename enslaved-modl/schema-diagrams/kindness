@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	ActOfKindness [label="kastle:ActOfKindness"]
+	Person [label="kastle:Person"]
+	ActOfKindness -> Person [label="kastle:performedBy"]
+	Person [label="kastle:Person"]
+	Person -> ActOfKindness [label="kastle:receivesKindness"]
+}

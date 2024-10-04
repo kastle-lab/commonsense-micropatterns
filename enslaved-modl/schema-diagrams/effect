@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Effect [label="kastle:Effect"]
+	Resource [label="kastle:Resource"]
+	Effect -> Resource [label="kastle:cause"]
+	Duration [label="kastle:Duration"]
+	Effect -> Duration [label="kastle:duration"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Effect -> float [label="kastle:intensity"]
+	Resource [label="kastle:Resource"]
+	Effect -> Resource [label="kastle:result"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Effect -> Literal [label="kastle:type"]
+}

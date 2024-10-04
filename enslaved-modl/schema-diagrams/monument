@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Monument [label="kastle:Monument"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Monument -> float [label="kastle:height"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Location [label="kastle:Location"]
+	Monument -> Location [label="kastle:location"]
+	MonumentType [label="kastle:MonumentType"]
+	Monument -> MonumentType [label="kastle:monumentType"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Monument -> string [label="kastle:name"]
+	Integer [label="kastle:Integer"]
+	Monument -> Integer [label="kastle:yearBuilt"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Monument -> date [label="kastle:yearEstablished"]
+}

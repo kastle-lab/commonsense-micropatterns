@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Abolition [label="kastle:Abolition"]
+	Slavery [label="kastle:Slavery"]
+	Abolition -> Slavery [label="kastle:abolishedSlavery"]
+	Slave [label="kastle:Slave"]
+	Master [label="kastle:Master"]
+	Slave -> Master [label="kastle:hasMaster"]
+	UndergroundRailroad [label="kastle:UndergroundRailroad"]
+	UndergroundRailroad -> Slave [label="kastle:helpedEscape"]
+	SlaveTrade [label="kastle:SlaveTrade"]
+	Slave -> SlaveTrade [label="kastle:involvedInTrade"]
+	Master [label="kastle:Master"]
+	Master -> Slave [label="kastle:ownsSlave"]
+	SlaveTrade [label="kastle:SlaveTrade"]
+	Master -> SlaveTrade [label="kastle:tradedSlaves"]
+}

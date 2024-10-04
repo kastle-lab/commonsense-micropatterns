@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Scene [label="kastle:Scene"]
+	Character [label="kastle:Character"]
+	Scene -> Character [label="kastle:hasCharacter"]
+	Event [label="kastle:Event"]
+	Scene -> Event [label="kastle:hasEvent"]
+	Location [label="kastle:Location"]
+	Scene -> Location [label="kastle:hasLocation"]
+}

@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Day [label="kastle:Day"]
+	TimePart [label="kastle:TimePart"]
+	Day -> TimePart [label="kastle:hasPart"]
+}

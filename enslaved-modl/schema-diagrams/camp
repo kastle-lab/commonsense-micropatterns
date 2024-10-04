@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Camp [label="kastle:Camp"]
+	Integer [label="kastle:Integer"]
+	Camp -> Integer [label="kastle:campCapacity"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Camp -> string [label="kastle:campId"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Camp -> string [label="kastle:campLocation"]
+	CampType [label="kastle:CampType"]
+	Camp -> CampType [label="kastle:campType"]
+}

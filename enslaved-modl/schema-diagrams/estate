@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Estate [label="kastle:Estate"]
+	RealEstate [label="kastle:RealEstate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Location [label="kastle:Location"]
+	RealEstate -> Location [label="kastle:hasLocation"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Owner [label="kastle:Owner"]
+	RealEstate -> Owner [label="kastle:hasOwner"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	RealEstate -> decimal [label="kastle:hasValue"]
+}

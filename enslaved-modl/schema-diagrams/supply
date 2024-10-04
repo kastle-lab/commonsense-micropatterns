@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Supplier [label="kastle:Supplier"]
+	SupplyItem [label="kastle:SupplyItem"]
+	Supplier -> SupplyItem [label="kastle:supplies"]
+}

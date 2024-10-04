@@ -1,0 +1,8 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Person -> Person [label="kastle:hasFather"]
+	Grandfather [label="kastle:Grandfather"]
+	Person -> Person [label="kastle:hasGrandfather"]
+}

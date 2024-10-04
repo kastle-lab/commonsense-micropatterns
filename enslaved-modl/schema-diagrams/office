@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Office [label="kastle:Office"]
+	Employee [label="kastle:Employee"]
+	Office -> Employee [label="kastle:hasEmployee"]
+	Furniture [label="kastle:Furniture"]
+	Office -> Furniture [label="kastle:hasFurniture"]
+}

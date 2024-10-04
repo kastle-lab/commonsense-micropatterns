@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Parent [label="kastle:Parent"]
+	Child [label="kastle:Child"]
+	Parent -> Child [label="kastle:hasChild"]
+	Child [label="kastle:Child"]
+	Child -> Parent [label="kastle:hasParent"]
+}

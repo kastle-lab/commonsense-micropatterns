@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	News [label="kastle:News"]
+	Journalist [label="kastle:Journalist"]
+	News -> Journalist [label="kastle:author"]
+	Article [label="kastle:Article"]
+	Journalist [label="kastle:Journalist"]
+	Article -> Journalist [label="kastle:hasJournalist"]
+	Publication [label="kastle:Publication"]
+	News -> Publication [label="kastle:publishedIn"]
+	Publication [label="kastle:Publication"]
+	Article -> Publication [label="kastle:publisher"]
+	Article -> News [label="kastle:source"]
+}

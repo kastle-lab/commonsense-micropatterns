@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Child [label="kastle:Child"]
+	Person [label="kastle:Person"]
+	Mother [label="kastle:Mother"]
+	Person -> Mother [label="kastle:hasMother"]
+	Parent [label="kastle:Parent"]
+	Child -> Parent [label="kastle:hasParent"]
+}

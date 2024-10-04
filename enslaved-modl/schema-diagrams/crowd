@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Crowd [label="kastle:Crowd"]
+	Integer [label="kastle:Integer"]
+	Crowd -> Integer [label="kastle:size"]
+}

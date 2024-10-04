@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Thing [label="kastle:Thing"]
+	Belief [label="kastle:Belief"]
+	Thing -> Belief [label="kastle:hasBelief"]
+	Belief [label="kastle:Belief"]
+	Believer [label="kastle:Believer"]
+	Belief -> Believer [label="kastle:hasBeliever"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Belief -> string [label="kastle:hasContent"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Belief -> string [label="kastle:hasEvidence"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Belief -> decimal [label="kastle:hasStrength"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Belief -> boolean [label="kastle:hasTruthValue"]
+}

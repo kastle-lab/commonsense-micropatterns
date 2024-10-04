@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Decision [label="kastle:Decision"]
+	DecisionMaker [label="kastle:DecisionMaker"]
+	Decision -> DecisionMaker [label="kastle:hasDecisionMaker"]
+	Option [label="kastle:Option"]
+	Decision -> Option [label="kastle:hasOption"]
+	Outcome [label="kastle:Outcome"]
+	Decision -> Outcome [label="kastle:hasOutcome"]
+}

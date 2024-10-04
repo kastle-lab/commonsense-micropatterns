@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Person -> int [label="kastle:age"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:gender"]
+	Thing [label="kastle:Thing"]
+	Instance [label="kastle:Instance"]
+	Thing -> Instance [label="kastle:hasInstance"]
+	Instance [label="kastle:Instance"]
+	Datetime [label="kastle:Datetime"]
+	Instance -> Datetime [label="kastle:hasInstanceTime"]
+	Instance -> Thing [label="kastle:isInstanceOf"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:name"]
+}

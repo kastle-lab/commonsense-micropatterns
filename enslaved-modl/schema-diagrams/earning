@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Earning [label="kastle:Earning"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Earning -> decimal [label="kastle:amount"]
+	Person [label="kastle:Person"]
+	Earning -> Person [label="kastle:earner"]
+	Currency [label="kastle:Currency"]
+	Earning -> Currency [label="kastle:hasCurrency"]
+}

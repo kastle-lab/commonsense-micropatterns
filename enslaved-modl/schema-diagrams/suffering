@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Suffering [label="kastle:Suffering"]
+	Cause [label="kastle:Cause"]
+	Suffering -> Cause [label="kastle:hasCause"]
+	Duration [label="kastle:Duration"]
+	Suffering -> Duration [label="kastle:hasDuration"]
+	Intensity [label="kastle:Intensity"]
+	Suffering -> Intensity [label="kastle:hasIntensity"]
+	Response [label="kastle:Response"]
+	Suffering -> Response [label="kastle:hasResponse"]
+}

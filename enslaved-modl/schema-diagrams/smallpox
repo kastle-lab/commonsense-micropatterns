@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Smallpox [label="kastle:Smallpox"]
+	VariolaVirus [label="kastle:VariolaVirus"]
+	Smallpox -> VariolaVirus [label="kastle:causedBy"]
+	Eradication [label="kastle:Eradication"]
+	Smallpox -> Eradication [label="kastle:eradicatedBy"]
+	Vaccine [label="kastle:Vaccine"]
+	Smallpox -> Vaccine [label="kastle:preventedBy"]
+}

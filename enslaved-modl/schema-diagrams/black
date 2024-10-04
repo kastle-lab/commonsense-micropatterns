@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Black [label="kastle:Black"]
+	Absorbency [label="kastle:Absorbency"]
+	Black -> Absorbency [label="kastle:hasAbsorbency"]
+	Thing [label="kastle:Thing"]
+	Color [label="kastle:Color"]
+	Thing -> Color [label="kastle:hasColor"]
+	Thing -> Black [label="kastle:isBlack"]
+}

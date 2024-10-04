@@ -1,0 +1,12 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Event [label="kastle:Event"]
+	Consequence [label="kastle:Consequence"]
+	Event -> Consequence [label="kastle:causes"]
+	Consequence [label="kastle:Consequence"]
+	Cause [label="kastle:Cause"]
+	Event -> Event [label="kastle:hasCause"]
+	Cause [label="kastle:Cause"]
+	Cause -> Event [label="kastle:isCauseOf"]
+}

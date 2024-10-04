@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Prayer [label="kastle:Prayer"]
+	ReligiousDenomination [label="kastle:ReligiousDenomination"]
+	Prayer -> ReligiousDenomination [label="kastle:hasDenomination"]
+	Time [label="kastle:Time"]
+	Prayer -> Time [label="kastle:hasDuration"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Prayer -> string [label="kastle:hasPurpose"]
+	Person [label="kastle:Person"]
+	Prayer -> Person [label="kastle:isPrayedBy"]
+}

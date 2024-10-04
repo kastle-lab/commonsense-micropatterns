@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Situation [label="kastle:Situation"]
+	Location [label="kastle:Location"]
+	Situation -> Location [label="kastle:hasLocation"]
+	Person [label="kastle:Person"]
+	Situation -> Person [label="kastle:hasParticipant"]
+	Time [label="kastle:Time"]
+	Situation -> Time [label="kastle:hasTime"]
+}

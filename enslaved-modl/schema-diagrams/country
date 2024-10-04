@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Country [label="kastle:Country"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Country -> decimal [label="kastle:hasArea"]
+	City [label="kastle:City"]
+	Country -> City [label="kastle:hasCapital"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Country -> string [label="kastle:hasName"]
+	Integer [label="kastle:Integer"]
+	Country -> Integer [label="kastle:hasPopulation"]
+	Continent [label="kastle:Continent"]
+	Country -> Continent [label="kastle:isInContinent"]
+}

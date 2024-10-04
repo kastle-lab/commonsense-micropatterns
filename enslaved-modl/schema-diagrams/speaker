@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Speaker [label="kastle:Speaker"]
+	Integer [label="kastle:Integer"]
+	Speaker -> Integer [label="kastle:hasAge"]
+	Audience [label="kastle:Audience"]
+	Speaker -> Audience [label="kastle:hasAudience"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Speaker -> string [label="kastle:hasName"]
+	Topic [label="kastle:Topic"]
+	Speaker -> Topic [label="kastle:hasTopic"]
+}

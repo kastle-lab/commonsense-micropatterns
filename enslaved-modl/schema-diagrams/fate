@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Fate [label="kastle:Fate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Fate -> string [label="kastle:affects"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Fate -> string [label="kastle:isDeterminedBy"]
+}

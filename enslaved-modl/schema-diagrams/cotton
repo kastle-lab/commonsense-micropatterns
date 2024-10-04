@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Cotton [label="kastle:Cotton"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Cotton -> string [label="kastle:hasColor"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Cotton -> string [label="kastle:hasTexture"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Cotton -> boolean [label="kastle:isOrganic"]
+	Class [label="kastle:Class"]
+	Cotton -> Class [label="kastle:isUsedIn"]
+}

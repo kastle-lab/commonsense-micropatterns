@@ -1,0 +1,10 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Human [label="kastle:Human"]
+	Right [label="kastle:Right"]
+	Human -> Right [label="kastle:hasRight"]
+	Right [label="kastle:Right"]
+	LegalRight [label="kastle:LegalRight"]
+	Right -> LegalRight [label="kastle:isProtectedBy"]
+}

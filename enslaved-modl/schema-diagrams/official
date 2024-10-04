@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Official [label="kastle:Official"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Official -> Literal [label="kastle:hasPosition"]
+	Organization [label="kastle:Organization"]
+	Official -> Organization [label="kastle:workInOrganization"]
+}

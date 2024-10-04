@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Country [label="kastle:Country"]
+	Coast [label="kastle:Coast"]
+	Country -> Coast [label="kastle:hasCoast"]
+	Coast [label="kastle:Coast"]
+	Integer [label="kastle:Integer"]
+	Coast -> Integer [label="kastle:hasLength"]
+	Ocean [label="kastle:Ocean"]
+	Coast -> Ocean [label="kastle:hasOcean"]
+	City [label="kastle:City"]
+	Integer [label="kastle:Integer"]
+	City -> Integer [label="kastle:hasPopulation"]
+	Coast -> City [label="kastle:isLocationOf"]
+}

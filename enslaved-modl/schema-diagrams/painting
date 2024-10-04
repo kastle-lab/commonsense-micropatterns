@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Painting [label="kastle:Painting"]
+	Artist [label="kastle:Artist"]
+	Painting -> Artist [label="kastle:hasArtist"]
+	Medium [label="kastle:Medium"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Medium -> string [label="kastle:hasColor"]
+	Painting -> Medium [label="kastle:hasMedium"]
+}

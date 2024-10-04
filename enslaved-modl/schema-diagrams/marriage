@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Marriage [label="kastle:Marriage"]
+	Datetime [label="kastle:Datetime"]
+	Marriage -> Datetime [label="kastle:dateOfMarriage"]
+	Individual [label="kastle:Individual"]
+	Individual -> Marriage [label="kastle:hasMarriage"]
+	Spouse [label="kastle:Spouse"]
+	Spouse -> Spouse [label="kastle:hasSpouse"]
+	Resource [label="kastle:Resource"]
+	Marriage -> Resource [label="kastle:marriageLocation"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Face [label="kastle:Face"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Face -> string [label="kastle:hasEar"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Face -> string [label="kastle:hasEye"]
+	FacialFeature [label="kastle:FacialFeature"]
+	Face -> FacialFeature [label="kastle:hasFeature"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Face -> string [label="kastle:hasMouth"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Face -> string [label="kastle:hasNose"]
+}

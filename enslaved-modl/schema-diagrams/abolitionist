@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	SystemOrPractice [label="kastle:SystemOrPractice"]
+	Person -> SystemOrPractice [label="kastle:advocateFor"]
+	AbolitionistMovement [label="kastle:AbolitionistMovement"]
+	Person -> AbolitionistMovement [label="kastle:participatedIn"]
+}

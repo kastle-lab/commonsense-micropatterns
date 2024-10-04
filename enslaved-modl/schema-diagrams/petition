@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:hasAddress"]
+	Petition [label="kastle:Petition"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Petition -> date [label="kastle:hasDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Person -> string [label="kastle:hasName"]
+	Petition -> Person [label="kastle:hasSignatory"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Petition -> string [label="kastle:hasText"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Petition -> string [label="kastle:hasTitle"]
+	Person -> Petition [label="kastle:signs"]
+}

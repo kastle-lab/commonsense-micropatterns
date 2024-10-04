@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Thing [label="kastle:Thing"]
+	FirstName [label="kastle:FirstName"]
+	Thing -> FirstName [label="kastle:hasFirstName"]
+	LastName [label="kastle:LastName"]
+	Thing -> LastName [label="kastle:hasLastName"]
+}

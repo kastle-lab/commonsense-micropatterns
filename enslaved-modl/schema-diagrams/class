@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Class [label="kastle:Class"]
+	Datetime [label="kastle:Datetime"]
+	Class -> Datetime [label="kastle:endTime"]
+	Student [label="kastle:Student"]
+	Class -> Student [label="kastle:hasStudent"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Class -> string [label="kastle:hasSubject"]
+	Teacher [label="kastle:Teacher"]
+	Class -> Teacher [label="kastle:hasTeacher"]
+	Datetime [label="kastle:Datetime"]
+	Class -> Datetime [label="kastle:startTime"]
+}

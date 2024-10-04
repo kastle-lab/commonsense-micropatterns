@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Assault [label="kastle:Assault"]
+	Offender [label="kastle:Offender"]
+	Assault -> Offender [label="kastle:hasOffender"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Assault -> string [label="kastle:hasSeverity"]
+	Victim [label="kastle:Victim"]
+	Assault -> Victim [label="kastle:hasVictim"]
+	Datetime [label="kastle:Datetime"]
+	Assault -> Datetime [label="kastle:occurredAt"]
+}

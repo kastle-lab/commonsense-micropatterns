@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Activity [label="kastle:Activity"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Activity -> Literal [label="kastle:activityLocation"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Activity -> Literal [label="kastle:activityName"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Activity -> Literal [label="kastle:activityTime"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Activity -> Literal [label="kastle:activityType"]
+	Duration [label="kastle:Duration"]
+	Activity -> Duration [label="kastle:hasDuration"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Activity -> string [label="kastle:hasName"]
+	Activity -> Activity [label="kastle:hasPart"]
+}

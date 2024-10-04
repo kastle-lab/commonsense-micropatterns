@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Expedition [label="kastle:Expedition"]
+	Location [label="kastle:Location"]
+	Expedition -> Location [label="kastle:hasDestination"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Expedition -> date [label="kastle:hasEndDate"]
+	Person [label="kastle:Person"]
+	Expedition -> Person [label="kastle:hasLeader"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Expedition -> date [label="kastle:hasStartDate"]
+	Location [label="kastle:Location"]
+	Expedition -> Location [label="kastle:hasStartLocation"]
+}

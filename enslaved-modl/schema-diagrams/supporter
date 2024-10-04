@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Supporter [label="kastle:Supporter"]
+	Integer [label="kastle:Integer"]
+	Supporter -> Integer [label="kastle:age"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Supporter -> string [label="kastle:name"]
+	Organization [label="kastle:Organization"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Organization -> string [label="kastle:orgName"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Organization -> string [label="kastle:orgType"]
+	Entity [label="kastle:Entity"]
+	Entity -> Supporter [label="kastle:supportedBy"]
+	Supporter -> Organization [label="kastle:supportedOrganization"]
+	Supporter -> Entity [label="kastle:supports"]
+}

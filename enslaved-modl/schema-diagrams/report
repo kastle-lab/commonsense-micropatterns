@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Report [label="kastle:Report"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Author [label="kastle:Author"]
+	Report -> Author [label="kastle:hasAuthor"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Report -> string [label="kastle:hasContent"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Report -> date [label="kastle:hasDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Report -> string [label="kastle:hasTitle"]
+}

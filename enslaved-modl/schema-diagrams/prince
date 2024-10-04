@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Prince [label="kastle:Prince"]
+	RoyalFamily [label="kastle:RoyalFamily"]
+	Prince -> RoyalFamily [label="kastle:belongsToFamily"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Prince -> string [label="kastle:hasTitle"]
+}

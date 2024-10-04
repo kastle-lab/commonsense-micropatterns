@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Tree [label="kastle:Tree"]
+	Fruit [label="kastle:Fruit"]
+	Tree -> Fruit [label="kastle:hasFruit"]
+	Plantation [label="kastle:Plantation"]
+	Herb [label="kastle:Herb"]
+	Plantation -> Herb [label="kastle:hasHerb"]
+	Plantation -> Tree [label="kastle:hasTree"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Plantation -> string [label="kastle:location"]
+	Thing [label="kastle:Thing"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Thing -> string [label="kastle:name"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Plantation -> float [label="kastle:sizeInHectares"]
+}

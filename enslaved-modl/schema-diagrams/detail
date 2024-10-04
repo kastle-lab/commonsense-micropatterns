@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Detail [label="kastle:Detail"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Detail -> string [label="kastle:description"]
+	Thing [label="kastle:Thing"]
+	Detail -> Thing [label="kastle:isDetailOf"]
+}

@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Person -> Person [label="kastle:bestFriend"]
+	Person -> Person [label="kastle:friend"]
+	Friendship [label="kastle:Friendship"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Friendship -> date [label="kastle:friendshipFromDate"]
+	Person -> Person [label="kastle:hasFriend"]
+}

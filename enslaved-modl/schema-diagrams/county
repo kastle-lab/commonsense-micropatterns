@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	County [label="kastle:County"]
+	CountySeat [label="kastle:CountySeat"]
+	County -> CountySeat [label="kastle:hasCountySeat"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	County -> string [label="kastle:hasName"]
+	Integer [label="kastle:Integer"]
+	County -> Integer [label="kastle:hasPopulation"]
+	State [label="kastle:State"]
+	County -> State [label="kastle:inState"]
+	State [label="kastle:State"]
+	County -> State [label="kastle:locatedInState"]
+}

@@ -1,0 +1,15 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Employment [label="kastle:Employment"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Employment -> decimal [label="kastle:earns"]
+	Adulthood [label="kastle:Adulthood"]
+	Integer [label="kastle:Integer"]
+	Adulthood -> Integer [label="kastle:hasAgeRange"]
+	Adulthood -> Employment [label="kastle:hasEmployment"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Employment -> string [label="kastle:hasJobTitle"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Adulthood -> boolean [label="kastle:hasLegalResponsibility"]
+}

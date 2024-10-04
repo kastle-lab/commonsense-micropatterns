@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Audience [label="kastle:Audience"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Audience -> Literal [label="kastle:location"]
+	Integer [label="kastle:Integer"]
+	Audience -> Integer [label="kastle:size"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Audience -> Literal [label="kastle:type"]
+}

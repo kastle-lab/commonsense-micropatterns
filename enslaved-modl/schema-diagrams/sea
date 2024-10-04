@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Sea [label="kastle:Sea"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Sea -> float [label="kastle:depth"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Sea -> decimal [label="kastle:hasArea"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Sea -> decimal [label="kastle:hasDepth"]
+	Sea -> Sea [label="kastle:isPartOf"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Sea -> string [label="kastle:location"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Sea -> float [label="kastle:salinity"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Sea -> float [label="kastle:temperature"]
+}

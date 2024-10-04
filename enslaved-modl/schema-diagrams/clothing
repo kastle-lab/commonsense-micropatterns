@@ -1,0 +1,9 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	ClothingItem [label="kastle:ClothingItem"]
+	ClothingType [label="kastle:ClothingType"]
+	ClothingItem -> ClothingType [label="kastle:hasClothingType"]
+	Size [label="kastle:Size"]
+	ClothingItem -> Size [label="kastle:hasSize"]
+}

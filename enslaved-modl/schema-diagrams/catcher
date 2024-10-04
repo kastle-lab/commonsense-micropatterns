@@ -1,0 +1,7 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Baseball [label="kastle:Baseball"]
+	Catcher [label="kastle:Catcher"]
+	Baseball -> Catcher [label="kastle:catcherPosition"]
+}

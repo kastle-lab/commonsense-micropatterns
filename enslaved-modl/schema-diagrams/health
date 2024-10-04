@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Disease [label="kastle:Disease"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Disease -> string [label="kastle:hasCause"]
+	Patient [label="kastle:Patient"]
+	Patient -> Disease [label="kastle:hasDisease"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Symptom [label="kastle:Symptom"]
+	Disease -> Symptom [label="kastle:hasSymptom"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Disease -> string [label="kastle:hasTreatment"]
+	Treatment [label="kastle:Treatment"]
+	Disease -> Treatment [label="kastle:treatsWith"]
+}

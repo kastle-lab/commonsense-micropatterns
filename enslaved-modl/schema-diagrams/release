@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Release [label="kastle:Release"]
+	Datetime [label="kastle:Datetime"]
+	Release -> Datetime [label="kastle:date"]
+	Producer [label="kastle:Producer"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Producer -> string [label="kastle:name"]
+	Release -> Producer [label="kastle:producedBy"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Release -> string [label="kastle:version"]
+}

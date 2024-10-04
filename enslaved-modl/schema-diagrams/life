@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Life [label="kastle:Life"]
+	Datetime [label="kastle:Datetime"]
+	Life -> Datetime [label="kastle:hasBirthDate"]
+	Dog [label="kastle:Dog"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Dog -> string [label="kastle:hasBreed"]
+	Flower [label="kastle:Flower"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Flower -> string [label="kastle:hasColor"]
+	Datetime [label="kastle:Datetime"]
+	Life -> Datetime [label="kastle:hasDeathDate"]
+	Human [label="kastle:Human"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Human -> string [label="kastle:hasName"]
+}

@@ -1,0 +1,83 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Consumer a rdfs:Class .
+
+kastle:Customer a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Provider a rdfs:Class .
+
+kastle:Service a rdfs:Class .
+
+kastle:ServiceProvider a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/service> a owl:Ontology ;
+    opla-core:hasPatternName "service Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:customerName a rdf:Property ;
+    rdfs:domain kastle:Customer ;
+    rdfs:range xsd:string .
+
+kastle:description a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range xsd:string .
+
+kastle:hasConsumer a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Consumer .
+
+kastle:hasEndTime a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Datetime .
+
+kastle:hasProvider a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Provider .
+
+kastle:hasStartTime a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Datetime .
+
+kastle:isProvidedBy a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceProvider .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range xsd:string .
+
+kastle:providerName a rdf:Property ;
+    rdfs:domain kastle:Provider ;
+    rdfs:range xsd:string .
+
+kastle:provides a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range kastle:Service .
+
+kastle:providesService a rdf:Property ;
+    rdfs:domain kastle:Provider ;
+    rdfs:range kastle:Service .
+
+kastle:receivesService a rdf:Property ;
+    rdfs:domain kastle:Customer ;
+    rdfs:range kastle:Service .
+
+kastle:serviceName a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range xsd:string .
+

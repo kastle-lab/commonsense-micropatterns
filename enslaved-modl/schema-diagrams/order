@@ -1,0 +1,18 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Order [label="kastle:Order"]
+	Item [label="kastle:Item"]
+	Order -> Item [label="kastle:containsItem"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Order -> int [label="kastle:customerId"]
+	Item [label="kastle:Item"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Item -> string [label="kastle:itemId"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Item -> string [label="kastle:itemName"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Item -> float [label="kastle:itemPrice"]
+	int [label="http://www.w3.org/2001/XMLSchema#int"]
+	Item -> int [label="kastle:itemQuantity"]
+}

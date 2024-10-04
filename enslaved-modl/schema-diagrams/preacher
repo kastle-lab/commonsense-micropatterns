@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Preacher [label="kastle:Preacher"]
+	Sermon [label="kastle:Sermon"]
+	Preacher -> Sermon [label="kastle:givesSermon"]
+	Person [label="kastle:Person"]
+	Occupation [label="kastle:Occupation"]
+	Person -> Occupation [label="kastle:hasOccupation"]
+	Sermon [label="kastle:Sermon"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Sermon -> string [label="kastle:religiousTopic"]
+	Preacher -> Sermon [label="kastle:sermonDelivered"]
+	Church [label="kastle:Church"]
+	Preacher -> Church [label="kastle:worksAt"]
+}

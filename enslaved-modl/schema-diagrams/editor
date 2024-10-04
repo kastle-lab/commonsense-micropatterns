@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Editor [label="kastle:Editor"]
+	Resource [label="kastle:Resource"]
+	Editor -> Resource [label="kastle:edits"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Editor -> string [label="kastle:name"]
+	Topic [label="kastle:Topic"]
+	Editor -> Topic [label="kastle:specializesIn"]
+	Publication [label="kastle:Publication"]
+	Editor -> Publication [label="kastle:worksFor"]
+}

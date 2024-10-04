@@ -1,0 +1,14 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Person [label="kastle:Person"]
+	Carpenter [label="kastle:Carpenter"]
+	Person -> Carpenter [label="kastle:carpenter"]
+	Carpenter [label="kastle:Carpenter"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	Carpenter -> float [label="kastle:hasExperience"]
+	Tool [label="kastle:Tool"]
+	Carpenter -> Tool [label="kastle:usesTool"]
+	Project [label="kastle:Project"]
+	Carpenter -> Project [label="kastle:worksInProject"]
+}

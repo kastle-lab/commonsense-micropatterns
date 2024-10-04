@@ -1,0 +1,16 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Arrival [label="kastle:Arrival"]
+	Resource [label="kastle:Resource"]
+	Arrival -> Resource [label="kastle:hasArrivalEntity"]
+	Resource [label="kastle:Resource"]
+	Arrival -> Resource [label="kastle:hasArrivalLocation"]
+	Resource [label="kastle:Resource"]
+	Arrival -> Resource [label="kastle:hasArrivalMode"]
+	Datetime [label="kastle:Datetime"]
+	Arrival -> Datetime [label="kastle:hasArrivalTime"]
+	PersonArrival [label="kastle:PersonArrival"]
+	Person [label="kastle:Person"]
+	PersonArrival -> Person [label="kastle:hasPerson"]
+}

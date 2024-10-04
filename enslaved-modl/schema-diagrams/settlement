@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	City [label="kastle:City"]
+	float [label="http://www.w3.org/2001/XMLSchema#float"]
+	City -> float [label="kastle:area"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	City -> string [label="kastle:name"]
+	Integer [label="kastle:Integer"]
+	City -> Integer [label="kastle:population"]
+}

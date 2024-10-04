@@ -1,0 +1,52 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Duty a rdfs:Class .
+
+kastle:Equipment a rdfs:Class .
+
+kastle:Guard a rdfs:Class ;
+    rdfs:subClassOf kastle:Nca296b5ff4e94689b8b58a69b033fb4bb1 .
+
+kastle:Location a rdfs:Class .
+
+kastle:Place a rdfs:Class .
+
+kastle:Shift a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/guard> a owl:Ontology ;
+    opla-core:hasPatternName "guard Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:guardsPlace a rdf:Property ;
+    rdfs:domain kastle:Guard ;
+    rdfs:range kastle:Place .
+
+kastle:hasDuty a rdf:Property ;
+    rdfs:domain kastle:Guard ;
+    rdfs:range kastle:Duty .
+
+kastle:hasEquipped a rdf:Property ;
+    rdfs:domain kastle:Guard ;
+    rdfs:range kastle:Equipment .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Guard ;
+    rdfs:range kastle:Location .
+
+kastle:hasShift a rdf:Property ;
+    rdfs:domain kastle:Guard ;
+    rdfs:range kastle:Shift .
+

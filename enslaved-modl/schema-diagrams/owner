@@ -1,0 +1,8 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Owner [label="kastle:Owner"]
+	Ownership [label="kastle:Ownership"]
+	Thing [label="kastle:Thing"]
+	Owner -> Thing [label="kastle:owns"]
+}

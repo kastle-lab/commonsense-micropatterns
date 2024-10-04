@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Association [label="kastle:Association"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Association -> date [label="kastle:hasEndDate"]
+	Entity [label="kastle:Entity"]
+	Association -> Entity [label="kastle:hasMember"]
+	date [label="http://www.w3.org/2001/XMLSchema#date"]
+	Association -> date [label="kastle:hasStartDate"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Association -> string [label="kastle:hasTitle"]
+}

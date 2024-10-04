@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Boy [label="kastle:Boy"]
+	Integer [label="kastle:Integer"]
+	Boy -> Integer [label="kastle:age"]
+	Pet [label="kastle:Pet"]
+	Boy -> Pet [label="kastle:hasPet"]
+	string [label="http://www.w3.org/2001/XMLSchema#string"]
+	Boy -> string [label="kastle:name"]
+	Sport [label="kastle:Sport"]
+	Boy -> Sport [label="kastle:playsSport"]
+}

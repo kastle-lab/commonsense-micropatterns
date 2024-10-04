@@ -1,0 +1,17 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Permission [label="kastle:Permission"]
+	Action [label="kastle:Action"]
+	Permission -> Action [label="kastle:canPerform"]
+	Role [label="kastle:Role"]
+	User [label="kastle:User"]
+	User -> Permission [label="kastle:hasPermission"]
+	Resource [label="kastle:Resource"]
+	Resource -> User [label="kastle:hasUser"]
+	boolean [label="http://www.w3.org/2001/XMLSchema#boolean"]
+	Permission -> boolean [label="kastle:isAllowed"]
+	Access [label="kastle:Access"]
+	Access -> Resource [label="kastle:onResource"]
+	Permission -> Access [label="kastle:permits"]
+}

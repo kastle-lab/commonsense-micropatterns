@@ -1,0 +1,13 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Abolition [label="kastle:Abolition"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Abolition -> Literal [label="kastle:causeOfAbolition"]
+	Literal [label="http://www.w3.org/2000/01/rdf-schema#Literal"]
+	Abolition -> Literal [label="kastle:effectOfAbolition"]
+	Resource [label="kastle:Resource"]
+	Abolition -> Resource [label="kastle:partOf"]
+	Resource [label="kastle:Resource"]
+	Abolition -> Resource [label="kastle:resultedIn"]
+}

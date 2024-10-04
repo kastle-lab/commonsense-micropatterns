@@ -1,0 +1,11 @@
+digraph {
+	graph [rankdir=LR]
+	node [fillcolor="#ffcc00" penwidth=2 shape=box style=filled]
+	Rest [label="kastle:Rest"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Rest -> decimal [label="kastle:durationOfRest"]
+	RestingIndividual [label="kastle:RestingIndividual"]
+	RestingIndividual -> Rest [label="kastle:hasRest"]
+	decimal [label="http://www.w3.org/2001/XMLSchema#decimal"]
+	Rest -> decimal [label="kastle:qualityOfRest"]
+}
