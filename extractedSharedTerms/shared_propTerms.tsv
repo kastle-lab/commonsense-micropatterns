@@ -50,7 +50,7 @@ age	18	15	33
 attends	6	3	9
 gender	8	4	12
 hasAge	26	13	39
-hasColor	9	11	20
+hasColor	10	11	21
 hasLocation	24	26	50
 hasManufacturer	6	1	7
 hasNationality	5	3	8
@@ -74,14 +74,14 @@ hasSibling	6	3	9
 brand	3	1	4
 color	8	6	14
 depth	3	1	4
-hasMaterial	5	8	13
-hasPrice	8	7	15
+hasMaterial	6	8	14
+hasPrice	9	7	16
 hasSize	11	7	18
-hasStyle	4	4	8
+hasStyle	5	4	9
 hasType	11	10	21
 height	3	3	6
 length	5	5	10
-material	5	2	7
+material	6	2	8
 size	9	7	16
 width	3	3	6
 area	6	3	9
@@ -186,7 +186,7 @@ hasPower	1	1	2
 isMeasuredIn	1	1	2
 isUsedIn	2	3	5
 unit	2	1	3
-hasWidth	3	1	4
+hasWidth	4	1	5
 belongs	2	1	3
 hasComment	2	1	3
 hasInstitution	1	1	2
@@ -342,7 +342,7 @@ represents	1	3	4
 diagnosedWith	1	1	2
 hasCondition	2	1	3
 hasDisease	2	1	3
-hasHeight	3	3	6
+hasHeight	4	3	7
 hasPatient	1	1	2
 hasSymptom	2	2	4
 hasTreatment	2	2	4
@@ -433,6 +433,7 @@ hasEmployeeCount	1	1	2
 hasIndustry	1	1	2
 yearEstablished	1	1	2
 hasSkill	1	4	5
+hasDepth	1	1	2
 hasMajor	1	1	2
 hasMinor	1	1	2
 occurredAt	1	1	2

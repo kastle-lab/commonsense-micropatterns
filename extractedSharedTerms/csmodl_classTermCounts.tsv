@@ -7,7 +7,7 @@ HumanBody	4
 Resource	46
 Datetime	27
 Entity	25
-Integer	74
+Integer	75
 Langstring	8
 Person	55
 Something	3
@@ -159,7 +159,7 @@ Name	3
 Sport	2
 Task	3
 Category	2
-Company	4
+Company	5
 Employee	4
 Employer	3
 JobPosting	2
@@ -195,4 +195,5 @@ Daughter	2
 PlainLiteral	2
 Engine	2
 Character	2
+Chair	2
 Manager	2

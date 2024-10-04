@@ -1389,10 +1389,9 @@ Room	Office.ttl	1
 StaffMember	Office.ttl	1
 Task	Office.ttl	1
 Worker	Office.ttl	1
-exampleorgChair	chair.ttl	1
-exampleorgnsChair	chair.ttl	1
-exampleorgstuff10Chair	chair.ttl	1
-exampleorgstuff10Company	chair.ttl	1
+Chair	Chair.ttl	1
+Company	Chair.ttl	1
+Integer	Chair.ttl	1
 Color	Sofa.ttl	1
 Furniture	Sofa.ttl	1
 Integer	Sofa.ttl	1

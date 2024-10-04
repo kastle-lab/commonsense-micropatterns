@@ -6,7 +6,7 @@ Resource	46	47	93
 Torso	1	1	2
 Datetime	27	44	71
 Entity	25	13	38
-Integer	74	100	174
+Integer	75	100	175
 Issue	1	2	3
 Langstring	8	3	11
 Person	55	111	166
@@ -166,7 +166,7 @@ Project	1	4	5
 Sport	2	1	3
 Task	3	3	6
 Category	2	2	4
-Company	4	2	6
+Company	5	2	7
 Employee	4	2	6
 Employer	3	1	4
 Worker	2	1	3

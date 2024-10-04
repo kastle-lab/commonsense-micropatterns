@@ -2990,6 +2990,17 @@ usesEquipment	Office.ttl	1
 worksAt	Office.ttl	1
 worksIn	Office.ttl	1
 worksInDepartment	Office.ttl	1
+hasColor	Chair.ttl	1
+hasColour	Chair.ttl	1
+hasDepth	Chair.ttl	1
+hasHeight	Chair.ttl	1
+hasMaterial	Chair.ttl	1
+hasPrice	Chair.ttl	1
+hasStyle	Chair.ttl	1
+hasWeightCapacity	Chair.ttl	1
+hasWidth	Chair.ttl	1
+manufacturer	Chair.ttl	1
+material	Chair.ttl	1
 brand	Sofa.ttl	1
 color	Sofa.ttl	1
 dimensions	Sofa.ttl	1

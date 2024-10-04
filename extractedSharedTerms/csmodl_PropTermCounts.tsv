@@ -47,7 +47,7 @@ attends	6
 gender	8
 groupName	3
 hasAge	26
-hasColor	9
+hasColor	10
 hasLocation	24
 hasManufacturer	6
 hasNationality	5
@@ -57,7 +57,7 @@ hasSpecies	2
 interactsWith	2
 livesIn	7
 location	16
-manufacturer	5
+manufacturer	6
 memberOf	8
 provides	16
 hasDay	3
@@ -82,16 +82,16 @@ hasBrand	3
 hasCushion	2
 hasDimension	4
 hasDimensions	2
-hasMaterial	5
-hasPrice	8
+hasMaterial	6
+hasPrice	9
 hasSize	11
-hasStyle	4
+hasStyle	5
 hasType	11
 hasUpholstery	2
 height	3
 isUpholstered	2
 length	5
-material	5
+material	6
 model	2
 size	9
 style	3
@@ -220,7 +220,8 @@ hasMagnitude	2
 isUsedIn	2
 measuredIn	2
 unit	2
-hasWidth	3
+hasColour	2
+hasWidth	4
 belongs	2
 hasComment	2
 hasCommonInterest	2
@@ -362,7 +363,7 @@ isEnforcedBy	2
 disease	2
 hasCondition	2
 hasDisease	2
-hasHeight	3
+hasHeight	4
 hasSymptom	2
 hasTreatment	2
 hasWeight	2
