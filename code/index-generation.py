@@ -114,7 +114,7 @@ def generate_index():
         graph.add( (noun_pattern_uri, pfs["rdfs"]["label"], Literal(f"{noun}", lang="en")) )
         html_counter+=1
 
-    output_name = "csmodl.owl"
+    output_name = "csmodl.ttl"
     output_path = os.path.join("../csmodl", output_name)
     graph.serialize(format="turtle", encoding="utf-8", destination=output_path)
 

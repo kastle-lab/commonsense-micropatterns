@@ -161,13 +161,28 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:owlRepresentation "csmodl/patterns/Case.ttl"^^xsd:string ;
     opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Case.pdf"^^xsd:string .
 
+:Chair a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "Chair"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">10
+            </span> <a id="x1-10001"></a>Chair</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "csmodl/patterns/Chair.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "csmodl/patterns/schema-diagrams/Chair.pdf"^^xsd:string .
+
 :Change a opla:Pattern,
         owl:NamedIndividual ;
     rdfs:label "Change"@en ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">10
+            <h3 class="sectionHead"><span class="titlemark">11
             </span> <a id="x1-10001"></a>Change</h3>
 
             <body/>
@@ -182,7 +197,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">11
+            <h3 class="sectionHead"><span class="titlemark">12
             </span> <a id="x1-10001"></a>Child</h3>
 
             <body/>
@@ -197,7 +212,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">12
+            <h3 class="sectionHead"><span class="titlemark">13
             </span> <a id="x1-10001"></a>City</h3>
 
             <body/>
@@ -212,7 +227,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">13
+            <h3 class="sectionHead"><span class="titlemark">14
             </span> <a id="x1-10001"></a>Community</h3>
 
             <body/>
@@ -227,7 +242,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">14
+            <h3 class="sectionHead"><span class="titlemark">15
             </span> <a id="x1-10001"></a>Company</h3>
 
             <body/>
@@ -242,7 +257,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">15
+            <h3 class="sectionHead"><span class="titlemark">16
             </span> <a id="x1-10001"></a>Couch</h3>
 
             <body/>
@@ -257,7 +272,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">16
+            <h3 class="sectionHead"><span class="titlemark">17
             </span> <a id="x1-10001"></a>Country</h3>
 
             <body/>
@@ -272,7 +287,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">17
+            <h3 class="sectionHead"><span class="titlemark">18
             </span> <a id="x1-10001"></a>Day</h3>
 
             <body/>
@@ -287,7 +302,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">18
+            <h3 class="sectionHead"><span class="titlemark">19
             </span> <a id="x1-10001"></a>Door</h3>
 
             <body/>
@@ -302,7 +317,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">19
+            <h3 class="sectionHead"><span class="titlemark">20
             </span> <a id="x1-10001"></a>Education</h3>
 
             <body/>
@@ -317,7 +332,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">20
+            <h3 class="sectionHead"><span class="titlemark">21
             </span> <a id="x1-10001"></a>End</h3>
 
             <body/>
@@ -332,7 +347,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">21
+            <h3 class="sectionHead"><span class="titlemark">22
             </span> <a id="x1-10001"></a>Eye</h3>
 
             <body/>
@@ -347,7 +362,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">22
+            <h3 class="sectionHead"><span class="titlemark">23
             </span> <a id="x1-10001"></a>Face</h3>
 
             <body/>
@@ -362,7 +377,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">23
+            <h3 class="sectionHead"><span class="titlemark">24
             </span> <a id="x1-10001"></a>Fact</h3>
 
             <body/>
@@ -377,7 +392,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">24
+            <h3 class="sectionHead"><span class="titlemark">25
             </span> <a id="x1-10001"></a>Family</h3>
 
             <body/>
@@ -392,7 +407,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">25
+            <h3 class="sectionHead"><span class="titlemark">26
             </span> <a id="x1-10001"></a>Father</h3>
 
             <body/>
@@ -407,7 +422,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">26
+            <h3 class="sectionHead"><span class="titlemark">27
             </span> <a id="x1-10001"></a>Force</h3>
 
             <body/>
@@ -422,7 +437,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">27
+            <h3 class="sectionHead"><span class="titlemark">28
             </span> <a id="x1-10001"></a>Friend</h3>
 
             <body/>
@@ -437,7 +452,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">28
+            <h3 class="sectionHead"><span class="titlemark">29
             </span> <a id="x1-10001"></a>Game</h3>
 
             <body/>
@@ -452,7 +467,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">29
+            <h3 class="sectionHead"><span class="titlemark">30
             </span> <a id="x1-10001"></a>Girl</h3>
 
             <body/>
@@ -467,7 +482,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">30
+            <h3 class="sectionHead"><span class="titlemark">31
             </span> <a id="x1-10001"></a>Government</h3>
 
             <body/>
@@ -482,7 +497,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">31
+            <h3 class="sectionHead"><span class="titlemark">32
             </span> <a id="x1-10001"></a>Group</h3>
 
             <body/>
@@ -497,7 +512,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">32
+            <h3 class="sectionHead"><span class="titlemark">33
             </span> <a id="x1-10001"></a>Guy</h3>
 
             <body/>
@@ -512,7 +527,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">33
+            <h3 class="sectionHead"><span class="titlemark">34
             </span> <a id="x1-10001"></a>Hand</h3>
 
             <body/>
@@ -527,7 +542,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">34
+            <h3 class="sectionHead"><span class="titlemark">35
             </span> <a id="x1-10001"></a>Head</h3>
 
             <body/>
@@ -542,7 +557,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">35
+            <h3 class="sectionHead"><span class="titlemark">36
             </span> <a id="x1-10001"></a>Health</h3>
 
             <body/>
@@ -557,7 +572,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">36
+            <h3 class="sectionHead"><span class="titlemark">37
             </span> <a id="x1-10001"></a>History</h3>
 
             <body/>
@@ -572,7 +587,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">37
+            <h3 class="sectionHead"><span class="titlemark">38
             </span> <a id="x1-10001"></a>Home</h3>
 
             <body/>
@@ -587,7 +602,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">38
+            <h3 class="sectionHead"><span class="titlemark">39
             </span> <a id="x1-10001"></a>Hour</h3>
 
             <body/>
@@ -602,7 +617,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">39
+            <h3 class="sectionHead"><span class="titlemark">40
             </span> <a id="x1-10001"></a>House</h3>
 
             <body/>
@@ -617,7 +632,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">40
+            <h3 class="sectionHead"><span class="titlemark">41
             </span> <a id="x1-10001"></a>Idea</h3>
 
             <body/>
@@ -632,7 +647,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">41
+            <h3 class="sectionHead"><span class="titlemark">42
             </span> <a id="x1-10001"></a>Information</h3>
 
             <body/>
@@ -647,7 +662,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">42
+            <h3 class="sectionHead"><span class="titlemark">43
             </span> <a id="x1-10001"></a>Issue</h3>
 
             <body/>
@@ -662,7 +677,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">43
+            <h3 class="sectionHead"><span class="titlemark">44
             </span> <a id="x1-10001"></a>Job</h3>
 
             <body/>
@@ -677,7 +692,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">44
+            <h3 class="sectionHead"><span class="titlemark">45
             </span> <a id="x1-10001"></a>Kid</h3>
 
             <body/>
@@ -692,7 +707,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">45
+            <h3 class="sectionHead"><span class="titlemark">46
             </span> <a id="x1-10001"></a>Kind</h3>
 
             <body/>
@@ -707,7 +722,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">46
+            <h3 class="sectionHead"><span class="titlemark">47
             </span> <a id="x1-10001"></a>Law</h3>
 
             <body/>
@@ -722,7 +737,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">47
+            <h3 class="sectionHead"><span class="titlemark">48
             </span> <a id="x1-10001"></a>Level</h3>
 
             <body/>
@@ -737,7 +752,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">48
+            <h3 class="sectionHead"><span class="titlemark">49
             </span> <a id="x1-10001"></a>Life</h3>
 
             <body/>
@@ -752,7 +767,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">49
+            <h3 class="sectionHead"><span class="titlemark">50
             </span> <a id="x1-10001"></a>Line</h3>
 
             <body/>
@@ -767,7 +782,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">50
+            <h3 class="sectionHead"><span class="titlemark">51
             </span> <a id="x1-10001"></a>Lot</h3>
 
             <body/>
@@ -782,7 +797,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">51
+            <h3 class="sectionHead"><span class="titlemark">52
             </span> <a id="x1-10001"></a>Loveseat</h3>
 
             <body/>
@@ -797,7 +812,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">52
+            <h3 class="sectionHead"><span class="titlemark">53
             </span> <a id="x1-10001"></a>Man</h3>
 
             <body/>
@@ -812,7 +827,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">53
+            <h3 class="sectionHead"><span class="titlemark">54
             </span> <a id="x1-10001"></a>Member</h3>
 
             <body/>
@@ -827,7 +842,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">54
+            <h3 class="sectionHead"><span class="titlemark">55
             </span> <a id="x1-10001"></a>Minute</h3>
 
             <body/>
@@ -842,7 +857,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">55
+            <h3 class="sectionHead"><span class="titlemark">56
             </span> <a id="x1-10001"></a>Moment</h3>
 
             <body/>
@@ -857,7 +872,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">56
+            <h3 class="sectionHead"><span class="titlemark">57
             </span> <a id="x1-10001"></a>Money</h3>
 
             <body/>
@@ -872,7 +887,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">57
+            <h3 class="sectionHead"><span class="titlemark">58
             </span> <a id="x1-10001"></a>Month</h3>
 
             <body/>
@@ -887,7 +902,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">58
+            <h3 class="sectionHead"><span class="titlemark">59
             </span> <a id="x1-10001"></a>Morning</h3>
 
             <body/>
@@ -902,7 +917,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">59
+            <h3 class="sectionHead"><span class="titlemark">60
             </span> <a id="x1-10001"></a>Mother</h3>
 
             <body/>
@@ -917,7 +932,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">60
+            <h3 class="sectionHead"><span class="titlemark">61
             </span> <a id="x1-10001"></a>Name</h3>
 
             <body/>
@@ -932,7 +947,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">61
+            <h3 class="sectionHead"><span class="titlemark">62
             </span> <a id="x1-10001"></a>Night</h3>
 
             <body/>
@@ -947,7 +962,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">62
+            <h3 class="sectionHead"><span class="titlemark">63
             </span> <a id="x1-10001"></a>Number</h3>
 
             <body/>
@@ -962,7 +977,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">63
+            <h3 class="sectionHead"><span class="titlemark">64
             </span> <a id="x1-10001"></a>Office</h3>
 
             <body/>
@@ -977,7 +992,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">64
+            <h3 class="sectionHead"><span class="titlemark">65
             </span> <a id="x1-10001"></a>Others</h3>
 
             <body/>
@@ -992,7 +1007,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">65
+            <h3 class="sectionHead"><span class="titlemark">66
             </span> <a id="x1-10001"></a>Parent</h3>
 
             <body/>
@@ -1007,7 +1022,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">66
+            <h3 class="sectionHead"><span class="titlemark">67
             </span> <a id="x1-10001"></a>Part</h3>
 
             <body/>
@@ -1022,7 +1037,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">67
+            <h3 class="sectionHead"><span class="titlemark">68
             </span> <a id="x1-10001"></a>Party</h3>
 
             <body/>
@@ -1037,7 +1052,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">68
+            <h3 class="sectionHead"><span class="titlemark">69
             </span> <a id="x1-10001"></a>People</h3>
 
             <body/>
@@ -1052,7 +1067,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">69
+            <h3 class="sectionHead"><span class="titlemark">70
             </span> <a id="x1-10001"></a>Person</h3>
 
             <body/>
@@ -1067,7 +1082,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">70
+            <h3 class="sectionHead"><span class="titlemark">71
             </span> <a id="x1-10001"></a>Place</h3>
 
             <body/>
@@ -1082,7 +1097,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">71
+            <h3 class="sectionHead"><span class="titlemark">72
             </span> <a id="x1-10001"></a>Point</h3>
 
             <body/>
@@ -1097,7 +1112,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">72
+            <h3 class="sectionHead"><span class="titlemark">73
             </span> <a id="x1-10001"></a>Power</h3>
 
             <body/>
@@ -1112,7 +1127,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">73
+            <h3 class="sectionHead"><span class="titlemark">74
             </span> <a id="x1-10001"></a>President</h3>
 
             <body/>
@@ -1127,7 +1142,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">74
+            <h3 class="sectionHead"><span class="titlemark">75
             </span> <a id="x1-10001"></a>Problem</h3>
 
             <body/>
@@ -1142,7 +1157,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">75
+            <h3 class="sectionHead"><span class="titlemark">76
             </span> <a id="x1-10001"></a>Program</h3>
 
             <body/>
@@ -1157,7 +1172,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">76
+            <h3 class="sectionHead"><span class="titlemark">77
             </span> <a id="x1-10001"></a>Question</h3>
 
             <body/>
@@ -1172,7 +1187,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">77
+            <h3 class="sectionHead"><span class="titlemark">78
             </span> <a id="x1-10001"></a>Reason</h3>
 
             <body/>
@@ -1187,7 +1202,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">78
+            <h3 class="sectionHead"><span class="titlemark">79
             </span> <a id="x1-10001"></a>Research</h3>
 
             <body/>
@@ -1202,7 +1217,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">79
+            <h3 class="sectionHead"><span class="titlemark">80
             </span> <a id="x1-10001"></a>Result</h3>
 
             <body/>
@@ -1217,7 +1232,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">80
+            <h3 class="sectionHead"><span class="titlemark">81
             </span> <a id="x1-10001"></a>Right</h3>
 
             <body/>
@@ -1232,7 +1247,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">81
+            <h3 class="sectionHead"><span class="titlemark">82
             </span> <a id="x1-10001"></a>Room</h3>
 
             <body/>
@@ -1247,7 +1262,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">82
+            <h3 class="sectionHead"><span class="titlemark">83
             </span> <a id="x1-10001"></a>School</h3>
 
             <body/>
@@ -1262,7 +1277,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">83
+            <h3 class="sectionHead"><span class="titlemark">84
             </span> <a id="x1-10001"></a>Service</h3>
 
             <body/>
@@ -1277,7 +1292,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">84
+            <h3 class="sectionHead"><span class="titlemark">85
             </span> <a id="x1-10001"></a>Side</h3>
 
             <body/>
@@ -1292,7 +1307,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">85
+            <h3 class="sectionHead"><span class="titlemark">86
             </span> <a id="x1-10001"></a>Sofa</h3>
 
             <body/>
@@ -1307,7 +1322,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">86
+            <h3 class="sectionHead"><span class="titlemark">87
             </span> <a id="x1-10001"></a>State</h3>
 
             <body/>
@@ -1322,7 +1337,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">87
+            <h3 class="sectionHead"><span class="titlemark">88
             </span> <a id="x1-10001"></a>Story</h3>
 
             <body/>
@@ -1337,7 +1352,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">88
+            <h3 class="sectionHead"><span class="titlemark">89
             </span> <a id="x1-10001"></a>Student</h3>
 
             <body/>
@@ -1352,7 +1367,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">89
+            <h3 class="sectionHead"><span class="titlemark">90
             </span> <a id="x1-10001"></a>Study</h3>
 
             <body/>
@@ -1367,7 +1382,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">90
+            <h3 class="sectionHead"><span class="titlemark">91
             </span> <a id="x1-10001"></a>System</h3>
 
             <body/>
@@ -1382,7 +1397,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">91
+            <h3 class="sectionHead"><span class="titlemark">92
             </span> <a id="x1-10001"></a>Teacher</h3>
 
             <body/>
@@ -1397,7 +1412,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">92
+            <h3 class="sectionHead"><span class="titlemark">93
             </span> <a id="x1-10001"></a>Team</h3>
 
             <body/>
@@ -1412,7 +1427,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">93
+            <h3 class="sectionHead"><span class="titlemark">94
             </span> <a id="x1-10001"></a>Thing</h3>
 
             <body/>
@@ -1427,7 +1442,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">94
+            <h3 class="sectionHead"><span class="titlemark">95
             </span> <a id="x1-10001"></a>Time</h3>
 
             <body/>
@@ -1442,7 +1457,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">95
+            <h3 class="sectionHead"><span class="titlemark">96
             </span> <a id="x1-10001"></a>War</h3>
 
             <body/>
@@ -1457,7 +1472,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">96
+            <h3 class="sectionHead"><span class="titlemark">97
             </span> <a id="x1-10001"></a>Water</h3>
 
             <body/>
@@ -1472,7 +1487,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">97
+            <h3 class="sectionHead"><span class="titlemark">98
             </span> <a id="x1-10001"></a>Way</h3>
 
             <body/>
@@ -1487,7 +1502,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">98
+            <h3 class="sectionHead"><span class="titlemark">99
             </span> <a id="x1-10001"></a>Week</h3>
 
             <body/>
@@ -1502,7 +1517,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">99
+            <h3 class="sectionHead"><span class="titlemark">100
             </span> <a id="x1-10001"></a>Woman</h3>
 
             <body/>
@@ -1517,7 +1532,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">100
+            <h3 class="sectionHead"><span class="titlemark">101
             </span> <a id="x1-10001"></a>Word</h3>
 
             <body/>
@@ -1532,7 +1547,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">101
+            <h3 class="sectionHead"><span class="titlemark">102
             </span> <a id="x1-10001"></a>Work</h3>
 
             <body/>
@@ -1547,7 +1562,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">102
+            <h3 class="sectionHead"><span class="titlemark">103
             </span> <a id="x1-10001"></a>World</h3>
 
             <body/>
@@ -1562,7 +1577,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">103
+            <h3 class="sectionHead"><span class="titlemark">104
             </span> <a id="x1-10001"></a>Year</h3>
 
             <body/>
@@ -1577,7 +1592,7 @@ opla:renderedSchemaDiagram a owl:DatatypeProperty ;
     opla:htmlDocumentation """
             <html>
             <body>
-            <h3 class="sectionHead"><span class="titlemark">104
+            <h3 class="sectionHead"><span class="titlemark">105
             </span> <a id="x1-10001"></a>chair</h3>
 
             <body/>
