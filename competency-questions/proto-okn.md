@@ -1,8 +1,8 @@
 # Competency Questions from Proto-OKN Project
 ## Biology-Health
 ### SPOKE
-1. What conditions can be inferred from the gene activity pattern of blood cells in space
-2. What drugs can counteract or minimize the effect of radiation in lower orbit and in outer space
+1. What conditions can be inferred from the gene activity pattern of blood cells in space?
+2. What drugs can counteract or minimize the effect of radiation in lower orbit and in outer space?
 3. What are the most physiologically accurate Earth analogs of spaceflight?
 4. What conditions on Earth most closely resemble long spaceflight missions?
 5. How are food deserts associated with diabetes?
