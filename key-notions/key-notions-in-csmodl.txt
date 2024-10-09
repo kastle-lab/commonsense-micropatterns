@@ -1,9 +1,6 @@
 place
 name
+service
+hour
 time
-place
-name
-fire
-region
-time
-land
+case
