@@ -1,6 +1,0 @@
-place
-name
-service
-hour
-time
-case

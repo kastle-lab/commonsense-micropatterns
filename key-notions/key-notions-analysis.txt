@@ -1,0 +1,30 @@
+Key Notions Overlap for CSMODL:
+place
+library
+institution
+judge
+event
+name
+service
+interest
+language
+condition
+hour
+researcher
+time
+material
+cause
+case
+
+Key Notions Overlap for Enslaved:
+place
+fire
+region
+name
+land
+time
+
+Key Notions Overlap in both CSMODL and Enslaved:
+place
+name
+time
