@@ -5,3 +5,6 @@ This repository describes a set of 104 commonsense micropatterns (CSMPs). These 
 * `code/` -- the code to extract patterns from the responses, clean extracted turtle files, and create the patterns.
 * `data/` -- the direct results of the prompting, as stored in multiple formats.
 * `csmodl/` -- the modular ontology design library created from these patterns.
+* `extractedSharedTerms` -- analyzing degree of overlap between the cs modl and enslaved modl
+* `competency-questions` -- extracted CQs from KWG and Proto-OKN project
+* `key-notions` -- analyzing overlap of terms from KWG and Proto-OKN project with cs enslaved modl
