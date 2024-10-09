@@ -1,9 +1,0 @@
-place
-name
-time
-place
-name
-fire
-region
-time
-land
