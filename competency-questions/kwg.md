@@ -54,6 +54,7 @@
     4. Zip Code Area
     5. Federal Judicial District
     6. National Weather Zone
+
 # KWG
 ## Direct Relief
 ### Expertise
@@ -82,7 +83,7 @@
 2. What regions are being affected by dense smoke and potential ash fall?
     1. In these regions, are there agricultural lands that will be affected?
     2. What types of crops are growing there?
-  3. How will the current fires and associated smoke plumes affect the quality and quantity of lettuce produced in the Salinas Valley? (county?)
-  4. Who will be affected by these shortages?
- 
+3. How will the current fires and associated smoke plumes affect the quality and quantity of lettuce produced in the Salinas Valley? (county?)
+4. Who will be affected by these shortages?
+
 ## FMI
