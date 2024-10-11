@@ -1,10 +1,39 @@
 Totals:
-** CS-MODL **
-     CS-MODL Shared Class Terms: 1579
-     CS-MODL Property Terms: 3369
-** Enslaved-MODL **
-     ENSLAVED-MODL Shared Class Terms: 1668
-     ENSLAVED-MODL Property Terms: 2317
-** Shared Terms across MODLs **
-     Shared Class Terms: 245
-     Shared Property Terms: 457
+== CS-MODL ==
+     CS-MODL Shared Class Terms: 813
+          * these class terms exist in more than one cs-modl pattern
+
+     CS-MODL Unique Class Terms: 1579
+          * this is the total count of unique class terms in all cs-modl patterns
+
+     CS-MODL Shared Property Terms: 2052
+          * these property terms exist in more than one cs-modl pattern
+
+     CS-MODL Unique Property Terms: 3369
+          * this is the total count of unique property terms in all cs-modl patterns
+
+== Enslaved-MODL ==
+     ENSLAVED-MODL Shared Class Terms: 913
+          * these class terms exist in more than one enslaved pattern
+
+     ENSLAVED-MODL Unique Class Terms: 1668
+          * this is the total count of unique class terms in all enslaved patterns
+
+     ENSLAVED-MODL Shared Property Terms: 1423
+          * these property terms exist in more than one enslaved pattern
+
+     ENSLAVED-MODL Unique Property Terms: 2317
+          * this is the total count of unique property terms in all enslaved patterns
+
+== Across MODLs ==
+     Shared Class Terms: 244
+          * these class terms exist in both cs-modl and enslaved-modl patterns
+
+     Unique Class Terms: 1482
+          * this is the total count of unique class terms in all patterns including cs-modl and enslaved-modl
+
+     Shared Property Terms: 456
+          * these property terms exist in both cs-modl and enslaved-modl patterns
+
+     Unique Property Terms: 3019
+          * this is the total count of unique property terms in all patterns including cs-modl and enslaved-modl
