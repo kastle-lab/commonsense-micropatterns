@@ -1,6 +1,10 @@
-CS-MODL Class Terms: 1579
-CS-MODL Property Terms: 3369
-ENSLAVED-MODL Class Terms: 1668
-ENSLAVED-MODL Property Terms: 2317
-Shared Class Terms: 244
-Shared Property Terms: 456
+Totals:
+** CS-MODL **
+     CS-MODL Shared Class Terms: 1579
+     CS-MODL Property Terms: 3369
+** Enslaved-MODL **
+     ENSLAVED-MODL Shared Class Terms: 1668
+     ENSLAVED-MODL Property Terms: 2317
+** Shared Terms across MODLs **
+     Shared Class Terms: 245
+     Shared Property Terms: 457
