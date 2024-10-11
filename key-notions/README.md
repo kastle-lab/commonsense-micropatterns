@@ -10,32 +10,39 @@ Analyzing how Key-Notions from KWG and Proto-OKN Project overlap with the MODL p
 Below is a list of terms found to overlap between the KWG and Proto-OKN Projects and the MODL patterns. 
 
 Key Notions Overlap for CSMODL:
-* place
-* library
-* institution
-* judge
-* event
-* name
-* service
-* interest
-* language
-* condition
-* hour
-* researcher
-* time
-* material
-* cause
 * case
+* name
+* place
+* time
+* hour
+* service
 
 Key Notions Overlap for Enslaved:
-* place
-* fire
-* region
-* name
 * land
+* material
+* service
+* cost
+* fire
+* hour
+* region
+* case
+* event
+* interest
+* place
 * time
+* cause
+* judge
+* institution
+* language
+* name
+* library
+* condition
+* researcher
 
 Key Notions Overlap in both CSMODL and Enslaved:
-* place
+* case
 * name
+* place
 * time
+* hour
+* service
