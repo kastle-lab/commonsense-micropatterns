@@ -1,0 +1,35 @@
+@prefix : <http://example.org/time#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:TemporalEntity rdf:type rdfs:Class .
+:Instant rdf:type rdfs:Class ;
+    rdfs:subClassOf :TemporalEntity .
+:Interval rdf:type rdfs:Class ;
+    rdfs:subClassOf :TemporalEntity .
+:Time rdf:type rdfs:Class ;
+    rdfs:subClassOf :TemporalEntity .
+:hasBeginning rdf:type rdf:Property ;
+    rdfs:domain :Interval ;
+    rdfs:range :Instant .
+:hasEnd rdf:type rdf:Property ;
+    rdfs:domain :Interval ;
+    rdfs:range :Instant .
+:hasDuration rdf:type rdf:Property ;
+    rdfs:domain :Interval ;
+    rdfs:range xsd:duration .
+:instantInInterval rdf:type rdf:Property ;
+    rdfs:domain :Instant ;
+    rdfs:range :Interval .
+:hasTime rdf:type rdf:Property ;
+    rdfs:domain :TemporalEntity ;
+    rdfs:range :Time .
+:isBefore rdf:type rdf:Property ;
+    rdfs:domain :Instant ;
+    rdfs:range :Instant .
+:isAfter rdf:type rdf:Property ;
+    rdfs:domain :Instant ;
+    rdfs:range :Instant .
+:Interval rdfs:comment "A time interval is a connected temporal entity of non-zero duration" .
+:Instant rdfs:comment "A point in time with zero duration" .
+:Time rdfs:comment "A general temporal entity, which can be an instant or an interval" .

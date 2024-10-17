@@ -1,0 +1,140 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:City a rdfs:Class ;
+    rdfs:subClassOf kastle:Land .
+
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Land .
+
+kastle:GeographicFeature a rdfs:Class .
+
+kastle:GeographicalFeature a rdfs:Class ;
+    rdfs:subClassOf kastle:Land .
+
+kastle:GeographicalLocation a rdfs:Class .
+
+kastle:HumanSettlement a rdfs:Class .
+
+kastle:Land a rdfs:Class .
+
+kastle:LandEntity a rdfs:Class .
+
+kastle:ManMadeLandform a rdfs:Class ;
+    rdfs:subClassOf kastle:Land .
+
+kastle:ManmadeLandform a rdfs:Class ;
+    rdfs:subClassOf kastle:Land .
+
+kastle:NaturalLandform a rdfs:Class ;
+    rdfs:subClassOf kastle:Land .
+
+kastle:Ownership a rdfs:Class .
+
+kastle:Terrain a rdfs:Class ;
+    rdfs:subClassOf kastle:Land .
+
+kastle:Vegetation a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/land> a owl:Ontology ;
+    opla-core:hasPatternName "land Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:containsGeographicFeature a rdf:Property ;
+    rdfs:domain kastle:Terrain ;
+    rdfs:range kastle:GeographicFeature .
+
+kastle:elevation a rdf:Property ;
+    rdfs:domain kastle:Terrain ;
+    rdfs:range xsd:decimal .
+
+kastle:hasArea a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range xsd:decimal .
+
+kastle:hasElevation a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range xsd:float .
+
+kastle:hasFeature a rdf:Property ;
+    rdfs:domain kastle:Land,
+        kastle:LandEntity ;
+    rdfs:range kastle:LandEntity,
+        kastle:NaturalLandform .
+
+kastle:hasInfrastructure a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:ManMadeLandform .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:HumanSettlement,
+        kastle:Land ;
+    rdfs:range kastle:GeographicalLocation,
+        kastle:Land .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:GeographicFeature ;
+    rdfs:range xsd:string .
+
+kastle:hasOwner a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:Ownership .
+
+kastle:hasTerrainFeature a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:NaturalLandform .
+
+kastle:hasVegetation a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:Vegetation .
+
+kastle:isAdjacentTo a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:Land .
+
+kastle:isLocatedIn a rdf:Property ;
+    rdfs:domain kastle:ManmadeLandform ;
+    rdfs:range kastle:Land .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Land,
+        kastle:LandEntity ;
+    rdfs:range kastle:GeographicalFeature,
+        kastle:LandEntity .
+
+kastle:isPartOfTerrain a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:Terrain .
+
+kastle:landUse a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:Land .
+
+kastle:locatedIn a rdf:Property ;
+    rdfs:domain kastle:GeographicalFeature ;
+    rdfs:range kastle:Land .
+
+kastle:locatedInCountry a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range kastle:Country .
+
+kastle:partOf a rdf:Property ;
+    rdfs:domain kastle:City ;
+    rdfs:range kastle:Country .
+
+kastle:soilType a rdf:Property ;
+    rdfs:domain kastle:Land ;
+    rdfs:range xsd:string .
+

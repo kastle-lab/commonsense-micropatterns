@@ -1,0 +1,56 @@
+@prefix : <http://example.org/language#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Language rdf:type owl:Class ;
+    rdfs:label "Language" ;
+    rdfs:comment "A system of communication used by a particular community or country." .
+:NaturalLanguage rdf:type owl:Class ;
+    rdfs:subClassOf :Language ;
+    rdfs:label "Natural Language" ;
+    rdfs:comment "Languages that have developed naturally in use by people." .
+:ProgrammingLanguage rdf:type owl:Class ;
+    rdfs:subClassOf :Language ;
+    rdfs:label "Programming Language" ;
+    rdfs:comment "Formal languages designed to communicate instructions to a machine, particularly a computer." .
+:LanguageFamily rdf:type owl:Class ;
+    rdfs:label "Language Family" ;
+    rdfs:comment "A group of languages related through descent from a common ancestral language." .
+:belongsToFamily rdf:type owl:ObjectProperty ;
+    rdfs:domain :NaturalLanguage ;
+    rdfs:range :LanguageFamily ;
+    rdfs:label "belongs to family" ;
+    rdfs:comment "Indicates the language family a natural language belongs to." .
+:hasDialects rdf:type owl:ObjectProperty ;
+    rdfs:domain :NaturalLanguage ;
+    rdfs:range :Dialect ;
+    rdfs:label "has dialects" ;
+    rdfs:comment "Indicates the dialects of a natural language." .
+:Dialect rdf:type owl:Class ;
+    rdfs:label "Dialect" ;
+    rdfs:comment "A regional or social variety of a language distinguished by pronunciation, grammar, or vocabulary." .
+:Syntax rdf:type owl:Class ;
+    rdfs:label "Syntax" ;
+    rdfs:comment "The set of rules, principles, and processes that govern the structure of sentences in a given language." .
+:Semantics rdf:type owl:Class ;
+    rdfs:label "Semantics" ;
+    rdfs:comment "The meaning of linguistic expressions and sentences." .
+:hasSyntax rdf:type owl:ObjectProperty ;
+    rdfs:domain :Language ;
+    rdfs:range :Syntax ;
+    rdfs:label "has syntax" ;
+    rdfs:comment "Indicates the syntax associated with a language." .
+:hasSemantics rdf:type owl:ObjectProperty ;
+    rdfs:domain :Language ;
+    rdfs:range :Semantics ;
+    rdfs:label "has semantics" ;
+    rdfs:comment "Indicates the semantics associated with a language." .
+:English rdf:type :NaturalLanguage ;
+    rdfs:label "English" .
+:IndoEuropean rdf:type :LanguageFamily ;
+    rdfs:label "Indo-European" .
+:belongsToFamily :English :IndoEuropean .
+:Python rdf:type :ProgrammingLanguage ;
+    rdfs:label "Python" .
+:hasSyntax :Python :Syntax .
+:hasSemantics :Python :Semantics .

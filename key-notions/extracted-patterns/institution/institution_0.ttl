@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix inst: <http://example.org/institution#> .
+inst:Institution rdf:type owl:Class ;
+    rdfs:label "Institution" ;
+    rdfs:comment "A class representing an organization or entity with specific goals and purposes." .
+inst:University rdf:type owl:Class ;
+    rdfs:subClassOf inst:Institution ;
+    rdfs:label "University" ;
+    rdfs:comment "An institution of higher education and research." .
+inst:Hospital rdf:type owl:Class ;
+    rdfs:subClassOf inst:Institution ;
+    rdfs:label "Hospital" ;
+    rdfs:comment "A health care institution providing patient treatment." .
+inst:Library rdf:type owl:Class ;
+    rdfs:subClassOf inst:Institution ;
+    rdfs:label "Library" ;
+    rdfs:comment "An institution housing a collection of books and other resources for public use." .
+inst:affiliatedWith rdf:type owl:ObjectProperty ;
+    rdfs:domain inst:Institution ;
+    rdfs:range inst:Institution ;
+    rdfs:label "affiliated with" ;
+    rdfs:comment "Indicates an affiliation between two institutions." .
+inst:locatedIn rdf:type owl:ObjectProperty ;
+    rdfs:domain inst:Institution ;
+    rdfs:range xsd:string ;
+    rdfs:label "located in" ;
+    rdfs:comment "Specifies the location of an institution." .
+inst:hasDepartment rdf:type owl:ObjectProperty ;
+    rdfs:domain inst:University ;
+    rdfs:range inst:Department ;
+    rdfs:label "has department" ;
+    rdfs:comment "Indicates a university has a specific department." .
+inst:Department rdf:type owl:Class ;
+    rdfs:label "Department" ;
+    rdfs:comment "A specialized division within an institution, such as a university." .
+inst:Faculty rdf:type owl:Class ;
+    rdfs:subClassOf inst:Institution ;
+    rdfs:label "Faculty" ;
+    rdfs:comment "An academic staff at an institution, often part of a university." .
+inst:hasFaculty rdf:type owl:ObjectProperty ;
+    rdfs:domain inst:University ;
+    rdfs:range inst:Faculty ;
+    rdfs:label "has faculty" ;
+    rdfs:comment "Signifies that a university has a certain faculty." .
+inst:ResearchCenter rdf:type owl:Class ;
+    rdfs:subClassOf inst:Institution ;
+    rdfs:label "Research Center" ;
+    rdfs:comment "An institution focused on research and development." .
+inst:associatedWith rdf:type owl:ObjectProperty ;
+    rdfs:domain inst:ResearchCenter ;
+    rdfs:range inst:University ;
+    rdfs:label "associated with" ;
+    rdfs:comment "Indicates a research center's association with a university." .
+inst:medicalCenter rdf:type owl:Class ;
+    rdfs:subClassOf inst:Hospital ;
+    rdfs:label "Medical Center" ;
+    rdfs:comment "A larger hospital offering extensive medical services." .

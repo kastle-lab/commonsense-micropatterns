@@ -1,0 +1,25 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Name a rdfs:Class ;
+    rdfs:label "Name" ;
+    rdfs:comment "A class representing a name, typically a personal name." .
+:hasFirstName a rdfs:Property ;
+    rdfs:domain :Name ;
+    rdfs:range xsd:string ;
+    rdfs:label "has first name" ;
+    rdfs:comment "Property representing the first name of a person." .
+:hasLastName a rdfs:Property ;
+    rdfs:domain :Name ;
+    rdfs:range xsd:string ;
+    rdfs:label "has last name" ;
+    rdfs:comment "Property representing the last name of a person." .
+:hasMiddleName a rdfs:Property ;
+    rdfs:domain :Name ;
+    rdfs:range xsd:string ;
+    rdfs:label "has middle name" ;
+    rdfs:comment "Property representing the middle name of a person, if any." .
+:FullName a rdfs:Class ;
+    rdfs:subClassOf :Name ;
+    rdfs:label "Full name" ;
+    rdfs:comment "A subclass for the full name, usually combining first, middle, and last names." .

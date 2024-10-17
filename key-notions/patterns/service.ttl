@@ -1,0 +1,134 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Client a rdfs:Class .
+
+kastle:Cost a rdfs:Class .
+
+kastle:Customer a rdfs:Class .
+
+kastle:Duration a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Payment a rdfs:Class .
+
+kastle:Provider a rdfs:Class .
+
+kastle:Service a rdfs:Class .
+
+kastle:ServiceCategory a rdfs:Class .
+
+kastle:ServiceProvider a rdfs:Class .
+
+kastle:ServiceRequest a rdfs:Class .
+
+kastle:ServiceType a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/service> a owl:Ontology ;
+    opla-core:hasPatternName "service Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:belongsToCategory a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceCategory .
+
+kastle:categorizedAs a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceCategory .
+
+kastle:consumesService a rdf:Property ;
+    rdfs:domain kastle:Customer ;
+    rdfs:range kastle:Service .
+
+kastle:deliversService a rdf:Property ;
+    rdfs:domain kastle:Provider ;
+    rdfs:range kastle:Service .
+
+kastle:fulfillsRequest a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceRequest .
+
+kastle:hasClient a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Client .
+
+kastle:hasCost a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range xsd:decimal,
+        kastle:Cost .
+
+kastle:hasCustomer a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Customer .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range xsd:string .
+
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Duration .
+
+kastle:hasPayment a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Payment .
+
+kastle:hasProvider a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Provider,
+        kastle:ServiceProvider .
+
+kastle:hasRating a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range rdfs:Literal,
+        kastle:Integer .
+
+kastle:hasRequest a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:ServiceRequest .
+
+kastle:hasServiceType a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range rdfs:Literal,
+        kastle:ServiceType .
+
+kastle:isTypeOfService a rdf:Property ;
+    rdfs:domain kastle:ServiceType ;
+    rdfs:range kastle:Service .
+
+kastle:offersService a rdf:Property ;
+    rdfs:domain kastle:Provider,
+        kastle:ServiceProvider ;
+    rdfs:range kastle:Service .
+
+kastle:providedAtLocation a rdf:Property ;
+    rdfs:domain kastle:Service ;
+    rdfs:range kastle:Location .
+
+kastle:providesRequest a rdf:Property ;
+    rdfs:domain kastle:ServiceProvider ;
+    rdfs:range kastle:ServiceRequest .
+
+kastle:receivesService a rdf:Property ;
+    rdfs:domain kastle:Customer ;
+    rdfs:range kastle:Service .
+
+kastle:requestsService a rdf:Property ;
+    rdfs:domain kastle:Customer ;
+    rdfs:range kastle:ServiceRequest .
+

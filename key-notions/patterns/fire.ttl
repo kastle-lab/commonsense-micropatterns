@@ -1,0 +1,114 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Cause a rdfs:Class .
+
+kastle:ControlledFire a rdfs:Class ;
+    rdfs:subClassOf kastle:Fire .
+
+kastle:Effect a rdfs:Class .
+
+kastle:Fire a rdfs:Class .
+
+kastle:FireTriangle a rdfs:Class ;
+    rdfs:subClassOf kastle:N4a172da1d9fb45319f6af4e3108eb124b1 .
+
+kastle:Flame a rdfs:Class .
+
+kastle:Fuel a rdfs:Class .
+
+kastle:GeographicArea a rdfs:Class .
+
+kastle:Heat a rdfs:Class .
+
+kastle:Ignition a rdfs:Class .
+
+kastle:Oxygen a rdfs:Class .
+
+kastle:PreventiveMeasure a rdfs:Class .
+
+kastle:Smoke a rdfs:Class .
+
+kastle:Wildfire a rdfs:Class ;
+    rdfs:subClassOf kastle:Fire .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/fire> a owl:Ontology ;
+    opla-core:hasPatternName "fire Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:burning a rdf:Property ;
+    rdfs:domain kastle:Fuel ;
+    rdfs:range kastle:Fire .
+
+kastle:consumedBy a rdf:Property ;
+    rdfs:domain kastle:Fuel ;
+    rdfs:range kastle:Fire .
+
+kastle:emitsSmoke a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Smoke .
+
+kastle:fireSpread a rdf:Property ;
+    rdfs:domain kastle:Wildfire ;
+    rdfs:range kastle:GeographicArea .
+
+kastle:flash_point a rdf:Property ;
+    rdfs:domain kastle:Fuel ;
+    rdfs:range xsd:float .
+
+kastle:hasCause a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Cause .
+
+kastle:hasEffect a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Effect .
+
+kastle:hasFlame a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Flame .
+
+kastle:hasFuel a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Fuel .
+
+kastle:hasIgnition a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Ignition .
+
+kastle:hasPreventiveMeasure a rdf:Property ;
+    rdfs:domain kastle:ControlledFire ;
+    rdfs:range kastle:PreventiveMeasure .
+
+kastle:produces a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Smoke .
+
+kastle:producesHeat a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Heat .
+
+kastle:requires a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:FireTriangle .
+
+kastle:requiresOxygen a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Oxygen .
+
+kastle:smoke_production a rdf:Property ;
+    rdfs:domain kastle:Fuel ;
+    rdfs:range xsd:string .
+

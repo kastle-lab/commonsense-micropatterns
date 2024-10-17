@@ -1,0 +1,40 @@
+@prefix : <http://example.org/cost#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Cost rdf:type rdfs:Class ;
+      rdfs:label "Cost" ;
+      rdfs:comment "A class representing the notion of cost." .
+:hasAmount rdf:type rdf:Property ;
+           rdfs:domain :Cost ;
+           rdfs:range xsd:decimal ;
+           rdfs:label "has amount" ;
+           rdfs:comment "Defines the monetary amount of a cost." .
+:hasCurrency rdf:type rdf:Property ;
+             rdfs:domain :Cost ;
+             rdfs:range rdfs:Literal ;
+             rdfs:label "has currency" ;
+             rdfs:comment "Defines the currency in which the cost is specified." .
+:hasDate rdf:type rdf:Property ;
+         rdfs:domain :Cost ;
+         rdfs:range xsd:date ;
+         rdfs:label "has date" ;
+         rdfs:comment "Defines the date associated with the cost." .
+:isFixedCost rdf:type rdf:Property ;
+             rdfs:domain :Cost ;
+             rdfs:range xsd:boolean ;
+             rdfs:label "is fixed cost" ;
+             rdfs:comment "Indicates if the cost is fixed or variable." .
+:isRecurringCost rdf:type rdf:Property ;
+                 rdfs:domain :Cost ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "is recurring cost" ;
+                 rdfs:comment "Indicates if the cost is recurring." .
+:CostCategory rdf:type rdfs:Class ;
+              rdfs:label "Cost Category" ;
+              rdfs:comment "A category to which a cost belongs." .
+:belongsToCategory rdf:type rdf:Property ;
+                   rdfs:domain :Cost ;
+                   rdfs:range :CostCategory ;
+                   rdfs:label "belongs to category" ;
+                   rdfs:comment "Specifies the category under which the cost is classified." .

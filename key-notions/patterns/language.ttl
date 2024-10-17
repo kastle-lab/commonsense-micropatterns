@@ -1,0 +1,68 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Dialect a rdfs:Class .
+
+kastle:Family a rdfs:Class .
+
+kastle:Human a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
+
+kastle:Language a rdfs:Class .
+
+kastle:LanguageFamily a rdfs:Class .
+
+kastle:NaturalLanguage a rdfs:Class ;
+    rdfs:subClassOf kastle:Language .
+
+kastle:Script a rdfs:Class .
+
+kastle:Semantics a rdfs:Class .
+
+kastle:Syntax a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/language> a owl:Ontology ;
+    opla-core:hasPatternName "language Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:belongsToFamily a rdf:Property ;
+    rdfs:domain kastle:NaturalLanguage ;
+    rdfs:range kastle:LanguageFamily .
+
+kastle:hasDialects a rdf:Property ;
+    rdfs:domain kastle:NaturalLanguage ;
+    rdfs:range kastle:Dialect .
+
+kastle:hasLanguageFamily a rdf:Property ;
+    rdfs:domain kastle:NaturalLanguage ;
+    rdfs:range kastle:Family .
+
+kastle:hasScript a rdf:Property ;
+    rdfs:domain kastle:Language,
+        kastle:NaturalLanguage ;
+    rdfs:range kastle:Script .
+
+kastle:hasSemantics a rdf:Property ;
+    rdfs:domain kastle:Language ;
+    rdfs:range kastle:Semantics .
+
+kastle:hasSyntax a rdf:Property ;
+    rdfs:domain kastle:Language ;
+    rdfs:range kastle:Syntax .
+
+kastle:isSpokenBy a rdf:Property ;
+    rdfs:domain kastle:NaturalLanguage ;
+    rdfs:range kastle:Human .
+

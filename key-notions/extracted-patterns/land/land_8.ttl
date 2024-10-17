@@ -1,0 +1,46 @@
+@prefix : <http://example.org/land#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Land rdf:type owl:Class ;
+    rdfs:label "Land" ;
+    rdfs:comment "An area of the earth's surface that is owned, defined, or used." .
+:NaturalLandform rdf:type owl:Class ;
+    rdfs:label "Natural Landform" ;
+    rdfs:subClassOf :Land ;
+    rdfs:comment "Naturally occurring geographical features of land." .
+:ManmadeLandform rdf:type owl:Class ;
+    rdfs:label "Manmade Landform" ;
+    rdfs:subClassOf :Land ;
+    rdfs:comment "Artificially created geographical features of land." .
+:Mountain rdf:type owl:Class ;
+    rdfs:label "Mountain" ;
+    rdfs:subClassOf :NaturalLandform ;
+    rdfs:comment "A large natural elevation of the earth's surface." .
+:Valley rdf:type owl:Class ;
+    rdfs:label "Valley" ;
+    rdfs:subClassOf :NaturalLandform ;
+    rdfs:comment "A low area of land between hills or mountains." .
+:Plain rdf:type owl:Class ;
+    rdfs:label "Plain" ;
+    rdfs:subClassOf :NaturalLandform ;
+    rdfs:comment "A large area of flat or gently rolling land." .
+:UrbanArea rdf:type owl:Class ;
+    rdfs:label "Urban Area" ;
+    rdfs:subClassOf :ManmadeLandform ;
+    rdfs:comment "An area with high human population density and infrastructure." .
+:Park rdf:type owl:Class ;
+    rdfs:label "Park" ;
+    rdfs:subClassOf :ManmadeLandform ;
+    rdfs:comment "An area set aside for public recreation and enjoyment." .
+:hasFeature rdf:type owl:ObjectProperty ;
+    rdfs:label "has Feature" ;
+    rdfs:domain :Land ;
+    rdfs:range :NaturalLandform ;
+    rdfs:comment "Relates a land area to its natural geographical features." .
+:isLocatedIn rdf:type owl:ObjectProperty ;
+    rdfs:label "is Located In" ;
+    rdfs:domain :ManmadeLandform ;
+    rdfs:range :Land ;
+    rdfs:comment "Relates a manmade landform to its geographical location." .

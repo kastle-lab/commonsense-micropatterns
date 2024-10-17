@@ -1,0 +1,38 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Service a rdfs:Class ;
+    rdfs:label "Service" ;
+    rdfs:comment "A service is an activity that provides some intangible benefits to users." .
+:Provider a rdfs:Class ;
+    rdfs:label "Provider" ;
+    rdfs:comment "An entity that offers services." .
+:Customer a rdfs:Class ;
+    rdfs:label "Customer" ;
+    rdfs:comment "An entity that uses or benefits from services." .
+:hasProvider a rdf:Property ;
+    rdfs:domain :Service ;
+    rdfs:range :Provider ;
+    rdfs:label "has provider" ;
+    rdfs:comment "Relates a service to its provider." .
+:hasCustomer a rdf:Property ;
+    rdfs:domain :Service ;
+    rdfs:range :Customer ;
+    rdfs:label "has customer" ;
+    rdfs:comment "Relates a service to its customer." .
+:hasDescription a rdf:Property ;
+    rdfs:domain :Service ;
+    rdfs:range xsd:string ;
+    rdfs:label "has description" ;
+    rdfs:comment "Provides a description of the service." .
+:hasRating a rdf:Property ;
+    rdfs:domain :Service ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has rating" ;
+    rdfs:comment "Indicates the rating of the service, typically on a numeric scale." .
+:hasCost a rdf:Property ;
+    rdfs:domain :Service ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has cost" ;
+    rdfs:comment "Specifies the cost associated with the service." .

@@ -1,0 +1,22 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Hour rdf:type rdfs:Class ;
+    rdfs:label "Hour" ;
+    rdfs:comment "An Hour represents a unit of time equivalent to 1/24 of a day." .
+:hourValue rdf:type rdf:Property ;
+    rdfs:label "hour value" ;
+    rdfs:comment "Represents the numerical value of the hour." ;
+    rdfs:domain :Hour ;
+    rdfs:range xsd:integer .
+:hasNextHour rdf:type rdf:Property ;
+    rdfs:label "has next hour" ;
+    rdfs:comment "Relates an hour to the subsequent hour in a day." ;
+    rdfs:domain :Hour ;
+    rdfs:range :Hour .
+:HourUnit rdf:type :Hour ;
+    :hourValue 1 ;
+    :hasNextHour [        a :Hour ;
+        :hourValue 2 ;
+    ] .

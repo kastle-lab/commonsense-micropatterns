@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/service#> .
+ex:Service a owl:Class ;
+    rdfs:label "Service" ;
+    rdfs:comment "A general service offered by an organization." .
+ex:Provider a owl:Class ;
+    rdfs:label "Provider" ;
+    rdfs:comment "An entity that provides a service." .
+ex:Client a owl:Class ;
+    rdfs:label "Client" ;
+    rdfs:comment "An entity that receives a service." .
+ex:Payment a owl:Class ;
+    rdfs:label "Payment" ;
+    rdfs:comment "A transaction involving the exchange of a service for currency or other compensation." .
+ex:hasProvider a owl:ObjectProperty ;
+    rdfs:domain ex:Service ;
+    rdfs:range ex:Provider ;
+    rdfs:label "has provider" ;
+    rdfs:comment "Relates a service to the entity that provides it." .
+ex:hasClient a owl:ObjectProperty ;
+    rdfs:domain ex:Service ;
+    rdfs:range ex:Client ;
+    rdfs:label "has client" ;
+    rdfs:comment "Relates a service to the entity that receives it." .
+ex:hasPayment a owl:ObjectProperty ;
+    rdfs:domain ex:Service ;
+    rdfs:range ex:Payment ;
+    rdfs:label "has payment" ;
+    rdfs:comment "Associates a service with the payment transaction involved." .
+ex:ServiceRequest a owl:Class ;
+    rdfs:label "Service Request" ;
+    rdfs:comment "An inquiry or order for a specific service." .
+ex:fulfillsRequest a owl:ObjectProperty ;
+    rdfs:domain ex:Service ;
+    rdfs:range ex:ServiceRequest ;
+    rdfs:label "fulfills request" ;
+    rdfs:comment "Indicates that a service is fulfilling a specific request." .
+ex:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "A geographical or virtual location where a service is provided." .
+ex:providedAtLocation a owl:ObjectProperty ;
+    rdfs:domain ex:Service ;
+    rdfs:range ex:Location ;
+    rdfs:label "provided at location" ;
+    rdfs:comment "Relates a service to the location where it is provided." .
+ex:ServiceCategory a owl:Class ;
+    rdfs:label "Service Category" ;
+    rdfs:comment "A classification for types of services." .
+ex:categorizedAs a owl:ObjectProperty ;
+    rdfs:domain ex:Service ;
+    rdfs:range ex:ServiceCategory ;
+    rdfs:label "categorized as" ;
+    rdfs:comment "Specifies the category for a service." .

@@ -1,0 +1,85 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://example.org/ontology/time#> .
+time:TimeConcept a owl:Class ;
+    rdfs:label "Time Concept" .
+time:TemporalEntity a owl:Class ;
+    rdfs:label "Temporal Entity" ;
+    rdfs:subClassOf time:TimeConcept .
+time:Instant a owl:Class ;
+    rdfs:label "Instant" ;
+    rdfs:subClassOf time:TemporalEntity .
+time:Interval a owl:Class ;
+    rdfs:label "Interval" ;
+    rdfs:subClassOf time:TemporalEntity .
+time:hasBeginning a owl:ObjectProperty ;
+    rdfs:label "has Beginning" ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant .
+time:hasEnd a owl:ObjectProperty ;
+    rdfs:label "has End" ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant .
+time:before a owl:ObjectProperty ;
+    rdfs:label "before" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Instant .
+time:after a owl:ObjectProperty ;
+    rdfs:label "after" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Instant .
+time:duration a owl:DatatypeProperty ;
+    rdfs:label "duration" ;
+    rdfs:domain time:Interval ;
+    rdfs:range xsd:duration .
+time:hasInstant a owl:ObjectProperty ;
+    rdfs:label "has Instant" ;
+    rdfs:domain time:TemporalEntity ;
+    rdfs:range time:Instant .
+time:Year a owl:Class ;
+    rdfs:label "Year" ;
+    rdfs:subClassOf time:Interval .
+time:Month a owl:Class ;
+    rdfs:label "Month" ;
+    rdfs:subClassOf time:Interval .
+time:Day a owl:Class ;
+    rdfs:label "Day" ;
+    rdfs:subClassOf time:Interval .
+time:Hour a owl:Class ;
+    rdfs:label "Hour" ;
+    rdfs:subClassOf time:Interval .
+time:Minute a owl:Class ;
+    rdfs:label "Minute" ;
+    rdfs:subClassOf time:Interval .
+time:Second a owl:Class ;
+    rdfs:label "Second" ;
+    rdfs:subClassOf time:Interval .
+time:hasYear a owl:ObjectProperty ;
+    rdfs:label "has Year" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Year .
+time:hasMonth a owl:ObjectProperty ;
+    rdfs:label "has Month" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Month .
+time:hasDay a owl:ObjectProperty ;
+    rdfs:label "has Day" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Day .
+time:hasHour a owl:ObjectProperty ;
+    rdfs:label "has Hour" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Hour .
+time:hasMinute a owl:ObjectProperty ;
+    rdfs:label "has Minute" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Minute .
+time:hasSecond a owl:ObjectProperty ;
+    rdfs:label "has Second" ;
+    rdfs:domain time:Instant ;
+    rdfs:range time:Second .
+time:TemporalPosition a owl:Class ;
+    rdfs:label "Temporal Position" ;
+    rdfs:subClassOf time:Instant .

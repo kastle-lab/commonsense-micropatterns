@@ -1,0 +1,58 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:AvailabilityCondition a rdfs:Class ;
+    rdfs:subClassOf kastle:Condition .
+
+kastle:AvailabilityStatus a rdfs:Class .
+
+kastle:Condition a rdfs:Class .
+
+kastle:MedicalCondition a rdfs:Class ;
+    rdfs:subClassOf kastle:Condition .
+
+kastle:SeverityLevel a rdfs:Class .
+
+kastle:Symptom a rdfs:Class .
+
+kastle:Treatment a rdfs:Class .
+
+kastle:WeatherCondition a rdfs:Class ;
+    rdfs:subClassOf kastle:Condition .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/condition> a owl:Ontology ;
+    opla-core:hasPatternName "condition Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasAvailabilityStatus a rdf:Property ;
+    rdfs:domain kastle:AvailabilityCondition ;
+    rdfs:range kastle:AvailabilityStatus .
+
+kastle:hasPrecipitation a rdf:Property ;
+    rdfs:domain kastle:WeatherCondition ;
+    rdfs:range xsd:boolean .
+
+kastle:hasSeverity a rdf:Property ;
+    rdfs:domain kastle:Condition ;
+    rdfs:range kastle:SeverityLevel .
+
+kastle:hasSymptom a rdf:Property ;
+    rdfs:domain kastle:MedicalCondition ;
+    rdfs:range kastle:Symptom .
+
+kastle:hasTreatment a rdf:Property ;
+    rdfs:domain kastle:MedicalCondition ;
+    rdfs:range kastle:Treatment .
+

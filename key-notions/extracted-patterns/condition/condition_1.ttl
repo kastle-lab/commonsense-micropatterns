@@ -1,0 +1,44 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Condition a owl:Class ;
+    rdfs:label "Condition" ;
+    rdfs:comment "A state or situation that exists at a particular time." .
+:MedicalCondition a owl:Class ;
+    rdfs:subClassOf :Condition ;
+    rdfs:label "Medical Condition" ;
+    rdfs:comment "A disease, disorder, or illness that affects the body or mind." .
+:EnvironmentalCondition a owl:Class ;
+    rdfs:subClassOf :Condition ;
+    rdfs:label "Environmental Condition" ;
+    rdfs:comment "Circumstances or factors affecting the environment." .
+:WeatherCondition a owl:Class ;
+    rdfs:subClassOf :EnvironmentalCondition ;
+    rdfs:label "Weather Condition" ;
+    rdfs:comment "The state of the atmosphere at a particular place and time." .
+:MaterialCondition a owl:Class ;
+    rdfs:subClassOf :Condition ;
+    rdfs:label "Material Condition" ;
+    rdfs:comment "The state or quality of a physical object or material." .
+:hasSeverity a owl:ObjectProperty ;
+    rdfs:domain :Condition ;
+    rdfs:range :SeverityLevel ;
+    rdfs:label "has severity" ;
+    rdfs:comment "Indicates the severity level of a condition." .
+:SeverityLevel a owl:Class ;
+    rdfs:label "Severity Level" ;
+    rdfs:comment "A classification indicating the severity of a condition." .
+:Mild a owl:Class ;
+    rdfs:subClassOf :SeverityLevel ;
+    rdfs:label "Mild" ;
+    rdfs:comment "A low level of severity." .
+:Moderate a owl:Class ;
+    rdfs:subClassOf :SeverityLevel ;
+    rdfs:label "Moderate" ;
+    rdfs:comment "A moderate level of severity." .
+:Severe a owl:Class ;
+    rdfs:subClassOf :SeverityLevel ;
+    rdfs:label "Severe" ;
+    rdfs:comment "A high level of severity." .

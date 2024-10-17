@@ -1,0 +1,53 @@
+@prefix : <http://example.org/land#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Land a owl:Class ;
+    rdfs:label "Land" ;
+    rdfs:comment "The part of the Earth's surface that is not covered by water." .
+:Terrain a owl:Class ;
+    rdfs:label "Terrain" ;
+    rdfs:comment "A stretch of land, especially with regard to its physical features." ;
+    rdfs:subClassOf :Land .
+:AgriculturalLand a owl:Class ;
+    rdfs:label "Agricultural Land" ;
+    rdfs:comment "Land designated for agricultural use, including cultivating crops and raising livestock." ;
+    rdfs:subClassOf :Land .
+:UrbanLand a owl:Class ;
+    rdfs:label "Urban Land" ;
+    rdfs:comment "Land designated for urban development, including cities and towns." ;
+    rdfs:subClassOf :Land .
+:Forest a owl:Class ;
+    rdfs:label "Forest" ;
+    rdfs:comment "A large area covered chiefly with trees and undergrowth." ;
+    rdfs:subClassOf :Land .
+:Desert a owl:Class ;
+    rdfs:label "Desert" ;
+    rdfs:comment "A barren area of landscape where little precipitation occurs and living conditions are hostile for plant and animal life." ;
+    rdfs:subClassOf :Land .
+:Mountain a owl:Class ;
+    rdfs:label "Mountain" ;
+    rdfs:comment "A large landform that rises prominently above its surroundings, generally exhibiting steep slopes, a confined summit area, and considerable height." ;
+    rdfs:subClassOf :Land .
+:LandUse a owl:ObjectProperty ;
+    rdfs:label "land use" ;
+    rdfs:comment "Describes the human modification of land areas for various uses." ;
+    rdfs:domain :Land ;
+    rdfs:range :Land .
+:hasVegetation a owl:ObjectProperty ;
+    rdfs:label "has vegetation" ;
+    rdfs:comment "Indicates if a land area has vegetation cover." ;
+    rdfs:domain :Land ;
+    rdfs:range :Vegetation .
+:Vegetation a owl:Class ;
+    rdfs:label "Vegetation" ;
+    rdfs:comment "Plants considered collectively, especially those found in a particular area or habitat." .
+:SoilType a owl:DatatypeProperty ;
+    rdfs:label "soil type" ;
+    rdfs:comment "The physical and chemical characteristics of the soil on a land area." ;
+    rdfs:domain :Land .
+:hasElevation a owl:DatatypeProperty ;
+    rdfs:label "has elevation" ;
+    rdfs:comment "Describes the elevation of a land area above sea level." ;
+    rdfs:domain :Land ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#float> .

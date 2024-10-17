@@ -1,0 +1,154 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Case a rdfs:Class .
+
+kastle:CaseStatus a rdfs:Class .
+
+kastle:CaseType a rdfs:Class .
+
+kastle:ContainerCase a rdfs:Class ;
+    rdfs:subClassOf kastle:Case .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Item a rdfs:Class .
+
+kastle:Lawyer a rdfs:Class .
+
+kastle:LegalCase a rdfs:Class ;
+    rdfs:subClassOf kastle:Case .
+
+kastle:MedicalCase a rdfs:Class ;
+    rdfs:subClassOf kastle:Case .
+
+kastle:Outcome a rdfs:Class .
+
+kastle:Participant a rdfs:Class .
+
+kastle:Party a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Status a rdfs:Class .
+
+kastle:Thing a rdfs:Class .
+
+kastle:UseCase a rdfs:Class ;
+    rdfs:subClassOf kastle:Case .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/case> a owl:Ontology ;
+    opla-core:hasPatternName "case Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:caseDescription a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range rdfs:Literal .
+
+kastle:caseID a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range rdfs:Literal .
+
+kastle:caseNumber a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:caseTitle a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range rdfs:Literal .
+
+kastle:defendant a rdf:Property ;
+    rdfs:domain kastle:LegalCase ;
+    rdfs:range kastle:Resource .
+
+kastle:diagnosis a rdf:Property ;
+    rdfs:domain kastle:MedicalCase ;
+    rdfs:range rdfs:Literal .
+
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range xsd:date .
+
+kastle:handles a rdf:Property ;
+    rdfs:domain kastle:LegalCase ;
+    rdfs:range kastle:Lawyer .
+
+kastle:hasCaseType a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:CaseType .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range xsd:date,
+        kastle:Datetime .
+
+kastle:hasItem a rdf:Property ;
+    rdfs:domain kastle:ContainerCase ;
+    rdfs:range kastle:Item .
+
+kastle:hasOutcome a rdf:Property ;
+    rdfs:domain kastle:Case,
+        kastle:LegalCase ;
+    rdfs:range rdfs:Literal,
+        kastle:Outcome .
+
+kastle:hasParticipant a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Participant .
+
+kastle:hasStatus a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:CaseStatus,
+        kastle:Status .
+
+kastle:hasVerdict a rdf:Property ;
+    rdfs:domain kastle:LegalCase ;
+    rdfs:range xsd:string .
+
+kastle:involvesParty a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Party .
+
+kastle:involvesPerson a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Person .
+
+kastle:isAbout a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Thing .
+
+kastle:isPartOf a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Case .
+
+kastle:isRelatedTo a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range kastle:Case .
+
+kastle:plaintiff a rdf:Property ;
+    rdfs:domain kastle:LegalCase ;
+    rdfs:range kastle:Resource .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:Case ;
+    rdfs:range xsd:date .
+
+kastle:systemFunctionality a rdf:Property ;
+    rdfs:domain kastle:UseCase ;
+    rdfs:range rdfs:Literal .
+

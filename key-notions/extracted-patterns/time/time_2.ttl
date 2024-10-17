@@ -1,0 +1,46 @@
+@prefix : <http://example.org/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:TemporalEntity a owl:Class ;
+    rdfs:label "Temporal Entity" ;
+    rdfs:comment "A superclass for all entities related to time." .
+:Instant a owl:Class ;
+    rdfs:label "Instant" ;
+    rdfs:comment "A specific point in time, an exact time instant." ;
+    rdfs:subClassOf :TemporalEntity .
+:Interval a owl:Class ;
+    rdfs:label "Interval" ;
+    rdfs:comment "A duration of time, defined by a start and an end instant." ;
+    rdfs:subClassOf :TemporalEntity .
+:StartInstant a owl:ObjectProperty ;
+    rdfs:label "start instant" ;
+    rdfs:domain :Interval ;
+    rdfs:range :Instant ;
+    rdfs:comment "The instant at which an interval starts." .
+:EndInstant a owl:ObjectProperty ;
+    rdfs:label "end instant" ;
+    rdfs:domain :Interval ;
+    rdfs:range :Instant ;
+    rdfs:comment "The instant at which an interval ends." .
+:hasDuration a owl:DatatypeProperty ;
+    rdfs:label "has duration" ;
+    rdfs:domain :Interval ;
+    rdfs:range xsd:duration ;
+    rdfs:comment "The duration of a temporal interval." .
+:before a owl:ObjectProperty ;
+    rdfs:label "before" ;
+    rdfs:domain :Instant ;
+    rdfs:range :Instant ;
+    rdfs:comment "Indicates that one instant is before another." .
+:after a owl:ObjectProperty ;
+    rdfs:label "after" ;
+    rdfs:domain :Instant ;
+    rdfs:range :Instant ;
+    rdfs:comment "Indicates that one instant is after another." .
+:overlaps a owl:ObjectProperty ;
+    rdfs:label "overlaps" ;
+    rdfs:domain :Interval ;
+    rdfs:range :Interval ;
+    rdfs:comment "Indicates that two intervals have some time in common." .
+:TemporalEntity rdf:type owl:Thing .

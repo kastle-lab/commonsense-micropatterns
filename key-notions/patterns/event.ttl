@@ -1,0 +1,84 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Event a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:Organizer a rdfs:Class .
+
+kastle:Participant a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Time a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/event> a owl:Ontology ;
+    opla-core:hasPatternName "event Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:endTime a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:Datetime .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Location .
+
+kastle:hasParticipant a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Participant,
+        kastle:Person .
+
+kastle:hasTime a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Time .
+
+kastle:isLocatedAt a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:Event .
+
+kastle:latitude a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range xsd:float .
+
+kastle:longitude a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range xsd:float .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:occursAt a rdf:Property ;
+    rdfs:domain kastle:Event,
+        kastle:Time ;
+    rdfs:range kastle:Event,
+        kastle:Time .
+
+kastle:organizedBy a rdf:Property ;
+    rdfs:domain kastle:Event ;
+    rdfs:range kastle:Organizer .
+
+kastle:participatesIn a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Event .
+
+kastle:startTime a rdf:Property ;
+    rdfs:domain kastle:Time ;
+    rdfs:range kastle:Datetime .
+

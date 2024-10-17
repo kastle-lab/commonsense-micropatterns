@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/case#> .
+ex:Case a owl:Class ;
+    rdfs:label "Case" ;
+    rdfs:comment "A general concept for grouping related information" .
+ex:LegalCase a owl:Class ;
+    rdfs:label "Legal Case" ;
+    rdfs:comment "A case that involves a legal matter" ;
+    rdfs:subClassOf ex:Case .
+ex:MedicalCase a owl:Class ;
+    rdfs:label "Medical Case" ;
+    rdfs:comment "A case that involves a medical condition or treatment" ;
+    rdfs:subClassOf ex:Case .
+ex:CaseID a owl:DatatypeProperty ;
+    rdfs:label "Case ID" ;
+    rdfs:comment "A unique identifier for a case" ;
+    rdfs:domain ex:Case ;
+    rdfs:range xsd:string .
+ex:hasParticipant a owl:ObjectProperty ;
+    rdfs:label "has Participant" ;
+    rdfs:comment "Associates a case with a participant involved in it" ;
+    rdfs:domain ex:Case ;
+    rdfs:range ex:Participant .
+ex:Participant a owl:Class ;
+    rdfs:label "Participant" ;
+    rdfs:comment "An entity involved in a case" .
+ex:Judge a owl:Class ;
+    rdfs:label "Judge" ;
+    rdfs:comment "A participant who presides over a legal case" ;
+    rdfs:subClassOf ex:Participant .
+ex:Doctor a owl:Class ;
+    rdfs:label "Doctor" ;
+    rdfs:comment "A participant who is a medical professional in a medical case" ;
+    rdfs:subClassOf ex:Participant .
+ex:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "The place where the case is held or relevant" .
+ex:occurredAt a owl:ObjectProperty ;
+    rdfs:label "occurred At" ;
+    rdfs:comment "Associates a case with its location" ;
+    rdfs:domain ex:Case ;
+    rdfs:range ex:Location .

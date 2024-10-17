@@ -1,0 +1,21 @@
+@prefix : <http://example.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Hour rdf:type owl:Class ;
+      rdfs:subClassOf :TimeUnit .
+:Time rdf:type owl:Class .
+:TimeUnit rdf:type owl:Class ;
+          rdfs:subClassOf :Time .
+:hasDuration rdf:type owl:ObjectProperty ;
+             rdfs:domain :TimeUnit ;
+             rdfs:range :xsd:duration .
+:HourEquivalent rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Hour ;
+                rdfs:range xsd:decimal ;
+                rdfs:comment "Represents the number of hours in a given duration." .
+:dateTimeHourly rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Hour ;
+                rdfs:range xsd:dateTime ;
+                rdfs:comment "Represents an actual date-time instance corresponding to hours." .
+:exampleHourInstance rdf:type :Hour ;
+                     :HourEquivalent "1"^^xsd:decimal ;
+                     :dateTimeHourly "2023-10-01T13:00:00"^^xsd:dateTime .

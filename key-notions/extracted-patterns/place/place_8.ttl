@@ -1,0 +1,44 @@
+@prefix : <http://example.org/place#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Place a owl:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A geographical location or area." .
+:Region a owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Region" ;
+    rdfs:comment "A large area of land that is different from other areas." .
+:City a owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "City" ;
+    rdfs:comment "A large town or incorporated municipal center." .
+:Country a owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government, occupying a particular territory." .
+:Location a owl:ObjectProperty ;
+    rdfs:domain :Place ;
+    rdfs:range :Place ;
+    rdfs:label "location" ;
+    rdfs:comment "Relates a place to a larger geographical area containing it." .
+:hasName a owl:DatatypeProperty ;
+    rdfs:domain :Place ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has name" ;
+    rdfs:comment "The name of the place." .
+:PartOf a owl:ObjectProperty ;
+    rdfs:domain :Place ;
+    rdfs:range :Place ;
+    rdfs:label "part of" ;
+    rdfs:comment "Indicates a smaller place that is part of a larger one." .
+:Population a owl:DatatypeProperty ;
+    rdfs:domain :Place ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "population" ;
+    rdfs:comment "The population of a place." .
+:hasArea a owl:DatatypeProperty ;
+    rdfs:domain :Place ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "has area" ;
+    rdfs:comment "The total area of the place in square kilometers." .

@@ -1,0 +1,53 @@
+@prefix : <http://example.org/place#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Place rdf:type owl:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A specific area or location" .
+:Country rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government and territory" .
+:City rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "City" ;
+    rdfs:comment "An urban area within a country" .
+:Continent rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Continent" ;
+    rdfs:comment "One of the Earth's large landmasses" .
+:Region rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Region" ;
+    rdfs:comment "An area or division within a country" .
+:hasCapital rdf:type owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :City ;
+    rdfs:label "has capital" ;
+    rdfs:comment "Associates a country with its capital city" .
+:isLocatedIn rdf:type owl:ObjectProperty ;
+    rdfs:domain :Place ;
+    rdfs:range :Place ;
+    rdfs:label "is located in" ;
+    rdfs:comment "Indicates the place where another place is located" .
+:isPartOf rdf:type owl:ObjectProperty ;
+    rdfs:domain :Place ;
+    rdfs:range :Region ;
+    rdfs:label "is part of" ;
+    rdfs:comment "Indicates the region a place is part of" .
+:isSubRegionOf rdf:type owl:ObjectProperty ;
+    rdfs:domain :Region ;
+    rdfs:range :Region ;
+    rdfs:label "is sub-region of" ;
+    rdfs:comment "Indicates that one region is a subdivision of another" .
+:hasPopulation rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Place ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#integer> ;
+    rdfs:label "has population" ;
+    rdfs:comment "Specifies the population of a place" .
+:hasArea rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Place ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#double> ;
+    rdfs:label "has area" ;
+    rdfs:comment "Specifies the area of a place in square kilometers" .

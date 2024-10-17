@@ -1,0 +1,42 @@
+@prefix ex: <http://example.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Name rdf:type owl:Class ;
+    rdfs:label "Name" ;
+    rdfs:comment "A class representing a name assigned to an entity." .
+ex:Person rdf:type owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A class representing a person." .
+ex:hasName rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Name ;
+    rdfs:label "has name" ;
+    rdfs:comment "A property linking a person to their name." .
+ex:FirstName rdf:type owl:Class ;
+    rdfs:subClassOf ex:Name ;
+    rdfs:label "First Name" ;
+    rdfs:comment "A given name or personal name of an individual." .
+ex:LastName rdf:type owl:Class ;
+    rdfs:subClassOf ex:Name ;
+    rdfs:label "Last Name" ;
+    rdfs:comment "A family name or surname of an individual." .
+ex:Alias rdf:type owl:Class ;
+    rdfs:subClassOf ex:Name ;
+    rdfs:label "Alias" ;
+    rdfs:comment "An alternative name used by or associated with a person." .
+ex:hasFirstName rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:FirstName ;
+    rdfs:label "has first name" ;
+    rdfs:comment "A property linking a person to their first name." .
+ex:hasLastName rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:LastName ;
+    rdfs:label "has last name" ;
+    rdfs:comment "A property linking a person to their last name." .
+ex:hasAlias rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Alias ;
+    rdfs:label "has alias" ;
+    rdfs:comment "A property linking a person to an alias." .

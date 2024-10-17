@@ -1,0 +1,36 @@
+@prefix ex: <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ex:Case rdf:type rdfs:Class ;
+    rdfs:label "Case" ;
+    rdfs:comment "A class representing a case, which could be a legal case, an instance of an occurrence, etc."
+ex:hasCaseNumber rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range xsd:string ;
+    rdfs:label "has case number" ;
+    rdfs:comment "Relates a case to its unique case number." .
+ex:isCaseOf rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range ex:Subject ;
+    rdfs:label "is case of" ;
+    rdfs:comment "Relates a case to the subject it pertains to." .
+ex:hasStatus rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range ex:Status ;
+    rdfs:label "has status" ;
+    rdfs:comment "Relates a case to its current status." .
+ex:Subject rdf:type rdfs:Class ;
+    rdfs:label "Subject" ;
+    rdfs:comment "A class representing the subject matter or the context of a case."
+ex:Status rdf:type rdfs:Class ;
+    rdfs:label "Status" ;
+    rdfs:comment "A class representing the status of a case, such as open, closed, pending, etc."
+ex:CaseType rdf:type rdfs:Class ;
+    rdfs:label "CaseType" ;
+    rdfs:comment "A class representing different types of cases, such as LegalCase, MedicalCase, etc."
+ex:hasType rdf:type rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range ex:CaseType ;
+    rdfs:label "has type" ;
+    rdfs:comment "Relates a case to its type." .

@@ -1,0 +1,125 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Author a rdfs:Class .
+
+kastle:Book a rdfs:Class .
+
+kastle:Journal a rdfs:Class .
+
+kastle:Librarian a rdfs:Class .
+
+kastle:Library a rdfs:Class .
+
+kastle:LibraryBranch a rdfs:Class .
+
+kastle:Loan a rdfs:Class .
+
+kastle:Member a rdfs:Class .
+
+kastle:Patron a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/library> a owl:Ontology ;
+    opla-core:hasPatternName "library Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:address a rdf:Property ;
+    rdfs:domain kastle:Patron ;
+    rdfs:range xsd:string .
+
+kastle:bookLoaned a rdf:Property ;
+    rdfs:domain kastle:Loan ;
+    rdfs:range kastle:Book .
+
+kastle:borrowedBy a rdf:Property ;
+    rdfs:domain kastle:Loan ;
+    rdfs:range kastle:Member .
+
+kastle:borrows a rdf:Property ;
+    rdfs:domain kastle:Patron ;
+    rdfs:range kastle:Resource .
+
+kastle:checkedOutBy a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Member .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Resource ;
+    rdfs:range kastle:Author .
+
+kastle:hasBook a rdf:Property ;
+    rdfs:domain kastle:Library ;
+    rdfs:range kastle:Book .
+
+kastle:hasISBN a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasJournal a rdf:Property ;
+    rdfs:domain kastle:Library ;
+    rdfs:range kastle:Journal .
+
+kastle:hasMember a rdf:Property ;
+    rdfs:domain kastle:Library ;
+    rdfs:range kastle:Member .
+
+kastle:hasMembershipID a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Member ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasPublicationDate a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range rdfs:Literal .
+
+kastle:isAvailable a rdf:Property ;
+    rdfs:domain kastle:Book,
+        kastle:Resource ;
+    rdfs:range rdfs:Literal,
+        xsd:boolean .
+
+kastle:locatedAt a rdf:Property ;
+    rdfs:domain kastle:Resource ;
+    rdfs:range kastle:LibraryBranch .
+
+kastle:managedBy a rdf:Property ;
+    rdfs:domain kastle:Library ;
+    rdfs:range kastle:Librarian .
+
+kastle:manages a rdf:Property ;
+    rdfs:domain kastle:Librarian ;
+    rdfs:range kastle:Library .
+
+kastle:publishedDate a rdf:Property ;
+    rdfs:domain kastle:Resource ;
+    rdfs:range xsd:date .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Resource ;
+    rdfs:range xsd:string .
+
+kastle:writtenBy a rdf:Property ;
+    rdfs:domain kastle:Book ;
+    rdfs:range kastle:Author .
+

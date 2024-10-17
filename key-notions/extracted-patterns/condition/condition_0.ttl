@@ -1,0 +1,57 @@
+@prefix : <http://example.org/ontology/condition#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Condition a owl:Class ;
+    rdfs:label "Condition" ;
+    rdfs:comment "A class representing conditions or states that affect entities." .
+:MedicalCondition a owl:Class ;
+    rdfs:label "Medical Condition" ;
+    rdfs:comment "A condition related to health or medical status." ;
+    rdfs:subClassOf :Condition .
+:WeatherCondition a owl:Class ;
+    rdfs:label "Weather Condition" ;
+    rdfs:comment "A condition describing the current state of the weather." ;
+    rdfs:subClassOf :Condition .
+:AvailabilityCondition a owl:Class ;
+    rdfs:label "Availability Condition" ;
+    rdfs:comment "A condition indicating the availability status of an entity." ;
+    rdfs:subClassOf :Condition .
+:hasSeverity a owl:ObjectProperty ;
+    rdfs:label "has severity" ;
+    rdfs:comment "Relates a condition to its severity level." ;
+    rdfs:domain :Condition ;
+    rdfs:range :SeverityLevel .
+:SeverityLevel a owl:Class ;
+    rdfs:label "Severity Level" ;
+    rdfs:comment "A class representing the level of severity of a condition." .
+:hasPrecipitation a owl:ObjectProperty ;
+    rdfs:label "has precipitation" ;
+    rdfs:comment "Relates a weather condition to its precipitation status." ;
+    rdfs:domain :WeatherCondition ;
+    rdfs:range xsd:boolean .
+:Symptom a owl:Class ;
+    rdfs:label "Symptom" ;
+    rdfs:comment "A manifestation indicating the presence of a medical condition." .
+:hasSymptom a owl:ObjectProperty ;
+    rdfs:label "has symptom" ;
+    rdfs:comment "Relates a medical condition to its symptoms." ;
+    rdfs:domain :MedicalCondition ;
+    rdfs:range :Symptom .
+:Treatment a owl:Class ;
+    rdfs:label "Treatment" ;
+    rdfs:comment "An intervention or plan intended to manage a medical condition." .
+:hasTreatment a owl:ObjectProperty ;
+    rdfs:label "has treatment" ;
+    rdfs:comment "Relates a medical condition to its treatment methods." ;
+    rdfs:domain :MedicalCondition ;
+    rdfs:range :Treatment .
+:hasAvailabilityStatus a owl:ObjectProperty ;
+    rdfs:label "has availability status" ;
+    rdfs:comment "Relates an availability condition to its status level." ;
+    rdfs:domain :AvailabilityCondition ;
+    rdfs:range :AvailabilityStatus .
+:AvailabilityStatus a owl:Class ;
+    rdfs:label "Availability Status" ;
+    rdfs:comment "A class indicating the availability of an entity, such as 'available', 'unavailable', or 'pending'." .

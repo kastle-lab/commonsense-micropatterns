@@ -1,0 +1,43 @@
+@prefix : <http://example.org/name#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Name rdf:type rdfs:Class ;
+    rdfs:label "Name" ;
+    rdfs:comment "A class representing a name." .
+:FirstName rdf:type rdfs:Class ;
+    rdfs:subClassOf :Name ;
+    rdfs:label "First Name" ;
+    rdfs:comment "A person's given name." .
+:LastName rdf:type rdfs:Class ;
+    rdfs:subClassOf :Name ;
+    rdfs:label "Last Name" ;
+    rdfs:comment "A person's family name or surname." .
+:FullName rdf:type rdfs:Class ;
+    rdfs:subClassOf :Name ;
+    rdfs:label "Full Name" ;
+    rdfs:comment "A person's complete name, often including given name and family name." .
+:hasFirstName rdf:type rdf:Property ;
+    rdfs:domain :FullName ;
+    rdfs:range :FirstName ;
+    rdfs:label "has first name" ;
+    rdfs:comment "Relates a full name to a first name." .
+:hasLastName rdf:type rdf:Property ;
+    rdfs:domain :FullName ;
+    rdfs:range :LastName ;
+    rdfs:label "has last name" ;
+    rdfs:comment "Relates a full name to a last name." .
+:hasNickname rdf:type rdf:Property ;
+    rdfs:domain :Name ;
+    rdfs:range xsd:string ;
+    rdfs:label "has nickname" ;
+    rdfs:comment "Relates a name to a nickname." .
+:AbbreviatedName rdf:type rdfs:Class ;
+    rdfs:subClassOf :Name ;
+    rdfs:label "Abbreviated Name" ;
+    rdfs:comment "A shortened or contracted form of a name." .
+:hasAbbreviation rdf:type rdf:Property ;
+    rdfs:domain :Name ;
+    rdfs:range :AbbreviatedName ;
+    rdfs:label "has abbreviation" ;
+    rdfs:comment "Relates a name to its abbreviated form." .

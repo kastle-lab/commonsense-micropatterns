@@ -1,0 +1,56 @@
+@prefix : <http://example.org/ontology/place#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Place a rdfs:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A place, which can be a physical or geographical location." .
+:GeographicalFeature a rdfs:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Geographical Feature" ;
+    rdfs:comment "A natural feature of the Earth's surface." .
+:HumanSettlement a rdfs:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Human Settlement" ;
+    rdfs:comment "A community where people live and work." .
+:Country a rdfs:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government, occupying a particular territory." .
+:City a rdfs:Class ;
+    rdfs:subClassOf :HumanSettlement ;
+    rdfs:label "City" ;
+    rdfs:comment "A large town or populated area." .
+:River a rdfs:Class ;
+    rdfs:subClassOf :GeographicalFeature ;
+    rdfs:label "River" ;
+    rdfs:comment "A large, flowing body of water that usually empties into a sea or ocean." .
+:Mountain a rdfs:Class ;
+    rdfs:subClassOf :GeographicalFeature ;
+    rdfs:label "Mountain" ;
+    rdfs:comment "A large natural elevation of the Earth's surface." .
+:hasName a rdf:Property ;
+    rdfs:domain :Place ;
+    rdfs:range xsd:string ;
+    rdfs:label "has name" ;
+    rdfs:comment "The name of the place." .
+:locatedIn a rdf:Property ;
+    rdfs:domain :Place ;
+    rdfs:range :Place ;
+    rdfs:label "located in" ;
+    rdfs:comment "Indicates the location of one place relative to another." .
+:flowsThrough a rdf:Property ;
+    rdfs:domain :River ;
+    rdfs:range :Place ;
+    rdfs:label "flows through" ;
+    rdfs:comment "Indicates the places through which a river flows." .
+:hasAltitude a rdf:Property ;
+    rdfs:domain :Mountain ;
+    rdfs:range xsd:float ;
+    rdfs:label "has altitude" ;
+    rdfs:comment "Indicates the altitude of the mountain in meters." .
+:CapitalCity a rdf:Property ;
+    rdfs:domain :Country ;
+    rdfs:range :City ;
+    rdfs:label "capital city" ;
+    rdfs:comment "Indicates the city that is the capital of a country." .

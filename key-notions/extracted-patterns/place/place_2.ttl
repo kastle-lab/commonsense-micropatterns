@@ -1,0 +1,34 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Place rdf:type owl:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A general concept representing any location or area." .
+:Country rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government, occupying a particular territory." .
+:City rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "City" ;
+    rdfs:comment "A large town or incorporated municipality." .
+:Village rdf:type owl:Class ;
+    rdfs:subClassOf :Place ;
+    rdfs:label "Village" ;
+    rdfs:comment "A small community or group of houses in a rural area, larger than a hamlet but smaller than a town." .
+:Location rdf:type owl:ObjectProperty ;
+    rdfs:domain :Place ;
+    rdfs:range :Place ;
+    rdfs:label "is located in" ;
+    rdfs:comment "Indicates that a place is located within another place." .
+:hasCapital rdf:type owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :City ;
+    rdfs:label "has capital" ;
+    rdfs:comment "Indicates the capital city of a country." .
+:locatedIn rdf:type owl:ObjectProperty ;
+    rdfs:domain :Place ;
+    rdfs:range :Place ;
+    rdfs:label "located in" ;
+    rdfs:comment "Specifies that a place is contained within another place." .

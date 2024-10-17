@@ -1,0 +1,39 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Researcher rdf:type rdfs:Class ;
+    rdfs:label "Researcher" ;
+    rdfs:comment "A class representing a researcher involved in various research activities." .
+:hasName rdf:type rdf:Property ;
+    rdfs:domain :Researcher ;
+    rdfs:range xsd:string ;
+    rdfs:label "has name" ;
+    rdfs:comment "The name of the researcher." .
+:hasFieldOfStudy rdf:type rdf:Property ;
+    rdfs:domain :Researcher ;
+    rdfs:range xsd:string ;
+    rdfs:label "has field of study" ;
+    rdfs:comment "The field of study or research area of the researcher." .
+:affiliatedWith rdf:type rdf:Property ;
+    rdfs:domain :Researcher ;
+    rdfs:range :Institution ;
+    rdfs:label "affiliated with" ;
+    rdfs:comment "The institution with which the researcher is affiliated." .
+:authoredPublication rdf:type rdf:Property ;
+    rdfs:domain :Researcher ;
+    rdfs:range :Publication ;
+    rdfs:label "authored publication" ;
+    rdfs:comment "A publication authored by the researcher." .
+:emails rdf:type rdf:Property ;
+    rdfs:domain :Researcher ;
+    rdfs:range foaf:mbox ;
+    rdfs:label "emails" ;
+    rdfs:comment "The email address of the researcher." .
+:Institution rdf:type rdfs:Class ;
+    rdfs:label "Institution" ;
+    rdfs:comment "A class representing an academic or research institution." .
+:Publication rdf:type rdfs:Class ;
+    rdfs:label "Publication" ;
+    rdfs:comment "A class representing a research publication." .

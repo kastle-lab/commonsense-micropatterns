@@ -1,0 +1,41 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Cause a owl:Class ;
+    rdfs:label "Cause" ;
+    rdfs:comment "A concept representing the cause of an event or action." .
+:hasEffect a owl:ObjectProperty ;
+    rdfs:domain :Cause ;
+    rdfs:range :Effect ;
+    rdfs:label "has effect" ;
+    rdfs:comment "Relates a cause to its effect." .
+:Effect a owl:Class ;
+    rdfs:label "Effect" ;
+    rdfs:comment "A concept representing the effect or outcome resulting from a cause." .
+:isCauseOf a owl:ObjectProperty ;
+    rdfs:domain :Event ;
+    rdfs:range :Event ;
+    owl:inverseOf :hasCause ;
+    rdfs:label "is cause of" ;
+    rdfs:comment "Indicates that one event is the cause of another event." .
+:hasCause a owl:ObjectProperty ;
+    rdfs:domain :Effect ;
+    rdfs:range :Cause ;
+    rdfs:label "has cause" ;
+    rdfs:comment "Indicates that an effect has a cause." .
+:Event a owl:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "A concept representing an occurrence or happening." .
+:TemporalRelation a owl:ObjectProperty ;
+    rdfs:label "temporal relation" ;
+    rdfs:comment "Captures a temporal relationship between events." .
+:before a owl:ObjectProperty ;
+    rdfs:subPropertyOf :TemporalRelation ;
+    rdfs:label "before" ;
+    rdfs:comment "Indicates one event occurs before another." .
+:after a owl:ObjectProperty ;
+    rdfs:subPropertyOf :TemporalRelation ;
+    owl:inverseOf :before ;
+    rdfs:label "after" ;
+    rdfs:comment "Indicates one event occurs after another." .

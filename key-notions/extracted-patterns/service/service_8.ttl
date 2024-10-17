@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/ontology#> .
+# Define the ontologyex:ServiceOntology rdf:type owl:Ontology .
+# Define the Service class
+ex:Service rdf:type owl:Class ;
+           rdfs:label "Service" ;
+           rdfs:comment "A class representing a service provided, consisting of activities, inputs, outputs, and stakeholders." .
+# Define subclasses of Serviceex:ProfessionalService rdf:type owl:Class ;
+                       rdfs:subClassOf ex:Service ;
+                       rdfs:label "Professional Service" ;
+                       rdfs:comment "A service provided by professionals or experts." .
+ex:MaintenanceService rdf:type owl:Class ;
+                      rdfs:subClassOf ex:Service ;
+                      rdfs:label "Maintenance Service" ;
+                      rdfs:comment "A service focused on maintaining or repairing systems or equipment." .
+# Define propertiesex:providedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain ex:Service ;
+              rdfs:range ex:Provider ;
+              rdfs:label "provided by" ;
+              rdfs:comment "Relates a service to the entity that provides it." .
+ex:incursCost rdf:type owl:DatatypeProperty ;
+              rdfs:domain ex:Service ;
+              rdfs:range rdf:Literal ;
+              rdfs:label "incurs cost" ;
+              rdfs:comment "Specifies the cost associated with the service." .
+ex:hasOutput rdf:type owl:ObjectProperty ;
+             rdfs:domain ex:Service ;
+             rdfs:range ex:Output ;
+             rdfs:label "has output" ;
+             rdfs:comment "Relates a service to its output." .
+# Define related classesex:Provider rdf:type owl:Class ;
+            rdfs:label "Provider" ;
+            rdfs:comment "An entity that provides a service." .
+ex:Output rdf:type owl:Class ;
+          rdfs:label "Output" ;
+          rdfs:comment "The result or product of a service." .

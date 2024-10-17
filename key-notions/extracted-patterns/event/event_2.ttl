@@ -1,0 +1,57 @@
+@prefix : <http://example.org/event#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Event a owl:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "A generic occurrence that may encompass one or more happening." .
+:Location a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "A geographical point or area where an event occurs." .
+:Time a owl:Class ;
+    rdfs:label "Time" ;
+    rdfs:comment "A temporal point or duration in which an event occurs." .
+:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "An individual participating in an event." .
+:hasLocation a owl:ObjectProperty ;
+    rdfs:domain :Event ;
+    rdfs:range :Location ;
+    rdfs:label "has location" ;
+    rdfs:comment "The property linking an event with its location." .
+:hasTime a owl:ObjectProperty ;
+    rdfs:domain :Event ;
+    rdfs:range :Time ;
+    rdfs:label "has time" ;
+    rdfs:comment "The property linking an event with its time." .
+:hasParticipant a owl:ObjectProperty ;
+    rdfs:domain :Event ;
+    rdfs:range :Person ;
+    rdfs:label "has participant" ;
+    rdfs:comment "The property linking an event with a participant." .
+:latitude a owl:DatatypeProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:float ;
+    rdfs:label "latitude" ;
+    rdfs:comment "The latitude of a location." .
+:longitude a owl:DatatypeProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:float ;
+    rdfs:label "longitude" ;
+    rdfs:comment "The longitude of a location." .
+:startTime a owl:DatatypeProperty ;
+    rdfs:domain :Time ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "start time" ;
+    rdfs:comment "The start time of an event." .
+:endTime a owl:DatatypeProperty ;
+    rdfs:domain :Time ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "end time" ;
+    rdfs:comment "The end time of an event." .
+:name a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of a person." .

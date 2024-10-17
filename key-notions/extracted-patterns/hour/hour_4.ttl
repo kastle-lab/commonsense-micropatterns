@@ -1,0 +1,45 @@
+@prefix : <http://example.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Hour rdf:type owl:Class ;
+    rdfs:label "Hour" ;
+    rdfs:comment "A class representing an hour of the day" .
+:Day rdf:type owl:Class ;
+    rdfs:label "Day" ;
+    rdfs:comment "A class representing a day, composed of 24 hours" .
+:TimeOfDay rdf:type owl:Class ;
+    rdfs:label "Time Of Day" ;
+    rdfs:comment "A class to represent different times of a day such as morning or afternoon" .
+:hasPart rdf:type owl:ObjectProperty ;
+    rdfs:domain :Day ;
+    rdfs:range :Hour ;
+    rdfs:label "has part" ;
+    rdfs:comment "A property to associate an hour with a day, indicating an hour is part of a day" .
+:precedes rdf:type owl:ObjectProperty ;
+    rdfs:domain :Hour ;
+    rdfs:range :Hour ;
+    rdfs:label "precedes" ;
+    rdfs:comment "A property where one hour precedes another hour in sequence" .
+:hourValue rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Hour ;
+    rdfs:range xsd:integer ;
+    rdfs:label "hour value" ;
+    rdfs:comment "The numeric value of the hour, usually ranging from 0 to 23" .
+:Morning rdf:type owl:Class ;
+    rdfs:subClassOf :TimeOfDay ;
+    rdfs:label "Morning" ;
+    rdfs:comment "A subclass of TimeOfDay representing the morning hours" .
+:Afternoon rdf:type owl:Class ;
+    rdfs:subClassOf :TimeOfDay ;
+    rdfs:label "Afternoon" ;
+    rdfs:comment "A subclass of TimeOfDay representing the afternoon hours" .
+:Evening rdf:type owl:Class ;
+    rdfs:subClassOf :TimeOfDay ;
+    rdfs:label "Evening" ;
+    rdfs:comment "A subclass of TimeOfDay representing the evening hours" .
+:Night rdf:type owl:Class ;
+    rdfs:subClassOf :TimeOfDay ;
+    rdfs:label "Night" ;
+    rdfs:comment "A subclass of TimeOfDay representing the night hours" .

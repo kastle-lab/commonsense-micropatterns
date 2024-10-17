@@ -1,0 +1,64 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Region a rdfs:Class ;
+    rdfs:label "Region" ;
+    rdfs:comment "A geographic area defined by certain boundaries or attributes." .
+:Country a rdfs:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A sovereign state or territory, recognized as an independent nation." ;
+    rdfs:subClassOf :Region .
+:State a rdfs:Class ;
+    rdfs:label "State" ;
+    rdfs:comment "A political division within a country, often with its own local government." ;
+    rdfs:subClassOf :Region .
+:City a rdfs:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "An urban area with a large population and particular administrative importance." ;
+    rdfs:subClassOf :Region .
+:Province a rdfs:Class ;
+    rdfs:label "Province" ;
+    rdfs:comment "A territorial unit, almost always an administrative division, within a country or state." ;
+    rdfs:subClassOf :Region .
+:Boundary a rdfs:Class ;
+    rdfs:label "Boundary" ;
+    rdfs:comment "A defined line that marks the limits of an area." .
+:hasBoundary a rdf:Property ;
+    rdfs:label "has boundary" ;
+    rdfs:comment "Associates a region with its boundary." ;
+    rdfs:domain :Region ;
+    rdfs:range :Boundary .
+:locatedIn a rdf:Property ;
+    rdfs:label "located in" ;
+    rdfs:comment "Specifies that a region is located within another region." ;
+    rdfs:domain :Region ;
+    rdfs:range :Region .
+:hasCapital a rdf:Property ;
+    rdfs:label "has capital" ;
+    rdfs:comment "Associates a region with its capital city." ;
+    rdfs:domain :Country ;
+    rdfs:range :City .
+:hasPopulation a rdf:Property ;
+    rdfs:label "has population" ;
+    rdfs:comment "Specifies the population count of a region." ;
+    rdfs:domain :Region ;
+    rdfs:range xsd:integer .
+:Area a rdf:Property ;
+    rdfs:label "area" ;
+    rdfs:comment "Specifies the total land or sea area of a region." ;
+    rdfs:domain :Region ;
+    rdfs:range xsd:float .
+:regionCode a rdf:Property ;
+    rdfs:label "region code" ;
+    rdfs:comment "An identifier for a region, potentially an ISO or other standardized code." ;
+    rdfs:domain :Region ;
+    rdfs:range xsd:string .
+:WeatherCondition a rdfs:Class ;
+    rdfs:label "Weather Condition" ;
+    rdfs:comment "Describes the common weather conditions of a region." .
+:hasWeatherCondition a rdf:Property ;
+    rdfs:label "has weather condition" ;
+    rdfs:comment "Associates a region with its typical weather condition." ;
+    rdfs:domain :Region ;
+    rdfs:range :WeatherCondition .

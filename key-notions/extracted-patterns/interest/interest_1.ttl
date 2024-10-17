@@ -1,0 +1,46 @@
+@prefix : <http://example.org/ontology/interest#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Interest rdf:type owl:Class ;
+          rdfs:label "Interest" ;
+          rdfs:comment "A liking or preference towards something or someone." .
+:Person rdf:type owl:Class ;
+        rdfs:label "Person" ;
+        rdfs:comment "An individual human being." .
+:Topic rdf:type owl:Class ;
+        rdfs:label "Topic" ;
+        rdfs:comment "A subject or area of interest." .
+:hasInterest rdf:type owl:ObjectProperty ;
+             rdfs:domain :Person ;
+             rdfs:range :Topic ;
+             rdfs:label "has interest" ;
+             rdfs:comment "Indicates a person's interest in a specific topic." .
+:InterestLevel rdf:type owl:Class ;
+               rdfs:label "Interest Level" ;
+               rdfs:comment "The degree of interest someone has in a particular topic." .
+:lowInterest rdf:type :InterestLevel ;
+             rdfs:label "Low Interest" ;
+             rdfs:comment "Indicates a low level of interest." .
+:mediumInterest rdf:type :InterestLevel ;
+                rdfs:label "Medium Interest" ;
+                rdfs:comment "Indicates a moderate level of interest." .
+:highInterest rdf:type :InterestLevel ;
+              rdfs:label "High Interest" ;
+              rdfs:comment "Indicates a high level of interest." .
+:interestStrength rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Interest ;
+                  rdfs:range xsd:integer ;
+                  rdfs:label "interest strength" ;
+                  rdfs:comment "Numeric representation of the strength of interest." .
+:isExpressedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :Interest ;
+               rdfs:range :Person ;
+               rdfs:label "is expressed by" ;
+               rdfs:comment "Associates an interest with the person who expresses it." .
+:isAbout rdf:type owl:ObjectProperty ;
+        rdfs:domain :Interest ;
+        rdfs:range :Topic ;
+        rdfs:label "is about" ;
+        rdfs:comment "Connects interest to the topic it is about." .

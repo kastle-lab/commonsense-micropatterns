@@ -1,0 +1,330 @@
+@prefix : <https://archive.org/services/purl/purl/modular_ontology_design_library#> .
+@prefix opla: <http://ontologydesignpatterns.org/opla#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+opla:categorization rdfs:domain opla:Pattern ;
+    rdfs:range opla:Category .
+
+opla:htmlDocumentation a owl:DatatypeProperty ;
+    rdfs:label "Owl HTML Documentation"@en ;
+    rdfs:domain opla:Pattern ;
+    rdfs:range xsd:string .
+
+opla:owlRepresentation a owl:DatatypeProperty ;
+    rdfs:label "Owl Representation"@en ;
+    rdfs:domain opla:Pattern ;
+    rdfs:range xsd:string .
+
+opla:renderedSchemaDiagram a owl:DatatypeProperty ;
+    rdfs:label "Rendered Schema Diagram"@en ;
+    rdfs:domain opla:Pattern ;
+    rdfs:range xsd:string .
+
+: a owl:Ontology ;
+    opla-core:hasPatternName "Commonsense Modular Ontology Design Library" .
+
+:case a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "case"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">1
+            </span> <a id="x1-10001"></a>case</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/case.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/case.pdf"^^xsd:string .
+
+:cause a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "cause"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">2
+            </span> <a id="x1-10001"></a>cause</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/cause.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/cause.pdf"^^xsd:string .
+
+:condition a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "condition"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">3
+            </span> <a id="x1-10001"></a>condition</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/condition.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/condition.pdf"^^xsd:string .
+
+:cost a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "cost"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">4
+            </span> <a id="x1-10001"></a>cost</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/cost.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/cost.pdf"^^xsd:string .
+
+:event a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "event"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">5
+            </span> <a id="x1-10001"></a>event</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/event.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/event.pdf"^^xsd:string .
+
+:fire a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "fire"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">6
+            </span> <a id="x1-10001"></a>fire</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/fire.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/fire.pdf"^^xsd:string .
+
+:hour a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "hour"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">7
+            </span> <a id="x1-10001"></a>hour</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/hour.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/hour.pdf"^^xsd:string .
+
+:institution a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "institution"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">8
+            </span> <a id="x1-10001"></a>institution</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/institution.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/institution.pdf"^^xsd:string .
+
+:interest a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "interest"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">9
+            </span> <a id="x1-10001"></a>interest</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/interest.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/interest.pdf"^^xsd:string .
+
+:judge a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "judge"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">10
+            </span> <a id="x1-10001"></a>judge</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/judge.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/judge.pdf"^^xsd:string .
+
+:land a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "land"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">11
+            </span> <a id="x1-10001"></a>land</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/land.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/land.pdf"^^xsd:string .
+
+:language a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "language"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">12
+            </span> <a id="x1-10001"></a>language</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/language.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/language.pdf"^^xsd:string .
+
+:library a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "library"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">13
+            </span> <a id="x1-10001"></a>library</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/library.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/library.pdf"^^xsd:string .
+
+:material a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "material"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">14
+            </span> <a id="x1-10001"></a>material</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/material.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/material.pdf"^^xsd:string .
+
+:name a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "name"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">15
+            </span> <a id="x1-10001"></a>name</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/name.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/name.pdf"^^xsd:string .
+
+:place a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "place"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">16
+            </span> <a id="x1-10001"></a>place</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/place.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/place.pdf"^^xsd:string .
+
+:region a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "region"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">17
+            </span> <a id="x1-10001"></a>region</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/region.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/region.pdf"^^xsd:string .
+
+:researcher a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "researcher"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">18
+            </span> <a id="x1-10001"></a>researcher</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/researcher.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/researcher.pdf"^^xsd:string .
+
+:service a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "service"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">19
+            </span> <a id="x1-10001"></a>service</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/service.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/service.pdf"^^xsd:string .
+
+:time a opla:Pattern,
+        owl:NamedIndividual ;
+    rdfs:label "time"@en ;
+    opla:htmlDocumentation """
+            <html>
+            <body>
+            <h3 class="sectionHead"><span class="titlemark">20
+            </span> <a id="x1-10001"></a>time</h3>
+
+            <body/>
+            <html/>
+        """^^xsd:string ;
+    opla:owlRepresentation "./key-notions/patterns/time.ttl"^^xsd:string ;
+    opla:renderedSchemaDiagram "./key-notions/patterns/schema-diagrams/time.pdf"^^xsd:string .
+
+opla:Category a owl:Class .
+

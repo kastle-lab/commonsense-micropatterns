@@ -1,0 +1,37 @@
+@prefix : <http://example.org/place#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Place a owl:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "A geographical or spatial location." .
+:Country a owl:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A nation with its own government, occupying a particular territory." ;
+    rdfs:subClassOf :Place .
+:City a owl:Class ;
+    rdfs:label "City" ;
+    rdfs:comment "A large town." ;
+    rdfs:subClassOf :Place .
+:Town a owl:Class ;
+    rdfs:label "Town" ;
+    rdfs:comment "A human settlement smaller than a city." ;
+    rdfs:subClassOf :Place .
+:Village a owl:Class ;
+    rdfs:label "Village" ;
+    rdfs:comment "A clustered human settlement or community, larger than a hamlet." ;
+    rdfs:subClassOf :Place .
+:Mountain a owl:Class ;
+    rdfs:label "Mountain" ;
+    rdfs:comment "A large natural elevation of the earth's surface." ;
+    rdfs:subClassOf :Place .
+:River a owl:Class ;
+    rdfs:label "River" ;
+    rdfs:comment "A large natural stream of water flowing in a channel to the sea, a lake, or another river." ;
+    rdfs:subClassOf :Place .
+:LocatedIn a owl:ObjectProperty ;
+    rdfs:label "Located In" ;
+    rdfs:comment "Indicates the containing location of the subject place." ;
+    rdfs:domain :Place ;
+    rdfs:range :Place .

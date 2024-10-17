@@ -1,0 +1,48 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+# Classes
+:CausalAgent rdf:type owl:Class ;
+    rdfs:label "Causal Agent" ;
+    rdfs:comment "An entity that can bring about change or cause an effect." .
+:Effect rdf:type owl:Class ;
+    rdfs:label "Effect" ;
+    rdfs:comment "A result or outcome that is produced by an action or cause." .
+:Cause rdf:type owl:Class ;
+    rdfs:label "Cause" ;
+    rdfs:comment "An entity or event that brings about an effect." .
+:CausalRelationship rdf:type owl:Class ;
+    rdfs:label "Causal Relationship" ;
+    rdfs:comment "A relationship between a cause and an effect." .
+# Object Properties:hasCause rdf:type owl:ObjectProperty ;
+    rdfs:label "has Cause" ;
+    rdfs:domain :CausalRelationship ;
+    rdfs:range :Cause ;
+    rdfs:comment "Indicates the cause in a causal relationship." .
+:hasEffect rdf:type owl:ObjectProperty ;
+    rdfs:label "has Effect" ;
+    rdfs:domain :CausalRelationship ;
+    rdfs:range :Effect ;
+    rdfs:comment "Indicates the effect in a causal relationship." .
+:causes rdf:type owl:ObjectProperty ;
+    rdfs:label "causes" ;
+    rdfs:domain :CausalAgent ;
+    rdfs:range :Effect ;
+    rdfs:comment "Relates a causal agent directly to its effect." .
+:influences rdf:type owl:ObjectProperty ;
+    rdfs:label "influences" ;
+    rdfs:domain :CausalAgent ;
+    rdfs:range :CausalRelationship ;
+    rdfs:comment "Indicates that a causal agent has an influence on a causal relationship." .
+# Example Individuals:EntityA rdf:type :CausalAgent ;
+    rdfs:label "Entity A" .
+:EventX rdf:type :Cause ;
+    rdfs:label "Event X" .
+:OutcomeY rdf:type :Effect ;
+    rdfs:label "Outcome Y" .
+:Relationship1 rdf:type :CausalRelationship ;
+    :hasCause :EventX ;
+    :hasEffect :OutcomeY ;
+    rdfs:label "Relationship 1" .
+# Additional Annotations:CausalAgent rdfs:subClassOf :Cause .

@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/land#> .
+ex:Land a owl:Class ;
+    rdfs:label "Land" ;
+    rdfs:comment "The solid surface of the Earth, distinct from sea or air." .
+ex:NaturalLandform a owl:Class ;
+    rdfs:label "Natural Landform" ;
+    rdfs:comment "A naturally occurring area of land with a distinct topography." ;
+    rdfs:subClassOf ex:Land .
+ex:ManMadeLandform a owl:Class ;
+    rdfs:label "Man-made Landform" ;
+    rdfs:comment "A human-modified or created structure on the land." ;
+    rdfs:subClassOf ex:Land .
+ex:Continent a owl:Class ;
+    rdfs:label "Continent" ;
+    rdfs:comment "A large continuous expanse of land on Earth." ;
+    rdfs:subClassOf ex:NaturalLandform .
+ex:Island a owl:Class ;
+    rdfs:label "Island" ;
+    rdfs:comment "A piece of land surrounded by water." ;
+    rdfs:subClassOf ex:NaturalLandform .
+ex:Mountain a owl:Class ;
+    rdfs:label "Mountain" ;
+    rdfs:comment "A large natural elevation of the Earth's surface." ;
+    rdfs:subClassOf ex:NaturalLandform .
+ex:Plain a owl:Class ;
+    rdfs:label "Plain" ;
+    rdfs:comment "A large area of flat or gently rolling land." ;
+    rdfs:subClassOf ex:NaturalLandform .
+ex:UrbanArea a owl:Class ;
+    rdfs:label "Urban Area" ;
+    rdfs:comment "A human settlement with high population density and infrastructure." ;
+    rdfs:subClassOf ex:ManMadeLandform .
+ex:AgriculturalLand a owl:Class ;
+    rdfs:label "Agricultural Land" ;
+    rdfs:comment "Land used for farming and growing crops." ;
+    rdfs:subClassOf ex:ManMadeLandform .
+ex:Road a owl:Class ;
+    rdfs:label "Road" ;
+    rdfs:comment "A broad path connecting different locations, used for transportation." ;
+    rdfs:subClassOf ex:ManMadeLandform .
+ex:hasTerrainFeature a owl:ObjectProperty ;
+    rdfs:label "has terrain feature" ;
+    rdfs:domain ex:Land ;
+    rdfs:range ex:NaturalLandform .
+ex:hasInfrastructure a owl:ObjectProperty ;
+    rdfs:label "has infrastructure" ;
+    rdfs:domain ex:Land ;
+    rdfs:range ex:ManMadeLandform .

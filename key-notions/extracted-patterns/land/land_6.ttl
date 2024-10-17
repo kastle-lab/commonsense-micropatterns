@@ -1,0 +1,52 @@
+@prefix : <http://example.org/ontology/land#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Land a owl:Class ;
+    rdfs:label "Land" ;
+    rdfs:comment "An area of the earth's surface under distinct ownership." .
+:Terrain a owl:Class ;
+    rdfs:label "Terrain" ;
+    rdfs:comment "A stretch of land, especially with regard to its physical features." ;
+    rdfs:subClassOf :Land .
+:Ownership a owl:Class ;
+    rdfs:label "Ownership" ;
+    rdfs:comment "The state or fact of owning land." .
+:GeographicFeature a owl:Class ;
+    rdfs:label "Geographic Feature" ;
+    rdfs:comment "A naturally occurring landform like mountains or rivers related to the land." .
+:Country a owl:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "A distinct territorial body or political entity." .
+:hasOwner a owl:ObjectProperty ;
+    rdfs:domain :Land ;
+    rdfs:range :Ownership ;
+    rdfs:label "has owner" .
+:isPartOfTerrain a owl:ObjectProperty ;
+    rdfs:domain :Land ;
+    rdfs:range :Terrain ;
+    rdfs:label "is part of terrain" .
+:containsGeographicFeature a owl:ObjectProperty ;
+    rdfs:domain :Terrain ;
+    rdfs:range :GeographicFeature ;
+    rdfs:label "contains geographic feature" .
+:locatedInCountry a owl:ObjectProperty ;
+    rdfs:domain :Land ;
+    rdfs:range :Country ;
+    rdfs:label "located in country" .
+:hasArea a owl:DatatypeProperty ;
+    rdfs:domain :Land ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has area" .
+:hasName a owl:DatatypeProperty ;
+    rdfs:domain :GeographicFeature ;
+    rdfs:range xsd:string ;
+    rdfs:label "has name" .
+:Mountain a owl:Class ;
+    rdfs:label "Mountain" ;
+    rdfs:comment "A large natural elevation of the earth's surface." ;
+    rdfs:subClassOf :GeographicFeature .
+:River a owl:Class ;
+    rdfs:label "River" ;
+    rdfs:comment "A large, flowing body of water that usually empties into a sea or ocean." ;
+    rdfs:subClassOf :GeographicFeature .

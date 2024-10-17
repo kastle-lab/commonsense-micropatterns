@@ -1,0 +1,49 @@
+@prefix : <http://example.org/library#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Library rdf:type owl:Class ;
+         rdfs:label "Library" ;
+         rdfs:comment "A place where books and other materials are available for people to use or borrow." .
+:Book rdf:type owl:Class ;
+      rdfs:label "Book" ;
+      rdfs:comment "A written or printed work consisting of pages glued or sewn together along one side and bound in covers." .
+:Member rdf:type owl:Class ;
+        rdfs:label "Member" ;
+        rdfs:comment "An individual who has registered with the library to borrow materials and access services." .
+:Librarian rdf:type owl:Class ;
+           rdfs:label "Librarian" ;
+           rdfs:comment "A person who works professionally in a library, providing access to information and sometimes social or technical programming." .
+:Loan rdf:type owl:Class ;
+      rdfs:label "Loan" ;
+      rdfs:comment "An arrangement where a library member is temporarily allowed to take a book or resource from the library." .
+:hasMember rdf:type owl:ObjectProperty ;
+           rdfs:domain :Library ;
+           rdfs:range :Member ;
+           rdfs:label "has member" ;
+           rdfs:comment "Associates a library with its registered member(s)." .
+:hasBook rdf:type owl:ObjectProperty ;
+         rdfs:domain :Library ;
+         rdfs:range :Book ;
+         rdfs:label "has book" ;
+         rdfs:comment "Associates a library with the books it possesses." .
+:borrowedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Loan ;
+            rdfs:range :Member ;
+            rdfs:label "borrowed by" ;
+            rdfs:comment "Associates a loan with the library member who borrowed the book." .
+:bookLoaned rdf:type owl:ObjectProperty ;
+            rdfs:domain :Loan ;
+            rdfs:range :Book ;
+            rdfs:label "book loaned" ;
+            rdfs:comment "Associates a loan with the book that has been borrowed." .
+:managedBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Library ;
+           rdfs:range :Librarian ;
+           rdfs:label "managed by" ;
+           rdfs:comment "Associates a library with its librarian(s) who manage it." .
+:isAvailable rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book ;
+             rdfs:range rdf:Literal ;
+             rdfs:label "is available" ;
+             rdfs:comment "Indicates if a book is currently available for borrowing." .

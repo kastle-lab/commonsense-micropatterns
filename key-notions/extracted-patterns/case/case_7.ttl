@@ -1,0 +1,56 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Case a rdfs:Class ;
+    rdfs:label "Case" ;
+    rdfs:comment "A general concept representing an instance or occurrence of a subject under investigation or study." .
+:LegalCase a rdfs:Class ;
+    rdfs:subClassOf :Case ;
+    rdfs:label "Legal Case" ;
+    rdfs:comment "A case in a court of law." .
+:MedicalCase a rdfs:Class ;
+    rdfs:subClassOf :Case ;
+    rdfs:label "Medical Case" ;
+    rdfs:comment "An instance of a disease or disorder being treated or described." .
+:UseCase a rdfs:Class ;
+    rdfs:subClassOf :Case ;
+    rdfs:label "Use Case" ;
+    rdfs:comment "A scenario in which a system is used to achieve a specific goal." .
+:caseNumber a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Case Number" ;
+    rdfs:comment "The unique identifier for a specific case." .
+:caseTitle a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Case Title" ;
+    rdfs:comment "The title or name of the case." .
+:caseDescription a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Case Description" ;
+    rdfs:comment "A detailed description of the case." .
+:involvesParty a rdf:Property ;
+    rdfs:domain :Case ;
+    rdfs:range :Party ;
+    rdfs:label "Involves Party" ;
+    rdfs:comment "Relates a case to the parties involved." .
+:Party a rdfs:Class ;
+    rdfs:label "Party" ;
+    rdfs:comment "An individual or entity involved in a case." .
+:hasOutcome a rdf:Property ;
+    rdfs:domain :LegalCase ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Has Outcome" ;
+    rdfs:comment "The outcome or result of a legal case." .
+:diagnosis a rdf:Property ;
+    rdfs:domain :MedicalCase ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "Diagnosis" ;
+    rdfs:comment "The identified condition in a medical case." .
+:systemFunctionality a rdf:Property ;
+    rdfs:domain :UseCase ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "System Functionality" ;
+    rdfs:comment "The functionality a system provides to achieve the use case goal." .

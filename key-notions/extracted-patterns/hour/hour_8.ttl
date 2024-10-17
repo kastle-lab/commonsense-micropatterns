@@ -1,0 +1,33 @@
+@prefix : <http://example.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Hour a owl:Class ;
+    rdfs:label "Hour" ;
+    rdfs:comment "A class representing an hour as a unit of time." .
+:Minute a owl:Class ;
+    rdfs:label "Minute" ;
+    rdfs:comment "A class representing a minute as a unit of time." .
+:Second a owl:Class ;
+    rdfs:label "Second" ;
+    rdfs:comment "A class representing a second as a unit of time." .
+:hasMinutes a owl:ObjectProperty ;
+    rdfs:domain :Hour ;
+    rdfs:range :Minute ;
+    rdfs:label "has minutes" ;
+    rdfs:comment "Relates an hour to the minutes it contains." .
+:hasSeconds a owl:ObjectProperty ;
+    rdfs:domain :Minute ;
+    rdfs:range :Second ;
+    rdfs:label "has seconds" ;
+    rdfs:comment "Relates a minute to the seconds it contains." .
+:value a owl:DatatypeProperty ;
+    rdfs:domain :Hour, :Minute, :Second ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "value" ;
+    rdfs:comment "The numerical value of the time unit." .
+:hasNextHour a owl:ObjectProperty ;
+    rdfs:domain :Hour ;
+    rdfs:range :Hour ;
+    rdfs:label "has next hour" ;
+    rdfs:comment "Relates an hour to the next hour." .

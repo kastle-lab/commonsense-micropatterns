@@ -1,0 +1,73 @@
+@prefix : <http://example.org/ontology/service#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Service a owl:Class ;
+    rdfs:label "Service" ;
+    rdfs:comment "An activity that fulfills a request for a user or system." .
+:PhysicalService a owl:Class ;
+    rdfs:label "Physical Service" ;
+    rdfs:subClassOf :Service ;
+    rdfs:comment "A service that requires physical presence or transaction." .
+:DigitalService a owl:Class ;
+    rdfs:label "Digital Service" ;
+    rdfs:subClassOf :Service ;
+    rdfs:comment "A service that is provided through digital means." .
+:ServiceProvider a owl:Class ;
+    rdfs:label "Service Provider" ;
+    rdfs:comment "An entity that offers one or more services." .
+:Customer a owl:Class ;
+    rdfs:label "Customer" ;
+    rdfs:comment "An entity that requests or consumes a service." .
+:ServiceType a owl:Class ;
+    rdfs:label "Service Type" ;
+    rdfs:comment "A classification of services based on common characteristics." .
+:hasProvider a owl:ObjectProperty ;
+    rdfs:label "has provider" ;
+    rdfs:domain :Service ;
+    rdfs:range :ServiceProvider ;
+    rdfs:comment "Relates a service to its provider." .
+:hasCustomer a owl:ObjectProperty ;
+    rdfs:label "has customer" ;
+    rdfs:domain :Service ;
+    rdfs:range :Customer ;
+    rdfs:comment "Relates a service to its customer." .
+:offersService a owl:ObjectProperty ;
+    rdfs:label "offers service" ;
+    rdfs:domain :ServiceProvider ;
+    rdfs:range :Service ;
+    rdfs:comment "Relates a service provider to a service they offer." .
+:consumesService a owl:ObjectProperty ;
+    rdfs:label "consumes service" ;
+    rdfs:domain :Customer ;
+    rdfs:range :Service ;
+    rdfs:comment "Relates a customer to a service they consume." .
+:hasServiceType a owl:ObjectProperty ;
+    rdfs:label "has service type" ;
+    rdfs:domain :Service ;
+    rdfs:range :ServiceType ;
+    rdfs:comment "Classifies a service by its type." .
+:isTypeOfService a owl:ObjectProperty ;
+    rdfs:label "is type of service" ;
+    rdfs:domain :ServiceType ;
+    rdfs:range :Service ;
+    rdfs:comment "Indicates that a service is of a certain type." .
+:ServiceRequest a owl:Class ;
+    rdfs:label "Service Request" ;
+    rdfs:comment "A request made for a particular service." .
+:hasRequest a owl:ObjectProperty ;
+    rdfs:label "has request" ;
+    rdfs:domain :Service ;
+    rdfs:range :ServiceRequest ;
+    rdfs:comment "Relates a service to a service request." .
+:requestsService a owl:ObjectProperty ;
+    rdfs:label "requests service" ;
+    rdfs:domain :Customer ;
+    rdfs:range :ServiceRequest ;
+    rdfs:comment "Relates a customer to a service request they make." .
+:providesRequest a owl:ObjectProperty ;
+    rdfs:label "provides request" ;
+    rdfs:domain :ServiceProvider ;
+    rdfs:range :ServiceRequest ;
+    rdfs:comment "Relates a service provider to a service request they fulfill." .

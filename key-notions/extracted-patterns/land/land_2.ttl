@@ -1,0 +1,53 @@
+@prefix : <http://example.org/land#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+:Land a owl:Class ;
+    rdfs:label "Land"@en ;
+    rdfs:comment "A class representing an area of the earth's surface that is not covered by water."@en .
+:GeographicalFeature a owl:Class ;
+    rdfs:label "Geographical Feature"@en ;
+    rdfs:comment "A class representing natural features of the Earth's surface."@en .
+:LandForm a owl:Class ;
+    rdfs:subClassOf :GeographicalFeature ;
+    rdfs:label "Landform"@en ;
+    rdfs:comment "A recognizable natural feature of the earth's surface."@en .
+:Mountain a owl:Class ;
+    rdfs:subClassOf :LandForm ;
+    rdfs:label "Mountain"@en ;
+    rdfs:comment "A large natural elevation of the earth's surface rising abruptly from the surrounding level."@en .
+:Plain a owl:Class ;
+    rdfs:subClassOf :LandForm ;
+    rdfs:label "Plain"@en ;
+    rdfs:comment "A large area of flat or gently rolling land."@en .
+:Valley a owl:Class ;
+    rdfs:subClassOf :LandForm ;
+    rdfs:label "Valley"@en ;
+    rdfs:comment "A low area of land between hills or mountains, often with a river running through it."@en .
+:HumanSettlement a owl:Class ;
+    rdfs:label "Human Settlement"@en ;
+    rdfs:comment "A class representing places where humans establish communities."@en .
+:City a owl:Class ;
+    rdfs:subClassOf :HumanSettlement ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A large town, typically with a complex administrative, commercial, and social structure."@en .
+:Farm a owl:Class ;
+    rdfs:subClassOf :Land ;
+    rdfs:label "Farm"@en ;
+    rdfs:comment "An area of land and its buildings used for growing crops and rearing animals."@en .
+:Forest a owl:Class ;
+    rdfs:subClassOf :Land ;
+    rdfs:label "Forest"@en ;
+    rdfs:comment "A large area covered chiefly with trees and undergrowth."@en .
+:hasLocation a owl:ObjectProperty ;
+    rdfs:label "has location"@en ;
+    rdfs:domain :HumanSettlement ;
+    rdfs:range :Land .
+:isPartOf a owl:ObjectProperty ;
+    rdfs:label "is part of"@en ;
+    rdfs:domain :Land ;
+    rdfs:range :GeographicalFeature .
+:isAdjacentTo a owl:ObjectProperty ;
+    rdfs:label "is adjacent to"@en ;
+    rdfs:domain :Land ;
+    rdfs:range :Land .

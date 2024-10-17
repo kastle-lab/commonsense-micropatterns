@@ -1,0 +1,87 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:FieldOfExpertise a rdfs:Class .
+
+kastle:FieldOfStudy a rdfs:Class .
+
+kastle:Institution a rdfs:Class .
+
+kastle:Mbox a rdfs:Class .
+
+kastle:Publication a rdfs:Class .
+
+kastle:PublicationVenue a rdfs:Class .
+
+kastle:ResearchGroup a rdfs:Class .
+
+kastle:Researcher a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/researcher> a owl:Ontology ;
+    opla-core:hasPatternName "researcher Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:affiliatedWith a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Institution .
+
+kastle:authoredPublication a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Publication .
+
+kastle:collaboratesWith a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Researcher .
+
+kastle:emails a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Mbox .
+
+kastle:hasAffiliation a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Institution .
+
+kastle:hasExpertise a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:FieldOfExpertise .
+
+kastle:hasFieldOfStudy a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range xsd:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range xsd:string .
+
+kastle:hasPublication a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Publication .
+
+kastle:memberOfGroup a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:ResearchGroup .
+
+kastle:publishedIn a rdf:Property ;
+    rdfs:domain kastle:Publication ;
+    rdfs:range kastle:PublicationVenue .
+
+kastle:publishedWork a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:Publication .
+
+kastle:studiesField a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range kastle:FieldOfStudy .
+
