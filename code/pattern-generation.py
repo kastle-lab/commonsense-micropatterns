@@ -121,42 +121,43 @@ def parse_results(verbose=False):
                         print(f"No valid ontology found for: {out_name} ")
                     continue
 
-                out = open(os.path.join(noun_dir, out_name), "w")
-                # Clean up ttl lines
-                ## These were determined while running the script a few times
-                ## And seeing how RDFlib was failing to parse the graphs
-                ontology = ontology.replace(" .", " .\n")
-                ontology = ontology.replace("\".", "\".\n")
-                ontology = ontology.replace(";", ";\n")
-                ontology = ontology.replace("@@", "@")
-                ontology = ontology.replace("resourceex", "resource\nex")
-                ontology = ontology.replace("propertyex", "property\nex")
-                ontology = ontology.replace("classex", "class\nex")
-                ontology = ontology.replace("# Classes", "# Classes\n")
-                ontology = ontology.replace("# Properties", "# Properties\n")
-                ontology = ontology.replace("# Individuals", "# Individuals\n")
-                ontology = ontology.replace("\"ex:", "\"\nex:")
+                #out = open(os.path.join(noun_dir, out_name), "w")
+                with(open(os.path.join(noun_dir, out_name), "w")) as out:
+                    # Clean up ttl lines
+                    ## These were determined while running the script a few times
+                    ## And seeing how RDFlib was failing to parse the graphs
+                    ontology = ontology.replace(" .", " .\n")
+                    ontology = ontology.replace("\".", "\".\n")
+                    ontology = ontology.replace(";", ";\n")
+                    ontology = ontology.replace("@@", "@")
+                    ontology = ontology.replace("resourceex", "resource\nex")
+                    ontology = ontology.replace("propertyex", "property\nex")
+                    ontology = ontology.replace("classex", "class\nex")
+                    ontology = ontology.replace("# Classes", "# Classes\n")
+                    ontology = ontology.replace("# Properties", "# Properties\n")
+                    ontology = ontology.replace("# Individuals", "# Individuals\n")
+                    ontology = ontology.replace("\"ex:", "\"\nex:")
 
-                ## Sometimes class names were wrapped in curly braces
-                ## These are removed when encountered
-                pattern = r'[a-zA-Z]*:{' # weird { } syntax
-                ontology = re.sub(pattern, '', ontology)
-                ontology = ontology.replace("}", "")
+                    ## Sometimes class names were wrapped in curly braces
+                    ## These are removed when encountered
+                    pattern = r'[a-zA-Z]*:{' # weird { } syntax
+                    ontology = re.sub(pattern, '', ontology)
+                    ontology = ontology.replace("}", "")
 
-                if("[" in ontology):
-                    try:
-                        ontology += split[index+1]
-                    except IndexError:
-                        pass
+                    if("[" in ontology):
+                        try:
+                            ontology += split[index+1]
+                        except IndexError:
+                            pass
 
-                if("```" in ontology):
-                    ontology = markdown_cleanup(ontology)
-                ontology = ontology.replace('\n\n', '\n')
-                ontology = ontology.replace('>@', '>\n@')
-                ontology = ontology.replace('>ex', '>\nex')
+                    if("```" in ontology):
+                        ontology = markdown_cleanup(ontology)
+                    ontology = ontology.replace('\n\n', '\n')
+                    ontology = ontology.replace('>@', '>\n@')
+                    ontology = ontology.replace('>ex', '>\nex')
 
-                #  Write to individual file
-                out.write(ontology)
+                    #  Write to individual file
+                    out.write(ontology)
 
 def voting_helper(propDict, key):
     values = []
