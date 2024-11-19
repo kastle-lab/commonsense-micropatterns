@@ -1,0 +1,439 @@
+Term	CS-MODL Count	CS-MODL Files	Enslaved-MODL Count	Enslaved-MODL Files	Total Count
+color	1	['Eye']	1	['clothe']	2
+y	2	['Line', 'Point']	1	['line']	3
+hasColor	1	['Eye']	1	['material']	2
+hasHeight	1	['Health']	1	['baby']	2
+hasSecurityLevel	1	['Door']	1	['prison']	2
+isOpen	1	['Issue']	1	['issue']	2
+locatedIn	1	['Team']	1	['state']	2
+madeOf	1	['Art']	1	['clothe']	2
+material	1	['Couch']	1	['dress']	2
+belongs	2	['Community', 'Government']	1	['priesthood']	3
+belongsTo	1	['Lot']	1	['branch']	2
+country	2	['Government', 'Money']	1	['freedom']	3
+hasContinent	1	['World']	1	['nation']	2
+hasCountry	1	['Lot']	1	['location']	2
+hasEnd	2	['End', 'Night']	2	['end', 'spring']	4
+hasFirstName	1	['Child']	1	['professor']	2
+hasLastName	1	['Child']	1	['professor']	2
+hasName	1	['Party']	1	['project']	2
+hasNationality	1	['People']	1	['worker']	2
+hasPopulation	1	['State']	1	['state']	2
+hasStart	2	['Line', 'Night']	1	['spring']	3
+hasTerm	1	['President']	2	['politician', 'president']	3
+servesIn	1	['President']	1	['soldier']	2
+startDate	1	['Team']	1	['project']	2
+termEnd	1	['President']	1	['governor']	2
+termStart	1	['President']	1	['governor']	2
+age	1	['Party']	2	['home', 'horse']	3
+attends	1	['Education']	1	['student']	2
+description	1	['Idea']	1	['project']	2
+gender	1	['Child']	1	['instance']	2
+hasAge	1	['Teacher']	1	['girl']	2
+hasLocation	1	['Party']	1	['violence']	2
+hasManufacturer	1	['Car']	1	['carriage']	2
+hasOccupation	1	['Work']	1	['preacher']	2
+hasShape	1	['Eye']	1	['eye']	2
+livesIn	1	['People']	1	['relation']	2
+location	1	['Party']	1	['funeral']	2
+member	2	['Family', 'Party']	1	['project']	3
+name	1	['Party']	1	['state']	2
+relatedTo	1	['Side']	1	['idea']	2
+courseName	1	['School']	1	['course']	2
+enrolledIn	1	['Education']	1	['university']	2
+firstName	1	['Team']	1	['governor']	2
+hasGrade	1	['Education']	1	['institution']	2
+hasID	1	['Teacher']	1	['soldier']	2
+hasMajor	1	['Student']	1	['student']	2
+hasMinor	1	['Student']	1	['student']	2
+hasStudent	2	['Study', 'Teacher']	1	['school']	3
+lastName	1	['Team']	1	['governor']	2
+studies	1	['Education']	1	['university']	2
+teaches	1	['Teacher']	1	['school']	2
+year	2	['Car', 'Year']	2	['census', 'publication']	4
+brand	1	['Couch']	1	['marker']	2
+depth	1	['Couch']	1	['sea']	2
+hasSize	1	['Lot']	1	['cabin']	2
+hasStyle	1	['Art']	1	['style']	2
+height	1	['Man']	1	['volume']	2
+isPartOf	2	['Eye', 'Office']	1	['period']	3
+isUsedIn	2	['Power', 'Sofa']	1	['carriage']	3
+price	1	['Lot']	2	['purchase', 'shop']	3
+city	2	['Party', 'Person']	1	['person']	3
+size	1	['Lot']	1	['clothe']	2
+width	1	['Couch']	1	['volume']	2
+hasDuration	1	['Service']	1	['activity']	2
+hasMinutes	1	['Day']	1	['hour']	2
+hasNumericValue	1	['Minute']	1	['value']	2
+hasSecond	2	['Hour', 'Time']	1	['pair']	3
+partOf	2	['Hand', 'Office']	1	['foot']	3
+unit	2	['Area', 'Power']	1	['volume']	3
+address	1	['Party']	1	['property']	2
+email	1	['Member']	1	['gift']	2
+hasDepartment	1	['Government']	1	['institution']	2
+hasEmployee	1	['Work']	1	['office']	2
+hasFurniture	1	['Home']	1	['office']	2
+hasRole	1	['Team']	1	['project']	2
+hasRoom	1	['Home']	1	['home']	2
+manages	1	['Health']	1	['construction']	2
+worksAt	1	['Teacher']	1	['doctor']	2
+worksIn	1	['Teacher']	1	['professor']	2
+applies	1	['Law']	1	['drag']	2
+author	2	['Book', 'Information']	1	['memoir']	3
+hasArticle	1	['Law']	1	['newspaper']	2
+hasCase	1	['Law']	1	['trial']	2
+hasCourt	1	['Law']	1	['justice']	2
+x	2	['Line', 'Point']	1	['line']	3
+hasId	2	['Fact', 'Issue']	1	['request']	3
+hasJurisdiction	1	['Law']	1	['court']	2
+hasStatus	1	['Issue']	1	['request']	2
+hasText	1	['Question']	1	['petition']	2
+hasTitle	1	['Idea']	1	['information']	2
+hasYear	1	['Car']	2	['citation', 'year']	3
+involves	1	['War']	1	['money']	2
+judges	1	['Law']	1	['judge']	2
+represents	1	['Law']	1	['law']	2
+title	1	['Work']	1	['memoir']	2
+duration	1	['Time']	1	['period']	2
+endTime	1	['Service']	1	['end']	2
+endsAt	1	['War']	1	['process']	2
+hasActivity	1	['Community']	1	['activist']	2
+hasEndTime	1	['End']	1	['period']	2
+hasLength	1	['Side']	1	['coast']	2
+hasStartTime	1	['Work']	1	['period']	2
+hasTemperature	1	['Day']	1	['star']	2
+hasWeather	1	['Day']	1	['spring']	2
+startTime	1	['Service']	1	['history']	2
+startsAt	1	['Day']	1	['process']	2
+date	1	['Party']	2	['funeral', 'gospel']	3
+hasDate	1	['Party']	1	['information']	2
+hasDateTime	1	['Party']	1	['violence']	2
+hasDescription	1	['Idea']	1	['issue']	2
+hasEvent	1	['Party']	1	['scene']	2
+hasTime	1	['Party']	1	['end']	2
+time	1	['Morning']	1	['escape']	2
+assignedTo	1	['Issue']	1	['task']	2
+associatedWith	1	['Level']	1	['result']	2
+caseStatus	1	['Case']	1	['case']	2
+creationDate	1	['Art']	1	['website']	2
+hasDefendant	1	['Case']	1	['trial']	2
+hasJudge	1	['Case']	1	['trial']	2
+hasLawyer	1	['Case']	1	['courthouse']	2
+hasPart	2	['Eye', 'Head']	2	['activity', 'head']	4
+hasParty	1	['Case']	1	['politic']	2
+hasStartDate	1	['Work']	1	['plan']	2
+hasSubject	1	['Teacher']	1	['desire']	2
+isRelatedTo	1	['Lot']	1	['principle']	2
+judge	1	['Case']	1	['trial']	2
+personName	1	['Issue']	1	['history']	2
+status	1	['Issue']	1	['guest']	2
+hasEar	1	['Head']	1	['face']	2
+hasEye	1	['Eye']	1	['face']	2
+hasMouth	1	['Face']	1	['face']	2
+hasNose	1	['Face']	1	['face']	2
+hasDepth	1	['Chair']	1	['sea']	2
+hasPrice	1	['Lot']	1	['trade']	2
+hasWeight	2	['Health', 'Part']	1	['capacity']	3
+amount	1	['Power']	1	['debt']	2
+currency	1	['Country']	1	['nation']	2
+hasAmount	1	['Money']	1	['aid']	2
+hasCurrency	1	['Country']	1	['earning']	2
+hasDenomination	1	['Money']	1	['church']	2
+hasValue	1	['Result']	1	['level']	2
+transfers	1	['Money']	1	['power']	2
+value	1	['Number']	1	['mean']	2
+hasCategory	1	['Question']	1	['shop']	2
+hasCharacter	2	['History', 'Story']	2	['scene', 'tale']	4
+hasType	1	['Service']	1	['material']	2
+hasAddress	1	['Lot']	1	['neighbor']	2
+hasGender	1	['Health']	1	['baby']	2
+hasParent	1	['Child']	1	['mother']	2
+hasPet	1	['Kid']	1	['boy']	2
+hasSibling	1	['Child']	1	['relation']	2
+participatesIn	1	['Party']	2	['activism', 'controversy']	3
+playsSport	1	['Team']	1	['boy']	2
+school	1	['Teacher']	1	['teacher']	2
+hasChild	1	['Father']	2	['ancestor', 'parent']	3
+hasMother	1	['Man']	1	['mother']	2
+hasRelationship	1	['Mother']	1	['relationship']	2
+hasSpouse	1	['Father']	1	['widow']	2
+isMarried	1	['People']	1	['person']	2
+isMotherOf	1	['Parent']	1	['woman']	2
+birthDate	1	['Book']	1	['film']	2
+birthdate	1	['Child']	1	['activist']	2
+dateOfBirth	1	['People']	1	['physician']	2
+deathDate	1	['Book']	1	['cemetery']	2
+hasBirthDate	1	['Party']	1	['birth']	2
+hasDateOfBirth	1	['Member']	1	['baby']	2
+hasFather	1	['Father']	1	['birth']	2
+hasMember	1	['Party']	1	['project']	2
+isChildOf	1	['Child']	1	['girl']	2
+isMale	1	['Child']	1	['hero']	2
+sibling	1	['Girl']	2	['brother', 'uncle']	3
+area	1	['Lot']	2	['island', 'settlement']	3
+capital	1	['State']	1	['state']	2
+hasArea	1	['Lot']	1	['state']	2
+hasCapital	1	['State']	1	['region']	2
+hasCity	2	['Lot', 'World']	1	['location']	3
+hasLanguage	2	['Word', 'World']	1	['literacy']	3
+isInContinent	1	['Country']	1	['country']	2
+isLocatedIn	1	['State']	1	['village']	2
+officialLanguage	1	['Country']	1	['homeland']	2
+population	1	['State']	1	['state']	2
+consistsOf	1	['Education']	1	['society']	2
+contains	1	['Home']	2	['cave', 'water']	3
+containsOxygen	1	['Air']	1	['water']	2
+hasComponent	1	['Face']	1	['system']	2
+hasVolume	1	['Air']	1	['capacity']	2
+temperature	1	['Water']	1	['sea']	2
+affiliation	1	['Research']	1	['researcher']	2
+dueDate	1	['Issue']	1	['task']	2
+hasAuthor	1	['Idea']	1	['audiobook']	2
+hasPublicationDate	1	['Book']	1	['author']	2
+hasResearcher	1	['Study']	1	['study']	2
+hasTopic	1	['Study']	1	['speaker']	2
+isAbout	1	['Fact']	1	['activist']	2
+isWrittenBy	1	['Research']	1	['diary']	2
+performs	1	['Research']	2	['agent', 'favor']	3
+publishedIn	1	['Book']	1	['author']	2
+publishes	1	['Research']	1	['obituary']	2
+researchTopic	1	['Research']	1	['research']	2
+specializesIn	1	['Research']	1	['editor']	2
+supports	1	['Research']	1	['supporter']	2
+employer	1	['Work']	1	['servant']	2
+hasJobTitle	1	['Work']	1	['adulthood']	2
+hasPosition	1	['Hand']	1	['organization']	2
+jobTitle	1	['Work']	1	['servant']	2
+worksFor	1	['Work']	1	['editor']	2
+xCoordinate	1	['Line']	1	['point']	2
+yCoordinate	1	['Line']	1	['point']	2
+zCoordinate	1	['Point']	1	['point']	2
+length	1	['Line']	1	['volume']	2
+hasTexture	1	['Face']	1	['cotton']	2
+isUsedFor	1	['Thing']	1	['protection']	2
+friend	1	['Friend']	1	['friendship']	2
+hasFriend	1	['Friend']	1	['friendship']	2
+genre	1	['Book']	1	['novel']	2
+hasGenre	1	['Book']	1	['tale']	2
+hasRating	1	['Game']	1	['reputation']	2
+publisher	1	['Book']	1	['press']	2
+rating	1	['Service']	1	['review']	2
+releaseDate	1	['Program']	1	['film']	2
+reviewOf	1	['Game']	1	['review']	2
+causedBy	1	['Change']	1	['smallpox']	2
+causes	1	['End']	1	['change']	2
+hasConclusion	1	['Reason']	1	['end']	2
+hasEvidence	1	['Reason']	1	['belief']	2
+hasPremise	1	['Reason']	1	['argument']	2
+hasPurpose	1	['Reason']	1	['punishment']	2
+hasReason	1	['War']	1	['arrest']	2
+provides	1	['Service']	1	['service']	2
+reason	1	['Reason']	1	['escape']	2
+content	1	['Information']	1	['issue']	2
+occurredAt	1	['History']	1	['assault']	2
+occursIn	1	['History']	1	['circumstance']	2
+participatedIn	1	['History']	1	['abolitionist']	2
+type	2	['Room', 'Service']	1	['dress']	3
+hasContent	1	['Question']	1	['newspaper']	2
+hasDataType	1	['Information']	1	['information']	2
+hasSource	1	['Question']	1	['testimony']	2
+hasTimestamp	1	['Result']	1	['request']	2
+isDerivedFrom	1	['Information']	1	['information']	2
+isVerified	1	['Fact']	1	['testimony']	2
+source	1	['Way']	2	['press', 'water']	3
+bornIn	1	['People']	1	['native']	2
+nationality	1	['Art']	1	['activist']	2
+phone	1	['Person']	1	['physician']	2
+residesIn	1	['Home']	1	['neighbor']	2
+hasCharacters	1	['Story']	1	['tale']	2
+hasPlot	1	['Story']	1	['tale']	2
+hasSetting	1	['Story']	1	['tale']	2
+hasTheme	1	['Party']	1	['party']	2
+publicationDate	1	['Book']	1	['article']	2
+publicationYear	1	['Book']	1	['novel']	2
+role	1	['Team']	1	['duty']	2
+writtenBy	1	['Community']	1	['literature']	2
+hosts	1	['World']	1	['occasion']	2
+hasBirthdate	1	['Woman']	1	['autobiography']	2
+isWifeOf	1	['Woman']	1	['wife']	2
+placeName	1	['Place']	1	['history']	2
+createdOn	1	['Group']	1	['account']	2
+hasLeader	1	['Party']	1	['expedition']	2
+capacity	1	['Power']	1	['vessel']	2
+hasCapacity	1	['Lot']	1	['tavern']	2
+hasFunction	1	['Eye']	1	['institution']	2
+isOfType	1	['Room']	1	['collection']	2
+hasPH	1	['Water']	1	['water']	2
+hasState	1	['State']	1	['address']	2
+salinity	1	['Water']	1	['sea']	2
+usedIn	1	['Word']	1	['medium']	2
+hasBathrooms	1	['House']	1	['home']	2
+hasBedrooms	1	['House']	1	['home']	2
+hasLivingRoom	1	['House']	1	['home']	2
+hasOwner	1	['Lot']	1	['residence']	2
+hasRooms	1	['Home']	1	['home']	2
+ownedBy	1	['House']	1	['transportation']	2
+owner	1	['Lot']	2	['cabin', 'property']	3
+owns	1	['Business']	1	['home']	2
+hasInterest	1	['Community']	1	['interest']	2
+hasMagnitude	1	['Force']	1	['force']	2
+hasPower	1	['Power']	1	['hero']	2
+isMeasuredIn	1	['Power']	1	['loss']	2
+belongsIn	1	['Week']	1	['community']	2
+casualties	1	['War']	1	['battle']	2
+endYear	1	['War']	1	['rebellion']	2
+endsOn	1	['War']	1	['spring']	2
+hasCause	1	['Problem']	1	['health']	2
+hasOutcome	1	['Result']	1	['decision']	2
+hasParticipatingCountry	1	['War']	1	['battle']	2
+hasResult	1	['Result']	1	['battle']	2
+hasTimeframe	1	['War']	1	['success']	2
+participant	1	['Community']	1	['result']	2
+startYear	1	['War']	1	['rebellion']	2
+usesWeapon	1	['War']	1	['rebel']	2
+atLocation	1	['Study']	1	['care']	2
+hasLevel	1	['Level']	1	['level']	2
+isTaughtBy	1	['Study']	1	['course']	2
+reads	1	['Study']	1	['reader']	2
+fatherOf	1	['Father']	1	['relative']	2
+hasOrder	1	['Month']	1	['list']	2
+endOfYear	1	['Year']	1	['year']	2
+hasFact	1	['Fact']	1	['fact']	2
+hasObject	1	['Fact']	2	['desire', 'statement']	3
+hasPredicate	1	['Fact']	1	['statement']	2
+hasApplication	1	['System']	1	['principle']	2
+hasHardware	1	['System']	1	['system']	2
+hasInput	1	['Program']	1	['conversion']	2
+hasOutput	1	['Program']	1	['conversion']	2
+hasSoftware	1	['System']	1	['system']	2
+hasVersion	1	['Program']	1	['version']	2
+isComponentOf	1	['System']	1	['system']	2
+providesService	1	['Service']	1	['service']	2
+hasBirth	1	['Life']	1	['birth']	2
+hasDeath	1	['Life']	1	['death']	2
+hasCEO	1	['Business']	1	['company']	2
+hasDirector	1	['Company']	1	['film']	2
+hasEmployeeCount	1	['Company']	1	['company']	2
+hasFullName	1	['Work']	1	['individual']	2
+hasIndustry	1	['Company']	1	['company']	2
+operatesIn	2	['Business', 'Health']	1	['merchant']	3
+yearEstablished	1	['Company']	1	['monument']	2
+artist	1	['Art']	1	['song']	2
+createdBy	1	['Art']	1	['website']	2
+hasArtist	1	['Art']	1	['painting']	2
+hasCreator	1	['Idea']	1	['statue']	2
+hasMedium	1	['Way']	1	['information']	2
+hasComment	1	['Result']	1	['reputation']	2
+hasInstitution	1	['Community']	1	['society']	2
+memberCount	1	['Community']	1	['group']	2
+hasChangeType	1	['Change']	1	['change']	2
+hasImpact	1	['Idea']	1	['struggle']	2
+hasTarget	1	['Change']	1	['attack']	2
+occursAt	1	['Change']	1	['change']	2
+hasCode	1	['Program']	1	['nation']	2
+hasExperience	1	['Teacher']	1	['overseer']	2
+hasLicense	1	['Program']	1	['lawyer']	2
+isCreatedBy	1	['Program']	1	['information']	2
+runsOn	1	['Program']	1	['railroad']	2
+version	1	['Program']	1	['release']	2
+writtenIn	1	['Program']	1	['text']	2
+hasDefinition	1	['Word']	1	['principle']	2
+hasOrigin	1	['Idea']	2	['character', 'origin']	3
+hasSpelling	1	['Word']	1	['word']	2
+isSynonymOf	1	['Word']	1	['word']	2
+distance	1	['Way']	1	['movement']	2
+endPoint	1	['Line']	1	['line']	2
+from	1	['Way']	1	['escape']	2
+hasDestination	1	['Way']	1	['passenger']	2
+hasDirection	1	['Force']	1	['force']	2
+startPoint	1	['Line']	1	['line']	2
+takenBy	1	['Way']	1	['photo']	2
+to	1	['Way']	1	['escape']	2
+generates	1	['Business']	1	['power']	2
+hasProduct	1	['Business']	1	['trade']	2
+hires	1	['Business']	1	['servant']	2
+sells	1	['Business']	1	['shop']	2
+serves	1	['Business']	1	['priesthood']	2
+serviceName	1	['Service']	1	['service']	2
+supplies	1	['Business']	1	['supply']	2
+belongsToDomain	1	['Problem']	1	['idea']	2
+hasEffect	1	['Problem']	1	['circumstance']	2
+hasSeverity	1	['Health']	1	['pain']	2
+isTypeOf	1	['Problem']	1	['relationship']	2
+severity	1	['Problem']	1	['punishment']	2
+hasFeature	1	['Face']	1	['face']	2
+shape	1	['Eye']	1	['thing']	2
+hasMake	1	['Car']	1	['transportation']	2
+hasModel	1	['Car']	1	['carriage']	2
+hasISBN	1	['Book']	1	['isbn']	2
+hasPageCount	1	['Book']	1	['paper']	2
+hasPublisher	1	['Book']	1	['newspaper']	2
+isbn	1	['Book']	1	['book']	2
+numberOfPages	1	['Book']	1	['novel']	2
+pages	1	['Book']	1	['book']	2
+publishedDate	1	['Book']	1	['writing']	2
+publishedYear	1	['Book']	1	['memoir']	2
+hasDateCreated	1	['Idea']	1	['idea']	2
+hasDeadline	1	['Team']	1	['project']	2
+hasIssue	1	['Issue']	1	['issue']	2
+hasPriority	1	['Issue']	1	['issue']	2
+isAssignedTo	1	['Issue']	1	['task']	2
+issueDescription	1	['Issue']	1	['issue']	2
+issueID	1	['Issue']	1	['issue']	2
+issueStatus	1	['Issue']	1	['issue']	2
+diagnosedWith	1	['Health']	1	['condition']	2
+hasCondition	1	['Back']	1	['condition']	2
+hasDisease	1	['Eye']	1	['health']	2
+hasPatient	1	['Health']	1	['physician']	2
+hasSymptom	1	['Back']	1	['health']	2
+hasTreatment	1	['Eye']	1	['health']	2
+receives	1	['Education']	1	['favor']	2
+treats	1	['Health']	1	['treatment']	2
+hasClass	1	['School']	1	['school']	2
+hasTeacher	1	['Education']	1	['school']	2
+teachesSubject	2	['School', 'Teacher']	1	['professor']	3
+teachesCourse	1	['Education']	1	['university']	2
+hasBody	1	['Question']	1	['mail']	2
+hasResponse	1	['Question']	1	['suffering']	2
+isInCountry	1	['City']	1	['road']	2
+isResultOf	1	['End']	1	['result']	2
+outcome	1	['Result']	1	['circumstance']	2
+score	1	['Result']	1	['result']	2
+timestamp	1	['Result']	1	['conversation']	2
+established	1	['Government']	1	['memorial']	2
+hasBranch	1	['Government']	1	['branch']	2
+holdsPosition	1	['Government']	1	['politician']	2
+parent	1	['Child']	1	['uncle']	2
+companyName	1	['Work']	1	['work']	2
+employedBy	1	['Work']	1	['worker']	2
+direction	1	['Force']	1	['movement']	2
+hasStrength	1	['Force']	1	['belief']	2
+affects	1	['Back']	1	['fate']	2
+isLocationOf	1	['Back']	1	['coast']	2
+grantedBy	1	['Right']	1	['manumission']	2
+hasRight	1	['Right']	1	['right']	2
+isProtectedBy	1	['Right']	1	['right']	2
+cause	1	['End']	2	['damage', 'disease']	3
+hasActor	1	['End']	1	['film']	2
+isEndOf	1	['End']	1	['end']	2
+hasCaptain	1	['Team']	1	['ship']	2
+hasDegree	1	['Teacher']	1	['teacher']	2
+hasEducation	1	['Education']	1	['lawyer']	2
+offeredBy	1	['Service']	1	['university']	2
+cost	1	['Service']	1	['tour']	2
+hasConsumer	1	['Service']	1	['service']	2
+hasCustomer	1	['Service']	1	['sale']	2
+hasProvider	1	['Service']	1	['service']	2
+isProvidedBy	1	['Service']	1	['service']	2
+providedBy	1	['Service']	1	['support']	2
+providerName	1	['Service']	1	['service']	2
+belongsGroup	1	['Member']	1	['rebel']	2
+hasEmail	1	['Member']	1	['mail']	2
+hasSkill	1	['Level']	2	['practice', 'seamstress']	3
+hasCreationDate	1	['Idea']	1	['document']	2
+hasIdea	1	['Idea']	1	['idea']	2
+hasZipCode	1	['Lot']	1	['address']	2
+hasAttendee	1	['Party']	1	['event']	2
+hasGuest	1	['Party']	1	['wedding']	2
+hasHost	1	['Party']	1	['party']	2
+hasOrganizer	1	['Party']	1	['event']	2

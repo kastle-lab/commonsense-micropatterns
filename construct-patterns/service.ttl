@@ -1,0 +1,41 @@
+@prefix : <http://example.org/service#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+:Service a owl:Class;
+    rdfs:label "Service";
+    rdfs:comment "An activity or benefit provided by a provider to meet the needs of a customer.".
+:Provider a owl:Class;
+    rdfs:label "Provider";
+    rdfs:comment "An entity that offers one or more services.".
+:Customer a owl:Class;
+    rdfs:label "Customer";
+    rdfs:comment "An entity that consumes or benefits from a service.".
+:ServiceCategory a owl:Class;
+    rdfs:label "Service Category";
+    rdfs:comment "A classification of a service based on the type of service it provides.".
+:deliversService a owl:ObjectProperty;
+    rdfs:domain :Provider;
+    rdfs:range :Service;
+    rdfs:label "delivers service";
+    rdfs:comment "Indicates that a provider delivers a particular service.".
+:receivesService a owl:ObjectProperty;
+    rdfs:domain :Customer;
+    rdfs:range :Service;
+    rdfs:label "receives service";
+    rdfs:comment "Indicates that a customer receives a particular service.".
+:belongsToCategory a owl:ObjectProperty;
+    rdfs:domain :Service;
+    rdfs:range :ServiceCategory;
+    rdfs:label "belongs to category";
+    rdfs:comment "Indicates that a service belongs to a specific service category.".
+:hasCustomer a owl:ObjectProperty;
+    rdfs:domain :Service;
+    rdfs:range :Customer;
+    rdfs:label "has customer";
+    rdfs:comment "Indicates that a service has a specific customer.".
+:hasProvider a owl:ObjectProperty;
+    rdfs:domain :Service;
+    rdfs:range :Provider;
+    rdfs:label "has provider";
+    rdfs:comment "Indicates that a service has a specific provider.".

@@ -1,0 +1,230 @@
+Term	CS-MODL Count	CS-MODL Files	Enslaved-MODL Count	Enslaved-MODL Files	Total Count
+Eye	2	['Eye', 'Face']	1	['eye']	3
+Dimension	1	['Couch']	1	['freedom']	2
+House	3	['Home', 'House', 'World']	2	['home', 'neighbor']	5
+Material	2	['Art', 'Door']	1	['clothe']	3
+Room	1	['Home']	1	['home']	2
+SecurityLevel	1	['Door']	1	['prison']	2
+XMLLiteral	1	['Case']	1	['idea']	2
+Place	1	['Back']	1	['place']	2
+Man	3	['Family', 'Man', 'Parent']	1	['widow']	4
+Woman	2	['Family', 'Father']	1	['woman']	3
+Teacher	2	['Education', 'Teacher']	1	['school']	3
+State	3	['Government', 'State', 'Water']	2	['land', 'state']	5
+Year	1	['Year']	1	['year']	2
+President	1	['President']	1	['president']	2
+Result	2	['Result', 'Study']	1	['result']	3
+Period	2	['Art', 'Moment']	1	['period']	3
+Life	2	['Life', 'Water']	1	['life']	3
+Part	2	['Part', 'System']	2	['introduction', 'part']	4
+City	1	['City']	1	['state']	2
+School	2	['Girl', 'Teacher']	1	['girl']	3
+Parent	2	['Child', 'Family']	1	['mother']	3
+Member	3	['Group', 'Member', 'Team']	1	['legislature']	4
+Human	1	['Father']	1	['woman']	2
+Object	1	['Hand']	1	['desire']	2
+Occupation	1	['Work']	1	['preacher']	2
+Service	2	['People', 'Service']	1	['church']	3
+Student	1	['Others']	1	['subject']	2
+University	1	['Education']	1	['institution']	2
+Subject	2	['Student', 'Teacher']	1	['professor']	3
+Major	1	['Student']	1	['student']	2
+Professor	1	['Study']	1	['professor']	2
+Furniture	1	['Home']	1	['office']	2
+Size	1	['Eye']	1	['appearance']	2
+Style	1	['Art']	1	['style']	2
+Day	2	['Day', 'Year']	1	['day']	3
+Time	3	['Day', 'Minute', 'Party']	1	['church']	4
+Hour	1	['Week']	1	['hour']	2
+Unit	2	['Area', 'Power']	1	['volume']	3
+Entity	1	['Lot']	2	['issue', 'lack']	3
+Event	1	['Idea']	1	['change']	2
+TimePeriod	1	['Time']	1	['history']	2
+Building	1	['Lot']	1	['residence']	2
+Department	1	['Government']	1	['professor']	2
+Company	2	['Company', 'Work']	1	['company']	3
+Equipment	1	['Office']	1	['guard']	2
+Manager	1	['Business']	1	['project']	2
+Nonnegativeinteger	1	['Hand']	1	['ability']	2
+Office	1	['Office']	1	['office']	2
+Role	1	['Team']	1	['project']	2
+Task	1	['Team']	1	['task']	2
+Worker	1	['Work']	1	['worker']	2
+Case	1	['Case']	1	['trial']	2
+Court	1	['Law']	1	['justice']	2
+CourtCase	1	['Law']	1	['court']	2
+Gyear	1	['Book']	1	['carriage']	2
+Judge	1	['Case']	1	['judge']	2
+Jurisdiction	1	['Right']	1	['court']	2
+Lawyer	1	['Case']	1	['courthouse']	2
+Star	1	['Night']	1	['star']	2
+Thing	1	['Level']	1	['desire']	2
+Weather	1	['Day']	1	['spring']	2
+Fact	2	['Fact', 'Information']	1	['fact']	3
+Property	2	['Kind', 'Thing']	1	['property']	3
+Point	2	['Line', 'Point']	1	['line']	3
+Position	2	['Hand', 'Job']	1	['organization']	3
+Status	2	['Case', 'Issue']	1	['request']	3
+Type	2	['Couch', 'Place']	1	['aid']	3
+LegalCase	1	['Case']	1	['judge']	2
+Job	2	['Job', 'Work']	1	['work']	3
+BodyPart	1	['Eye']	1	['arter']	2
+Face	2	['Face', 'Head']	1	['face']	3
+Head	1	['Head']	1	['head']	2
+Country	1	['State']	1	['state']	2
+Double	1	['Eye']	1	['state']	2
+Money	1	['Money']	1	['money']	2
+Transaction	1	['Money']	1	['money']	2
+Category	2	['Part', 'Work']	1	['shop']	3
+Child	2	['Child', 'Parent']	1	['mother']	3
+Langstring	1	['Issue']	1	['material']	2
+Pet	1	['Girl']	1	['boy']	2
+Sport	1	['Team']	1	['boy']	2
+Activity	1	['Result']	2	['activity', 'difficulty']	3
+Meal	1	['Morning']	1	['meal']	2
+Mother	2	['Mother', 'Parent']	1	['mother']	3
+Family	1	['Family']	1	['society']	2
+Language	1	['Word']	1	['literacy']	2
+Component	1	['System']	1	['system']	2
+Institution	2	['Research', 'Teacher']	1	['scholar']	3
+Author	1	['Idea']	1	['audiobook']	2
+Field	1	['Job']	1	['research']	2
+FieldOfStudy	1	['Research']	1	['scholar']	2
+Organization	1	['Member']	1	['organization']	2
+Product	1	['Business']	1	['trade']	2
+Publication	1	['Study']	2	['author', 'historian']	3
+Research	1	['Research']	1	['research']	2
+Topic	2	['Question', 'Research']	2	['conversation', 'speaker']	4
+Researcher	1	['Study']	1	['research']	2
+Employer	1	['Work']	1	['servant']	2
+Skill	1	['Level']	1	['practice']	2
+Area	1	['Area']	1	['area']	2
+AreaUnit	1	['Area']	1	['acre']	2
+Interest	1	['Community']	1	['interest']	2
+Genre	1	['Book']	2	['artist', 'song']	3
+Publisher	1	['Book']	1	['audiobook']	2
+Reason	2	['Reason', 'War']	1	['arrest']	3
+Action	1	['Idea']	1	['mission']	2
+Argument	1	['Reason']	1	['argument']	2
+Character	1	['Story']	1	['tale']	2
+HistoricalEvent	1	['History']	1	['history']	2
+HistoricalPeriod	1	['History']	1	['period']	2
+Data	1	['Information']	1	['information']	2
+Document	1	['Year']	1	['introduction']	2
+Information	1	['Information']	1	['information']	2
+Process	2	['End', 'Part']	1	['process']	3
+Knowledge	1	['Information']	1	['knowledge']	2
+Medium	1	['Art']	1	['information']	2
+Person	1	['Party']	1	['state']	2
+Source	1	['Question']	1	['knowledge']	2
+Address	1	['Child']	1	['address']	2
+Gender	1	['People']	1	['baby']	2
+PostalAddress	1	['Place']	1	['church']	2
+Setting	1	['Story']	1	['tale']	2
+Story	1	['Story']	1	['tale']	2
+Theme	1	['Party']	1	['tale']	2
+Island	1	['World']	1	['island']	2
+Ocean	1	['World']	1	['coast']	2
+Population	1	['World']	1	['population']	2
+Religion	1	['World']	1	['pilgrimage']	2
+River	1	['World']	1	['river']	2
+Sea	1	['World']	1	['sea']	2
+World	1	['World']	1	['world']	2
+Father	2	['Father', 'Parent']	1	['birth']	3
+Individual	1	['Power']	1	['discrimination']	2
+RoomType	1	['Room']	1	['home']	2
+Recipient	1	['Water']	2	['aid', 'reward']	3
+Use	1	['Water']	1	['use']	2
+Water	1	['Water']	1	['water']	2
+WaterSource	1	['Water']	1	['water']	2
+Owner	1	['Business']	1	['home']	2
+Price	1	['Service']	1	['trade']	2
+Whole	1	['Part']	1	['portion']	2
+Power	1	['Power']	1	['hero']	2
+Actor	1	['War']	1	['film']	2
+Agent	1	['Idea']	1	['judge']	2
+Arm	2	['Body', 'Hand']	1	['body']	3
+Battle	1	['War']	1	['battle']	2
+Cause	1	['Problem']	1	['issue']	2
+Combatant	1	['War']	1	['battle']	2
+Change	2	['Change', 'Force']	1	['change']	3
+Nation	1	['War']	1	['nation']	2
+Outcome	1	['War']	1	['decision']	2
+Soldier	1	['War']	1	['soldier']	2
+War	1	['War']	1	['soldier']	2
+Weapon	1	['War']	1	['soldier']	2
+Study	1	['Study']	1	['study']	2
+DateTime	1	['Party']	1	['violence']	2
+Datetime	1	['Party']	1	['project']	2
+TimeInterval	1	['Time']	1	['end']	2
+Number	1	['Number']	1	['trading']	2
+Hardware	1	['System']	1	['system']	2
+Objective	1	['System']	1	['attempt']	2
+Software	1	['System']	1	['version']	2
+System	1	['System']	2	['principle', 'system']	3
+Birth	1	['Life']	1	['birth']	2
+Death	1	['Life']	1	['death']	2
+Environment	1	['Life']	1	['agent']	2
+Girl	1	['Girl']	1	['girl']	2
+Home	1	['Home']	1	['home']	2
+Resident	1	['Home']	1	['resident']	2
+Artist	1	['Art']	1	['artist']	2
+Artwork	1	['Art']	1	['art']	2
+Creator	1	['Idea']	1	['information']	2
+Painting	1	['Art']	1	['painting']	2
+Comment	1	['Community']	1	['issue']	2
+Community	1	['Community']	1	['community']	2
+ChangeType	1	['Change']	1	['change']	2
+Impact	1	['Problem']	1	['circumstance']	2
+Class	1	['Eye']	1	['punishment']	2
+Word	1	['Word']	1	['word']	2
+Destination	1	['Way']	1	['pilgrimage']	2
+Road	1	['Way']	1	['road']	2
+Customer	1	['Service']	1	['service']	2
+Market	1	['Business']	1	['trading']	2
+Supplier	1	['Business']	1	['supply']	2
+Context	1	['Problem']	1	['symbol']	2
+Effect	1	['Problem']	1	['effect']	2
+FacialFeature	1	['Face']	1	['face']	2
+Torso	1	['Body']	1	['body']	2
+Integer	1	['Party']	1	['state']	2
+Line	1	['Line']	1	['line']	2
+Item	1	['People']	2	['auction', 'collection']	3
+Book	1	['Book']	1	['isbn']	2
+Issue	1	['Issue']	2	['activism', 'issue']	3
+User	1	['Level']	1	['permission']	2
+Disease	1	['Eye']	1	['health']	2
+Doctor	1	['Health']	1	['doctor']	2
+Hospital	1	['Health']	1	['doctor']	2
+MedicalCondition	1	['Health']	1	['condition']	2
+Patient	1	['Health']	1	['health']	2
+Symptom	1	['Health']	1	['health']	2
+Treatment	1	['Eye']	1	['health']	2
+Classroom	1	['School']	1	['school']	2
+Response	1	['Question']	1	['suffering']	2
+Branch	1	['Government']	1	['branch']	2
+Government	1	['Government']	1	['politic']	2
+Official	1	['Government']	1	['official']	2
+PoliticalParty	1	['Government']	1	['politician']	2
+Politician	1	['Government']	1	['politician']	2
+Force	1	['Force']	1	['force']	2
+Injury	1	['Back']	1	['injury']	2
+Pain	1	['Back']	1	['pain']	2
+String	1	['Right']	1	['struggle']	2
+Authority	1	['Right']	1	['punishment']	2
+LegalRight	1	['Right']	1	['right']	2
+LegalSystem	1	['Right']	1	['justice']	2
+Right	1	['Right']	1	['right']	2
+End	1	['End']	1	['end']	2
+Project	1	['Team']	1	['project']	2
+Degree	1	['Teacher']	1	['teacher']	2
+Course	1	['Teacher']	1	['student']	2
+EducationalInstitution	1	['Education']	1	['ed']	2
+Consumer	1	['Service']	1	['service']	2
+ServiceProvider	1	['Service']	1	['service']	2
+Organisation	1	['Member']	1	['activist']	2
+Level	1	['Level']	2	['independence', 'level']	3
+Idea	1	['Idea']	1	['idea']	2
+Shape	1	['Eye']	1	['eye']	2
+Auction	1	['Lot']	1	['auction']	2
+Guest	1	['Party']	1	['wedding']	2

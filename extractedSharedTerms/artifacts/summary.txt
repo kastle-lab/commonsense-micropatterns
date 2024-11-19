@@ -3,13 +3,13 @@ Totals:
      CS-MODL Shared Class Terms: 813
           * these class terms exist in more than one cs-modl pattern
 
-     CS-MODL Unique Class Terms: 1579
+     CS-MODL Unique Class Terms: 1582
           * this is the total count of unique class terms in all cs-modl patterns
 
      CS-MODL Shared Property Terms: 2052
           * these property terms exist in more than one cs-modl pattern
 
-     CS-MODL Unique Property Terms: 3369
+     CS-MODL Unique Property Terms: 3380
           * this is the total count of unique property terms in all cs-modl patterns
 
 == Enslaved-MODL ==

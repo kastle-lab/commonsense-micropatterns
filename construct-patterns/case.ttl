@@ -1,0 +1,47 @@
+@prefix ex: <http://example.org/case#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+ex:Case a rdfs:Class ;
+    rdfs:label "Case" ;
+    rdfs:comment "A situation, example or legal matter to be considered or acted upon.".
+ex:LegalCase a rdfs:Class ;
+    rdfs:subClassOf ex:Case ;
+    rdfs:label "Legal Case" ;
+    rdfs:comment "A legal proceeding or matter that involves a court of law.".
+ex:UsageCase a rdfs:Class ;
+    rdfs:subClassOf ex:Case ;
+    rdfs:label "Usage Case" ;
+    rdfs:comment "A scenario involving the use or application of something.".
+ex:MedicalCase a rdfs:Class ;
+    rdfs:subClassOf ex:Case ;
+    rdfs:label "Medical Case" ;
+    rdfs:comment "A set of circumstances or a particular instance of a disease or condition.".
+ex:CaseStatus a rdfs:Class ;
+    rdfs:label "Case Status" ;
+    rdfs:comment "The current state or condition of a case.".
+ex:isPartOf a rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range ex:Case ;
+    rdfs:label "is part of" ;
+    rdfs:comment "Indicates that a case is part of another case.".
+ex:hasStatus a rdf:Property ;
+    rdfs:domain ex:Case ;
+    rdfs:range ex:CaseStatus ;
+    rdfs:label "has status" ;
+    rdfs:comment "Indicates the current status of a case.".
+ex:Open a ex:CaseStatus ;
+    rdfs:label "Open" ;
+    rdfs:comment "A case that is currently active and has not yet been resolved or closed.".
+ex:Closed a ex:CaseStatus ;
+    rdfs:label "Closed" ;
+    rdfs:comment "A case that has been resolved or finished.".
+ex:Plaintiff a rdf:Property ;
+    rdfs:domain ex:LegalCase ;
+    rdfs:range rdf:Resource ;
+    rdfs:label "plaintiff" ;
+    rdfs:comment "The individual or party who initiates a lawsuit.".
+ex:Defendant a rdf:Property ;
+    rdfs:domain ex:LegalCase ;
+    rdfs:range rdf:Resource ;
+    rdfs:label "defendant" ;
+    rdfs:comment "The individual or party against whom a lawsuit is brought.".
