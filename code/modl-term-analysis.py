@@ -33,15 +33,16 @@ pfs = {
 "time": TIME
 }
 
+# URIs of Class Representation
+classURIs = [URIRef("http://www.w3.org/2002/07/owl#Class"),
+            URIRef('http://www.w3.org/2000/01/rdf-schema#Class')]
+
+# URIs of Relationship/Property Representation
 propURIs = [
     pfs["rdf"]["Property"],
     pfs["owl"]["ObjectProperty"],
     pfs["owl"]["DatatypeProperty"]
 ]
-
-classURIs = [URIRef("http://www.w3.org/2002/07/owl#Class"),
-            URIRef('http://www.w3.org/2000/01/rdf-schema#Class')]
-
 def process_rdf_file(directory):
     '''
         Processes a directory of TTL files with RDFLib Graph
@@ -65,7 +66,7 @@ def process_rdf_file(directory):
 
             for s, p, o in g.triples((None, RDF.type, None)):
                 # entered = False #debug
-                if o in classURIs:
+                if o in classURIs: # Class Representation was found
                     # entered = True
                     term = s.split('/')[-1]
                     term = term.split("#")[-1]
@@ -80,7 +81,7 @@ def process_rdf_file(directory):
                                 classTerms[i] = f"{term}\t{filename}\t{count}"
                                 break
 
-                elif o in propURIs:
+                elif o in propURIs: # Relationship/Property Representation was found
                     # entered = True
                     property = s.split('/')[-1]
                     property = property.split("#")[-1]
@@ -94,6 +95,10 @@ def process_rdf_file(directory):
                                 count += 1
                                 propTerms[i] = f"{property}\t{filename}\t{count}"
                                 break
+
+                # Other Types that can be found include:
+                # - Instantiation:  some thing is of type ClassA)
+                # - Ontology Representation
                 # if(not entered):
                 #     if(o == URIRef("http://www.w3.org/2002/07/owl#Ontology")):
                 #         continue
@@ -218,6 +223,7 @@ print(f"shared propTermCounts: {len(keynotionsd_sharedProps)}")
 print(f"uniquePropTerms: {len(keynotions_uniquePropTerms)}")
 print("")
 
+##### End of MODL file parsing #####
 # csmodl union enslavedmodl
 # Initialize lists to store shared terms
 shared_classTerms = []
@@ -285,6 +291,7 @@ print(f"MODLs Props: {len(modl_propTerms)}")
 print(f"KN Props: {len(keynotions_PropTerms)}")
 print(f"Intersection: {len(prop_intersect)}")
 
+# Write intersection between MODL and Key Notions into file
 with(open(os.path.join(f"{output_folder}/modls-with-kn", "modl-kn-intersect-classes.out"), "w")) as out:
     for i in class_intersect:
         out.write(f"{i}\n")
