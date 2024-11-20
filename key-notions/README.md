@@ -23,7 +23,7 @@ Key Notions Overlap for CSMODL:
 * time
 * hour
 
-Key Notions Overlap for Enslaved:
+Key Notions Overlap for Enslaved-MODL:
 * judge
 * name
 * cause

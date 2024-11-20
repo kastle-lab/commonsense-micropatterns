@@ -59,8 +59,6 @@ def process_rdf_file(directory):
         file_path = os.path.join(directory, filename)
      
         if os.path.isfile(file_path):
-
-            
             g = Graph()
             g.parse(file_path, format='turtle')  # Adjust format as needed
 
@@ -96,6 +94,23 @@ def process_rdf_file(directory):
                                 propTerms[i] = f"{property}\t{filename}\t{count}"
                                 break
 
+            ##  Occasionally, LLM materialization resulted in identifying a SCO
+            ##  without initializing the object as a Class first (see: cs-modl/Story.ttl)
+            for s, p, o in g.triples((None, URIRef('http://www.w3.org/2000/01/rdf-schema#subClassOf'), None)):
+                    term = o.split('/')[-1]
+                    term = term.split("#")[-1]
+                    if term not in uniqueClassTerms:
+                        # print(f"Object as SCO in {filename}:")
+                        # print(f"{s}\t{o}")
+                        classTerms.append(f"{term}\t{filename}\t{1}")
+                        uniqueClassTerms.append(term)
+                    else:
+                        for i in range(len(classTerms)):
+                            if term in classTerms[i]:
+                                count = int(classTerms[i].split("\t")[2])
+                                count += 1
+                                classTerms[i] = f"{term}\t{filename}\t{count}"
+                                break
                 # Other Types that can be found include:
                 # - Instantiation:  some thing is of type ClassA)
                 # - Ontology Representation
@@ -197,6 +212,7 @@ print(f"shared classTermCounts: {len(csmodl_sharedClass)}")
 print(f"uniqueClassTerms: {len(csmodl_uniqueClassTerms)}")
 print(f"shared propTermCounts: {len(csmodl_sharedProps)}")
 print(f"uniquePropTerms: {len(csmodl_uniquePropTerms)}")
+print("")
 
 ##  Enslaved MODL Analysis
 enslaved_ClassTerms, enslaved_uniqueClassTerms, enslaved_PropTerms, enslaved_uniquePropTerms = process_rdf_file(enslaved_patterns_folder)
@@ -209,6 +225,7 @@ print(f"shared classTermCounts: {len(enslaved_sharedClasses)}")
 print(f"uniqueClassTerms: {len(enslaved_uniqueClassTerms)}")
 print(f"shared propTermCounts: {len(enslaved_sharedProps)}")
 print(f"uniquePropTerms: {len(enslaved_uniquePropTerms)}")
+print("")
 
 ##  Key-Notions from CQs Analysis
 keynotions_ClassTerms, keynotions_uniqueClassTerms, keynotions_PropTerms, keynotions_uniquePropTerms = process_rdf_file(keynotions_patterns_folder)
