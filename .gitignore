@@ -201,3 +201,7 @@ cython_debug/
 #.idea/
 
 *.code-workspace
+
+
+# sk
+key-notions/jupyter-notebooks/sk.txt
