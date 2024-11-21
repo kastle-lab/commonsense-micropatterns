@@ -1,121 +1,131 @@
-Researcher	researcher.ttl	1
-FieldOfExpertise	researcher.ttl	1
-Institution	institution.ttl	6
-Publication	researcher.ttl	1
-ResearchGroup	researcher.ttl	1
-Land	land.ttl	3
-NaturalLandform	land.ttl	5
-ManMadeLandform	land.ttl	4
-Continent	land.ttl	1
-Island	land.ttl	1
-Mountain	place.ttl	2
-Plain	land.ttl	1
-UrbanArea	land.ttl	1
-AgriculturalLand	land.ttl	1
-Road	land.ttl	1
-Fire	fire.ttl	1
-Fuel	fire.ttl	1
-Oxygen	fire.ttl	1
-Heat	fire.ttl	1
-Smoke	fire.ttl	1
-FireTriangle	fire.ttl	1
-Flame	fire.ttl	1
-nec08b2cb783b4ec88ae473952664602fb1	fire.ttl	1
-Time	event.ttl	4
-Instant	time.ttl	1
-Interval	time.ttl	1
-Duration	time.ttl	1
-CausalAgent	cause.ttl	1
-Effect	cause.ttl	1
-Cause	cause.ttl	2
-CausalRelationship	cause.ttl	1
-University	institution.ttl	1
-College	institution.ttl	1
-ResearchInstitute	institution.ttl	1
-School	institution.ttl	1
-Department	institution.ttl	1
-Location	event.ttl	2
-Organization	institution.ttl	1
-Student	institution.ttl	1
-FacultyMember	institution.ttl	1
-Case	case.ttl	4
-LegalCase	judge.ttl	2
-UsageCase	case.ttl	1
-MedicalCase	case.ttl	1
-CaseStatus	case.ttl	1
-Condition	condition.ttl	4
-MedicalCondition	condition.ttl	1
-EnvironmentalCondition	condition.ttl	2
-WeatherCondition	region.ttl	2
-Material	material.ttl	5
-SeverityLevel	condition.ttl	4
-Mild	condition.ttl	1
-Moderate	condition.ttl	1
-Severe	condition.ttl	1
-Event	event.ttl	1
-Person	interest.ttl	3
-Region	region.ttl	5
-Country	place.ttl	2
-State	region.ttl	1
-City	place.ttl	2
-Province	region.ttl	1
-Boundary	region.ttl	1
-Name	name.ttl	4
-FirstName	name.ttl	1
-LastName	name.ttl	1
-Alias	name.ttl	1
-Language	language.ttl	3
-NaturalLanguage	language.ttl	1
-ProgrammingLanguage	language.ttl	1
-LanguageFamily	language.ttl	1
-Dialect	language.ttl	1
-Syntax	language.ttl	1
-Semantics	language.ttl	1
-Cost	cost.ttl	6
-FixedCost	cost.ttl	1
-VariableCost	cost.ttl	1
-SunkCost	cost.ttl	1
-DirectCost	cost.ttl	1
-IndirectCost	cost.ttl	1
-Entity	cost.ttl	1
-Library	library.ttl	1
-Book	library.ttl	1
-Journal	library.ttl	1
-Member	library.ttl	1
-Author	library.ttl	1
-Librarian	library.ttl	1
-Place	place.ttl	7
-Town	place.ttl	1
-Village	place.ttl	1
-River	place.ttl	1
-Service	service.ttl	1
-Provider	service.ttl	1
-Customer	service.ttl	1
-ServiceCategory	service.ttl	1
-Interest	interest.ttl	1
-Topic	interest.ttl	1
-InterestLevel	interest.ttl	1
-Hour	hour.ttl	1
-Day	hour.ttl	1
-TimeOfDay	hour.ttl	5
-Morning	hour.ttl	1
-Afternoon	hour.ttl	1
-Evening	hour.ttl	1
-Night	hour.ttl	1
-Material	material.ttl	1
-Metal	material.ttl	4
-NonMetal	material.ttl	3
-Polymer	material.ttl	3
-Composite	material.ttl	3
-Iron	material.ttl	1
-Aluminium	material.ttl	1
-Copper	material.ttl	1
-Wood	material.ttl	1
-Ceramic	material.ttl	1
-Thermoplastic	material.ttl	1
-Thermosetting	material.ttl	1
-FiberReinforced	material.ttl	1
-ParticleReinforced	material.ttl	1
-Judge	judge.ttl	1
-Court	judge.ttl	1
-Hearing	judge.ttl	1
+Researcher	researcher.ttl
+FieldOfExpertise	researcher.ttl
+Institution	researcher.ttl
+Publication	researcher.ttl
+ResearchGroup	researcher.ttl
+Land	land.ttl
+NaturalLandform	land.ttl
+ManMadeLandform	land.ttl
+Continent	land.ttl
+Island	land.ttl
+Mountain	land.ttl
+Plain	land.ttl
+UrbanArea	land.ttl
+AgriculturalLand	land.ttl
+Road	land.ttl
+Fire	fire.ttl
+Fuel	fire.ttl
+Oxygen	fire.ttl
+Heat	fire.ttl
+Smoke	fire.ttl
+FireTriangle	fire.ttl
+Flame	fire.ttl
+nb96684675b47470a8cc59e92c6bc7cf1b1	fire.ttl
+Time	time.ttl
+Instant	time.ttl
+Interval	time.ttl
+Duration	time.ttl
+CausalAgent	cause.ttl
+Effect	cause.ttl
+Cause	cause.ttl
+CausalRelationship	cause.ttl
+Institution	institution.ttl
+University	institution.ttl
+College	institution.ttl
+ResearchInstitute	institution.ttl
+School	institution.ttl
+Department	institution.ttl
+Location	institution.ttl
+Organization	institution.ttl
+Student	institution.ttl
+FacultyMember	institution.ttl
+Case	case.ttl
+LegalCase	case.ttl
+UsageCase	case.ttl
+MedicalCase	case.ttl
+CaseStatus	case.ttl
+Condition	condition.ttl
+MedicalCondition	condition.ttl
+EnvironmentalCondition	condition.ttl
+WeatherCondition	condition.ttl
+MaterialCondition	condition.ttl
+SeverityLevel	condition.ttl
+Mild	condition.ttl
+Moderate	condition.ttl
+Severe	condition.ttl
+Event	event.ttl
+Location	event.ttl
+Time	event.ttl
+Person	event.ttl
+Region	region.ttl
+Country	region.ttl
+State	region.ttl
+City	region.ttl
+Province	region.ttl
+Boundary	region.ttl
+WeatherCondition	region.ttl
+Name	name.ttl
+Person	name.ttl
+FirstName	name.ttl
+LastName	name.ttl
+Alias	name.ttl
+Language	language.ttl
+NaturalLanguage	language.ttl
+ProgrammingLanguage	language.ttl
+LanguageFamily	language.ttl
+Dialect	language.ttl
+Syntax	language.ttl
+Semantics	language.ttl
+Cost	cost.ttl
+FixedCost	cost.ttl
+VariableCost	cost.ttl
+SunkCost	cost.ttl
+DirectCost	cost.ttl
+IndirectCost	cost.ttl
+Entity	cost.ttl
+Library	library.ttl
+Book	library.ttl
+Journal	library.ttl
+Member	library.ttl
+Author	library.ttl
+Librarian	library.ttl
+Place	place.ttl
+Country	place.ttl
+City	place.ttl
+Town	place.ttl
+Village	place.ttl
+Mountain	place.ttl
+River	place.ttl
+Service	service.ttl
+Provider	service.ttl
+Customer	service.ttl
+ServiceCategory	service.ttl
+Interest	interest.ttl
+Person	interest.ttl
+Topic	interest.ttl
+InterestLevel	interest.ttl
+Hour	hour.ttl
+Day	hour.ttl
+TimeOfDay	hour.ttl
+Morning	hour.ttl
+Afternoon	hour.ttl
+Evening	hour.ttl
+Night	hour.ttl
+Material	material.ttl
+Metal	material.ttl
+NonMetal	material.ttl
+Polymer	material.ttl
+Composite	material.ttl
+Iron	material.ttl
+Aluminium	material.ttl
+Copper	material.ttl
+Wood	material.ttl
+Ceramic	material.ttl
+Thermoplastic	material.ttl
+Thermosetting	material.ttl
+FiberReinforced	material.ttl
+ParticleReinforced	material.ttl
+Judge	judge.ttl
+Court	judge.ttl
+LegalCase	judge.ttl
+Hearing	judge.ttl

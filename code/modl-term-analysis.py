@@ -54,7 +54,8 @@ def process_rdf_file(directory):
     propTerms = []
     uniquePropTerms = []
 
-
+    # filename="Issue.ttl"
+    # for i in range(1):
     for filename in os.listdir(directory):
         file_path = os.path.join(directory, filename)
      
@@ -69,14 +70,12 @@ def process_rdf_file(directory):
                     term = s.split('/')[-1]
                     term = term.split("#")[-1]
                     if term not in uniqueClassTerms:
-                        classTerms.append(f"{term}\t{filename}\t{1}")
+                        classTerms.append(f"{term}\t{filename}")
                         uniqueClassTerms.append(term)
                     else:
                         for i in range(len(classTerms)):
-                            if term in classTerms[i]:
-                                count = int(classTerms[i].split("\t")[2])
-                                count += 1
-                                classTerms[i] = f"{term}\t{filename}\t{count}"
+                            if f"{term}\t{filename}" not in classTerms:
+                                classTerms.append(f"{term}\t{filename}")
                                 break
 
                 elif o in propURIs: # Relationship/Property Representation was found
@@ -84,14 +83,12 @@ def process_rdf_file(directory):
                     property = s.split('/')[-1]
                     property = property.split("#")[-1]
                     if property not in uniquePropTerms:
-                        propTerms.append(f"{property}\t{filename}\t{1}")
+                        propTerms.append(f"{property}\t{filename}")
                         uniquePropTerms.append(property)
                     else:
                         for i in range(len(propTerms)):
-                            if property in propTerms[i]:
-                                count = int(propTerms[i].split("\t")[2])
-                                count += 1
-                                propTerms[i] = f"{property}\t{filename}\t{count}"
+                            if f"{property}\t{filename}" not in classTerms:
+                                propTerms.append(f"{property}\t{filename}")
                                 break
 
             ##  Occasionally, LLM materialization resulted in identifying a SCO
@@ -102,14 +99,13 @@ def process_rdf_file(directory):
                     if term not in uniqueClassTerms:
                         # print(f"Object as SCO in {filename}:")
                         # print(f"{s}\t{o}")
-                        classTerms.append(f"{term}\t{filename}\t{1}")
+                        classTerms.append(f"{term}\t{filename}")
                         uniqueClassTerms.append(term)
                     else:
                         for i in range(len(classTerms)):
-                            if term in classTerms[i]:
-                                count = int(classTerms[i].split("\t")[2])
-                                count += 1
-                                classTerms[i] = f"{term}\t{filename}\t{count}"
+                            if f"{term}\t{filename}" not in classTerms:
+                            # if term in classTerms[i] and filename not in classTerms[i]:
+                                classTerms.append(f"{term}\t{filename}")
                                 break
                 # Other Types that can be found include:
                 # - Instantiation:  some thing is of type ClassA)

@@ -1,2053 +1,3380 @@
-color	Eye.ttl	8
-dimension	Door.ttl	1
-y	Line.ttl	2
-hasColor	Eye.ttl	11
-hasDimension	Couch.ttl	4
-hasHandle	Door.ttl	1
-hasHeight	Health.ttl	5
-hasLock	Door.ttl	1
-hasMaterial	Couch.ttl	7
-hasSecurityLevel	Door.ttl	1
-id	Lot.ttl	9
-isAccessTo	Door.ttl	1
-isBarrier	Door.ttl	1
-isClosed	Door.ttl	1
-isEntranceTo	Door.ttl	1
-isLocked	Door.ttl	1
-isMadeOf	Thing.ttl	2
-isOpen	Issue.ttl	3
-isOpenedBy	Door.ttl	1
-locatedIn	Team.ttl	13
-lockType	Door.ttl	1
-madeOf	Art.ttl	3
-manufacturer	Car.ttl	7
-material	Couch.ttl	7
-belongs	Government.ttl	2
-belongsTo	Lot.ttl	17
-bornOn	President.ttl	1
-country	Government.ttl	6
-countryServed	President.ttl	1
-end	Time.ttl	7
-endOfPresidency	President.ttl	1
-firstLady	President.ttl	1
-hasAfter	President.ttl	1
-hasBeenPresident	President.ttl	1
-hasBefore	President.ttl	1
-hasContinent	World.ttl	2
-hasCountry	Lot.ttl	4
-hasEnd	End.ttl	7
-hasFirstName	Child.ttl	8
-hasLastName	Child.ttl	8
-hasName	Party.ttl	60
-hasNationality	People.ttl	5
-hasPopulation	State.ttl	6
-hasPresidency	President.ttl	1
-hasPresident	President.ttl	1
-hasStart	Line.ttl	3
-hasTerm	President.ttl	1
-hasTermEnd	President.ttl	1
-hasTermPeriod	President.ttl	1
-hasTermStart	President.ttl	1
-inOfficeSince	President.ttl	1
-inaugurationDate	President.ttl	1
-isPresidentOf	President.ttl	1
-predecessor	President.ttl	1
-presidencyTerm	President.ttl	1
-presidentOf	Government.ttl	2
-presidesOver	President.ttl	1
-servedAs	President.ttl	1
-servedAsPresident	President.ttl	1
-servedFrom	President.ttl	1
-servedUntil	President.ttl	1
-servesAs	President.ttl	1
-servesAsPresident	President.ttl	1
-servesIn	President.ttl	1
-startDate	Team.ttl	10
-startOfPresidency	President.ttl	1
-successor	President.ttl	1
-termEnd	President.ttl	1
-termStart	President.ttl	1
-wasAffiliatedTo	President.ttl	1
-wasBornIn	President.ttl	1
-wasBornOn	President.ttl	1
-age	Party.ttl	18
-attends	Education.ttl	6
-description	Idea.ttl	17
-gender	Child.ttl	8
-groupName	Member.ttl	3
-hasAge	Teacher.ttl	26
-hasAttribute	Others.ttl	1
-hasLocation	Party.ttl	24
-hasManufacturer	Car.ttl	6
-hasOccupation	Work.ttl	8
-hasParameter	Others.ttl	1
-hasRelationshipWith	Others.ttl	1
-hasShape	Eye.ttl	4
-hasSpecies	Life.ttl	2
-id	Others.ttl	1
-interactsWith	System.ttl	2
-isConsideredOther	Others.ttl	1
-isProvided	Others.ttl	1
-livesIn	People.ttl	7
-location	Party.ttl	16
-member	Party.ttl	6
-name	Party.ttl	50
-othersAddress	Others.ttl	1
-othersAge	Others.ttl	1
-othersGender	Others.ttl	1
-othersName	Others.ttl	1
-othersNationality	Others.ttl	1
-othersOccupation	Others.ttl	1
-provide	Party.ttl	13
-relatedTo	Side.ttl	4
-species	Others.ttl	1
-attendance	Student.ttl	1
-attendsCourse	Education.ttl	2
-attendsUniversity	Student.ttl	1
-course	Student.ttl	1
-courseCode	Education.ttl	2
-courseCredit	Student.ttl	1
-courseName	School.ttl	2
-courseNumber	Student.ttl	1
-courseTitle	Student.ttl	1
-enrolledAt	Student.ttl	1
-enrolledIn	Education.ttl	5
-enrollmentYear	Student.ttl	1
-enrollsIn	Student.ttl	1
-firstName	Team.ttl	8
-grade	School.ttl	2
-hasCourse	Education.ttl	4
-hasCourseTitle	Student.ttl	1
-hasGrade	Education.ttl	5
-hasID	Teacher.ttl	6
-hasMajor	Student.ttl	1
-hasMatriculationID	Student.ttl	1
-hasMinor	Student.ttl	1
-hasStudent	Teacher.ttl	5
-hasUniversityName	Student.ttl	1
-isEnrolledIn	School.ttl	4
-isEnrolledInCourse	Student.ttl	1
-isFullTime	Work.ttl	3
-isGraduateStudent	Student.ttl	1
-lastName	Team.ttl	8
-major	Student.ttl	1
-stud_id	Student.ttl	1
-studies	Education.ttl	5
-studiesAt	Education.ttl	4
-studiesCourse	Student.ttl	1
-studiesIn	Student.ttl	1
-studiesSubject	Education.ttl	2
-takes	School.ttl	2
-takesCourseFrom	Student.ttl	1
-teaches	Teacher.ttl	7
-year	Car.ttl	3
-brand	Couch.ttl	3
-depth	Couch.ttl	3
-hasColour	Chair.ttl	3
-hasDimensions	Couch.ttl	2
-hasSize	Lot.ttl	11
-hasStyle	Art.ttl	6
-hasUpholstery	Couch.ttl	2
-height	Man.ttl	3
-isPartOf	Eye.ttl	24
-isUpholstered	Couch.ttl	2
-isUsedIn	Power.ttl	2
-isUsedOutdoors	Loveseat.ttl	1
-materialUsed	Loveseat.ttl	1
-price	Lot.ttl	5
-city	Party.ttl	5
-size	Lot.ttl	9
-width	Couch.ttl	3
-hasDuration	Service.ttl	9
-hasMinute	Time.ttl	3
-hasMinutes	Day.ttl	3
-hasNumber	Level.ttl	6
-hasNumberOfMinutes	Hour.ttl	2
-hasNumberOfSeconds	Minute.ttl	1
-hasNumericValue	Minute.ttl	1
-hasSecond	Time.ttl	3
-hasTemporalDuration	Hour.ttl	2
-hasUnit	Force.ttl	5
-isEquivalentTo	Minute.ttl	1
-isMinuteIn	Minute.ttl	1
-minuteInHour	Minute.ttl	1
-minuteInTime	Minute.ttl	1
-numericDuration	Minute.ttl	1
-ofHour	Minute.ttl	1
-partOf	Hand.ttl	7
-secondInMinute	Minute.ttl	1
-secondInTime	Minute.ttl	1
-unit	Power.ttl	2
-address	Party.ttl	9
-belongsToOffice	Office.ttl	1
-computerOn	Office.ttl	1
-departmentName	Office.ttl	1
-departmentResponsibility	Office.ttl	1
-deskIn	Office.ttl	1
-email	Member.ttl	3
-employee	Work.ttl	3
-employeeRole	Office.ttl	1
-employees	Office.ttl	1
-hasChair	Office.ttl	1
-hasComputer	Office.ttl	1
-hasDepartment	Government.ttl	4
-hasDesk	Office.ttl	1
-hasEmployee	Work.ttl	4
-hasEquipment	Office.ttl	1
-hasFurniture	Home.ttl	3
-hasOffice	Office.ttl	1
-hasOfficeEquipment	Office.ttl	1
-hasOfficeNumber	Office.ttl	1
-hasRole	Team.ttl	6
-hasRoom	Home.ttl	4
-hasStaffMember	Office.ttl	1
-hasWorkstation	Office.ttl	1
-inCharge	Office.ttl	1
-includes	Morning.ttl	2
-isOccupied	House.ttl	2
-isPartOf	Office.ttl	1
-leadsDepartment	Office.ttl	1
-manages	Health.ttl	2
-number	Year.ttl	2
-officeID	Office.ttl	1
-officeManager	Office.ttl	1
-officeNumber	Office.ttl	1
-officeSize	Office.ttl	1
-partOf	Office.ttl	1
-performTask	Office.ttl	1
-phoneNumber	Office.ttl	1
-staffName	Office.ttl	1
-staffRole	Office.ttl	1
-useFurniture	Office.ttl	1
-uses	Service.ttl	5
-usesChair	Office.ttl	1
-usesDesk	Office.ttl	1
-usesEquipment	Office.ttl	1
-worksAt	Teacher.ttl	6
-worksIn	Teacher.ttl	5
-worksInDepartment	Office.ttl	1
-applies	Law.ttl	1
-appliesIn	Law.ttl	1
-appliesTo	Law.ttl	1
-author	Book.ttl	4
-correspondsTo	Law.ttl	1
-decides	Law.ttl	1
-defendedIn	Law.ttl	1
-enactedDate	Law.ttl	1
-enforces	Law.ttl	1
-follows	Morning.ttl	2
-handles	Case.ttl	2
-happensInJurisdiction	Law.ttl	1
-hasArticle	Law.ttl	1
-hasCase	Law.ttl	1
-hasCaseNumber	Case.ttl	2
-hasCitation	Law.ttl	1
-hasConstitution	Law.ttl	1
-hasCourt	Law.ttl	1
-hasEffectiveDate	Law.ttl	1
-hasEnactingBody	Law.ttl	1
-x	Line.ttl	2
-hasId	Issue.ttl	5
-hasJurisdiction	Law.ttl	1
-hasLawNumber	Law.ttl	1
-hasLegalIssue	Law.ttl	1
-hasRepresented	Law.ttl	1
-hasStatus	Issue.ttl	3
-hasStatute	Law.ttl	1
-hasText	Question.ttl	2
-hasTitle	Idea.ttl	15
-hasY	Line.ttl	4
-hasYear	Car.ttl	2
-involves	War.ttl	4
-isApplicableTo	Law.ttl	1
-isEnforcedBy	Right.ttl	2
-isRatifiedBy	Law.ttl	1
-isSpecializedIn	Law.ttl	1
-judgedIn	Law.ttl	1
-judges	Law.ttl	1
-juridiction	Law.ttl	1
-lawSpeciality	Law.ttl	1
-passedBy	Law.ttl	1
-practice	Law.ttl	1
-practices	Law.ttl	1
-practicesIn	Law.ttl	1
-practicesLaw	Law.ttl	1
-represents	Law.ttl	1
-title	Work.ttl	13
-activities	Night.ttl	1
-conceptOfNight	Night.ttl	1
-duration	Time.ttl	4
-end	Night.ttl	1
-endTime	Service.ttl	7
-endsAt	War.ttl	4
-experiences	Night.ttl	1
-hasActivity	Community.ttl	4
-hasAurora	Night.ttl	1
-hasDarkness	Night.ttl	1
-hasEnd	Night.ttl	1
-hasEndHour	Night.ttl	1
-hasEndTime	End.ttl	11
-hasInSky	Night.ttl	1
-hasLength	Side.ttl	6
-hasMoon	Night.ttl	1
-hasMoonPhase	Night.ttl	1
-hasNight	Day.ttl	2
-hasStar	Night.ttl	1
-hasStarVisibility	Night.ttl	1
-hasStarsVisible	Night.ttl	1
-hasStart	Night.ttl	1
-hasStartHour	Night.ttl	1
-hasStartTime	Work.ttl	10
-hasTemperature	Day.ttl	4
-hasWeather	Day.ttl	2
-isAstronomicalNight	Night.ttl	1
-isDark	Night.ttl	1
-isFollowedBy	Night.ttl	1
-isIlluminatedBy	Night.ttl	1
-isNightOf	Night.ttl	1
-isPartOfDay	Hour.ttl	3
-isPresentDuring	Night.ttl	1
-isQuiet	Night.ttl	1
-moonPhase	Night.ttl	1
-nightSky	Night.ttl	1
-observe	Night.ttl	1
-observing	Night.ttl	1
-sleeping	Night.ttl	1
-start	Night.ttl	1
-startTime	Service.ttl	7
-startsAt	Day.ttl	3
-visibleDuring	Night.ttl	1
-weather	Night.ttl	1
-date	Party.ttl	5
-eventDescription	Moment.ttl	1
-fromEvent	Moment.ttl	1
-hasBegin	Moment.ttl	1
-hasBeginning	Life.ttl	3
-hasDate	Party.ttl	10
-hasDateTime	Party.ttl	3
-hasDescription	Idea.ttl	13
-hasEvent	Party.ttl	7
-hasInstant	Moment.ttl	1
-hasMoment	Moment.ttl	1
-hasMomentProperty	Moment.ttl	1
-hasPeriod	Art.ttl	3
-hasTime	Party.ttl	8
-hasTimeInstant	Moment.ttl	1
-inLocation	Moment.ttl	1
-inTime	Moment.ttl	1
-isAfter	Moment.ttl	1
-isMomentOf	Moment.ttl	1
-isPriorTo	Moment.ttl	1
-periodEnd	Art.ttl	2
-periodStart	Art.ttl	2
-time	Morning.ttl	2
-assignedTo	Issue.ttl	2
-associatedWith	Level.ttl	4
-caseDescription	Case.ttl	1
-caseId	Case.ttl	1
-caseNumber	Case.ttl	1
-caseStatus	Case.ttl	1
-caseTitle	Case.ttl	1
-caseType	Case.ttl	1
-creationDate	Art.ttl	4
-dateClosed	Case.ttl	1
-dateOpened	Case.ttl	1
-hasCaseDate	Case.ttl	1
-hasCaseDescription	Case.ttl	1
-hasCaseID	Case.ttl	1
-hasCaseId	Case.ttl	1
-hasCaseName	Case.ttl	1
-hasCaseStatus	Case.ttl	1
-hasCaseTitle	Case.ttl	1
-hasCaseType	Case.ttl	1
-hasDateOpened	Case.ttl	1
-hasDefendant	Case.ttl	1
-hasEndDate	End.ttl	8
-hasEntityRole	Case.ttl	1
-hasJudge	Case.ttl	1
-hasLawyer	Case.ttl	1
-hasPart	Eye.ttl	15
-hasParty	Case.ttl	1
-hasPlaintiff	Case.ttl	1
-hasRelatedCase	Case.ttl	1
-hasStartDate	Work.ttl	7
-hasSubject	Teacher.ttl	7
-investigation	Case.ttl	1
-investigationEndDate	Case.ttl	1
-investigationStartDate	Case.ttl	1
-investigator	Case.ttl	1
-involvedParties	Case.ttl	1
-isRelatedTo	Lot.ttl	4
-judge	Case.ttl	1
-lawyerName	Case.ttl	1
-personName	Issue.ttl	4
-representedIn	Case.ttl	1
-status	Issue.ttl	2
-eyeCount	Head.ttl	1
-hasEar	Head.ttl	1
-hasEars	Head.ttl	1
-hasEye	Eye.ttl	3
-hasEyeColor	Head.ttl	1
-hasEyes	Face.ttl	2
-hasFace	Face.ttl	2
-hasForehead	Head.ttl	1
-hasHair	Head.ttl	1
-hasHairColor	Girl.ttl	2
-hasHead	Government.ttl	3
-hasMouth	Face.ttl	2
-hasNose	Face.ttl	2
-hasPart	Head.ttl	1
-hasSensoryOrgan	Head.ttl	1
-hasSkin	Hand.ttl	3
-hasDepth	Chair.ttl	2
-hasPrice	Lot.ttl	10
-hasWeight	Health.ttl	3
-amount	Power.ttl	2
-code	Program.ttl	2
-coinValue	Money.ttl	1
-country	Money.ttl	1
-currency	Country.ttl	2
-dateIssued	Money.ttl	1
-denomination	Money.ttl	1
-hasAmount	Money.ttl	1
-hasCurrency	Country.ttl	2
-hasCurrencyCode	Money.ttl	1
-hasDenomination	Money.ttl	1
-hasValue	Result.ttl	7
-isCurrencyOf	Money.ttl	1
-isLegalTender	Money.ttl	1
-isLegalTenderIn	Money.ttl	1
-issuer	Money.ttl	1
-noteValue	Money.ttl	1
-pays	Money.ttl	1
-performsTransaction	Money.ttl	1
-transfers	Money.ttl	1
-value	Number.ttl	3
-example	Kind.ttl	1
-hasCategory	Question.ttl	2
-hasCharacter	Story.ttl	2
-hasExample	Kind.ttl	1
-hasInstances	Kind.ttl	1
-hasKind	Kind.ttl	1
-hasProperty	Thing.ttl	2
-hasQuality	Air.ttl	2
-hasSubKind	Kind.ttl	1
-hasSuperKind	Kind.ttl	1
-hasType	Service.ttl	11
-isKindOf	Kind.ttl	1
-provide	Kind.ttl	1
-studiesFrom	Kind.ttl	1
-understandOtherKind	Kind.ttl	1
-attendsSchool	Child.ttl	3
-goesToSchool	Kid.ttl	1
-grade	Kid.ttl	1
-guardian	Kid.ttl	1
-hasAddress	Lot.ttl	9
-hasGender	Health.ttl	12
-hasHobby	Girl.ttl	3
-hasParent	Child.ttl	10
-hasPet	Kid.ttl	1
-hasSchoolName	Kid.ttl	1
-hasSibling	Child.ttl	6
-hasToy	Kid.ttl	1
-hobbies	Kid.ttl	1
-isParentOf	Child.ttl	4
-isStudentOf	Kid.ttl	1
-participatesIn	Party.ttl	5
-playsSport	Team.ttl	3
-school	Teacher.ttl	3
-breakfast	Morning.ttl	1
-breakfastTime	Morning.ttl	1
-coffee	Morning.ttl	1
-does	Morning.ttl	1
-end_time	Morning.ttl	1
-exercise	Morning.ttl	1
-hasAlarm	Morning.ttl	1
-hasBreakfast	Morning.ttl	1
-hasMeal	Morning.ttl	1
-hasMorning	Day.ttl	2
-hasRoutine	Morning.ttl	1
-isEarly	Morning.ttl	1
-start_time	Morning.ttl	1
-startsWith	Time.ttl	2
-sunrise	Morning.ttl	1
-wakeup	Morning.ttl	1
-workStart	Morning.ttl	1
-daughterOf	Mother.ttl	1
-givenBirth	Mother.ttl	1
-givesBirthTo	Mother.ttl	1
-hasChild	Father.ttl	11
-hasMother	Man.ttl	5
-hasOffspring	Mother.ttl	1
-hasRelationship	Mother.ttl	1
-hasSpouse	Father.ttl	7
-isDaughterOf	Mother.ttl	1
-isMarried	People.ttl	5
-isMotherOf	Parent.ttl	3
-isSonOf	Mother.ttl	1
-isWidowed	Mother.ttl	1
-mother	Parent.ttl	2
-occupation	Community.ttl	3
-sonOf	Mother.ttl	1
-birthDate	Book.ttl	8
-birthdate	Child.ttl	4
-child	Girl.ttl	2
-childOf	Father.ttl	3
-dateOfBirth	People.ttl	2
-deathDate	Book.ttl	5
-divorceDate	Family.ttl	1
-familyMember	Family.ttl	1
-father	Parent.ttl	2
-hasBirthDate	Party.ttl	4
-hasDateOfBirth	Member.ttl	2
-hasDaughter	Father.ttl	2
-hasFather	Father.ttl	4
-hasMember	Party.ttl	7
-hasSon	Father.ttl	2
-isAlive	Family.ttl	1
-isChildOf	Child.ttl	3
-isFemale	Family.ttl	1
-isMale	Child.ttl	2
-isMarriedTo	People.ttl	5
-isSiblingOf	Family.ttl	1
-marriageDate	Family.ttl	1
-married	Family.ttl	1
-member	Family.ttl	1
-mother	Family.ttl	1
-partOfFamily	Family.ttl	1
-sibling	Girl.ttl	2
-spouseOf	Family.ttl	1
-area	Lot.ttl	6
-callingCode	Country.ttl	1
-capital	State.ttl	4
-capitalCity	Country.ttl	1
-cityName	State.ttl	3
-cityPopulation	Country.ttl	1
-continent	World.ttl	2
-hasArea	Lot.ttl	10
-hasBorderWith	World.ttl	2
-hasCapital	State.ttl	3
-hasCity	Lot.ttl	4
-hasGDP	Country.ttl	1
-hasLanguage	Word.ttl	3
-hasOfficialLanguage	Country.ttl	1
-isInContinent	Country.ttl	1
-isLocatedIn	State.ttl	9
-isLocatedInContinent	Country.ttl	1
-language	Book.ttl	4
-officialLanguage	Country.ttl	1
-population	State.ttl	7
-components	Air.ttl	1
-composition	Air.ttl	1
-consistsOf	Education.ttl	4
-contains	Home.ttl	6
-containsCarbonDioxide	Air.ttl	1
-containsNitrogen	Air.ttl	1
-containsOxygen	Air.ttl	1
-hasAirPollution	Air.ttl	1
-hasComponent	Face.ttl	3
-hasComposition	Air.ttl	1
-hasHumidity	Day.ttl	2
-hasNitrogen	Air.ttl	1
-hasOtherGases	Air.ttl	1
-hasOxygen	Air.ttl	1
-hasPollutants	Air.ttl	1
-hasPollutionLevel	Air.ttl	1
-hasPressure	Air.ttl	1
-hasQualityIndex	Air.ttl	1
-hasVolume	Air.ttl	1
-humidity	Air.ttl	1
-isComposedOf	Water.ttl	3
-isConditioned	Air.ttl	1
-isInArea	Air.ttl	1
-isPolluted	Water.ttl	2
-percentage	Air.ttl	1
-pollutant	Air.ttl	1
-polluted	Air.ttl	1
-pollution	Air.ttl	1
-pressure	Air.ttl	1
-quality	Air.ttl	1
-temperature	Water.ttl	2
-abstract	Art.ttl	2
-affiliatedInstitution	Research.ttl	1
-affiliation	Research.ttl	1
-authorOf	Research.ttl	1
-conducts	Research.ttl	1
-conductsResearch	Research.ttl	1
-contributesTo	Research.ttl	1
-dueDate	Issue.ttl	2
-employs	Work.ttl	4
-focusesOn	Research.ttl	1
-funding	Research.ttl	1
-hasAffiliation	Research.ttl	1
-hasAreaOfResearch	Research.ttl	1
-hasAuthor	Idea.ttl	7
-hasDiploma	Research.ttl	1
-hasPublication	Study.ttl	2
-hasPublicationDate	Book.ttl	3
-hasResearchTopic	Research.ttl	1
-hasResearcher	Study.ttl	2
-hasSubjectField	Research.ttl	1
-hasTopic	Study.ttl	2
-has_publication	Research.ttl	1
-researcher	Study.ttl	2
-inField	Job.ttl	2
-institution	Research.ttl	1
-isAbout	Fact.ttl	3
-isProducedBy	Research.ttl	1
-isWrittenBy	Research.ttl	1
-outputs	Research.ttl	1
-performs	Research.ttl	1
-publication	Research.ttl	1
-publishedIn	Book.ttl	2
-publishes	Research.ttl	1
-researchTopic	Research.ttl	1
-researchedBy	Research.ttl	1
-researcher	Research.ttl	1
-resultsIn	Force.ttl	3
-specializesIn	Research.ttl	1
-study	Research.ttl	1
-supports	Research.ttl	1
-topic	Research.ttl	1
-usesMethod	Research.ttl	1
-workAt	Research.ttl	1
-areaOfWork	Job.ttl	1
-belongsToIndustry	Job.ttl	1
-employee	Job.ttl	1
-employer	Work.ttl	2
-employerName	Job.ttl	1
-employmentType	Job.ttl	1
-hasCompany	Job.ttl	1
-hasEmployer	Work.ttl	2
-hasJob	Work.ttl	3
-hasJobTitle	Work.ttl	3
-hasOrganization	Job.ttl	1
-hasPosition	Hand.ttl	5
-hasResponsibilities	Job.ttl	1
-hasSalary	Work.ttl	3
-industry	Business.ttl	3
-isPartOfIndustry	Job.ttl	1
-jobDescription	Job.ttl	1
-jobID	Job.ttl	1
-jobId	Job.ttl	1
-jobLocation	Job.ttl	1
-jobSalary	Job.ttl	1
-jobTitle	Work.ttl	3
-locationName	Job.ttl	1
-positionTitle	Work.ttl	2
-postedJob	Job.ttl	1
-requiresEducation	Job.ttl	1
-requiresExperience	Job.ttl	1
-requiresSkill	Job.ttl	1
-requiresSkills	Job.ttl	1
-salary	Work.ttl	3
-skillsRequired	Job.ttl	1
-worksAs	Job.ttl	1
-worksFor	Work.ttl	2
-belongs_to	Point.ttl	1
-hasPoint	Line.ttl	2
-hasX	Line.ttl	2
-hasXCoordinate	Line.ttl	2
-hasY	Point.ttl	1
-hasYCoordinate	Line.ttl	2
-hasZ	Point.ttl	1
-hasZCoordinate	Line.ttl	2
-isOrigin	Point.ttl	1
-locatedInPlane	Point.ttl	1
-x	Point.ttl	1
-xCoordinate	Line.ttl	2
-y	Point.ttl	1
-yCoordinate	Line.ttl	2
-zCoordinate	Point.ttl	1
-areaUnit	Area.ttl	1
-areaValue	Area.ttl	1
-inSquareMiles	Area.ttl	1
-length	Line.ttl	5
-radius	Area.ttl	1
-sideLength	Area.ttl	1
-sides	Area.ttl	1
-unit	Area.ttl	1
-unitOfMeasure	Force.ttl	2
-unitOfMeasurement	Area.ttl	1
-existsIn	Community.ttl	2
-hasAbstract	Thing.ttl	1
-hasSymbol	Thing.ttl	1
-hasTexture	Face.ttl	2
-isUsedFor	Thing.ttl	1
-commonInterest	Friend.ttl	1
-friend	Friend.ttl	1
-friendOf	Friend.ttl	1
-hasCommonInterest	Community.ttl	2
-hasFriend	Friend.ttl	1
-hasFriendshipEndDate	Friend.ttl	1
-hasFriendshipStartDate	Friend.ttl	1
-hasKnownSince	Friend.ttl	1
-hasPhoneNumber	People.ttl	2
-hasSharedExperience	Friend.ttl	1
-isClose	Friend.ttl	1
-isFriendOf	Friend.ttl	1
-isFriendWith	Guy.ttl	2
-knownSince	Friend.ttl	1
-knows	Friend.ttl	1
-knowsSince	Friend.ttl	1
-placeMet	Friend.ttl	1
-sharedInterests	Friend.ttl	1
-sharesInterestWith	Friend.ttl	1
-since	Friend.ttl	1
-hasHour	Time.ttl	2
-hasNumberOfHours	Hour.ttl	1
-hasSecond	Hour.ttl	1
-hourOfDay	Hour.ttl	1
-hourValue	Hour.ttl	1
-hours	Hour.ttl	1
-isInTimeZone	Hour.ttl	1
-developedBy	Program.ttl	2
-developer	Program.ttl	2
-genre	Book.ttl	4
-hasAgeRating	Game.ttl	1
-hasDeveloper	Program.ttl	2
-hasGenre	Book.ttl	3
-hasPlatform	Program.ttl	2
-hasPlayer	Game.ttl	1
-hasPlayerCount	Game.ttl	1
-hasPlayerMode	Game.ttl	1
-hasRating	Game.ttl	1
-hasReleaseDate	Program.ttl	2
-hasReview	Game.ttl	1
-hasRule	Game.ttl	1
-hasSkillLevel	Game.ttl	1
-isAvailableOn	Game.ttl	1
-isDevelopedBy	Game.ttl	1
-platform	Game.ttl	1
-player	Game.ttl	1
-playerName	Game.ttl	1
-plays	Game.ttl	1
-playsGame	Game.ttl	1
-publisher	Book.ttl	2
-rating	Service.ttl	2
-releaseDate	Program.ttl	2
-releaseYear	Game.ttl	1
-reviewOf	Game.ttl	1
-reviewRating	Game.ttl	1
-reviewScore	Game.ttl	1
-reviewText	Game.ttl	1
-wasReleasedIn	Game.ttl	1
-actionName	Reason.ttl	1
-actionTriggeredBy	Reason.ttl	1
-causedBy	Change.ttl	3
-causes	End.ttl	4
-causesEvent	Reason.ttl	1
-derivedFrom	Power.ttl	2
-explains	Reason.ttl	1
-hasConclusion	Reason.ttl	1
-hasEvidence	Reason.ttl	1
-hasLogicalBasis	Reason.ttl	1
-hasPremise	Reason.ttl	1
-hasPurpose	Reason.ttl	1
-hasReason	War.ttl	2
-justifies	Reason.ttl	1
-leadsTo	Way.ttl	3
-provides	Service.ttl	7
-providesReasonFor	Reason.ttl	1
-reason	Reason.ttl	1
-reasonFor	Reason.ttl	1
-reasonText	Reason.ttl	1
-relatedToDecision	Reason.ttl	1
-relatedToEvent	Reason.ttl	1
-usesReasoningType	Reason.ttl	1
-belongsToEra	History.ttl	1
-belongsToPeriod	History.ttl	1
-content	Information.ttl	2
-discovered	History.ttl	1
-hadParticipant	History.ttl	1
-hasCharacter	History.ttl	1
-hasHappenedIn	History.ttl	1
-heldIn	Community.ttl	2
-influentialPerson	History.ttl	1
-involvedIn	History.ttl	1
-livedDuring	History.ttl	1
-occurredAt	History.ttl	1
-occurredDuring	History.ttl	1
-occurredIn	History.ttl	1
-occursIn	History.ttl	1
-participatedIn	History.ttl	1
-tookPlaceDuring	History.ttl	1
-dimensions	Couch.ttl	2
-hasBrand	Car.ttl	3
-hasCushion	Couch.ttl	2
-hasFabric	Sofa.ttl	1
-hasSeats	Sofa.ttl	1
-isUsedIn	Sofa.ttl	1
-manufacturedBy	Part.ttl	2
-numSeats	Sofa.ttl	1
-seatsNumber	Sofa.ttl	1
-style	Art.ttl	3
-type	Service.ttl	5
-weight	Question.ttl	4
-author	Information.ttl	1
-businessAddress	Information.ttl	1
-businessName	Information.ttl	1
-containsData	Information.ttl	1
-containsMetadata	Information.ttl	1
-dataType	Information.ttl	1
-dateCreated	Information.ttl	1
-encodingMethod	Information.ttl	1
-encryptionMethod	Information.ttl	1
-engagesIn	Information.ttl	1
-hasAvailability	Information.ttl	1
-hasConfidentiality	Information.ttl	1
-hasContent	Question.ttl	3
-hasDataType	Information.ttl	1
-hasForm	Life.ttl	2
-hasInformation	Information.ttl	1
-hasIntegrity	Information.ttl	1
-hasReference	Information.ttl	1
-hasSource	Question.ttl	7
-hasTimestamp	Result.ttl	2
-information	Information.ttl	1
-informationDescription	Information.ttl	1
-informationSource	Information.ttl	1
-isBasedOn	Information.ttl	1
-isBasisFor	Information.ttl	1
-isConfidential	Information.ttl	1
-isDerivedFrom	Information.ttl	1
-isRelevantTo	Information.ttl	1
-isStoredIn	Information.ttl	1
-isVerified	Fact.ttl	2
-relatedInformation	Information.ttl	1
-source	Way.ttl	5
-birthPlace	Person.ttl	1
-bornIn	People.ttl	3
-bornOnDate	Person.ttl	1
-children	Person.ttl	1
-city	Person.ttl	1
-isEmployed	People.ttl	3
-nationality	Art.ttl	3
-phone	Person.ttl	1
-postalCode	Person.ttl	1
-residence	Person.ttl	1
-residesIn	Home.ttl	2
-state	Company.ttl	2
-street	Company.ttl	3
-character	Story.ttl	1
-characterName	Story.ttl	1
-hasCharacterName	Story.ttl	1
-hasCharacters	Story.ttl	1
-hasPlot	Story.ttl	1
-hasSetting	Story.ttl	1
-hasTheme	Party.ttl	2
-plot	Story.ttl	1
-publicationDate	Book.ttl	2
-publicationYear	Book.ttl	2
-role	Team.ttl	2
-writtenBy	Community.ttl	2
-continentOf	World.ttl	1
-countryOf	Place.ttl	2
-drives	World.ttl	1
-hasCity	World.ttl	1
-hasLanguage	World.ttl	1
-hasMountain	World.ttl	1
-hasReligion	World.ttl	1
-hasRiver	World.ttl	1
-hasSea	World.ttl	1
-hosts	World.ttl	1
-inContinent	World.ttl	1
-inWorld	World.ttl	1
-isFamousFor	World.ttl	1
-partOfContinent	World.ttl	1
-partOfCountry	City.ttl	2
-populationOf	World.ttl	1
-spokenIn	World.ttl	1
-surroundedBy	World.ttl	1
-hasBirthdate	Woman.ttl	1
-hasChildren	Man.ttl	2
-isDaughter	Woman.ttl	1
-isEducatedIn	Woman.ttl	1
-isMother	Woman.ttl	1
-isWifeOf	Woman.ttl	1
-isWoman	Woman.ttl	1
-womanhasAge	Woman.ttl	1
-womanhasName	Woman.ttl	1
-womanhasNationality	Woman.ttl	1
-addressCountry	Place.ttl	1
-addressLocality	Place.ttl	1
-containedInPlace	Place.ttl	1
-hasLatitude	Place.ttl	1
-hasLongitude	Place.ttl	1
-hasPostalAddress	Place.ttl	1
-latitude	Place.ttl	1
-longitude	Place.ttl	1
-placeName	Place.ttl	1
-postCode	Place.ttl	1
-streetAddress	Place.ttl	1
-createdOn	Group.ttl	1
-establishedDate	Business.ttl	2
-groupDescription	Group.ttl	1
-groupID	Member.ttl	2
-groupMember	Group.ttl	1
-groupSize	Group.ttl	1
-hasGroupName	Group.ttl	1
-hasGroupSize	Group.ttl	1
-hasLeader	Party.ttl	6
-leader	Community.ttl	2
-memberName	Member.ttl	4
-memberRole	Team.ttl	2
-ofType	Group.ttl	1
-accommodates	Room.ttl	1
-accommodatesPerson	Room.ttl	1
-belongsInFloor	Room.ttl	1
-belongsToBuilding	Room.ttl	1
-belongsToFloor	Room.ttl	1
-capacity	Power.ttl	2
-floorArea	Room.ttl	1
-hasCapacity	Lot.ttl	2
-hasDoor	Home.ttl	3
-hasFunction	Eye.ttl	4
-hasOccupant	Room.ttl	1
-hasRoomNumber	Room.ttl	1
-hasWindow	Home.ttl	3
-isOccupied	Room.ttl	1
-isOfType	Room.ttl	1
-number	Room.ttl	1
-roomName	Room.ttl	1
-roomNumber	Room.ttl	1
-roomOccupancy	Room.ttl	1
-roomType	House.ttl	2
-type	Room.ttl	1
-typeOfRoom	Room.ttl	1
-boilingPoint	Water.ttl	1
-containMinerals	Water.ttl	1
-containsSalt	Water.ttl	1
-freezingPoint	Water.ttl	1
-hardness	Water.ttl	1
-hasForm	Water.ttl	1
-hasPH	Water.ttl	1
-hasPHValue	Water.ttl	1
-hasPh	Water.ttl	1
-hasPhysicalState	Water.ttl	1
-hasSalinity	Water.ttl	1
-hasSaltContent	Water.ttl	1
-hasState	State.ttl	3
-hasWaterProperty	Water.ttl	1
-isDrinkingSource	Water.ttl	1
-isEssentialFor	Water.ttl	1
-isFreshWater	Water.ttl	1
-isFrozen	Water.ttl	1
-isHabitatFor	Water.ttl	1
-isPotable	Water.ttl	1
-isSaltWater	Water.ttl	1
-isSourceOf	Water.ttl	1
-pH	Water.ttl	1
-pollutants	Water.ttl	1
-salinity	Water.ttl	1
-usedIn	Word.ttl	3
-water	Water.ttl	1
-hasBackyard	House.ttl	1
-hasBathrooms	House.ttl	1
-hasBedrooms	House.ttl	1
-hasGarage	House.ttl	1
-hasGarden	House.ttl	1
-hasLivingRoom	House.ttl	1
-hasNumberOfRooms	Home.ttl	2
-hasOwner	Lot.ttl	4
-hasRooms	Home.ttl	2
-isDetached	House.ttl	1
-isOwnedBy	House.ttl	1
-numberOfRooms	House.ttl	1
-ownedBy	House.ttl	1
-owner	Lot.ttl	3
-owns	Business.ttl	3
-beginningOfDay	Day.ttl	1
-dayOfMonth	Day.ttl	1
-dayOfWeek	Week.ttl	2
-dayOfYear	Day.ttl	1
-endOfDay	Day.ttl	1
-eventType	Day.ttl	1
-hasAfternoon	Day.ttl	1
-hasDay	Year.ttl	3
-hasDayName	Day.ttl	1
-hasDayNumber	Day.ttl	1
-hasDayOfMonth	Day.ttl	1
-hasDayOfTheWeek	Day.ttl	1
-hasDayOfWeek	Day.ttl	1
-hasDayOfYear	Day.ttl	1
-hasDayPart	Day.ttl	1
-hasDaylight	Day.ttl	1
-hasDaylightDuration	Day.ttl	1
-hasEvening	Day.ttl	1
-hasHours	Work.ttl	3
-hasPartOfDay	Day.ttl	1
-hasPrecipitation	Day.ttl	1
-hasSunrise	Day.ttl	1
-hasSunset	Day.ttl	1
-hasTimeOfDay	Day.ttl	1
-hasWeatherCondition	Day.ttl	1
-hasWeekday	Day.ttl	1
-isHoliday	Day.ttl	1
-isPartOfWeek	Day.ttl	1
-isWeekday	Day.ttl	1
-isWeekend	Day.ttl	1
-sunriseTime	Day.ttl	1
-sunsetTime	Day.ttl	1
-:hasPart	Part.ttl	1
-belongsToAssembly	Part.ttl	1
-belongs_in	Part.ttl	1
-categoryName	Part.ttl	1
-hasManufacturerName	Part.ttl	1
-hasPartNumber	Part.ttl	1
-hasWeight	Part.ttl	1
-has_material	Part.ttl	1
-has_part	Part.ttl	1
-manufacturerName	Part.ttl	1
-manufacturerWebsite	Part.ttl	1
-manufacturingDate	Part.ttl	1
-objectID	Part.ttl	1
-partCategory	Part.ttl	1
-partDescription	Part.ttl	1
-partID	Part.ttl	1
-partId	Part.ttl	1
-partManufactureDate	Part.ttl	1
-partManufacturer	Part.ttl	1
-partModel	Part.ttl	1
-partName	Part.ttl	1
-partNumber	Part.ttl	1
-processID	Part.ttl	1
-serialNumber	Part.ttl	1
-subPart	Part.ttl	1
-usesPart	Part.ttl	1
-birthday	Guy.ttl	1
-employedAs	Guy.ttl	1
-hasInterest	Community.ttl	2
-colour	Couch.ttl	1
-hasCushions	Couch.ttl	1
-hasSeatDepth	Couch.ttl	1
-hasUpholsteryMaterial	Couch.ttl	1
-isConvertible	Couch.ttl	1
-isInLivingRoom	Couch.ttl	1
-model	Car.ttl	2
-affectEnvironment	Power.ttl	1
-amountOfPower	Power.ttl	1
-calculatesPower	Power.ttl	1
-control	Power.ttl	1
-generate	Power.ttl	1
-hasMagnitude	Force.ttl	2
-hasPower	Power.ttl	1
-hasPowerOver	Power.ttl	1
-isGeneratedBy	Power.ttl	1
-isMeasuredIn	Power.ttl	1
-measuredIn	Force.ttl	2
-powerGeneration	Power.ttl	1
-powerMeasure	Power.ttl	1
-isFatherOf	Father.ttl	2
-belongsIn	Week.ttl	1
-dayName	Week.ttl	1
-dayNumber	Week.ttl	1
-hasDays	Month.ttl	2
-hasEndDay	Week.ttl	1
-hasSequence	Week.ttl	1
-hasStartDay	Week.ttl	1
-hasWeek	Week.ttl	1
-isDayOf	Week.ttl	1
-isDayOfTheWeek	Week.ttl	1
-numberOfWeek	Week.ttl	1
-beganOn	War.ttl	1
-beginsOn	War.ttl	1
-belligerent	War.ttl	1
-belligerentName	War.ttl	1
-casualties	War.ttl	1
-casualtiesIn	War.ttl	1
-causeOfWar	War.ttl	1
-commencesAt	War.ttl	1
-consequence	End.ttl	2
-dateEnded	War.ttl	1
-dateStarted	War.ttl	1
-endYear	War.ttl	1
-endedOn	War.ttl	1
-endsOn	War.ttl	1
-endsWith	Time.ttl	2
-hasBasicOutcome	War.ttl	1
-hasBattle	War.ttl	1
-hasBelligerent	War.ttl	1
-hasCasualties	War.ttl	1
-hasCause	Problem.ttl	3
-hasCombatant	War.ttl	1
-hasCombatant1	War.ttl	1
-hasCombatant2	War.ttl	1
-hasConflict	War.ttl	1
-hasInvolved	War.ttl	1
-hasInvolvedCountry	War.ttl	1
-hasMilitary	War.ttl	1
-hasOutcome	Result.ttl	2
-hasParticipant	War.ttl	1
-hasParticipatingCountry	War.ttl	1
-hasResult	Result.ttl	5
-hasTimeframe	War.ttl	1
-hasWarPart	War.ttl	1
-involvedCountry	War.ttl	1
-involvedParty	War.ttl	1
-involvesCountry	War.ttl	1
-participant	Community.ttl	2
-participatingCountry	War.ttl	1
-resultOfWar	War.ttl	1
-startYear	War.ttl	1
-usesWeapon	War.ttl	1
-atLocation	Study.ttl	1
-courseOfStudy	Study.ttl	1
-focusArea	Study.ttl	1
-hasCourse	Study.ttl	1
-hasInvestigator	Study.ttl	1
-hasLevel	Level.ttl	2
-hasMethod	Way.ttl	2
-hasStudent	Study.ttl	1
-hasStudy	Study.ttl	1
-hasStudyArea	Study.ttl	1
-hasStudyDate	Study.ttl	1
-hasStudyID	Study.ttl	1
-hasStudyName	Study.ttl	1
-hasStudyTopic	Study.ttl	1
-isCourseOf	Study.ttl	1
-isInInstitution	Study.ttl	1
-isStudiedBy	Study.ttl	1
-isStudyBy	Study.ttl	1
-isStudying	Study.ttl	1
-isTaughtBy	Study.ttl	1
-isTutoredBy	Study.ttl	1
-partOfCurriculum	Study.ttl	1
-reads	Study.ttl	1
-student	School.ttl	2
-studentID	Education.ttl	2
-studentName	School.ttl	2
-studiedBy	Study.ttl	1
-subject	Teacher.ttl	4
-takesPlaceAt	Study.ttl	1
-taughtBy	School.ttl	2
-uniName	Study.ttl	1
-usesSourceMaterial	Study.ttl	1
-career	Man.ttl	1
-ethnicity	Man.ttl	1
-fatherOf	Father.ttl	2
-hairColor	Man.ttl	1
-hasConcept	Man.ttl	1
-isA	Man.ttl	1
-manhasAge	Man.ttl	1
-manhasName	Man.ttl	1
-manhasOccupation	Man.ttl	1
-manisMarried	Man.ttl	1
-profession	Man.ttl	1
-surname	People.ttl	2
-atTime	Time.ttl	1
-begin	Time.ttl	1
-dateTime	Time.ttl	1
-dateTimeStamp	Time.ttl	1
-days	Time.ttl	1
-during	Time.ttl	1
-endAt	Time.ttl	1
-endedAt	Time.ttl	1
-hasTemporalUnit	Time.ttl	1
-hasTimezone	Time.ttl	1
-inDateTime	Time.ttl	1
-inFuture	Time.ttl	1
-inPast	Time.ttl	1
-inXSDDateTime	Time.ttl	1
-inXSDDateTimeStamp	Time.ttl	1
-inXSDDuration	Time.ttl	1
-isTimePointOf	Time.ttl	1
-isUnitOf	Time.ttl	1
-startAt	Time.ttl	1
-startedAt	Time.ttl	1
-hasCalendarOrder	Month.ttl	1
-hasMonth	Year.ttl	2
-hasNumberOfDays	Month.ttl	1
-hasOrder	Month.ttl	1
-beginningOfYear	Year.ttl	1
-endOfYear	Year.ttl	1
-followedBy	Year.ttl	1
-hasSeason	Year.ttl	1
-inYear	Year.ttl	1
-isLeap	Year.ttl	1
-isLeapYear	Year.ttl	1
-isYearOf	Year.ttl	1
-numberOfDay	Year.ttl	1
-numberOfMonth	Year.ttl	1
-numberOfYear	Year.ttl	1
-precededBy	Year.ttl	1
-year	Year.ttl	1
-yearID	Year.ttl	1
-yearNumber	Year.ttl	1
-assertedBy	Fact.ttl	1
-dateRecorded	Fact.ttl	1
-dateVerified	Fact.ttl	1
-factStatement	Fact.ttl	1
-hasCategoryName	Fact.ttl	1
-hasDateVerified	Fact.ttl	1
-hasFact	Fact.ttl	1
-hasFactSource	Fact.ttl	1
-hasFactText	Fact.ttl	1
-hasFactTopic	Fact.ttl	1
-hasFactType	Fact.ttl	1
-hasFactValue	Fact.ttl	1
-hasId	Fact.ttl	1
-hasObject	Fact.ttl	1
-hasPredicate	Fact.ttl	1
-hasReporter	Fact.ttl	1
-hasSourceName	Fact.ttl	1
-hasSourceUrl	Fact.ttl	1
-hasStatement	Fact.ttl	1
-hasVerification	Fact.ttl	1
-hasVerificationStatus	Fact.ttl	1
-isFactAbout	Fact.ttl	1
-isFactChecked	Fact.ttl	1
-isFactOfCategory	Fact.ttl	1
-isSourceVerified	Fact.ttl	1
-related_to	Fact.ttl	1
-sourceReference	Fact.ttl	1
-validity	Fact.ttl	1
-verified	Fact.ttl	1
-deliversFunction	System.ttl	1
-hasApplication	System.ttl	1
-hasConfiguration	System.ttl	1
-hasElement	System.ttl	1
-hasFunctionality	System.ttl	1
-hasHardware	System.ttl	1
-hasInput	Program.ttl	2
-hasObjective	System.ttl	1
-hasOperatingSystem	System.ttl	1
-hasOutput	Program.ttl	2
-hasSoftware	System.ttl	1
-hasSubSystem	System.ttl	1
-hasSubsystem	System.ttl	1
-hasVersion	Program.ttl	2
-isComponentOf	System.ttl	1
-isInstalledOn	System.ttl	1
-partOfSystem	System.ttl	1
-performsFunction	System.ttl	1
-providesService	Service.ttl	5
-subSystem	System.ttl	1
-subsystem_of	System.ttl	1
-breathe	Life.ttl	1
-consume	Life.ttl	1
-eat	Life.ttl	1
-grow	Life.ttl	1
-habitat	Life.ttl	1
-hasBirth	Life.ttl	1
-hasCells	Life.ttl	1
-hasDeath	Life.ttl	1
-hasEnvironment	Life.ttl	1
-hasLife	Life.ttl	1
-hasLifeCycle	Life.ttl	1
-hasLifeSpan	Life.ttl	1
-hasLifeStage	Life.ttl	1
-hasOrganism	Life.ttl	1
-hasTaxonomicRank	Life.ttl	1
-lifeSpan	Life.ttl	1
-lifespan	Life.ttl	1
-reproduce	Life.ttl	1
-female	Girl.ttl	1
-girlAge	Girl.ttl	1
-girlName	Girl.ttl	1
-hasBirthday	Member.ttl	2
-hasPets	Girl.ttl	1
-hasToys	Girl.ttl	1
-isGirl	Girl.ttl	1
-containsRoom	Home.ttl	1
-equippedWith	Home.ttl	1
-hasFloor	Home.ttl	1
-hasHome	Home.ttl	1
-hasResidents	Home.ttl	1
-hasRoof	Home.ttl	1
-inCity	Home.ttl	1
-isHomeOf	Home.ttl	1
-ownerOf	Home.ttl	1
-cEO	Company.ttl	1
-company	Work.ttl	2
-employeeCount	Company.ttl	1
-employsPerson	Company.ttl	1
-foundedDate	Company.ttl	1
-foundedIn	Company.ttl	1
-hasCEO	Business.ttl	2
-hasCompanyName	Work.ttl	2
-hasDirector	Company.ttl	1
-hasEmployeeCount	Company.ttl	1
-hasFoundingDate	Company.ttl	1
-hasFullName	Work.ttl	3
-hasIndustry	Company.ttl	1
-hasRevenue	Company.ttl	1
-headquarterLocation	Company.ttl	1
-offers	School.ttl	3
-operatesIn	Health.ttl	3
-personAge	Community.ttl	2
-personNationality	Company.ttl	1
-produces	Business.ttl	2
-roleName	Company.ttl	1
-yearEstablished	Company.ttl	1
-zipCode	Company.ttl	1
-artGenre	Art.ttl	1
-artist	Art.ttl	1
-artistName	Art.ttl	1
-artistNationality	Art.ttl	1
-artworkTitle	Art.ttl	1
-belongsGenre	Art.ttl	1
-created	Art.ttl	1
-createdBy	Art.ttl	1
-created_by	Art.ttl	1
-creates	Art.ttl	1
-display	Art.ttl	1
-displayed_at	Art.ttl	1
-exhibitedIn	Art.ttl	1
-exhibits	Art.ttl	1
-hasArtStyle	Art.ttl	1
-hasArtist	Art.ttl	1
-hasCreated	Art.ttl	1
-hasCreator	Idea.ttl	2
-hasMedium	Way.ttl	2
-has_genre	Art.ttl	1
-housesArt	Art.ttl	1
-inPeriod	Art.ttl	1
-inspiredBy	Idea.ttl	2
-mass	Art.ttl	1
-medium	Art.ttl	1
-mediumName	Art.ttl	1
-modern	Art.ttl	1
-periodName	Art.ttl	1
-shownAt	Art.ttl	1
-styleName	Art.ttl	1
-usesMedium	Art.ttl	1
-uses_medium	Art.ttl	1
-activity	Community.ttl	1
-attendsEvent	Community.ttl	1
-belongs	Community.ttl	1
-commentedBy	Community.ttl	1
-communityLeader	Community.ttl	1
-communityLocation	Community.ttl	1
-communityMember	Community.ttl	1
-communityName	Community.ttl	1
-coordinator	Community.ttl	1
-eventDate	Community.ttl	1
-goal	Community.ttl	1
-hasComment	Result.ttl	2
-hasCommunityRole	Community.ttl	1
-hasCultural_Identity	Community.ttl	1
-hasCulture	Community.ttl	1
-hasInstitution	Community.ttl	1
-hasPost	Community.ttl	1
-hasVolunteer	Community.ttl	1
-holdsEvent	Community.ttl	1
-joined	Community.ttl	1
-joinedDate	Member.ttl	2
-leaderName	Community.ttl	1
-locatedAt	Service.ttl	2
-memberCount	Community.ttl	1
-organizedBy	Party.ttl	2
-postDate	Community.ttl	1
-postTitle	Community.ttl	1
-volunteerName	Community.ttl	1
-entityName	Name.ttl	1
-familyName	Name.ttl	1
-fullName	Work.ttl	2
-givenName	Name.ttl	1
-hasMiddleName	Name.ttl	1
-hasNamePrefix	Name.ttl	1
-hasNameSuffix	Name.ttl	1
-hasNickName	Name.ttl	1
-hasPrefix	Name.ttl	1
-hasSuffix	Name.ttl	1
-hasfirstName	Name.ttl	1
-haslastName	Name.ttl	1
-hasmiddleName	Name.ttl	1
-middleName	Name.ttl	1
-namePrefix	Name.ttl	1
-nameSuffix	Name.ttl	1
-nickName	Name.ttl	1
-affectsEntity	Change.ttl	1
-changeCausedBy	Change.ttl	1
-changeIntensity	Change.ttl	1
-changeOccursIn	Change.ttl	1
-effects	Change.ttl	1
-hasAffectedObject	Change.ttl	1
-hasBeginState	Change.ttl	1
-hasChange	Change.ttl	1
-hasChangeAgent	Change.ttl	1
-hasChangeDate	Change.ttl	1
-hasChangeEnd	Change.ttl	1
-hasChangeEndState	Change.ttl	1
-hasChangeStart	Change.ttl	1
-hasChangeStartState	Change.ttl	1
-hasChangeType	Change.ttl	1
-hasContext	Change.ttl	1
-hasEndState	Change.ttl	1
-hasFinalValue	Change.ttl	1
-hasImpact	Idea.ttl	3
-hasInitialValue	Change.ttl	1
-hasInitiator	Change.ttl	1
-hasNewState	Change.ttl	1
-hasOldState	Change.ttl	1
-hasStartState	Change.ttl	1
-hasTarget	Change.ttl	1
-hasTypeOfChange	Change.ttl	1
-isCausedBy	Problem.ttl	2
-isChangeOf	Change.ttl	1
-isTriggeredBy	Change.ttl	1
-occurrenceTime	Change.ttl	1
-occursAt	Change.ttl	1
-hasCode	Program.ttl	1
-hasDeveloperName	Program.ttl	1
-hasExperience	Teacher.ttl	3
-hasLicense	Program.ttl	1
-hasPlatformCompatibility	Program.ttl	1
-hasProgramName	Program.ttl	1
-isCreatedBy	Program.ttl	1
-isWrittenIn	Program.ttl	1
-knowsLanguage	Program.ttl	1
-provider	Service.ttl	2
-runOnOperatingSystem	Program.ttl	1
-runsOn	Program.ttl	1
-usesLanguage	Program.ttl	1
-usesLibrary	Program.ttl	1
-version	Program.ttl	1
-writtenIn	Program.ttl	1
-appliesPageLayout	Word.ttl	1
-documentTitle	Word.ttl	1
-hasAntonym	Word.ttl	1
-hasDefinition	Word.ttl	1
-hasLemma	Word.ttl	1
-hasMeaning	Word.ttl	1
-hasOrigin	Idea.ttl	2
-hasPartOfSpeech	Word.ttl	1
-hasSpelling	Word.ttl	1
-hasSpellingCorrector	Word.ttl	1
-hasSynonym	Word.ttl	1
-hasSynonyms	Word.ttl	1
-hasThesaurus	Word.ttl	1
-hasWordProperty	Word.ttl	1
-isInLanguage	Word.ttl	1
-isPartOfSpeech	Word.ttl	1
-isSynonymOf	Word.ttl	1
-partOfSpeech	Word.ttl	1
-sentence	Word.ttl	1
-spelling	Word.ttl	1
-upos	Word.ttl	1
-usedInSentence	Word.ttl	1
-usesMailMerge	Word.ttl	1
-wordVersion	Word.ttl	1
-arriveAt	Way.ttl	1
-aspectOfWay	Way.ttl	1
-condition	Way.ttl	1
-connectedTo	Way.ttl	1
-connects	Way.ttl	1
-coveredBy	Way.ttl	1
-departFrom	Way.ttl	1
-destination	Way.ttl	1
-distance	Way.ttl	1
-endPoint	Line.ttl	2
-from	Way.ttl	1
-hasDestination	Way.ttl	1
-hasDestinationType	Way.ttl	1
-hasDirection	Force.ttl	3
-hasDistance	Way.ttl	1
-hasEndPoint	Line.ttl	2
-hasSourceType	Way.ttl	1
-hasStartPoint	Line.ttl	2
-hasTraffic	Way.ttl	1
-hasWay	Way.ttl	1
-isAccessible	Way.ttl	1
-startPoint	Line.ttl	2
-takenBy	Way.ttl	1
-to	Way.ttl	1
-understandsWay	Way.ttl	1
-usedFor	Way.ttl	1
-buys	Business.ttl	1
-buysFrom	Business.ttl	1
-empName	Business.ttl	1
-employeeOf	Business.ttl	1
-generates	Business.ttl	1
-hasBusinessLocation	Business.ttl	1
-hasHeadquarters	Business.ttl	1
-hasProduct	Business.ttl	1
-hasSector	Business.ttl	1
-hires	Business.ttl	1
-isFundedBy	Business.ttl	1
-locName	Business.ttl	1
-offers	Business.ttl	1
-offersProduct	Business.ttl	1
-operatesIn	Business.ttl	1
-prodName	Business.ttl	1
-producesProduct	Business.ttl	1
-revenue	Business.ttl	1
-sectorName	Business.ttl	1
-sells	Business.ttl	1
-serves	Business.ttl	1
-serviceName	Service.ttl	2
-supplies	Business.ttl	1
-belongsToDomain	Problem.ttl	1
-causeDescription	Problem.ttl	1
-hasComplexity	Problem.ttl	1
-hasDetails	Problem.ttl	1
-hasDifficulty	Level.ttl	2
-hasDifficultyLevel	Question.ttl	2
-hasEffect	Problem.ttl	1
-hasProblem	Problem.ttl	1
-hasRelatedProblem	Problem.ttl	1
-hasSeverity	Health.ttl	3
-hasSolution	Problem.ttl	1
-hasStep	Problem.ttl	1
-hasTimeToSolve	Problem.ttl	1
-isComplex	Problem.ttl	1
-isSolutionOf	Problem.ttl	1
-isSolvedBy	Problem.ttl	1
-isTypeOf	Problem.ttl	1
-issueName	Problem.ttl	1
-problem	Problem.ttl	1
-problemDescription	Problem.ttl	1
-problemSolution	Problem.ttl	1
-severity	Problem.ttl	1
-solution	Problem.ttl	1
-solutionDescription	Problem.ttl	1
-timeToSolve	Problem.ttl	1
-eyeColor	Face.ttl	1
-hasCheek	Face.ttl	1
-hasExpression	Face.ttl	1
-hasFacialFeature	Face.ttl	1
-hasFeature	Face.ttl	1
-hasSkinColor	Hand.ttl	2
-hasSkinType	Face.ttl	1
-mouthSize	Face.ttl	1
-noseSize	Face.ttl	1
-shape	Eye.ttl	2
-skinTone	Face.ttl	1
-hasArm	Body.ttl	1
-hasBodyPart	Body.ttl	1
-hasLeg	Body.ttl	1
-hasLimbs	Body.ttl	1
-hasOrgan	Body.ttl	1
-hasTorso	Body.ttl	1
-even	Number.ttl	1
-greaterThan	Number.ttl	1
-imaginaryPart	Number.ttl	1
-isDivisibleBy	Number.ttl	1
-isEqual	Number.ttl	1
-isEven	Number.ttl	1
-isGreaterThan	Number.ttl	1
-isImaginary	Number.ttl	1
-isIrrational	Number.ttl	1
-isLessThan	Number.ttl	1
-isNegative	Number.ttl	1
-isPositive	Number.ttl	1
-lessThan	Number.ttl	1
-negative	Number.ttl	1
-numberValue	Number.ttl	1
-numberValueFloat	Number.ttl	1
-numberValueInteger	Number.ttl	1
-realPart	Number.ttl	1
-hasCoordinate	Line.ttl	1
-hasXYCoordinates	Line.ttl	1
-isParallelTo	Line.ttl	1
-isPerpendicularTo	Line.ttl	1
-isStraight	Line.ttl	1
-slope	Line.ttl	1
-cityCountry	People.ttl	1
-cityCounty	People.ttl	1
-marriedTo	People.ttl	1
-bodyType	Car.ttl	1
-engineType	Car.ttl	1
-fuelType	Car.ttl	1
-hasEngine	Car.ttl	1
-hasEngineSize	Car.ttl	1
-hasMake	Car.ttl	1
-hasModel	Car.ttl	1
-hasProductionYear	Car.ttl	1
-hasRegistrationYear	Car.ttl	1
-hasVIN	Car.ttl	1
-horsePower	Car.ttl	1
-make	Car.ttl	1
-company	Book.ttl	1
-hasISBN	Book.ttl	1
-hasPageCount	Book.ttl	1
-hasPublisher	Book.ttl	1
-iSBN	Book.ttl	1
-isbn	Book.ttl	1
-numberOfPages	Book.ttl	1
-pages	Book.ttl	1
-publishBy	Book.ttl	1
-publishedDate	Book.ttl	1
-publishedYear	Book.ttl	1
-assignee	Issue.ttl	1
-closedDate	Issue.ttl	1
-createdDate	Issue.ttl	1
-hasCreatedDate	Issue.ttl	1
-hasDateCreated	Idea.ttl	2
-hasDateResolved	Issue.ttl	1
-hasDeadline	Team.ttl	3
-hasIssue	Issue.ttl	1
-hasIssueDateCreated	Issue.ttl	1
-hasIssueDescription	Issue.ttl	1
-hasIssueIdentifier	Issue.ttl	1
-hasIssueStatus	Issue.ttl	1
-hasIssueTitle	Issue.ttl	1
-hasPriority	Issue.ttl	1
-hasResolutionStatus	Issue.ttl	1
-hasResponsible	Issue.ttl	1
-isAssignedTo	Issue.ttl	1
-isIssueOf	Issue.ttl	1
-issueDate	Issue.ttl	1
-issueDescription	Issue.ttl	1
-issueID	Issue.ttl	1
-issuePriority	Issue.ttl	1
-issueResolved	Issue.ttl	1
-issueSeverity	Issue.ttl	1
-issueStatus	Issue.ttl	1
-issueTitle	Issue.ttl	1
-issueType	Issue.ttl	1
-personEmail	Issue.ttl	1
-priority	Issue.ttl	1
-reporter	Issue.ttl	1
-resolvedDate	Issue.ttl	1
-resolvesIssue	Issue.ttl	1
-responsibleParty	Issue.ttl	1
-administersTreatment	Health.ttl	1
-admittedIn	Health.ttl	1
-diagnosedWith	Health.ttl	1
-diagnoses	Health.ttl	1
-disease	Eye.ttl	2
-hasAilment	Health.ttl	1
-hasCondition	Back.ttl	2
-hasDiagnosis	Health.ttl	1
-hasDietRestriction	Health.ttl	1
-hasDisease	Eye.ttl	2
-hasDoctor	Health.ttl	1
-hasGymMembership	Health.ttl	1
-hasHealth	Health.ttl	1
-hasHealthRecord	Health.ttl	1
-hasHealthStatus	Health.ttl	1
-hasIllness	Health.ttl	1
-hasMedication	Health.ttl	1
-hasMentalHealth	Health.ttl	1
-hasMentalHealthStatus	Health.ttl	1
-hasPatient	Health.ttl	1
-hasPhysicalHealth	Health.ttl	1
-hasPhysicalHealthStatus	Health.ttl	1
-hasPhysicalHeathStatus	Health.ttl	1
-hasSideEffect	Health.ttl	1
-hasSymptom	Back.ttl	2
-hasTreatment	Eye.ttl	2
-includesMedication	Health.ttl	1
-includesSymptom	Health.ttl	1
-isDiagnosedWith	Health.ttl	1
-isFollowingTreatment	Health.ttl	1
-isTreatedBy	Health.ttl	1
-isTreatedWith	Health.ttl	1
-medicationName	Health.ttl	1
-prescribedBy	Health.ttl	1
-prescribedFor	Health.ttl	1
-prescribes	Health.ttl	1
-prescribesMedication	Health.ttl	1
-receives	Education.ttl	3
-receivesTreatment	Health.ttl	1
-suffersFrom	Back.ttl	2
-takesMedication	Health.ttl	1
-treatmentFor	Health.ttl	1
-treats	Health.ttl	1
-usedMedication	Health.ttl	1
-assigns	Education.ttl	2
-attend	School.ttl	1
-completes	School.ttl	1
-hasClass	School.ttl	1
-hasPrincipal	School.ttl	1
-hasTeacher	Education.ttl	2
-includesGrade	School.ttl	1
-learns	School.ttl	1
-numberOfStudents	School.ttl	1
-offeredAt	School.ttl	1
-offersCourse	Education.ttl	2
-schoolName	School.ttl	1
-schoolhasGrade	School.ttl	1
-schoolhasStudent	School.ttl	1
-schoolhasSubject	School.ttl	1
-schoolhasTeacher	School.ttl	1
-schoollocatedIn	School.ttl	1
-teachesSubject	Teacher.ttl	3
-studentAge	School.ttl	1
-studiesUnder	School.ttl	1
-studyingIn	School.ttl	1
-takesCourse	School.ttl	1
-teacherAge	School.ttl	1
-teacherName	School.ttl	1
-teachesAt	Teacher.ttl	2
-teachesCourse	Education.ttl	2
-teachesIn	Teacher.ttl	2
-teachesSubject	School.ttl	1
-answerText	Question.ttl	1
-asked	Question.ttl	1
-askedBy	Question.ttl	1
-askedIn	Question.ttl	1
-drawsFromSource	Question.ttl	1
-hasAnswer	Question.ttl	1
-hasAnswerText	Question.ttl	1
-hasBody	Question.ttl	1
-hasChoice	Question.ttl	1
-hasQuestion	Question.ttl	1
-hasQuestionText	Question.ttl	1
-hasResponse	Question.ttl	1
-hasSpecificDate	Question.ttl	1
-isAnsweredBy	Question.ttl	1
-isAskedBy	Question.ttl	1
-isCorrect	Question.ttl	1
-isCorrectAnswer	Question.ttl	1
-isRelatedToTopic	Question.ttl	1
-isResponseTo	Question.ttl	1
-possibleAnswer	Question.ttl	1
-questionText	Question.ttl	1
-relatedToTopic	Question.ttl	1
-sourceName	Question.ttl	1
-sourceType	Question.ttl	1
-sourceURL	Question.ttl	1
-text	Question.ttl	1
-topicOf	Question.ttl	1
-areaInSqKm	City.ttl	1
-capitalOf	City.ttl	1
-cityContainedInCountry	City.ttl	1
-countryName	City.ttl	1
-elevation	City.ttl	1
-hasMayor	City.ttl	1
-isCapital	City.ttl	1
-isCapitalOf	City.ttl	1
-isInCountry	City.ttl	1
-locatedInCountry	State.ttl	2
-timeZone	City.ttl	1
-hasFinalOutcome	Result.ttl	1
-hasProcess	Result.ttl	1
-hasScore	Result.ttl	1
-hasSuccess	Result.ttl	1
-isResultOf	End.ttl	2
-isSuccess	Result.ttl	1
-outcome	Result.ttl	1
-score	Result.ttl	1
-timestamp	Result.ttl	1
-wasGeneratedBy	Result.ttl	1
-citizenAge	Government.ttl	1
-createsLaw	Government.ttl	1
-department	Government.ttl	1
-departmentOf	Government.ttl	1
-director	Government.ttl	1
-enforcesLaw	Government.ttl	1
-established	Government.ttl	1
-governedBy	Government.ttl	1
-governmentName	Government.ttl	1
-governmentType	Government.ttl	1
-governs	Government.ttl	1
-hasBranch	Government.ttl	1
-hasCitizen	Government.ttl	1
-hasGovernment	Government.ttl	1
-hasHeadOfState	Government.ttl	1
-hasLaw	Government.ttl	1
-hasLaws	Government.ttl	1
-hasPolicy	Government.ttl	1
-hasSystem	Government.ttl	1
-headOf	Government.ttl	1
-headOfGovernment	Government.ttl	1
-holdsPosition	Government.ttl	1
-implements	Government.ttl	1
-isBranchOf	Government.ttl	1
-isHeadedBy	Government.ttl	1
-leaderOf	Government.ttl	1
-legislation	Government.ttl	1
-mayorOf	Government.ttl	1
-official	Government.ttl	1
-passes	Government.ttl	1
-positionIn	Government.ttl	1
-containsState	State.ttl	1
-hasStateCapital	State.ttl	1
-isPartOfCountry	State.ttl	1
-stateName	State.ttl	1
-livesAt	Child.ttl	1
-parent	Child.ttl	1
-parentOf	Child.ttl	1
-belongsInCategory	Work.ttl	1
-companyName	Work.ttl	1
-employed	Work.ttl	1
-employedBy	Work.ttl	1
-employeeID	Work.ttl	1
-hasJobPosting	Work.ttl	1
-hasPlace	Work.ttl	1
-hasTask	Team.ttl	2
-hasWorkHours	Work.ttl	1
-hasWorker	Work.ttl	1
-hoursPerWeek	Work.ttl	1
-isEmployedAt	Work.ttl	1
-isPerformedBy	Work.ttl	1
-isRemote	Work.ttl	1
-organization	Work.ttl	1
-performWork	Work.ttl	1
-workName	Work.ttl	1
-worker	Work.ttl	1
-actsOn	Force.ttl	1
-appliedBy	Force.ttl	1
-appliedOn	Force.ttl	1
-applied_to	Force.ttl	1
-appliesForce	Force.ttl	1
-direction	Force.ttl	1
-directionOfForce	Force.ttl	1
-forceDirection	Force.ttl	1
-forceValue	Force.ttl	1
-hasForce	Force.ttl	1
-hasForceDirection	Force.ttl	1
-hasForceMagnitude	Force.ttl	1
-hasForceValue	Force.ttl	1
-hasStrength	Force.ttl	1
-isAppliedTo	Force.ttl	1
-isForceOf	Force.ttl	1
-magnitude	Force.ttl	1
-magnitudeOfForce	Force.ttl	1
-newton	Force.ttl	1
-resistsForce	Force.ttl	1
-resultant_effect	Force.ttl	1
-affects	Back.ttl	1
-associatedCondition	Back.ttl	1
-hasBack	Back.ttl	1
-hasInjury	Back.ttl	1
-hasMuscle	Back.ttl	1
-hasPain	Back.ttl	1
-hasSpine	Back.ttl	1
-isLocationOf	Back.ttl	1
-isOppositeOf	Back.ttl	1
-painLevel	Back.ttl	1
-partOfBack	Back.ttl	1
-treatmentPlan	Back.ttl	1
-belongsToObject	Side.ttl	1
-hasBackSide	Side.ttl	1
-hasFrontSide	Side.ttl	1
-hasLeftSide	Side.ttl	1
-hasOpponent	Side.ttl	1
-hasOrientation	Side.ttl	1
-hasRelatedObject	Side.ttl	1
-hasRightSide	Side.ttl	1
-hasSide	Side.ttl	1
-hasSideType	Side.ttl	1
-isSideOf	Side.ttl	1
-opposite	Side.ttl	1
-oppositeTo	Side.ttl	1
-symmetricTo	Side.ttl	1
-grantedBy	Right.ttl	1
-hasRight	Right.ttl	1
-hasRightHolder	Right.ttl	1
-hasScope	Right.ttl	1
-holder	Right.ttl	1
-isGrantedBy	Right.ttl	1
-isGrantedTo	Right.ttl	1
-isProtectedBy	Right.ttl	1
-isRightOf	Right.ttl	1
-possession	Right.ttl	1
-protectedBy	Right.ttl	1
-providesRight	Right.ttl	1
-rightInJurisdiction	Right.ttl	1
-rightToEquality	Right.ttl	1
-rightToLife	Right.ttl	1
-rightToReligiousFreedom	Right.ttl	1
-rightToVote	Right.ttl	1
-violatedBy	Right.ttl	1
-cause	End.ttl	1
-endtime	End.ttl	1
-event	End.ttl	1
-hasActor	End.ttl	1
-hasEndLocation	End.ttl	1
-isEndOf	End.ttl	1
-locationEnd	End.ttl	1
-of	End.ttl	1
-ofEvent	End.ttl	1
-timePoint	End.ttl	1
-hasCaptain	Team.ttl	1
-hasCoach	Team.ttl	1
-hasMemberExperience	Team.ttl	1
-hasMemberName	Team.ttl	1
-hasMemberRole	Team.ttl	1
-hasNumberOfPlayers	Team.ttl	1
-hasProject	Team.ttl	1
-hasProjectDeadline	Team.ttl	1
-hasProjectName	Team.ttl	1
-hasSport	Team.ttl	1
-hasTeamLead	Team.ttl	1
-hasTeamLeader	Team.ttl	1
-hasTeamName	Team.ttl	1
-isOfAge	Team.ttl	1
-league	Team.ttl	1
-playsIn	Team.ttl	1
-position	Team.ttl	1
-sport	Team.ttl	1
-sportName	Team.ttl	1
-teamLeader	Team.ttl	1
-teamName	Team.ttl	1
-courseID	Education.ttl	1
-educates	Education.ttl	1
-hasDegree	Teacher.ttl	2
-hasEducation	Education.ttl	1
-hasEducationalInstitution	Education.ttl	1
-hasEnrolled	Education.ttl	1
-hasKnowledgeArea	Education.ttl	1
-offeredBy	Service.ttl	2
-schooledIn	Education.ttl	1
-studentId	Education.ttl	1
-teacherID	Education.ttl	1
-teacherId	Education.ttl	1
-universityAttended	Education.ttl	1
-universityID	Education.ttl	1
-cost	Service.ttl	1
-hasConsumer	Service.ttl	1
-hasCost	Service.ttl	1
-hasCustomer	Service.ttl	1
-hasProvider	Service.ttl	1
-hasRate	Service.ttl	1
-hasServiceConsumer	Service.ttl	1
-hasServiceDuration	Service.ttl	1
-hasServiceProvider	Service.ttl	1
-isPaid	Service.ttl	1
-isProvidedBy	Service.ttl	1
-providedBy	Service.ttl	1
-providerLocation	Service.ttl	1
-providerName	Service.ttl	1
-serviceConsumer	Service.ttl	1
-serviceCost	Service.ttl	1
-serviceProvider	Service.ttl	1
-serviceRating	Service.ttl	1
-serviceType	Service.ttl	1
-usesService	Service.ttl	1
-belongsGroup	Member.ttl	1
-belongsToGroup	Member.ttl	1
-groupHasName	Member.ttl	1
-hasEmail	Member.ttl	1
-hasJoinedDate	Member.ttl	1
-hasMemberID	Member.ttl	1
-hasMembershipDate	Member.ttl	1
-hasMembershipSince	Member.ttl	1
-hasMembershipType	Member.ttl	1
-isMemberOf	Member.ttl	1
-joinedOn	Member.ttl	1
-livesInCity	Member.ttl	1
-memberID	Member.ttl	1
-membershipType	Member.ttl	1
-prov	Member.ttl	1
-hasLevelName	Level.ttl	1
-hasLevelNumber	Level.ttl	1
-hasNextLevel	Level.ttl	1
-hasReward	Level.ttl	1
-hasSkill	Level.ttl	1
-inGame	Level.ttl	1
-isLevelOf	Level.ttl	1
-levelDescription	Level.ttl	1
-levelIndicator	Level.ttl	1
-levelName	Level.ttl	1
-levelNumber	Level.ttl	1
-levelOf	Level.ttl	1
-levelValue	Level.ttl	1
-nextLevel	Level.ttl	1
-previousLevel	Level.ttl	1
-understanding	Level.ttl	1
-canGrasp	Hand.ttl	1
-canGrip	Hand.ttl	1
-fingerCount	Hand.ttl	1
-fingers	Hand.ttl	1
-handHasFingers	Hand.ttl	1
-handHasPalm	Hand.ttl	1
-handHasThumb	Hand.ttl	1
-hasFingers	Hand.ttl	1
-hasFiveFingers	Hand.ttl	1
-hasNails	Hand.ttl	1
-hasNumberOfFingers	Hand.ttl	1
-hasPalm	Hand.ttl	1
-hasParts	Hand.ttl	1
-hasThumb	Hand.ttl	1
-isLeft	Hand.ttl	1
-isPartOfArm	Hand.ttl	1
-isRight	Hand.ttl	1
-associatedWithConcept	Idea.ttl	1
-dateOfIdea	Idea.ttl	1
-descriptionOfIdea	Idea.ttl	1
-evaluation	Idea.ttl	1
-hasCreationDate	Idea.ttl	1
-hasIdea	Idea.ttl	1
-hasIdeaValue	Idea.ttl	1
-hasOriginality	Idea.ttl	1
-hasOriginator	Idea.ttl	1
-hasRelation	Idea.ttl	1
-hasResultingAction	Idea.ttl	1
-ideaBelongsTo	Idea.ttl	1
-ideaContent	Idea.ttl	1
-ideaCreationDate	Idea.ttl	1
-ideaOriginator	Idea.ttl	1
-ideaSummary	Idea.ttl	1
-implementationStatus	Idea.ttl	1
-inspirationSource	Idea.ttl	1
-isImplemented	Idea.ttl	1
-isInspiredBy	Idea.ttl	1
-isOriginal	Idea.ttl	1
-leadTo	Idea.ttl	1
-practicality	Idea.ttl	1
-canSee	Eye.ttl	1
-cornea	Eye.ttl	1
-eyeCondition	Eye.ttl	1
-eyeShape	Eye.ttl	1
-eyeVision	Eye.ttl	1
-function	Eye.ttl	1
-hasAnatomy	Eye.ttl	1
-hasCiliaryMuscle	Eye.ttl	1
-hasCornea	Eye.ttl	1
-hasDisorder	Eye.ttl	1
-hasIris	Eye.ttl	1
-hasKinesthesia	Eye.ttl	1
-hasLens	Eye.ttl	1
-hasLensType	Eye.ttl	1
-hasRetina	Eye.ttl	1
-hasVision	Eye.ttl	1
-hasVisualAcuity	Eye.ttl	1
-iris	Eye.ttl	1
-lens	Eye.ttl	1
-lensMaterial	Eye.ttl	1
-lensShape	Eye.ttl	1
-lensThickness	Eye.ttl	1
-retina	Eye.ttl	1
-sight	Eye.ttl	1
-vision	Eye.ttl	1
-vission	Eye.ttl	1
-hasAuctionDate	Lot.ttl	1
-hasBuilding	Lot.ttl	1
-hasLot	Lot.ttl	1
-hasLotNumber	Lot.ttl	1
-hasParkingLot	Lot.ttl	1
-hasStartingPrice	Lot.ttl	1
-hasStreetAddress	Lot.ttl	1
-hasStructure	Lot.ttl	1
-hasZipCode	Lot.ttl	1
-identifier	Lot.ttl	1
-isAvailable	Lot.ttl	1
-isDeveloped	Lot.ttl	1
-isForSale	Lot.ttl	1
-isOnSale	Lot.ttl	1
-isPartOfAuction	Lot.ttl	1
-isVacant	Lot.ttl	1
-lotNumber	Lot.ttl	1
-lotSize	Lot.ttl	1
-owners	Lot.ttl	1
-salePrice	Lot.ttl	1
-first_name	Teacher.ttl	1
-hasExperienceInYears	Teacher.ttl	1
-hasYearsExperience	Teacher.ttl	1
-isEmployedBy	Teacher.ttl	1
-last_name	Teacher.ttl	1
-subjectName	Teacher.ttl	1
-teachSubject	Teacher.ttl	1
-teaches_subject	Teacher.ttl	1
-worksAtSchool	Teacher.ttl	1
-works_at	Teacher.ttl	1
-yearsExperience	Teacher.ttl	1
-yearsOfExperience	Teacher.ttl	1
-attendedBy	Party.ttl	1
-attendee	Party.ttl	1
-guest	Party.ttl	1
-hasAttendee	Party.ttl	1
-hasGuest	Party.ttl	1
-hasHost	Party.ttl	1
-hasOrganizer	Party.ttl	1
-hasPartyType	Party.ttl	1
-hostedBy	Party.ttl	1
-music	Party.ttl	1
-organisedBy	Party.ttl	1
-theme	Party.ttl	1
-zipcode	Party.ttl	1
+color	Door.ttl
+dimension	Door.ttl
+doorType	Door.ttl
+hasColor	Door.ttl
+hasDimension	Door.ttl
+hasHandle	Door.ttl
+hasHeight	Door.ttl
+hasLock	Door.ttl
+hasMaterial	Door.ttl
+hasSecurityLevel	Door.ttl
+hasWidth	Door.ttl
+isAccessTo	Door.ttl
+isBarrier	Door.ttl
+isClosed	Door.ttl
+isEntranceTo	Door.ttl
+isLocked	Door.ttl
+isMadeOf	Door.ttl
+isOpen	Door.ttl
+isOpenedBy	Door.ttl
+locatedIn	Door.ttl
+lockType	Door.ttl
+madeOf	Door.ttl
+manufacturer	Door.ttl
+material	Door.ttl
+belongsCountry	President.ttl
+belongsTo	President.ttl
+bornOn	President.ttl
+countryLead	President.ttl
+countryServed	President.ttl
+endDate	President.ttl
+endOfPresidency	President.ttl
+firstLady	President.ttl
+hasAfter	President.ttl
+hasBeenPresident	President.ttl
+hasBefore	President.ttl
+hasContinent	President.ttl
+hasCountry	President.ttl
+hasEndTerm	President.ttl
+hasFirstName	President.ttl
+hasLastName	President.ttl
+hasName	President.ttl
+hasNationality	President.ttl
+hasPopulation	President.ttl
+hasPresidency	President.ttl
+hasPresident	President.ttl
+hasStartTerm	President.ttl
+hasTerm	President.ttl
+hasTermEnd	President.ttl
+hasTermPeriod	President.ttl
+hasTermStart	President.ttl
+inOfficeSince	President.ttl
+inaugurationDate	President.ttl
+isPresidentOf	President.ttl
+predecessor	President.ttl
+presidencyTerm	President.ttl
+presidentOf	President.ttl
+presidesOver	President.ttl
+servedAs	President.ttl
+servedAsPresident	President.ttl
+servedFrom	President.ttl
+servedUntil	President.ttl
+servesAs	President.ttl
+servesAsPresident	President.ttl
+servesIn	President.ttl
+startDate	President.ttl
+startOfPresidency	President.ttl
+successor	President.ttl
+termEnd	President.ttl
+termStart	President.ttl
+wasAffiliatedTo	President.ttl
+wasBornIn	President.ttl
+wasBornOn	President.ttl
+age	Others.ttl
+attends	Others.ttl
+description	Others.ttl
+gender	Others.ttl
+groupName	Others.ttl
+hasAge	Others.ttl
+hasAttribute	Others.ttl
+hasColor	Others.ttl
+hasLocation	Others.ttl
+hasManufacturer	Others.ttl
+hasName	Others.ttl
+hasNationality	Others.ttl
+hasOccupation	Others.ttl
+hasParameter	Others.ttl
+hasRelationshipWith	Others.ttl
+hasShape	Others.ttl
+hasSpecies	Others.ttl
+id	Others.ttl
+interactsWith	Others.ttl
+isConsideredOther	Others.ttl
+isProvided	Others.ttl
+livesIn	Others.ttl
+location	Others.ttl
+manufacturer	Others.ttl
+memberOf	Others.ttl
+name	Others.ttl
+othersAddress	Others.ttl
+othersAge	Others.ttl
+othersGender	Others.ttl
+othersName	Others.ttl
+othersNationality	Others.ttl
+othersOccupation	Others.ttl
+provides	Others.ttl
+relatedTo	Others.ttl
+species	Others.ttl
+age	Student.ttl
+attendance	Student.ttl
+attends	Student.ttl
+attendsCourse	Student.ttl
+attendsUniversity	Student.ttl
+course	Student.ttl
+courseCode	Student.ttl
+courseCredit	Student.ttl
+courseName	Student.ttl
+courseNumber	Student.ttl
+courseTitle	Student.ttl
+enrolledAt	Student.ttl
+enrolledIn	Student.ttl
+enrollmentYear	Student.ttl
+enrollsIn	Student.ttl
+firstName	Student.ttl
+gender	Student.ttl
+grades	Student.ttl
+hasAge	Student.ttl
+hasCourseCode	Student.ttl
+hasCourseTitle	Student.ttl
+hasGrade	Student.ttl
+hasID	Student.ttl
+hasLocation	Student.ttl
+hasMajor	Student.ttl
+hasMatriculationID	Student.ttl
+hasMinor	Student.ttl
+hasName	Student.ttl
+hasStudentID	Student.ttl
+hasUniversityName	Student.ttl
+id	Student.ttl
+isEnrolledIn	Student.ttl
+isEnrolledInCourse	Student.ttl
+isFullTime	Student.ttl
+isGraduateStudent	Student.ttl
+lastName	Student.ttl
+major	Student.ttl
+name	Student.ttl
+stud_id	Student.ttl
+studies	Student.ttl
+studiesAt	Student.ttl
+studiesCourse	Student.ttl
+studiesIn	Student.ttl
+studiesSubject	Student.ttl
+takes	Student.ttl
+takesCourseFrom	Student.ttl
+teaches	Student.ttl
+yearOfStudy	Student.ttl
+brand	Loveseat.ttl
+color	Loveseat.ttl
+depth	Loveseat.ttl
+hasColor	Loveseat.ttl
+hasColour	Loveseat.ttl
+hasDimension	Loveseat.ttl
+hasDimensions	Loveseat.ttl
+hasManufacturer	Loveseat.ttl
+hasMaterial	Loveseat.ttl
+hasSize	Loveseat.ttl
+hasStyle	Loveseat.ttl
+hasUpholstery	Loveseat.ttl
+hasWidth	Loveseat.ttl
+height	Loveseat.ttl
+isPartOfCollection	Loveseat.ttl
+isUpholstered	Loveseat.ttl
+isUsedIndoors	Loveseat.ttl
+isUsedOutdoors	Loveseat.ttl
+material	Loveseat.ttl
+materialUsed	Loveseat.ttl
+price	Loveseat.ttl
+seatingCapacity	Loveseat.ttl
+size	Loveseat.ttl
+width	Loveseat.ttl
+hasDuration	Minute.ttl
+hasMinute	Minute.ttl
+hasMinutes	Minute.ttl
+hasNumber	Minute.ttl
+hasNumberOfMinutes	Minute.ttl
+hasNumberOfSeconds	Minute.ttl
+hasNumericValue	Minute.ttl
+hasSeconds	Minute.ttl
+hasTemporalDuration	Minute.ttl
+hasUnit	Minute.ttl
+isEquivalentTo	Minute.ttl
+isMinuteIn	Minute.ttl
+minuteInHour	Minute.ttl
+minuteInTime	Minute.ttl
+numericDuration	Minute.ttl
+ofHour	Minute.ttl
+partOfHour	Minute.ttl
+secondInMinute	Minute.ttl
+secondInTime	Minute.ttl
+unitMinute	Minute.ttl
+address	Office.ttl
+belongsToOffice	Office.ttl
+computerOn	Office.ttl
+departmentName	Office.ttl
+departmentResponsibility	Office.ttl
+deskIn	Office.ttl
+email	Office.ttl
+employeeName	Office.ttl
+employeeRole	Office.ttl
+employees	Office.ttl
+hasChair	Office.ttl
+hasComputer	Office.ttl
+hasDepartment	Office.ttl
+hasDesk	Office.ttl
+hasEmployee	Office.ttl
+hasEquipment	Office.ttl
+hasFurniture	Office.ttl
+hasLocation	Office.ttl
+hasName	Office.ttl
+hasOffice	Office.ttl
+hasOfficeEquipment	Office.ttl
+hasOfficeNumber	Office.ttl
+hasRole	Office.ttl
+hasRoom	Office.ttl
+hasStaffMember	Office.ttl
+hasWorkstation	Office.ttl
+inCharge	Office.ttl
+includes	Office.ttl
+isOccupiedBy	Office.ttl
+isPartOf	Office.ttl
+leadsDepartment	Office.ttl
+locatedIn	Office.ttl
+location	Office.ttl
+manages	Office.ttl
+name	Office.ttl
+numberOfEmployees	Office.ttl
+officeID	Office.ttl
+officeManager	Office.ttl
+officeNumber	Office.ttl
+officeSize	Office.ttl
+partOf	Office.ttl
+performTask	Office.ttl
+phoneNumber	Office.ttl
+staffName	Office.ttl
+staffRole	Office.ttl
+useFurniture	Office.ttl
+uses	Office.ttl
+usesChair	Office.ttl
+usesDesk	Office.ttl
+usesEquipment	Office.ttl
+worksAt	Office.ttl
+worksIn	Office.ttl
+worksInDepartment	Office.ttl
+applies	Law.ttl
+appliesIn	Law.ttl
+appliesTo	Law.ttl
+authoritativeEntity	Law.ttl
+correspondsTo	Law.ttl
+decides	Law.ttl
+defendedIn	Law.ttl
+enactedDate	Law.ttl
+enforces	Law.ttl
+follows	Law.ttl
+handles	Law.ttl
+happensInJurisdiction	Law.ttl
+hasArticle	Law.ttl
+hasCase	Law.ttl
+hasCaseNumber	Law.ttl
+hasCitation	Law.ttl
+hasConstitution	Law.ttl
+hasCourt	Law.ttl
+hasEffectiveDate	Law.ttl
+hasEnactingBody	Law.ttl
+hasExperienceIn	Law.ttl
+hasIdentifier	Law.ttl
+hasJurisdiction	Law.ttl
+hasLawNumber	Law.ttl
+hasLegalIssue	Law.ttl
+hasLocation	Law.ttl
+hasName	Law.ttl
+hasNumber	Law.ttl
+hasRepresented	Law.ttl
+hasStatus	Law.ttl
+hasStatute	Law.ttl
+hasText	Law.ttl
+hasTitle	Law.ttl
+hasYear	Law.ttl
+hasYearImplemented	Law.ttl
+involves	Law.ttl
+isApplicableTo	Law.ttl
+isEnforcedBy	Law.ttl
+isPartOf	Law.ttl
+isRatifiedBy	Law.ttl
+isSpecializedIn	Law.ttl
+judgedIn	Law.ttl
+judges	Law.ttl
+juridiction	Law.ttl
+lawSpeciality	Law.ttl
+name	Law.ttl
+passedBy	Law.ttl
+practice	Law.ttl
+practices	Law.ttl
+practicesIn	Law.ttl
+practicesLaw	Law.ttl
+relatedTo	Law.ttl
+represents	Law.ttl
+title	Law.ttl
+activities	Night.ttl
+conceptOfNight	Night.ttl
+duration	Night.ttl
+end	Night.ttl
+endTime	Night.ttl
+endsAt	Night.ttl
+experiences	Night.ttl
+hasActivity	Night.ttl
+hasAurora	Night.ttl
+hasDarkness	Night.ttl
+hasDuration	Night.ttl
+hasEnd	Night.ttl
+hasEndHour	Night.ttl
+hasEndTime	Night.ttl
+hasInSky	Night.ttl
+hasLength	Night.ttl
+hasMoon	Night.ttl
+hasMoonPhase	Night.ttl
+hasNight	Night.ttl
+hasStar	Night.ttl
+hasStarVisibility	Night.ttl
+hasStarsVisible	Night.ttl
+hasStart	Night.ttl
+hasStartHour	Night.ttl
+hasStartTime	Night.ttl
+hasTemperature	Night.ttl
+hasWeather	Night.ttl
+isAstronomicalNight	Night.ttl
+isDark	Night.ttl
+isFollowedBy	Night.ttl
+isIlluminatedBy	Night.ttl
+isNightOf	Night.ttl
+isPartOf	Night.ttl
+isPartOfDay	Night.ttl
+isPresentDuring	Night.ttl
+isQuiet	Night.ttl
+moonPhase	Night.ttl
+nightSky	Night.ttl
+observe	Night.ttl
+observing	Night.ttl
+sleeping	Night.ttl
+start	Night.ttl
+startTime	Night.ttl
+startsAt	Night.ttl
+visibleDuring	Night.ttl
+weather	Night.ttl
+date	Moment.ttl
+description	Moment.ttl
+duration	Moment.ttl
+endDate	Moment.ttl
+endTime	Moment.ttl
+eventDescription	Moment.ttl
+fromEvent	Moment.ttl
+hasBegin	Moment.ttl
+hasBeginning	Moment.ttl
+hasDate	Moment.ttl
+hasDateTime	Moment.ttl
+hasDescription	Moment.ttl
+hasDuration	Moment.ttl
+hasEnd	Moment.ttl
+hasEndTime	Moment.ttl
+hasEvent	Moment.ttl
+hasInstant	Moment.ttl
+hasLocation	Moment.ttl
+hasMoment	Moment.ttl
+hasMomentProperty	Moment.ttl
+hasName	Moment.ttl
+hasPeriod	Moment.ttl
+hasStartTime	Moment.ttl
+hasTime	Moment.ttl
+hasTimeInstant	Moment.ttl
+inLocation	Moment.ttl
+inTime	Moment.ttl
+isAfter	Moment.ttl
+isMomentOf	Moment.ttl
+isPartOf	Moment.ttl
+isPriorTo	Moment.ttl
+periodEnd	Moment.ttl
+periodStart	Moment.ttl
+startDate	Moment.ttl
+startTime	Moment.ttl
+time	Moment.ttl
+assignedTo	Case.ttl
+associatedWith	Case.ttl
+belongsTo	Case.ttl
+caseDescription	Case.ttl
+caseId	Case.ttl
+caseNumber	Case.ttl
+caseStatus	Case.ttl
+caseTitle	Case.ttl
+caseType	Case.ttl
+creationDate	Case.ttl
+dateClosed	Case.ttl
+dateOpened	Case.ttl
+description	Case.ttl
+endDate	Case.ttl
+handles	Case.ttl
+hasCaseDate	Case.ttl
+hasCaseDescription	Case.ttl
+hasCaseID	Case.ttl
+hasCaseId	Case.ttl
+hasCaseName	Case.ttl
+hasCaseNumber	Case.ttl
+hasCaseStatus	Case.ttl
+hasCaseTitle	Case.ttl
+hasCaseType	Case.ttl
+hasDateOpened	Case.ttl
+hasDefendant	Case.ttl
+hasDescription	Case.ttl
+hasEndDate	Case.ttl
+hasEntityRole	Case.ttl
+hasID	Case.ttl
+hasIdentifier	Case.ttl
+hasJudge	Case.ttl
+hasLawyer	Case.ttl
+hasParties	Case.ttl
+hasParty	Case.ttl
+hasPlaintiff	Case.ttl
+hasRelatedCase	Case.ttl
+hasStartDate	Case.ttl
+hasStatus	Case.ttl
+hasSubject	Case.ttl
+hasTitle	Case.ttl
+id	Case.ttl
+investigation	Case.ttl
+investigationEndDate	Case.ttl
+investigationStartDate	Case.ttl
+investigator	Case.ttl
+involvedParties	Case.ttl
+involves	Case.ttl
+isOpen	Case.ttl
+isRelatedTo	Case.ttl
+judge	Case.ttl
+lawyerName	Case.ttl
+personName	Case.ttl
+representedIn	Case.ttl
+startDate	Case.ttl
+status	Case.ttl
+title	Case.ttl
+eyeCount	Head.ttl
+hasEar	Head.ttl
+hasEars	Head.ttl
+hasEye	Head.ttl
+hasEyeColor	Head.ttl
+hasEyes	Head.ttl
+hasFace	Head.ttl
+hasForehead	Head.ttl
+hasHair	Head.ttl
+hasHairColor	Head.ttl
+hasHead	Head.ttl
+hasMouth	Head.ttl
+hasNose	Head.ttl
+hasPart	Head.ttl
+hasSensoryOrgan	Head.ttl
+hasSkin	Head.ttl
+provides	Head.ttl
+hasColor	chair.ttl
+hasColour	chair.ttl
+hasDepth	chair.ttl
+hasHeight	chair.ttl
+hasMaterial	chair.ttl
+hasPrice	chair.ttl
+hasStyle	chair.ttl
+hasWeightCapacity	chair.ttl
+hasWidth	chair.ttl
+manufacturer	chair.ttl
+material	chair.ttl
+amount	Money.ttl
+code	Money.ttl
+coinValue	Money.ttl
+country	Money.ttl
+currency	Money.ttl
+dateIssued	Money.ttl
+denomination	Money.ttl
+hasAmount	Money.ttl
+hasCurrency	Money.ttl
+hasCurrencyCode	Money.ttl
+hasDenomination	Money.ttl
+hasMaterial	Money.ttl
+hasValue	Money.ttl
+isCurrencyOf	Money.ttl
+isLegalTender	Money.ttl
+isLegalTenderIn	Money.ttl
+issuer	Money.ttl
+material	Money.ttl
+noteValue	Money.ttl
+pays	Money.ttl
+performsTransaction	Money.ttl
+provides	Money.ttl
+transfers	Money.ttl
+value	Money.ttl
+description	Kind.ttl
+example	Kind.ttl
+hasCategory	Kind.ttl
+hasCharacteristic	Kind.ttl
+hasExample	Kind.ttl
+hasInstances	Kind.ttl
+hasKind	Kind.ttl
+hasName	Kind.ttl
+hasPart	Kind.ttl
+hasProperty	Kind.ttl
+hasQuality	Kind.ttl
+hasSubKind	Kind.ttl
+hasSuperKind	Kind.ttl
+hasType	Kind.ttl
+isKindOf	Kind.ttl
+name	Kind.ttl
+provide	Kind.ttl
+studiesFrom	Kind.ttl
+teaches	Kind.ttl
+understandOtherKind	Kind.ttl
+age	Kid.ttl
+attends	Kid.ttl
+attendsSchool	Kid.ttl
+gender	Kid.ttl
+goesToSchool	Kid.ttl
+grade	Kid.ttl
+guardian	Kid.ttl
+hasAddress	Kid.ttl
+hasAge	Kid.ttl
+hasGender	Kid.ttl
+hasHobby	Kid.ttl
+hasName	Kid.ttl
+hasParent	Kid.ttl
+hasPet	Kid.ttl
+hasSchoolName	Kid.ttl
+hasSibling	Kid.ttl
+hasToy	Kid.ttl
+hobbies	Kid.ttl
+isParentOf	Kid.ttl
+isStudentOf	Kid.ttl
+name	Kid.ttl
+participatesIn	Kid.ttl
+playsSport	Kid.ttl
+school	Kid.ttl
+studiesAt	Kid.ttl
+breakfast	Morning.ttl
+breakfastTime	Morning.ttl
+coffee	Morning.ttl
+does	Morning.ttl
+end_time	Morning.ttl
+endsAt	Morning.ttl
+exercise	Morning.ttl
+follows	Morning.ttl
+hasActivity	Morning.ttl
+hasAlarm	Morning.ttl
+hasBreakfast	Morning.ttl
+hasEndTime	Morning.ttl
+hasMeal	Morning.ttl
+hasMorning	Morning.ttl
+hasPart	Morning.ttl
+hasRoutine	Morning.ttl
+hasStartTime	Morning.ttl
+includes	Morning.ttl
+isEarly	Morning.ttl
+isPartOf	Morning.ttl
+isPartOfDay	Morning.ttl
+start_time	Morning.ttl
+startsAt	Morning.ttl
+startsWith	Morning.ttl
+sunrise	Morning.ttl
+time	Morning.ttl
+wakeup	Morning.ttl
+workStart	Morning.ttl
+age	Mother.ttl
+daughterOf	Mother.ttl
+givenBirth	Mother.ttl
+givesBirthTo	Mother.ttl
+hasAge	Mother.ttl
+hasChild	Mother.ttl
+hasMother	Mother.ttl
+hasName	Mother.ttl
+hasOccupation	Mother.ttl
+hasOffspring	Mother.ttl
+hasParent	Mother.ttl
+hasRelationship	Mother.ttl
+hasSpouse	Mother.ttl
+isDaughterOf	Mother.ttl
+isMarried	Mother.ttl
+isMotherOf	Mother.ttl
+isSonOf	Mother.ttl
+isWidowed	Mother.ttl
+motherOf	Mother.ttl
+name	Mother.ttl
+occupation	Mother.ttl
+sonOf	Mother.ttl
+age	Family.ttl
+belongsTo	Family.ttl
+birthDate	Family.ttl
+birthdate	Family.ttl
+child	Family.ttl
+childOf	Family.ttl
+dateOfBirth	Family.ttl
+deathDate	Family.ttl
+divorceDate	Family.ttl
+familyMember	Family.ttl
+father	Family.ttl
+firstName	Family.ttl
+gender	Family.ttl
+hasAge	Family.ttl
+hasBirthDate	Family.ttl
+hasChild	Family.ttl
+hasDateOfBirth	Family.ttl
+hasDaughter	Family.ttl
+hasFather	Family.ttl
+hasFirstName	Family.ttl
+hasGender	Family.ttl
+hasLastName	Family.ttl
+hasMember	Family.ttl
+hasMother	Family.ttl
+hasName	Family.ttl
+hasParent	Family.ttl
+hasSibling	Family.ttl
+hasSon	Family.ttl
+hasSpouse	Family.ttl
+isAlive	Family.ttl
+isChildOf	Family.ttl
+isFemale	Family.ttl
+isMale	Family.ttl
+isMarriedTo	Family.ttl
+isParentOf	Family.ttl
+isSiblingOf	Family.ttl
+lastName	Family.ttl
+marriageDate	Family.ttl
+married	Family.ttl
+member	Family.ttl
+mother	Family.ttl
+name	Family.ttl
+partOfFamily	Family.ttl
+sibling	Family.ttl
+spouseOf	Family.ttl
+area	Country.ttl
+callingCode	Country.ttl
+capital	Country.ttl
+capitalCity	Country.ttl
+cityName	Country.ttl
+cityPopulation	Country.ttl
+continent	Country.ttl
+currency	Country.ttl
+hasArea	Country.ttl
+hasBorderWith	Country.ttl
+hasCapital	Country.ttl
+hasCityName	Country.ttl
+hasCurrency	Country.ttl
+hasGDP	Country.ttl
+hasLanguageName	Country.ttl
+hasName	Country.ttl
+hasOfficialLanguage	Country.ttl
+hasPopulation	Country.ttl
+isInContinent	Country.ttl
+isLocatedIn	Country.ttl
+isLocatedInContinent	Country.ttl
+language	Country.ttl
+name	Country.ttl
+officialLanguage	Country.ttl
+population	Country.ttl
+components	Air.ttl
+composition	Air.ttl
+consistsOf	Air.ttl
+contains	Air.ttl
+containsCarbonDioxide	Air.ttl
+containsNitrogen	Air.ttl
+containsOxygen	Air.ttl
+hasAirPollution	Air.ttl
+hasComponent	Air.ttl
+hasComposition	Air.ttl
+hasHumidity	Air.ttl
+hasNitrogen	Air.ttl
+hasOtherGases	Air.ttl
+hasOxygen	Air.ttl
+hasPart	Air.ttl
+hasPollutants	Air.ttl
+hasPollutionLevel	Air.ttl
+hasPressure	Air.ttl
+hasQuality	Air.ttl
+hasQualityIndex	Air.ttl
+hasTemperature	Air.ttl
+hasVolume	Air.ttl
+humidity	Air.ttl
+isComposedOf	Air.ttl
+isConditioned	Air.ttl
+isInArea	Air.ttl
+isPolluted	Air.ttl
+percentage	Air.ttl
+pollutant	Air.ttl
+polluted	Air.ttl
+pollution	Air.ttl
+pressure	Air.ttl
+provides	Air.ttl
+quality	Air.ttl
+temperature	Air.ttl
+abstract	Research.ttl
+affiliatedInstitution	Research.ttl
+affiliation	Research.ttl
+authorOf	Research.ttl
+belongsTo	Research.ttl
+conducts	Research.ttl
+conductsResearch	Research.ttl
+contributesTo	Research.ttl
+description	Research.ttl
+dueDate	Research.ttl
+employs	Research.ttl
+endDate	Research.ttl
+focusesOn	Research.ttl
+funding	Research.ttl
+hasAffiliation	Research.ttl
+hasAreaOfResearch	Research.ttl
+hasAuthor	Research.ttl
+hasDiploma	Research.ttl
+hasEndDate	Research.ttl
+hasName	Research.ttl
+hasPublication	Research.ttl
+hasPublicationDate	Research.ttl
+hasResearchTopic	Research.ttl
+hasResearcher	Research.ttl
+hasStartDate	Research.ttl
+hasSubject	Research.ttl
+hasSubjectField	Research.ttl
+hasTitle	Research.ttl
+hasTopic	Research.ttl
+has_publication	Research.ttl
+has_researcher	Research.ttl
+inField	Research.ttl
+institution	Research.ttl
+isAbout	Research.ttl
+isProducedBy	Research.ttl
+isWrittenBy	Research.ttl
+name	Research.ttl
+outputs	Research.ttl
+performs	Research.ttl
+publication	Research.ttl
+publishedIn	Research.ttl
+publishes	Research.ttl
+researchTopic	Research.ttl
+researchedBy	Research.ttl
+researcher	Research.ttl
+resultsIn	Research.ttl
+specializesIn	Research.ttl
+startDate	Research.ttl
+studies	Research.ttl
+study	Research.ttl
+supports	Research.ttl
+title	Research.ttl
+topic	Research.ttl
+uses	Research.ttl
+usesMethod	Research.ttl
+workAt	Research.ttl
+areaOfWork	Job.ttl
+belongsToIndustry	Job.ttl
+description	Job.ttl
+employee	Job.ttl
+employer	Job.ttl
+employerName	Job.ttl
+employmentType	Job.ttl
+endDate	Job.ttl
+endTime	Job.ttl
+hasCompany	Job.ttl
+hasDescription	Job.ttl
+hasEmployer	Job.ttl
+hasEndDate	Job.ttl
+hasJob	Job.ttl
+hasJobTitle	Job.ttl
+hasLocation	Job.ttl
+hasOrganization	Job.ttl
+hasPosition	Job.ttl
+hasResponsibilities	Job.ttl
+hasSalary	Job.ttl
+hasStartDate	Job.ttl
+hasTitle	Job.ttl
+inField	Job.ttl
+industry	Job.ttl
+isFullTime	Job.ttl
+isPartOfIndustry	Job.ttl
+jobDescription	Job.ttl
+jobID	Job.ttl
+jobId	Job.ttl
+jobLocation	Job.ttl
+jobSalary	Job.ttl
+jobTitle	Job.ttl
+location	Job.ttl
+locationName	Job.ttl
+name	Job.ttl
+positionTitle	Job.ttl
+postedJob	Job.ttl
+requiresEducation	Job.ttl
+requiresExperience	Job.ttl
+requiresSkill	Job.ttl
+requiresSkills	Job.ttl
+salary	Job.ttl
+skillsRequired	Job.ttl
+startDate	Job.ttl
+startTime	Job.ttl
+title	Job.ttl
+worksAs	Job.ttl
+worksFor	Job.ttl
+hasColor	Chair.ttl
+hasColour	Chair.ttl
+hasDepth	Chair.ttl
+hasHeight	Chair.ttl
+hasMaterial	Chair.ttl
+hasPrice	Chair.ttl
+hasStyle	Chair.ttl
+hasWeightCapacity	Chair.ttl
+hasWidth	Chair.ttl
+manufacturer	Chair.ttl
+material	Chair.ttl
+belongs_to	Point.ttl
+hasPoint	Point.ttl
+hasX	Point.ttl
+hasXCoordinate	Point.ttl
+hasY	Point.ttl
+hasYCoordinate	Point.ttl
+hasZ	Point.ttl
+hasZCoordinate	Point.ttl
+isOrigin	Point.ttl
+locatedInPlane	Point.ttl
+x	Point.ttl
+xCoordinate	Point.ttl
+y	Point.ttl
+yCoordinate	Point.ttl
+zCoordinate	Point.ttl
+areaUnit	Area.ttl
+areaValue	Area.ttl
+hasArea	Area.ttl
+hasLocation	Area.ttl
+hasName	Area.ttl
+hasSize	Area.ttl
+hasType	Area.ttl
+hasUnit	Area.ttl
+hasValue	Area.ttl
+inSquareMiles	Area.ttl
+length	Area.ttl
+radius	Area.ttl
+sideLength	Area.ttl
+sides	Area.ttl
+unit	Area.ttl
+unitOfMeasure	Area.ttl
+unitOfMeasurement	Area.ttl
+value	Area.ttl
+width	Area.ttl
+description	Thing.ttl
+existsIn	Thing.ttl
+hasAbstract	Thing.ttl
+hasColor	Thing.ttl
+hasDescription	Thing.ttl
+hasName	Thing.ttl
+hasPart	Thing.ttl
+hasProperty	Thing.ttl
+hasShape	Thing.ttl
+hasSize	Thing.ttl
+hasSymbol	Thing.ttl
+hasTexture	Thing.ttl
+involves	Thing.ttl
+isComposedOf	Thing.ttl
+isMadeOf	Thing.ttl
+isPartOf	Thing.ttl
+isUsedFor	Thing.ttl
+name	Thing.ttl
+age	Friend.ttl
+commonInterest	Friend.ttl
+friend	Friend.ttl
+friendOf	Friend.ttl
+hasAddress	Friend.ttl
+hasAge	Friend.ttl
+hasCommonInterest	Friend.ttl
+hasDuration	Friend.ttl
+hasFriend	Friend.ttl
+hasFriendshipEndDate	Friend.ttl
+hasFriendshipStartDate	Friend.ttl
+hasGender	Friend.ttl
+hasKnownSince	Friend.ttl
+hasName	Friend.ttl
+hasPhoneNumber	Friend.ttl
+hasSharedExperience	Friend.ttl
+isClose	Friend.ttl
+isFriendOf	Friend.ttl
+isFriendWith	Friend.ttl
+knownSince	Friend.ttl
+knows	Friend.ttl
+knowsSince	Friend.ttl
+location	Friend.ttl
+name	Friend.ttl
+placeMet	Friend.ttl
+sharedInterests	Friend.ttl
+sharesInterestWith	Friend.ttl
+since	Friend.ttl
+endTime	Hour.ttl
+hasHour	Hour.ttl
+hasMinute	Hour.ttl
+hasMinutes	Hour.ttl
+hasNumber	Hour.ttl
+hasNumberOfHours	Hour.ttl
+hasNumberOfMinutes	Hour.ttl
+hasSecond	Hour.ttl
+hasTemporalDuration	Hour.ttl
+hourOfDay	Hour.ttl
+hourValue	Hour.ttl
+hours	Hour.ttl
+isInTimeZone	Hour.ttl
+isPartOf	Hour.ttl
+isPartOfDay	Hour.ttl
+startTime	Hour.ttl
+developedBy	Game.ttl
+developer	Game.ttl
+genre	Game.ttl
+hasAgeRating	Game.ttl
+hasDeveloper	Game.ttl
+hasGenre	Game.ttl
+hasName	Game.ttl
+hasPlatform	Game.ttl
+hasPlayer	Game.ttl
+hasPlayerCount	Game.ttl
+hasPlayerMode	Game.ttl
+hasPrice	Game.ttl
+hasRating	Game.ttl
+hasReleaseDate	Game.ttl
+hasReview	Game.ttl
+hasRule	Game.ttl
+hasSkillLevel	Game.ttl
+hasTitle	Game.ttl
+isAvailableOn	Game.ttl
+isDevelopedBy	Game.ttl
+name	Game.ttl
+platform	Game.ttl
+player	Game.ttl
+playerName	Game.ttl
+plays	Game.ttl
+playsGame	Game.ttl
+publisher	Game.ttl
+rating	Game.ttl
+releaseDate	Game.ttl
+releaseYear	Game.ttl
+reviewOf	Game.ttl
+reviewRating	Game.ttl
+reviewScore	Game.ttl
+reviewText	Game.ttl
+title	Game.ttl
+wasReleasedIn	Game.ttl
+actionName	Reason.ttl
+actionTriggeredBy	Reason.ttl
+causedBy	Reason.ttl
+causes	Reason.ttl
+causesEvent	Reason.ttl
+contains	Reason.ttl
+derivedFrom	Reason.ttl
+explains	Reason.ttl
+hasConclusion	Reason.ttl
+hasEvent	Reason.ttl
+hasEvidence	Reason.ttl
+hasLogicalBasis	Reason.ttl
+hasPremise	Reason.ttl
+hasPurpose	Reason.ttl
+hasReason	Reason.ttl
+justifies	Reason.ttl
+leadsTo	Reason.ttl
+provides	Reason.ttl
+providesReason	Reason.ttl
+providesReasonFor	Reason.ttl
+reason	Reason.ttl
+reasonFor	Reason.ttl
+reasonText	Reason.ttl
+relatedToDecision	Reason.ttl
+relatedToEvent	Reason.ttl
+usesReasoningType	Reason.ttl
+belongsTo	History.ttl
+belongsToEra	History.ttl
+belongsToPeriod	History.ttl
+birthDate	History.ttl
+content	History.ttl
+date	History.ttl
+deathDate	History.ttl
+discovered	History.ttl
+hadParticipant	History.ttl
+hasCharacter	History.ttl
+hasDate	History.ttl
+hasDescription	History.ttl
+hasEndDate	History.ttl
+hasEvent	History.ttl
+hasHappenedIn	History.ttl
+hasLocation	History.ttl
+hasName	History.ttl
+hasPeriod	History.ttl
+hasStartDate	History.ttl
+heldIn	History.ttl
+influentialPerson	History.ttl
+involvedIn	History.ttl
+isPartOf	History.ttl
+livedDuring	History.ttl
+location	History.ttl
+name	History.ttl
+occurredAt	History.ttl
+occurredDuring	History.ttl
+occurredIn	History.ttl
+occursIn	History.ttl
+participatedIn	History.ttl
+tookPlaceDuring	History.ttl
+brand	Sofa.ttl
+color	Sofa.ttl
+dimensions	Sofa.ttl
+hasBrand	Sofa.ttl
+hasColor	Sofa.ttl
+hasCushion	Sofa.ttl
+hasDimension	Sofa.ttl
+hasFabric	Sofa.ttl
+hasHeight	Sofa.ttl
+hasLength	Sofa.ttl
+hasManufacturer	Sofa.ttl
+hasMaterial	Sofa.ttl
+hasPrice	Sofa.ttl
+hasSeats	Sofa.ttl
+hasSize	Sofa.ttl
+hasStyle	Sofa.ttl
+hasWidth	Sofa.ttl
+isUsedIn	Sofa.ttl
+manufacturedBy	Sofa.ttl
+material	Sofa.ttl
+numSeats	Sofa.ttl
+price	Sofa.ttl
+seatsNumber	Sofa.ttl
+size	Sofa.ttl
+style	Sofa.ttl
+typeOfMaterial	Sofa.ttl
+weight	Sofa.ttl
+address	Information.ttl
+author	Information.ttl
+businessAddress	Information.ttl
+businessName	Information.ttl
+contains	Information.ttl
+containsData	Information.ttl
+containsMetadata	Information.ttl
+content	Information.ttl
+creationDate	Information.ttl
+dataType	Information.ttl
+dateCreated	Information.ttl
+encodingMethod	Information.ttl
+encryptionMethod	Information.ttl
+engagesIn	Information.ttl
+hasAuthor	Information.ttl
+hasAvailability	Information.ttl
+hasConfidentiality	Information.ttl
+hasContent	Information.ttl
+hasDataType	Information.ttl
+hasDate	Information.ttl
+hasFormat	Information.ttl
+hasInformation	Information.ttl
+hasIntegrity	Information.ttl
+hasPublicationDate	Information.ttl
+hasReference	Information.ttl
+hasSource	Information.ttl
+hasSubject	Information.ttl
+hasTimestamp	Information.ttl
+hasTitle	Information.ttl
+hasType	Information.ttl
+hasValue	Information.ttl
+information	Information.ttl
+informationDescription	Information.ttl
+informationSource	Information.ttl
+isAbout	Information.ttl
+isBasedOn	Information.ttl
+isBasisFor	Information.ttl
+isConfidential	Information.ttl
+isDerivedFrom	Information.ttl
+isRelevantTo	Information.ttl
+isStoredIn	Information.ttl
+isVerified	Information.ttl
+name	Information.ttl
+provides	Information.ttl
+relatedInformation	Information.ttl
+source	Information.ttl
+teaches	Information.ttl
+title	Information.ttl
+address	Person.ttl
+age	Person.ttl
+birthDate	Person.ttl
+birthPlace	Person.ttl
+birthdate	Person.ttl
+bornIn	Person.ttl
+bornOnDate	Person.ttl
+children	Person.ttl
+city	Person.ttl
+country	Person.ttl
+email	Person.ttl
+gender	Person.ttl
+hasAge	Person.ttl
+hasChild	Person.ttl
+hasFirstName	Person.ttl
+hasGender	Person.ttl
+hasLastName	Person.ttl
+hasName	Person.ttl
+hasOccupation	Person.ttl
+hasParent	Person.ttl
+hasSibling	Person.ttl
+hasSpouse	Person.ttl
+isEmployed	Person.ttl
+isMarried	Person.ttl
+isMarriedTo	Person.ttl
+jobTitle	Person.ttl
+livesIn	Person.ttl
+name	Person.ttl
+nationality	Person.ttl
+occupation	Person.ttl
+phone	Person.ttl
+postalCode	Person.ttl
+residence	Person.ttl
+residesIn	Person.ttl
+state	Person.ttl
+street	Person.ttl
+author	Story.ttl
+character	Story.ttl
+characterName	Story.ttl
+genre	Story.ttl
+hasAuthor	Story.ttl
+hasCharacter	Story.ttl
+hasCharacterName	Story.ttl
+hasCharacters	Story.ttl
+hasDescription	Story.ttl
+hasGenre	Story.ttl
+hasLocation	Story.ttl
+hasName	Story.ttl
+hasPlot	Story.ttl
+hasSetting	Story.ttl
+hasTheme	Story.ttl
+hasTitle	Story.ttl
+name	Story.ttl
+plot	Story.ttl
+publicationDate	Story.ttl
+publicationYear	Story.ttl
+role	Story.ttl
+title	Story.ttl
+writtenBy	Story.ttl
+area	World.ttl
+capital	World.ttl
+contains	World.ttl
+continent	World.ttl
+continentOf	World.ttl
+countryOf	World.ttl
+drives	World.ttl
+hasAge	World.ttl
+hasArea	World.ttl
+hasBorderWith	World.ttl
+hasCapital	World.ttl
+hasCity	World.ttl
+hasContinent	World.ttl
+hasCountry	World.ttl
+hasLanguage	World.ttl
+hasMountain	World.ttl
+hasName	World.ttl
+hasPart	World.ttl
+hasPopulation	World.ttl
+hasReligion	World.ttl
+hasRiver	World.ttl
+hasSea	World.ttl
+hosts	World.ttl
+inContinent	World.ttl
+inWorld	World.ttl
+isFamousFor	World.ttl
+isLocatedIn	World.ttl
+isPartOf	World.ttl
+language	World.ttl
+livesIn	World.ttl
+locatedIn	World.ttl
+memberOf	World.ttl
+name	World.ttl
+partOf	World.ttl
+partOfContinent	World.ttl
+partOfCountry	World.ttl
+population	World.ttl
+populationOf	World.ttl
+size	World.ttl
+spokenIn	World.ttl
+surroundedBy	World.ttl
+hasAge	Woman.ttl
+hasBirthDate	Woman.ttl
+hasBirthdate	Woman.ttl
+hasChild	Woman.ttl
+hasChildren	Woman.ttl
+hasGender	Woman.ttl
+hasMother	Woman.ttl
+hasName	Woman.ttl
+hasNationality	Woman.ttl
+hasOccupation	Woman.ttl
+isDaughter	Woman.ttl
+isEducatedIn	Woman.ttl
+isEmployed	Woman.ttl
+isMarried	Woman.ttl
+isMother	Woman.ttl
+isMotherOf	Woman.ttl
+isWifeOf	Woman.ttl
+isWoman	Woman.ttl
+womanhasAge	Woman.ttl
+womanhasName	Woman.ttl
+womanhasNationality	Woman.ttl
+worksIn	Woman.ttl
+addressCountry	Place.ttl
+addressLocality	Place.ttl
+city	Place.ttl
+containedInPlace	Place.ttl
+country	Place.ttl
+countryOf	Place.ttl
+hasAddress	Place.ttl
+hasArea	Place.ttl
+hasLatitude	Place.ttl
+hasLocation	Place.ttl
+hasLongitude	Place.ttl
+hasName	Place.ttl
+hasPopulation	Place.ttl
+hasPostalAddress	Place.ttl
+hasType	Place.ttl
+isLocatedIn	Place.ttl
+isPartOf	Place.ttl
+latitude	Place.ttl
+locatedIn	Place.ttl
+location	Place.ttl
+longitude	Place.ttl
+name	Place.ttl
+placeName	Place.ttl
+population	Place.ttl
+postCode	Place.ttl
+streetAddress	Place.ttl
+createdOn	Group.ttl
+creationDate	Group.ttl
+description	Group.ttl
+establishedDate	Group.ttl
+groupDescription	Group.ttl
+groupID	Group.ttl
+groupMember	Group.ttl
+groupName	Group.ttl
+groupSize	Group.ttl
+hasAge	Group.ttl
+hasGroupName	Group.ttl
+hasGroupSize	Group.ttl
+hasLeader	Group.ttl
+hasMember	Group.ttl
+hasName	Group.ttl
+hasRole	Group.ttl
+isPartOf	Group.ttl
+leader	Group.ttl
+member	Group.ttl
+memberName	Group.ttl
+memberOf	Group.ttl
+memberRole	Group.ttl
+name	Group.ttl
+ofType	Group.ttl
+size	Group.ttl
+accommodates	Room.ttl
+accommodatesPerson	Room.ttl
+area	Room.ttl
+belongsInFloor	Room.ttl
+belongsTo	Room.ttl
+belongsToBuilding	Room.ttl
+belongsToFloor	Room.ttl
+capacity	Room.ttl
+color	Room.ttl
+floorArea	Room.ttl
+hasArea	Room.ttl
+hasCapacity	Room.ttl
+hasDoor	Room.ttl
+hasFunction	Room.ttl
+hasFurniture	Room.ttl
+hasName	Room.ttl
+hasNumber	Room.ttl
+hasOccupant	Room.ttl
+hasRoom	Room.ttl
+hasRoomNumber	Room.ttl
+hasSize	Room.ttl
+hasType	Room.ttl
+hasWindow	Room.ttl
+isLocatedIn	Room.ttl
+isOccupied	Room.ttl
+isOfType	Room.ttl
+isPartOf	Room.ttl
+locatedIn	Room.ttl
+name	Room.ttl
+number	Room.ttl
+roomName	Room.ttl
+roomNumber	Room.ttl
+roomOccupancy	Room.ttl
+roomType	Room.ttl
+size	Room.ttl
+type	Room.ttl
+typeOfRoom	Room.ttl
+boilingPoint	Water.ttl
+containMinerals	Water.ttl
+containsSalt	Water.ttl
+depth	Water.ttl
+freezingPoint	Water.ttl
+hardness	Water.ttl
+hasForm	Water.ttl
+hasPH	Water.ttl
+hasPHValue	Water.ttl
+hasPh	Water.ttl
+hasPhysicalState	Water.ttl
+hasSalinity	Water.ttl
+hasSaltContent	Water.ttl
+hasSource	Water.ttl
+hasState	Water.ttl
+hasTemperature	Water.ttl
+hasType	Water.ttl
+hasWaterProperty	Water.ttl
+isComposedOf	Water.ttl
+isDrinkingSource	Water.ttl
+isEssentialFor	Water.ttl
+isFreshWater	Water.ttl
+isFrozen	Water.ttl
+isHabitatFor	Water.ttl
+isPolluted	Water.ttl
+isPotable	Water.ttl
+isSaltWater	Water.ttl
+isSourceOf	Water.ttl
+pH	Water.ttl
+pollutants	Water.ttl
+provides	Water.ttl
+salinity	Water.ttl
+source	Water.ttl
+temperature	Water.ttl
+usedIn	Water.ttl
+water	Water.ttl
+address	House.ttl
+area	House.ttl
+hasAddress	House.ttl
+hasArea	House.ttl
+hasBackyard	House.ttl
+hasBathrooms	House.ttl
+hasBedrooms	House.ttl
+hasDoor	House.ttl
+hasGarage	House.ttl
+hasGarden	House.ttl
+hasLivingRoom	House.ttl
+hasName	House.ttl
+hasNumberOfRooms	House.ttl
+hasOwner	House.ttl
+hasPrice	House.ttl
+hasRoom	House.ttl
+hasRooms	House.ttl
+hasWindow	House.ttl
+isDetached	House.ttl
+isLocatedIn	House.ttl
+isOccupied	House.ttl
+isOwnedBy	House.ttl
+numberOfRooms	House.ttl
+ownedBy	House.ttl
+owner	House.ttl
+owns	House.ttl
+roomType	House.ttl
+beginningOfDay	Day.ttl
+dayOfMonth	Day.ttl
+dayOfWeek	Day.ttl
+dayOfYear	Day.ttl
+endOfDay	Day.ttl
+endsAt	Day.ttl
+eventType	Day.ttl
+hasActivity	Day.ttl
+hasAfternoon	Day.ttl
+hasDate	Day.ttl
+hasDay	Day.ttl
+hasDayName	Day.ttl
+hasDayNumber	Day.ttl
+hasDayOfMonth	Day.ttl
+hasDayOfTheWeek	Day.ttl
+hasDayOfWeek	Day.ttl
+hasDayOfYear	Day.ttl
+hasDayPart	Day.ttl
+hasDaylight	Day.ttl
+hasDaylightDuration	Day.ttl
+hasEndTime	Day.ttl
+hasEvening	Day.ttl
+hasEvent	Day.ttl
+hasHours	Day.ttl
+hasHumidity	Day.ttl
+hasMinutes	Day.ttl
+hasMorning	Day.ttl
+hasName	Day.ttl
+hasNight	Day.ttl
+hasPartOfDay	Day.ttl
+hasPrecipitation	Day.ttl
+hasSeconds	Day.ttl
+hasStartTime	Day.ttl
+hasSunrise	Day.ttl
+hasSunset	Day.ttl
+hasTemperature	Day.ttl
+hasTime	Day.ttl
+hasTimeOfDay	Day.ttl
+hasWeather	Day.ttl
+hasWeatherCondition	Day.ttl
+hasWeekday	Day.ttl
+isHoliday	Day.ttl
+isPartOfWeek	Day.ttl
+isWeekday	Day.ttl
+isWeekend	Day.ttl
+startsAt	Day.ttl
+sunriseTime	Day.ttl
+sunsetTime	Day.ttl
+:hasPart	Part.ttl
+belongsTo	Part.ttl
+belongsToAssembly	Part.ttl
+belongs_in	Part.ttl
+categoryName	Part.ttl
+description	Part.ttl
+hasDescription	Part.ttl
+hasManufacturer	Part.ttl
+hasManufacturerName	Part.ttl
+hasPart	Part.ttl
+hasPartNumber	Part.ttl
+hasSize	Part.ttl
+hasWeight	Part.ttl
+has_material	Part.ttl
+has_part	Part.ttl
+id	Part.ttl
+isPartOf	Part.ttl
+madeOf	Part.ttl
+manufacturedBy	Part.ttl
+manufacturer	Part.ttl
+manufacturerName	Part.ttl
+manufacturerWebsite	Part.ttl
+manufacturingDate	Part.ttl
+name	Part.ttl
+objectID	Part.ttl
+partCategory	Part.ttl
+partDescription	Part.ttl
+partID	Part.ttl
+partId	Part.ttl
+partManufactureDate	Part.ttl
+partManufacturer	Part.ttl
+partModel	Part.ttl
+partName	Part.ttl
+partNumber	Part.ttl
+partOf	Part.ttl
+processID	Part.ttl
+provides	Part.ttl
+serialNumber	Part.ttl
+subPart	Part.ttl
+usedIn	Part.ttl
+usesPart	Part.ttl
+weight	Part.ttl
+birthday	Guy.ttl
+employedAs	Guy.ttl
+firstName	Guy.ttl
+hasAge	Guy.ttl
+hasChild	Guy.ttl
+hasFirstName	Guy.ttl
+hasGender	Guy.ttl
+hasHobby	Guy.ttl
+hasInterest	Guy.ttl
+hasLastName	Guy.ttl
+hasLocation	Guy.ttl
+hasName	Guy.ttl
+hasOccupation	Guy.ttl
+hasSpouse	Guy.ttl
+isFriendWith	Guy.ttl
+lastName	Guy.ttl
+livesIn	Guy.ttl
+name	Guy.ttl
+playsSport	Guy.ttl
+worksAt	Guy.ttl
+worksIn	Guy.ttl
+brand	Couch.ttl
+color	Couch.ttl
+colour	Couch.ttl
+depth	Couch.ttl
+dimensions	Couch.ttl
+hasBrand	Couch.ttl
+hasColor	Couch.ttl
+hasCushion	Couch.ttl
+hasCushions	Couch.ttl
+hasDimension	Couch.ttl
+hasDimensions	Couch.ttl
+hasManufacturer	Couch.ttl
+hasMaterial	Couch.ttl
+hasPrice	Couch.ttl
+hasSeatDepth	Couch.ttl
+hasSize	Couch.ttl
+hasStyle	Couch.ttl
+hasType	Couch.ttl
+hasUpholstery	Couch.ttl
+hasUpholsteryMaterial	Couch.ttl
+height	Couch.ttl
+isConvertible	Couch.ttl
+isInLivingRoom	Couch.ttl
+isUpholstered	Couch.ttl
+length	Couch.ttl
+manufacturer	Couch.ttl
+material	Couch.ttl
+model	Couch.ttl
+size	Couch.ttl
+style	Couch.ttl
+width	Couch.ttl
+affectEnvironment	Power.ttl
+amount	Power.ttl
+amountOfPower	Power.ttl
+calculatesPower	Power.ttl
+capacity	Power.ttl
+control	Power.ttl
+derivedFrom	Power.ttl
+generate	Power.ttl
+hasMagnitude	Power.ttl
+hasPower	Power.ttl
+hasPowerOver	Power.ttl
+hasSource	Power.ttl
+hasUnit	Power.ttl
+hasValue	Power.ttl
+isGeneratedBy	Power.ttl
+isMeasuredIn	Power.ttl
+isUsedIn	Power.ttl
+measuredIn	Power.ttl
+powerGeneration	Power.ttl
+powerMeasure	Power.ttl
+source	Power.ttl
+unit	Power.ttl
+age	Parent.ttl
+childOf	Parent.ttl
+father	Parent.ttl
+firstName	Parent.ttl
+hasAge	Parent.ttl
+hasChild	Parent.ttl
+hasFather	Parent.ttl
+hasGender	Parent.ttl
+hasMother	Parent.ttl
+hasName	Parent.ttl
+hasParent	Parent.ttl
+hasSpouse	Parent.ttl
+isChildOf	Parent.ttl
+isFatherOf	Parent.ttl
+isMarriedTo	Parent.ttl
+isMotherOf	Parent.ttl
+isParentOf	Parent.ttl
+lastName	Parent.ttl
+mother	Parent.ttl
+belongsIn	Week.ttl
+consistsOf	Week.ttl
+contains	Week.ttl
+dayName	Week.ttl
+dayNumber	Week.ttl
+dayOfWeek	Week.ttl
+hasDay	Week.ttl
+hasDays	Week.ttl
+hasEndDay	Week.ttl
+hasHours	Week.ttl
+hasName	Week.ttl
+hasNumber	Week.ttl
+hasSequence	Week.ttl
+hasStartDay	Week.ttl
+hasWeek	Week.ttl
+isDayOf	Week.ttl
+isDayOfTheWeek	Week.ttl
+numberOfWeek	Week.ttl
+beganOn	War.ttl
+beginsOn	War.ttl
+belligerent	War.ttl
+belligerentName	War.ttl
+casualties	War.ttl
+casualtiesIn	War.ttl
+causeOfWar	War.ttl
+causedBy	War.ttl
+commencesAt	War.ttl
+consequence	War.ttl
+dateEnded	War.ttl
+dateStarted	War.ttl
+endDate	War.ttl
+endTime	War.ttl
+endYear	War.ttl
+endedOn	War.ttl
+endsAt	War.ttl
+endsOn	War.ttl
+endsWith	War.ttl
+hasBasicOutcome	War.ttl
+hasBattle	War.ttl
+hasBelligerent	War.ttl
+hasCasualties	War.ttl
+hasCause	War.ttl
+hasCombatant	War.ttl
+hasCombatant1	War.ttl
+hasCombatant2	War.ttl
+hasConflict	War.ttl
+hasDate	War.ttl
+hasEndDate	War.ttl
+hasEndTime	War.ttl
+hasInvolved	War.ttl
+hasInvolvedCountry	War.ttl
+hasLeader	War.ttl
+hasLocation	War.ttl
+hasMilitary	War.ttl
+hasName	War.ttl
+hasOutcome	War.ttl
+hasParticipant	War.ttl
+hasParticipatingCountry	War.ttl
+hasReason	War.ttl
+hasResult	War.ttl
+hasStartDate	War.ttl
+hasStartTime	War.ttl
+hasTimeframe	War.ttl
+hasWarPart	War.ttl
+involvedCountry	War.ttl
+involvedParty	War.ttl
+involves	War.ttl
+involvesCountry	War.ttl
+location	War.ttl
+participant	War.ttl
+participatesIn	War.ttl
+participatingCountry	War.ttl
+resultOfWar	War.ttl
+startDate	War.ttl
+startTime	War.ttl
+startYear	War.ttl
+uses	War.ttl
+usesWeapon	War.ttl
+atLocation	Study.ttl
+attends	Study.ttl
+belongsTo	Study.ttl
+courseOfStudy	Study.ttl
+duration	Study.ttl
+enrolledIn	Study.ttl
+focusArea	Study.ttl
+hasCourse	Study.ttl
+hasDuration	Study.ttl
+hasID	Study.ttl
+hasInvestigator	Study.ttl
+hasLevel	Study.ttl
+hasLocation	Study.ttl
+hasMethod	Study.ttl
+hasName	Study.ttl
+hasPublication	Study.ttl
+hasResearcher	Study.ttl
+hasResult	Study.ttl
+hasStudent	Study.ttl
+hasStudy	Study.ttl
+hasStudyArea	Study.ttl
+hasStudyDate	Study.ttl
+hasStudyID	Study.ttl
+hasStudyName	Study.ttl
+hasStudyTopic	Study.ttl
+hasSubject	Study.ttl
+hasTitle	Study.ttl
+hasTopic	Study.ttl
+isCourseOf	Study.ttl
+isEnrolledIn	Study.ttl
+isInInstitution	Study.ttl
+isPartOf	Study.ttl
+isStudiedBy	Study.ttl
+isStudyBy	Study.ttl
+isStudying	Study.ttl
+isTaughtBy	Study.ttl
+isTutoredBy	Study.ttl
+name	Study.ttl
+partOfCurriculum	Study.ttl
+reads	Study.ttl
+researcher	Study.ttl
+student	Study.ttl
+studentID	Study.ttl
+studentName	Study.ttl
+studiedBy	Study.ttl
+studies	Study.ttl
+subject	Study.ttl
+takesPlaceAt	Study.ttl
+taughtBy	Study.ttl
+teaches	Study.ttl
+title	Study.ttl
+uniName	Study.ttl
+uses	Study.ttl
+usesSourceMaterial	Study.ttl
+age	Man.ttl
+career	Man.ttl
+ethnicity	Man.ttl
+fatherOf	Man.ttl
+hairColor	Man.ttl
+hasAge	Man.ttl
+hasChild	Man.ttl
+hasChildren	Man.ttl
+hasConcept	Man.ttl
+hasFather	Man.ttl
+hasGender	Man.ttl
+hasJob	Man.ttl
+hasMother	Man.ttl
+hasName	Man.ttl
+hasNationality	Man.ttl
+hasOccupation	Man.ttl
+hasParent	Man.ttl
+hasSibling	Man.ttl
+hasSpouse	Man.ttl
+height	Man.ttl
+isA	Man.ttl
+isMarried	Man.ttl
+isMarriedTo	Man.ttl
+manhasAge	Man.ttl
+manhasName	Man.ttl
+manhasOccupation	Man.ttl
+manisMarried	Man.ttl
+name	Man.ttl
+nationality	Man.ttl
+profession	Man.ttl
+provides	Man.ttl
+surname	Man.ttl
+weight	Man.ttl
+atTime	Time.ttl
+begin	Time.ttl
+dateTime	Time.ttl
+dateTimeStamp	Time.ttl
+days	Time.ttl
+description	Time.ttl
+duration	Time.ttl
+during	Time.ttl
+end	Time.ttl
+endAt	Time.ttl
+endTime	Time.ttl
+endedAt	Time.ttl
+endsWith	Time.ttl
+hasBeginning	Time.ttl
+hasDateTime	Time.ttl
+hasDuration	Time.ttl
+hasEnd	Time.ttl
+hasEndTime	Time.ttl
+hasHour	Time.ttl
+hasMinute	Time.ttl
+hasSecond	Time.ttl
+hasStartTime	Time.ttl
+hasTemporalUnit	Time.ttl
+hasTime	Time.ttl
+hasTimezone	Time.ttl
+inDateTime	Time.ttl
+inFuture	Time.ttl
+inPast	Time.ttl
+inXSDDateTime	Time.ttl
+inXSDDateTimeStamp	Time.ttl
+inXSDDuration	Time.ttl
+isPartOf	Time.ttl
+isTimePointOf	Time.ttl
+isUnitOf	Time.ttl
+startAt	Time.ttl
+startTime	Time.ttl
+startedAt	Time.ttl
+startsWith	Time.ttl
+title	Time.ttl
+hasCalendarOrder	Month.ttl
+hasDays	Month.ttl
+hasMonth	Month.ttl
+hasName	Month.ttl
+hasNumberOfDays	Month.ttl
+hasOrder	Month.ttl
+beginningOfYear	Year.ttl
+endOfYear	Year.ttl
+followedBy	Year.ttl
+hasDay	Year.ttl
+hasEvent	Year.ttl
+hasMonth	Year.ttl
+hasSeason	Year.ttl
+hasYear	Year.ttl
+inYear	Year.ttl
+isLeap	Year.ttl
+isLeapYear	Year.ttl
+isYearOf	Year.ttl
+number	Year.ttl
+numberOfDay	Year.ttl
+numberOfMonth	Year.ttl
+numberOfYear	Year.ttl
+precededBy	Year.ttl
+year	Year.ttl
+yearID	Year.ttl
+yearNumber	Year.ttl
+assertedBy	Fact.ttl
+dateRecorded	Fact.ttl
+dateVerified	Fact.ttl
+description	Fact.ttl
+factStatement	Fact.ttl
+hasCategoryName	Fact.ttl
+hasDate	Fact.ttl
+hasDateVerified	Fact.ttl
+hasDescription	Fact.ttl
+hasFact	Fact.ttl
+hasFactSource	Fact.ttl
+hasFactText	Fact.ttl
+hasFactTopic	Fact.ttl
+hasFactType	Fact.ttl
+hasFactValue	Fact.ttl
+hasId	Fact.ttl
+hasObject	Fact.ttl
+hasPredicate	Fact.ttl
+hasReporter	Fact.ttl
+hasSource	Fact.ttl
+hasSourceName	Fact.ttl
+hasSourceUrl	Fact.ttl
+hasStatement	Fact.ttl
+hasSubject	Fact.ttl
+hasValue	Fact.ttl
+hasVerification	Fact.ttl
+hasVerificationStatus	Fact.ttl
+isAbout	Fact.ttl
+isFactAbout	Fact.ttl
+isFactChecked	Fact.ttl
+isFactOfCategory	Fact.ttl
+isSourceVerified	Fact.ttl
+isVerified	Fact.ttl
+relatedTo	Fact.ttl
+related_to	Fact.ttl
+source	Fact.ttl
+sourceReference	Fact.ttl
+subject	Fact.ttl
+validity	Fact.ttl
+verified	Fact.ttl
+deliversFunction	System.ttl
+hasApplication	System.ttl
+hasComponent	System.ttl
+hasConfiguration	System.ttl
+hasElement	System.ttl
+hasFunction	System.ttl
+hasFunctionality	System.ttl
+hasHardware	System.ttl
+hasInput	System.ttl
+hasName	System.ttl
+hasObjective	System.ttl
+hasOperatingSystem	System.ttl
+hasOutput	System.ttl
+hasPart	System.ttl
+hasSoftware	System.ttl
+hasSubSystem	System.ttl
+hasSubsystem	System.ttl
+hasVersion	System.ttl
+id	System.ttl
+interactsWith	System.ttl
+isComponentOf	System.ttl
+isInstalledOn	System.ttl
+isPartOf	System.ttl
+name	System.ttl
+partOf	System.ttl
+partOfSystem	System.ttl
+performsFunction	System.ttl
+provides	System.ttl
+providesService	System.ttl
+subSystem	System.ttl
+subsystem_of	System.ttl
+birthDate	Life.ttl
+breathe	Life.ttl
+consume	Life.ttl
+deathDate	Life.ttl
+eat	Life.ttl
+grow	Life.ttl
+habitat	Life.ttl
+hasAge	Life.ttl
+hasBeginning	Life.ttl
+hasBirth	Life.ttl
+hasCells	Life.ttl
+hasChild	Life.ttl
+hasDeath	Life.ttl
+hasEnd	Life.ttl
+hasEnvironment	Life.ttl
+hasForm	Life.ttl
+hasLife	Life.ttl
+hasLifeCycle	Life.ttl
+hasLifeSpan	Life.ttl
+hasLifeStage	Life.ttl
+hasName	Life.ttl
+hasOrganism	Life.ttl
+hasParent	Life.ttl
+hasSibling	Life.ttl
+hasSpecies	Life.ttl
+hasTaxonomicRank	Life.ttl
+lifeSpan	Life.ttl
+lifespan	Life.ttl
+name	Life.ttl
+reproduce	Life.ttl
+age	Girl.ttl
+attendsSchool	Girl.ttl
+child	Girl.ttl
+female	Girl.ttl
+girlAge	Girl.ttl
+girlName	Girl.ttl
+hasAge	Girl.ttl
+hasBirthday	Girl.ttl
+hasGender	Girl.ttl
+hasHairColor	Girl.ttl
+hasHobby	Girl.ttl
+hasLocation	Girl.ttl
+hasName	Girl.ttl
+hasParent	Girl.ttl
+hasPets	Girl.ttl
+hasToys	Girl.ttl
+isEnrolledIn	Girl.ttl
+isGirl	Girl.ttl
+livesIn	Girl.ttl
+name	Girl.ttl
+sibling	Girl.ttl
+address	Home.ttl
+city	Home.ttl
+contains	Home.ttl
+containsRoom	Home.ttl
+equippedWith	Home.ttl
+hasAddress	Home.ttl
+hasAge	Home.ttl
+hasArea	Home.ttl
+hasCity	Home.ttl
+hasDoor	Home.ttl
+hasFloor	Home.ttl
+hasFurniture	Home.ttl
+hasHome	Home.ttl
+hasLocation	Home.ttl
+hasName	Home.ttl
+hasNumberOfRooms	Home.ttl
+hasOwner	Home.ttl
+hasPart	Home.ttl
+hasResidents	Home.ttl
+hasRoof	Home.ttl
+hasRoom	Home.ttl
+hasRooms	Home.ttl
+hasSize	Home.ttl
+hasType	Home.ttl
+hasWindow	Home.ttl
+inCity	Home.ttl
+isHomeOf	Home.ttl
+livesIn	Home.ttl
+locatedIn	Home.ttl
+owner	Home.ttl
+ownerOf	Home.ttl
+owns	Home.ttl
+residesIn	Home.ttl
+street	Home.ttl
+address	Company.ttl
+birthDate	Company.ttl
+cEO	Company.ttl
+city	Company.ttl
+companyType	Company.ttl
+country	Company.ttl
+employeeCount	Company.ttl
+employeeName	Company.ttl
+employsPerson	Company.ttl
+firstName	Company.ttl
+foundedDate	Company.ttl
+foundedIn	Company.ttl
+hasAddress	Company.ttl
+hasAge	Company.ttl
+hasCEO	Company.ttl
+hasCompanyName	Company.ttl
+hasCountry	Company.ttl
+hasDepartment	Company.ttl
+hasDirector	Company.ttl
+hasEmployee	Company.ttl
+hasEmployeeCount	Company.ttl
+hasFirstName	Company.ttl
+hasFoundingDate	Company.ttl
+hasFullName	Company.ttl
+hasIndustry	Company.ttl
+hasJobTitle	Company.ttl
+hasLastName	Company.ttl
+hasLocation	Company.ttl
+hasName	Company.ttl
+hasPrice	Company.ttl
+hasRevenue	Company.ttl
+hasRole	Company.ttl
+hasSalary	Company.ttl
+headquarterLocation	Company.ttl
+industry	Company.ttl
+isLocatedIn	Company.ttl
+lastName	Company.ttl
+locatedIn	Company.ttl
+location	Company.ttl
+name	Company.ttl
+numberOfEmployees	Company.ttl
+offersService	Company.ttl
+operatesInIndustry	Company.ttl
+personAge	Company.ttl
+personName	Company.ttl
+personNationality	Company.ttl
+produces	Company.ttl
+roleName	Company.ttl
+state	Company.ttl
+street	Company.ttl
+yearEstablished	Company.ttl
+zipCode	Company.ttl
+abstract	Art.ttl
+artGenre	Art.ttl
+artist	Art.ttl
+artistName	Art.ttl
+artistNationality	Art.ttl
+artworkTitle	Art.ttl
+belongsGenre	Art.ttl
+belongsTo	Art.ttl
+birthDate	Art.ttl
+bornIn	Art.ttl
+created	Art.ttl
+createdBy	Art.ttl
+created_by	Art.ttl
+creates	Art.ttl
+creationDate	Art.ttl
+deathDate	Art.ttl
+display	Art.ttl
+displayed_at	Art.ttl
+endDate	Art.ttl
+exhibitedIn	Art.ttl
+exhibits	Art.ttl
+genre	Art.ttl
+hasArtStyle	Art.ttl
+hasArtist	Art.ttl
+hasAuthor	Art.ttl
+hasBirthDate	Art.ttl
+hasCreated	Art.ttl
+hasCreator	Art.ttl
+hasMedium	Art.ttl
+hasName	Art.ttl
+hasPeriod	Art.ttl
+hasStyle	Art.ttl
+hasTitle	Art.ttl
+hasYear	Art.ttl
+has_genre	Art.ttl
+housesArt	Art.ttl
+inPeriod	Art.ttl
+inspiredBy	Art.ttl
+locatedIn	Art.ttl
+location	Art.ttl
+madeOf	Art.ttl
+mass	Art.ttl
+medium	Art.ttl
+mediumName	Art.ttl
+modern	Art.ttl
+name	Art.ttl
+nationality	Art.ttl
+periodEnd	Art.ttl
+periodName	Art.ttl
+periodStart	Art.ttl
+shownAt	Art.ttl
+startDate	Art.ttl
+style	Art.ttl
+styleName	Art.ttl
+title	Art.ttl
+usesMedium	Art.ttl
+uses_medium	Art.ttl
+year	Art.ttl
+activity	Community.ttl
+age	Community.ttl
+attendsEvent	Community.ttl
+belongs	Community.ttl
+belongsTo	Community.ttl
+commentedBy	Community.ttl
+communityLeader	Community.ttl
+communityLocation	Community.ttl
+communityMember	Community.ttl
+communityName	Community.ttl
+coordinator	Community.ttl
+date	Community.ttl
+eventDate	Community.ttl
+existsIn	Community.ttl
+gender	Community.ttl
+goal	Community.ttl
+hasActivity	Community.ttl
+hasAge	Community.ttl
+hasComment	Community.ttl
+hasCommonInterest	Community.ttl
+hasCommunityRole	Community.ttl
+hasCultural_Identity	Community.ttl
+hasCulture	Community.ttl
+hasEvent	Community.ttl
+hasGender	Community.ttl
+hasInstitution	Community.ttl
+hasInterest	Community.ttl
+hasLeader	Community.ttl
+hasLocation	Community.ttl
+hasMember	Community.ttl
+hasName	Community.ttl
+hasPost	Community.ttl
+hasRole	Community.ttl
+hasVolunteer	Community.ttl
+heldIn	Community.ttl
+holdsEvent	Community.ttl
+isLocatedIn	Community.ttl
+joined	Community.ttl
+joinedDate	Community.ttl
+leader	Community.ttl
+leaderName	Community.ttl
+locatedAt	Community.ttl
+locatedIn	Community.ttl
+location	Community.ttl
+member	Community.ttl
+memberCount	Community.ttl
+memberName	Community.ttl
+memberOf	Community.ttl
+name	Community.ttl
+occupation	Community.ttl
+organizedBy	Community.ttl
+participant	Community.ttl
+participatesIn	Community.ttl
+personAge	Community.ttl
+personName	Community.ttl
+population	Community.ttl
+postDate	Community.ttl
+postTitle	Community.ttl
+providesService	Community.ttl
+volunteerName	Community.ttl
+writtenBy	Community.ttl
+entityName	Name.ttl
+familyName	Name.ttl
+firstName	Name.ttl
+fullName	Name.ttl
+givenName	Name.ttl
+hasFirstName	Name.ttl
+hasFullName	Name.ttl
+hasLastName	Name.ttl
+hasMiddleName	Name.ttl
+hasName	Name.ttl
+hasNamePrefix	Name.ttl
+hasNameSuffix	Name.ttl
+hasNickName	Name.ttl
+hasPrefix	Name.ttl
+hasSuffix	Name.ttl
+hasfirstName	Name.ttl
+haslastName	Name.ttl
+hasmiddleName	Name.ttl
+lastName	Name.ttl
+middleName	Name.ttl
+namePrefix	Name.ttl
+nameSuffix	Name.ttl
+nickName	Name.ttl
+affectsEntity	Change.ttl
+causedBy	Change.ttl
+causes	Change.ttl
+changeCausedBy	Change.ttl
+changeIntensity	Change.ttl
+changeOccursIn	Change.ttl
+effects	Change.ttl
+hasAffectedObject	Change.ttl
+hasBeginState	Change.ttl
+hasCause	Change.ttl
+hasChange	Change.ttl
+hasChangeAgent	Change.ttl
+hasChangeDate	Change.ttl
+hasChangeEnd	Change.ttl
+hasChangeEndState	Change.ttl
+hasChangeStart	Change.ttl
+hasChangeStartState	Change.ttl
+hasChangeType	Change.ttl
+hasContext	Change.ttl
+hasEndState	Change.ttl
+hasEndTime	Change.ttl
+hasFinalValue	Change.ttl
+hasImpact	Change.ttl
+hasInitialValue	Change.ttl
+hasInitiator	Change.ttl
+hasLocation	Change.ttl
+hasNewState	Change.ttl
+hasOldState	Change.ttl
+hasResult	Change.ttl
+hasSource	Change.ttl
+hasStartState	Change.ttl
+hasStartTime	Change.ttl
+hasTarget	Change.ttl
+hasTime	Change.ttl
+hasTypeOfChange	Change.ttl
+isCausedBy	Change.ttl
+isChangeOf	Change.ttl
+isTriggeredBy	Change.ttl
+leadsTo	Change.ttl
+occurrenceTime	Change.ttl
+occursAt	Change.ttl
+resultsIn	Change.ttl
+type	Change.ttl
+code	Program.ttl
+description	Program.ttl
+developedBy	Program.ttl
+developer	Program.ttl
+hasAuthor	Program.ttl
+hasCode	Program.ttl
+hasDescription	Program.ttl
+hasDeveloper	Program.ttl
+hasDeveloperName	Program.ttl
+hasDuration	Program.ttl
+hasEndDate	Program.ttl
+hasExperience	Program.ttl
+hasId	Program.ttl
+hasInput	Program.ttl
+hasLanguage	Program.ttl
+hasLicense	Program.ttl
+hasName	Program.ttl
+hasOutput	Program.ttl
+hasPart	Program.ttl
+hasPlatform	Program.ttl
+hasPlatformCompatibility	Program.ttl
+hasProgramName	Program.ttl
+hasReleaseDate	Program.ttl
+hasStartDate	Program.ttl
+hasVersion	Program.ttl
+isCreatedBy	Program.ttl
+isPartOf	Program.ttl
+isWrittenIn	Program.ttl
+knowsLanguage	Program.ttl
+name	Program.ttl
+provide	Program.ttl
+provider	Program.ttl
+releaseDate	Program.ttl
+runOnOperatingSystem	Program.ttl
+runsOn	Program.ttl
+usesLanguage	Program.ttl
+usesLibrary	Program.ttl
+version	Program.ttl
+writtenIn	Program.ttl
+appliesPageLayout	Word.ttl
+author	Word.ttl
+documentTitle	Word.ttl
+hasAntonym	Word.ttl
+hasContent	Word.ttl
+hasDefinition	Word.ttl
+hasLanguage	Word.ttl
+hasLemma	Word.ttl
+hasLength	Word.ttl
+hasMeaning	Word.ttl
+hasOrigin	Word.ttl
+hasPartOfSpeech	Word.ttl
+hasSpelling	Word.ttl
+hasSpellingCorrector	Word.ttl
+hasSynonym	Word.ttl
+hasSynonyms	Word.ttl
+hasThesaurus	Word.ttl
+hasWordProperty	Word.ttl
+isInLanguage	Word.ttl
+isPartOfSpeech	Word.ttl
+isSynonymOf	Word.ttl
+language	Word.ttl
+length	Word.ttl
+partOfSpeech	Word.ttl
+sentence	Word.ttl
+spelling	Word.ttl
+upos	Word.ttl
+usedIn	Word.ttl
+usedInSentence	Word.ttl
+usesMailMerge	Word.ttl
+wordVersion	Word.ttl
+arriveAt	Way.ttl
+aspectOfWay	Way.ttl
+condition	Way.ttl
+connectedTo	Way.ttl
+connects	Way.ttl
+coveredBy	Way.ttl
+departFrom	Way.ttl
+destination	Way.ttl
+distance	Way.ttl
+endPoint	Way.ttl
+from	Way.ttl
+hasDestination	Way.ttl
+hasDestinationType	Way.ttl
+hasDirection	Way.ttl
+hasDistance	Way.ttl
+hasEnd	Way.ttl
+hasEndPoint	Way.ttl
+hasLength	Way.ttl
+hasMedium	Way.ttl
+hasMethod	Way.ttl
+hasName	Way.ttl
+hasSource	Way.ttl
+hasSourceType	Way.ttl
+hasStart	Way.ttl
+hasStartPoint	Way.ttl
+hasTraffic	Way.ttl
+hasType	Way.ttl
+hasWay	Way.ttl
+isAccessible	Way.ttl
+isPartOf	Way.ttl
+leadsTo	Way.ttl
+length	Way.ttl
+name	Way.ttl
+source	Way.ttl
+startPoint	Way.ttl
+takenBy	Way.ttl
+to	Way.ttl
+understandsWay	Way.ttl
+usedFor	Way.ttl
+buys	Business.ttl
+buysFrom	Business.ttl
+empName	Business.ttl
+employeeOf	Business.ttl
+employs	Business.ttl
+establishedDate	Business.ttl
+generates	Business.ttl
+hasBusinessLocation	Business.ttl
+hasCEO	Business.ttl
+hasDepartment	Business.ttl
+hasEmployee	Business.ttl
+hasEndTime	Business.ttl
+hasHeadquarters	Business.ttl
+hasLocation	Business.ttl
+hasName	Business.ttl
+hasOwner	Business.ttl
+hasProduct	Business.ttl
+hasRole	Business.ttl
+hasSector	Business.ttl
+hasStartTime	Business.ttl
+hires	Business.ttl
+industry	Business.ttl
+isFundedBy	Business.ttl
+locName	Business.ttl
+name	Business.ttl
+offers	Business.ttl
+offersProduct	Business.ttl
+offersService	Business.ttl
+operatesIn	Business.ttl
+operatesInIndustry	Business.ttl
+owns	Business.ttl
+price	Business.ttl
+prodName	Business.ttl
+produces	Business.ttl
+producesProduct	Business.ttl
+provides	Business.ttl
+providesService	Business.ttl
+revenue	Business.ttl
+salary	Business.ttl
+sectorName	Business.ttl
+sells	Business.ttl
+serves	Business.ttl
+serviceName	Business.ttl
+supplies	Business.ttl
+belongsToDomain	Problem.ttl
+causeDescription	Problem.ttl
+description	Problem.ttl
+hasCause	Problem.ttl
+hasComplexity	Problem.ttl
+hasDescription	Problem.ttl
+hasDetails	Problem.ttl
+hasDifficulty	Problem.ttl
+hasDifficultyLevel	Problem.ttl
+hasEffect	Problem.ttl
+hasId	Problem.ttl
+hasImpact	Problem.ttl
+hasProblem	Problem.ttl
+hasRelatedProblem	Problem.ttl
+hasResult	Problem.ttl
+hasSeverity	Problem.ttl
+hasSolution	Problem.ttl
+hasStep	Problem.ttl
+hasTimeToSolve	Problem.ttl
+hasTitle	Problem.ttl
+id	Problem.ttl
+isCausedBy	Problem.ttl
+isComplex	Problem.ttl
+isSolutionOf	Problem.ttl
+isSolvedBy	Problem.ttl
+isTypeOf	Problem.ttl
+issueName	Problem.ttl
+name	Problem.ttl
+problem	Problem.ttl
+problemDescription	Problem.ttl
+problemSolution	Problem.ttl
+severity	Problem.ttl
+solution	Problem.ttl
+solutionDescription	Problem.ttl
+timeToSolve	Problem.ttl
+color	Face.ttl
+eyeColor	Face.ttl
+hasCheek	Face.ttl
+hasColor	Face.ttl
+hasComponent	Face.ttl
+hasExpression	Face.ttl
+hasEye	Face.ttl
+hasEyes	Face.ttl
+hasFace	Face.ttl
+hasFacialFeature	Face.ttl
+hasFeature	Face.ttl
+hasMouth	Face.ttl
+hasNose	Face.ttl
+hasPart	Face.ttl
+hasPosition	Face.ttl
+hasShape	Face.ttl
+hasSize	Face.ttl
+hasSkin	Face.ttl
+hasSkinColor	Face.ttl
+hasSkinType	Face.ttl
+hasTexture	Face.ttl
+mouthSize	Face.ttl
+noseSize	Face.ttl
+shape	Face.ttl
+skinTone	Face.ttl
+hasArm	Body.ttl
+hasBodyPart	Body.ttl
+hasHead	Body.ttl
+hasLeg	Body.ttl
+hasLimbs	Body.ttl
+hasOrgan	Body.ttl
+hasPart	Body.ttl
+hasTorso	Body.ttl
+isPartOf	Body.ttl
+even	Number.ttl
+greaterThan	Number.ttl
+hasValue	Number.ttl
+imaginaryPart	Number.ttl
+isDivisibleBy	Number.ttl
+isEqual	Number.ttl
+isEven	Number.ttl
+isGreaterThan	Number.ttl
+isImaginary	Number.ttl
+isIrrational	Number.ttl
+isLessThan	Number.ttl
+isNegative	Number.ttl
+isPartOf	Number.ttl
+isPositive	Number.ttl
+lessThan	Number.ttl
+negative	Number.ttl
+numberValue	Number.ttl
+numberValueFloat	Number.ttl
+numberValueInteger	Number.ttl
+realPart	Number.ttl
+size	Number.ttl
+value	Number.ttl
+endPoint	Line.ttl
+hasCoordinate	Line.ttl
+hasDirection	Line.ttl
+hasEnd	Line.ttl
+hasEndPoint	Line.ttl
+hasLength	Line.ttl
+hasPoint	Line.ttl
+hasStart	Line.ttl
+hasStartPoint	Line.ttl
+hasX	Line.ttl
+hasXCoordinate	Line.ttl
+hasXYCoordinates	Line.ttl
+hasY	Line.ttl
+hasYCoordinate	Line.ttl
+hasZCoordinate	Line.ttl
+isParallelTo	Line.ttl
+isPerpendicularTo	Line.ttl
+isStraight	Line.ttl
+length	Line.ttl
+slope	Line.ttl
+startPoint	Line.ttl
+x	Line.ttl
+xCoordinate	Line.ttl
+y	Line.ttl
+yCoordinate	Line.ttl
+address	People.ttl
+age	People.ttl
+birthDate	People.ttl
+birthdate	People.ttl
+bornIn	People.ttl
+cityCountry	People.ttl
+cityCounty	People.ttl
+cityName	People.ttl
+dateOfBirth	People.ttl
+firstName	People.ttl
+gender	People.ttl
+hasAge	People.ttl
+hasChild	People.ttl
+hasFirstName	People.ttl
+hasGender	People.ttl
+hasLastName	People.ttl
+hasName	People.ttl
+hasNationality	People.ttl
+hasOccupation	People.ttl
+hasParent	People.ttl
+hasPhoneNumber	People.ttl
+isEmployed	People.ttl
+isMarried	People.ttl
+isMarriedTo	People.ttl
+lastName	People.ttl
+livesIn	People.ttl
+marriedTo	People.ttl
+name	People.ttl
+provides	People.ttl
+surname	People.ttl
+bodyType	Car.ttl
+color	Car.ttl
+engineType	Car.ttl
+fuelType	Car.ttl
+hasBrand	Car.ttl
+hasColor	Car.ttl
+hasEngine	Car.ttl
+hasEngineSize	Car.ttl
+hasMake	Car.ttl
+hasManufacturer	Car.ttl
+hasModel	Car.ttl
+hasPrice	Car.ttl
+hasProductionYear	Car.ttl
+hasRegistrationYear	Car.ttl
+hasVIN	Car.ttl
+hasYear	Car.ttl
+horsePower	Car.ttl
+make	Car.ttl
+manufacturer	Car.ttl
+model	Car.ttl
+year	Car.ttl
+author	Book.ttl
+birthDate	Book.ttl
+company	Book.ttl
+deathDate	Book.ttl
+genre	Book.ttl
+hasAddress	Book.ttl
+hasAuthor	Book.ttl
+hasGenre	Book.ttl
+hasISBN	Book.ttl
+hasName	Book.ttl
+hasPageCount	Book.ttl
+hasPublicationDate	Book.ttl
+hasPublisher	Book.ttl
+hasTitle	Book.ttl
+iSBN	Book.ttl
+isbn	Book.ttl
+language	Book.ttl
+name	Book.ttl
+numberOfPages	Book.ttl
+pages	Book.ttl
+publicationDate	Book.ttl
+publicationYear	Book.ttl
+publishBy	Book.ttl
+publishedDate	Book.ttl
+publishedIn	Book.ttl
+publishedYear	Book.ttl
+publisher	Book.ttl
+title	Book.ttl
+assignedTo	Issue.ttl
+assignee	Issue.ttl
+closedDate	Issue.ttl
+createdDate	Issue.ttl
+description	Issue.ttl
+dueDate	Issue.ttl
+hasCreatedDate	Issue.ttl
+hasDateCreated	Issue.ttl
+hasDateResolved	Issue.ttl
+hasDeadline	Issue.ttl
+hasDescription	Issue.ttl
+hasID	Issue.ttl
+hasId	Issue.ttl
+hasIssue	Issue.ttl
+hasIssueDateCreated	Issue.ttl
+hasIssueDescription	Issue.ttl
+hasIssueIdentifier	Issue.ttl
+hasIssueStatus	Issue.ttl
+hasIssueTitle	Issue.ttl
+hasName	Issue.ttl
+hasPriority	Issue.ttl
+hasResolutionStatus	Issue.ttl
+hasResponsible	Issue.ttl
+hasSeverity	Issue.ttl
+hasStatus	Issue.ttl
+hasTitle	Issue.ttl
+id	Issue.ttl
+isAssignedTo	Issue.ttl
+isIssueOf	Issue.ttl
+isOpen	Issue.ttl
+isRelatedTo	Issue.ttl
+issueDate	Issue.ttl
+issueDescription	Issue.ttl
+issueID	Issue.ttl
+issuePriority	Issue.ttl
+issueResolved	Issue.ttl
+issueSeverity	Issue.ttl
+issueStatus	Issue.ttl
+issueTitle	Issue.ttl
+issueType	Issue.ttl
+personEmail	Issue.ttl
+personName	Issue.ttl
+priority	Issue.ttl
+reporter	Issue.ttl
+resolvedDate	Issue.ttl
+resolvesIssue	Issue.ttl
+responsibleParty	Issue.ttl
+status	Issue.ttl
+title	Issue.ttl
+administersTreatment	Health.ttl
+admittedIn	Health.ttl
+diagnosedWith	Health.ttl
+diagnoses	Health.ttl
+disease	Health.ttl
+hasAge	Health.ttl
+hasAilment	Health.ttl
+hasCondition	Health.ttl
+hasDiagnosis	Health.ttl
+hasDietRestriction	Health.ttl
+hasDisease	Health.ttl
+hasDoctor	Health.ttl
+hasGender	Health.ttl
+hasGymMembership	Health.ttl
+hasHealth	Health.ttl
+hasHealthRecord	Health.ttl
+hasHealthStatus	Health.ttl
+hasHeight	Health.ttl
+hasIllness	Health.ttl
+hasMedication	Health.ttl
+hasMentalHealth	Health.ttl
+hasMentalHealthStatus	Health.ttl
+hasName	Health.ttl
+hasPatient	Health.ttl
+hasPhysicalHealth	Health.ttl
+hasPhysicalHealthStatus	Health.ttl
+hasPhysicalHeathStatus	Health.ttl
+hasSeverity	Health.ttl
+hasSideEffect	Health.ttl
+hasSymptom	Health.ttl
+hasTreatment	Health.ttl
+hasWeight	Health.ttl
+includesMedication	Health.ttl
+includesSymptom	Health.ttl
+isDiagnosedWith	Health.ttl
+isFollowingTreatment	Health.ttl
+isTreatedBy	Health.ttl
+isTreatedWith	Health.ttl
+manages	Health.ttl
+medicationName	Health.ttl
+operatesIn	Health.ttl
+prescribedBy	Health.ttl
+prescribedFor	Health.ttl
+prescribes	Health.ttl
+prescribesMedication	Health.ttl
+provides	Health.ttl
+receives	Health.ttl
+receivesTreatment	Health.ttl
+suffersFrom	Health.ttl
+takesMedication	Health.ttl
+treatmentFor	Health.ttl
+treats	Health.ttl
+usedMedication	Health.ttl
+worksAt	Health.ttl
+age	School.ttl
+assigns	School.ttl
+attend	School.ttl
+attends	School.ttl
+belongsTo	School.ttl
+completes	School.ttl
+courseName	School.ttl
+employs	School.ttl
+enrolledIn	School.ttl
+grade	School.ttl
+hasAddress	School.ttl
+hasClass	School.ttl
+hasCourse	School.ttl
+hasGrade	School.ttl
+hasName	School.ttl
+hasPrincipal	School.ttl
+hasStudent	School.ttl
+hasTeacher	School.ttl
+includesGrade	School.ttl
+isEnrolledIn	School.ttl
+learns	School.ttl
+location	School.ttl
+memberOf	School.ttl
+name	School.ttl
+numberOfStudents	School.ttl
+offeredAt	School.ttl
+offers	School.ttl
+offersCourse	School.ttl
+partOf	School.ttl
+provides	School.ttl
+schoolName	School.ttl
+schoolhasGrade	School.ttl
+schoolhasStudent	School.ttl
+schoolhasSubject	School.ttl
+schoolhasTeacher	School.ttl
+schoollocatedIn	School.ttl
+schoolteachesSubject	School.ttl
+student	School.ttl
+studentAge	School.ttl
+studentName	School.ttl
+studies	School.ttl
+studiesAt	School.ttl
+studiesUnder	School.ttl
+studyingIn	School.ttl
+takes	School.ttl
+takesCourse	School.ttl
+taughtBy	School.ttl
+teacherAge	School.ttl
+teacherName	School.ttl
+teaches	School.ttl
+teachesAt	School.ttl
+teachesCourse	School.ttl
+teachesIn	School.ttl
+teachesSubject	School.ttl
+worksAt	School.ttl
+answerText	Question.ttl
+asked	Question.ttl
+askedBy	Question.ttl
+askedIn	Question.ttl
+drawsFromSource	Question.ttl
+hasAnswer	Question.ttl
+hasAnswerText	Question.ttl
+hasBody	Question.ttl
+hasCategory	Question.ttl
+hasChoice	Question.ttl
+hasContent	Question.ttl
+hasDifficultyLevel	Question.ttl
+hasQuestion	Question.ttl
+hasQuestionText	Question.ttl
+hasResponse	Question.ttl
+hasSource	Question.ttl
+hasSpecificDate	Question.ttl
+hasText	Question.ttl
+hasTitle	Question.ttl
+hasType	Question.ttl
+isAnsweredBy	Question.ttl
+isAskedBy	Question.ttl
+isCorrect	Question.ttl
+isCorrectAnswer	Question.ttl
+isRelatedToTopic	Question.ttl
+isResponseTo	Question.ttl
+possibleAnswer	Question.ttl
+questionText	Question.ttl
+relatedToTopic	Question.ttl
+sourceName	Question.ttl
+sourceType	Question.ttl
+sourceURL	Question.ttl
+text	Question.ttl
+topicOf	Question.ttl
+type	Question.ttl
+weight	Question.ttl
+area	City.ttl
+areaInSqKm	City.ttl
+capital	City.ttl
+capitalOf	City.ttl
+cityContainedInCountry	City.ttl
+country	City.ttl
+countryName	City.ttl
+elevation	City.ttl
+hasArea	City.ttl
+hasMayor	City.ttl
+hasName	City.ttl
+hasPopulation	City.ttl
+isCapital	City.ttl
+isCapitalOf	City.ttl
+isInCountry	City.ttl
+isLocatedIn	City.ttl
+isPartOf	City.ttl
+locatedIn	City.ttl
+locatedInCountry	City.ttl
+name	City.ttl
+partOfCountry	City.ttl
+population	City.ttl
+provide	City.ttl
+timeZone	City.ttl
+associatedWith	Result.ttl
+belongsTo	Result.ttl
+causes	Result.ttl
+hasComment	Result.ttl
+hasCourse	Result.ttl
+hasDate	Result.ttl
+hasEndTime	Result.ttl
+hasFinalOutcome	Result.ttl
+hasGrade	Result.ttl
+hasOutcome	Result.ttl
+hasProcess	Result.ttl
+hasResult	Result.ttl
+hasScore	Result.ttl
+hasStartTime	Result.ttl
+hasStudent	Result.ttl
+hasSuccess	Result.ttl
+hasTime	Result.ttl
+hasTimestamp	Result.ttl
+hasUnit	Result.ttl
+hasValue	Result.ttl
+isResultOf	Result.ttl
+isSuccess	Result.ttl
+outcome	Result.ttl
+score	Result.ttl
+timestamp	Result.ttl
+wasGeneratedBy	Result.ttl
+belongs	Government.ttl
+citizenAge	Government.ttl
+consistsOf	Government.ttl
+country	Government.ttl
+createsLaw	Government.ttl
+department	Government.ttl
+departmentOf	Government.ttl
+director	Government.ttl
+enforcesLaw	Government.ttl
+established	Government.ttl
+governedBy	Government.ttl
+governmentName	Government.ttl
+governmentType	Government.ttl
+governs	Government.ttl
+hasAge	Government.ttl
+hasBranch	Government.ttl
+hasCitizen	Government.ttl
+hasCity	Government.ttl
+hasDepartment	Government.ttl
+hasGovernment	Government.ttl
+hasHead	Government.ttl
+hasHeadOfState	Government.ttl
+hasLaw	Government.ttl
+hasLaws	Government.ttl
+hasLeader	Government.ttl
+hasMember	Government.ttl
+hasName	Government.ttl
+hasPolicy	Government.ttl
+hasState	Government.ttl
+hasSystem	Government.ttl
+headOf	Government.ttl
+headOfGovernment	Government.ttl
+holdsPosition	Government.ttl
+implements	Government.ttl
+isBranchOf	Government.ttl
+isHeadedBy	Government.ttl
+leaderOf	Government.ttl
+legislation	Government.ttl
+locatedIn	Government.ttl
+mayorOf	Government.ttl
+name	Government.ttl
+official	Government.ttl
+passes	Government.ttl
+population	Government.ttl
+positionIn	Government.ttl
+presidentOf	Government.ttl
+providesService	Government.ttl
+belongsCountry	State.ttl
+belongsTo	State.ttl
+capital	State.ttl
+cityName	State.ttl
+containsState	State.ttl
+hasArea	State.ttl
+hasCapital	State.ttl
+hasName	State.ttl
+hasPopulation	State.ttl
+hasState	State.ttl
+hasStateCapital	State.ttl
+isLocatedIn	State.ttl
+isPartOf	State.ttl
+isPartOfCountry	State.ttl
+locatedIn	State.ttl
+locatedInCountry	State.ttl
+name	State.ttl
+partOf	State.ttl
+population	State.ttl
+stateName	State.ttl
+age	Child.ttl
+attendsSchool	Child.ttl
+birthdate	Child.ttl
+enrolledIn	Child.ttl
+gender	Child.ttl
+hasAge	Child.ttl
+hasChild	Child.ttl
+hasFirstName	Child.ttl
+hasGrade	Child.ttl
+hasLastName	Child.ttl
+hasName	Child.ttl
+hasParent	Child.ttl
+hasSibling	Child.ttl
+isChildOf	Child.ttl
+isMale	Child.ttl
+isParentOf	Child.ttl
+livesAt	Child.ttl
+memberOf	Child.ttl
+name	Child.ttl
+parent	Child.ttl
+parentOf	Child.ttl
+school	Child.ttl
+belongsInCategory	Work.ttl
+company	Work.ttl
+companyName	Work.ttl
+description	Work.ttl
+employed	Work.ttl
+employedBy	Work.ttl
+employee	Work.ttl
+employeeID	Work.ttl
+employeeName	Work.ttl
+employer	Work.ttl
+employs	Work.ttl
+endDate	Work.ttl
+fullName	Work.ttl
+hasAge	Work.ttl
+hasCompanyName	Work.ttl
+hasDeadline	Work.ttl
+hasDuration	Work.ttl
+hasEmployee	Work.ttl
+hasEmployer	Work.ttl
+hasEndDate	Work.ttl
+hasEndTime	Work.ttl
+hasFullName	Work.ttl
+hasHours	Work.ttl
+hasJob	Work.ttl
+hasJobPosting	Work.ttl
+hasJobTitle	Work.ttl
+hasLocation	Work.ttl
+hasName	Work.ttl
+hasOccupation	Work.ttl
+hasPlace	Work.ttl
+hasPosition	Work.ttl
+hasSalary	Work.ttl
+hasStartDate	Work.ttl
+hasStartTime	Work.ttl
+hasTask	Work.ttl
+hasTime	Work.ttl
+hasTitle	Work.ttl
+hasWorkHours	Work.ttl
+hasWorker	Work.ttl
+hoursPerWeek	Work.ttl
+isEmployedAt	Work.ttl
+isFullTime	Work.ttl
+isPerformedBy	Work.ttl
+isRemote	Work.ttl
+jobTitle	Work.ttl
+location	Work.ttl
+name	Work.ttl
+organization	Work.ttl
+performWork	Work.ttl
+positionTitle	Work.ttl
+receives	Work.ttl
+salary	Work.ttl
+startDate	Work.ttl
+title	Work.ttl
+workName	Work.ttl
+worker	Work.ttl
+worksFor	Work.ttl
+worksIn	Work.ttl
+actsOn	Force.ttl
+appliedBy	Force.ttl
+appliedOn	Force.ttl
+applied_to	Force.ttl
+appliesForce	Force.ttl
+direction	Force.ttl
+directionOfForce	Force.ttl
+forceDirection	Force.ttl
+forceValue	Force.ttl
+hasDirection	Force.ttl
+hasForce	Force.ttl
+hasForceDirection	Force.ttl
+hasForceMagnitude	Force.ttl
+hasForceValue	Force.ttl
+hasMagnitude	Force.ttl
+hasStrength	Force.ttl
+hasUnit	Force.ttl
+isAppliedTo	Force.ttl
+isForceOf	Force.ttl
+magnitude	Force.ttl
+magnitudeOfForce	Force.ttl
+measuredIn	Force.ttl
+newton	Force.ttl
+resistsForce	Force.ttl
+resultant_effect	Force.ttl
+resultsIn	Force.ttl
+type	Force.ttl
+unitOfMeasure	Force.ttl
+affects	Back.ttl
+associatedCondition	Back.ttl
+hasBack	Back.ttl
+hasCondition	Back.ttl
+hasInjury	Back.ttl
+hasLocation	Back.ttl
+hasMuscle	Back.ttl
+hasPain	Back.ttl
+hasPart	Back.ttl
+hasSpine	Back.ttl
+hasSymptom	Back.ttl
+isLocationOf	Back.ttl
+isOppositeOf	Back.ttl
+painLevel	Back.ttl
+partOfBack	Back.ttl
+suffersFrom	Back.ttl
+treatmentPlan	Back.ttl
+belongsToObject	Side.ttl
+hasBackSide	Side.ttl
+hasFrontSide	Side.ttl
+hasLeftSide	Side.ttl
+hasLength	Side.ttl
+hasOpponent	Side.ttl
+hasOrientation	Side.ttl
+hasRelatedObject	Side.ttl
+hasRightSide	Side.ttl
+hasSide	Side.ttl
+hasSideType	Side.ttl
+isSideOf	Side.ttl
+opposite	Side.ttl
+oppositeTo	Side.ttl
+relatedTo	Side.ttl
+symmetricTo	Side.ttl
+grantedBy	Right.ttl
+hasRight	Right.ttl
+hasRightHolder	Right.ttl
+hasScope	Right.ttl
+holder	Right.ttl
+isEnforcedBy	Right.ttl
+isGrantedBy	Right.ttl
+isGrantedTo	Right.ttl
+isProtectedBy	Right.ttl
+isRightOf	Right.ttl
+possession	Right.ttl
+protectedBy	Right.ttl
+providesRight	Right.ttl
+rightInJurisdiction	Right.ttl
+rightToEquality	Right.ttl
+rightToLife	Right.ttl
+rightToReligiousFreedom	Right.ttl
+rightToVote	Right.ttl
+violatedBy	Right.ttl
+associatedWith	End.ttl
+cause	End.ttl
+causes	End.ttl
+consequence	End.ttl
+date	End.ttl
+endDate	End.ttl
+endtime	End.ttl
+event	End.ttl
+hasActor	End.ttl
+hasDate	End.ttl
+hasEnd	End.ttl
+hasEndDate	End.ttl
+hasEndLocation	End.ttl
+hasEndTime	End.ttl
+hasTime	End.ttl
+isEndOf	End.ttl
+isResultOf	End.ttl
+locationEnd	End.ttl
+of	End.ttl
+ofEvent	End.ttl
+startDate	End.ttl
+timePoint	End.ttl
+endDate	Team.ttl
+firstName	Team.ttl
+hasCaptain	Team.ttl
+hasCoach	Team.ttl
+hasDeadline	Team.ttl
+hasExperience	Team.ttl
+hasLeader	Team.ttl
+hasMember	Team.ttl
+hasMemberExperience	Team.ttl
+hasMemberName	Team.ttl
+hasMemberRole	Team.ttl
+hasName	Team.ttl
+hasNumberOfPlayers	Team.ttl
+hasPosition	Team.ttl
+hasProject	Team.ttl
+hasProjectDeadline	Team.ttl
+hasProjectName	Team.ttl
+hasRole	Team.ttl
+hasSport	Team.ttl
+hasTask	Team.ttl
+hasTeamLead	Team.ttl
+hasTeamLeader	Team.ttl
+hasTeamName	Team.ttl
+isOfAge	Team.ttl
+lastName	Team.ttl
+league	Team.ttl
+locatedIn	Team.ttl
+location	Team.ttl
+member	Team.ttl
+memberName	Team.ttl
+memberOf	Team.ttl
+memberRole	Team.ttl
+name	Team.ttl
+participatesIn	Team.ttl
+playsIn	Team.ttl
+playsSport	Team.ttl
+position	Team.ttl
+role	Team.ttl
+sport	Team.ttl
+sportName	Team.ttl
+startDate	Team.ttl
+teamLeader	Team.ttl
+teamName	Team.ttl
+age	Education.ttl
+assigns	Education.ttl
+attends	Education.ttl
+attendsCourse	Education.ttl
+consistsOf	Education.ttl
+courseCode	Education.ttl
+courseID	Education.ttl
+educates	Education.ttl
+enrolledIn	Education.ttl
+hasCourse	Education.ttl
+hasDegree	Education.ttl
+hasEducation	Education.ttl
+hasEducationalInstitution	Education.ttl
+hasEnrolled	Education.ttl
+hasGrade	Education.ttl
+hasKnowledgeArea	Education.ttl
+hasStudent	Education.ttl
+hasSubject	Education.ttl
+hasTeacher	Education.ttl
+name	Education.ttl
+offeredBy	Education.ttl
+offersCourse	Education.ttl
+provides	Education.ttl
+receives	Education.ttl
+schooledIn	Education.ttl
+studentID	Education.ttl
+studentId	Education.ttl
+studies	Education.ttl
+studiesAt	Education.ttl
+studiesSubject	Education.ttl
+subject	Education.ttl
+teacherID	Education.ttl
+teacherId	Education.ttl
+teaches	Education.ttl
+teachesCourse	Education.ttl
+teachesSubject	Education.ttl
+universityAttended	Education.ttl
+universityID	Education.ttl
+worksAt	Education.ttl
+cost	Service.ttl
+description	Service.ttl
+endTime	Service.ttl
+hasConsumer	Service.ttl
+hasCost	Service.ttl
+hasCustomer	Service.ttl
+hasDuration	Service.ttl
+hasLocation	Service.ttl
+hasName	Service.ttl
+hasPrice	Service.ttl
+hasProvider	Service.ttl
+hasRate	Service.ttl
+hasServiceConsumer	Service.ttl
+hasServiceDuration	Service.ttl
+hasServiceProvider	Service.ttl
+hasType	Service.ttl
+isPaid	Service.ttl
+isProvidedBy	Service.ttl
+locatedAt	Service.ttl
+location	Service.ttl
+name	Service.ttl
+offeredBy	Service.ttl
+price	Service.ttl
+providedBy	Service.ttl
+provider	Service.ttl
+providerLocation	Service.ttl
+providerName	Service.ttl
+provides	Service.ttl
+providesService	Service.ttl
+rating	Service.ttl
+serviceConsumer	Service.ttl
+serviceCost	Service.ttl
+serviceName	Service.ttl
+serviceProvider	Service.ttl
+serviceRating	Service.ttl
+serviceType	Service.ttl
+startTime	Service.ttl
+type	Service.ttl
+uses	Service.ttl
+usesService	Service.ttl
+age	Member.ttl
+belongsGroup	Member.ttl
+belongsTo	Member.ttl
+belongsToGroup	Member.ttl
+email	Member.ttl
+groupHasName	Member.ttl
+groupID	Member.ttl
+groupName	Member.ttl
+hasAge	Member.ttl
+hasBirthday	Member.ttl
+hasDateOfBirth	Member.ttl
+hasEmail	Member.ttl
+hasID	Member.ttl
+hasJoinedDate	Member.ttl
+hasMember	Member.ttl
+hasMemberID	Member.ttl
+hasMembershipDate	Member.ttl
+hasMembershipSince	Member.ttl
+hasMembershipType	Member.ttl
+hasName	Member.ttl
+id	Member.ttl
+isMemberOf	Member.ttl
+joinedDate	Member.ttl
+joinedOn	Member.ttl
+livesInCity	Member.ttl
+memberID	Member.ttl
+memberName	Member.ttl
+memberOf	Member.ttl
+membershipType	Member.ttl
+name	Member.ttl
+prov	Member.ttl
+associatedWith	Level.ttl
+hasDescription	Level.ttl
+hasDifficulty	Level.ttl
+hasLevel	Level.ttl
+hasLevelName	Level.ttl
+hasLevelNumber	Level.ttl
+hasNextLevel	Level.ttl
+hasNumber	Level.ttl
+hasReward	Level.ttl
+hasSkill	Level.ttl
+inGame	Level.ttl
+isLevelOf	Level.ttl
+levelDescription	Level.ttl
+levelIndicator	Level.ttl
+levelName	Level.ttl
+levelNumber	Level.ttl
+levelOf	Level.ttl
+levelValue	Level.ttl
+nextLevel	Level.ttl
+previousLevel	Level.ttl
+understanding	Level.ttl
+belongsTo	Hand.ttl
+canGrasp	Hand.ttl
+canGrip	Hand.ttl
+fingerCount	Hand.ttl
+fingers	Hand.ttl
+handHasFingers	Hand.ttl
+handHasPalm	Hand.ttl
+handHasThumb	Hand.ttl
+hasFingers	Hand.ttl
+hasFiveFingers	Hand.ttl
+hasFunction	Hand.ttl
+hasNails	Hand.ttl
+hasNumberOfFingers	Hand.ttl
+hasPalm	Hand.ttl
+hasPart	Hand.ttl
+hasParts	Hand.ttl
+hasPosition	Hand.ttl
+hasSkin	Hand.ttl
+hasSkinColor	Hand.ttl
+hasThumb	Hand.ttl
+isLeft	Hand.ttl
+isPartOf	Hand.ttl
+isPartOfArm	Hand.ttl
+isRight	Hand.ttl
+partOf	Hand.ttl
+associatedWithConcept	Idea.ttl
+dateOfIdea	Idea.ttl
+description	Idea.ttl
+descriptionOfIdea	Idea.ttl
+evaluation	Idea.ttl
+hasAge	Idea.ttl
+hasAuthor	Idea.ttl
+hasCreationDate	Idea.ttl
+hasCreator	Idea.ttl
+hasDate	Idea.ttl
+hasDateCreated	Idea.ttl
+hasDescription	Idea.ttl
+hasIdea	Idea.ttl
+hasIdeaValue	Idea.ttl
+hasImpact	Idea.ttl
+hasName	Idea.ttl
+hasOrigin	Idea.ttl
+hasOriginality	Idea.ttl
+hasOriginator	Idea.ttl
+hasRelation	Idea.ttl
+hasResultingAction	Idea.ttl
+hasTitle	Idea.ttl
+ideaBelongsTo	Idea.ttl
+ideaContent	Idea.ttl
+ideaCreationDate	Idea.ttl
+ideaOriginator	Idea.ttl
+ideaSummary	Idea.ttl
+implementationStatus	Idea.ttl
+inspirationSource	Idea.ttl
+inspiredBy	Idea.ttl
+isImplemented	Idea.ttl
+isInspiredBy	Idea.ttl
+isOriginal	Idea.ttl
+isRelatedTo	Idea.ttl
+leadTo	Idea.ttl
+practicality	Idea.ttl
+belongsTo	Eye.ttl
+canSee	Eye.ttl
+color	Eye.ttl
+cornea	Eye.ttl
+disease	Eye.ttl
+eyeCondition	Eye.ttl
+eyeShape	Eye.ttl
+eyeVision	Eye.ttl
+function	Eye.ttl
+hasAnatomy	Eye.ttl
+hasCiliaryMuscle	Eye.ttl
+hasColor	Eye.ttl
+hasCornea	Eye.ttl
+hasDisease	Eye.ttl
+hasDisorder	Eye.ttl
+hasEye	Eye.ttl
+hasFunction	Eye.ttl
+hasIris	Eye.ttl
+hasKinesthesia	Eye.ttl
+hasLens	Eye.ttl
+hasLensType	Eye.ttl
+hasPart	Eye.ttl
+hasRetina	Eye.ttl
+hasShape	Eye.ttl
+hasSize	Eye.ttl
+hasTreatment	Eye.ttl
+hasVision	Eye.ttl
+hasVisualAcuity	Eye.ttl
+iris	Eye.ttl
+isPartOf	Eye.ttl
+lens	Eye.ttl
+lensMaterial	Eye.ttl
+lensShape	Eye.ttl
+lensThickness	Eye.ttl
+retina	Eye.ttl
+shape	Eye.ttl
+sight	Eye.ttl
+size	Eye.ttl
+vision	Eye.ttl
+vission	Eye.ttl
+childOf	Father.ttl
+fatherOf	Father.ttl
+hasChild	Father.ttl
+hasDaughter	Father.ttl
+hasFather	Father.ttl
+hasSon	Father.ttl
+hasSpouse	Father.ttl
+isFatherOf	Father.ttl
+address	Lot.ttl
+area	Lot.ttl
+belongsTo	Lot.ttl
+hasAddress	Lot.ttl
+hasArea	Lot.ttl
+hasAuctionDate	Lot.ttl
+hasBuilding	Lot.ttl
+hasCapacity	Lot.ttl
+hasCity	Lot.ttl
+hasCountry	Lot.ttl
+hasLocation	Lot.ttl
+hasLot	Lot.ttl
+hasLotNumber	Lot.ttl
+hasOwner	Lot.ttl
+hasParkingLot	Lot.ttl
+hasPrice	Lot.ttl
+hasSize	Lot.ttl
+hasStartingPrice	Lot.ttl
+hasStreetAddress	Lot.ttl
+hasStructure	Lot.ttl
+hasZipCode	Lot.ttl
+id	Lot.ttl
+identifier	Lot.ttl
+isAvailable	Lot.ttl
+isDeveloped	Lot.ttl
+isForSale	Lot.ttl
+isOnSale	Lot.ttl
+isPartOfAuction	Lot.ttl
+isRelatedTo	Lot.ttl
+isVacant	Lot.ttl
+location	Lot.ttl
+lotNumber	Lot.ttl
+lotSize	Lot.ttl
+owner	Lot.ttl
+owners	Lot.ttl
+price	Lot.ttl
+salePrice	Lot.ttl
+size	Lot.ttl
+age	Teacher.ttl
+first_name	Teacher.ttl
+hasAge	Teacher.ttl
+hasDegree	Teacher.ttl
+hasExperience	Teacher.ttl
+hasExperienceInYears	Teacher.ttl
+hasID	Teacher.ttl
+hasName	Teacher.ttl
+hasStudent	Teacher.ttl
+hasSubject	Teacher.ttl
+hasYearsExperience	Teacher.ttl
+isEmployedBy	Teacher.ttl
+last_name	Teacher.ttl
+name	Teacher.ttl
+school	Teacher.ttl
+subject	Teacher.ttl
+subjectName	Teacher.ttl
+teachSubject	Teacher.ttl
+teaches	Teacher.ttl
+teachesAt	Teacher.ttl
+teachesIn	Teacher.ttl
+teachesSubject	Teacher.ttl
+teaches_subject	Teacher.ttl
+worksAt	Teacher.ttl
+worksAtSchool	Teacher.ttl
+worksIn	Teacher.ttl
+works_at	Teacher.ttl
+yearsExperience	Teacher.ttl
+yearsOfExperience	Teacher.ttl
+address	Party.ttl
+age	Party.ttl
+attendedBy	Party.ttl
+attendee	Party.ttl
+city	Party.ttl
+date	Party.ttl
+guest	Party.ttl
+hasAttendee	Party.ttl
+hasBirthDate	Party.ttl
+hasDate	Party.ttl
+hasDateTime	Party.ttl
+hasEvent	Party.ttl
+hasGuest	Party.ttl
+hasHost	Party.ttl
+hasLeader	Party.ttl
+hasLocation	Party.ttl
+hasMember	Party.ttl
+hasName	Party.ttl
+hasOrganizer	Party.ttl
+hasPartyType	Party.ttl
+hasTheme	Party.ttl
+hasTime	Party.ttl
+hostedBy	Party.ttl
+location	Party.ttl
+member	Party.ttl
+music	Party.ttl
+name	Party.ttl
+organisedBy	Party.ttl
+organizedBy	Party.ttl
+participatesIn	Party.ttl
+provide	Party.ttl
+theme	Party.ttl
+zipcode	Party.ttl

@@ -1,93 +1,96 @@
-hasExpertise	researcher.ttl	1
-affiliatedWith	researcher.ttl	1
-publishedWork	researcher.ttl	1
-memberOfGroup	researcher.ttl	1
-hasTerrainFeature	land.ttl	1
-hasInfrastructure	land.ttl	1
-Flash_point	fire.ttl	1
-Smoke_production	fire.ttl	1
-requires	fire.ttl	1
-consumedBy	fire.ttl	1
-produces	fire.ttl	1
-hasStartTime	time.ttl	1
-hasEndTime	time.ttl	1
-before	time.ttl	1
-after	time.ttl	1
-during	time.ttl	1
-overlaps	time.ttl	1
-hasDuration	time.ttl	1
-Year	time.ttl	1
-Month	time.ttl	1
-Day	time.ttl	1
-Hour	time.ttl	1
-Minute	time.ttl	1
-Second	time.ttl	1
-hasCause	cause.ttl	1
-hasEffect	cause.ttl	1
-causes	cause.ttl	1
-influences	cause.ttl	1
-hasDepartment	institution.ttl	1
-locatedIn	region.ttl	2
-hasAffiliationWith	institution.ttl	1
-hasStudent	institution.ttl	1
-hasFaculty	institution.ttl	1
-hasName	library.ttl	3
-isPartOf	case.ttl	1
-hasStatus	case.ttl	1
-Plaintiff	case.ttl	1
-Defendant	case.ttl	1
-hasSeverity	condition.ttl	1
-hasLocation	event.ttl	1
-hasTime	event.ttl	1
-hasParticipant	event.ttl	1
-isLocatedAt	event.ttl	1
-occursAt	event.ttl	1
-participatesIn	event.ttl	1
-hasBoundary	region.ttl	1
-hasCapital	region.ttl	1
-hasPopulation	region.ttl	1
-Area	region.ttl	1
-regionCode	region.ttl	1
-hasWeatherCondition	region.ttl	1
-hasFirstName	name.ttl	1
-hasLastName	name.ttl	1
-hasAlias	name.ttl	1
-belongsToFamily	language.ttl	1
-hasDialects	language.ttl	1
-hasSyntax	language.ttl	1
-hasSemantics	language.ttl	1
-hasValue	cost.ttl	1
-incurs	cost.ttl	1
-hasCost	cost.ttl	1
-hasMember	library.ttl	1
-hasBook	library.ttl	1
-hasJournal	library.ttl	1
-writtenBy	library.ttl	1
-checkedOutBy	library.ttl	1
-manages	library.ttl	1
-hasTitle	library.ttl	1
-hasISBN	library.ttl	1
-hasPublicationDate	library.ttl	1
-hasMembershipID	library.ttl	1
-LocatedIn	place.ttl	1
-deliversService	service.ttl	1
-receivesService	service.ttl	1
-belongsToCategory	service.ttl	1
-hasCustomer	service.ttl	1
-hasProvider	service.ttl	1
-hasInterest	interest.ttl	1
-isExpressedBy	interest.ttl	1
-isAbout	interest.ttl	1
-interestStrength	interest.ttl	1
-hasPart	hour.ttl	1
-precedes	hour.ttl	1
-hourValue	hour.ttl	1
-hasDensity	material.ttl	1
-hasConductivity	material.ttl	1
-isMadeOf	material.ttl	1
-deliberatesOn	judge.ttl	1
-presidesOver	judge.ttl	1
-inChargesOf	judge.ttl	1
-hasJudgmentOn	judge.ttl	1
-hasCourtCase	judge.ttl	1
-isHandledBy	judge.ttl	1
+hasExpertise	researcher.ttl
+affiliatedWith	researcher.ttl
+publishedWork	researcher.ttl
+memberOfGroup	researcher.ttl
+hasTerrainFeature	land.ttl
+hasInfrastructure	land.ttl
+Flash_point	fire.ttl
+Smoke_production	fire.ttl
+requires	fire.ttl
+consumedBy	fire.ttl
+produces	fire.ttl
+hasStartTime	time.ttl
+hasEndTime	time.ttl
+before	time.ttl
+after	time.ttl
+during	time.ttl
+overlaps	time.ttl
+hasDuration	time.ttl
+Year	time.ttl
+Month	time.ttl
+Day	time.ttl
+Hour	time.ttl
+Minute	time.ttl
+Second	time.ttl
+hasCause	cause.ttl
+hasEffect	cause.ttl
+causes	cause.ttl
+influences	cause.ttl
+hasDepartment	institution.ttl
+locatedIn	institution.ttl
+hasAffiliationWith	institution.ttl
+hasStudent	institution.ttl
+hasFaculty	institution.ttl
+hasName	institution.ttl
+isPartOf	case.ttl
+hasStatus	case.ttl
+Plaintiff	case.ttl
+Defendant	case.ttl
+hasSeverity	condition.ttl
+hasLocation	event.ttl
+hasTime	event.ttl
+hasParticipant	event.ttl
+isLocatedAt	event.ttl
+occursAt	event.ttl
+participatesIn	event.ttl
+hasBoundary	region.ttl
+locatedIn	region.ttl
+hasCapital	region.ttl
+hasPopulation	region.ttl
+Area	region.ttl
+regionCode	region.ttl
+hasWeatherCondition	region.ttl
+hasName	name.ttl
+hasFirstName	name.ttl
+hasLastName	name.ttl
+hasAlias	name.ttl
+belongsToFamily	language.ttl
+hasDialects	language.ttl
+hasSyntax	language.ttl
+hasSemantics	language.ttl
+hasValue	cost.ttl
+incurs	cost.ttl
+hasCost	cost.ttl
+hasMember	library.ttl
+hasBook	library.ttl
+hasJournal	library.ttl
+writtenBy	library.ttl
+checkedOutBy	library.ttl
+manages	library.ttl
+hasTitle	library.ttl
+hasISBN	library.ttl
+hasPublicationDate	library.ttl
+hasName	library.ttl
+hasMembershipID	library.ttl
+LocatedIn	place.ttl
+deliversService	service.ttl
+receivesService	service.ttl
+belongsToCategory	service.ttl
+hasCustomer	service.ttl
+hasProvider	service.ttl
+hasInterest	interest.ttl
+isExpressedBy	interest.ttl
+isAbout	interest.ttl
+interestStrength	interest.ttl
+hasPart	hour.ttl
+precedes	hour.ttl
+hourValue	hour.ttl
+hasDensity	material.ttl
+hasConductivity	material.ttl
+isMadeOf	material.ttl
+deliberatesOn	judge.ttl
+presidesOver	judge.ttl
+inChargesOf	judge.ttl
+hasJudgmentOn	judge.ttl
+hasCourtCase	judge.ttl
+isHandledBy	judge.ttl

@@ -1,907 +1,1771 @@
-Others	Others.ttl	6
-Couch	Couch.ttl	5
-Home	Home.ttl	8
-Eye	Eye.ttl	11
-Art	Art.ttl	9
-Door	Home.ttl	2
-Lock	Door.ttl	1
-Material	Door.ttl	1
-Morning	Morning.ttl	4
-Office	Office.ttl	5
-SecurityLevel	Door.ttl	1
-Case	Case.ttl	3
-Architectural_element	Door.ttl	1
-Architecturalelement	Door.ttl	1
-Lot	Lot.ttl	7
-History	History.ttl	9
-Money	Money.ttl	3
-Government	Government.ttl	13
-Week	Week.ttl	12
-FirstLady	President.ttl	1
-Kind	Kind.ttl	6
-Family	Family.ttl	28
-World	World.ttl	14
-Presidency	President.ttl	1
-President	President.ttl	1
-PresidentialTerm	President.ttl	1
-War	War.ttl	38
-Term	President.ttl	1
-Period	Art.ttl	5
-Geographicalentity	State.ttl	3
-Office	Office.ttl	2
-Politicalleader	President.ttl	1
-Politician	Government.ttl	3
-Life	Life.ttl	11
-Attribute	Others.ttl	1
-System	System.ttl	9
-Way	Way.ttl	17
-Info	Information.ttl	17
-Power	Power.ttl	8
-Story	Story.ttl	9
-Community	Community.ttl	6
-Parent	Father.ttl	15
-Study	Study.ttl	16
-Machine	Power.ttl	2
-Parent	Parent.ttl	6
-Hand	Hand.ttl	9
-Work	Work.ttl	12
-Other	Others.ttl	1
-Others	Others.ttl	1
-Parameter	Others.ttl	1
-Service	Service.ttl	5
-Service	People.ttl	6
-Species	Life.ttl	2
-Education	Education.ttl	15
-University	Education.ttl	4
-Research	Study.ttl	13
-Result	Result.ttl	4
-Teacher	Teacher.ttl	4
-Professor	Study.ttl	3
-Issue	Issue.ttl	8
-Academicsubject	Student.ttl	1
-Colour	Loveseat.ttl	1
-Dimensions	Couch.ttl	2
-Furniture	Home.ttl	8
-Loveseat	Loveseat.ttl	1
-Size	Eye.ttl	5
-Style	Art.ttl	4
-Upholstery	Couch.ttl	2
-Year	Year.ttl	8
-End	End.ttl	28
-Hour	Week.ttl	2
-Day	Year.ttl	8
-Time	Party.ttl	4
-Minute	Minute.ttl	1
-MinuteOfTime	Minute.ttl	1
-Second	Day.ttl	3
-Unit	Power.ttl	3
-Time	Minute.ttl	1
-Team	Team.ttl	9
-Result	Result.ttl	10
-TimePeriod	Time.ttl	5
-TotalMinutes	Minute.ttl	1
-Unitminute	Minute.ttl	1
-Month	Year.ttl	10
-N32fde1c5c0fb45e4a3ec8849897d55dcb1	Minute.ttl	1
-Temporalunit	Week.ttl	7
-Unitoftime	Minute.ttl	2
-Timeperiod	Year.ttl	7
-Building	Office.ttl	1
-Chair	Chair.ttl	3
-Computer	Office.ttl	1
-School	Teacher.ttl	6
-Body	Eye.ttl	10
-Desk	Office.ttl	2
-Company	Work.ttl	8
-Equipment	Office.ttl	1
-Facility	Office.ttl	1
-Man	Father.ttl	3
-Book	Book.ttl	35
-OfficeEquipment	Office.ttl	1
-Role	Team.ttl	5
-Member	Member.ttl	9
-Task	Team.ttl	3
-Worker	Work.ttl	2
-N9c60bb77ee764160bee8687aa0e6f628b1	Office.ttl	1
-Nbbc8d28a00714441ab43a52128d4ba8db1	Office.ttl	1
-Right	Right.ttl	6
-Case	Case.ttl	2
-Client	Business.ttl	3
-Law	Right.ttl	2
-Court	Law.ttl	1
-CourtCase	Law.ttl	1
-EnactingBody	Law.ttl	1
-EnforcementBody	Law.ttl	1
-Question	Question.ttl	10
-Gyear	Book.ttl	4
-Judge	Case.ttl	2
-Jurisdiction	Right.ttl	2
-Law	Law.ttl	1
-Lawyer	Case.ttl	3
-State	State.ttl	3
-LegalIssue	Law.ttl	1
-Game	Level.ttl	4
-Legislation	Government.ttl	2
-Prosecutor	Law.ttl	1
-Rule	Law.ttl	1
-Statute	Law.ttl	1
-StatutoryLaw	Law.ttl	1
-Face	Face.ttl	24
-Legalentity	Law.ttl	4
-Astronomy	Night.ttl	1
-Concept	Idea.ttl	9
-Day	Day.ttl	4
-Dream	Night.ttl	1
-Moon	Night.ttl	1
-MoonPhase	Night.ttl	1
-Night	Night.ttl	1
-Nighttimeactivity	Night.ttl	1
-Sleep	Night.ttl	1
-Star	Night.ttl	1
-Sunrise	Morning.ttl	2
-Sunset	Night.ttl	1
-Water	Water.ttl	5
-Thing	Level.ttl	12
-Weather	Day.ttl	2
-WeatherCondition	Day.ttl	2
-Periodofday	Night.ttl	1
-Fact	Fact.ttl	5
-Hasevent	Moment.ttl	1
-Instant	Time.ttl	6
-Moment	Moment.ttl	1
-Property	Lot.ttl	8
-N4e8130ac0170445eae2683015c4785e3b1	Moment.ttl	1
-Period	Moment.ttl	1
-TimeInstant	Moment.ttl	1
-Point	Line.ttl	3
-Position	Hand.ttl	4
-Timestamp	Moment.ttl	7
-Temporal	Moment.ttl	1
-Timepoint	Moment.ttl	1
-Status	Issue.ttl	2
-Type	Couch.ttl	3
-CaseWorker	Case.ttl	1
-Description	History.ttl	2
-Entity	Lot.ttl	10
-Identifier	Case.ttl	1
-Investigation	Case.ttl	1
-Investigator	Case.ttl	1
-LegalCase	Case.ttl	1
-Legalcase	Case.ttl	1
-Party	Party.ttl	2
-Status	Case.ttl	1
-Job	Work.ttl	5
-BodyPart	Eye.ttl	3
-Ear	Head.ttl	1
-Ears	Head.ttl	1
-Eye	Face.ttl	2
-Eyes	Face.ttl	2
-Face	Head.ttl	1
-Forehead	Head.ttl	1
-Hair	Head.ttl	1
-Head	Head.ttl	1
-HeadPart	Head.ttl	1
-It	Head.ttl	1
-Mouth	Face.ttl	2
-Nose	Face.ttl	2
-SensoryOrgan	Head.ttl	1
-Skin	Hand.ttl	3
-Bodypart	Eye.ttl	6
-Company	Company.ttl	4
-Coin	Money.ttl	1
-City	State.ttl	12
-CurrencyCode	Money.ttl	1
-Double	Eye.ttl	10
-Money	Money.ttl	1
-Note	Money.ttl	1
-Payment	Money.ttl	1
-Transaction	Money.ttl	3
-Transfer	Money.ttl	1
-N9832494bbc394d12b54840a7f84078c4b1	Money.ttl	1
-Economicconcept	Money.ttl	1
-Literal	Name.ttl	2
-Kind	Kind.ttl	1
-Category	Work.ttl	2
-N2b75fc6be8804b85a49d9004567a0c2eb1	Kind.ttl	1
-Property	Kind.ttl	1
-Teacher	Education.ttl	4
-Activities	Kid.ttl	1
-Child	Child.ttl	4
-Woman	Father.ttl	4
-Hobby	Girl.ttl	3
-Kid	Kid.ttl	1
-Langstring	Issue.ttl	8
-Parent	Family.ttl	2
-Pet	Girl.ttl	2
-School	Girl.ttl	2
-Sport	Team.ttl	2
-Toy	Girl.ttl	2
-Education	Education.ttl	3
-Activity	Result.ttl	5
-Alarm	Morning.ttl	1
-Breakfast	Morning.ttl	1
-Coffee	Morning.ttl	1
-Early	Morning.ttl	1
-EarlyMorning	Morning.ttl	1
-Exercise	Morning.ttl	1
-MORNING	Morning.ttl	1
-Meal	Morning.ttl	1
-Morning	Morning.ttl	1
-MorningActivity	Morning.ttl	1
-MorningTime	Morning.ttl	1
-Mornings	Morning.ttl	1
-Routine	Morning.ttl	1
-Siunarise	Morning.ttl	1
-WakeUp	Morning.ttl	1
-Daypart	Morning.ttl	2
-Daytime	Morning.ttl	1
-Timeofday	Morning.ttl	1
-Child	Parent.ttl	3
-Mother	Parent.ttl	3
-Husband	Mother.ttl	1
-Mother	Mother.ttl	1
-N0d5e305adf3b4a2da06b22287d484de3b1	Mother.ttl	1
-Female	Family.ttl	2
-Femalehuman	Mother.ttl	1
-Woman	Family.ttl	2
-N0d29d15ecbe642f980ed0a7ca64ba58ab1	Mother.ttl	1
-Alive	Family.ttl	1
-Date	Year.ttl	2
-Family	Family.ttl	1
-FamilyMember	Family.ttl	1
-Male	Father.ttl	2
-Man	Family.ttl	1
-N8ca0438ee5f0405c84803fcf346123bbb1	Family.ttl	1
-N8ca0438ee5f0405c84803fcf346123bbb4	Family.ttl	1
-N8ca0438ee5f0405c84803fcf346123bbb7	Family.ttl	1
-Hasmember	Family.ttl	1
-Member	Family.ttl	1
-N151dbb48d95b4a24ab0768191aa63adfb1	Family.ttl	1
-Country	State.ttl	3
-City	City.ttl	4
-Word	Word.ttl	6
-Air	Air.ttl	1
-AirComposition	Air.ttl	1
-AirCondition	Air.ttl	1
-AirPollution	Air.ttl	1
-AirQuality	Air.ttl	1
-Benefit	Air.ttl	1
-ChemicalElement	Water.ttl	2
-Component	System.ttl	5
-Composition	Air.ttl	1
-Gas	Air.ttl	1
-Humidity	Air.ttl	1
-Pollutant	Air.ttl	1
-Pollution	Air.ttl	1
-Pressure	Air.ttl	1
-Physicalsubstance	Air.ttl	2
-Environmentalimpact	Air.ttl	1
-Institution	Teacher.ttl	7
-House	House.ttl	3
-Author	Idea.ttl	6
-Diploma	Research.ttl	1
-Field	Job.ttl	2
-FieldOfStudy	Research.ttl	1
-Field_of_Study	Research.ttl	1
-Institution	Research.ttl	1
-Journal	Research.ttl	1
-Method	Way.ttl	2
-Organization	Member.ttl	11
-Product	Business.ttl	5
-Publication	Study.ttl	2
-Research	Research.ttl	1
-ResearchField	Research.ttl	1
-ResearchMethod	Research.ttl	1
-ResearchPaper	Research.ttl	1
-ResearchProject	Research.ttl	1
-Topic	Question.ttl	5
-Researcher	Study.ttl	2
-Subject	Teacher.ttl	6
-Topic	Research.ttl	1
-Nee65374329444a1d9f62767ddcbde88ab1	Research.ttl	1
-Academicactivity	Research.ttl	1
-Nee65374329444a1d9f62767ddcbde88ab3	Research.ttl	1
-Employer	Work.ttl	3
-Industry	Business.ttl	3
-Job	Job.ttl	1
-JobPosting	Work.ttl	2
-Position	Job.ttl	1
-Salary	Work.ttl	2
-Skill	Level.ttl	2
-WorkArea	Job.ttl	1
-Plane	Point.ttl	1
-Point	Point.ttl	1
-Number	Number.ttl	7
-X_coordinate	Point.ttl	1
-Y_coordinate	Point.ttl	1
-Z_coordinate	Point.ttl	1
-Area	Area.ttl	1
-AreaUnit	Area.ttl	1
-Circle	Area.ttl	1
-GeographicalEntity	Area.ttl	1
-N84af915885a24ef99a21e63c7ec3936fb1	Area.ttl	1
-PhysicalEntity	Area.ttl	1
-PhysicalObject	Force.ttl	3
-PolygonArea	Area.ttl	1
-Space	Area.ttl	1
-SquareArea	Area.ttl	1
-SquareMeters	Area.ttl	1
-Unit	Area.ttl	1
-UnitOfMeasurement	Area.ttl	1
-Physicalentity	Body.ttl	3
-Physicalquantity	Force.ttl	3
-AbstractThing	Thing.ttl	1
-ConceptualObject	Thing.ttl	1
-PhysicalThing	Thing.ttl	1
-Friend	Friend.ttl	1
-Hasfriend	Friend.ttl	1
-Interest	Community.ttl	2
-Measure	Hour.ttl	1
-PartOfDay	Day.ttl	2
-TemporalEntity	Hour.ttl	1
-Timeline	Hour.ttl	1
-Developer	Program.ttl	2
-Game	Game.ttl	1
-GameDeveloper	Game.ttl	1
-Platform	Program.ttl	2
-GameReview	Game.ttl	1
-Genre	Book.ttl	4
-Platform	Game.ttl	1
-Player	Game.ttl	1
-PlayerMode	Game.ttl	1
-Publisher	Book.ttl	2
-Year	Month.ttl	3
-Entertainment	Game.ttl	1
-Action	Idea.ttl	4
-ActionClaim	Reason.ttl	1
-ActionEffect	Reason.ttl	1
-Argument	Reason.ttl	1
-IdeaOrActionOrTheory	Reason.ttl	1
-Ned9a1f3809314a4a9e7bb4c5a3d7f240b2	Reason.ttl	1
-Ned9a1f3809314a4a9e7bb4c5a3d7f240b3	Reason.ttl	1
-PhenomenonFact	Reason.ttl	1
-Reason	Reason.ttl	1
-ReasoningenType	Reason.ttl	1
-State	Government.ttl	6
-Ned9a1f3809314a4a9e7bb4c5a3d7f240b1	Reason.ttl	1
-Character	Story.ttl	2
-Era	History.ttl	2
-HistoricalArtifact	History.ttl	1
-HistoricalEra	History.ttl	1
-Event	Party.ttl	4
-HistoricalFigure	History.ttl	1
-HistoricalPeriod	History.ttl	1
-History	History.ttl	1
-HistoryEvent	History.ttl	1
-Sofa	Sofa.ttl	1
-String	Eye.ttl	7
-BusinessInformation	Information.ttl	1
-Communication	Information.ttl	1
-Data	Information.ttl	2
-DataType	Information.ttl	1
-DigitalInformation	Information.ttl	1
-Document	Year.ttl	2
-Fact	Information.ttl	1
-Format	Information.ttl	1
-Info	Information.ttl	1
-Information	Information.ttl	1
-Process	Education.ttl	5
-InformationRepresentation	Information.ttl	1
-InformationSecurity	Information.ttl	1
-Knowledge	Information.ttl	1
-Media	Information.ttl	1
-Medium	Art.ttl	2
-Metadata	Information.ttl	1
-Health	Health.ttl	10
-Reference	Information.ttl	1
-Source	Question.ttl	5
-TextInfo	Information.ttl	1
-Address	Child.ttl	6
-Gender	People.ttl	8
-Place	Back.ttl	5
-Plot	Story.ttl	1
-Setting	Story.ttl	1
-Story	Story.ttl	1
-Theme	Party.ttl	2
-Creativework	Book.ttl	2
-House	World.ttl	1
-Island	World.ttl	1
-Landmark	World.ttl	1
-Mountain	World.ttl	1
-N1fbb52f8279840bcb8abe2928c0e799eb1	World.ttl	1
-N32dde6b843af4e6097e43944894402c3b1	World.ttl	1
-N32dde6b843af4e6097e43944894402c3b4	World.ttl	1
-Nb05b6e3683674341805f13bb3b9b3ec4b1	World.ttl	1
-Ncaf99f213f9f43fb885dc6fef0b494e3b1	World.ttl	1
-Ncaf99f213f9f43fb885dc6fef0b494e3b5	World.ttl	1
-Nd47b0ba34776481a845f76187fc4a6aab1	World.ttl	1
-Nd47b0ba34776481a845f76187fc4a6aab6	World.ttl	1
-Ocean	World.ttl	2
-Population	World.ttl	1
-Positiveinteger	Child.ttl	5
-Religion	World.ttl	1
-River	World.ttl	1
-Sea	World.ttl	1
-World	World.ttl	1
-Father	Father.ttl	3
-Name	Woman.ttl	1
-Nf85cde7178e84accb0cd4a81578c936db1	Woman.ttl	1
-Lat	Place.ttl	1
-Long	Place.ttl	1
-Park	Place.ttl	1
-Type	Place.ttl	1
-Leader	Government.ttl	2
-Group	Member.ttl	2
-GroupType	Group.ttl	1
-Individual	Power.ttl	2
-N5cf3df7a2b5740c48d8e01924d30125ab3	Group.ttl	1
-N6fd89a71a44f46dab2a3aa8d52f58970b1	Group.ttl	1
-Na02b249382f24ea1aa0683a71eb84cd7b2	Group.ttl	1
-Ne1bda3da70704b05a03cd314f2618192b1	Group.ttl	1
-Groupmember	Group.ttl	1
-N5cf3df7a2b5740c48d8e01924d30125ab1	Group.ttl	1
-Na02b249382f24ea1aa0683a71eb84cd7b1	Group.ttl	1
-Floor	Home.ttl	2
-Room	Home.ttl	2
-RoomType	Room.ttl	1
-RoomTypeEnumeration	Room.ttl	1
-Window	Home.ttl	2
-Architecturalstructure	Room.ttl	1
-Physicalspace	Room.ttl	1
-Form	Water.ttl	1
-Lake	Water.ttl	1
-Life	Water.ttl	1
-Organism	Eye.ttl	3
-PhysicalState	Water.ttl	1
-PollutedWater	Water.ttl	1
-Recipient	Water.ttl	1
-State	Water.ttl	1
-StateOfMatter	Water.ttl	1
-Substance	Water.ttl	2
-Use	Water.ttl	1
-Water	Water.ttl	1
-WaterForm	Water.ttl	1
-WaterProperty	Water.ttl	1
-WaterSource	Water.ttl	1
-Water_Properties	Water.ttl	1
-N22b89b7ccc754b57a7dc4fd05bd81ec7b1	Water.ttl	1
-Owner	Business.ttl	2
-Price	Service.ttl	2
-Res:truefalse	House.ttl	1
-Calendar	Day.ttl	1
-DayOfWeek	Day.ttl	1
-DayPart	Day.ttl	1
-Week	Day.ttl	1
-Assembly	Part.ttl	1
-Automobile	Part.ttl	1
-Category	Part.ttl	1
-Engine	Car.ttl	2
-MechanicalPart	Part.ttl	1
-Part	Part.ttl	1
-Process	Part.ttl	1
-Whole	Part.ttl	1
-Guy	Guy.ttl	1
-Colortype	Couch.ttl	1
-Couch	Couch.ttl	1
-Cushion	Couch.ttl	1
-Materialtype	Couch.ttl	1
-Seq	Couch.ttl	1
-Device	Power.ttl	1
-ElectricPower	Power.ttl	1
-ElectricalPower	Power.ttl	1
-Na20871d4cee24edc99d33cff0ce65d10b1	Power.ttl	1
-PhysicalPower	Power.ttl	1
-PoliticalPower	Power.ttl	1
-Power	Power.ttl	1
-PowerConcept	Power.ttl	1
-PowerGenerator	Power.ttl	1
-PowerSource	Power.ttl	1
-Father	Parent.ttl	1
-N1c93b68e14c547a9ad82d4c50942ee5eb3	Parent.ttl	1
-Actor	War.ttl	1
-Agent	Idea.ttl	6
-Arm	Hand.ttl	2
-Battle	War.ttl	1
-Battles	War.ttl	1
-Belligerent	War.ttl	1
-Casualties	War.ttl	1
-Cause	Problem.ttl	3
-Combatant	War.ttl	1
-Conflicts	War.ttl	1
-Countries	War.ttl	1
-Change	Force.ttl	4
-Military	War.ttl	1
-Nation	War.ttl	1
-Outcome	War.ttl	1
-Result	Study.ttl	2
-Soldier	War.ttl	1
-Treaty	War.ttl	1
-War	War.ttl	1
-WarPart	War.ttl	1
-Weapon	War.ttl	1
-Weapons	War.ttl	1
-Conflict	War.ttl	1
-Nf2b2a9998bbe48aea39bcc4fde01a0deb1	War.ttl	1
-LearningMaterial	Study.ttl	1
-Method	Study.ttl	1
-SourceMaterial	Study.ttl	1
-Study	Study.ttl	1
-StudyArea	Study.ttl	1
-SubjectArea	Study.ttl	1
-Tutor	Study.ttl	1
-Manman	Man.ttl	1
-Homosapien	Man.ttl	1
-Human	Father.ttl	16
-Nd52675bb2f2f4a4fa3deed365bcd185cb1	Man.ttl	1
-DateTime	Party.ttl	2
-Datetime	Party.ttl	16
-IntervalTime	Time.ttl	1
-SpecificTime	Time.ttl	1
-TemporalInterval	Time.ttl	1
-TemporalPosition	Time.ttl	1
-TimeInterval	Time.ttl	1
-Date	Month.ttl	1
-Month	Month.ttl	1
-Number	Number.ttl	2
-Gday	Year.ttl	1
-Season	Year.ttl	1
-Something	Back.ttl	3
-FactCategory	Fact.ttl	1
-FactCheck	Fact.ttl	1
-FactDescription	Fact.ttl	1
-FactSource	Fact.ttl	1
-FactTopic	Fact.ttl	1
-FactType	Fact.ttl	1
-Reporter	Fact.ttl	1
-Truthvalue	Fact.ttl	1
-Verification	Fact.ttl	1
-Application	System.ttl	1
-ComputerSystem	System.ttl	1
-Configuration	System.ttl	1
-Element	System.ttl	1
-Function	Eye.ttl	3
-Functionality	System.ttl	1
-Hardware	System.ttl	2
-Nb264d2cc31194a64bfd5dcf9bb6bc55fb1	System.ttl	1
-Objective	System.ttl	1
-OperatingSystem	Program.ttl	2
-Software	System.ttl	3
-SubSystem	System.ttl	1
-Subsystem	System.ttl	1
-System	System.ttl	1
-SystemComponent	System.ttl	1
-Birth	Life.ttl	1
-Cell	Life.ttl	1
-Death	Life.ttl	1
-Environment	Life.ttl	1
-LifeCycle	Life.ttl	1
-LifeForm	Life.ttl	1
-LifeSpan	Life.ttl	1
-LifeStage	Life.ttl	1
-TaxonomicRank	Life.ttl	1
-Education	Girl.ttl	1
-Girl	Girl.ttl	1
-Appliance	Home.ttl	1
-Home	Home.ttl	1
-HomeOwner	Home.ttl	1
-HomePart	Home.ttl	1
-Nb5db0bf0382546febdc9e57a1d782fd7b1	Home.ttl	1
-Nb5db0bf0382546febdc9e57a1d782fd7b6	Home.ttl	1
-Resident	Home.ttl	1
-Roof	Home.ttl	1
-Physicalplace	Home.ttl	1
-CEO	Company.ttl	1
-PlainLiteral	Program.ttl	2
-Art	Art.ttl	1
-ArtGenre	Art.ttl	1
-ArtPeriod	Art.ttl	1
-ArtStyle	Art.ttl	1
-ArtWork	Art.ttl	1
-Artist	Art.ttl	1
-Artwork	Art.ttl	3
-Creator	Idea.ttl	2
-Exhibition	Art.ttl	1
-Gallery	Art.ttl	1
-Museum	Art.ttl	1
-Painting	Art.ttl	1
-Sculpture	Art.ttl	1
-WorkOfArt	Art.ttl	1
-Comment	Community.ttl	1
-Community	Community.ttl	1
-CommunityMember	Community.ttl	1
-CommunityRole	Community.ttl	1
-Community_Service	Community.ttl	1
-Cultural_Identity	Community.ttl	1
-Culture	Community.ttl	1
-Location	Party.ttl	7
-Leader	Community.ttl	1
-LocatedIn	Community.ttl	1
-Post	Community.ttl	1
-Volunteer	Community.ttl	1
-NameEntity	Name.ttl	1
-AgentCausingChange	Change.ttl	1
-CausalEvent	Change.ttl	1
-Change	Change.ttl	1
-ChangeAgent	Change.ttl	1
-ChangeType	Change.ttl	1
-Impact	Problem.ttl	2
-Transition	Change.ttl	1
-TypeOfChange	Change.ttl	1
-Code	Program.ttl	1
-CodingLanguage	Program.ttl	1
-Library	Program.ttl	1
-Program	Program.ttl	1
-Programmer	Program.ttl	1
-ProgrammingLanguage	Program.ttl	1
-SoftwareDeveloper	Program.ttl	1
-Programminglanguage	Program.ttl	1
-Definition	Word.ttl	1
-MailMerge	Word.ttl	1
-Meaning	Word.ttl	1
-Nd4a8cee1fde447c999e3f88be934a859b1	Word.ttl	1
-PageLayout	Word.ttl	1
-PartOfSpeech	Word.ttl	1
-Class	Eye.ttl	8
-Phrase	Word.ttl	1
-Sentence	Word.ttl	1
-Spelling	Word.ttl	1
-SpellingCorrector	Word.ttl	1
-TextDocument	Word.ttl	1
-Thesaurus	Word.ttl	1
-Word	Word.ttl	1
-WordProperty	Word.ttl	1
-Destination	Way.ttl	1
-Direction	Force.ttl	3
-N3958bad6ceaf4788b924b221d14c02a3b1	Way.ttl	1
-Path	Way.ttl	1
-PedestrianPath	Way.ttl	1
-Road	Way.ttl	1
-Way	Way.ttl	1
-Business	Business.ttl	1
-Person	Party.ttl	20
-BusinessSector	Business.ttl	1
-Customer	Service.ttl	2
-Investor	Business.ttl	1
-Market	Business.ttl	1
-N517a9d207453411ba145ed6669f5127ab1	Business.ttl	1
-N517a9d207453411ba145ed6669f5127ab6	Business.ttl	1
-Revenue	Business.ttl	1
-ServiceOrProduct	Business.ttl	1
-Supplier	Business.ttl	1
-Organisation	Member.ttl	2
-Context	Problem.ttl	1
-DifficultyLevel	Problem.ttl	1
-Domain	Problem.ttl	1
-Effect	Problem.ttl	1
-Nf39575439bc741078cab2d5916c663acb2	Problem.ttl	1
-Problem	Problem.ttl	1
-ProblemType	Problem.ttl	1
-Solution	Problem.ttl	1
-Solving	Problem.ttl	1
-Situation	Problem.ttl	2
-Cheek	Face.ttl	1
-Expression	Face.ttl	1
-FacePart	Face.ttl	1
-Feature	State.ttl	3
-Nbb17d2cede1240a8adad1d8587390239b1	Face.ttl	1
-SkinType	Face.ttl	1
-AnatomicalStructure	Body.ttl	1
-Arm	Body.ttl	1
-Body	Body.ttl	1
-HumanBody	Eye.ttl	4
-Leg	Body.ttl	1
-Limbs	Body.ttl	1
-Organ	Body.ttl	1
-Torso	Body.ttl	1
-Anatomicalstructure	Body.ttl	1
-Na17aa21561fa4878864ee13118c956b4b1	Body.ttl	1
-Physicalobject	Body.ttl	2
-Humanbody	Body.ttl	2
-Na17aa21561fa4878864ee13118c956b4b2	Body.ttl	1
-Complex	Number.ttl	1
-Floatnumber	Number.ttl	1
-Integer	Party.ttl	24
-Line	Line.ttl	1
-Geometricobject	Line.ttl	1
-Shape	Eye.ttl	3
-Datatype	Line.ttl	1
-N1b318c35c92a45f984edc46b58ab6237b1	Line.ttl	1
-Integral	People.ttl	1
-Item	People.ttl	1
-People	People.ttl	1
-PhoneNumber	People.ttl	1
-Car	Car.ttl	2
-CarMake	Car.ttl	1
-CarModel	Car.ttl	1
-FuelType	Car.ttl	1
-Model	Car.ttl	1
-Vehicle	Car.ttl	1
-Book	Book.ttl	1
-AnyEntity	Issue.ttl	1
-Issue	Issue.ttl	1
-IssueDateCreated	Issue.ttl	1
-IssueDescription	Issue.ttl	1
-IssueIdentifier	Issue.ttl	1
-IssueResolution	Issue.ttl	1
-IssueSeverity	Issue.ttl	1
-IssueStatus	Issue.ttl	1
-IssueStatusEnum	Issue.ttl	1
-IssueTitle	Issue.ttl	1
-Priority	Issue.ttl	1
-User	Level.ttl	3
-Concern	Issue.ttl	1
-Ailment	Health.ttl	1
-Diagnosis	Health.ttl	1
-DietRestriction	Health.ttl	1
-Disease	Eye.ttl	4
-Diseases	Health.ttl	1
-Doctor	Health.ttl	1
-GymMembership	Health.ttl	1
-Health	Health.ttl	1
-HealthCareProvider	Health.ttl	1
-HealthCondition	Health.ttl	1
-HealthRecord	Health.ttl	1
-Hospital	Health.ttl	1
-Illness	Health.ttl	1
-MedicalCondition	Health.ttl	1
-Medication	Health.ttl	1
-Medicine	Health.ttl	1
-MentalHealth	Health.ttl	1
-MentalHealthStatus	Health.ttl	1
-Patient	Health.ttl	1
-PhysicalHealth	Health.ttl	1
-PhysicalHealthStatus	Health.ttl	1
-SideEffect	Health.ttl	1
-Symptom	Health.ttl	1
-Treatment	Eye.ttl	2
-Na6c8faa1793241568387aff63ac2d7b4b2	Health.ttl	1
-Na6c8faa1793241568387aff63ac2d7b4b1	Health.ttl	1
-Classroom	School.ttl	1
-EducationalService	School.ttl	1
-FacultyMember	School.ttl	1
-Grade	Education.ttl	3
-Homework	School.ttl	1
-Principal	School.ttl	1
-Schoolgrade	School.ttl	1
-Schoollocation	School.ttl	1
-Schoolschool	School.ttl	1
-Schoolstudent	School.ttl	1
-Schoolsubject	School.ttl	1
-Schoolteacher	School.ttl	1
-N31c47115fe5c47c9bca04a884c5ab0c2b2	School.ttl	1
-Educationalorganization	School.ttl	1
-N31c47115fe5c47c9bca04a884c5ab0c2b4	School.ttl	1
-N31c47115fe5c47c9bca04a884c5ab0c2b1	School.ttl	1
-Answer	Question.ttl	1
-AnswerEntity	Question.ttl	1
-N1283ff7681a64ce5822eb63668931477b1	Question.ttl	1
-Question	Question.ttl	1
-QuestionCategory	Question.ttl	1
-QuestionEntity	Question.ttl	1
-QuestionTopic	Question.ttl	1
-QuestionType	Question.ttl	1
-Response	Question.ttl	1
-Intangible	Question.ttl	2
-TimeZone	City.ttl	1
-Feature	City.ttl	1
-Geologicalplace	City.ttl	1
-Geonamesfeature	City.ttl	1
-Experiment	Result.ttl	1
-N6575d1a5e5144dccb4939dfa85e606c9b1	Result.ttl	1
-N6575d1a5e5144dccb4939dfa85e606c9b4	Result.ttl	1
-Test	Result.ttl	1
-Eventoutcome	Result.ttl	1
-N2aab17e7ce23426c91bcafb9bf128f85b1	Result.ttl	1
-Branch	Government.ttl	1
-Citizen	Government.ttl	1
-Diff	Government.ttl	1
-Executive	Government.ttl	1
-Government	Government.ttl	1
-GovernmentPolicy	Government.ttl	1
-GovernmentSystem	Government.ttl	1
-Laws	Government.ttl	1
-LeadershipPosition	Government.ttl	1
-Legislative	Government.ttl	1
-Official	Government.ttl	1
-Policy	Government.ttl	1
-PoliticalParty	Government.ttl	1
-PublicService	Government.ttl	1
-Administrativeregion	State.ttl	1
-EducationalOrganization	Child.ttl	1
-Work	Work.ttl	1
-N4e52b9b4c1e34764a08b304b2a1f71cbb1	Work.ttl	1
-Force	Force.ttl	1
-ForceType	Force.ttl	1
-ForceUnit	Force.ttl	1
-Magnitude	Force.ttl	1
-Physicalconcept	Force.ttl	3
-Physicalphenomenon	Force.ttl	1
-Back	Back.ttl	1
-BackDisease	Back.ttl	1
-BackPain	Back.ttl	1
-BackPart	Back.ttl	1
-Back_Condition	Back.ttl	1
-Backpain	Back.ttl	1
-Injury	Back.ttl	1
-Pain	Back.ttl	1
-Anything	Side.ttl	1
-Orientation	Side.ttl	1
-RectangularObject	Side.ttl	1
-Side	Side.ttl	1
-SideType	Side.ttl	1
-Authority	Right.ttl	1
-CivilRight	Right.ttl	1
-HumanRight	Right.ttl	1
-LegalRight	Right.ttl	1
-LegalSystem	Right.ttl	1
-PoliticalRight	Right.ttl	1
-ReligiousRight	Right.ttl	1
-Right	Right.ttl	1
-RightHolder	Right.ttl	1
-Scope	Right.ttl	1
-N6e82713b336940008622e00652df59bfb1	Right.ttl	1
-End	End.ttl	1
-EndEvent	End.ttl	1
-EndLocation	End.ttl	1
-EndTime	End.ttl	1
-N6368b32855bb4934b0d678c8956ceef6b1	End.ttl	1
-Coach	Team.ttl	1
-Project	Team.ttl	1
-Team	Team.ttl	1
-TeamLeague	Team.ttl	1
-TeamMember	Team.ttl	1
-AcademicInstitution	Education.ttl	1
-Degree	Teacher.ttl	2
-Course	Teacher.ttl	2
-EducationalInstitution	Education.ttl	1
-KnowledgeArea	Education.ttl	1
-N05aaffae578e46e1bf0ef74db699036ab1	Education.ttl	1
-N7daede8dfec54e3784e36650d13b75e9b1	Education.ttl	1
-Consumer	Service.ttl	1
-OfflineService	Service.ttl	1
-ServiceConsumer	Service.ttl	1
-ServiceCost	Service.ttl	1
-ServiceLocation	Service.ttl	1
-ServiceProvider	Service.ttl	1
-ServiceType	Service.ttl	1
-ServiceUser	Service.ttl	1
-MembershipType	Member.ttl	1
-Level	Level.ttl	1
-N3abdb97a8d9d4511afd26eeee956452db1	Level.ttl	1
-N3abdb97a8d9d4511afd26eeee956452db2	Level.ttl	1
-Node	Level.ttl	1
-Finger	Hand.ttl	1
-Fingers	Hand.ttl	1
-Hand	Hand.ttl	1
-HandPart	Hand.ttl	1
-Nails	Hand.ttl	1
-Palm	Hand.ttl	1
-Thumb	Hand.ttl	1
-Handpart	Hand.ttl	1
-Handparts	Hand.ttl	3
-Body_part	Hand.ttl	1
-Applicability	Idea.ttl	1
-Idea	Idea.ttl	1
-Originality	Idea.ttl	1
-Originator	Idea.ttl	1
-Anatomy	Eye.ttl	1
-Cornea	Eye.ttl	1
-Disorder	Eye.ttl	1
-EyeDisease	Eye.ttl	1
-EyePart	Eye.ttl	1
-HumanEye	Eye.ttl	1
-Iris	Eye.ttl	1
-Lens	Eye.ttl	1
-Retina	Eye.ttl	1
-Vision	Eye.ttl	1
-Humanorgan	Eye.ttl	1
-Son	Father.ttl	1
-Auction	Lot.ttl	1
-Lot	Lot.ttl	1
-ParkingLot	Lot.ttl	1
-Guest	Party.ttl	1
-PartyActivity	Party.ttl	1
-PartyEvent	Party.ttl	1
-PartyMember	Party.ttl	1
-PartyOrganiser	Party.ttl	1
-PartyType	Party.ttl	1
+Color	Door.ttl
+Dimension	Door.ttl
+Door	Door.ttl
+DoorColor	Door.ttl
+DoorMaterial	Door.ttl
+Key	Door.ttl
+Lock	Door.ttl
+Material	Door.ttl
+Place	Door.ttl
+Room	Door.ttl
+SecurityLevel	Door.ttl
+XMLLiteral	Door.ttl
+Architectural_element	Door.ttl
+Architecturalelement	Door.ttl
+Buildingcomponent	Door.ttl
+Continent	President.ttl
+Country	President.ttl
+Datetime	President.ttl
+Duration	President.ttl
+FirstLady	President.ttl
+Integer	President.ttl
+Person	President.ttl
+PoliticalEntity	President.ttl
+Presidency	President.ttl
+President	President.ttl
+PresidentialTerm	President.ttl
+Resource	President.ttl
+Term	President.ttl
+TermPeriod	President.ttl
+Geographicalentity	President.ttl
+Office	President.ttl
+Politicalleader	President.ttl
+Politician	President.ttl
+Animal	Others.ttl
+Attribute	Others.ttl
+Car	Others.ttl
+City	Others.ttl
+Color	Others.ttl
+Course	Others.ttl
+Entity	Others.ttl
+Gender	Others.ttl
+Group	Others.ttl
+Human	Others.ttl
+Integer	Others.ttl
+Location	Others.ttl
+Machine	Others.ttl
+Manufacturer	Others.ttl
+Object	Others.ttl
+Occupation	Others.ttl
+Other	Others.ttl
+Others	Others.ttl
+Parameter	Others.ttl
+Person	Others.ttl
+Provider	Others.ttl
+Service	Others.ttl
+Species	Others.ttl
+Student	Others.ttl
+University	Others.ttl
+AcademicSubject	Student.ttl
+Course	Student.ttl
+Exam	Student.ttl
+Integer	Student.ttl
+Major	Student.ttl
+Person	Student.ttl
+Professor	Student.ttl
+Student	Student.ttl
+Subject	Student.ttl
+University	Student.ttl
+Academicsubject	Student.ttl
+Color	Loveseat.ttl
+Colour	Loveseat.ttl
+Dimension	Loveseat.ttl
+Dimensions	Loveseat.ttl
+Furniture	Loveseat.ttl
+Integer	Loveseat.ttl
+Loveseat	Loveseat.ttl
+Manufacturer	Loveseat.ttl
+Material	Loveseat.ttl
+Resource	Loveseat.ttl
+Size	Loveseat.ttl
+Style	Loveseat.ttl
+Upholstery	Loveseat.ttl
+Duration	Minute.ttl
+DurationDescription	Minute.ttl
+Event	Minute.ttl
+Hour	Minute.ttl
+HourOfTime	Minute.ttl
+Integer	Minute.ttl
+Interval	Minute.ttl
+Minute	Minute.ttl
+MinuteOfTime	Minute.ttl
+Second	Minute.ttl
+TemporalUnit	Minute.ttl
+Time	Minute.ttl
+TimeEntity	Minute.ttl
+TimeEvent	Minute.ttl
+TimePeriod	Minute.ttl
+TotalMinutes	Minute.ttl
+Unitminute	Minute.ttl
+Temporalentity	Minute.ttl
+N32fde1c5c0fb45e4a3ec8849897d55dcb1	Minute.ttl
+Temporalunit	Minute.ttl
+Unitoftime	Minute.ttl
+Timeperiod	Minute.ttl
+Building	Office.ttl
+Chair	Office.ttl
+Computer	Office.ttl
+Department	Office.ttl
+DepartmentHead	Office.ttl
+Desk	Office.ttl
+Employee	Office.ttl
+Equipment	Office.ttl
+Facility	Office.ttl
+Furniture	Office.ttl
+Integer	Office.ttl
+Manager	Office.ttl
+Nonnegativeinteger	Office.ttl
+Office	Office.ttl
+OfficeEquipment	Office.ttl
+Person	Office.ttl
+Role	Office.ttl
+Room	Office.ttl
+StaffMember	Office.ttl
+Task	Office.ttl
+Worker	Office.ttl
+Resource	Office.ttl
+N9c60bb77ee764160bee8687aa0e6f628b1	Office.ttl
+Nbbc8d28a00714441ab43a52128d4ba8db1	Office.ttl
+Article	Law.ttl
+Case	Law.ttl
+Client	Law.ttl
+Constitution	Law.ttl
+Court	Law.ttl
+CourtCase	Law.ttl
+Datetime	Law.ttl
+EnactingBody	Law.ttl
+EnforcementBody	Law.ttl
+GovernmentEntity	Law.ttl
+Gyear	Law.ttl
+Integer	Law.ttl
+Judge	Law.ttl
+Jurisdiction	Law.ttl
+Law	Law.ttl
+Lawyer	Law.ttl
+LegalEntity	Law.ttl
+LegalIssue	Law.ttl
+LegalRule	Law.ttl
+Legislation	Law.ttl
+Prosecutor	Law.ttl
+Resource	Law.ttl
+Rule	Law.ttl
+Statute	Law.ttl
+StatutoryLaw	Law.ttl
+Class	Law.ttl
+Legalentity	Law.ttl
+Astronomy	Night.ttl
+Concept	Night.ttl
+Datetime	Night.ttl
+Day	Night.ttl
+Dream	Night.ttl
+Duration	Night.ttl
+Moon	Night.ttl
+MoonPhase	Night.ttl
+Night	Night.ttl
+Nighttimeactivity	Night.ttl
+Place	Night.ttl
+Resource	Night.ttl
+Sleep	Night.ttl
+Star	Night.ttl
+Sunrise	Night.ttl
+Sunset	Night.ttl
+Temperature	Night.ttl
+Thing	Night.ttl
+Time	Night.ttl
+Weather	Night.ttl
+WeatherCondition	Night.ttl
+Periodofday	Night.ttl
+Timeperiod	Night.ttl
+Anyuri	Moment.ttl
+Datetime	Moment.ttl
+Duration	Moment.ttl
+Event	Moment.ttl
+Hasevent	Moment.ttl
+Instant	Moment.ttl
+Location	Moment.ttl
+Moment	Moment.ttl
+MomentProperty	Moment.ttl
+N4e8130ac0170445eae2683015c4785e3b1	Moment.ttl
+Period	Moment.ttl
+Person	Moment.ttl
+Resource	Moment.ttl
+Thing	Moment.ttl
+Time	Moment.ttl
+TimeInstant	Moment.ttl
+TimePoint	Moment.ttl
+TimePosition	Moment.ttl
+Timestamp	Moment.ttl
+Temporal	Moment.ttl
+Temporalentity	Moment.ttl
+Timepoint	Moment.ttl
+Case	Case.ttl
+CaseStatus	Case.ttl
+CaseType	Case.ttl
+CaseWorker	Case.ttl
+Client	Case.ttl
+Datetime	Case.ttl
+Description	Case.ttl
+Entity	Case.ttl
+EntityRole	Case.ttl
+Identifier	Case.ttl
+Investigation	Case.ttl
+Investigator	Case.ttl
+Judge	Case.ttl
+Lawyer	Case.ttl
+LegalCase	Case.ttl
+Legalcase	Case.ttl
+Party	Case.ttl
+Person	Case.ttl
+Resource	Case.ttl
+Status	Case.ttl
+Subject	Case.ttl
+Title	Case.ttl
+XMLLiteral	Case.ttl
+BodyPart	Head.ttl
+Class	Head.ttl
+Ear	Head.ttl
+Ears	Head.ttl
+Eye	Head.ttl
+Eyes	Head.ttl
+Face	Head.ttl
+Forehead	Head.ttl
+Hair	Head.ttl
+Head	Head.ttl
+HeadPart	Head.ttl
+Human	Head.ttl
+Integer	Head.ttl
+It	Head.ttl
+Mouth	Head.ttl
+Nose	Head.ttl
+Person	Head.ttl
+SensoryOrgan	Head.ttl
+Skin	Head.ttl
+Bodypart	Head.ttl
+Chair	chair.ttl
+Company	chair.ttl
+Integer	chair.ttl
+Class	Money.ttl
+Coin	Money.ttl
+Country	Money.ttl
+Currency	Money.ttl
+CurrencyCode	Money.ttl
+Double	Money.ttl
+Entity	Money.ttl
+Money	Money.ttl
+Note	Money.ttl
+Payment	Money.ttl
+Person	Money.ttl
+Transaction	Money.ttl
+Transfer	Money.ttl
+Concept	Money.ttl
+N9832494bbc394d12b54840a7f84078c4b1	Money.ttl
+Resource	Money.ttl
+Economicconcept	Money.ttl
+Literal	Money.ttl
+Entity	Kind.ttl
+Kind	Kind.ttl
+KindCategory	Kind.ttl
+N2b75fc6be8804b85a49d9004567a0c2eb1	Kind.ttl
+Property	Kind.ttl
+Student	Kind.ttl
+Teacher	Kind.ttl
+Thing	Kind.ttl
+Person	Kind.ttl
+Activities	Kid.ttl
+Adult	Kid.ttl
+Age	Kid.ttl
+Hobby	Kid.ttl
+Integer	Kid.ttl
+Kid	Kid.ttl
+Langstring	Kid.ttl
+Parent	Kid.ttl
+Person	Kid.ttl
+Pet	Kid.ttl
+Resource	Kid.ttl
+School	Kid.ttl
+Sport	Kid.ttl
+Toy	Kid.ttl
+Human	Kid.ttl
+Educationalinstitution	Kid.ttl
+Activity	Morning.ttl
+Alarm	Morning.ttl
+Breakfast	Morning.ttl
+Coffee	Morning.ttl
+Day	Morning.ttl
+Early	Morning.ttl
+EarlyMorning	Morning.ttl
+Exercise	Morning.ttl
+MORNING	Morning.ttl
+Meal	Morning.ttl
+Morning	Morning.ttl
+MorningActivity	Morning.ttl
+MorningTime	Morning.ttl
+Mornings	Morning.ttl
+Night	Morning.ttl
+Person	Morning.ttl
+Resource	Morning.ttl
+Routine	Morning.ttl
+Siunarise	Morning.ttl
+Sunrise	Morning.ttl
+Time	Morning.ttl
+WakeUp	Morning.ttl
+Timeperiod	Morning.ttl
+Daypart	Morning.ttl
+Daytime	Morning.ttl
+Temporalentity	Morning.ttl
+Timeofday	Morning.ttl
+Child	Mother.ttl
+Human	Mother.ttl
+HumanBeing	Mother.ttl
+Husband	Mother.ttl
+Integer	Mother.ttl
+Mother	Mother.ttl
+N0d5e305adf3b4a2da06b22287d484de3b1	Mother.ttl
+Person	Mother.ttl
+Female	Mother.ttl
+Femalehuman	Mother.ttl
+Woman	Mother.ttl
+N0d29d15ecbe642f980ed0a7ca64ba58ab1	Mother.ttl
+Alive	Family.ttl
+BirthDate	Family.ttl
+Child	Family.ttl
+Family	Family.ttl
+FamilyMember	Family.ttl
+Female	Family.ttl
+Gender	Family.ttl
+Integer	Family.ttl
+Male	Family.ttl
+Man	Family.ttl
+N8ca0438ee5f0405c84803fcf346123bbb1	Family.ttl
+N8ca0438ee5f0405c84803fcf346123bbb4	Family.ttl
+N8ca0438ee5f0405c84803fcf346123bbb7	Family.ttl
+Parent	Family.ttl
+Person	Family.ttl
+Woman	Family.ttl
+Resource	Family.ttl
+Hasmember	Family.ttl
+Member	Family.ttl
+N151dbb48d95b4a24ab0768191aa63adfb1	Family.ttl
+Capital	Country.ttl
+CapitalCity	Country.ttl
+City	Country.ttl
+Continent	Country.ttl
+Country	Country.ttl
+Currency	Country.ttl
+Integer	Country.ttl
+Language	Country.ttl
+Nonnegativeinteger	Country.ttl
+Resource	Country.ttl
+Place	Country.ttl
+Air	Air.ttl
+AirComposition	Air.ttl
+AirCondition	Air.ttl
+AirPollution	Air.ttl
+AirQuality	Air.ttl
+Benefit	Air.ttl
+ChemicalElement	Air.ttl
+Component	Air.ttl
+Composition	Air.ttl
+Gas	Air.ttl
+Humidity	Air.ttl
+Pollutant	Air.ttl
+Pollution	Air.ttl
+Pressure	Air.ttl
+Temperature	Air.ttl
+Physicalsubstance	Air.ttl
+Environmentalimpact	Air.ttl
+Academic_Institution	Research.ttl
+AreaOfResearch	Research.ttl
+Author	Research.ttl
+Datetime	Research.ttl
+Diploma	Research.ttl
+Field	Research.ttl
+FieldOfStudy	Research.ttl
+Field_of_Study	Research.ttl
+Institution	Research.ttl
+Journal	Research.ttl
+Methodology	Research.ttl
+Organization	Research.ttl
+Person	Research.ttl
+Product	Research.ttl
+Publication	Research.ttl
+Research	Research.ttl
+ResearchField	Research.ttl
+ResearchMethod	Research.ttl
+ResearchPaper	Research.ttl
+ResearchProject	Research.ttl
+ResearchTopic	Research.ttl
+Researcher	Research.ttl
+Subject	Research.ttl
+SubjectField	Research.ttl
+Thing	Research.ttl
+Topic	Research.ttl
+Nee65374329444a1d9f62767ddcbde88ab1	Research.ttl
+Resource	Research.ttl
+Academicactivity	Research.ttl
+Nee65374329444a1d9f62767ddcbde88ab3	Research.ttl
+Company	Job.ttl
+Datetime	Job.ttl
+Double	Job.ttl
+Employer	Job.ttl
+Field	Job.ttl
+Industry	Job.ttl
+Integer	Job.ttl
+Job	Job.ttl
+JobPosting	Job.ttl
+Location	Job.ttl
+Organization	Job.ttl
+Person	Job.ttl
+Position	Job.ttl
+Resource	Job.ttl
+Salary	Job.ttl
+Skill	Job.ttl
+Title	Job.ttl
+WorkArea	Job.ttl
+Chair	Chair.ttl
+Company	Chair.ttl
+Integer	Chair.ttl
+Double	Point.ttl
+Plane	Point.ttl
+Point	Point.ttl
+Real	Point.ttl
+X_coordinate	Point.ttl
+Y_coordinate	Point.ttl
+Z_coordinate	Point.ttl
+Resource	Point.ttl
+Area	Area.ttl
+AreaUnit	Area.ttl
+Circle	Area.ttl
+Double	Area.ttl
+GeographicalEntity	Area.ttl
+N84af915885a24ef99a21e63c7ec3936fb1	Area.ttl
+PhysicalEntity	Area.ttl
+PhysicalObject	Area.ttl
+Place	Area.ttl
+PolygonArea	Area.ttl
+Space	Area.ttl
+SquareArea	Area.ttl
+SquareMeters	Area.ttl
+Unit	Area.ttl
+UnitOfMeasurement	Area.ttl
+Physicalentity	Area.ttl
+Physicalquantity	Area.ttl
+Entity	Area.ttl
+AbstractThing	Thing.ttl
+ConceptualObject	Thing.ttl
+Double	Thing.ttl
+Event	Thing.ttl
+Langstring	Thing.ttl
+PhysicalObject	Thing.ttl
+PhysicalThing	Thing.ttl
+Property	Thing.ttl
+Thing	Thing.ttl
+Datetime	Friend.ttl
+Duration	Friend.ttl
+Friend	Friend.ttl
+Hasfriend	Friend.ttl
+Integer	Friend.ttl
+Interest	Friend.ttl
+Person	Friend.ttl
+Resource	Friend.ttl
+Day	Hour.ttl
+Duration	Hour.ttl
+Entity	Hour.ttl
+Hour	Hour.ttl
+Instant	Hour.ttl
+Integer	Hour.ttl
+Measure	Hour.ttl
+Minute	Hour.ttl
+PartOfDay	Hour.ttl
+Second	Hour.ttl
+TemporalEntity	Hour.ttl
+TemporalUnit	Hour.ttl
+Time	Hour.ttl
+TimePeriod	Hour.ttl
+Property	Hour.ttl
+Resource	Hour.ttl
+Temporalunit	Hour.ttl
+Timeline	Hour.ttl
+Period	Hour.ttl
+Developer	Game.ttl
+Game	Game.ttl
+GameDeveloper	Game.ttl
+GamePlatform	Game.ttl
+GameReview	Game.ttl
+Genre	Game.ttl
+Integer	Game.ttl
+Langstring	Game.ttl
+Person	Game.ttl
+Platform	Game.ttl
+Player	Game.ttl
+PlayerMode	Game.ttl
+Publisher	Game.ttl
+Rule	Game.ttl
+Year	Game.ttl
+Entertainment	Game.ttl
+Resource	Game.ttl
+Action	Reason.ttl
+ActionClaim	Reason.ttl
+ActionEffect	Reason.ttl
+Argument	Reason.ttl
+Entity	Reason.ttl
+Event	Reason.ttl
+IdeaOrActionOrTheory	Reason.ttl
+Ned9a1f3809314a4a9e7bb4c5a3d7f240b2	Reason.ttl
+Ned9a1f3809314a4a9e7bb4c5a3d7f240b3	Reason.ttl
+Person	Reason.ttl
+PhenomenonFact	Reason.ttl
+Reason	Reason.ttl
+ReasoningenType	Reason.ttl
+Resource	Reason.ttl
+Thing	Reason.ttl
+Concept	Reason.ttl
+Statement	Reason.ttl
+Ned9a1f3809314a4a9e7bb4c5a3d7f240b1	Reason.ttl
+Character	History.ttl
+Class	History.ttl
+Country	History.ttl
+Datetime	History.ttl
+Description	History.ttl
+Era	History.ttl
+Event	History.ttl
+HistoricalArtifact	History.ttl
+HistoricalEra	History.ttl
+HistoricalEvent	History.ttl
+HistoricalFigure	History.ttl
+HistoricalPeriod	History.ttl
+History	History.ttl
+HistoryEvent	History.ttl
+Location	History.ttl
+Period	History.ttl
+Person	History.ttl
+Resource	History.ttl
+Thing	History.ttl
+TimePeriod	History.ttl
+Color	Sofa.ttl
+Furniture	Sofa.ttl
+Integer	Sofa.ttl
+Manufacturer	Sofa.ttl
+Material	Sofa.ttl
+Nonnegativeinteger	Sofa.ttl
+Room	Sofa.ttl
+Size	Sofa.ttl
+Sofa	Sofa.ttl
+Style	Sofa.ttl
+String	Sofa.ttl
+Anyuri	Information.ttl
+Author	Information.ttl
+BusinessInformation	Information.ttl
+Class	Information.ttl
+Communication	Information.ttl
+Data	Information.ttl
+DataType	Information.ttl
+Datetime	Information.ttl
+DigitalInformation	Information.ttl
+Document	Information.ttl
+Entity	Information.ttl
+Fact	Information.ttl
+Format	Information.ttl
+Info	Information.ttl
+Information	Information.ttl
+InformationProcessing	Information.ttl
+InformationRepresentation	Information.ttl
+InformationSecurity	Information.ttl
+Knowledge	Information.ttl
+Media	Information.ttl
+Medium	Information.ttl
+Metadata	Information.ttl
+Person	Information.ttl
+PersonalInformation	Information.ttl
+Professor	Information.ttl
+Reference	Information.ttl
+Resource	Information.ttl
+Source	Information.ttl
+Student	Information.ttl
+Subject	Information.ttl
+TextInfo	Information.ttl
+Topic	Information.ttl
+Address	Person.ttl
+Gender	Person.ttl
+GenderType	Person.ttl
+Integer	Person.ttl
+Location	Person.ttl
+Nonnegativeinteger	Person.ttl
+Person	Person.ttl
+Place	Person.ttl
+PostalAddress	Person.ttl
+Resource	Person.ttl
+Author	Story.ttl
+Character	Story.ttl
+Genre	Story.ttl
+Integer	Story.ttl
+Location	Story.ttl
+Person	Story.ttl
+Plot	Story.ttl
+Setting	Story.ttl
+Story	Story.ttl
+Theme	Story.ttl
+Resource	Story.ttl
+Creativework	Story.ttl
+Area	World.ttl
+Car	World.ttl
+City	World.ttl
+Continent	World.ttl
+Country	World.ttl
+House	World.ttl
+Integer	World.ttl
+Island	World.ttl
+Landmark	World.ttl
+Language	World.ttl
+Mountain	World.ttl
+N1fbb52f8279840bcb8abe2928c0e799eb1	World.ttl
+N32dde6b843af4e6097e43944894402c3b1	World.ttl
+N32dde6b843af4e6097e43944894402c3b4	World.ttl
+Nb05b6e3683674341805f13bb3b9b3ec4b1	World.ttl
+Ncaf99f213f9f43fb885dc6fef0b494e3b1	World.ttl
+Ncaf99f213f9f43fb885dc6fef0b494e3b5	World.ttl
+Nd47b0ba34776481a845f76187fc4a6aab1	World.ttl
+Nd47b0ba34776481a845f76187fc4a6aab6	World.ttl
+Ocean	World.ttl
+Organization	World.ttl
+Person	World.ttl
+Place	World.ttl
+Population	World.ttl
+Positiveinteger	World.ttl
+Religion	World.ttl
+River	World.ttl
+Sea	World.ttl
+Thing	World.ttl
+World	World.ttl
+Resource	World.ttl
+Age	Woman.ttl
+Datetime	Woman.ttl
+Daughter	Woman.ttl
+Gender	Woman.ttl
+Human	Woman.ttl
+Integer	Woman.ttl
+Man	Woman.ttl
+Mother	Woman.ttl
+Name	Woman.ttl
+Nonnegativeinteger	Woman.ttl
+Occupation	Woman.ttl
+Person	Woman.ttl
+Thing	Woman.ttl
+Woman	Woman.ttl
+Nf85cde7178e84accb0cd4a81578c936db1	Woman.ttl
+Address	Place.ttl
+City	Place.ttl
+Country	Place.ttl
+Double	Place.ttl
+Integer	Place.ttl
+Lat	Place.ttl
+Location	Place.ttl
+Long	Place.ttl
+Park	Place.ttl
+Place	Place.ttl
+PostalAddress	Place.ttl
+Type	Place.ttl
+Resource	Place.ttl
+Group	Group.ttl
+GroupLeader	Group.ttl
+GroupMember	Group.ttl
+GroupType	Group.ttl
+Individual	Group.ttl
+Integer	Group.ttl
+Member	Group.ttl
+Person	Group.ttl
+Positiveinteger	Group.ttl
+Resource	Group.ttl
+Role	Group.ttl
+Thing	Group.ttl
+N5cf3df7a2b5740c48d8e01924d30125ab3	Group.ttl
+N6fd89a71a44f46dab2a3aa8d52f58970b1	Group.ttl
+Na02b249382f24ea1aa0683a71eb84cd7b2	Group.ttl
+Ne1bda3da70704b05a03cd314f2618192b1	Group.ttl
+Groupmember	Group.ttl
+N5cf3df7a2b5740c48d8e01924d30125ab1	Group.ttl
+Na02b249382f24ea1aa0683a71eb84cd7b1	Group.ttl
+Building	Room.ttl
+Door	Room.ttl
+Floor	Room.ttl
+Furniture	Room.ttl
+Integer	Room.ttl
+Langstring	Room.ttl
+Person	Room.ttl
+Room	Room.ttl
+RoomFunction	Room.ttl
+RoomType	Room.ttl
+RoomTypeEnumeration	Room.ttl
+Size	Room.ttl
+Window	Room.ttl
+Architecturalstructure	Room.ttl
+Physicalspace	Room.ttl
+Activity	Water.ttl
+ChemicalElement	Water.ttl
+Double	Water.ttl
+Form	Water.ttl
+Lake	Water.ttl
+Life	Water.ttl
+Organism	Water.ttl
+PhysicalState	Water.ttl
+PollutedWater	Water.ttl
+Recipient	Water.ttl
+Resource	Water.ttl
+Source	Water.ttl
+State	Water.ttl
+StateOfMatter	Water.ttl
+Substance	Water.ttl
+Temperature	Water.ttl
+Type	Water.ttl
+Use	Water.ttl
+Water	Water.ttl
+WaterForm	Water.ttl
+WaterProperty	Water.ttl
+WaterSource	Water.ttl
+Water_Properties	Water.ttl
+N22b89b7ccc754b57a7dc4fd05bd81ec7b1	Water.ttl
+Location	Water.ttl
+Address	House.ttl
+Area	House.ttl
+House	House.ttl
+Integer	House.ttl
+Owner	House.ttl
+Person	House.ttl
+Price	House.ttl
+Res:truefalse	House.ttl
+Resource	House.ttl
+Room	House.ttl
+Building	House.ttl
+Activity	Day.ttl
+Calendar	Day.ttl
+Datetime	Day.ttl
+Day	Day.ttl
+DayOfWeek	Day.ttl
+DayPart	Day.ttl
+Duration	Day.ttl
+Event	Day.ttl
+Hour	Day.ttl
+Integer	Day.ttl
+Minute	Day.ttl
+PartOfDay	Day.ttl
+Second	Day.ttl
+Time	Day.ttl
+Weather	Day.ttl
+WeatherCondition	Day.ttl
+Week	Day.ttl
+Resource	Day.ttl
+Anyuri	Part.ttl
+Assembly	Part.ttl
+Automobile	Part.ttl
+Car	Part.ttl
+Category	Part.ttl
+Component	Part.ttl
+Datetime	Part.ttl
+Engine	Part.ttl
+Integer	Part.ttl
+Manufacturer	Part.ttl
+Material	Part.ttl
+MechanicalPart	Part.ttl
+Object	Part.ttl
+Part	Part.ttl
+Process	Part.ttl
+Resource	Part.ttl
+Service	Part.ttl
+Thing	Part.ttl
+Whole	Part.ttl
+Gender	Guy.ttl
+Guy	Guy.ttl
+Hobby	Guy.ttl
+Human	Guy.ttl
+Integer	Guy.ttl
+Job	Guy.ttl
+Location	Guy.ttl
+Organization	Guy.ttl
+Person	Guy.ttl
+Color	Couch.ttl
+Colortype	Couch.ttl
+Couch	Couch.ttl
+Cushion	Couch.ttl
+Dimension	Couch.ttl
+Dimensions	Couch.ttl
+Integer	Couch.ttl
+Manufacturer	Couch.ttl
+Material	Couch.ttl
+Materialtype	Couch.ttl
+Nonnegativeinteger	Couch.ttl
+Size	Couch.ttl
+Style	Couch.ttl
+Type	Couch.ttl
+Upholstery	Couch.ttl
+String	Couch.ttl
+Furniture	Couch.ttl
+Seq	Couch.ttl
+Country	Power.ttl
+Device	Power.ttl
+ElectricPower	Power.ttl
+ElectricalPower	Power.ttl
+Entity	Power.ttl
+Human	Power.ttl
+Individual	Power.ttl
+Integer	Power.ttl
+Machine	Power.ttl
+Na20871d4cee24edc99d33cff0ce65d10b1	Power.ttl
+Object	Power.ttl
+PhysicalPower	Power.ttl
+PoliticalPower	Power.ttl
+Power	Power.ttl
+PowerConcept	Power.ttl
+PowerGenerator	Power.ttl
+PowerSource	Power.ttl
+Resource	Power.ttl
+Source	Power.ttl
+Thing	Power.ttl
+Unit	Power.ttl
+Physicalquantity	Power.ttl
+Child	Parent.ttl
+Father	Parent.ttl
+Gender	Parent.ttl
+Human	Parent.ttl
+Integer	Parent.ttl
+Man	Parent.ttl
+Mother	Parent.ttl
+Nonnegativeinteger	Parent.ttl
+Parent	Parent.ttl
+Person	Parent.ttl
+Woman	Parent.ttl
+N1c93b68e14c547a9ad82d4c50942ee5eb3	Parent.ttl
+Class	Week.ttl
+Day	Week.ttl
+Hour	Week.ttl
+Integer	Week.ttl
+Resource	Week.ttl
+Week	Week.ttl
+Year	Week.ttl
+Temporalunit	Week.ttl
+Timeperiod	Week.ttl
+Actor	War.ttl
+Agent	War.ttl
+Army	War.ttl
+Battle	War.ttl
+Battles	War.ttl
+Belligerent	War.ttl
+Casualties	War.ttl
+Cause	War.ttl
+Combatant	War.ttl
+Conflicts	War.ttl
+Countries	War.ttl
+Country	War.ttl
+DateTime	War.ttl
+Datetime	War.ttl
+Entity	War.ttl
+Event	War.ttl
+Integer	War.ttl
+Langstring	War.ttl
+Location	War.ttl
+Military	War.ttl
+Nation	War.ttl
+Outcome	War.ttl
+Person	War.ttl
+Place	War.ttl
+Reason	War.ttl
+Resource	War.ttl
+Result	War.ttl
+Soldier	War.ttl
+Thing	War.ttl
+TimePeriod	War.ttl
+Treaty	War.ttl
+War	War.ttl
+WarPart	War.ttl
+Weapon	War.ttl
+Weapons	War.ttl
+Conflict	War.ttl
+Nf2b2a9998bbe48aea39bcc4fde01a0deb1	War.ttl
+Object	War.ttl
+Course	Study.ttl
+Duration	Study.ttl
+Institution	Study.ttl
+Integer	Study.ttl
+LearningMaterial	Study.ttl
+Location	Study.ttl
+Method	Study.ttl
+Person	Study.ttl
+Positiveinteger	Study.ttl
+Professor	Study.ttl
+Publication	Study.ttl
+Researcher	Study.ttl
+Resource	Study.ttl
+Result	Study.ttl
+SourceMaterial	Study.ttl
+Student	Study.ttl
+Study	Study.ttl
+StudyArea	Study.ttl
+Subject	Study.ttl
+SubjectArea	Study.ttl
+Teacher	Study.ttl
+Topic	Study.ttl
+Tutor	Study.ttl
+University	Study.ttl
+Research	Study.ttl
+Class	Man.ttl
+Concept	Man.ttl
+Country	Man.ttl
+Gender	Man.ttl
+Human	Man.ttl
+Integer	Man.ttl
+Job	Man.ttl
+Man	Man.ttl
+Manman	Man.ttl
+Nonnegativeinteger	Man.ttl
+Occupation	Man.ttl
+Resource	Man.ttl
+Woman	Man.ttl
+Homosapien	Man.ttl
+Humanbeing	Man.ttl
+Nd52675bb2f2f4a4fa3deed365bcd185cb1	Man.ttl
+Person	Man.ttl
+DateTime	Time.ttl
+DateTimeDescription	Time.ttl
+Datetime	Time.ttl
+Datetimestamp	Time.ttl
+Duration	Time.ttl
+Event	Time.ttl
+Instant	Time.ttl
+Integer	Time.ttl
+Interval	Time.ttl
+IntervalTime	Time.ttl
+SpecificTime	Time.ttl
+TemporalInterval	Time.ttl
+TemporalPosition	Time.ttl
+TemporalUnit	Time.ttl
+Thing	Time.ttl
+Time	Time.ttl
+TimeEvent	Time.ttl
+TimeInterval	Time.ttl
+TimePeriod	Time.ttl
+Temporalentity	Time.ttl
+Resource	Time.ttl
+Date	Month.ttl
+Integer	Month.ttl
+Month	Month.ttl
+Number	Month.ttl
+Year	Month.ttl
+Temporalentity	Month.ttl
+Timeperiod	Month.ttl
+Date	Year.ttl
+Day	Year.ttl
+Document	Year.ttl
+Entity	Year.ttl
+Event	Year.ttl
+Gday	Year.ttl
+Integer	Year.ttl
+Month	Year.ttl
+Resource	Year.ttl
+Season	Year.ttl
+Something	Year.ttl
+Year	Year.ttl
+Timeperiod	Year.ttl
+Anyuri	Fact.ttl
+Datetime	Fact.ttl
+Fact	Fact.ttl
+FactCategory	Fact.ttl
+FactCheck	Fact.ttl
+FactDescription	Fact.ttl
+FactSource	Fact.ttl
+FactTopic	Fact.ttl
+FactType	Fact.ttl
+Reporter	Fact.ttl
+Resource	Fact.ttl
+Source	Fact.ttl
+Subject	Fact.ttl
+Thing	Fact.ttl
+Truthvalue	Fact.ttl
+Verification	Fact.ttl
+Statement	Fact.ttl
+Application	System.ttl
+Component	System.ttl
+ComputerSystem	System.ttl
+Configuration	System.ttl
+Element	System.ttl
+Function	System.ttl
+Functionality	System.ttl
+Hardware	System.ttl
+Nb264d2cc31194a64bfd5dcf9bb6bc55fb1	System.ttl
+Objective	System.ttl
+OperatingSystem	System.ttl
+Part	System.ttl
+Resource	System.ttl
+Service	System.ttl
+Software	System.ttl
+SubSystem	System.ttl
+Subsystem	System.ttl
+System	System.ttl
+SystemComponent	System.ttl
+Animal	Life.ttl
+Birth	Life.ttl
+Cell	Life.ttl
+Death	Life.ttl
+Entity	Life.ttl
+Environment	Life.ttl
+Integer	Life.ttl
+Life	Life.ttl
+LifeCycle	Life.ttl
+LifeForm	Life.ttl
+LifeSpan	Life.ttl
+LifeStage	Life.ttl
+Organism	Life.ttl
+Species	Life.ttl
+TaxonomicRank	Life.ttl
+Resource	Life.ttl
+Adult	Girl.ttl
+Education	Girl.ttl
+Gender	Girl.ttl
+Girl	Girl.ttl
+Hobby	Girl.ttl
+Human	Girl.ttl
+Integer	Girl.ttl
+Nonnegativeinteger	Girl.ttl
+Parent	Girl.ttl
+Person	Girl.ttl
+Pet	Girl.ttl
+School	Girl.ttl
+Toy	Girl.ttl
+Address	Home.ttl
+Appliance	Home.ttl
+Building	Home.ttl
+City	Home.ttl
+Door	Home.ttl
+Floor	Home.ttl
+Furniture	Home.ttl
+Home	Home.ttl
+HomeOwner	Home.ttl
+HomePart	Home.ttl
+House	Home.ttl
+Integer	Home.ttl
+Location	Home.ttl
+Nb5db0bf0382546febdc9e57a1d782fd7b1	Home.ttl
+Nb5db0bf0382546febdc9e57a1d782fd7b6	Home.ttl
+Person	Home.ttl
+Resident	Home.ttl
+Resource	Home.ttl
+Roof	Home.ttl
+Room	Home.ttl
+Window	Home.ttl
+Physicalplace	Home.ttl
+Address	Company.ttl
+CEO	Company.ttl
+Company	Company.ttl
+Datetime	Company.ttl
+Employee	Company.ttl
+Gyear	Company.ttl
+Industry	Company.ttl
+Integer	Company.ttl
+Location	Company.ttl
+Person	Company.ttl
+PlainLiteral	Company.ttl
+Product	Company.ttl
+Role	Company.ttl
+Art	Art.ttl
+ArtGenre	Art.ttl
+ArtPeriod	Art.ttl
+ArtStyle	Art.ttl
+ArtWork	Art.ttl
+Artist	Art.ttl
+Artwork	Art.ttl
+Creator	Art.ttl
+Datetime	Art.ttl
+Exhibition	Art.ttl
+Gallery	Art.ttl
+Genre	Art.ttl
+Integer	Art.ttl
+Material	Art.ttl
+Medium	Art.ttl
+Museum	Art.ttl
+Painting	Art.ttl
+Period	Art.ttl
+Person	Art.ttl
+Sculpture	Art.ttl
+Style	Art.ttl
+WorkOfArt	Art.ttl
+Place	Art.ttl
+Activity	Community.ttl
+Comment	Community.ttl
+Community	Community.ttl
+CommunityMember	Community.ttl
+CommunityRole	Community.ttl
+Community_Service	Community.ttl
+Cultural_Identity	Community.ttl
+Culture	Community.ttl
+Event	Community.ttl
+GeographicalLocation	Community.ttl
+Institution	Community.ttl
+Integer	Community.ttl
+Interest	Community.ttl
+Leader	Community.ttl
+LocatedIn	Community.ttl
+Location	Community.ttl
+Member	Community.ttl
+Person	Community.ttl
+Post	Community.ttl
+Resource	Community.ttl
+Role	Community.ttl
+Volunteer	Community.ttl
+Group	Community.ttl
+Entity	Name.ttl
+Name	Name.ttl
+NameEntity	Name.ttl
+Person	Name.ttl
+Literal	Name.ttl
+Agent	Change.ttl
+AgentCausingChange	Change.ttl
+CausalEvent	Change.ttl
+Cause	Change.ttl
+Change	Change.ttl
+ChangeAgent	Change.ttl
+ChangeType	Change.ttl
+DateTime	Change.ttl
+Datetime	Change.ttl
+Entity	Change.ttl
+Impact	Change.ttl
+Resource	Change.ttl
+State	Change.ttl
+Thing	Change.ttl
+Transition	Change.ttl
+TypeOfChange	Change.ttl
+Process	Change.ttl
+Author	Program.ttl
+Code	Program.ttl
+CodingLanguage	Program.ttl
+Developer	Program.ttl
+Duration	Program.ttl
+Integer	Program.ttl
+Language	Program.ttl
+Library	Program.ttl
+OperatingSystem	Program.ttl
+Organization	Program.ttl
+Person	Program.ttl
+PlainLiteral	Program.ttl
+Platform	Program.ttl
+Program	Program.ttl
+Programmer	Program.ttl
+ProgrammingLanguage	Program.ttl
+Provider	Program.ttl
+Service	Program.ttl
+SoftwareDeveloper	Program.ttl
+Programminglanguage	Program.ttl
+Definition	Word.ttl
+Integer	Word.ttl
+Language	Word.ttl
+MailMerge	Word.ttl
+Meaning	Word.ttl
+Nd4a8cee1fde447c999e3f88be934a859b1	Word.ttl
+PageLayout	Word.ttl
+PartOfSpeech	Word.ttl
+PartOfSpeechClass	Word.ttl
+Phrase	Word.ttl
+Sentence	Word.ttl
+Spelling	Word.ttl
+SpellingCorrector	Word.ttl
+TextDocument	Word.ttl
+Thesaurus	Word.ttl
+Word	Word.ttl
+WordProperty	Word.ttl
+Resource	Word.ttl
+Entity	Word.ttl
+Property	Word.ttl
+Class	Way.ttl
+Destination	Way.ttl
+Direction	Way.ttl
+Double	Way.ttl
+Entity	Way.ttl
+Integer	Way.ttl
+Langstring	Way.ttl
+Location	Way.ttl
+Method	Way.ttl
+N3958bad6ceaf4788b924b221d14c02a3b1	Way.ttl
+Path	Way.ttl
+PedestrianPath	Way.ttl
+Person	Way.ttl
+Place	Way.ttl
+Point	Way.ttl
+Resource	Way.ttl
+Road	Way.ttl
+Subject	Way.ttl
+Way	Way.ttl
+Property	Way.ttl
+Business	Business.ttl
+BusinessPerson	Business.ttl
+BusinessSector	Business.ttl
+Client	Business.ttl
+Company	Business.ttl
+Customer	Business.ttl
+Datetime	Business.ttl
+Department	Business.ttl
+Employee	Business.ttl
+Employer	Business.ttl
+Industry	Business.ttl
+Integer	Business.ttl
+Investor	Business.ttl
+Location	Business.ttl
+Manager	Business.ttl
+Market	Business.ttl
+N517a9d207453411ba145ed6669f5127ab1	Business.ttl
+N517a9d207453411ba145ed6669f5127ab6	Business.ttl
+Owner	Business.ttl
+Person	Business.ttl
+Place	Business.ttl
+Product	Business.ttl
+Revenue	Business.ttl
+Service	Business.ttl
+ServiceOrProduct	Business.ttl
+Supplier	Business.ttl
+Class	Business.ttl
+Organisation	Business.ttl
+Cause	Problem.ttl
+Context	Problem.ttl
+DifficultyLevel	Problem.ttl
+Domain	Problem.ttl
+Effect	Problem.ttl
+Impact	Problem.ttl
+Integer	Problem.ttl
+Langstring	Problem.ttl
+Nf39575439bc741078cab2d5916c663acb2	Problem.ttl
+Problem	Problem.ttl
+ProblemType	Problem.ttl
+Solution	Problem.ttl
+Solving	Problem.ttl
+Thing	Problem.ttl
+Time	Problem.ttl
+Concept	Problem.ttl
+Situation	Problem.ttl
+Cheek	Face.ttl
+Class	Face.ttl
+Expression	Face.ttl
+Eye	Face.ttl
+Eyes	Face.ttl
+Face	Face.ttl
+FacePart	Face.ttl
+FacialFeature	Face.ttl
+Human	Face.ttl
+Integer	Face.ttl
+Mouth	Face.ttl
+Nbb17d2cede1240a8adad1d8587390239b1	Face.ttl
+Nose	Face.ttl
+Skin	Face.ttl
+SkinType	Face.ttl
+Bodypart	Face.ttl
+Resource	Face.ttl
+AnatomicalStructure	Body.ttl
+Arm	Body.ttl
+Body	Body.ttl
+BodyPart	Body.ttl
+Head	Body.ttl
+Human	Body.ttl
+HumanBody	Body.ttl
+Leg	Body.ttl
+Limbs	Body.ttl
+Organ	Body.ttl
+Resource	Body.ttl
+Torso	Body.ttl
+Anatomicalstructure	Body.ttl
+Na17aa21561fa4878864ee13118c956b4b1	Body.ttl
+Physicalentity	Body.ttl
+Physicalobject	Body.ttl
+Humanbody	Body.ttl
+Na17aa21561fa4878864ee13118c956b4b2	Body.ttl
+Bodypart	Body.ttl
+Complex	Number.ttl
+Floatnumber	Number.ttl
+Integer	Number.ttl
+Integernumber	Number.ttl
+Number	Number.ttl
+Real	Number.ttl
+Direction	Line.ttl
+Double	Line.ttl
+Integer	Line.ttl
+Line	Line.ttl
+Point	Line.ttl
+Geometricobject	Line.ttl
+Shape	Line.ttl
+Datatype	Line.ttl
+N1b318c35c92a45f984edc46b58ab6237b1	Line.ttl
+City	People.ttl
+Country	People.ttl
+Gender	People.ttl
+Integer	People.ttl
+Integral	People.ttl
+Item	People.ttl
+Occupation	People.ttl
+People	People.ttl
+Person	People.ttl
+PhoneNumber	People.ttl
+Service	People.ttl
+Resource	People.ttl
+BodyType	Car.ttl
+Car	Car.ttl
+CarMake	Car.ttl
+CarModel	Car.ttl
+Engine	Car.ttl
+FuelType	Car.ttl
+Gyear	Car.ttl
+Integer	Car.ttl
+Manufacturer	Car.ttl
+Model	Car.ttl
+Resource	Car.ttl
+Vehicle	Car.ttl
+Author	Book.ttl
+Book	Book.ttl
+Genre	Book.ttl
+Gyear	Book.ttl
+Integer	Book.ttl
+Organization	Book.ttl
+Person	Book.ttl
+Publisher	Book.ttl
+Resource	Book.ttl
+Creativework	Book.ttl
+AnyEntity	Issue.ttl
+Datetime	Issue.ttl
+Entity	Issue.ttl
+Integer	Issue.ttl
+Issue	Issue.ttl
+IssueDateCreated	Issue.ttl
+IssueDescription	Issue.ttl
+IssueIdentifier	Issue.ttl
+IssueResolution	Issue.ttl
+IssueSeverity	Issue.ttl
+IssueStatus	Issue.ttl
+IssueStatusEnum	Issue.ttl
+IssueTitle	Issue.ttl
+Langstring	Issue.ttl
+Person	Issue.ttl
+Priority	Issue.ttl
+Something	Issue.ttl
+Status	Issue.ttl
+Subject	Issue.ttl
+Thing	Issue.ttl
+User	Issue.ttl
+Concern	Issue.ttl
+Resource	Issue.ttl
+Ailment	Health.ttl
+Diagnosis	Health.ttl
+DietRestriction	Health.ttl
+Disease	Health.ttl
+Diseases	Health.ttl
+Doctor	Health.ttl
+GymMembership	Health.ttl
+Health	Health.ttl
+HealthCareProvider	Health.ttl
+HealthCondition	Health.ttl
+HealthRecord	Health.ttl
+Hospital	Health.ttl
+Illness	Health.ttl
+Integer	Health.ttl
+MedicalCondition	Health.ttl
+Medication	Health.ttl
+Medicine	Health.ttl
+MentalHealth	Health.ttl
+MentalHealthStatus	Health.ttl
+Patient	Health.ttl
+Person	Health.ttl
+PhysicalHealth	Health.ttl
+PhysicalHealthStatus	Health.ttl
+SideEffect	Health.ttl
+Symptom	Health.ttl
+Treatment	Health.ttl
+Class	Health.ttl
+Na6c8faa1793241568387aff63ac2d7b4b2	Health.ttl
+Na6c8faa1793241568387aff63ac2d7b4b1	Health.ttl
+Class	School.ttl
+Classroom	School.ttl
+Course	School.ttl
+Department	School.ttl
+EducationalService	School.ttl
+FacultyMember	School.ttl
+Grade	School.ttl
+Homework	School.ttl
+Integer	School.ttl
+Principal	School.ttl
+School	School.ttl
+Schoolgrade	School.ttl
+Schoollocation	School.ttl
+Schoolschool	School.ttl
+Schoolstudent	School.ttl
+Schoolsubject	School.ttl
+Schoolteacher	School.ttl
+Student	School.ttl
+Subject	School.ttl
+Teacher	School.ttl
+N31c47115fe5c47c9bca04a884c5ab0c2b2	School.ttl
+Educationalinstitution	School.ttl
+Educationalorganization	School.ttl
+Institution	School.ttl
+N31c47115fe5c47c9bca04a884c5ab0c2b4	School.ttl
+Person	School.ttl
+N31c47115fe5c47c9bca04a884c5ab0c2b1	School.ttl
+Answer	Question.ttl
+AnswerEntity	Question.ttl
+Entity	Question.ttl
+N1283ff7681a64ce5822eb63668931477b1	Question.ttl
+Person	Question.ttl
+Question	Question.ttl
+QuestionCategory	Question.ttl
+QuestionEntity	Question.ttl
+QuestionTopic	Question.ttl
+QuestionType	Question.ttl
+Resource	Question.ttl
+Response	Question.ttl
+Source	Question.ttl
+Topic	Question.ttl
+User	Question.ttl
+Intangible	Question.ttl
+City	City.ttl
+Country	City.ttl
+Integer	City.ttl
+Nonnegativeinteger	City.ttl
+Person	City.ttl
+Resource	City.ttl
+State	City.ttl
+TimeZone	City.ttl
+Feature	City.ttl
+Geologicalplace	City.ttl
+Geonamesfeature	City.ttl
+Action	Result.ttl
+Activity	Result.ttl
+Agent	Result.ttl
+Course	Result.ttl
+Datetime	Result.ttl
+Event	Result.ttl
+Experiment	Result.ttl
+Grade	Result.ttl
+Integer	Result.ttl
+N6575d1a5e5144dccb4939dfa85e606c9b1	Result.ttl
+N6575d1a5e5144dccb4939dfa85e606c9b4	Result.ttl
+Process	Result.ttl
+Resource	Result.ttl
+Result	Result.ttl
+Student	Result.ttl
+Test	Result.ttl
+Eventoutcome	Result.ttl
+N2aab17e7ce23426c91bcafb9bf128f85b1	Result.ttl
+Branch	Government.ttl
+Citizen	Government.ttl
+City	Government.ttl
+Country	Government.ttl
+Department	Government.ttl
+Diff	Government.ttl
+Executive	Government.ttl
+Government	Government.ttl
+GovernmentPolicy	Government.ttl
+GovernmentSystem	Government.ttl
+Integer	Government.ttl
+Law	Government.ttl
+Laws	Government.ttl
+Leader	Government.ttl
+LeadershipPosition	Government.ttl
+Legislation	Government.ttl
+Legislative	Government.ttl
+Member	Government.ttl
+Official	Government.ttl
+Person	Government.ttl
+Policy	Government.ttl
+PoliticalParty	Government.ttl
+Politician	Government.ttl
+Position	Government.ttl
+Positiveinteger	Government.ttl
+PublicService	Government.ttl
+Resource	Government.ttl
+State	Government.ttl
+City	State.ttl
+Country	State.ttl
+Entity	State.ttl
+Integer	State.ttl
+State	State.ttl
+Feature	State.ttl
+Geographicalentity	State.ttl
+Administrativeregion	State.ttl
+Address	Child.ttl
+Adult	Child.ttl
+Child	Child.ttl
+EducationalOrganization	Child.ttl
+Human	Child.ttl
+Integer	Child.ttl
+Organization	Child.ttl
+Parent	Child.ttl
+Person	Child.ttl
+Positiveinteger	Child.ttl
+School	Child.ttl
+Category	Work.ttl
+Company	Work.ttl
+Datetime	Work.ttl
+Duration	Work.ttl
+Employee	Work.ttl
+Employer	Work.ttl
+Integer	Work.ttl
+Job	Work.ttl
+JobPosting	Work.ttl
+Location	Work.ttl
+Occupation	Work.ttl
+Organization	Work.ttl
+Person	Work.ttl
+Position	Work.ttl
+Salary	Work.ttl
+Task	Work.ttl
+Time	Work.ttl
+Work	Work.ttl
+Worker	Work.ttl
+Resource	Work.ttl
+N4e52b9b4c1e34764a08b304b2a1f71cbb1	Work.ttl
+Agent	Force.ttl
+Change	Force.ttl
+Direction	Force.ttl
+Entity	Force.ttl
+Force	Force.ttl
+ForceType	Force.ttl
+ForceUnit	Force.ttl
+Magnitude	Force.ttl
+Object	Force.ttl
+PhysicalObject	Force.ttl
+Resource	Force.ttl
+Thing	Force.ttl
+Physicalconcept	Force.ttl
+Physicalphenomenon	Force.ttl
+Physicalquantity	Force.ttl
+Back	Back.ttl
+BackDisease	Back.ttl
+BackPain	Back.ttl
+BackPart	Back.ttl
+Back_Condition	Back.ttl
+Backpain	Back.ttl
+Human	Back.ttl
+HumanBody	Back.ttl
+Injury	Back.ttl
+Integer	Back.ttl
+Pain	Back.ttl
+Place	Back.ttl
+Resource	Back.ttl
+Something	Back.ttl
+Disease	Back.ttl
+Anything	Side.ttl
+Class	Side.ttl
+Entity	Side.ttl
+Object	Side.ttl
+Orientation	Side.ttl
+RectangularObject	Side.ttl
+Resource	Side.ttl
+Side	Side.ttl
+SideType	Side.ttl
+String	Side.ttl
+Thing	Side.ttl
+Action	Right.ttl
+Agent	Right.ttl
+Authority	Right.ttl
+CivilRight	Right.ttl
+Entity	Right.ttl
+Human	Right.ttl
+HumanRight	Right.ttl
+Institution	Right.ttl
+Jurisdiction	Right.ttl
+Law	Right.ttl
+LegalRight	Right.ttl
+LegalSystem	Right.ttl
+Person	Right.ttl
+PoliticalRight	Right.ttl
+ReligiousRight	Right.ttl
+Resource	Right.ttl
+Right	Right.ttl
+RightHolder	Right.ttl
+Scope	Right.ttl
+String	Right.ttl
+N6e82713b336940008622e00652df59bfb1	Right.ttl
+Property	Right.ttl
+Datetime	End.ttl
+End	End.ttl
+EndEvent	End.ttl
+EndLocation	End.ttl
+EndTime	End.ttl
+Entity	End.ttl
+Event	End.ttl
+N6368b32855bb4934b0d678c8956ceef6b1	End.ttl
+Process	End.ttl
+Resource	End.ttl
+Thing	End.ttl
+Time	End.ttl
+Coach	Team.ttl
+Game	Team.ttl
+Integer	Team.ttl
+Location	Team.ttl
+Member	Team.ttl
+Name	Team.ttl
+Person	Team.ttl
+Project	Team.ttl
+Resource	Team.ttl
+Role	Team.ttl
+Sport	Team.ttl
+Task	Team.ttl
+Team	Team.ttl
+TeamLeague	Team.ttl
+TeamMember	Team.ttl
+Organization	Team.ttl
+AcademicInstitution	Education.ttl
+Course	Education.ttl
+Degree	Education.ttl
+Education	Education.ttl
+EducationCourse	Education.ttl
+EducationalInstitution	Education.ttl
+Entity	Education.ttl
+Grade	Education.ttl
+Institution	Education.ttl
+Integer	Education.ttl
+KnowledgeArea	Education.ttl
+N05aaffae578e46e1bf0ef74db699036ab1	Education.ttl
+N7daede8dfec54e3784e36650d13b75e9b1	Education.ttl
+Person	Education.ttl
+School	Education.ttl
+Student	Education.ttl
+Subject	Education.ttl
+Teacher	Education.ttl
+University	Education.ttl
+Process	Education.ttl
+Organization	Education.ttl
+Consumer	Service.ttl
+Customer	Service.ttl
+Datetime	Service.ttl
+Duration	Service.ttl
+Entity	Service.ttl
+OfflineService	Service.ttl
+Price	Service.ttl
+Provider	Service.ttl
+Service	Service.ttl
+ServiceConsumer	Service.ttl
+ServiceCost	Service.ttl
+ServiceLocation	Service.ttl
+ServiceProvider	Service.ttl
+ServiceType	Service.ttl
+ServiceUser	Service.ttl
+Group	Member.ttl
+Integer	Member.ttl
+Member	Member.ttl
+MembershipType	Member.ttl
+Organisation	Member.ttl
+Organization	Member.ttl
+Resource	Member.ttl
+Entity	Level.ttl
+Game	Level.ttl
+Integer	Level.ttl
+Level	Level.ttl
+N3abdb97a8d9d4511afd26eeee956452db1	Level.ttl
+N3abdb97a8d9d4511afd26eeee956452db2	Level.ttl
+Node	Level.ttl
+Person	Level.ttl
+Resource	Level.ttl
+Skill	Level.ttl
+Thing	Level.ttl
+User	Level.ttl
+Arm	Hand.ttl
+Body	Hand.ttl
+Finger	Hand.ttl
+Fingers	Hand.ttl
+Function	Hand.ttl
+Hand	Hand.ttl
+HandPart	Hand.ttl
+Human	Hand.ttl
+HumanBody	Hand.ttl
+Integer	Hand.ttl
+Nails	Hand.ttl
+Nonnegativeinteger	Hand.ttl
+Object	Hand.ttl
+Palm	Hand.ttl
+Position	Hand.ttl
+Skin	Hand.ttl
+Thumb	Hand.ttl
+Bodypart	Hand.ttl
+Handpart	Hand.ttl
+Resource	Hand.ttl
+Handparts	Hand.ttl
+Body_part	Hand.ttl
+Class	Hand.ttl
+Action	Idea.ttl
+Agent	Idea.ttl
+Applicability	Idea.ttl
+Author	Idea.ttl
+Concept	Idea.ttl
+Creator	Idea.ttl
+Datetime	Idea.ttl
+Event	Idea.ttl
+Idea	Idea.ttl
+Integer	Idea.ttl
+Originality	Idea.ttl
+Originator	Idea.ttl
+Person	Idea.ttl
+Resource	Idea.ttl
+Subject	Idea.ttl
+Anatomy	Eye.ttl
+Body	Eye.ttl
+BodyPart	Eye.ttl
+Class	Eye.ttl
+Color	Eye.ttl
+Cornea	Eye.ttl
+Disease	Eye.ttl
+Disorder	Eye.ttl
+Double	Eye.ttl
+Eye	Eye.ttl
+EyeDisease	Eye.ttl
+EyePart	Eye.ttl
+Function	Eye.ttl
+Human	Eye.ttl
+HumanBody	Eye.ttl
+HumanEye	Eye.ttl
+Iris	Eye.ttl
+Lens	Eye.ttl
+Organism	Eye.ttl
+Retina	Eye.ttl
+Shape	Eye.ttl
+Size	Eye.ttl
+Treatment	Eye.ttl
+Vision	Eye.ttl
+String	Eye.ttl
+Bodypart	Eye.ttl
+Humanorgan	Eye.ttl
+Daughter	Father.ttl
+Father	Father.ttl
+Human	Father.ttl
+Person	Father.ttl
+Resource	Father.ttl
+Son	Father.ttl
+Woman	Father.ttl
+Male	Father.ttl
+Man	Father.ttl
+Parent	Father.ttl
+Auction	Lot.ttl
+Building	Lot.ttl
+Entity	Lot.ttl
+Integer	Lot.ttl
+Lot	Lot.ttl
+ParkingLot	Lot.ttl
+Person	Lot.ttl
+Resource	Lot.ttl
+Property	Lot.ttl
+Course	Teacher.ttl
+Degree	Teacher.ttl
+Institution	Teacher.ttl
+Integer	Teacher.ttl
+School	Teacher.ttl
+Student	Teacher.ttl
+Subject	Teacher.ttl
+Teacher	Teacher.ttl
+Person	Teacher.ttl
+DateTime	Party.ttl
+Datetime	Party.ttl
+Guest	Party.ttl
+Integer	Party.ttl
+Location	Party.ttl
+Party	Party.ttl
+PartyActivity	Party.ttl
+PartyEvent	Party.ttl
+PartyMember	Party.ttl
+PartyOrganiser	Party.ttl
+PartyType	Party.ttl
+Person	Party.ttl
+Resource	Party.ttl
+Theme	Party.ttl
+Time	Party.ttl
+Event	Party.ttl

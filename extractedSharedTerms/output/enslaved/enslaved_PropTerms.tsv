@@ -1,1423 +1,2317 @@
-birthDate	film.ttl	2
-born	ancestry.ttl	2
-burialDate	cemetery.ttl	1
-contains	cave.ttl	2
-date	funeral.ttl	17
-deathDate	cemetery.ttl	1
-died	cemetery.ttl	1
-established	memorial.ttl	2
-hasGrave	cemetery.ttl	1
-hasMemorial	cemetery.ttl	1
-hasName	project.ttl	66
-location	funeral.ttl	22
-memorialText	cemetery.ttl	1
-name	state.ttl	65
-occupant	cemetery.ttl	1
-occupantDOB	cemetery.ttl	1
-occupantDOD	cemetery.ttl	1
-consults	counsel.ttl	1
-author	memoir.ttl	12
-date	gospel.ttl	1
-title	memoir.ttl	16
-verseInGospel	gospel.ttl	1
-verseNumber	gospel.ttl	1
-verseText	gospel.ttl	1
-verses	gospel.ttl	1
-fromLocation	view.ttl	1
-hasSubject	desire.ttl	12
-hasTime	end.ttl	3
-hasViewer	view.ttl	1
-hasViewpointExpression	view.ttl	1
-hasViewpointSubject	view.ttl	1
-atDate	party.ttl	1
-atLocation	care.ttl	2
-attends	student.ttl	3
-hasAge	girl.ttl	13
-hasAttendee	event.ttl	2
-hasDate	information.ttl	20
-hasEnd	end.ttl	8
-hasGuest	wedding.ttl	2
-hasHost	party.ttl	1
-hasLocation	violence.ttl	26
-hasOrganizer	event.ttl	2
-hasStartDate	plan.ttl	7
-hasTheme	party.ttl	1
-organizes	activist.ttl	2
-hasClothingType	clothing.ttl	1
-hasSize	cabin.ttl	7
-hasColor	material.ttl	11
-age	home.ttl	9
-hasShape	eye.ttl	4
-affiliation	researcher.ttl	1
-age	horse.ttl	13
-gender	instance.ttl	4
-hasProjectTopic	researcher.ttl	1
-locatedIn	state.ttl	3
-worksOn	construction.ttl	3
-choice	vote.ttl	1
-forCandidate	vote.ttl	1
-hasVote	vote.ttl	1
-hasVoter	vote.ttl	1
-inElection	vote.ttl	1
-voteFor	vote.ttl	1
-voteIn	vote.ttl	1
-voter	vote.ttl	1
-hasAuthor	audiobook.ttl	22
-hasGenre	tale.ttl	6
-writtenIn	text.ttl	1
-collectorName	collection.ttl	1
-hasCollection	collection.ttl	1
-hasCreationDate	document.ttl	4
-hasItem	auction.ttl	4
-isOfType	collection.ttl	1
-item	exhibit.ttl	3
-owns	home.ttl	2
-color	clothe.ttl	6
-hasInk	print.ttl	1
-prints	print.ttl	1
-givesSermon	preacher.ttl	1
-hasOccupation	preacher.ttl	1
-religiousTopic	preacher.ttl	1
-sermonDelivered	preacher.ttl	1
-worksAt	doctor.ttl	8
-belongToCentury	decade.ttl	1
-endsIn	decade.ttl	1
-hasEndYear	decade.ttl	1
-hasEvent	scene.ttl	3
-hasStartYear	decade.ttl	1
-startsIn	decade.ttl	1
-startsYear	decade.ttl	1
-containsJuror	jury.ttl	1
-isJurorIn	jury.ttl	1
-jurorDutyDays	jury.ttl	1
-jurorSelectionProcess	jury.ttl	1
-jurySizeOf	jury.ttl	1
-createdBy	website.ttl	2
-hasStyle	style.ttl	4
-cuisine	chef.ttl	1
-dish	dinner.ttl	2
-experience	captain.ttl	2
-specialty	physician.ttl	3
-worksIn	professor.ttl	7
-year	census.ttl	2
-generates	power.ttl	1
-transfers	power.ttl	1
-owner	property.ttl	2
-hasCategory	shop.ttl	2
-hasContact	merchant.ttl	1
-hasWebsite	merchant.ttl	1
-operatesIn	merchant.ttl	1
-sells	shop.ttl	2
-sellsProduct	merchant.ttl	1
-hasChild	ancestor.ttl	4
-hasHeight	baby.ttl	3
-isMarried	person.ttl	2
-hasTruthValue	statement.ttl	3
-isTrue	truth.ttl	1
-belongsTo	branch.ttl	6
-enrolledIn	university.ttl	1
-hasDepartment	institution.ttl	3
-hasFaculty	university.ttl	1
-offeredBy	university.ttl	1
-studies	university.ttl	1
-teaches	school.ttl	4
-teachesCourse	university.ttl	1
-containsPhoto	photo.ttl	1
-hasDateTaken	photo.ttl	1
-hasDescription	issue.ttl	7
-hasFileFormat	photo.ttl	1
-hasFileName	photo.ttl	1
-hasPhotographer	photo.ttl	1
-hasPortfolio	photo.ttl	1
-hasResolution	image.ttl	2
-hasTitle	information.ttl	22
-isPublic	photo.ttl	1
-isTakenOn	photo.ttl	1
-takenBy	photo.ttl	1
-amount	debt.ttl	7
-hasPrice	trade.ttl	7
-price	shop.ttl	2
-address	property.ttl	4
-product	store.ttl	1
-productDescription	store.ttl	1
-productName	store.ttl	1
-productPrice	store.ttl	1
-courtCase	court.ttl	1
-dealsWith	court.ttl	1
-defends	law.ttl	2
-hasJurisdiction	court.ttl	1
-hears	court.ttl	1
-judge	trial.ttl	2
-represents	law.ttl	3
-isImplementedBy	protection.ttl	1
-isUsedFor	protection.ttl	1
-hasMessage	conversation.ttl	1
-hasPart	activity.ttl	8
-hasSender	mail.ttl	2
-hasTopic	speaker.ttl	2
-timestamp	conversation.ttl	1
-conductedBy	raid.ttl	3
-forEmergency	rescue.ttl	1
-hasVictim	kidnapping.ttl	3
-hasFamilialLoveFor	love.ttl	1
-hasPlatonicLoveFor	love.ttl	1
-hasRomanticLoveFor	love.ttl	1
-hasSelfLove	love.ttl	1
-hasArtist	painting.ttl	1
-hasMedium	information.ttl	3
-description	project.ttl	8
-isDetailOf	detail.ttl	1
-hasCopyright	image.ttl	1
-hasCreator	statue.ttl	2
-hasFormat	image.ttl	1
-hasWidth	image.ttl	1
-isColor	image.ttl	1
-isPublished	paper.ttl	2
-hasDateOfBirth	baby.ttl	3
-hasFirstName	professor.ttl	6
-hasFullName	individual.ttl	1
-hasGender	baby.ttl	6
-hasLastName	professor.ttl	6
-hasNationality	worker.ttl	3
-hasProvider	service.ttl	2
-hasRecipient	mail.ttl	4
-involvesActivity	care.ttl	1
-providesCare	care.ttl	1
-hasInfluenceOn	abolitionism.ttl	1
-hasOrigin	character.ttl	4
-isAimedAt	abolitionism.ttl	1
-artist	song.ttl	1
-content	issue.ttl	7
-genre	novel.ttl	4
-hasLyrics	song.ttl	1
-length	volume.ttl	5
-publishDate	song.ttl	1
-sungBy	song.ttl	1
-hasRepresentation	symbol.ttl	1
-isUsedIn	carriage.ttl	3
-associatedWith	result.ttl	4
-endsOn	spring.ttl	1
-hasEnd	spring.ttl	1
-hasStart	spring.ttl	1
-hasTemperature	star.ttl	3
-hasWeather	spring.ttl	1
-startsOn	spring.ttl	1
-endTime	end.ttl	4
-hasStudent	school.ttl	3
-hasTeacher	school.ttl	2
-startTime	history.ttl	3
-entryAuthor	entry.ttl	1
-entryDate	entry.ttl	1
-hasEntry	diary.ttl	2
-email	gift.ttl	5
-hasDegree	teacher.ttl	1
-hasExperience	overseer.ttl	6
-school	teacher.ttl	1
-teachesSubject	professor.ttl	2
-origin	river.ttl	3
-settledIn	colonist.ttl	1
-hasAttorneyLicense	attorney.ttl	1
-hasPracticeArea	attorney.ttl	1
-hasYear	citation.ttl	3
-instructionTool	instruction.ttl	1
-step	instruction.ttl	1
-targetAudience	instruction.ttl	1
-employer	servant.ttl	1
-firstName	governor.ttl	3
-hires	servant.ttl	1
-jobTitle	servant.ttl	1
-lastName	governor.ttl	4
-worksFor	editor.ttl	2
-hasSpouse	widow.ttl	3
-isWifeOf	wife.ttl	1
-hasProficiency	skill.ttl	1
-hasSkill	practice.ttl	4
-isRelatedTo	principle.ttl	2
-ownsSkill	skill.ttl	1
-relatedTo	idea.ttl	2
-usedInField	skill.ttl	1
-hasInterestRate	bond.ttl	1
-hasMaturityDate	bond.ttl	1
-issuedBy	bond.ttl	1
-ownedBy	transportation.ttl	2
-hasOrder	list.ttl	1
-item	list.ttl	1
-hasCity	location.ttl	5
-hasCountry	location.ttl	5
-hasParcel	land.ttl	1
-hasState	address.ttl	2
-population	state.ttl	6
-size	clothe.ttl	7
-hasAgenda	meeting.ttl	1
-hasNotes	meeting.ttl	1
-hasRecollection	recollection.ttl	1
-recollectionDate	recollection.ttl	1
-recollectionEvent	recollection.ttl	1
-celebratedBy	anniversary.ttl	1
-isAnniversaryOf	anniversary.ttl	1
-courseDescription	course.ttl	1
-courseId	course.ttl	1
-courseName	course.ttl	1
-hasID	soldier.ttl	3
-instructorId	course.ttl	1
-instructorName	course.ttl	1
-isTaughtBy	course.ttl	1
-dateOfDonation	donation.ttl	1
-donationAmount	donation.ttl	1
-donor	donation.ttl	1
-hasEIN	donation.ttl	1
-recipient	contribution.ttl	2
-endsAt	process.ttl	1
-hasInput	conversion.ttl	2
-hasOutput	conversion.ttl	2
-startsAt	process.ttl	1
-cause	damage.ttl	3
-effectOfAbolition	abolition.ttl	1
-partOf	foot.ttl	3
-resultedIn	abolition.ttl	1
-lack	lack.ttl	1
-xCoordinate	point.ttl	2
-yCoordinate	point.ttl	2
-zCoordinate	point.ttl	2
-hasSkill	seamstress.ttl	1
-specializesIn	editor.ttl	3
-containsItem	order.ttl	1
-customerId	order.ttl	1
-itemId	order.ttl	1
-itemPrice	sale.ttl	2
-itemQuantity	order.ttl	1
-hasFirst	pair.ttl	1
-hasSecond	pair.ttl	1
-usesTool	carpenter.ttl	3
-knowledge	blacksmith.ttl	1
-tool	blacksmith.ttl	1
-displayHonor	honor.ttl	1
-hasHonor	honor.ttl	1
-isInvolvedIn	public.ttl	1
-hasPosition	organization.ttl	2
-workInOrganization	official.ttl	1
-hasBlue	color.ttl	1
-hasGreen	color.ttl	1
-hasHexCode	color.ttl	1
-hasRGBCode	color.ttl	1
-hasRed	color.ttl	1
-isPrimaryColor	color.ttl	1
-hasCapacity	tavern.ttl	2
-hasMake	transportation.ttl	1
-hasMaxSpeed	transportation.ttl	1
-hasModel	carriage.ttl	2
-hasSpeed	ship.ttl	2
-operatedBy	transportation.ttl	1
-cause	disease.ttl	1
-symptom	disease.ttl	1
-treatment	disease.ttl	1
-advocateFor	abolitionist.ttl	1
-participatedIn	abolitionist.ttl	1
-hasPart	head.ttl	1
-defeats	hero.ttl	1
-hasOriginStory	hero.ttl	1
-hasPower	hero.ttl	1
-hasSuperPower	hero.ttl	1
-isMale	hero.ttl	1
-secretIdentity	hero.ttl	1
-consistsOf	society.ttl	1
-hasCulturalNorm	society.ttl	1
-hasInstitution	society.ttl	1
-hasMember	project.ttl	12
-hasRole	project.ttl	7
-closingDate	exhibit.ttl	1
-curator	exhibit.ttl	1
-endDate	project.ttl	6
-itemType	exhibit.ttl	1
-openingDate	exhibit.ttl	1
-startDate	project.ttl	6
-belongsToGenre	literature.ttl	1
-writtenBy	literature.ttl	1
-capacity	vessel.ttl	1
-madeOf	clothe.ttl	2
-assistanceProvider	assistance.ttl	1
-assistanceReceiver	assistance.ttl	1
-assistanceType	assistance.ttl	1
-providerName	service.ttl	2
-receiverName	assistance.ttl	1
-belongsIn	community.ttl	1
-companyName	work.ttl	1
-employeeName	work.ttl	1
-employeeNumber	work.ttl	1
-jobPosition	work.ttl	1
-hasFurniture	office.ttl	3
-isPartOf	period.ttl	7
-hasCaptain	ship.ttl	1
-hasCrew	ship.ttl	1
-raceOf	race.ttl	1
-depth	sea.ttl	1
-hasArea	state.ttl	8
-hasDepth	sea.ttl	1
-salinity	sea.ttl	1
-temperature	sea.ttl	1
-courses	ed.ttl	1
-dateOfPurchase	purchase.ttl	1
-hasBuyer	trade.ttl	2
-hasCustomer	sale.ttl	2
-hasProduct	trade.ttl	3
-hasQuantity	trade.ttl	3
-price	purchase.ttl	1
-contributedBy	reputation.ttl	1
-hasComment	reputation.ttl	1
-hasRating	reputation.ttl	1
-hasBookingNumber	travel.ttl	1
-hasDeparture	travel.ttl	1
-hasDestination	passenger.ttl	3
-hasDuration	activity.ttl	8
-hasTransport	travel.ttl	1
-hasImpact	struggle.ttl	3
-hasProbability	risk.ttl	1
-hasRiskAssessment	risk.ttl	1
-hasRiskFactor	risk.ttl	1
-hasRiskLevel	risk.ttl	1
-hasRiskManagement	risk.ttl	1
-hasTotal	total.ttl	1
-isItemOf	total.ttl	1
-hasDeadline	project.ttl	3
-hasOpportunity	opportunity.ttl	1
-establishedOn	fact.ttl	1
-hasFact	fact.ttl	1
-refersSubject	fact.ttl	1
-validatedBy	fact.ttl	1
-hasPartner	couple.ttl	1
-hasWeapon	soldier.ttl	2
-city	person.ttl	1
-country	freedom.ttl	3
-livesIn	relation.ttl	2
-dealsDamage	attack.ttl	1
-hasTarget	attack.ttl	1
-hasBiography	obituary.ttl	2
-hasPublicationDate	author.ttl	4
-attendsCourt	lawyer.ttl	1
-hasEducation	lawyer.ttl	1
-hasLicense	lawyer.ttl	1
-hasSpecialization	doctor.ttl	3
-practicesArea	lawyer.ttl	1
-causes	change.ttl	3
-dueTo	loss.ttl	1
-isMeasuredIn	loss.ttl	1
-member	project.ttl	2
-hasCastle	kingdom.ttl	1
-hasKing	kingdom.ttl	1
-hasPrince	kingdom.ttl	1
-hasPrincess	kingdom.ttl	1
-hasQueen	kingdom.ttl	1
-hasBirthDate	birth.ttl	4
-hasBreed	life.ttl	1
-hasDeathDate	life.ttl	1
-memberCount	group.ttl	1
-hasAddress	neighbor.ttl	6
-hasInvitation	guest.ttl	1
-isAttendingEvent	guest.ttl	1
-status	guest.ttl	1
-stayDuration	guest.ttl	1
-staysAt	guest.ttl	1
-producedBy	release.ttl	1
-version	release.ttl	1
-enrolls	student.ttl	1
-hasGPA	student.ttl	1
-hasMajor	student.ttl	1
-hasMinor	student.ttl	1
-handlesFire	fire.ttl	1
-hasSeverity	pain.ttl	5
-hasSource	testimony.ttl	4
-producesHeat	fire.ttl	1
-producesLight	fire.ttl	1
-producesSmoke	fire.ttl	1
-triggers	fire.ttl	1
-providedBy	support.ttl	1
-providesSupport	support.ttl	1
-providesSupportTo	support.ttl	1
-receivesSupport	support.ttl	1
-representsSupportIn	support.ttl	1
-from	escape.ttl	1
-method	escape.ttl	1
-reason	escape.ttl	1
-time	escape.ttl	1
-to	escape.ttl	1
-hasBelief	pilgrimage.ttl	2
-hasBeliever	belief.ttl	1
-hasContent	newspaper.ttl	8
-hasEvidence	belief.ttl	1
-hasStrength	belief.ttl	1
-hasRoom	home.ttl	2
-captivityState	captivity.ttl	1
-duration	period.ttl	6
-sideEffects	treatment.ttl	1
-treats	treatment.ttl	1
-type	dress.ttl	5
-hasRank	soldier.ttl	3
-hasReceivedMedal	veteran.ttl	1
-hasServedInWar	veteran.ttl	1
-hasServiceLength	veteran.ttl	1
-hasCapital	region.ttl	3
-hasPopulation	state.ttl	10
-isInContinent	country.ttl	1
-hasBeneficiaryGroup	emancipation.ttl	1
-hasType	material.ttl	10
-actsOnBehalfOf	behalf.ttl	1
-reads	reader.ttl	1
-hasOffender	assault.ttl	1
-occurredAt	assault.ttl	1
-hasCurrency	earning.ttl	2
-hasExchangeRate	money.ttl	1
-involves	money.ttl	1
-authors	biographer.ttl	1
-hasWritten	author.ttl	2
-isAbout	activist.ttl	2
-isSubjectOf	biographer.ttl	1
-isWrittenBy	diary.ttl	2
-residesIn	neighbor.ttl	2
-hasDenomination	church.ttl	2
-hasPurpose	punishment.ttl	3
-isPrayedBy	prayer.ttl	1
-dateOfBirth	physician.ttl	1
-hasPatient	physician.ttl	1
-phone	physician.ttl	1
-endOfYear	year.ttl	1
-hasYear	year.ttl	1
-hasOwner	residence.ttl	7
-hasValue	level.ttl	7
-hasPublished	historian.ttl	1
-studiesPeriod	historian.ttl	1
-writesAbout	historian.ttl	1
-hasEndTime	period.ttl	6
-hasStartTime	period.ttl	5
-isInTimezone	time.ttl	1
-belongsChurch	priest.ttl	1
-performs	agent.ttl	2
-hasBirthdate	autobiography.ttl	1
-conductsService	congregation.ttl	1
-area	island.ttl	3
-height	volume.ttl	3
-width	volume.ttl	3
-hasCountySeat	county.ttl	1
-inState	county.ttl	1
-locatedInState	county.ttl	1
-contributor	contribution.ttl	1
-hasCharacter	tale.ttl	2
-hasCharacters	tale.ttl	2
-hasGenreName	film.ttl	2
-hasPlot	tale.ttl	2
-intensity	effect.ttl	1
-result	effect.ttl	1
-hasDateTime	violence.ttl	2
-hasKidnapper	kidnapping.ttl	1
-hasRansom	kidnapping.ttl	1
-casualties	battle.ttl	1
-combatant	battle.ttl	1
-forceSize	battle.ttl	1
-hasParticipatingCountry	battle.ttl	1
-hasResult	battle.ttl	1
-participant	result.ttl	2
-place	battle.ttl	1
-sideA	battle.ttl	1
-sideB	battle.ttl	1
-currency	nation.ttl	3
-hasInvestment	fund.ttl	1
-dueDate	task.ttl	3
-effortInvested	effort.ttl	1
-effortUnit	effort.ttl	1
-taskName	effort.ttl	1
-abolitionActivity	antislavery.ttl	1
-participatesIn	activism.ttl	4
-wrotePublication	antislavery.ttl	1
-material	dress.ttl	2
-shape	thing.ttl	1
-abolishedSlavery	slavery.ttl	1
-hasMaster	slavery.ttl	1
-helpedEscape	slavery.ttl	1
-involvedInTrade	slavery.ttl	1
-ownsSlave	slavery.ttl	1
-tradedSlaves	slavery.ttl	1
-birthCountry	origin.ttl	1
-birthYear	origin.ttl	1
-hasCityOfOrigin	origin.ttl	1
-hasCountryOfOrigin	origin.ttl	1
-hasOrigin	origin.ttl	1
-hasYearOfOrigin	origin.ttl	1
-manufacturingCountry	origin.ttl	1
-manufacturingYear	origin.ttl	1
-originatedAt	origin.ttl	1
-originatedFrom	origin.ttl	1
-isbn	book.ttl	2
-pageCount	publication.ttl	1
-publisher	press.ttl	2
-year	publication.ttl	1
-hasConversionFactor	conversion.ttl	1
-hasInputUnit	conversion.ttl	1
-hasOutputUnit	conversion.ttl	1
-unitName	conversion.ttl	1
-unitSymbol	conversion.ttl	1
-hasPet	boy.ttl	1
-playsSport	boy.ttl	1
-area	settlement.ttl	1
-dateOccurred	circumstance.ttl	1
-hasEffect	circumstance.ttl	1
-hasFactor	success.ttl	2
-hasTimeFrame	circumstance.ttl	1
-involvedPerson	history.ttl	2
-occursAt	change.ttl	2
-occursIn	circumstance.ttl	1
-outcome	circumstance.ttl	1
-earner	earning.ttl	1
-hasInstance	instance.ttl	1
-hasInstanceTime	instance.ttl	1
-isInstanceOf	instance.ttl	1
-hasLeader	expedition.ttl	1
-hasStartLocation	expedition.ttl	1
-founded	publisher.ttl	1
-publishes	obituary.ttl	2
-bestFriend	friendship.ttl	1
-friend	friendship.ttl	1
-friendshipFromDate	friendship.ttl	1
-hasFriend	friendship.ttl	1
-hasRegion	homeland.ttl	1
-officialLanguage	homeland.ttl	1
-worksInIndustry	laborer.ttl	1
-bornIn	native.ttl	1
-countryOfOrigin	native.ttl	1
-nativeLanguage	native.ttl	1
-origin	native.ttl	1
-speaks	native.ttl	1
-frequency	wage.ttl	1
-actsIn	agent.ttl	2
-hasAward	actor.ttl	1
-hasTexture	cotton.ttl	1
-isOrganic	cotton.ttl	1
-hasBeneficiary	pension.ttl	1
-hasFunding	pension.ttl	1
-hasPensionPlan	pension.ttl	1
-hasRetiree	pension.ttl	1
-hasStartAge	pension.ttl	1
-hasTerm	politician.ttl	2
-monthlyAmount	pension.ttl	1
-startAge	pension.ttl	1
-hasAttempt	attempt.ttl	1
-hasObject	desire.ttl	2
-success	attempt.ttl	1
-classIn	school.ttl	1
-hasClass	school.ttl	1
-hasGrade	institution.ttl	2
-ontology	school.ttl	1
-studying	school.ttl	1
-gaveTestimony	witness.ttl	1
-hasWitness	witness.ttl	1
-performs	favor.ttl	1
-receives	favor.ttl	1
-evaluate	study.ttl	1
-evaluateResult	study.ttl	1
-hasResearcher	study.ttl	1
-hasStudyField	study.ttl	1
-hasResponse	suffering.ttl	2
-orgName	supporter.ttl	1
-orgType	supporter.ttl	1
-supportedBy	supporter.ttl	1
-supportedOrganization	supporter.ttl	1
-supports	supporter.ttl	1
-hasArrivalEntity	arrival.ttl	1
-hasArrivalLocation	arrival.ttl	1
-hasArrivalMode	arrival.ttl	1
-hasArrivalTime	arrival.ttl	1
-hasPerson	arrival.ttl	1
-abbreviation	unit.ttl	1
-conversionFactor	acre.ttl	2
-unitsOf	unit.ttl	1
-endPoint	line.ttl	1
-startPoint	line.ttl	1
-startingPoint	line.ttl	1
-x	line.ttl	1
-y	line.ttl	1
-hasChild	parent.ttl	1
-hasParent	mother.ttl	5
-hasSibling	relation.ttl	3
-concerns	controversy.ttl	1
-hasActor	film.ttl	3
-hasStakeholder	controversy.ttl	1
-participatesIn	controversy.ttl	1
-belongsGroup	rebel.ttl	1
-hasCause	health.ttl	10
-usesWeapon	rebel.ttl	1
-hasNumericValue	value.ttl	1
-isCauseOf	cause.ttl	1
-auntOf	relative.ttl	1
-cousinOf	relative.ttl	1
-fatherOf	relative.ttl	1
-grandFatherOf	relative.ttl	1
-grandMotherOf	relative.ttl	1
-motherOf	relative.ttl	1
-sibling	uncle.ttl	2
-uncleOf	relative.ttl	1
-hasStatus	request.ttl	2
-capital	state.ttl	2
-hasCode	nation.ttl	1
-hasContinent	nation.ttl	1
-isInRegion	nation.ttl	1
-affectedObject	damage.ttl	1
-affects	fate.ttl	2
-causedBy	smallpox.ttl	2
-hasConsequence	damage.ttl	1
-severity	punishment.ttl	2
-timeOfOccurrence	damage.ttl	1
-forPurpose	use.ttl	1
-hasUse	use.ttl	1
-computationMethod	mean.ttl	1
-hasIndividualNumber	mean.ttl	1
-hasMeanValue	mean.ttl	1
-hasNumberSet	mean.ttl	1
-value	mean.ttl	1
-publishedDate	writing.ttl	1
-affectedBy	influence.ttl	1
-hasInfluence	influence.ttl	1
-hasInfluenceFactor	influence.ttl	1
-hasInfluencePower	influence.ttl	1
-influencedBy	influence.ttl	1
-hasAncestor	ancestor.ttl	2
-hasDescendant	ancestry.ttl	1
-hasFather	birth.ttl	4
-hasMother	mother.ttl	4
-hasPlaceOfBirth	ancestry.ttl	1
-hasFunction	institution.ttl	1
-hasFruit	plantation.ttl	1
-hasHerb	plantation.ttl	1
-hasTree	plantation.ttl	1
-sizeInHectares	plantation.ttl	1
-hasSlave	slaveholder.ttl	2
-hasDirection	force.ttl	1
-hasMagnitude	force.ttl	1
-isTypeOf	relationship.ttl	2
-hasMajority	majority.ttl	1
-voteCount	majority.ttl	1
-hasCandidate	politic.ttl	1
-hasParty	politic.ttl	1
-hasPolitician	politic.ttl	1
-hasConclusion	end.ttl	2
-hasPremise	argument.ttl	1
-belongsCountry	president.ttl	1
-hadPreviousPosition	president.ttl	1
-hasTerm	president.ttl	1
-brother	brother.ttl	1
-sibling	brother.ttl	1
-hasAxle	wagon.ttl	1
-hasWheel	wagon.ttl	1
-belongsToDomain	idea.ttl	1
-hasDateCreated	idea.ttl	1
-hasIdea	idea.ttl	1
-governsRDF	governor.ttl	1
-hasGovernor	governor.ttl	1
-periodOfGovernance	governor.ttl	1
-stateGoverned	governor.ttl	1
-termEnd	governor.ttl	1
-termStart	governor.ttl	1
-activityHasDifficulty	difficulty.ttl	1
-hasDirector	film.ttl	2
-hasScript	play.ttl	1
-performance	play.ttl	1
-hasManager	project.ttl	2
-hasOpeningHours	tavern.ttl	1
-servesAlcohol	tavern.ttl	1
-servesAlcoholicBeverages	tavern.ttl	1
-happenedDuring	history.ttl	1
-personName	history.ttl	1
-placeName	history.ttl	1
-tookPlaceIn	history.ttl	1
-hasRelationship	relationship.ttl	1
-hasAbility	character.ttl	2
-hasRewardType	reward.ttl	1
-hasDesigner	suit.ttl	1
-caseID	case.ttl	1
-caseName	case.ttl	1
-caseStatus	case.ttl	1
-tradeAmount	trader.ttl	1
-tradeItem	trader.ttl	1
-tradeValue	trader.ttl	1
-trades	trading.ttl	2
-bestowAuthority	authority.ttl	1
-grantedBy	manumission.ttl	2
-hasAuthority	authority.ttl	1
-holdsPosition	politician.ttl	2
-isDeterminedBy	fate.ttl	1
-entry	diary.ttl	1
-writer	diary.ttl	1
-hasIdentifier	record.ttl	1
-employedBy	worker.ttl	1
-hasJobTitle	adulthood.ttl	2
-creationDate	website.ttl	1
-domain	website.ttl	1
-hasEmail	mail.ttl	2
-skillLevel	website.ttl	1
-skillName	website.ttl	1
-url	website.ttl	1
-source	water.ttl	3
-hasItemCondition	return.ttl	1
-hasItemName	return.ttl	1
-hasPolicyDetail	return.ttl	1
-hasPolicyNumber	return.ttl	1
-hasReturnDate	return.ttl	1
-hasReturnItem	return.ttl	1
-hasReturnPolicy	return.ttl	1
-hasReturnReason	return.ttl	1
-hasReturnedItem	return.ttl	1
-createdOn	account.ttl	1
-hasBalance	account.ttl	1
-hasUser	permission.ttl	2
-username	account.ttl	1
-guardsPlace	guard.ttl	1
-hasDuty	priesthood.ttl	3
-hasEquipped	guard.ttl	1
-hasShift	guard.ttl	1
-hasContract	contract.ttl	1
-parties	contract.ttl	1
-terms	contract.ttl	1
-brand	marker.ttl	1
-hasCap	marker.ttl	1
-isPermanent	marker.ttl	1
-tipType	marker.ttl	1
-dateOfMarriage	marriage.ttl	1
-hasMarriage	marriage.ttl	1
-marriageLocation	marriage.ttl	1
-diagnosedBy	condition.ttl	1
-diagnosedWith	condition.ttl	1
-hasCondition	condition.ttl	1
-hasSymptom	health.ttl	2
-hasTreatment	health.ttl	2
-activismType	activist.ttl	1
-birthdate	activist.ttl	1
-campaignsFor	activist.ttl	1
-causesSupported	activist.ttl	1
-fightsFor	activist.ttl	1
-hasActivity	activist.ttl	1
-isAffiliatedWith	activist.ttl	1
-nationality	activist.ttl	1
-organisationAffiliated	activist.ttl	1
-protests	activist.ttl	1
-eradicatedBy	smallpox.ttl	1
-preventedBy	smallpox.ttl	1
-hasCalorieCount	meal.ttl	1
-hasCalories	meal.ttl	1
-hasComponent	system.ttl	2
-hasCookingTime	meal.ttl	1
-hasCuisine	meal.ttl	1
-hasIngredient	dinner.ttl	2
-hasMealType	meal.ttl	1
-isGlutenFree	meal.ttl	1
-isVegan	meal.ttl	1
-isVegetarian	meal.ttl	1
-appointedBy	judge.ttl	2
-diocese	bishop.ttl	1
-hasLength	coast.ttl	3
-hasNumberOfLanes	road.ttl	1
-hasSurfaceType	road.ttl	1
-hasTrafficVolume	road.ttl	1
-isInCountry	road.ttl	1
-includesTask	plan.ttl	1
-taskHasDuration	plan.ttl	1
-taskHasName	plan.ttl	1
-taskHasPriority	plan.ttl	1
-hosts	occasion.ttl	1
-directedBy	film.ttl	1
-hasActorName	film.ttl	1
-hasReleaseYear	film.ttl	1
-releaseDate	film.ttl	1
-starring	film.ttl	1
-hasBadgeNumber	officer.ttl	1
-isAssignedTo	task.ttl	2
-servesInDepartment	officer.ttl	1
-hasLevel	level.ttl	3
-level	ability.ttl	1
-requiredFor	ability.ttl	1
-hasAgeDistribution	population.ttl	1
-hasGenderRatio	population.ttl	1
-totalPopulation	census.ttl	2
-crime	prisoner.ttl	1
-dateOfImprisonment	prisoner.ttl	1
-dateOfRelease	prisoner.ttl	1
-inPrison	prisoner.ttl	1
-prisonerID	prisoner.ttl	1
-sentenceDuration	prisoner.ttl	1
-sentenceLength	prisoner.ttl	1
-sentencedFor	prisoner.ttl	1
-earns	adulthood.ttl	1
-hasAgeRange	adulthood.ttl	1
-hasEmployment	adulthood.ttl	1
-hasLegalResponsibility	adulthood.ttl	1
-hasPageCount	paper.ttl	1
-hasPortion	portion.ttl	1
-ofDrink	portion.ttl	1
-ofFood	portion.ttl	1
-portionOf	portion.ttl	1
-portionSize	portion.ttl	1
-servingSize	portion.ttl	1
-supplies	supply.ttl	1
-carries	arter.ttl	1
-connectsTo	principle.ttl	2
-oxygenated	arter.ttl	1
-hasGrandchild	grandchild.ttl	1
-isGrandchildOf	grandchild.ttl	1
-hasPassenger	passenger.ttl	1
-hasTicket	passenger.ttl	1
-hasTicketNumber	passenger.ttl	1
-isTravelingTo	passenger.ttl	1
-ticketNumber	passenger.ttl	1
-parent	uncle.ttl	1
-hasIntelligence	intelligence.ttl	1
-broker	trading.ttl	1
-hasAsset	trading.ttl	1
-hasVolume	capacity.ttl	2
-tradesIn	trading.ttl	1
-tradingPlatform	trading.ttl	1
-isCommentedOn	comment.ttl	1
-hasBasis	basis.ttl	1
-hasPhysicalBasis	basis.ttl	1
-hasTheoreticalBasis	basis.ttl	1
-hasFeeling	feeling.ttl	1
-usesBondage	bondage.ttl	1
-conductedIn	census.ttl	1
-groundType	ground.ttl	1
-hasGroundComposition	ground.ttl	1
-hasSurfaceTexture	ground.ttl	1
-hasMentalStrength	strength.ttl	1
-hasPhysicalStrength	strength.ttl	1
-strengthLevel	strength.ttl	1
-edits	editor.ttl	1
-arrestRecord	arrest.ttl	1
-arrestedBy	arrest.ttl	1
-chargedWith	arrest.ttl	1
-documentedBy	arrest.ttl	1
-hasArrestee	arrest.ttl	1
-hasArrestor	arrest.ttl	1
-hasReason	arrest.ttl	1
-breed	horse.ttl	1
-hasSpouseDeathDate	widow.ttl	1
-wasMarried	widow.ttl	1
-endYear	rebellion.ttl	1
-hasOutcome	decision.ttl	2
-hasRebel	rebellion.ttl	1
-leadToRevolution	rebellion.ttl	1
-startYear	rebellion.ttl	1
-hasCommander	regiment.ttl	2
-hasSoldier	troop.ttl	1
-numberOfSoldiers	troop.ttl	1
-rank	captain.ttl	3
-applies	drag.ttl	1
-hasDragName	drag.ttl	1
-performer	drag.ttl	1
-wears	drag.ttl	1
-aidType	aid.ttl	1
-donates	aid.ttl	1
-donorName	aid.ttl	1
-hasAmount	aid.ttl	1
-hasDonor	aid.ttl	1
-recipientName	aid.ttl	1
-facilitatesActivity	missionary.ttl	1
-missionaryWork	missionary.ttl	1
-teachesGospel	missionary.ttl	1
-trainsToPray	missionary.ttl	1
-hasConstructionDate	building.ttl	1
-hasFloors	building.ttl	1
-hasNumberOfFloors	building.ttl	1
-hasManufacturer	carriage.ttl	1
-hasPassengerCapacity	carriage.ttl	1
-hasSpelling	word.ttl	1
-isAntonymOf	word.ttl	1
-isSynonymOf	word.ttl	1
-hasAudience	speaker.ttl	1
-cost	tour.ttl	1
-destinations	tour.ttl	1
-guide	tour.ttl	1
-hasGuide	tour.ttl	1
-hasTourist	tour.ttl	1
-rating	review.ttl	2
-hasPartyAffiliation	politician.ttl	1
-hasPoliticalParty	politician.ttl	1
-hasTermLength	politician.ttl	1
-relatedToIssue	politician.ttl	1
-representsCountry	politician.ttl	1
-hasAbsorbency	black.ttl	1
-isBlack	black.ttl	1
-isFrom	slaveholder.ttl	1
-ownsProperty	slaveholder.ttl	1
-areaSize	region.ttl	1
-inCountry	pilgrimage.ttl	2
-populationSize	region.ttl	1
-regionName	region.ttl	1
-hasCEO	company.ttl	1
-hasEmployeeCount	company.ttl	1
-hasIndustry	company.ttl	1
-publicationDate	article.ttl	1
-servedInWar	soldier.ttl	1
-servesIn	soldier.ttl	1
-completed	duty.ttl	1
-role	duty.ttl	1
-humanBirth	infant.ttl	1
-weightAtBirth	infant.ttl	1
-calories	food.ttl	1
-containsFat	food.ttl	1
-containsIngredient	food.ttl	1
-hasFoodItem	food.ttl	1
-hasNutritionInfo	food.ttl	1
-hasRecipe	food.ttl	1
-postedBy	review.ttl	1
-reviewOf	review.ttl	1
-activeSince	regiment.ttl	1
-assignedTo	task.ttl	2
-comprisingOf	regiment.ttl	1
-regimentNumber	regiment.ttl	1
-hasAlphabet	language.ttl	1
-hasDialect	language.ttl	1
-usesScript	language.ttl	1
-hasGrandfather	grandfather.ttl	1
-elicitsFear	fear.ttl	1
-accuses	law.ttl	1
-presides	law.ttl	1
-isMandatory	subject.ttl	1
-canPerform	permission.ttl	1
-hasPermission	permission.ttl	1
-isAllowed	permission.ttl	1
-onResource	permission.ttl	1
-permits	permission.ttl	1
-libertyInCountry	liberty.ttl	1
-libertyType	liberty.ttl	1
-carpenter	carpenter.ttl	1
-worksInProject	carpenter.ttl	1
-hasRight	right.ttl	1
-isProtectedBy	right.ttl	1
-hasCharacteristics	manner.ttl	1
-hasIntensity	desire.ttl	3
-isOppositeTo	manner.ttl	1
-isSimilarTo	manner.ttl	1
-connectsStation	railroad.ttl	1
-hasStation	railroad.ttl	1
-hasTrack	railroad.ttl	1
-operatesOn	railroad.ttl	1
-runsOn	railroad.ttl	1
-servedBy	railroad.ttl	1
-stopsAt	railroad.ttl	1
-causeOfDeath	death.ttl	1
-dateOfDeath	death.ttl	1
-hasCauseOfDeath	obituary.ttl	2
-hasDeath	death.ttl	1
-hasDied	death.ttl	1
-hasPlaceOfDeath	obituary.ttl	2
-hasTimeOfDeath	death.ttl	1
-locationOfDeath	death.ttl	1
-hasURL	domain.ttl	1
-ownerEmail	domain.ttl	1
-ownerName	domain.ttl	1
-quantity	resource.ttl	1
-hasEconomicIndependence	independence.ttl	1
-hasIndividualIndependence	independence.ttl	1
-hasPoliticalIndependence	independence.ttl	1
-hasMetric	success.ttl	1
-hasTimeframe	success.ttl	1
-durationOfRest	rest.ttl	1
-hasRest	rest.ttl	1
-qualityOfRest	rest.ttl	1
-eventEnd	end.ttl	1
-hasFinalMoment	end.ttl	1
-isEndOf	end.ttl	1
-hasConflictWith	enemy.ttl	1
-hasEnemy	enemy.ttl	1
-hasInjuryLocation	injury.ttl	1
-hasInjuryType	injury.ttl	1
-injuryDate	injury.ttl	1
-injurySeverity	injury.ttl	1
-freedomIndex	freedom.ttl	1
-isAssociatedWith	freedom.ttl	1
-dateGranted	manumission.ttl	1
-dateOfManumission	manumission.ttl	1
-hasManumitted	manumission.ttl	1
-involvedSlave	manumission.ttl	1
-legalDocument	manumission.ttl	1
-manumission	manumission.ttl	1
-wasManumittedBy	manumission.ttl	1
-hasStreet	location.ttl	2
-hasZipCode	address.ttl	1
-hasDateOfDeath	obituary.ttl	1
-hasDateOfPublication	obituary.ttl	1
-hasObituary	obituary.ttl	1
-commemorates	memorial.ttl	1
-inscription	memorial.ttl	1
-wasEstablishedOn	memorial.ttl	1
-hasSignatory	petition.ttl	1
-hasText	petition.ttl	1
-signs	petition.ttl	1
-hasDecisionMaker	decision.ttl	1
-hasOption	decision.ttl	1
-hasFieldOfStudy	scholar.ttl	1
-publishedPapers	scholar.ttl	1
-hasCoast	coast.ttl	1
-hasOcean	coast.ttl	1
-isLocationOf	coast.ttl	1
-hasLightPollution	night.ttl	1
-isFullMoon	night.ttl	1
-starVisibility	night.ttl	1
-typicalAnimalsActive	night.ttl	1
-typicalHumanActivities	night.ttl	1
-believerOf	priesthood.ttl	1
-belongs	priesthood.ttl	1
-ordinationDate	priesthood.ttl	1
-serves	priesthood.ttl	1
-componentType	system.ttl	1
-hasHardware	system.ttl	1
-hasSoftware	system.ttl	1
-hasSubcomponent	system.ttl	1
-isComponentOf	system.ttl	1
-subcomponentType	system.ttl	1
-forPerson	respect.ttl	1
-forValue	respect.ttl	1
-inAction	respect.ttl	1
-isMutual	respect.ttl	1
-isSelf	respect.ttl	1
-levelOfRespect	respect.ttl	1
-hasDescendent	ancestor.ttl	1
-pages	book.ttl	1
-publishedYear	memoir.ttl	2
-writesBook	book.ttl	1
-endureStruggle	struggle.ttl	1
-overcomeStruggle	struggle.ttl	1
-hasDetail	request.ttl	1
-hasId	request.ttl	1
-hasTimestamp	request.ttl	1
-baptisedBy	baptism.ttl	1
-baptisedPerson	baptism.ttl	1
-baptismDate	baptism.ttl	1
-baptismLocation	baptism.ttl	1
-performedBaptism	baptism.ttl	1
-receivedBaptism	baptism.ttl	1
-dateOfSale	sale.ttl	1
-eventHasChance	chance.ttl	1
-hasChance	chance.ttl	1
-perpetrator	discrimination.ttl	1
-propagatorOfDiscrimination	discrimination.ttl	1
-recipientOfDiscrimination	discrimination.ttl	1
-victim	discrimination.ttl	1
-hasBathrooms	home.ttl	2
-hasBedrooms	home.ttl	2
-owner	cabin.ttl	1
-hasToe	foot.ttl	1
-hasCharacter	scene.ttl	1
-monumentType	monument.ttl	1
-yearBuilt	monument.ttl	1
-yearEstablished	monument.ttl	1
-hasWarrant	fugitive.ttl	1
-wantedFor	fugitive.ttl	1
-belongsToFamily	prince.ttl	1
-hasBook	bibliography.ttl	1
-publicationYear	novel.ttl	2
-hasLead	research.ttl	1
-relatedField	research.ttl	1
-researchOutcome	research.ttl	1
-researchTopic	research.ttl	1
-isMotherOf	woman.ttl	1
-hasJournalist	press.ttl	1
-publishedIn	author.ttl	2
-source	press.ttl	1
-hasArticle	newspaper.ttl	1
-hasEdition	newspaper.ttl	1
-hasPublisher	newspaper.ttl	1
-hasEvaluation	result.ttl	1
-isResultOf	result.ttl	1
-score	result.ttl	1
-coordinate	place.ttl	1
-contains	water.ttl	1
-containsOxygen	water.ttl	1
-hasPH	water.ttl	1
-isDrinkable	water.ttl	1
-isFresh	water.ttl	1
-isFreshwater	water.ttl	1
-isSaltwater	water.ttl	1
-isSeaWater	water.ttl	1
-durationOfPossession	possession.ttl	1
-possessed	possession.ttl	1
-possessor	possession.ttl	1
-hasGreeting	introduction.ttl	1
-hasIntroduction	introduction.ttl	1
-hasOverview	introduction.ttl	1
-hasCoordinates	location.ttl	1
-hasObject	statement.ttl	1
-hasPredicate	statement.ttl	1
-hasInmate	prison.ttl	1
-hasSecurityLevel	prison.ttl	1
-isGuarded	prison.ttl	1
-isImprisoned	prison.ttl	1
-isInmateOf	prison.ttl	1
-hasNumberOfEmployees	overseer.ttl	1
-hasResponsibility	overseer.ttl	1
-overseesDepartment	overseer.ttl	1
-hasEar	face.ttl	1
-hasEye	face.ttl	1
-hasFeature	face.ttl	1
-hasMouth	face.ttl	1
-hasNose	face.ttl	1
-hasHusband	queen.ttl	1
-hasWife	queen.ttl	1
-isHero	character.ttl	1
-hasFulfilled	promise.ttl	1
-hasPromiseContent	promise.ttl	1
-hasPromisee	promise.ttl	1
-hasPromisor	promise.ttl	1
-appliesPrinciple	justice.ttl	1
-hasCourt	justice.ttl	1
-hasJudge	trial.ttl	3
-hasLawyer	courthouse.ttl	2
-hasLegalSystem	justice.ttl	1
-hearsCase	justice.ttl	1
-delta	river.ttl	1
-dischargesInto	river.ttl	1
-drainageBasin	river.ttl	1
-flowsThrough	river.ttl	1
-customerName	service.ttl	1
-hasConsumer	service.ttl	1
-isProvidedBy	service.ttl	1
-provides	service.ttl	1
-providesService	service.ttl	1
-receivesService	service.ttl	1
-serviceName	service.ttl	1
-perceives	eye.ttl	1
-field	style.ttl	1
-period	style.ttl	1
-hasBackground	background.ttl	1
-targets	raid.ttl	1
-hasGiftDescription	gift.ttl	1
-hasGiftPrice	gift.ttl	1
-hasGiftReceiver	gift.ttl	1
-hasGiftSender	gift.ttl	1
-hasGiftTitle	gift.ttl	1
-hasSeller	trade.ttl	1
-hasTradeType	trade.ttl	1
-hasTrader	trade.ttl	1
-isBilledBy	trade.ttl	1
-isBoughtBy	trade.ttl	1
-isPaidBy	trade.ttl	1
-isSoldBy	trade.ttl	1
-isFocusedOn	activism.ttl	1
-isLocatedIn	village.ttl	2
-hasCase	trial.ttl	2
-hasCourtroom	courthouse.ttl	1
-hasLineCount	poem.ttl	1
-containedIn	tale.ttl	1
-hasPublicationYear	tale.ttl	1
-hasSetting	tale.ttl	1
-publishedOn	tale.ttl	1
-tellsAbout	tale.ttl	1
-campCapacity	camp.ttl	1
-campId	camp.ttl	1
-campLocation	camp.ttl	1
-campType	camp.ttl	1
-digitalLiteracyLevel	literacy.ttl	1
-hasDigitalLiteracySkill	literacy.ttl	1
-hasLanguage	literacy.ttl	1
-hasReadingSkill	literacy.ttl	1
-hasWritingSkill	literacy.ttl	1
-readingLevel	literacy.ttl	1
-writingLevel	literacy.ttl	1
-body	example.ttl	1
-likes	example.ttl	1
-activityLocation	activity.ttl	1
-activityName	activity.ttl	1
-activityTime	activity.ttl	1
-activityType	activity.ttl	1
-durationOfEnslavement	enslavement.ttl	1
-placeOfEnslavement	enslavement.ttl	1
-hasAction	mission.ttl	1
-hasAgent	mission.ttl	1
-missionDuration	mission.ttl	1
-missionObjective	mission.ttl	1
-missionOrganizer	mission.ttl	1
-requiresResource	mission.ttl	1
-hasBirth	birth.ttl	1
-hasBirthPlace	birth.ttl	1
-hasBid	auction.ttl	1
-hasBidder	auction.ttl	1
-hasBidderName	auction.ttl	1
-hasHighestBid	auction.ttl	1
-hasStartPrice	auction.ttl	1
-hasKitchen	home.ttl	1
-hasLivingRoom	home.ttl	1
-hasParking	home.ttl	1
-hasRooms	home.ttl	1
-isFurnished	home.ttl	1
-halfOf	half.ttl	1
-hasDenominator	half.ttl	1
-hasHalf	half.ttl	1
-hasNumerator	half.ttl	1
-isHalfOf	half.ttl	1
-defendant	trial.ttl	1
-hasDefendant	trial.ttl	1
-hasProsecutor	trial.ttl	1
-hasVerdict	trial.ttl	1
-lawyer	trial.ttl	1
-asexualReproduction	reproduction.ttl	1
-reproduces	reproduction.ttl	1
-sexualReproduction	reproduction.ttl	1
-performedBy	kindness.ttl	1
-receivesKindness	kindness.ttl	1
-hasBody	mail.ttl	1
-isRead	mail.ttl	1
-isSentOn	mail.ttl	1
-hasFormation	cave.ttl	1
-hasInhabitant	cave.ttl	1
-hasPastor	church.ttl	1
-hasService	church.ttl	1
-holdsService	church.ttl	1
-serviceTime	church.ttl	1
-creditor	debt.ttl	1
-debtor	debt.ttl	1
-interestRate	debt.ttl	1
-hasBride	wedding.ttl	1
-hasGroom	wedding.ttl	1
-discussesBill	legislature.ttl	1
-passesBill	legislature.ttl	1
-proposesBill	legislature.ttl	1
-numberOfPages	novel.ttl	1
-employedIn	construction.ttl	1
-manages	construction.ttl	1
-usesMaterial	construction.ttl	1
-speaker	speech.ttl	1
-firstOrdained	pastor.ttl	1
-leadChurch	pastor.ttl	1
-leadConregation	pastor.ttl	1
-leadsCongregation	pastor.ttl	1
-pastorsChurch	pastor.ttl	1
-preachSermon	pastor.ttl	1
-providesCounseling	pastor.ttl	1
-hasSister	sister.ttl	1
-isSisterOf	sister.ttl	1
-authoredBy	author.ttl	1
-bookTitle	author.ttl	1
-creativity	genius.ttl	1
-intellectualAbility	genius.ttl	1
-originality	genius.ttl	1
-usedIn	medium.ttl	1
-hasResidence	residence.ttl	1
-hasResidenceType	residence.ttl	1
-hasPiece	piece.ttl	1
-isPieceOf	piece.ttl	1
-pieceCount	piece.ttl	1
-featureDescription	version.ttl	1
-featureName	version.ttl	1
-hasVersion	version.ttl	1
-mainSoftwareFeature	version.ttl	1
-softwareName	version.ttl	1
-versionNumber	version.ttl	1
-versionReleaseDate	version.ttl	1
-helpProvider	help.ttl	1
-helpReceiver	help.ttl	1
-hasWeight	capacity.ttl	2
-hasNeighbor	neighbor.ttl	1
-locatedOn	neighbor.ttl	1
-hasCharge	charge.ttl	1
-hasInterest	interest.ttl	1
-desireIntensity	desire.ttl	1
-desireObject	desire.ttl	1
-fulfillsDesire	desire.ttl	1
-hasDesire	desire.ttl	1
-hasAssignee	issue.ttl	2
-isCompleted	task.ttl	1
-participants	ceremony.ttl	1
-organizer	convention.ttl	1
-organizerName	convention.ttl	1
-beginsAtTime	level.ttl	1
-endsAtTime	level.ttl	1
-leasingStatus	property.ttl	1
-hasISBN	isbn.ttl	1
-publishedBy	audiobook.ttl	2
-hasEmployee	office.ttl	1
-branchAddress	branch.ttl	1
-branchID	branch.ttl	1
-branchManager	branch.ttl	1
-hasBranch	branch.ttl	1
-hasMass	star.ttl	1
-isPartOfConstellation	star.ttl	1
-fromCountry	pilgrimage.ttl	1
-hasPilgrim	pilgrimage.ttl	1
-inMonth	pilgrimage.ttl	1
-inReligion	pilgrimage.ttl	1
-toDestination	pilgrimage.ttl	1
-unit	volume.ttl	1
-amplifies	principle.ttl	1
-contradicts	principle.ttl	1
-hasApplication	principle.ttl	1
-hasDefinition	principle.ttl	1
-hasPrinciple	principle.ttl	1
-areaInSquareKm	world.ttl	1
-isDirectTowards	violence.ttl	1
-isExecutedBy	violence.ttl	1
-hasMinutes	hour.ttl	1
-hasSeconds	hour.ttl	1
-hasElevation	village.ttl	1
-attendees	funeral.ttl	1
-deceased	funeral.ttl	1
-hasDeceased	funeral.ttl	1
-hasFuneralDirector	funeral.ttl	1
-hasFuneralService	funeral.ttl	1
-heldAt	funeral.ttl	1
-officiant	funeral.ttl	1
-direction	movement.ttl	1
-distance	movement.ttl	1
-speed	movement.ttl	1
-hasSignificantEvent	period.ttl	1
-periodType	period.ttl	1
-commentary	issue.ttl	1
-commenter	issue.ttl	1
-hasIssue	issue.ttl	1
-hasPriority	issue.ttl	1
-hasSubmitter	issue.ttl	1
-isOpen	issue.ttl	1
-issueCause	issue.ttl	1
-issueDescription	issue.ttl	1
-issueID	issue.ttl	1
-issueResolution	issue.ttl	1
-issueStatus	issue.ttl	1
-blessingType	blessing.ttl	1
-givenBy	testimony.ttl	2
-hasBlessing	blessing.ttl	1
-hasBlessingType	blessing.ttl	1
-isBlessedBy	blessing.ttl	1
-receivedBy	blessing.ttl	1
-hasDensity	material.ttl	1
-hasMeltPoint	material.ttl	1
-isFlammable	material.ttl	1
-focus	attention.ttl	1
-focusDuration	attention.ttl	1
-focusIntensity	attention.ttl	1
-hasDataType	information.ttl	1
-isCreatedBy	information.ttl	1
-isDerivedFrom	information.ttl	1
-awardsReceived	captain.ttl	1
-shipsCommanded	captain.ttl	1
-isChildOf	girl.ttl	1
-isStudentAt	girl.ttl	1
-hasNarrator	audiobook.ttl	1
-acquires	knowledge.ttl	1
-distributes	knowledge.ttl	1
-hasDomainArea	knowledge.ttl	1
-hasKnowledge	knowledge.ttl	1
-knowsAbout	knowledge.ttl	1
-forOffence	punishment.ttl	1
-imposes	punishment.ttl	1
-isFormOf	punishment.ttl	1
-hasChangeMagnitude	change.ttl	1
-hasChangeType	change.ttl	1
-undergoes	change.ttl	1
-deadline	project.ttl	1
-manager	project.ttl	1
-hasDisease	health.ttl	1
-treatsWith	health.ttl	1
-catcherPosition	catcher.ttl	1
-hasLargestCity	state.ttl	1
-hasReigningGovernor	state.ttl	1
-appointmentDate	judge.ttl	1
-hasJudgment	judge.ttl	1
-judges	judge.ttl	1
-containsFact	testimony.ttl	1
-givenIn	testimony.ttl	1
-givenOn	testimony.ttl	1
-hasMainSubject	testimony.ttl	1
-isVerified	testimony.ttl	1
+birthDate	cemetery.ttl
+born	cemetery.ttl
+burialDate	cemetery.ttl
+containsGraves	cemetery.ttl
+dateOfBurial	cemetery.ttl
+deathDate	cemetery.ttl
+died	cemetery.ttl
+established	cemetery.ttl
+hasGrave	cemetery.ttl
+hasMemorial	cemetery.ttl
+hasName	cemetery.ttl
+location	cemetery.ttl
+memorialText	cemetery.ttl
+name	cemetery.ttl
+occupant	cemetery.ttl
+occupantDOB	cemetery.ttl
+occupantDOD	cemetery.ttl
+consults	counsel.ttl
+author	gospel.ttl
+date	gospel.ttl
+title	gospel.ttl
+verseInGospel	gospel.ttl
+verseNumber	gospel.ttl
+verseText	gospel.ttl
+verses	gospel.ttl
+fromLocation	view.ttl
+hasSubject	view.ttl
+hasTime	view.ttl
+hasViewer	view.ttl
+hasViewpointExpression	view.ttl
+hasViewpointSubject	view.ttl
+atDate	party.ttl
+atLocation	party.ttl
+attends	party.ttl
+hasAge	party.ttl
+hasAttendee	party.ttl
+hasDate	party.ttl
+hasEndDate	party.ttl
+hasGuest	party.ttl
+hasHost	party.ttl
+hasLocation	party.ttl
+hasName	party.ttl
+hasOrganizer	party.ttl
+hasStartDate	party.ttl
+hasTheme	party.ttl
+organizes	party.ttl
+hasClothingType	clothing.ttl
+hasSize	clothing.ttl
+hasColor	box.ttl
+hasMaterial	box.ttl
+hasShape	box.ttl
+hasSize	box.ttl
+affiliation	researcher.ttl
+age	researcher.ttl
+gender	researcher.ttl
+hasProjectTopic	researcher.ttl
+locatedIn	researcher.ttl
+name	researcher.ttl
+worksOn	researcher.ttl
+choice	vote.ttl
+forCandidate	vote.ttl
+hasVote	vote.ttl
+hasVoter	vote.ttl
+inElection	vote.ttl
+voteFor	vote.ttl
+voteIn	vote.ttl
+voter	vote.ttl
+hasAuthor	text.ttl
+hasGenre	text.ttl
+writtenIn	text.ttl
+collectorName	collection.ttl
+hasCollection	collection.ttl
+hasCreationDate	collection.ttl
+hasItem	collection.ttl
+isOfType	collection.ttl
+itemName	collection.ttl
+ownsCollection	collection.ttl
+color	print.ttl
+hasInk	print.ttl
+prints	print.ttl
+givesSermon	preacher.ttl
+hasOccupation	preacher.ttl
+religiousTopic	preacher.ttl
+sermonDelivered	preacher.ttl
+worksAt	preacher.ttl
+belongToCentury	decade.ttl
+endsIn	decade.ttl
+hasEndYear	decade.ttl
+hasEvent	decade.ttl
+hasStartYear	decade.ttl
+startsIn	decade.ttl
+startsYear	decade.ttl
+containsJuror	jury.ttl
+isJurorIn	jury.ttl
+jurorDutyDays	jury.ttl
+jurorSelectionProcess	jury.ttl
+jurySizeOf	jury.ttl
+createdBy	art.ttl
+hasStyle	art.ttl
+cuisine	chef.ttl
+dish	chef.ttl
+experience	chef.ttl
+location	chef.ttl
+name	chef.ttl
+specialty	chef.ttl
+worksAt	chef.ttl
+worksIn	chef.ttl
+yearsOfExperience	chef.ttl
+generates	power.ttl
+transfers	power.ttl
+owns	owner.ttl
+hasCategory	merchant.ttl
+hasContact	merchant.ttl
+hasLocation	merchant.ttl
+hasName	merchant.ttl
+hasWebsite	merchant.ttl
+operatesIn	merchant.ttl
+sells	merchant.ttl
+sellsProduct	merchant.ttl
+hasAge	man.ttl
+hasChildren	man.ttl
+hasHeight	man.ttl
+hasName	man.ttl
+isMarried	man.ttl
+hasTruthValue	truth.ttl
+isTrue	truth.ttl
+belongsTo	university.ttl
+enrolledIn	university.ttl
+hasDepartment	university.ttl
+hasFaculty	university.ttl
+offeredBy	university.ttl
+studies	university.ttl
+teaches	university.ttl
+teachesCourse	university.ttl
+containsPhoto	photo.ttl
+hasDate	photo.ttl
+hasDateTaken	photo.ttl
+hasDescription	photo.ttl
+hasFileFormat	photo.ttl
+hasFileName	photo.ttl
+hasLocation	photo.ttl
+hasName	photo.ttl
+hasPhotographer	photo.ttl
+hasPortfolio	photo.ttl
+hasResolution	photo.ttl
+hasSize	photo.ttl
+hasSubject	photo.ttl
+hasTitle	photo.ttl
+isPublic	photo.ttl
+isTakenOn	photo.ttl
+takenBy	photo.ttl
+amount	price.ttl
+hasPrice	price.ttl
+inCurrency	price.ttl
+address	store.ttl
+name	store.ttl
+product	store.ttl
+productDescription	store.ttl
+productName	store.ttl
+productPrice	store.ttl
+courtCase	court.ttl
+dealsWith	court.ttl
+defends	court.ttl
+hasJurisdiction	court.ttl
+hears	court.ttl
+judge	court.ttl
+represents	court.ttl
+isImplementedBy	protection.ttl
+isUsedFor	protection.ttl
+hasMessage	conversation.ttl
+hasParticipant	conversation.ttl
+hasSender	conversation.ttl
+hasTopic	conversation.ttl
+timestamp	conversation.ttl
+conductedBy	rescue.ttl
+forEmergency	rescue.ttl
+hasVictim	rescue.ttl
+hasFamilialLoveFor	love.ttl
+hasPlatonicLoveFor	love.ttl
+hasRomanticLoveFor	love.ttl
+hasSelfLove	love.ttl
+hasArtist	painting.ttl
+hasColor	painting.ttl
+hasMedium	painting.ttl
+description	detail.ttl
+isDetailOf	detail.ttl
+hasCopyright	image.ttl
+hasCreationDate	image.ttl
+hasCreator	image.ttl
+hasFormat	image.ttl
+hasHeight	image.ttl
+hasResolution	image.ttl
+hasWidth	image.ttl
+isColor	image.ttl
+isPublished	image.ttl
+hasAge	individual.ttl
+hasDateOfBirth	individual.ttl
+hasFirstName	individual.ttl
+hasFullName	individual.ttl
+hasGender	individual.ttl
+hasLastName	individual.ttl
+hasName	individual.ttl
+hasNationality	individual.ttl
+atLocation	care.ttl
+hasProvider	care.ttl
+hasRecipient	care.ttl
+involvesActivity	care.ttl
+providesCare	care.ttl
+hasInfluenceOn	abolitionism.ttl
+hasOriginator	abolitionism.ttl
+isAimedAt	abolitionism.ttl
+artist	song.ttl
+content	song.ttl
+genre	song.ttl
+hasGenre	song.ttl
+hasLyrics	song.ttl
+length	song.ttl
+publishDate	song.ttl
+sungBy	song.ttl
+title	song.ttl
+hasRepresentation	symbol.ttl
+isUsedIn	symbol.ttl
+associatedWith	spring.ttl
+endsOn	spring.ttl
+hasEnd	spring.ttl
+hasEvent	spring.ttl
+hasStart	spring.ttl
+hasTemperature	spring.ttl
+hasWeather	spring.ttl
+startsOn	spring.ttl
+endTime	class.ttl
+hasStudent	class.ttl
+hasSubject	class.ttl
+hasTeacher	class.ttl
+startTime	class.ttl
+entryAuthor	entry.ttl
+entryDate	entry.ttl
+hasEntry	entry.ttl
+email	teacher.ttl
+hasDegree	teacher.ttl
+hasExperience	teacher.ttl
+hasStudent	teacher.ttl
+name	teacher.ttl
+school	teacher.ttl
+teaches	teacher.ttl
+teachesSubject	teacher.ttl
+worksAt	teacher.ttl
+worksIn	teacher.ttl
+originCountry	colonist.ttl
+settledIn	colonist.ttl
+hasAttorneyLicense	attorney.ttl
+hasPracticeArea	attorney.ttl
+hasYearsOfExperience	attorney.ttl
+instructionTool	instruction.ttl
+step	instruction.ttl
+targetAudience	instruction.ttl
+age	servant.ttl
+employer	servant.ttl
+firstName	servant.ttl
+hires	servant.ttl
+jobTitle	servant.ttl
+lastName	servant.ttl
+name	servant.ttl
+worksFor	servant.ttl
+hasSpouse	wife.ttl
+isWifeOf	wife.ttl
+hasName	skill.ttl
+hasProficiency	skill.ttl
+hasSkillLevel	skill.ttl
+isRelatedTo	skill.ttl
+ownsSkill	skill.ttl
+relatedTo	skill.ttl
+usedInField	skill.ttl
+hasInterestRate	bond.ttl
+hasMaturityDate	bond.ttl
+issuedBy	bond.ttl
+ownedBy	bond.ttl
+hasOrder	list.ttl
+item	list.ttl
+hasCity	land.ttl
+hasCountry	land.ttl
+hasParcel	land.ttl
+hasState	land.ttl
+population	land.ttl
+size	land.ttl
+hasAgenda	meeting.ttl
+hasDate	meeting.ttl
+hasEndDate	meeting.ttl
+hasLocation	meeting.ttl
+hasNotes	meeting.ttl
+hasParticipant	meeting.ttl
+hasStartDate	meeting.ttl
+hasRecollection	recollection.ttl
+recollectionDate	recollection.ttl
+recollectionEvent	recollection.ttl
+celebratedBy	anniversary.ttl
+hasDate	anniversary.ttl
+isAnniversaryOf	anniversary.ttl
+courseDescription	course.ttl
+courseId	course.ttl
+courseName	course.ttl
+email	course.ttl
+hasDescription	course.ttl
+hasID	course.ttl
+hasName	course.ttl
+hasTitle	course.ttl
+instructorId	course.ttl
+instructorName	course.ttl
+isTaughtBy	course.ttl
+teaches	course.ttl
+amount	donation.ttl
+dateOfDonation	donation.ttl
+donationAmount	donation.ttl
+donor	donation.ttl
+hasEIN	donation.ttl
+hasName	donation.ttl
+recipient	donation.ttl
+endsAt	process.ttl
+hasInput	process.ttl
+hasOutput	process.ttl
+startsAt	process.ttl
+causeOfAbolition	abolition.ttl
+effectOfAbolition	abolition.ttl
+partOf	abolition.ttl
+resultedIn	abolition.ttl
+lack	lack.ttl
+xCoordinate	position.ttl
+yCoordinate	position.ttl
+zCoordinate	position.ttl
+hasExperience	seamstress.ttl
+hasName	seamstress.ttl
+hasSkill	seamstress.ttl
+name	seamstress.ttl
+specializesIn	seamstress.ttl
+worksAt	seamstress.ttl
+worksIn	seamstress.ttl
+containsItem	order.ttl
+customerId	order.ttl
+itemId	order.ttl
+itemName	order.ttl
+itemPrice	order.ttl
+itemQuantity	order.ttl
+hasFirst	pair.ttl
+hasSecond	pair.ttl
+hasMaterial	heming.ttl
+usesTool	heming.ttl
+knowledge	blacksmith.ttl
+tool	blacksmith.ttl
+xCoordinate	point.ttl
+yCoordinate	point.ttl
+zCoordinate	point.ttl
+displayHonor	honor.ttl
+hasHonor	honor.ttl
+isInvolvedIn	public.ttl
+hasPosition	official.ttl
+workInOrganization	official.ttl
+hasBlue	color.ttl
+hasGreen	color.ttl
+hasHexCode	color.ttl
+hasRGBCode	color.ttl
+hasRed	color.ttl
+isPrimaryColor	color.ttl
+hasCapacity	transportation.ttl
+hasMake	transportation.ttl
+hasMaxSpeed	transportation.ttl
+hasModel	transportation.ttl
+hasSpeed	transportation.ttl
+operatedBy	transportation.ttl
+ownedBy	transportation.ttl
+cause	disease.ttl
+name	disease.ttl
+symptom	disease.ttl
+treatment	disease.ttl
+advocateFor	abolitionist.ttl
+participatedIn	abolitionist.ttl
+hasPart	head.ttl
+hasColor	figure.ttl
+hasMaterial	figure.ttl
+hasShape	figure.ttl
+age	hero.ttl
+defeats	hero.ttl
+hasName	hero.ttl
+hasOriginStory	hero.ttl
+hasPower	hero.ttl
+hasSuperPower	hero.ttl
+isMale	hero.ttl
+name	hero.ttl
+secretIdentity	hero.ttl
+attends	society.ttl
+belongsTo	society.ttl
+consistsOf	society.ttl
+hasCulturalNorm	society.ttl
+hasInstitution	society.ttl
+hasMember	society.ttl
+hasRole	society.ttl
+closingDate	exhibit.ttl
+curator	exhibit.ttl
+description	exhibit.ttl
+endDate	exhibit.ttl
+item	exhibit.ttl
+itemName	exhibit.ttl
+itemType	exhibit.ttl
+location	exhibit.ttl
+name	exhibit.ttl
+openingDate	exhibit.ttl
+startDate	exhibit.ttl
+title	exhibit.ttl
+belongsToGenre	literature.ttl
+title	literature.ttl
+writtenBy	literature.ttl
+capacity	vessel.ttl
+madeOf	vessel.ttl
+name	vessel.ttl
+partOf	vessel.ttl
+size	vessel.ttl
+hasRole	role.ttl
+assistanceProvider	assistance.ttl
+assistanceReceiver	assistance.ttl
+assistanceType	assistance.ttl
+providerName	assistance.ttl
+receiverName	assistance.ttl
+belongsIn	community.ttl
+hasMember	community.ttl
+location	community.ttl
+name	community.ttl
+companyName	work.ttl
+employeeName	work.ttl
+employeeNumber	work.ttl
+endDate	work.ttl
+jobPosition	work.ttl
+startDate	work.ttl
+hasFurniture	room.ttl
+isPartOf	room.ttl
+hasCaptain	ship.ttl
+hasCrew	ship.ttl
+hasName	ship.ttl
+hasSize	ship.ttl
+hasSpeed	ship.ttl
+raceOf	race.ttl
+depth	sea.ttl
+hasArea	sea.ttl
+hasDepth	sea.ttl
+isPartOf	sea.ttl
+location	sea.ttl
+salinity	sea.ttl
+temperature	sea.ttl
+courses	ed.ttl
+dateOfPurchase	purchase.ttl
+hasBuyer	purchase.ttl
+hasCustomer	purchase.ttl
+hasDate	purchase.ttl
+hasPrice	purchase.ttl
+hasProduct	purchase.ttl
+hasQuantity	purchase.ttl
+price	purchase.ttl
+associatedWith	reputation.ttl
+contributedBy	reputation.ttl
+hasComment	reputation.ttl
+hasRating	reputation.ttl
+hasBookingNumber	travel.ttl
+hasDeparture	travel.ttl
+hasDestination	travel.ttl
+hasDuration	travel.ttl
+hasEndDate	travel.ttl
+hasPrice	travel.ttl
+hasStartDate	travel.ttl
+hasTransport	travel.ttl
+hasImpact	risk.ttl
+hasProbability	risk.ttl
+hasRiskAssessment	risk.ttl
+hasRiskFactor	risk.ttl
+hasRiskLevel	risk.ttl
+hasRiskManagement	risk.ttl
+hasPrice	total.ttl
+hasTotal	total.ttl
+isItemOf	total.ttl
+hasDeadline	opportunity.ttl
+hasOpportunity	opportunity.ttl
+establishedOn	fact.ttl
+hasFact	fact.ttl
+refersSubject	fact.ttl
+validatedBy	fact.ttl
+hasPartner	couple.ttl
+hasMember	militia.ttl
+hasRole	militia.ttl
+hasWeapon	militia.ttl
+age	person.ttl
+city	person.ttl
+country	person.ttl
+isMarried	person.ttl
+livesIn	person.ttl
+name	person.ttl
+dealsDamage	attack.ttl
+hasTarget	attack.ttl
+hasAuthor	biography.ttl
+hasBiography	biography.ttl
+hasPublicationDate	biography.ttl
+hasSubject	biography.ttl
+attendsCourt	lawyer.ttl
+hasEducation	lawyer.ttl
+hasExperience	lawyer.ttl
+hasLicense	lawyer.ttl
+hasName	lawyer.ttl
+hasSpecialization	lawyer.ttl
+name	lawyer.ttl
+practicesArea	lawyer.ttl
+specialty	lawyer.ttl
+worksAt	lawyer.ttl
+worksIn	lawyer.ttl
+causes	loss.ttl
+date	loss.ttl
+dueTo	loss.ttl
+isMeasuredIn	loss.ttl
+member	member.ttl
+hasCreator	statue.ttl
+hasLocation	statue.ttl
+hasMaterial	statue.ttl
+hasCastle	kingdom.ttl
+hasKing	kingdom.ttl
+hasPrince	kingdom.ttl
+hasPrincess	kingdom.ttl
+hasQueen	kingdom.ttl
+hasBirthDate	life.ttl
+hasBreed	life.ttl
+hasColor	life.ttl
+hasDeathDate	life.ttl
+hasName	life.ttl
+hasMember	group.ttl
+memberCount	group.ttl
+name	group.ttl
+age	guest.ttl
+gender	guest.ttl
+hasAddress	guest.ttl
+hasGender	guest.ttl
+hasInvitation	guest.ttl
+hasName	guest.ttl
+isAttendingEvent	guest.ttl
+name	guest.ttl
+status	guest.ttl
+stayDuration	guest.ttl
+staysAt	guest.ttl
+date	release.ttl
+name	release.ttl
+producedBy	release.ttl
+version	release.ttl
+attends	student.ttl
+enrolls	student.ttl
+hasGPA	student.ttl
+hasMajor	student.ttl
+hasMinor	student.ttl
+handlesFire	fire.ttl
+hasDepartment	fire.ttl
+hasSeverity	fire.ttl
+hasSource	fire.ttl
+producesHeat	fire.ttl
+producesLight	fire.ttl
+producesSmoke	fire.ttl
+triggers	fire.ttl
+age	support.ttl
+name	support.ttl
+providedBy	support.ttl
+providesSupport	support.ttl
+providesSupportTo	support.ttl
+receivesSupport	support.ttl
+representsSupportIn	support.ttl
+from	escape.ttl
+method	escape.ttl
+reason	escape.ttl
+time	escape.ttl
+to	escape.ttl
+hasBelief	belief.ttl
+hasBeliever	belief.ttl
+hasContent	belief.ttl
+hasEvidence	belief.ttl
+hasStrength	belief.ttl
+hasTruthValue	belief.ttl
+hasAge	household.ttl
+hasFurniture	household.ttl
+hasMember	household.ttl
+hasName	household.ttl
+hasRoom	household.ttl
+captivityState	captivity.ttl
+duration	treatment.ttl
+name	treatment.ttl
+sideEffects	treatment.ttl
+treats	treatment.ttl
+type	treatment.ttl
+hasRank	veteran.ttl
+hasReceivedMedal	veteran.ttl
+hasServedInWar	veteran.ttl
+hasServiceLength	veteran.ttl
+hasArea	country.ttl
+hasCapital	country.ttl
+hasName	country.ttl
+hasPopulation	country.ttl
+isInContinent	country.ttl
+hasBeneficiaryGroup	emancipation.ttl
+hasDate	emancipation.ttl
+hasLocation	emancipation.ttl
+hasType	emancipation.ttl
+actsOnBehalfOf	behalf.ttl
+represents	behalf.ttl
+hasAge	reader.ttl
+hasName	reader.ttl
+reads	reader.ttl
+hasOffender	assault.ttl
+hasSeverity	assault.ttl
+hasVictim	assault.ttl
+occurredAt	assault.ttl
+hasBirthDate	painter.ttl
+hasName	painter.ttl
+hasStyle	painter.ttl
+hasCurrency	money.ttl
+hasExchangeRate	money.ttl
+involves	money.ttl
+hasAuthor	page.ttl
+hasContent	page.ttl
+hasDate	page.ttl
+hasName	page.ttl
+hasTitle	page.ttl
+authors	biographer.ttl
+hasWritten	biographer.ttl
+isAbout	biographer.ttl
+isSubjectOf	biographer.ttl
+isWrittenBy	biographer.ttl
+hasAge	resident.ttl
+hasName	resident.ttl
+residesIn	resident.ttl
+hasDenomination	prayer.ttl
+hasDuration	prayer.ttl
+hasPurpose	prayer.ttl
+isPrayedBy	prayer.ttl
+dateOfBirth	physician.ttl
+email	physician.ttl
+firstName	physician.ttl
+gender	physician.ttl
+hasPatient	physician.ttl
+hasSpecialization	physician.ttl
+lastName	physician.ttl
+phone	physician.ttl
+specialty	physician.ttl
+worksIn	physician.ttl
+endOfYear	year.ttl
+hasYear	year.ttl
+hasLocation	estate.ttl
+hasOwner	estate.ttl
+hasValue	estate.ttl
+hasPublished	historian.ttl
+studiesPeriod	historian.ttl
+writesAbout	historian.ttl
+hasEndTime	time.ttl
+hasStartTime	time.ttl
+isInTimezone	time.ttl
+hasLocation	situation.ttl
+hasParticipant	situation.ttl
+hasTime	situation.ttl
+belongsChurch	priest.ttl
+performsRituals	priest.ttl
+lastName	surname.ttl
+hasAuthor	autobiography.ttl
+hasBirthdate	autobiography.ttl
+conductsService	congregation.ttl
+hasMember	congregation.ttl
+location	congregation.ttl
+hasPart	day.ttl
+calculateArea	area.ttl
+height	area.ttl
+width	area.ttl
+hasCountySeat	county.ttl
+hasName	county.ttl
+hasPopulation	county.ttl
+inState	county.ttl
+locatedInState	county.ttl
+amount	contribution.ttl
+contributor	contribution.ttl
+date	contribution.ttl
+recipient	contribution.ttl
+hasAuthor	story.ttl
+hasCharacterName	story.ttl
+hasCharacters	story.ttl
+hasGenre	story.ttl
+hasGenreName	story.ttl
+hasName	story.ttl
+hasPlot	story.ttl
+hasTitle	story.ttl
+cause	effect.ttl
+duration	effect.ttl
+intensity	effect.ttl
+result	effect.ttl
+type	effect.ttl
+hasDateTime	kidnapping.ttl
+hasDuration	kidnapping.ttl
+hasKidnapper	kidnapping.ttl
+hasLocation	kidnapping.ttl
+hasRansom	kidnapping.ttl
+hasVictim	kidnapping.ttl
+casualties	battle.ttl
+combatant	battle.ttl
+date	battle.ttl
+forceSize	battle.ttl
+hasDate	battle.ttl
+hasLocation	battle.ttl
+hasName	battle.ttl
+hasParticipatingCountry	battle.ttl
+hasResult	battle.ttl
+name	battle.ttl
+participant	battle.ttl
+place	battle.ttl
+sideA	battle.ttl
+sideB	battle.ttl
+amount	fund.ttl
+currency	fund.ttl
+description	fund.ttl
+hasInvestment	fund.ttl
+name	fund.ttl
+dueDate	effort.ttl
+effortInvested	effort.ttl
+effortUnit	effort.ttl
+taskName	effort.ttl
+abolitionActivity	antislavery.ttl
+participatesInActivity	antislavery.ttl
+wrotePublication	antislavery.ttl
+color	thing.ttl
+material	thing.ttl
+shape	thing.ttl
+abolishedSlavery	slavery.ttl
+hasMaster	slavery.ttl
+helpedEscape	slavery.ttl
+involvedInTrade	slavery.ttl
+ownsSlave	slavery.ttl
+tradedSlaves	slavery.ttl
+birthCountry	origin.ttl
+birthYear	origin.ttl
+hasCityOfOrigin	origin.ttl
+hasCountryOfOrigin	origin.ttl
+hasOrigin	origin.ttl
+hasYearOfOrigin	origin.ttl
+manufacturingCountry	origin.ttl
+manufacturingYear	origin.ttl
+name	origin.ttl
+originatedAt	origin.ttl
+originatedFrom	origin.ttl
+author	publication.ttl
+isbn	publication.ttl
+pageCount	publication.ttl
+publisher	publication.ttl
+title	publication.ttl
+year	publication.ttl
+hasConversionFactor	conversion.ttl
+hasInput	conversion.ttl
+hasInputUnit	conversion.ttl
+hasOutput	conversion.ttl
+hasOutputUnit	conversion.ttl
+unitName	conversion.ttl
+unitSymbol	conversion.ttl
+location	audience.ttl
+size	audience.ttl
+type	audience.ttl
+age	boy.ttl
+hasPet	boy.ttl
+name	boy.ttl
+playsSport	boy.ttl
+area	settlement.ttl
+name	settlement.ttl
+population	settlement.ttl
+dateOccurred	circumstance.ttl
+hasEffect	circumstance.ttl
+hasFactor	circumstance.ttl
+hasImpact	circumstance.ttl
+hasTimeFrame	circumstance.ttl
+involvedPerson	circumstance.ttl
+location	circumstance.ttl
+occursAt	circumstance.ttl
+occursIn	circumstance.ttl
+outcome	circumstance.ttl
+amount	earning.ttl
+earner	earning.ttl
+hasCurrency	earning.ttl
+age	instance.ttl
+gender	instance.ttl
+hasInstance	instance.ttl
+hasInstanceTime	instance.ttl
+isInstanceOf	instance.ttl
+name	instance.ttl
+hasDestination	expedition.ttl
+hasEndDate	expedition.ttl
+hasLeader	expedition.ttl
+hasStartDate	expedition.ttl
+hasStartLocation	expedition.ttl
+author	publisher.ttl
+date	publisher.ttl
+founded	publisher.ttl
+location	publisher.ttl
+name	publisher.ttl
+publishes	publisher.ttl
+title	publisher.ttl
+bestFriend	friendship.ttl
+friend	friendship.ttl
+friendshipFromDate	friendship.ttl
+hasFriend	friendship.ttl
+hasCity	homeland.ttl
+hasCountry	homeland.ttl
+hasPopulation	homeland.ttl
+hasRegion	homeland.ttl
+officialLanguage	homeland.ttl
+hasExperience	laborer.ttl
+hasSkill	laborer.ttl
+name	laborer.ttl
+worksInIndustry	laborer.ttl
+bornIn	native.ttl
+countryOfOrigin	native.ttl
+name	native.ttl
+nativeLanguage	native.ttl
+origin	native.ttl
+speaks	native.ttl
+amount	wage.ttl
+currency	wage.ttl
+frequency	wage.ttl
+actsIn	actor.ttl
+hasAge	actor.ttl
+hasAward	actor.ttl
+hasGender	actor.ttl
+hasName	actor.ttl
+hasNationality	actor.ttl
+name	actor.ttl
+hasColor	cotton.ttl
+hasTexture	cotton.ttl
+isOrganic	cotton.ttl
+isUsedIn	cotton.ttl
+duration	pension.ttl
+hasBeneficiary	pension.ttl
+hasFunding	pension.ttl
+hasPensionPlan	pension.ttl
+hasRetiree	pension.ttl
+hasStartAge	pension.ttl
+hasTerms	pension.ttl
+monthlyAmount	pension.ttl
+startAge	pension.ttl
+hasEndDate	association.ttl
+hasMember	association.ttl
+hasStartDate	association.ttl
+hasTitle	association.ttl
+endTime	attempt.ttl
+hasAttempt	attempt.ttl
+hasDescription	attempt.ttl
+hasObjective	attempt.ttl
+startTime	attempt.ttl
+success	attempt.ttl
+classIn	school.ttl
+hasClass	school.ttl
+hasGrade	school.ttl
+hasStudent	school.ttl
+hasSubject	school.ttl
+hasTeacher	school.ttl
+ontology	school.ttl
+studying	school.ttl
+teaches	school.ttl
+gaveTestimony	witness.ttl
+hasWitness	witness.ttl
+description	favor.ttl
+performs	favor.ttl
+receives	favor.ttl
+conductedBy	study.ttl
+evaluate	study.ttl
+evaluateResult	study.ttl
+hasDuration	study.ttl
+hasName	study.ttl
+hasResearcher	study.ttl
+hasStudyField	study.ttl
+hasSubject	study.ttl
+hasTitle	study.ttl
+usesTool	study.ttl
+hasResponse	response.ttl
+age	supporter.ttl
+name	supporter.ttl
+orgName	supporter.ttl
+orgType	supporter.ttl
+supportedBy	supporter.ttl
+supportedOrganization	supporter.ttl
+supports	supporter.ttl
+hasArrivalEntity	arrival.ttl
+hasArrivalLocation	arrival.ttl
+hasArrivalMode	arrival.ttl
+hasArrivalTime	arrival.ttl
+hasPerson	arrival.ttl
+abbreviation	unit.ttl
+conversionFactor	unit.ttl
+unitsOf	unit.ttl
+endPoint	line.ttl
+length	line.ttl
+startPoint	line.ttl
+startingPoint	line.ttl
+x	line.ttl
+y	line.ttl
+hasChild	parent.ttl
+hasParent	parent.ttl
+hasAuthor	report.ttl
+hasContent	report.ttl
+hasDate	report.ttl
+hasTitle	report.ttl
+hasChild	descent.ttl
+hasParent	descent.ttl
+hasSibling	descent.ttl
+concerns	controversy.ttl
+hasActor	controversy.ttl
+hasEndDate	controversy.ttl
+hasStakeholder	controversy.ttl
+hasStartDate	controversy.ttl
+hasSubject	controversy.ttl
+participatesIn	controversy.ttl
+belongsGroup	rebel.ttl
+hasCause	rebel.ttl
+usesWeapon	rebel.ttl
+hasNumericValue	value.ttl
+hasValue	value.ttl
+causes	cause.ttl
+hasCause	cause.ttl
+isCauseOf	cause.ttl
+auntOf	relative.ttl
+cousinOf	relative.ttl
+fatherOf	relative.ttl
+grandFatherOf	relative.ttl
+grandMotherOf	relative.ttl
+motherOf	relative.ttl
+siblingOf	relative.ttl
+uncleOf	relative.ttl
+hasStatus	status.ttl
+area	nation.ttl
+capital	nation.ttl
+currency	nation.ttl
+hasArea	nation.ttl
+hasCapital	nation.ttl
+hasCode	nation.ttl
+hasContinent	nation.ttl
+hasName	nation.ttl
+hasPopulation	nation.ttl
+isInRegion	nation.ttl
+name	nation.ttl
+population	nation.ttl
+affectedObject	damage.ttl
+affects	damage.ttl
+cause	damage.ttl
+causedBy	damage.ttl
+hasCause	damage.ttl
+hasConsequence	damage.ttl
+hasSeverity	damage.ttl
+hasType	damage.ttl
+location	damage.ttl
+severity	damage.ttl
+timeOfOccurrence	damage.ttl
+forPurpose	use.ttl
+hasUse	use.ttl
+computationMethod	mean.ttl
+hasIndividualNumber	mean.ttl
+hasMeanValue	mean.ttl
+hasNumberSet	mean.ttl
+value	mean.ttl
+author	writing.ttl
+genre	writing.ttl
+publishedDate	writing.ttl
+affectedBy	influence.ttl
+hasInfluence	influence.ttl
+hasInfluenceFactor	influence.ttl
+hasInfluencePower	influence.ttl
+influencedBy	influence.ttl
+born	ancestry.ttl
+hasAncestor	ancestry.ttl
+hasChild	ancestry.ttl
+hasDateOfBirth	ancestry.ttl
+hasDescendant	ancestry.ttl
+hasFather	ancestry.ttl
+hasMother	ancestry.ttl
+hasPlaceOfBirth	ancestry.ttl
+hasSibling	ancestry.ttl
+name	ancestry.ttl
+hasDepartment	institution.ttl
+hasFunction	institution.ttl
+hasGrade	institution.ttl
+hasName	institution.ttl
+hasFruit	plantation.ttl
+hasHerb	plantation.ttl
+hasTree	plantation.ttl
+location	plantation.ttl
+name	plantation.ttl
+sizeInHectares	plantation.ttl
+hasName	enslaver.ttl
+hasSlave	enslaver.ttl
+hasDirection	force.ttl
+hasMagnitude	force.ttl
+isTypeOf	force.ttl
+hasMajority	majority.ttl
+voteCount	majority.ttl
+hasCandidate	politic.ttl
+hasMember	politic.ttl
+hasParty	politic.ttl
+hasPolitician	politic.ttl
+hasConclusion	argument.ttl
+hasPremise	argument.ttl
+belongsCountry	president.ttl
+hadPreviousPosition	president.ttl
+hasTerm	president.ttl
+brother	brother.ttl
+sibling	brother.ttl
+hasAxle	wagon.ttl
+hasWheel	wagon.ttl
+belongsToDomain	idea.ttl
+hasDateCreated	idea.ttl
+hasIdea	idea.ttl
+hasName	idea.ttl
+hasOriginator	idea.ttl
+relatedTo	idea.ttl
+age	governor.ttl
+firstName	governor.ttl
+governsRDF	governor.ttl
+hasGovernor	governor.ttl
+lastName	governor.ttl
+name	governor.ttl
+periodOfGovernance	governor.ttl
+stateGoverned	governor.ttl
+termEnd	governor.ttl
+termStart	governor.ttl
+activityHasDifficulty	difficulty.ttl
+hasActor	play.ttl
+hasDirector	play.ttl
+hasLocation	play.ttl
+hasScript	play.ttl
+performance	play.ttl
+hasCapacity	tavern.ttl
+hasLocation	tavern.ttl
+hasManager	tavern.ttl
+hasName	tavern.ttl
+hasOpeningHours	tavern.ttl
+hasOwner	tavern.ttl
+servesAlcohol	tavern.ttl
+servesAlcoholicBeverages	tavern.ttl
+endTime	history.ttl
+happenedDuring	history.ttl
+involvedPerson	history.ttl
+personName	history.ttl
+placeName	history.ttl
+startTime	history.ttl
+tookPlaceIn	history.ttl
+hasRelationship	relationship.ttl
+isTypeOf	relationship.ttl
+actsIn	agent.ttl
+hasAbility	agent.ttl
+performs	agent.ttl
+worksIn	agent.ttl
+hasRecipient	reward.ttl
+hasRewardType	reward.ttl
+hasValue	reward.ttl
+hasColor	suit.ttl
+hasDesigner	suit.ttl
+hasMaterial	suit.ttl
+hasStyle	suit.ttl
+caseID	case.ttl
+caseName	case.ttl
+caseStatus	case.ttl
+isPartOf	trader.ttl
+location	trader.ttl
+name	trader.ttl
+tradeAmount	trader.ttl
+tradeItem	trader.ttl
+tradeValue	trader.ttl
+trades	trader.ttl
+bestowAuthority	authority.ttl
+grantedBy	authority.ttl
+hasAuthority	authority.ttl
+holdsPosition	authority.ttl
+affects	fate.ttl
+isDeterminedBy	fate.ttl
+hasColor	planter.ttl
+hasMaterial	planter.ttl
+hasSize	planter.ttl
+author	diary.ttl
+content	diary.ttl
+date	diary.ttl
+entry	diary.ttl
+hasAuthor	diary.ttl
+hasContent	diary.ttl
+hasDate	diary.ttl
+hasEntry	diary.ttl
+hasTitle	diary.ttl
+isWrittenBy	diary.ttl
+title	diary.ttl
+writer	diary.ttl
+hasAuthor	record.ttl
+hasContent	record.ttl
+hasCreationDate	record.ttl
+hasIdentifier	record.ttl
+employedBy	worker.ttl
+hasFirstName	worker.ttl
+hasGender	worker.ttl
+hasID	worker.ttl
+hasJobTitle	worker.ttl
+hasLastName	worker.ttl
+hasNationality	worker.ttl
+createdBy	website.ttl
+creationDate	website.ttl
+description	website.ttl
+domain	website.ttl
+hasEmail	website.ttl
+hasName	website.ttl
+hasSkill	website.ttl
+name	website.ttl
+skillLevel	website.ttl
+skillName	website.ttl
+title	website.ttl
+url	website.ttl
+conversionFactor	acre.ttl
+hasUnit	acre.ttl
+hasValue	acre.ttl
+hasItemCondition	return.ttl
+hasItemName	return.ttl
+hasPolicyDetail	return.ttl
+hasPolicyNumber	return.ttl
+hasReturnDate	return.ttl
+hasReturnItem	return.ttl
+hasReturnPolicy	return.ttl
+hasReturnReason	return.ttl
+hasReturnedItem	return.ttl
+createdOn	account.ttl
+email	account.ttl
+hasBalance	account.ttl
+hasOwner	account.ttl
+hasUser	account.ttl
+name	account.ttl
+username	account.ttl
+guardsPlace	guard.ttl
+hasDuty	guard.ttl
+hasEquipped	guard.ttl
+hasLocation	guard.ttl
+hasShift	guard.ttl
+endDate	contract.ttl
+hasContract	contract.ttl
+hasType	contract.ttl
+parties	contract.ttl
+startDate	contract.ttl
+terms	contract.ttl
+brand	marker.ttl
+color	marker.ttl
+hasCap	marker.ttl
+isPermanent	marker.ttl
+tipType	marker.ttl
+dateOfMarriage	marriage.ttl
+hasMarriage	marriage.ttl
+hasSpouse	marriage.ttl
+marriageLocation	marriage.ttl
+diagnosedBy	condition.ttl
+diagnosedWith	condition.ttl
+hasCondition	condition.ttl
+hasDuration	condition.ttl
+hasSymptom	condition.ttl
+hasTreatment	condition.ttl
+activismType	activist.ttl
+belongsTo	activist.ttl
+birthdate	activist.ttl
+campaignsFor	activist.ttl
+causesSupported	activist.ttl
+fightsFor	activist.ttl
+hasActivity	activist.ttl
+isAbout	activist.ttl
+isAffiliatedWith	activist.ttl
+name	activist.ttl
+nationality	activist.ttl
+organisationAffiliated	activist.ttl
+organizes	activist.ttl
+participatesIn	activist.ttl
+protests	activist.ttl
+causedBy	smallpox.ttl
+eradicatedBy	smallpox.ttl
+preventedBy	smallpox.ttl
+hasCalorieCount	meal.ttl
+hasCalories	meal.ttl
+hasComponent	meal.ttl
+hasCookingTime	meal.ttl
+hasCuisine	meal.ttl
+hasIngredient	meal.ttl
+hasMealType	meal.ttl
+isGlutenFree	meal.ttl
+isVegan	meal.ttl
+isVegetarian	meal.ttl
+appointedBy	bishop.ttl
+diocese	bishop.ttl
+hasLength	road.ttl
+hasName	road.ttl
+hasNumberOfLanes	road.ttl
+hasSurfaceType	road.ttl
+hasTrafficVolume	road.ttl
+isInCountry	road.ttl
+hasCategory	shop.ttl
+hasDescription	shop.ttl
+hasName	shop.ttl
+hasPrice	shop.ttl
+hasProduct	shop.ttl
+price	shop.ttl
+sells	shop.ttl
+hasEndDate	plan.ttl
+hasName	plan.ttl
+hasStartDate	plan.ttl
+includesTask	plan.ttl
+taskHasDuration	plan.ttl
+taskHasName	plan.ttl
+taskHasPriority	plan.ttl
+date	occasion.ttl
+hosts	occasion.ttl
+location	occasion.ttl
+birthDate	film.ttl
+directedBy	film.ttl
+hasActor	film.ttl
+hasActorName	film.ttl
+hasDirector	film.ttl
+hasGenre	film.ttl
+hasGenreName	film.ttl
+hasName	film.ttl
+hasReleaseYear	film.ttl
+hasTitle	film.ttl
+name	film.ttl
+releaseDate	film.ttl
+starring	film.ttl
+title	film.ttl
+hasBadgeNumber	officer.ttl
+hasName	officer.ttl
+hasRank	officer.ttl
+isAssignedTo	officer.ttl
+locatedIn	officer.ttl
+servesInDepartment	officer.ttl
+worksAt	officer.ttl
+endDate	ability.ttl
+hasLevel	ability.ttl
+hasType	ability.ttl
+level	ability.ttl
+name	ability.ttl
+requiredFor	ability.ttl
+startDate	ability.ttl
+hasAgeDistribution	population.ttl
+hasGenderRatio	population.ttl
+totalPopulation	population.ttl
+hasEndTime	exchange.ttl
+hasItem	exchange.ttl
+hasParticipant	exchange.ttl
+hasStartTime	exchange.ttl
+age	prisoner.ttl
+crime	prisoner.ttl
+dateOfImprisonment	prisoner.ttl
+dateOfRelease	prisoner.ttl
+inPrison	prisoner.ttl
+name	prisoner.ttl
+prisonerID	prisoner.ttl
+sentenceDuration	prisoner.ttl
+sentenceLength	prisoner.ttl
+sentencedFor	prisoner.ttl
+earns	adulthood.ttl
+hasAgeRange	adulthood.ttl
+hasEmployment	adulthood.ttl
+hasJobTitle	adulthood.ttl
+hasLegalResponsibility	adulthood.ttl
+author	manuscript.ttl
+content	manuscript.ttl
+date	manuscript.ttl
+hasAuthor	manuscript.ttl
+hasDate	manuscript.ttl
+hasTitle	manuscript.ttl
+title	manuscript.ttl
+type	manuscript.ttl
+hasAuthor	paper.ttl
+hasPageCount	paper.ttl
+hasPublicationDate	paper.ttl
+hasTitle	paper.ttl
+isPublished	paper.ttl
+hasPortion	portion.ttl
+hasQuantity	portion.ttl
+ofDrink	portion.ttl
+ofFood	portion.ttl
+portionOf	portion.ttl
+portionSize	portion.ttl
+servingSize	portion.ttl
+supplies	supply.ttl
+carries	arter.ttl
+connectsTo	arter.ttl
+oxygenated	arter.ttl
+hasGrandchild	grandchild.ttl
+isGrandchildOf	grandchild.ttl
+age	passenger.ttl
+hasAge	passenger.ttl
+hasCity	passenger.ttl
+hasCountry	passenger.ttl
+hasDestination	passenger.ttl
+hasFirstName	passenger.ttl
+hasLastName	passenger.ttl
+hasPassenger	passenger.ttl
+hasTicket	passenger.ttl
+hasTicketNumber	passenger.ttl
+isTravelingTo	passenger.ttl
+name	passenger.ttl
+ticketNumber	passenger.ttl
+parent	uncle.ttl
+sibling	uncle.ttl
+hasIntelligence	intelligence.ttl
+broker	trading.ttl
+hasAsset	trading.ttl
+hasPrice	trading.ttl
+hasRole	trading.ttl
+hasVolume	trading.ttl
+trades	trading.ttl
+tradesIn	trading.ttl
+tradingPlatform	trading.ttl
+isPartOf	thousand.ttl
+hasAuthor	comment.ttl
+hasContent	comment.ttl
+hasDate	comment.ttl
+isCommentedOn	comment.ttl
+hasBasis	basis.ttl
+hasPhysicalBasis	basis.ttl
+hasTheoreticalBasis	basis.ttl
+hasFeeling	feeling.ttl
+specializesIn	bondage.ttl
+usesBondage	bondage.ttl
+conductedIn	census.ttl
+name	census.ttl
+totalPopulation	census.ttl
+year	census.ttl
+hasAuthor	preface.ttl
+hasContent	preface.ttl
+hasDate	preface.ttl
+groundType	ground.ttl
+hasGroundComposition	ground.ttl
+hasSurfaceTexture	ground.ttl
+hasMentalStrength	strength.ttl
+hasPhysicalStrength	strength.ttl
+strengthLevel	strength.ttl
+area	island.ttl
+country	island.ttl
+hasArea	island.ttl
+hasName	island.ttl
+hasPopulation	island.ttl
+isPartOf	island.ttl
+population	island.ttl
+edits	editor.ttl
+name	editor.ttl
+specializesIn	editor.ttl
+worksFor	editor.ttl
+arrestRecord	arrest.ttl
+arrestedBy	arrest.ttl
+chargedWith	arrest.ttl
+date	arrest.ttl
+documentedBy	arrest.ttl
+hasArrestee	arrest.ttl
+hasArrestor	arrest.ttl
+hasDate	arrest.ttl
+hasLocation	arrest.ttl
+hasReason	arrest.ttl
+location	arrest.ttl
+age	horse.ttl
+breed	horse.ttl
+color	horse.ttl
+hasSpouse	widow.ttl
+hasSpouseDeathDate	widow.ttl
+wasMarried	widow.ttl
+endYear	rebellion.ttl
+hasCause	rebellion.ttl
+hasOutcome	rebellion.ttl
+hasRebel	rebellion.ttl
+leadToRevolution	rebellion.ttl
+startYear	rebellion.ttl
+hasCommander	troop.ttl
+hasLocation	troop.ttl
+hasSoldier	troop.ttl
+numberOfSoldiers	troop.ttl
+rank	troop.ttl
+applies	drag.ttl
+hasDragName	drag.ttl
+performer	drag.ttl
+wears	drag.ttl
+aidType	aid.ttl
+donates	aid.ttl
+donorName	aid.ttl
+hasAmount	aid.ttl
+hasDonor	aid.ttl
+hasRecipient	aid.ttl
+recipientName	aid.ttl
+facilitatesActivity	missionary.ttl
+hasName	missionary.ttl
+missionaryWork	missionary.ttl
+originCountry	missionary.ttl
+participatesIn	missionary.ttl
+teachesGospel	missionary.ttl
+trainsToPray	missionary.ttl
+hasAddress	building.ttl
+hasConstructionDate	building.ttl
+hasFloors	building.ttl
+hasNumberOfFloors	building.ttl
+hasOwner	building.ttl
+hasType	building.ttl
+hasManufacturer	carriage.ttl
+hasMaterial	carriage.ttl
+hasModel	carriage.ttl
+hasPassengerCapacity	carriage.ttl
+hasYear	carriage.ttl
+isUsedIn	carriage.ttl
+hasLength	word.ttl
+hasSpelling	word.ttl
+isAntonymOf	word.ttl
+isSynonymOf	word.ttl
+hasAttendee	event.ttl
+hasDate	event.ttl
+hasLocation	event.ttl
+hasOrganizer	event.ttl
+hasAge	speaker.ttl
+hasAudience	speaker.ttl
+hasName	speaker.ttl
+hasTopic	speaker.ttl
+cost	tour.ttl
+destinations	tour.ttl
+duration	tour.ttl
+guide	tour.ttl
+hasGuide	tour.ttl
+hasLocation	tour.ttl
+hasTourist	tour.ttl
+name	tour.ttl
+rating	tour.ttl
+hasBirthDate	politician.ttl
+hasName	politician.ttl
+hasPartyAffiliation	politician.ttl
+hasPoliticalParty	politician.ttl
+hasTerm	politician.ttl
+hasTermLength	politician.ttl
+holdsPosition	politician.ttl
+relatedToIssue	politician.ttl
+representsCountry	politician.ttl
+hasAbsorbency	black.ttl
+hasColor	black.ttl
+isBlack	black.ttl
+hasSlave	slaveholder.ttl
+isFrom	slaveholder.ttl
+ownsProperty	slaveholder.ttl
+areaSize	region.ttl
+hasArea	region.ttl
+hasCapital	region.ttl
+hasPopulation	region.ttl
+inCountry	region.ttl
+name	region.ttl
+populationSize	region.ttl
+regionName	region.ttl
+hasFirstName	name.ttl
+hasLastName	name.ttl
+hasCEO	company.ttl
+hasEmployeeCount	company.ttl
+hasIndustry	company.ttl
+hasLocation	company.ttl
+hasName	company.ttl
+author	article.ttl
+content	article.ttl
+publicationDate	article.ttl
+title	article.ttl
+hasID	soldier.ttl
+hasRank	soldier.ttl
+hasWeapon	soldier.ttl
+servedInWar	soldier.ttl
+servesIn	soldier.ttl
+hasPart	body.ttl
+isPartOf	body.ttl
+completed	duty.ttl
+hasDuty	duty.ttl
+role	duty.ttl
+hasFather	infant.ttl
+hasMother	infant.ttl
+humanBirth	infant.ttl
+weightAtBirth	infant.ttl
+calories	food.ttl
+containsFat	food.ttl
+containsIngredient	food.ttl
+hasFoodItem	food.ttl
+hasNutritionInfo	food.ttl
+hasRecipe	food.ttl
+content	review.ttl
+postedBy	review.ttl
+rating	review.ttl
+reviewOf	review.ttl
+associatedWith	theme.ttl
+hasName	theme.ttl
+activeSince	regiment.ttl
+assignedTo	regiment.ttl
+comprisingOf	regiment.ttl
+hasCommander	regiment.ttl
+name	regiment.ttl
+rank	regiment.ttl
+regimentNumber	regiment.ttl
+hasAlphabet	language.ttl
+hasDialect	language.ttl
+usesScript	language.ttl
+hasFather	grandfather.ttl
+hasGrandfather	grandfather.ttl
+hasAuthor	document.ttl
+hasCreationDate	document.ttl
+hasTitle	document.ttl
+elicitsFear	fear.ttl
+accuses	law.ttl
+defends	law.ttl
+presides	law.ttl
+represents	law.ttl
+hasName	subject.ttl
+hasSubject	subject.ttl
+isMandatory	subject.ttl
+canPerform	permission.ttl
+hasPermission	permission.ttl
+hasUser	permission.ttl
+isAllowed	permission.ttl
+onResource	permission.ttl
+permits	permission.ttl
+hasColor	appearance.ttl
+hasShape	appearance.ttl
+hasSize	appearance.ttl
+hasPart	part.ttl
+libertyInCountry	liberty.ttl
+libertyType	liberty.ttl
+carpenter	carpenter.ttl
+hasExperience	carpenter.ttl
+usesTool	carpenter.ttl
+worksInProject	carpenter.ttl
+hasRight	right.ttl
+isProtectedBy	right.ttl
+hasCharacteristics	manner.ttl
+hasIntensity	manner.ttl
+isOppositeTo	manner.ttl
+isSimilarTo	manner.ttl
+connectsStation	railroad.ttl
+hasStation	railroad.ttl
+hasTrack	railroad.ttl
+operatesOn	railroad.ttl
+runsOn	railroad.ttl
+servedBy	railroad.ttl
+stopsAt	railroad.ttl
+causeOfDeath	death.ttl
+dateOfDeath	death.ttl
+hasCause	death.ttl
+hasCauseOfDeath	death.ttl
+hasDeath	death.ttl
+hasDied	death.ttl
+hasPlaceOfDeath	death.ttl
+hasTimeOfDeath	death.ttl
+locationOfDeath	death.ttl
+hasArea	town.ttl
+hasName	town.ttl
+hasPopulation	town.ttl
+hasName	domain.ttl
+hasOwner	domain.ttl
+hasURL	domain.ttl
+ownerEmail	domain.ttl
+ownerName	domain.ttl
+hasType	resource.ttl
+hasUnit	resource.ttl
+quantity	resource.ttl
+hasEconomicIndependence	independence.ttl
+hasIndividualIndependence	independence.ttl
+hasLevel	independence.ttl
+hasPoliticalIndependence	independence.ttl
+hasFactor	success.ttl
+hasMetric	success.ttl
+hasTimeframe	success.ttl
+durationOfRest	rest.ttl
+hasRest	rest.ttl
+qualityOfRest	rest.ttl
+hasType	memory.ttl
+hasDuration	practice.ttl
+hasSkill	practice.ttl
+hasSkillLevel	practice.ttl
+endTime	end.ttl
+eventEnd	end.ttl
+hasConclusion	end.ttl
+hasEnd	end.ttl
+hasEndTime	end.ttl
+hasFinalMoment	end.ttl
+hasTime	end.ttl
+isEndOf	end.ttl
+hasConflictWith	enemy.ttl
+hasEnemy	enemy.ttl
+hasCause	injury.ttl
+hasInjuryLocation	injury.ttl
+hasInjuryType	injury.ttl
+hasLocation	injury.ttl
+hasSeverity	injury.ttl
+injuryDate	injury.ttl
+injurySeverity	injury.ttl
+country	freedom.ttl
+freedomIndex	freedom.ttl
+isAssociatedWith	freedom.ttl
+dateGranted	manumission.ttl
+dateOfManumission	manumission.ttl
+grantedBy	manumission.ttl
+hasManumitted	manumission.ttl
+involvedSlave	manumission.ttl
+legalDocument	manumission.ttl
+manumission	manumission.ttl
+wasManumittedBy	manumission.ttl
+hasCity	address.ttl
+hasCountry	address.ttl
+hasState	address.ttl
+hasStreet	address.ttl
+hasZipCode	address.ttl
+hasAge	obituary.ttl
+hasBiography	obituary.ttl
+hasCauseOfDeath	obituary.ttl
+hasDate	obituary.ttl
+hasDateOfDeath	obituary.ttl
+hasDateOfPublication	obituary.ttl
+hasName	obituary.ttl
+hasObituary	obituary.ttl
+hasPlaceOfDeath	obituary.ttl
+publishes	obituary.ttl
+commemorates	memorial.ttl
+established	memorial.ttl
+hasLocation	memorial.ttl
+inscription	memorial.ttl
+location	memorial.ttl
+name	memorial.ttl
+wasEstablishedOn	memorial.ttl
+hasAddress	petition.ttl
+hasDate	petition.ttl
+hasName	petition.ttl
+hasSignatory	petition.ttl
+hasText	petition.ttl
+hasTitle	petition.ttl
+signs	petition.ttl
+hasCause	suffering.ttl
+hasDuration	suffering.ttl
+hasIntensity	suffering.ttl
+hasResponse	suffering.ttl
+hasDecisionMaker	decision.ttl
+hasOption	decision.ttl
+hasOutcome	decision.ttl
+hasMember	crew.ttl
+hasRole	crew.ttl
+worksOn	crew.ttl
+hasFieldOfStudy	scholar.ttl
+name	scholar.ttl
+publishedPapers	scholar.ttl
+worksAt	scholar.ttl
+hasCoast	coast.ttl
+hasLength	coast.ttl
+hasOcean	coast.ttl
+hasPopulation	coast.ttl
+isLocationOf	coast.ttl
+hasLightPollution	night.ttl
+isFullMoon	night.ttl
+starVisibility	night.ttl
+typicalAnimalsActive	night.ttl
+typicalHumanActivities	night.ttl
+believerOf	priesthood.ttl
+belongs	priesthood.ttl
+hasDuty	priesthood.ttl
+ordinationDate	priesthood.ttl
+serves	priesthood.ttl
+componentType	system.ttl
+hasComponent	system.ttl
+hasHardware	system.ttl
+hasSoftware	system.ttl
+hasSubcomponent	system.ttl
+isComponentOf	system.ttl
+name	system.ttl
+subcomponentType	system.ttl
+forPerson	respect.ttl
+forValue	respect.ttl
+inAction	respect.ttl
+isMutual	respect.ttl
+isSelf	respect.ttl
+levelOfRespect	respect.ttl
+hasAncestor	ancestor.ttl
+hasChild	ancestor.ttl
+hasDescendent	ancestor.ttl
+hasParent	ancestor.ttl
+author	book.ttl
+genre	book.ttl
+hasAuthor	book.ttl
+hasPublicationDate	book.ttl
+hasTitle	book.ttl
+isbn	book.ttl
+pages	book.ttl
+publishedYear	book.ttl
+title	book.ttl
+writesBook	book.ttl
+endureStruggle	struggle.ttl
+hasCause	struggle.ttl
+hasImpact	struggle.ttl
+overcomeStruggle	struggle.ttl
+hasGenre	artist.ttl
+hasName	artist.ttl
+hasOrigin	artist.ttl
+hasDetail	request.ttl
+hasId	request.ttl
+hasStatus	request.ttl
+hasTimestamp	request.ttl
+baptisedBy	baptism.ttl
+baptisedPerson	baptism.ttl
+baptismDate	baptism.ttl
+baptismLocation	baptism.ttl
+performedBaptism	baptism.ttl
+receivedBaptism	baptism.ttl
+dateOfSale	sale.ttl
+hasCustomer	sale.ttl
+hasItem	sale.ttl
+itemPrice	sale.ttl
+eventHasChance	chance.ttl
+hasChance	chance.ttl
+perpetrator	discrimination.ttl
+propagatorOfDiscrimination	discrimination.ttl
+recipientOfDiscrimination	discrimination.ttl
+victim	discrimination.ttl
+hasAge	people.ttl
+hasFirstName	people.ttl
+hasGender	people.ttl
+hasLastName	people.ttl
+hasBathrooms	cabin.ttl
+hasBedrooms	cabin.ttl
+hasLocation	cabin.ttl
+hasSize	cabin.ttl
+location	cabin.ttl
+owner	cabin.ttl
+hasToe	foot.ttl
+length	foot.ttl
+partOf	foot.ttl
+width	foot.ttl
+hasCharacter	scene.ttl
+hasEvent	scene.ttl
+hasLocation	scene.ttl
+height	monument.ttl
+location	monument.ttl
+monumentType	monument.ttl
+name	monument.ttl
+yearBuilt	monument.ttl
+yearEstablished	monument.ttl
+age	fugitive.ttl
+hasWarrant	fugitive.ttl
+name	fugitive.ttl
+wantedFor	fugitive.ttl
+hasDate	plaque.ttl
+hasLocation	plaque.ttl
+belongsToFamily	prince.ttl
+hasTitle	prince.ttl
+hasAuthor	bibliography.ttl
+hasBook	bibliography.ttl
+name	bibliography.ttl
+publicationYear	bibliography.ttl
+title	bibliography.ttl
+size	crowd.ttl
+hasAuthor	research.ttl
+hasLead	research.ttl
+relatedField	research.ttl
+researchOutcome	research.ttl
+researchTopic	research.ttl
+color	dress.ttl
+material	dress.ttl
+size	dress.ttl
+type	dress.ttl
+hasAge	woman.ttl
+hasName	woman.ttl
+isMotherOf	woman.ttl
+author	press.ttl
+hasJournalist	press.ttl
+publishedIn	press.ttl
+publisher	press.ttl
+source	press.ttl
+hasArticle	newspaper.ttl
+hasAuthor	newspaper.ttl
+hasContent	newspaper.ttl
+hasDate	newspaper.ttl
+hasEdition	newspaper.ttl
+hasPublisher	newspaper.ttl
+hasTitle	newspaper.ttl
+associatedWith	result.ttl
+hasEvaluation	result.ttl
+hasName	result.ttl
+hasValue	result.ttl
+isResultOf	result.ttl
+participant	result.ttl
+score	result.ttl
+coordinate	place.ttl
+name	place.ttl
+contains	water.ttl
+containsOxygen	water.ttl
+hasPH	water.ttl
+hasTemperature	water.ttl
+isDrinkable	water.ttl
+isFresh	water.ttl
+isFreshwater	water.ttl
+isSaltwater	water.ttl
+isSeaWater	water.ttl
+source	water.ttl
+durationOfPossession	possession.ttl
+possessed	possession.ttl
+possessor	possession.ttl
+hasGreeting	introduction.ttl
+hasIntroduction	introduction.ttl
+hasOverview	introduction.ttl
+hasPart	introduction.ttl
+size	introduction.ttl
+hasCity	location.ttl
+hasCoordinates	location.ttl
+hasCountry	location.ttl
+hasStreet	location.ttl
+hasSpecialization	doctor.ttl
+worksAt	doctor.ttl
+hasObject	statement.ttl
+hasPredicate	statement.ttl
+hasSubject	statement.ttl
+hasTruthValue	statement.ttl
+hasInmate	prison.ttl
+hasSecurityLevel	prison.ttl
+isGuarded	prison.ttl
+isImprisoned	prison.ttl
+isInmateOf	prison.ttl
+hasExperience	overseer.ttl
+hasName	overseer.ttl
+hasNumberOfEmployees	overseer.ttl
+hasResponsibility	overseer.ttl
+hasRole	overseer.ttl
+overseesDepartment	overseer.ttl
+hasEar	face.ttl
+hasEye	face.ttl
+hasFeature	face.ttl
+hasMouth	face.ttl
+hasNose	face.ttl
+hasSubject	thought.ttl
+hasType	thought.ttl
+hasMember	organization.ttl
+hasName	organization.ttl
+hasPosition	organization.ttl
+hasHusband	queen.ttl
+hasWife	queen.ttl
+hasAbility	character.ttl
+hasOrigin	character.ttl
+isHero	character.ttl
+name	character.ttl
+hasFulfilled	promise.ttl
+hasPromiseContent	promise.ttl
+hasPromisee	promise.ttl
+hasPromisor	promise.ttl
+appliesPrinciple	justice.ttl
+hasCourt	justice.ttl
+hasJudge	justice.ttl
+hasLawyer	justice.ttl
+hasLegalSystem	justice.ttl
+hearsCase	justice.ttl
+delta	river.ttl
+dischargesInto	river.ttl
+drainageBasin	river.ttl
+flowsThrough	river.ttl
+length	river.ttl
+origin	river.ttl
+customerName	service.ttl
+description	service.ttl
+hasConsumer	service.ttl
+hasEndTime	service.ttl
+hasProvider	service.ttl
+hasStartTime	service.ttl
+isProvidedBy	service.ttl
+name	service.ttl
+providerName	service.ttl
+provides	service.ttl
+providesService	service.ttl
+receivesService	service.ttl
+serviceName	service.ttl
+hasColor	eye.ttl
+hasShape	eye.ttl
+perceives	eye.ttl
+field	style.ttl
+hasStyle	style.ttl
+period	style.ttl
+belongsTo	background.ttl
+hasBackground	background.ttl
+conductedBy	raid.ttl
+date	raid.ttl
+targets	raid.ttl
+address	gift.ttl
+email	gift.ttl
+hasGiftDescription	gift.ttl
+hasGiftPrice	gift.ttl
+hasGiftReceiver	gift.ttl
+hasGiftSender	gift.ttl
+hasGiftTitle	gift.ttl
+name	gift.ttl
+hasBuyer	trade.ttl
+hasPrice	trade.ttl
+hasProduct	trade.ttl
+hasQuantity	trade.ttl
+hasSeller	trade.ttl
+hasTradeType	trade.ttl
+hasTrader	trade.ttl
+isBilledBy	trade.ttl
+isBoughtBy	trade.ttl
+isPaidBy	trade.ttl
+isSoldBy	trade.ttl
+isFocusedOn	activism.ttl
+isLocatedIn	activism.ttl
+name	activism.ttl
+participatesIn	activism.ttl
+hasCase	courthouse.ttl
+hasCourtroom	courthouse.ttl
+hasJudge	courthouse.ttl
+hasLawyer	courthouse.ttl
+hasAuthor	poem.ttl
+hasLineCount	poem.ttl
+hasName	poem.ttl
+hasTitle	poem.ttl
+containedIn	tale.ttl
+hasAuthor	tale.ttl
+hasCharacter	tale.ttl
+hasCharacters	tale.ttl
+hasGenre	tale.ttl
+hasPlot	tale.ttl
+hasPublicationYear	tale.ttl
+hasSetting	tale.ttl
+hasTitle	tale.ttl
+publishedOn	tale.ttl
+tellsAbout	tale.ttl
+campCapacity	camp.ttl
+campId	camp.ttl
+campLocation	camp.ttl
+campType	camp.ttl
+digitalLiteracyLevel	literacy.ttl
+hasDigitalLiteracySkill	literacy.ttl
+hasLanguage	literacy.ttl
+hasReadingSkill	literacy.ttl
+hasWritingSkill	literacy.ttl
+readingLevel	literacy.ttl
+writingLevel	literacy.ttl
+author	example.ttl
+body	example.ttl
+date	example.ttl
+likes	example.ttl
+title	example.ttl
+activityLocation	activity.ttl
+activityName	activity.ttl
+activityTime	activity.ttl
+activityType	activity.ttl
+hasDuration	activity.ttl
+hasName	activity.ttl
+hasPart	activity.ttl
+durationOfEnslavement	enslavement.ttl
+placeOfEnslavement	enslavement.ttl
+hasAction	mission.ttl
+hasAgent	mission.ttl
+hasPurpose	mission.ttl
+missionDuration	mission.ttl
+missionObjective	mission.ttl
+missionOrganizer	mission.ttl
+requiresResource	mission.ttl
+hasBirth	birth.ttl
+hasBirthDate	birth.ttl
+hasBirthPlace	birth.ttl
+hasFather	birth.ttl
+hasMother	birth.ttl
+hasBid	auction.ttl
+hasBidder	auction.ttl
+hasBidderName	auction.ttl
+hasHighestBid	auction.ttl
+hasItem	auction.ttl
+hasName	auction.ttl
+hasStartPrice	auction.ttl
+address	home.ttl
+age	home.ttl
+hasAddress	home.ttl
+hasBathrooms	home.ttl
+hasBedrooms	home.ttl
+hasKitchen	home.ttl
+hasLivingRoom	home.ttl
+hasOwner	home.ttl
+hasParking	home.ttl
+hasRoom	home.ttl
+hasRooms	home.ttl
+hasType	home.ttl
+isFurnished	home.ttl
+name	home.ttl
+owns	home.ttl
+halfOf	half.ttl
+hasDenominator	half.ttl
+hasHalf	half.ttl
+hasNumerator	half.ttl
+hasValue	half.ttl
+isHalfOf	half.ttl
+defendant	trial.ttl
+hasCase	trial.ttl
+hasDefendant	trial.ttl
+hasJudge	trial.ttl
+hasProsecutor	trial.ttl
+hasVerdict	trial.ttl
+judge	trial.ttl
+lawyer	trial.ttl
+asexualReproduction	reproduction.ttl
+hasParent	reproduction.ttl
+reproduces	reproduction.ttl
+sexualReproduction	reproduction.ttl
+performedBy	kindness.ttl
+receivesKindness	kindness.ttl
+hasBody	mail.ttl
+hasEmail	mail.ttl
+hasRecipient	mail.ttl
+hasSender	mail.ttl
+hasSubject	mail.ttl
+isRead	mail.ttl
+isSentOn	mail.ttl
+contains	cave.ttl
+hasFormation	cave.ttl
+hasInhabitant	cave.ttl
+hasAuthor	citation.ttl
+hasName	citation.ttl
+hasTitle	citation.ttl
+hasYear	citation.ttl
+hasDenomination	church.ttl
+hasEndTime	church.ttl
+hasLocation	church.ttl
+hasName	church.ttl
+hasPastor	church.ttl
+hasService	church.ttl
+hasStartTime	church.ttl
+holdsService	church.ttl
+serviceTime	church.ttl
+amount	debt.ttl
+creditor	debt.ttl
+debtor	debt.ttl
+dueDate	debt.ttl
+interestRate	debt.ttl
+date	wedding.ttl
+hasBride	wedding.ttl
+hasGroom	wedding.ttl
+hasGuest	wedding.ttl
+location	wedding.ttl
+discussesBill	legislature.ttl
+hasMember	legislature.ttl
+passesBill	legislature.ttl
+proposesBill	legislature.ttl
+author	novel.ttl
+genre	novel.ttl
+numberOfPages	novel.ttl
+publicationYear	novel.ttl
+title	novel.ttl
+employedIn	construction.ttl
+manages	construction.ttl
+usesMaterial	construction.ttl
+worksOn	construction.ttl
+content	speech.ttl
+date	speech.ttl
+location	speech.ttl
+speaker	speech.ttl
+firstOrdained	pastor.ttl
+leadChurch	pastor.ttl
+leadConregation	pastor.ttl
+leadsCongregation	pastor.ttl
+pastorsChurch	pastor.ttl
+preachSermon	pastor.ttl
+providesCounseling	pastor.ttl
+hasSister	sister.ttl
+isSisterOf	sister.ttl
+dish	dinner.ttl
+hasIngredient	dinner.ttl
+authoredBy	author.ttl
+bookTitle	author.ttl
+hasName	author.ttl
+hasPublicationDate	author.ttl
+hasTitle	author.ttl
+hasWritten	author.ttl
+publishedIn	author.ttl
+creativity	genius.ttl
+intellectualAbility	genius.ttl
+originality	genius.ttl
+hasMedium	medium.ttl
+usedIn	medium.ttl
+hasAddress	residence.ttl
+hasOwner	residence.ttl
+hasResidence	residence.ttl
+hasResidenceType	residence.ttl
+belongsTo	piece.ttl
+hasPiece	piece.ttl
+isPieceOf	piece.ttl
+pieceCount	piece.ttl
+featureDescription	version.ttl
+featureName	version.ttl
+hasVersion	version.ttl
+mainSoftwareFeature	version.ttl
+softwareName	version.ttl
+versionNumber	version.ttl
+versionReleaseDate	version.ttl
+helpProvider	help.ttl
+helpReceiver	help.ttl
+hasDateOfBirth	baby.ttl
+hasGender	baby.ttl
+hasHeight	baby.ttl
+hasWeight	baby.ttl
+hasCause	pain.ttl
+hasSeverity	pain.ttl
+hasAddress	neighbor.ttl
+hasName	neighbor.ttl
+hasNeighbor	neighbor.ttl
+locatedOn	neighbor.ttl
+residesIn	neighbor.ttl
+hasCharge	charge.ttl
+hasInterest	interest.ttl
+desireIntensity	desire.ttl
+desireObject	desire.ttl
+fulfillsDesire	desire.ttl
+hasDesire	desire.ttl
+hasIntensity	desire.ttl
+hasObject	desire.ttl
+hasSubject	desire.ttl
+assignedTo	task.ttl
+description	task.ttl
+dueDate	task.ttl
+hasAssignee	task.ttl
+hasDeadline	task.ttl
+hasDescription	task.ttl
+hasTitle	task.ttl
+isAssignedTo	task.ttl
+isCompleted	task.ttl
+name	task.ttl
+date	ceremony.ttl
+location	ceremony.ttl
+participants	ceremony.ttl
+date	convention.ttl
+location	convention.ttl
+name	convention.ttl
+organizer	convention.ttl
+organizerName	convention.ttl
+beginsAtTime	level.ttl
+endsAtTime	level.ttl
+hasLevel	level.ttl
+hasName	level.ttl
+hasValue	level.ttl
+address	property.ttl
+leasingStatus	property.ttl
+name	property.ttl
+owner	property.ttl
+hasISBN	isbn.ttl
+publishedBy	isbn.ttl
+hasEmployee	office.ttl
+hasFurniture	office.ttl
+belongsTo	branch.ttl
+branchAddress	branch.ttl
+branchID	branch.ttl
+branchManager	branch.ttl
+hasBranch	branch.ttl
+hasLocation	branch.ttl
+hasMass	star.ttl
+hasTemperature	star.ttl
+isPartOfConstellation	star.ttl
+fromCountry	pilgrimage.ttl
+hasBelief	pilgrimage.ttl
+hasName	pilgrimage.ttl
+hasPilgrim	pilgrimage.ttl
+inCountry	pilgrimage.ttl
+inMonth	pilgrimage.ttl
+inReligion	pilgrimage.ttl
+toDestination	pilgrimage.ttl
+height	volume.ttl
+length	volume.ttl
+unit	volume.ttl
+width	volume.ttl
+amplifies	principle.ttl
+connectsTo	principle.ttl
+contradicts	principle.ttl
+hasApplication	principle.ttl
+hasDefinition	principle.ttl
+hasDescription	principle.ttl
+hasName	principle.ttl
+hasPrinciple	principle.ttl
+isRelatedTo	principle.ttl
+hasMother	mother.ttl
+hasParent	mother.ttl
+areaInSquareKm	world.ttl
+population	world.ttl
+hasDateTime	violence.ttl
+hasLocation	violence.ttl
+isDirectTowards	violence.ttl
+isExecutedBy	violence.ttl
+hasMinutes	hour.ttl
+hasSeconds	hour.ttl
+hasArea	village.ttl
+hasElevation	village.ttl
+hasPopulation	village.ttl
+isLocatedIn	village.ttl
+attendees	funeral.ttl
+date	funeral.ttl
+deceased	funeral.ttl
+hasDeceased	funeral.ttl
+hasFuneralDirector	funeral.ttl
+hasFuneralService	funeral.ttl
+heldAt	funeral.ttl
+location	funeral.ttl
+officiant	funeral.ttl
+direction	movement.ttl
+distance	movement.ttl
+duration	movement.ttl
+speed	movement.ttl
+duration	period.ttl
+endDate	period.ttl
+hasEndTime	period.ttl
+hasSignificantEvent	period.ttl
+hasStartTime	period.ttl
+isPartOf	period.ttl
+periodType	period.ttl
+startDate	period.ttl
+commentary	issue.ttl
+commenter	issue.ttl
+content	issue.ttl
+hasAssignee	issue.ttl
+hasDescription	issue.ttl
+hasIssue	issue.ttl
+hasPriority	issue.ttl
+hasSubmitter	issue.ttl
+isOpen	issue.ttl
+issueCause	issue.ttl
+issueDescription	issue.ttl
+issueID	issue.ttl
+issueResolution	issue.ttl
+issueStatus	issue.ttl
+blessingType	blessing.ttl
+givenBy	blessing.ttl
+hasBlessing	blessing.ttl
+hasBlessingType	blessing.ttl
+isBlessedBy	blessing.ttl
+receivedBy	blessing.ttl
+hasColor	material.ttl
+hasDensity	material.ttl
+hasMaterial	material.ttl
+hasMeltPoint	material.ttl
+hasName	material.ttl
+hasType	material.ttl
+isFlammable	material.ttl
+focus	attention.ttl
+focusDuration	attention.ttl
+focusIntensity	attention.ttl
+hasFirstName	professor.ttl
+hasLastName	professor.ttl
+teachesSubject	professor.ttl
+worksIn	professor.ttl
+hasAuthor	information.ttl
+hasDataType	information.ttl
+hasDate	information.ttl
+hasMedium	information.ttl
+hasSource	information.ttl
+hasTitle	information.ttl
+isCreatedBy	information.ttl
+isDerivedFrom	information.ttl
+hasVolume	capacity.ttl
+hasWeight	capacity.ttl
+awardsReceived	captain.ttl
+experience	captain.ttl
+name	captain.ttl
+rank	captain.ttl
+shipsCommanded	captain.ttl
+color	clothe.ttl
+madeOf	clothe.ttl
+size	clothe.ttl
+author	memoir.ttl
+publishedYear	memoir.ttl
+title	memoir.ttl
+hasAge	girl.ttl
+hasName	girl.ttl
+isChildOf	girl.ttl
+isStudentAt	girl.ttl
+hasAuthor	audiobook.ttl
+hasNarrator	audiobook.ttl
+publishedBy	audiobook.ttl
+acquires	knowledge.ttl
+distributes	knowledge.ttl
+hasDomainArea	knowledge.ttl
+hasKnowledge	knowledge.ttl
+hasSource	knowledge.ttl
+knowsAbout	knowledge.ttl
+forOffence	punishment.ttl
+hasPurpose	punishment.ttl
+imposes	punishment.ttl
+isFormOf	punishment.ttl
+severity	punishment.ttl
+causes	change.ttl
+hasChangeMagnitude	change.ttl
+hasChangeType	change.ttl
+occursAt	change.ttl
+undergoes	change.ttl
+deadline	project.ttl
+description	project.ttl
+endDate	project.ttl
+hasDeadline	project.ttl
+hasManager	project.ttl
+hasMember	project.ttl
+hasName	project.ttl
+hasRole	project.ttl
+manager	project.ttl
+member	project.ttl
+name	project.ttl
+startDate	project.ttl
+hasSibling	relation.ttl
+livesIn	relation.ttl
+hasCause	health.ttl
+hasDisease	health.ttl
+hasSymptom	health.ttl
+hasTreatment	health.ttl
+treatsWith	health.ttl
+catcherPosition	catcher.ttl
+capital	state.ttl
+hasArea	state.ttl
+hasLargestCity	state.ttl
+hasPopulation	state.ttl
+hasReigningGovernor	state.ttl
+locatedIn	state.ttl
+name	state.ttl
+population	state.ttl
+appointedBy	judge.ttl
+appointmentDate	judge.ttl
+hasJudgment	judge.ttl
+judges	judge.ttl
+containsFact	testimony.ttl
+givenBy	testimony.ttl
+givenIn	testimony.ttl
+givenOn	testimony.ttl
+hasMainSubject	testimony.ttl
+hasSource	testimony.ttl
+isVerified	testimony.ttl

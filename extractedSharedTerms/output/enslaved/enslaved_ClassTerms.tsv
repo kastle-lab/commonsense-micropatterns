@@ -1,953 +1,1769 @@
-Cemetery	funeral.ttl	2
-Grave	cemetery.ttl	1
-Memorial	memorial.ttl	3
-Occupant	cemetery.ttl	1
-Person	judge.ttl	143
-Counsel	counsel.ttl	1
-Gospel	gospel.ttl	1
-Integer	state.ttl	100
-Verse	gospel.ttl	1
-Resource	testimony.ttl	83
-View	view.ttl	2
-Viewpoint	view.ttl	1
-Attendee	party.ttl	1
-Datetime	project.ttl	44
-Location	village.ttl	33
-Organizer	convention.ttl	2
-Part	introduction.ttl	3
-Theme	tale.ttl	3
-Item	auction.ttl	8
-ClothingType	clothing.ttl	1
-Size	appearance.ttl	2
-Box	box.ttl	1
-Material	clothe.ttl	7
-Institution	scholar.ttl	8
-InstitutionLocation	researcher.ttl	1
-Project	project.ttl	4
-Topic	speaker.ttl	3
-Research	research.ttl	6
-Candidate	vote.ttl	1
-Election	politic.ttl	2
-Vote	vote.ttl	1
-Voter	vote.ttl	1
-Activity	activity.ttl	4
-Author	audiobook.ttl	17
-Language	literacy.ttl	5
-Genre	artist.ttl	5
-Text	church.ttl	2
-Collection	collection.ttl	1
-Collector	collection.ttl	1
-CreationDate	collection.ttl	1
-Item	collection.ttl	1
-ItemType	collection.ttl	1
-Ink	print.ttl	1
-PrintJob	print.ttl	1
-Printer	print.ttl	1
-Church	pastor.ttl	7
-Occupation	preacher.ttl	1
-Preacher	preacher.ttl	1
-Sermon	pastor.ttl	2
-Century	decade.ttl	1
-Decade	decade.ttl	1
-Event	change.ttl	12
-Gyear	carriage.ttl	2
-Time	church.ttl	4
-Juror	jury.ttl	1
-Jury	jury.ttl	1
-Seq	jury.ttl	1
-Artist	artist.ttl	4
-Artwork	art.ttl	1
-Style	style.ttl	2
-Chef	chef.ttl	1
-Cuisine	meal.ttl	2
-Restaurant	chef.ttl	1
-Energy	power.ttl	1
-Entity	issue.ttl	15
-PowerLine	power.ttl	1
-Plant	reproduction.ttl	2
-Powerentity	power.ttl	2
-Owner	home.ttl	4
-Ownership	owner.ttl	1
-Thing	desire.ttl	18
-N484938bb2d7e4360b7a7b7db78f3c280b2	owner.ttl	1
-N484938bb2d7e4360b7a7b7db78f3c280b1	owner.ttl	1
-Category	shop.ttl	2
-Merchant	merchant.ttl	1
-MerchantStore	merchant.ttl	1
-OnlineMerchant	merchant.ttl	1
-Product	trade.ttl	7
-Man	widow.ttl	2
-State	state.ttl	4
-Truth	truth.ttl	1
-Course	student.ttl	4
-Department	professor.ttl	4
-Faculty	university.ttl	1
-Professor	professor.ttl	2
-Student	subject.ttl	6
-University	institution.ttl	3
-Photo	photo.ttl	1
-Photographer	photo.ttl	1
-Portfolio	photo.ttl	1
-Double	state.ttl	9
-Price	trade.ttl	2
-Store	store.ttl	1
-Case	trial.ttl	5
-Court	justice.ttl	4
-CourtCase	court.ttl	1
-Defendant	law.ttl	2
-Judge	judge.ttl	5
-Jurisdiction	court.ttl	1
-Lawyer	courthouse.ttl	5
-Plaintiff	law.ttl	2
-Protection	protection.ttl	1
-System	principle.ttl	2
-Physicalprotection	protection.ttl	1
-Conversation	conversation.ttl	1
-Message	conversation.ttl	1
-Participant	raid.ttl	4
-Topic	conversation.ttl	1
-Emergency	rescue.ttl	1
-RescueOperation	rescue.ttl	1
-RescueTeam	rescue.ttl	1
-Victim	assault.ttl	2
-SelfLove	love.ttl	1
-Medium	information.ttl	3
-Painting	painting.ttl	1
-N2fc4409f5d8741aabdef801fbf90ce36b3	painting.ttl	1
-N2fc4409f5d8741aabdef801fbf90ce36b1	painting.ttl	1
-Detail	request.ttl	2
-Image	image.ttl	1
-Gender	baby.ttl	3
-Individual	discrimination.ttl	9
-Care	care.ttl	1
-CareActivity	care.ttl	1
-CareLocation	care.ttl	1
-Provider	service.ttl	2
-Recipient	aid.ttl	2
-HealthcareProfessional	care.ttl	1
-Abolition	slavery.ttl	2
-Practice	practice.ttl	2
-Movement	movement.ttl	2
-Genre	song.ttl	1
-Lyrics	song.ttl	1
-Song	song.ttl	1
-Context	symbol.ttl	1
-Representation	symbol.ttl	1
-Symbol	symbol.ttl	1
-Flowering	spring.ttl	1
-Spring	spring.ttl	1
-SpringSeason	spring.ttl	1
-Weather	spring.ttl	1
-Class	punishment.ttl	16
-Teacher	school.ttl	3
-Database	entry.ttl	1
-Entry	diary.ttl	2
-Degree	teacher.ttl	1
-School	girl.ttl	4
-Subject	professor.ttl	10
-Colonist	colonist.ttl	1
-Colony	colonist.ttl	1
-Country	state.ttl	18
-Attorney	attorney.ttl	1
-PracticeArea	attorney.ttl	1
-Instruction	instruction.ttl	1
-Employer	servant.ttl	1
-Nonnegativeinteger	ability.ttl	2
-Servant	servant.ttl	1
-Wife	wife.ttl	1
-Field	research.ttl	2
-Skill	practice.ttl	4
-SkillOwner	skill.ttl	1
-FinancialBond	bond.ttl	1
-Holder	bond.ttl	1
-InterestRate	bond.ttl	1
-Issue	issue.ttl	2
-List	list.ttl	1
-City	state.ttl	10
-Landspot	land.ttl	1
-Parcel	land.ttl	1
-State	land.ttl	1
-Meeting	meeting.ttl	1
-Recollection	recollection.ttl	1
-Anniversary	anniversary.ttl	1
-Instructor	course.ttl	1
-Donation	donation.ttl	1
-Organization	organization.ttl	9
-Input	process.ttl	1
-Output	process.ttl	1
-Process	process.ttl	1
-Abolition	abolition.ttl	1
-Entity	lack.ttl	1
-Position	organization.ttl	4
-GarmentType	seamstress.ttl	1
-Seamstress	seamstress.ttl	1
-TailorShop	seamstress.ttl	1
-Order	order.ttl	1
-Pair	pair.ttl	1
-Fabric	heming.ttl	1
-Heming	heming.ttl	3
-Sewingmachine	heming.ttl	1
-Blacksmith	blacksmith.ttl	1
-Metallurgy	blacksmith.ttl	1
-Tool	carpenter.ttl	2
-Profession	blacksmith.ttl	1
-Point	line.ttl	2
-Honor	honor.ttl	1
-Public	public.ttl	1
-Official	official.ttl	1
-Color	eye.ttl	6
-Vehicle	crew.ttl	5
-PublicTransport	transportation.ttl	1
-Transportation	transportation.ttl	4
-Vehicle	transportation.ttl	1
-Disease	health.ttl	3
-AbolitionistMovement	abolitionist.ttl	1
-SystemOrPractice	abolitionist.ttl	1
-Head	head.ttl	1
-Figure	figure.ttl	1
-Shape	eye.ttl	3
-Hero	hero.ttl	1
-Power	hero.ttl	1
-SuperPower	hero.ttl	1
-Villain	hero.ttl	1
-CulturalNorm	society.ttl	1
-Family	society.ttl	1
-Role	project.ttl	7
-Society	society.ttl	1
-Exhibit	exhibit.ttl	1
-Book	isbn.ttl	11
-Vessel	vessel.ttl	1
-N47dbf12ea09b44e7837e9a0a478bc012b1	role.ttl	1
-Assistance	assistance.ttl	1
-Provider	assistance.ttl	1
-Receiver	assistance.ttl	1
-Community	community.ttl	1
-Member	legislature.ttl	4
-N16101d8486ed4e8aab7370f30699e93cb1	community.ttl	1
-Company	company.ttl	2
-Employee	office.ttl	2
-Job	work.ttl	1
-Building	residence.ttl	3
-Furniture	office.ttl	3
-Room	home.ttl	2
-Captain	captain.ttl	2
-Crew	crew.ttl	2
-Ship	ship.ttl	1
-Race	race.ttl	1
-Sea	sea.ttl	1
-EducationalInstitution	ed.ttl	1
-Buyer	trade.ttl	2
-Customer	service.ttl	3
-Purchase	purchase.ttl	1
-Reputation	reputation.ttl	1
-Destination	pilgrimage.ttl	4
-Duration	period.ttl	10
-Transport	travel.ttl	1
-Travel	travel.ttl	1
-Impact	circumstance.ttl	2
-Probability	risk.ttl	1
-Risk	risk.ttl	1
-RiskAssessment	risk.ttl	1
-RiskFactor	risk.ttl	1
-Level	level.ttl	2
-RiskManagement	risk.ttl	1
-Invoice	total.ttl	1
-Opportunity	opportunity.ttl	1
-Fact	fact.ttl	1
-Couple	couple.ttl	2
-Militia	militia.ttl	1
-Weapon	soldier.ttl	3
-Place	state.ttl	7
-Attack	attack.ttl	1
-Target	raid.ttl	2
-Biography	biographer.ttl	2
-Publication	author.ttl	7
-LawFirm	lawyer.ttl	1
-LegalArea	lawyer.ttl	1
-LegalEducation	lawyer.ttl	1
-LegalSpecialization	lawyer.ttl	1
-Loss	loss.ttl	1
-Creator	information.ttl	2
-Statue	statue.ttl	1
-Castle	kingdom.ttl	1
-King	queen.ttl	2
-Kingdom	kingdom.ttl	6
-Prince	prince.ttl	2
-Princess	kingdom.ttl	1
-Queen	queen.ttl	2
-Dog	life.ttl	1
-Flower	life.ttl	1
-Human	woman.ttl	5
-Life	life.ttl	1
-Animal	reproduction.ttl	3
-Plant	life.ttl	1
-Group	majority.ttl	2
-Nd3d404c3d0fe4e05bfe67f9531eb5770b1	group.ttl	1
-Guest	wedding.ttl	2
-Invitation	guest.ttl	1
-Producer	release.ttl	1
-Release	release.ttl	1
-GPA	student.ttl	1
-Major	student.ttl	1
-Minor	student.ttl	1
-Fire	fire.ttl	2
-FireAlarm	fire.ttl	1
-FireDepartment	fire.ttl	1
-FireSeverity	fire.ttl	1
-FireSource	fire.ttl	1
-Firefighter	fire.ttl	1
-Heat	fire.ttl	1
-Light	fire.ttl	1
-Smoke	fire.ttl	1
-Support	support.ttl	1
-User	permission.ttl	4
-Escape	escape.ttl	1
-Belief	belief.ttl	1
-Believer	belief.ttl	1
-House	neighbor.ttl	2
-Na3773eb7098347bbac15ca20ee75c694b1	household.ttl	1
-Na3773eb7098347bbac15ca20ee75c694b6	household.ttl	1
-Captive	captivity.ttl	1
-StateOfCaptivity	captivity.ttl	1
-Treatment	health.ttl	3
-Medal	veteran.ttl	1
-MilitaryRank	veteran.ttl	1
-Veteran	veteran.ttl	1
-War	soldier.ttl	2
-Continent	nation.ttl	2
-Emancipation	emancipation.ttl	1
-Acter	behalf.ttl	1
-Behalf	behalf.ttl	1
-Beneficiary	pension.ttl	2
-Reader	reader.ttl	1
-Assault	assault.ttl	1
-Offender	assault.ttl	1
-Painter	painter.ttl	1
-PaintingStyle	painter.ttl	1
-Bank	money.ttl	1
-Currency	earning.ttl	2
-ExchangeRate	money.ttl	1
-Money	money.ttl	1
-Transaction	money.ttl	1
-Page	page.ttl	1
-Biographer	biographer.ttl	1
-Resident	resident.ttl	1
-Prayer	missionary.ttl	2
-ReligiousDenomination	prayer.ttl	1
-Time	prayer.ttl	1
-Religiousactivity	prayer.ttl	1
-Hospital	doctor.ttl	2
-Patient	health.ttl	2
-Physician	physician.ttl	1
-Specialization	physician.ttl	1
-Specialty	physician.ttl	1
-Year	year.ttl	1
-Literal	year.ttl	1
-Estate	estate.ttl	1
-RealEstate	estate.ttl	1
-Historian	historian.ttl	1
-HistoricalTopic	historian.ttl	1
-Publication	historian.ttl	1
-Historicaltopic	historian.ttl	1
-N7048638ddbe744ef92b7ef71d2bc54beb1	time.ttl	1
-Period	period.ttl	3
-Timezone	time.ttl	1
-Situation	situation.ttl	1
-Priest	church.ttl	3
-Religiousleader	bishop.ttl	2
-Birthdate	autobiography.ttl	1
-Date	autobiography.ttl	1
-Congregation	pastor.ttl	5
-Service	church.ttl	3
-Day	day.ttl	1
-TimePart	day.ttl	1
-Area	area.ttl	1
-Nfd2d608153154bdfae3c4153c1c73b17b1	area.ttl	1
-County	county.ttl	1
-CountySeat	county.ttl	1
-Contribution	contribution.ttl	1
-Character	tale.ttl	4
-Story	tale.ttl	2
-Effect	effect.ttl	1
-KidnappingEvent	kidnapping.ttl	1
-Agent	judge.ttl	5
-Battle	battle.ttl	1
-Combatant	battle.ttl	1
-Fund	fund.ttl	1
-Investment	fund.ttl	1
-Effort	effort.ttl	1
-Abolitionist	antislavery.ttl	1
-AntislaveryMovement	antislavery.ttl	1
-Antislaverypublication	antislavery.ttl	1
-Master	slavery.ttl	1
-Slave	manumission.ttl	4
-Trade	trade.ttl	2
-Slavery	slavery.ttl	4
-Railroad	railroad.ttl	4
-BirthPlace	birth.ttl	2
-ManufacturedPlace	origin.ttl	1
-Origin	slaveholder.ttl	2
-Conversion	conversion.ttl	2
-Unit	volume.ttl	4
-Audience	speaker.ttl	2
-Boy	boy.ttl	1
-Pet	boy.ttl	1
-Sport	boy.ttl	1
-Circumstance	circumstance.ttl	1
-Factor	circumstance.ttl	1
-Earning	earning.ttl	1
-Instance	instance.ttl	1
-Expedition	expedition.ttl	1
-Publisher	audiobook.ttl	4
-Friendship	friendship.ttl	1
-Homeland	homeland.ttl	1
-Population	population.ttl	2
-Region	region.ttl	3
-Laborer	laborer.ttl	1
-Locations	native.ttl	1
-Native	native.ttl	1
-Frequency	wage.ttl	1
-Wage	wage.ttl	1
-Actor	film.ttl	4
-Award	actor.ttl	1
-Movie	actor.ttl	1
-Cotton	cotton.ttl	1
-Funding	pension.ttl	1
-Pension	pension.ttl	1
-PensionPlan	pension.ttl	1
-Pensioner	pension.ttl	1
-Retiree	pension.ttl	1
-Association	association.ttl	1
-Attempt	attempt.ttl	1
-Objective	attempt.ttl	1
-Classroom	school.ttl	1
-EducationSystem	school.ttl	1
-Ontology	school.ttl	1
-Witness	witness.ttl	1
-Favor	favor.ttl	1
-AcademicStudy	study.ttl	1
-Study	study.ttl	1
-StudyTool	study.ttl	1
-Response	suffering.ttl	2
-Supporter	supporter.ttl	1
-Arrival	arrival.ttl	2
-PersonArrival	arrival.ttl	1
-UnitSystem	unit.ttl	1
-Line	line.ttl	1
-Child	mother.ttl	2
-Parent	mother.ttl	3
-Report	report.ttl	1
-Descent	descent.ttl	1
-Controversy	controversy.ttl	1
-Cause	issue.ttl	7
-Rebel	rebellion.ttl	2
-RebelGroup	rebel.ttl	1
-N3f1fcd8fe7834504a1b4b47305dd5dc5b1	value.ttl	1
-Nb1a34d8e9ab046da8d71d7b2bd1ff877b1	value.ttl	1
-Value	respect.ttl	3
-ValueNumeric	value.ttl	1
-Consequence	cause.ttl	1
-Status	request.ttl	2
-Nation	nation.ttl	1
-Damage	damage.ttl	1
-Property	property.ttl	4
-Use	use.ttl	1
-Mean	mean.ttl	1
-NumberSet	mean.ttl	1
-Writing	literacy.ttl	2
-Influence	influence.ttl	3
-InfluenceFactor	influence.ttl	1
-InfluencePower	influence.ttl	1
-Ancestor	ancestry.ttl	1
-DateOfBirth	ancestry.ttl	1
-Descendant	ancestry.ttl	1
-N93cce6105e0b4d24bb5be2671f1034a6b1	ancestry.ttl	1
-N93cce6105e0b4d24bb5be2671f1034a6b4	ancestry.ttl	1
-PlaceOfBirth	ancestry.ttl	1
-OfficialInstitution	institution.ttl	1
-Fruit	plantation.ttl	1
-Herb	plantation.ttl	1
-Plantation	plantation.ttl	1
-Tree	plantation.ttl	1
-Enslaver	enslaver.ttl	1
-N3e77a9a39e704894af3d5867ca88d92bb1	enslaver.ttl	1
-Force	force.ttl	1
-XMLLiteral	idea.ttl	2
-Majority	majority.ttl	1
-Government	politic.ttl	1
-Politician	politician.ttl	3
-Argument	argument.ttl	1
-Conclusion	end.ttl	2
-Premise	argument.ttl	1
-President	president.ttl	1
-Axle	wagon.ttl	1
-Wagon	wagon.ttl	1
-Wheel	wagon.ttl	1
-Idea	idea.ttl	1
-N152f29b4aa5841d69cbcac4e611774a4b1	idea.ttl	1
-N152f29b4aa5841d69cbcac4e611774a4b5	idea.ttl	1
-Governor	governor.ttl	1
-Difficulty	difficulty.ttl	1
-Director	film.ttl	2
-Performance	play.ttl	1
-Play	play.ttl	1
-Script	language.ttl	2
-Tavern	tavern.ttl	1
-Establishment	tavern.ttl	1
-HistoricalEvent	history.ttl	1
-Relationship	relationship.ttl	1
-RelationshipType	relationship.ttl	1
-Action	mission.ttl	4
-Environment	agent.ttl	1
-Recipient	reward.ttl	1
-Reward	reward.ttl	1
-RewardType	reward.ttl	1
-Suit	suit.ttl	1
-FinancialInstrument	trader.ttl	1
-Langstring	material.ttl	3
-Trader	trade.ttl	3
-Authority	punishment.ttl	2
-Fate	fate.ttl	1
-Planter	planter.ttl	1
-Diary	diary.ttl	2
-Record	record.ttl	1
-Worker	worker.ttl	1
-Anyuri	domain.ttl	3
-WebDeveloper	website.ttl	1
-WebSite	website.ttl	1
-Website	domain.ttl	2
-Acre	acre.ttl	1
-AreaUnit	acre.ttl	1
-Return	return.ttl	1
-ReturnItem	return.ttl	1
-ReturnPolicy	return.ttl	1
-Account	account.ttl	1
-Duty	duty.ttl	2
-Equipment	guard.ttl	1
-Guard	prison.ttl	2
-Shift	guard.ttl	1
-Nca296b5ff4e94689b8b58a69b033fb4bb1	guard.ttl	1
-Contract	contract.ttl	1
-ContractType	contract.ttl	1
-Signatory	contract.ttl	1
-Nc0327303d0b9427fbc0bde474f20a665b1	contract.ttl	1
-Nc0327303d0b9427fbc0bde474f20a665b2	contract.ttl	1
-Marker	marker.ttl	1
-Writinginstrument	marker.ttl	1
-Marriage	marriage.ttl	1
-Spouse	marriage.ttl	1
-Condition	condition.ttl	2
-Doctor	doctor.ttl	2
-MedicalCondition	condition.ttl	1
-Symptom	health.ttl	2
-ActivismType	activist.ttl	1
-Activist	activism.ttl	2
-Bag	activist.ttl	1
-Movement	activist.ttl	1
-Organisation	activist.ttl	1
-SocialIssue	activist.ttl	1
-Eradication	smallpox.ttl	1
-Smallpox	smallpox.ttl	1
-Vaccine	smallpox.ttl	1
-VariolaVirus	smallpox.ttl	1
-Ingredient	dinner.ttl	3
-Meal	dinner.ttl	2
-MealComponent	meal.ttl	1
-MealType	meal.ttl	1
-AuthorityArea	bishop.ttl	1
-Bishop	bishop.ttl	1
-Road	road.ttl	1
-SurfaceType	road.ttl	1
-Shop	shop.ttl	1
-Plan	plan.ttl	1
-Task	task.ttl	3
-Occasion	occasion.ttl	1
-Film	film.ttl	1
-Officer	officer.ttl	1
-PoliceDepartment	officer.ttl	1
-Ability	ability.ttl	1
-AgeDistribution	population.ttl	1
-GenderRatio	population.ttl	1
-Exchange	exchange.ttl	1
-Prisoner	prisoner.ttl	1
-Adulthood	adulthood.ttl	1
-Employment	adulthood.ttl	1
-Manuscript	manuscript.ttl	1
-Paper	paper.ttl	1
-Drink	portion.ttl	1
-Food	dinner.ttl	3
-Portion	portion.ttl	1
-Whole	portion.ttl	1
-Supplier	supply.ttl	1
-Supply	supply.ttl	2
-Supply	supply.ttl	1
-Artery	arter.ttl	1
-Blood	arter.ttl	1
-BloodVessel	arter.ttl	1
-BodyPart	arter.ttl	1
-Bloodvessel	arter.ttl	1
-Grandchild	grandchild.ttl	1
-Grandparent	grandchild.ttl	1
-Passenger	passenger.ttl	1
-Ticket	passenger.ttl	1
-Intelligence	intelligence.ttl	1
-Asset	trading.ttl	1
-Broker	trading.ttl	1
-Market	trading.ttl	1
-Number	trading.ttl	1
-Trade	trading.ttl	1
-TradingPlatform	trading.ttl	1
-Thousand	thousand.ttl	1
-Comment	issue.ttl	2
-Basis	basis.ttl	1
-Feeling	feeling.ttl	1
-Bondage	bondage.ttl	2
-Practitioner	bondage.ttl	1
-TypeOfBondage	bondage.ttl	1
-PopulationCensus	census.ttl	1
-Content	preface.ttl	1
-Preface	preface.ttl	1
-Ground	ground.ttl	1
-Strength	strength.ttl	1
-Island	island.ttl	1
-Feature	version.ttl	3
-Editor	editor.ttl	1
-Arrest	arrest.ttl	1
-ArrestReport	arrest.ttl	1
-Arrestee	arrest.ttl	1
-Arrestor	arrest.ttl	1
-Crime	arrest.ttl	2
-LawEnforcementAgency	arrest.ttl	1
-PoliceOfficer	arrest.ttl	1
-Reason	arrest.ttl	1
-Suspect	arrest.ttl	1
-Lawenforcementagency	arrest.ttl	1
-Horse	horse.ttl	1
-Widow	widow.ttl	1
-Woman	mother.ttl	3
-Outcome	decision.ttl	2
-Rebellion	rebellion.ttl	4
-Commander	troop.ttl	1
-Soldier	soldier.ttl	2
-Troop	troop.ttl	2
-Drag	drag.ttl	1
-DragCostume	drag.ttl	1
-DragMakeup	drag.ttl	1
-DragShow	drag.ttl	1
-Aid	aid.ttl	1
-Donor	aid.ttl	1
-Type	aid.ttl	1
-Missionary	missionary.ttl	1
-MissionaryActivity	missionary.ttl	1
-MissionaryOrganization	missionary.ttl	1
-SpreadGospel	missionary.ttl	1
-BuildingType	building.ttl	1
-Carriage	carriage.ttl	1
-Manufacturer	carriage.ttl	1
-Word	word.ttl	1
-Speaker	speaker.ttl	1
-Guide	tour.ttl	1
-Tour	tour.ttl	1
-TourGuide	tour.ttl	1
-Tourist	tour.ttl	1
-PoliticalIssue	politician.ttl	1
-PoliticalParty	politician.ttl	1
-PoliticalPosition	politician.ttl	1
-Absorbency	black.ttl	1
-Black	black.ttl	1
-Slaveholder	slaveholder.ttl	1
-Name	name.ttl	2
-LastName	name.ttl	1
-Name	name.ttl	1
-Article	newspaper.ttl	3
-Rank	soldier.ttl	1
-Regiment	regiment.ttl	2
-Arm	body.ttl	1
-Torso	body.ttl	1
-Infant	infant.ttl	1
-FoodGroup	food.ttl	1
-FoodItem	food.ttl	1
-NutritionInfo	food.ttl	1
-Recipe	food.ttl	1
-Review	review.ttl	1
-Brigade	regiment.ttl	1
-Alphabet	language.ttl	1
-Dialect	language.ttl	1
-Grandfather	grandfather.ttl	1
-Document	introduction.ttl	2
-Fear	fear.ttl	2
-SourceOfFear	fear.ttl	1
-Access	permission.ttl	1
-Permission	permission.ttl	1
-Appearance	appearance.ttl	4
-Part	part.ttl	1
-Liberty	liberty.ttl	1
-Carpenter	carpenter.ttl	1
-Right	right.ttl	2
-Right	right.ttl	1
-Manner	manner.ttl	1
-RailLine	railroad.ttl	1
-Railroad	railroad.ttl	1
-RailroadTrack	railroad.ttl	1
-Station	railroad.ttl	1
-Train	railroad.ttl	1
-CauseOfDeath	death.ttl	1
-Death	death.ttl	1
-PlaceOfDeath	death.ttl	1
-TimeOfDeath	death.ttl	1
-Town	town.ttl	1
-Quantity	resource.ttl	1
-Independence	independence.ttl	4
-Independence	independence.ttl	1
-IndividualIndependence	independence.ttl	1
-Level	independence.ttl	1
-PoliticalIndependence	independence.ttl	1
-Success	success.ttl	1
-Rest	rest.ttl	1
-RestingIndividual	rest.ttl	1
-Memory	memory.ttl	1
-MemoryType	memory.ttl	1
-SkillLevel	level.ttl	2
-End	end.ttl	3
-FinalMoment	end.ttl	1
-TimeInterval	end.ttl	1
-Enemy	enemy.ttl	1
-Injury	injury.ttl	1
-InjuryLocation	injury.ttl	1
-InjuryType	injury.ttl	1
-Healthcondition	injury.ttl	1
-Dimension	freedom.ttl	1
-Freedom	freedom.ttl	1
-FreedomConcept	freedom.ttl	1
-Manumission	manumission.ttl	1
-SlaveOwner	manumission.ttl	1
-Address	address.ttl	1
-Obituary	obituary.ttl	1
-Nbbdcaa839c5e49d4af2ba05033c56790b1	obituary.ttl	1
-Monument	monument.ttl	2
-PersonOrEvent	memorial.ttl	1
-Petition	petition.ttl	1
-Intensity	suffering.ttl	1
-Suffering	suffering.ttl	1
-Decision	decision.ttl	1
-DecisionMaker	decision.ttl	1
-Option	decision.ttl	1
-FieldOfStudy	scholar.ttl	1
-Scholar	scholar.ttl	1
-Coast	coast.ttl	1
-Ocean	coast.ttl	1
-AstronomicalNight	night.ttl	1
-CivilNight	night.ttl	1
-FullMoonNight	night.ttl	1
-LightPollution	night.ttl	1
-StarryNight	night.ttl	1
-Diocese	priesthood.ttl	1
-Duties	priesthood.ttl	1
-Religion	pilgrimage.ttl	2
-Priesthood	priesthood.ttl	2
-Component	system.ttl	1
-Hardware	system.ttl	1
-Software	version.ttl	2
-Subcomponent	system.ttl	1
-System	system.ttl	1
-Respect	respect.ttl	1
-String	issue.ttl	4
-Struggle	struggle.ttl	1
-Request	request.ttl	1
-Baptism	baptism.ttl	1
-Sacrament	baptism.ttl	1
-Sale	sale.ttl	1
-Chance	chance.ttl	1
-Discrimination	discrimination.ttl	1
-Cabin	cabin.ttl	1
-Foot	foot.ttl	1
-Toe	foot.ttl	1
-Scene	scene.ttl	1
-MonumentType	monument.ttl	1
-Fugitive	fugitive.ttl	1
-Warrant	fugitive.ttl	1
-Plaque	plaque.ttl	1
-RoyalFamily	prince.ttl	1
-Royalperson	prince.ttl	1
-Crowd	crowd.ttl	1
-Research	research.ttl	1
-Dress	dress.ttl	1
-Journalist	press.ttl	1
-News	press.ttl	1
-Newspaper	newspaper.ttl	1
-Anysimpletype	result.ttl	1
-Result	result.ttl	1
-Water	water.ttl	1
-WaterSource	water.ttl	1
-Possession	possession.ttl	1
-Greeting	introduction.ttl	1
-Introduction	introduction.ttl	1
-Overview	introduction.ttl	1
-Coordinates	location.ttl	1
-Street	neighbor.ttl	2
-MedicalField	doctor.ttl	1
-Medicalprofessional	doctor.ttl	1
-Inmate	prison.ttl	1
-Prison	prison.ttl	1
-SecurityLevel	prison.ttl	1
-Overseer	overseer.ttl	1
-Responsibility	overseer.ttl	1
-Face	face.ttl	1
-FacialFeature	face.ttl	1
-Thought	thought.ttl	1
-Ned963e32258d4cdc9f9dee88e0432c79b1	organization.ttl	1
-Queen_Consort	queen.ttl	1
-Monarch	queen.ttl	1
-Promise	promise.ttl	1
-Justice	justice.ttl	1
-LegalSystem	justice.ttl	1
-Principle	principle.ttl	2
-BodiesOfWater	river.ttl	1
-River	river.ttl	1
-Consumer	service.ttl	1
-ServiceProvider	service.ttl	1
-Eye	eye.ttl	1
-Perception	eye.ttl	1
-Background	background.ttl	1
-Raid	raid.ttl	1
-Gift	gift.ttl	1
-BillOfSale	trade.ttl	1
-PurchaseOrder	trade.ttl	1
-Seller	trade.ttl	1
-TradeType	trade.ttl	1
-Activism	activism.ttl	1
-Issue	activism.ttl	1
-Courthouse	courthouse.ttl	5
-Courtroom	courthouse.ttl	1
-Poem	poem.ttl	1
-Ncbc19e54e6ff4dcd87266bab720beecbb1	poem.ttl	1
-Ncbc19e54e6ff4dcd87266bab720beecbb2	poem.ttl	1
-Setting	tale.ttl	1
-Tale	tale.ttl	1
-N3c0a9d62a1d64b6b9c7ea7f0401a59ecb1	tale.ttl	1
-Camp	camp.ttl	1
-CampType	camp.ttl	1
-Literacy	literacy.ttl	3
-Literacy	literacy.ttl	1
-Reading	literacy.ttl	1
-ReadingSkill	literacy.ttl	1
-WritingSkill	literacy.ttl	1
-BlogPost	example.ttl	1
-Dessert	example.ttl	1
-Enslavement	enslavement.ttl	1
-Mission	mission.ttl	1
-Missions	mission.ttl	1
-Purpose	mission.ttl	1
-Birth	birth.ttl	1
-BirthDate	birth.ttl	1
-Father	birth.ttl	1
-Mother	mother.ttl	2
-Auction	auction.ttl	1
-Bidder	auction.ttl	1
-Home	home.ttl	1
-House	home.ttl	1
-RoomType	home.ttl	1
-Fraction	half.ttl	1
-Half	half.ttl	2
-Trial	trial.ttl	1
-N99268126faf248afb7c7defbbb7a9a3eb1	reproduction.ttl	1
-Reproduction	reproduction.ttl	1
-ReproductiveOrganism	reproduction.ttl	1
-N99268126faf248afb7c7defbbb7a9a3eb7	reproduction.ttl	1
-N99268126faf248afb7c7defbbb7a9a3eb8	reproduction.ttl	1
-ActOfKindness	kindness.ttl	1
-Mail	mail.ttl	1
-Bats	cave.ttl	1
-Cave	cave.ttl	3
-Stalactite	cave.ttl	1
-Citation	citation.ttl	1
-Pastor	pastor.ttl	2
-PostalAddress	church.ttl	1
-Debt	debt.ttl	1
-Bride	wedding.ttl	1
-Groom	wedding.ttl	1
-Wedding	wedding.ttl	1
-Bill	legislature.ttl	1
-Legislature	legislature.ttl	1
-Session	legislature.ttl	1
-Novel	novel.ttl	1
-Construction	construction.ttl	1
-ConstructionMaterials	construction.ttl	1
-ConstructionWorker	construction.ttl	1
-Contractor	construction.ttl	1
-Speech	speech.ttl	1
-PastoralCounseling	pastor.ttl	1
-Clergyman	pastor.ttl	1
-Sister	sister.ttl	1
-Dinner	dinner.ttl	1
-Dish	dinner.ttl	1
-Genius	genius.ttl	1
-Residence	residence.ttl	1
-ResidenceType	residence.ttl	1
-Piece	piece.ttl	1
-Version	version.ttl	1
-Help	help.ttl	1
-Baby	baby.ttl	1
-Causes	pain.ttl	1
-Pain	pain.ttl	1
-Neighbor	neighbor.ttl	2
-Charge	charge.ttl	1
-Interest	interest.ttl	1
-Desire	desire.ttl	2
-DesireSatisfaction	desire.ttl	1
-Object	desire.ttl	1
-Ceremony	ceremony.ttl	1
-Convention	convention.ttl	1
-LeasingStatus	property.ttl	1
-Office	office.ttl	1
-Branch	branch.ttl	1
-Constellation	star.ttl	1
-Star	star.ttl	1
-Pilgrim	pilgrimage.ttl	1
-Pilgrimage	pilgrimage.ttl	1
-VolumeMeasurement	volume.ttl	1
-World	world.ttl	1
-DateTime	violence.ttl	1
-Violence	violence.ttl	1
-Hour	hour.ttl	1
-Village	village.ttl	1
-Deceased	funeral.ttl	1
-Funeral	funeral.ttl	1
-FuneralDirector	funeral.ttl	1
-FuneralService	funeral.ttl	1
-HistoricalPeriod	period.ttl	1
-Period	period.ttl	1
-Issuestatus	issue.ttl	1
-Resolution	issue.ttl	1
-Blessing	blessing.ttl	1
-BlessingType	blessing.ttl	1
-Attention	attention.ttl	1
-Focus	attention.ttl	1
-NonNegativeInteger	attention.ttl	1
-Data	information.ttl	1
-Information	information.ttl	1
-Capacity	capacity.ttl	2
-WeightCapacity	capacity.ttl	1
-Capacity	capacity.ttl	1
-Clothe	clothe.ttl	1
-Memoir	memoir.ttl	1
-Literature	memoir.ttl	1
-Girl	girl.ttl	1
-AudioBook	audiobook.ttl	1
-Narrator	audiobook.ttl	1
-Acquisition	knowledge.ttl	1
-Distribution	knowledge.ttl	1
-DomainArea	knowledge.ttl	1
-Knowledge	knowledge.ttl	3
-Source	knowledge.ttl	1
-Offence	punishment.ttl	1
-Punishment	punishment.ttl	1
-Change	change.ttl	2
-ChangeType	change.ttl	1
-Manager	project.ttl	1
-Physicalhealth	health.ttl	1
-Baseball	catcher.ttl	1
-Catcher	catcher.ttl	1
-Judgment	judge.ttl	1
-LegalCase	judge.ttl	1
-Testimony	testimony.ttl	1
+Cemetery	cemetery.ttl
+Grave	cemetery.ttl
+Memorial	cemetery.ttl
+Occupant	cemetery.ttl
+Person	cemetery.ttl
+Counsel	counsel.ttl
+Person	counsel.ttl
+Gospel	gospel.ttl
+Integer	gospel.ttl
+Verse	gospel.ttl
+Resource	gospel.ttl
+Resource	view.ttl
+View	view.ttl
+Viewpoint	view.ttl
+Attendee	party.ttl
+Datetime	party.ttl
+Integer	party.ttl
+Location	party.ttl
+Organizer	party.ttl
+Party	party.ttl
+Person	party.ttl
+Resource	party.ttl
+Theme	party.ttl
+ClothingItem	clothing.ttl
+ClothingType	clothing.ttl
+Size	clothing.ttl
+Box	box.ttl
+Material	box.ttl
+Institution	researcher.ttl
+InstitutionLocation	researcher.ttl
+Project	researcher.ttl
+ProjectTopic	researcher.ttl
+Researcher	researcher.ttl
+Candidate	vote.ttl
+Election	vote.ttl
+Person	vote.ttl
+Vote	vote.ttl
+Voter	vote.ttl
+Activity	vote.ttl
+Resource	vote.ttl
+Author	text.ttl
+Language	text.ttl
+Literary_Genre	text.ttl
+Text	text.ttl
+Collection	collection.ttl
+Collector	collection.ttl
+CreationDate	collection.ttl
+Item	collection.ttl
+ItemType	collection.ttl
+Ink	print.ttl
+PrintJob	print.ttl
+Printer	print.ttl
+Church	preacher.ttl
+Occupation	preacher.ttl
+Person	preacher.ttl
+Preacher	preacher.ttl
+Sermon	preacher.ttl
+Century	decade.ttl
+Decade	decade.ttl
+Event	decade.ttl
+Gyear	decade.ttl
+Integer	decade.ttl
+Timeperiod	decade.ttl
+Integer	jury.ttl
+Juror	jury.ttl
+Jury	jury.ttl
+Seq	jury.ttl
+Artist	art.ttl
+Artwork	art.ttl
+Style	art.ttl
+Chef	chef.ttl
+Cuisine	chef.ttl
+Integer	chef.ttl
+Restaurant	chef.ttl
+Resource	chef.ttl
+Energy	power.ttl
+PowerEntity	power.ttl
+PowerLine	power.ttl
+PowerPlant	power.ttl
+Powerentity	power.ttl
+Owner	owner.ttl
+Ownership	owner.ttl
+Thing	owner.ttl
+N484938bb2d7e4360b7a7b7db78f3c280b2	owner.ttl
+N484938bb2d7e4360b7a7b7db78f3c280b1	owner.ttl
+Category	merchant.ttl
+Merchant	merchant.ttl
+MerchantStore	merchant.ttl
+OnlineMerchant	merchant.ttl
+Product	merchant.ttl
+Resource	merchant.ttl
+Thing	merchant.ttl
+Integer	man.ttl
+Man	man.ttl
+Statement	truth.ttl
+Truth	truth.ttl
+Course	university.ttl
+Department	university.ttl
+Faculty	university.ttl
+Professor	university.ttl
+Student	university.ttl
+University	university.ttl
+Datetime	photo.ttl
+Integer	photo.ttl
+Photo	photo.ttl
+Photographer	photo.ttl
+Portfolio	photo.ttl
+Double	price.ttl
+Price	price.ttl
+Product	price.ttl
+Product	store.ttl
+Store	store.ttl
+Case	court.ttl
+Court	court.ttl
+CourtCase	court.ttl
+Defendant	court.ttl
+Judge	court.ttl
+Jurisdiction	court.ttl
+Lawyer	court.ttl
+Plaintiff	court.ttl
+Protection	protection.ttl
+SecuritySystem	protection.ttl
+Physicalprotection	protection.ttl
+Conversation	conversation.ttl
+Message	conversation.ttl
+Participant	conversation.ttl
+Topic	conversation.ttl
+Emergency	rescue.ttl
+RescueOperation	rescue.ttl
+RescueTeam	rescue.ttl
+Victim	rescue.ttl
+Person	love.ttl
+SelfLove	love.ttl
+Artist	painting.ttl
+Medium	painting.ttl
+Painting	painting.ttl
+N2fc4409f5d8741aabdef801fbf90ce36b3	painting.ttl
+N2fc4409f5d8741aabdef801fbf90ce36b1	painting.ttl
+Detail	detail.ttl
+Thing	detail.ttl
+Image	image.ttl
+Integer	image.ttl
+Resource	image.ttl
+Gender	individual.ttl
+Individual	individual.ttl
+Integer	individual.ttl
+Person	individual.ttl
+Care	care.ttl
+CareActivity	care.ttl
+CareLocation	care.ttl
+CareProvider	care.ttl
+CareRecipient	care.ttl
+HealthcareProfessional	care.ttl
+Abolitionism	abolitionism.ttl
+Person	abolitionism.ttl
+Practice	abolitionism.ttl
+SocialMovement	abolitionism.ttl
+Artist	song.ttl
+Genre	song.ttl
+Lyrics	song.ttl
+Song	song.ttl
+Context	symbol.ttl
+Representation	symbol.ttl
+Symbol	symbol.ttl
+Flowering	spring.ttl
+Resource	spring.ttl
+Spring	spring.ttl
+SpringSeason	spring.ttl
+Weather	spring.ttl
+Class	class.ttl
+Datetime	class.ttl
+Student	class.ttl
+Teacher	class.ttl
+Database	entry.ttl
+Entry	entry.ttl
+Person	entry.ttl
+Degree	teacher.ttl
+Institution	teacher.ttl
+Integer	teacher.ttl
+School	teacher.ttl
+Student	teacher.ttl
+Subject	teacher.ttl
+Teacher	teacher.ttl
+Person	teacher.ttl
+Colonist	colonist.ttl
+Colony	colonist.ttl
+Country	colonist.ttl
+Person	colonist.ttl
+Attorney	attorney.ttl
+Integer	attorney.ttl
+PracticeArea	attorney.ttl
+Instruction	instruction.ttl
+Resource	instruction.ttl
+Employer	servant.ttl
+Integer	servant.ttl
+Nonnegativeinteger	servant.ttl
+Person	servant.ttl
+Servant	servant.ttl
+Person	wife.ttl
+Wife	wife.ttl
+Field	skill.ttl
+Skill	skill.ttl
+SkillOwner	skill.ttl
+Datetime	bond.ttl
+FinancialBond	bond.ttl
+Holder	bond.ttl
+InterestRate	bond.ttl
+Issuer	bond.ttl
+Integer	list.ttl
+Item	list.ttl
+List	list.ttl
+Resource	list.ttl
+City	land.ttl
+Country	land.ttl
+Integer	land.ttl
+Landspot	land.ttl
+Parcel	land.ttl
+State	land.ttl
+Datetime	meeting.ttl
+Location	meeting.ttl
+Meeting	meeting.ttl
+Person	meeting.ttl
+Datetime	recollection.ttl
+Person	recollection.ttl
+Recollection	recollection.ttl
+Anniversary	anniversary.ttl
+Resource	anniversary.ttl
+Course	course.ttl
+Instructor	course.ttl
+Donation	donation.ttl
+Double	donation.ttl
+Organization	donation.ttl
+Person	donation.ttl
+Datetime	process.ttl
+Input	process.ttl
+Output	process.ttl
+Process	process.ttl
+Abolition	abolition.ttl
+Resource	abolition.ttl
+Entity	lack.ttl
+Position	position.ttl
+GarmentType	seamstress.ttl
+Integer	seamstress.ttl
+Location	seamstress.ttl
+Seamstress	seamstress.ttl
+Skill	seamstress.ttl
+TailorShop	seamstress.ttl
+Item	order.ttl
+Order	order.ttl
+Pair	pair.ttl
+Resource	pair.ttl
+Fabric	heming.ttl
+Heming	heming.ttl
+Sewingmachine	heming.ttl
+Blacksmith	blacksmith.ttl
+Metallurgy	blacksmith.ttl
+Tool	blacksmith.ttl
+Profession	blacksmith.ttl
+Double	point.ttl
+Point	point.ttl
+Entity	honor.ttl
+Honor	honor.ttl
+Public	public.ttl
+Resource	public.ttl
+Official	official.ttl
+Organization	official.ttl
+Color	color.ttl
+Integer	transportation.ttl
+PrivateVehicle	transportation.ttl
+PublicTransport	transportation.ttl
+Transportation	transportation.ttl
+Vehicle	transportation.ttl
+Disease	disease.ttl
+AbolitionistMovement	abolitionist.ttl
+Person	abolitionist.ttl
+SystemOrPractice	abolitionist.ttl
+Head	head.ttl
+Resource	head.ttl
+Color	figure.ttl
+Figure	figure.ttl
+Material	figure.ttl
+Shape	figure.ttl
+Hero	hero.ttl
+Integer	hero.ttl
+Power	hero.ttl
+SuperPower	hero.ttl
+Villain	hero.ttl
+Resource	hero.ttl
+CulturalNorm	society.ttl
+Family	society.ttl
+Individual	society.ttl
+Institution	society.ttl
+Person	society.ttl
+Role	society.ttl
+School	society.ttl
+Society	society.ttl
+Exhibit	exhibit.ttl
+Item	exhibit.ttl
+Resource	exhibit.ttl
+Author	literature.ttl
+Book	literature.ttl
+Genre	literature.ttl
+Double	vessel.ttl
+Integer	vessel.ttl
+Material	vessel.ttl
+Vessel	vessel.ttl
+Person	role.ttl
+Role	role.ttl
+N47dbf12ea09b44e7837e9a0a478bc012b1	role.ttl
+Assistance	assistance.ttl
+Provider	assistance.ttl
+Receiver	assistance.ttl
+Community	community.ttl
+Member	community.ttl
+N16101d8486ed4e8aab7370f30699e93cb1	community.ttl
+Company	work.ttl
+Employee	work.ttl
+Integer	work.ttl
+Job	work.ttl
+Building	room.ttl
+Furniture	room.ttl
+Room	room.ttl
+Captain	ship.ttl
+Crew	ship.ttl
+Ship	ship.ttl
+Person	race.ttl
+Race	race.ttl
+Sea	sea.ttl
+Course	ed.ttl
+EducationalInstitution	ed.ttl
+Buyer	purchase.ttl
+Customer	purchase.ttl
+Datetime	purchase.ttl
+Integer	purchase.ttl
+Product	purchase.ttl
+Purchase	purchase.ttl
+Reputation	reputation.ttl
+Resource	reputation.ttl
+Destination	travel.ttl
+Duration	travel.ttl
+Transport	travel.ttl
+Travel	travel.ttl
+Impact	risk.ttl
+Probability	risk.ttl
+Risk	risk.ttl
+RiskAssessment	risk.ttl
+RiskFactor	risk.ttl
+RiskLevel	risk.ttl
+RiskManagement	risk.ttl
+Invoice	total.ttl
+Item	total.ttl
+Datetime	opportunity.ttl
+Opportunity	opportunity.ttl
+Person	opportunity.ttl
+Subject	opportunity.ttl
+Fact	fact.ttl
+Couple	couple.ttl
+Person	couple.ttl
+Member	militia.ttl
+Militia	militia.ttl
+Role	militia.ttl
+Weapon	militia.ttl
+Integer	person.ttl
+Person	person.ttl
+Place	person.ttl
+Attack	attack.ttl
+Integer	attack.ttl
+Target	attack.ttl
+Author	biography.ttl
+Biography	biography.ttl
+Person	biography.ttl
+PublicationDate	biography.ttl
+Subject	biography.ttl
+Court	lawyer.ttl
+LawFirm	lawyer.ttl
+Lawyer	lawyer.ttl
+LegalArea	lawyer.ttl
+LegalEducation	lawyer.ttl
+LegalSpecialization	lawyer.ttl
+Class	loss.ttl
+Datetime	loss.ttl
+Loss	loss.ttl
+Resource	loss.ttl
+Organization	member.ttl
+Person	member.ttl
+Creator	statue.ttl
+Location	statue.ttl
+Statue	statue.ttl
+Castle	kingdom.ttl
+King	kingdom.ttl
+Kingdom	kingdom.ttl
+Prince	kingdom.ttl
+Princess	kingdom.ttl
+Queen	kingdom.ttl
+Datetime	life.ttl
+Dog	life.ttl
+Flower	life.ttl
+Human	life.ttl
+Life	life.ttl
+Animal	life.ttl
+Plant	life.ttl
+Group	group.ttl
+Nd3d404c3d0fe4e05bfe67f9531eb5770b1	group.ttl
+Person	group.ttl
+Event	guest.ttl
+Guest	guest.ttl
+Integer	guest.ttl
+Invitation	guest.ttl
+Location	guest.ttl
+Datetime	release.ttl
+Producer	release.ttl
+Release	release.ttl
+Course	student.ttl
+GPA	student.ttl
+Major	student.ttl
+Minor	student.ttl
+Student	student.ttl
+University	student.ttl
+Fire	fire.ttl
+FireAlarm	fire.ttl
+FireDepartment	fire.ttl
+FireSeverity	fire.ttl
+FireSource	fire.ttl
+Firefighter	fire.ttl
+Heat	fire.ttl
+Light	fire.ttl
+Smoke	fire.ttl
+Integer	support.ttl
+Support	support.ttl
+Thing	support.ttl
+User	support.ttl
+Datetime	escape.ttl
+Escape	escape.ttl
+Resource	escape.ttl
+Belief	belief.ttl
+Believer	belief.ttl
+Thing	belief.ttl
+Furniture	household.ttl
+Household	household.ttl
+Integer	household.ttl
+Na3773eb7098347bbac15ca20ee75c694b1	household.ttl
+Na3773eb7098347bbac15ca20ee75c694b6	household.ttl
+Person	household.ttl
+Captive	captivity.ttl
+StateOfCaptivity	captivity.ttl
+Disease	treatment.ttl
+Treatment	treatment.ttl
+Integer	veteran.ttl
+Medal	veteran.ttl
+MilitaryRank	veteran.ttl
+Veteran	veteran.ttl
+War	veteran.ttl
+City	country.ttl
+Continent	country.ttl
+Country	country.ttl
+Integer	country.ttl
+Emancipation	emancipation.ttl
+Acter	behalf.ttl
+Behalf	behalf.ttl
+Beneficiary	behalf.ttl
+Resource	behalf.ttl
+Book	reader.ttl
+Integer	reader.ttl
+Reader	reader.ttl
+Person	reader.ttl
+Assault	assault.ttl
+Datetime	assault.ttl
+Offender	assault.ttl
+Victim	assault.ttl
+Painter	painter.ttl
+PaintingStyle	painter.ttl
+Bank	money.ttl
+Currency	money.ttl
+ExchangeRate	money.ttl
+Money	money.ttl
+Transaction	money.ttl
+Author	page.ttl
+Page	page.ttl
+Biographer	biographer.ttl
+Biography	biographer.ttl
+Book	biographer.ttl
+Person	biographer.ttl
+Subject	biographer.ttl
+Integer	resident.ttl
+Location	resident.ttl
+Resident	resident.ttl
+Person	prayer.ttl
+Prayer	prayer.ttl
+ReligiousDenomination	prayer.ttl
+Time	prayer.ttl
+Religiousactivity	prayer.ttl
+Hospital	physician.ttl
+Patient	physician.ttl
+Physician	physician.ttl
+Specialization	physician.ttl
+Specialty	physician.ttl
+Event	year.ttl
+Resource	year.ttl
+Year	year.ttl
+Literal	year.ttl
+Estate	estate.ttl
+Location	estate.ttl
+Owner	estate.ttl
+RealEstate	estate.ttl
+Historian	historian.ttl
+HistoricalTopic	historian.ttl
+Publication	historian.ttl
+Person	historian.ttl
+Historicaltopic	historian.ttl
+Datetime	time.ttl
+N7048638ddbe744ef92b7ef71d2bc54beb1	time.ttl
+TimePeriod	time.ttl
+Timezone	time.ttl
+Location	situation.ttl
+Person	situation.ttl
+Situation	situation.ttl
+Time	situation.ttl
+Church	priest.ttl
+Priest	priest.ttl
+Religiousleader	priest.ttl
+Person	surname.ttl
+Author	autobiography.ttl
+Birthdate	autobiography.ttl
+Book	autobiography.ttl
+Date	autobiography.ttl
+Church	congregation.ttl
+Congregation	congregation.ttl
+Member	congregation.ttl
+Service	congregation.ttl
+Day	day.ttl
+TimePart	day.ttl
+Area	area.ttl
+Nfd2d608153154bdfae3c4153c1c73b17b1	area.ttl
+County	county.ttl
+CountySeat	county.ttl
+Integer	county.ttl
+State	county.ttl
+Contribution	contribution.ttl
+Author	story.ttl
+Character	story.ttl
+Genre	story.ttl
+Story	story.ttl
+Duration	effect.ttl
+Effect	effect.ttl
+Resource	effect.ttl
+Datetime	kidnapping.ttl
+Duration	kidnapping.ttl
+KidnappingEvent	kidnapping.ttl
+Location	kidnapping.ttl
+Person	kidnapping.ttl
+Agent	kidnapping.ttl
+Battle	battle.ttl
+Combatant	battle.ttl
+Participant	battle.ttl
+Fund	fund.ttl
+Investment	fund.ttl
+Effort	effort.ttl
+Resource	effort.ttl
+Abolitionist	antislavery.ttl
+AntislaveryMovement	antislavery.ttl
+Antislaverypublication	antislavery.ttl
+Thing	thing.ttl
+Abolition	slavery.ttl
+Master	slavery.ttl
+Slave	slavery.ttl
+SlaveTrade	slavery.ttl
+Slavery	slavery.ttl
+UndergroundRailroad	slavery.ttl
+BirthPlace	origin.ttl
+City	origin.ttl
+Country	origin.ttl
+Datetime	origin.ttl
+ManufacturedPlace	origin.ttl
+Origin	origin.ttl
+Person	origin.ttl
+Thing	origin.ttl
+Integer	publication.ttl
+Publication	publication.ttl
+Conversion	conversion.ttl
+Unit	conversion.ttl
+Audience	audience.ttl
+Integer	audience.ttl
+Boy	boy.ttl
+Integer	boy.ttl
+Pet	boy.ttl
+Sport	boy.ttl
+City	settlement.ttl
+Integer	settlement.ttl
+Circumstance	circumstance.ttl
+Datetime	circumstance.ttl
+Duration	circumstance.ttl
+Factor	circumstance.ttl
+Impact	circumstance.ttl
+Resource	circumstance.ttl
+Currency	earning.ttl
+Earning	earning.ttl
+Person	earning.ttl
+Datetime	instance.ttl
+Instance	instance.ttl
+Person	instance.ttl
+Thing	instance.ttl
+Expedition	expedition.ttl
+Location	expedition.ttl
+Person	expedition.ttl
+Resource	expedition.ttl
+Person	publisher.ttl
+Publication	publisher.ttl
+Publisher	publisher.ttl
+Friendship	friendship.ttl
+Person	friendship.ttl
+City	homeland.ttl
+Country	homeland.ttl
+Homeland	homeland.ttl
+Language	homeland.ttl
+Population	homeland.ttl
+Region	homeland.ttl
+Integer	laborer.ttl
+Laborer	laborer.ttl
+Country	native.ttl
+Language	native.ttl
+Locations	native.ttl
+Native	native.ttl
+Person	native.ttl
+Frequency	wage.ttl
+Wage	wage.ttl
+Actor	actor.ttl
+Award	actor.ttl
+Country	actor.ttl
+Gender	actor.ttl
+Integer	actor.ttl
+Movie	actor.ttl
+Class	cotton.ttl
+Cotton	cotton.ttl
+Beneficiary	pension.ttl
+Funding	pension.ttl
+Integer	pension.ttl
+Pension	pension.ttl
+PensionPlan	pension.ttl
+Pensioner	pension.ttl
+Retiree	pension.ttl
+Association	association.ttl
+Entity	association.ttl
+Attempt	attempt.ttl
+Datetime	attempt.ttl
+Individual	attempt.ttl
+Objective	attempt.ttl
+Classroom	school.ttl
+EducationSystem	school.ttl
+Ontology	school.ttl
+Organization	school.ttl
+Person	school.ttl
+Student	school.ttl
+Subject	school.ttl
+Teacher	school.ttl
+Event	witness.ttl
+Witness	witness.ttl
+Favor	favor.ttl
+Individual	favor.ttl
+AcademicStudy	study.ttl
+Researcher	study.ttl
+Study	study.ttl
+StudyTool	study.ttl
+Subject	study.ttl
+Time	study.ttl
+Person	response.ttl
+Response	response.ttl
+Entity	supporter.ttl
+Integer	supporter.ttl
+Organization	supporter.ttl
+Supporter	supporter.ttl
+Arrival	arrival.ttl
+Datetime	arrival.ttl
+Person	arrival.ttl
+PersonArrival	arrival.ttl
+Resource	arrival.ttl
+Unit	unit.ttl
+UnitSystem	unit.ttl
+Line	line.ttl
+Point	line.ttl
+Child	parent.ttl
+Parent	parent.ttl
+Author	report.ttl
+Report	report.ttl
+Person	descent.ttl
+Descent	descent.ttl
+Actor	controversy.ttl
+Controversy	controversy.ttl
+Resource	controversy.ttl
+Subject	controversy.ttl
+Cause	rebel.ttl
+Rebel	rebel.ttl
+RebelGroup	rebel.ttl
+Weapon	rebel.ttl
+Double	value.ttl
+N3f1fcd8fe7834504a1b4b47305dd5dc5b1	value.ttl
+Nb1a34d8e9ab046da8d71d7b2bd1ff877b1	value.ttl
+Value	value.ttl
+ValueNumeric	value.ttl
+Cause	cause.ttl
+Consequence	cause.ttl
+Event	cause.ttl
+Person	relative.ttl
+Person	status.ttl
+Status	status.ttl
+City	nation.ttl
+Continent	nation.ttl
+Double	nation.ttl
+Integer	nation.ttl
+Nation	nation.ttl
+Region	nation.ttl
+Damage	damage.ttl
+Datetime	damage.ttl
+Integer	damage.ttl
+Resource	damage.ttl
+Property	damage.ttl
+Resource	use.ttl
+Use	use.ttl
+Double	mean.ttl
+Mean	mean.ttl
+NumberSet	mean.ttl
+Resource	mean.ttl
+Thing	writing.ttl
+Writing	writing.ttl
+Entity	influence.ttl
+Influence	influence.ttl
+InfluenceFactor	influence.ttl
+InfluencePower	influence.ttl
+Ancestor	ancestry.ttl
+DateOfBirth	ancestry.ttl
+Descendant	ancestry.ttl
+N93cce6105e0b4d24bb5be2671f1034a6b1	ancestry.ttl
+N93cce6105e0b4d24bb5be2671f1034a6b4	ancestry.ttl
+Person	ancestry.ttl
+PlaceOfBirth	ancestry.ttl
+Institution	institution.ttl
+OfficialInstitution	institution.ttl
+School	institution.ttl
+University	institution.ttl
+Fruit	plantation.ttl
+Herb	plantation.ttl
+Plantation	plantation.ttl
+Thing	plantation.ttl
+Tree	plantation.ttl
+Enslaver	enslaver.ttl
+N3e77a9a39e704894af3d5867ca88d92bb1	enslaver.ttl
+Slave	enslaver.ttl
+Force	force.ttl
+XMLLiteral	force.ttl
+Group	majority.ttl
+Integer	majority.ttl
+Majority	majority.ttl
+Election	politic.ttl
+Government	politic.ttl
+Party	politic.ttl
+Politician	politic.ttl
+Argument	argument.ttl
+Conclusion	argument.ttl
+Premise	argument.ttl
+Position	president.ttl
+President	president.ttl
+Person	brother.ttl
+Axle	wagon.ttl
+Wagon	wagon.ttl
+Wheel	wagon.ttl
+Vehicle	wagon.ttl
+Idea	idea.ttl
+N152f29b4aa5841d69cbcac4e611774a4b1	idea.ttl
+N152f29b4aa5841d69cbcac4e611774a4b5	idea.ttl
+Person	idea.ttl
+XMLLiteral	idea.ttl
+Resource	idea.ttl
+Country	governor.ttl
+Datetime	governor.ttl
+Governor	governor.ttl
+Integer	governor.ttl
+Person	governor.ttl
+Resource	governor.ttl
+State	governor.ttl
+Politician	governor.ttl
+Activity	difficulty.ttl
+Difficulty	difficulty.ttl
+Actor	play.ttl
+Director	play.ttl
+Location	play.ttl
+Performance	play.ttl
+Play	play.ttl
+Script	play.ttl
+Integer	tavern.ttl
+Location	tavern.ttl
+Person	tavern.ttl
+Tavern	tavern.ttl
+Establishment	tavern.ttl
+Datetime	history.ttl
+HistoricalEvent	history.ttl
+Person	history.ttl
+Place	history.ttl
+TimePeriod	history.ttl
+Person	relationship.ttl
+Relationship	relationship.ttl
+RelationshipType	relationship.ttl
+Property	relationship.ttl
+Action	agent.ttl
+Agent	agent.ttl
+Environment	agent.ttl
+Recipient	reward.ttl
+Reward	reward.ttl
+RewardType	reward.ttl
+Suit	suit.ttl
+Case	case.ttl
+Class	trader.ttl
+FinancialInstrument	trader.ttl
+Langstring	trader.ttl
+Trader	trader.ttl
+Person	trader.ttl
+Authority	authority.ttl
+Individual	authority.ttl
+Person	authority.ttl
+Position	authority.ttl
+Fate	fate.ttl
+Planter	planter.ttl
+Diary	diary.ttl
+Entry	diary.ttl
+Person	diary.ttl
+Book	diary.ttl
+Record	record.ttl
+Integer	worker.ttl
+Organization	worker.ttl
+Worker	worker.ttl
+Anyuri	website.ttl
+Skill	website.ttl
+WebDeveloper	website.ttl
+WebSite	website.ttl
+Website	website.ttl
+Acre	acre.ttl
+AreaUnit	acre.ttl
+Resource	return.ttl
+Return	return.ttl
+ReturnItem	return.ttl
+ReturnPolicy	return.ttl
+Account	account.ttl
+Datetime	account.ttl
+Person	account.ttl
+User	account.ttl
+Duty	guard.ttl
+Equipment	guard.ttl
+Guard	guard.ttl
+Location	guard.ttl
+Place	guard.ttl
+Shift	guard.ttl
+Nca296b5ff4e94689b8b58a69b033fb4bb1	guard.ttl
+Contract	contract.ttl
+ContractType	contract.ttl
+Resource	contract.ttl
+Signatory	contract.ttl
+Nc0327303d0b9427fbc0bde474f20a665b1	contract.ttl
+Nc0327303d0b9427fbc0bde474f20a665b2	contract.ttl
+Marker	marker.ttl
+Writinginstrument	marker.ttl
+Datetime	marriage.ttl
+Individual	marriage.ttl
+Marriage	marriage.ttl
+Resource	marriage.ttl
+Spouse	marriage.ttl
+Condition	condition.ttl
+Doctor	condition.ttl
+Duration	condition.ttl
+Entity	condition.ttl
+Individual	condition.ttl
+MedicalCondition	condition.ttl
+Symptom	condition.ttl
+Treatment	condition.ttl
+ActivismType	activist.ttl
+Activist	activist.ttl
+Bag	activist.ttl
+Movement	activist.ttl
+Organisation	activist.ttl
+Person	activist.ttl
+Resource	activist.ttl
+SocialIssue	activist.ttl
+Eradication	smallpox.ttl
+Smallpox	smallpox.ttl
+Vaccine	smallpox.ttl
+VariolaVirus	smallpox.ttl
+Cuisine	meal.ttl
+Ingredient	meal.ttl
+Integer	meal.ttl
+Meal	meal.ttl
+MealComponent	meal.ttl
+MealType	meal.ttl
+AuthorityArea	bishop.ttl
+Bishop	bishop.ttl
+Church	bishop.ttl
+Religiousleader	bishop.ttl
+Integer	road.ttl
+Road	road.ttl
+SurfaceType	road.ttl
+Category	shop.ttl
+Product	shop.ttl
+Shop	shop.ttl
+Integer	plan.ttl
+Plan	plan.ttl
+Task	plan.ttl
+Occasion	occasion.ttl
+Person	occasion.ttl
+Actor	film.ttl
+Director	film.ttl
+Film	film.ttl
+Genre	film.ttl
+Person	film.ttl
+Department	officer.ttl
+Integer	officer.ttl
+Officer	officer.ttl
+PoliceDepartment	officer.ttl
+Ability	ability.ttl
+Integer	ability.ttl
+Nonnegativeinteger	ability.ttl
+Task	ability.ttl
+AgeDistribution	population.ttl
+GenderRatio	population.ttl
+Integer	population.ttl
+Place	population.ttl
+Population	population.ttl
+Datetime	exchange.ttl
+Entity	exchange.ttl
+Exchange	exchange.ttl
+Item	exchange.ttl
+Integer	prisoner.ttl
+Langstring	prisoner.ttl
+Prisoner	prisoner.ttl
+Adulthood	adulthood.ttl
+Employment	adulthood.ttl
+Integer	adulthood.ttl
+Author	manuscript.ttl
+Manuscript	manuscript.ttl
+Integer	paper.ttl
+Paper	paper.ttl
+Drink	portion.ttl
+Food	portion.ttl
+Integer	portion.ttl
+Portion	portion.ttl
+Resource	portion.ttl
+Whole	portion.ttl
+Supplier	supply.ttl
+SupplyItem	supply.ttl
+Supply	supply.ttl
+Artery	arter.ttl
+Blood	arter.ttl
+BloodVessel	arter.ttl
+BodyPart	arter.ttl
+Resource	arter.ttl
+Bloodvessel	arter.ttl
+Grandchild	grandchild.ttl
+Grandparent	grandchild.ttl
+Destination	passenger.ttl
+Integer	passenger.ttl
+Passenger	passenger.ttl
+Ticket	passenger.ttl
+Vehicle	passenger.ttl
+Person	uncle.ttl
+Intelligence	intelligence.ttl
+Person	intelligence.ttl
+Asset	trading.ttl
+Broker	trading.ttl
+Market	trading.ttl
+Number	trading.ttl
+Role	trading.ttl
+Trade	trading.ttl
+Trader	trading.ttl
+TradingPlatform	trading.ttl
+Thousand	thousand.ttl
+Anyuri	comment.ttl
+Comment	comment.ttl
+Datetime	comment.ttl
+Basis	basis.ttl
+Feeling	feeling.ttl
+Person	feeling.ttl
+Bondage	bondage.ttl
+Practitioner	bondage.ttl
+TypeOfBondage	bondage.ttl
+Country	census.ttl
+Integer	census.ttl
+PopulationCensus	census.ttl
+Author	preface.ttl
+Content	preface.ttl
+Preface	preface.ttl
+Class	ground.ttl
+Ground	ground.ttl
+Individual	strength.ttl
+Strength	strength.ttl
+Country	island.ttl
+Integer	island.ttl
+Island	island.ttl
+Organization	island.ttl
+Feature	island.ttl
+Editor	editor.ttl
+Publication	editor.ttl
+Resource	editor.ttl
+Topic	editor.ttl
+Arrest	arrest.ttl
+ArrestReport	arrest.ttl
+Arrestee	arrest.ttl
+Arrestor	arrest.ttl
+Crime	arrest.ttl
+Datetime	arrest.ttl
+LawEnforcementAgency	arrest.ttl
+Location	arrest.ttl
+PoliceOfficer	arrest.ttl
+Reason	arrest.ttl
+Suspect	arrest.ttl
+Lawenforcementagency	arrest.ttl
+Horse	horse.ttl
+Man	widow.ttl
+Person	widow.ttl
+Widow	widow.ttl
+Woman	widow.ttl
+Cause	rebellion.ttl
+Integer	rebellion.ttl
+Outcome	rebellion.ttl
+Rebel	rebellion.ttl
+Rebellion	rebellion.ttl
+Commander	troop.ttl
+Integer	troop.ttl
+Soldier	troop.ttl
+Troop	troop.ttl
+Drag	drag.ttl
+DragCostume	drag.ttl
+DragMakeup	drag.ttl
+DragShow	drag.ttl
+Aid	aid.ttl
+Donor	aid.ttl
+Recipient	aid.ttl
+Type	aid.ttl
+Missionary	missionary.ttl
+MissionaryActivity	missionary.ttl
+MissionaryOrganization	missionary.ttl
+Prayer	missionary.ttl
+SpreadGospel	missionary.ttl
+Agent	missionary.ttl
+Organization	missionary.ttl
+Building	building.ttl
+BuildingType	building.ttl
+Integer	building.ttl
+Person	building.ttl
+Carriage	carriage.ttl
+Gyear	carriage.ttl
+Integer	carriage.ttl
+Manufacturer	carriage.ttl
+Material	carriage.ttl
+Vehicle	carriage.ttl
+Integer	word.ttl
+Word	word.ttl
+Event	event.ttl
+Audience	speaker.ttl
+Integer	speaker.ttl
+Speaker	speaker.ttl
+Topic	speaker.ttl
+Destination	tour.ttl
+Duration	tour.ttl
+Guide	tour.ttl
+Location	tour.ttl
+Tour	tour.ttl
+TourGuide	tour.ttl
+Tourist	tour.ttl
+PoliticalIssue	politician.ttl
+PoliticalParty	politician.ttl
+PoliticalPosition	politician.ttl
+Politician	politician.ttl
+Resource	politician.ttl
+Person	politician.ttl
+Absorbency	black.ttl
+Black	black.ttl
+Color	black.ttl
+Thing	black.ttl
+Origin	slaveholder.ttl
+Property	slaveholder.ttl
+Slave	slaveholder.ttl
+Slaveholder	slaveholder.ttl
+Person	slaveholder.ttl
+City	region.ttl
+Country	region.ttl
+Integer	region.ttl
+Region	region.ttl
+FirstName	name.ttl
+LastName	name.ttl
+Thing	name.ttl
+Name	name.ttl
+Company	company.ttl
+Integer	company.ttl
+Person	company.ttl
+Article	article.ttl
+Rank	soldier.ttl
+Regiment	soldier.ttl
+Soldier	soldier.ttl
+War	soldier.ttl
+Weapon	soldier.ttl
+Arm	body.ttl
+Torso	body.ttl
+Duty	duty.ttl
+Person	duty.ttl
+Resource	duty.ttl
+Datetime	infant.ttl
+Infant	infant.ttl
+Person	infant.ttl
+Food	food.ttl
+FoodGroup	food.ttl
+FoodItem	food.ttl
+Ingredient	food.ttl
+NutritionInfo	food.ttl
+Recipe	food.ttl
+Resource	food.ttl
+Integer	review.ttl
+Product	review.ttl
+Review	review.ttl
+User	review.ttl
+Theme	theme.ttl
+Thing	theme.ttl
+Brigade	regiment.ttl
+Integer	regiment.ttl
+Person	regiment.ttl
+Regiment	regiment.ttl
+Alphabet	language.ttl
+Dialect	language.ttl
+Language	language.ttl
+Script	language.ttl
+Grandfather	grandfather.ttl
+Person	grandfather.ttl
+Document	document.ttl
+Person	document.ttl
+Fear	fear.ttl
+SourceOfFear	fear.ttl
+Court	law.ttl
+Defendant	law.ttl
+Judge	law.ttl
+Lawyer	law.ttl
+Plaintiff	law.ttl
+Class	law.ttl
+Student	subject.ttl
+Subject	subject.ttl
+Access	permission.ttl
+Action	permission.ttl
+Permission	permission.ttl
+Resource	permission.ttl
+Role	permission.ttl
+User	permission.ttl
+Appearance	appearance.ttl
+Color	appearance.ttl
+Shape	appearance.ttl
+Size	appearance.ttl
+Part	part.ttl
+Thing	part.ttl
+Liberty	liberty.ttl
+Carpenter	carpenter.ttl
+Person	carpenter.ttl
+Project	carpenter.ttl
+Tool	carpenter.ttl
+Human	right.ttl
+LegalRight	right.ttl
+Right	right.ttl
+Manner	manner.ttl
+Resource	manner.ttl
+RailLine	railroad.ttl
+Railroad	railroad.ttl
+RailroadTrack	railroad.ttl
+Station	railroad.ttl
+Train	railroad.ttl
+CauseOfDeath	death.ttl
+Datetime	death.ttl
+Death	death.ttl
+Person	death.ttl
+PlaceOfDeath	death.ttl
+TimeOfDeath	death.ttl
+Integer	town.ttl
+Town	town.ttl
+Anyuri	domain.ttl
+Owner	domain.ttl
+Website	domain.ttl
+Class	resource.ttl
+Quantity	resource.ttl
+Resource	resource.ttl
+Unit	resource.ttl
+Country	independence.ttl
+EconomicIndependence	independence.ttl
+Independence	independence.ttl
+IndividualIndependence	independence.ttl
+Level	independence.ttl
+Person	independence.ttl
+PoliticalIndependence	independence.ttl
+Datetime	success.ttl
+Success	success.ttl
+Rest	rest.ttl
+RestingIndividual	rest.ttl
+Memory	memory.ttl
+MemoryType	memory.ttl
+Practice	practice.ttl
+Skill	practice.ttl
+SkillLevel	practice.ttl
+Conclusion	end.ttl
+Datetime	end.ttl
+End	end.ttl
+Event	end.ttl
+FinalMoment	end.ttl
+Thing	end.ttl
+TimeInterval	end.ttl
+Enemy	enemy.ttl
+Person	enemy.ttl
+Entity	enemy.ttl
+Injury	injury.ttl
+InjuryLocation	injury.ttl
+InjuryType	injury.ttl
+Healthcondition	injury.ttl
+Dimension	freedom.ttl
+Freedom	freedom.ttl
+FreedomConcept	freedom.ttl
+Human	manumission.ttl
+Manumission	manumission.ttl
+Slave	manumission.ttl
+SlaveOwner	manumission.ttl
+Person	manumission.ttl
+Address	address.ttl
+Integer	obituary.ttl
+Obituary	obituary.ttl
+Person	obituary.ttl
+Publisher	obituary.ttl
+Resource	obituary.ttl
+Nbbdcaa839c5e49d4af2ba05033c56790b1	obituary.ttl
+Location	memorial.ttl
+Memorial	memorial.ttl
+Monument	memorial.ttl
+PersonOrEvent	memorial.ttl
+Person	petition.ttl
+Petition	petition.ttl
+Cause	suffering.ttl
+Duration	suffering.ttl
+Intensity	suffering.ttl
+Response	suffering.ttl
+Suffering	suffering.ttl
+Decision	decision.ttl
+DecisionMaker	decision.ttl
+Option	decision.ttl
+Outcome	decision.ttl
+Crew	crew.ttl
+Person	crew.ttl
+Role	crew.ttl
+Vehicle	crew.ttl
+FieldOfStudy	scholar.ttl
+Institution	scholar.ttl
+Integer	scholar.ttl
+Scholar	scholar.ttl
+City	coast.ttl
+Coast	coast.ttl
+Country	coast.ttl
+Integer	coast.ttl
+Ocean	coast.ttl
+AstronomicalNight	night.ttl
+CivilNight	night.ttl
+FullMoonNight	night.ttl
+LightPollution	night.ttl
+StarryNight	night.ttl
+Church	priesthood.ttl
+Diocese	priesthood.ttl
+Duties	priesthood.ttl
+Priest	priesthood.ttl
+Religion	priesthood.ttl
+Priesthood	priesthood.ttl
+Person	priesthood.ttl
+Component	system.ttl
+Hardware	system.ttl
+Software	system.ttl
+Subcomponent	system.ttl
+System	system.ttl
+Action	respect.ttl
+Person	respect.ttl
+Respect	respect.ttl
+Value	respect.ttl
+Person	ancestor.ttl
+Author	book.ttl
+Book	book.ttl
+Integer	book.ttl
+String	struggle.ttl
+Struggle	struggle.ttl
+Artist	artist.ttl
+Genre	artist.ttl
+Location	artist.ttl
+Datetime	request.ttl
+Detail	request.ttl
+Request	request.ttl
+Status	request.ttl
+String	request.ttl
+Baptism	baptism.ttl
+Location	baptism.ttl
+Person	baptism.ttl
+Class	baptism.ttl
+Sacrament	baptism.ttl
+Customer	sale.ttl
+Item	sale.ttl
+Sale	sale.ttl
+Chance	chance.ttl
+Event	chance.ttl
+Discrimination	discrimination.ttl
+Individual	discrimination.ttl
+Person	discrimination.ttl
+Integer	people.ttl
+Person	people.ttl
+Cabin	cabin.ttl
+Integer	cabin.ttl
+Foot	foot.ttl
+Resource	foot.ttl
+Toe	foot.ttl
+Character	scene.ttl
+Event	scene.ttl
+Location	scene.ttl
+Scene	scene.ttl
+Integer	monument.ttl
+Location	monument.ttl
+Monument	monument.ttl
+MonumentType	monument.ttl
+Fugitive	fugitive.ttl
+Integer	fugitive.ttl
+Warrant	fugitive.ttl
+Location	plaque.ttl
+Plaque	plaque.ttl
+Prince	prince.ttl
+RoyalFamily	prince.ttl
+Royalperson	prince.ttl
+Author	bibliography.ttl
+Book	bibliography.ttl
+Integer	bibliography.ttl
+Crowd	crowd.ttl
+Integer	crowd.ttl
+Field	research.ttl
+Project	research.ttl
+Publication	research.ttl
+Research	research.ttl
+Researcher	research.ttl
+Dress	dress.ttl
+Human	woman.ttl
+Integer	woman.ttl
+Woman	woman.ttl
+Article	press.ttl
+Journalist	press.ttl
+News	press.ttl
+Publication	press.ttl
+Article	newspaper.ttl
+Newspaper	newspaper.ttl
+Anysimpletype	result.ttl
+Participant	result.ttl
+Resource	result.ttl
+Result	result.ttl
+Place	place.ttl
+Resource	water.ttl
+Water	water.ttl
+WaterSource	water.ttl
+Duration	possession.ttl
+Possession	possession.ttl
+Resource	possession.ttl
+Document	introduction.ttl
+Greeting	introduction.ttl
+Introduction	introduction.ttl
+Overview	introduction.ttl
+Part	introduction.ttl
+City	location.ttl
+Coordinates	location.ttl
+Country	location.ttl
+Location	location.ttl
+Street	location.ttl
+Doctor	doctor.ttl
+Hospital	doctor.ttl
+MedicalField	doctor.ttl
+Medicalprofessional	doctor.ttl
+Resource	statement.ttl
+Statement	statement.ttl
+Guard	prison.ttl
+Inmate	prison.ttl
+Prison	prison.ttl
+SecurityLevel	prison.ttl
+Person	prison.ttl
+Department	overseer.ttl
+Integer	overseer.ttl
+Overseer	overseer.ttl
+Person	overseer.ttl
+Responsibility	overseer.ttl
+Resource	overseer.ttl
+Face	face.ttl
+FacialFeature	face.ttl
+Resource	thought.ttl
+Thought	thought.ttl
+Ned963e32258d4cdc9f9dee88e0432c79b1	organization.ttl
+Organization	organization.ttl
+Person	organization.ttl
+Position	organization.ttl
+King	queen.ttl
+Queen_Consort	queen.ttl
+Monarch	queen.ttl
+Queen	queen.ttl
+Character	character.ttl
+Person	promise.ttl
+Promise	promise.ttl
+Case	justice.ttl
+Court	justice.ttl
+Judge	justice.ttl
+Justice	justice.ttl
+Lawyer	justice.ttl
+LegalSystem	justice.ttl
+Principle	justice.ttl
+Person	justice.ttl
+BodiesOfWater	river.ttl
+Double	river.ttl
+Location	river.ttl
+River	river.ttl
+Feature	river.ttl
+Consumer	service.ttl
+Customer	service.ttl
+Datetime	service.ttl
+Provider	service.ttl
+Service	service.ttl
+ServiceProvider	service.ttl
+Color	eye.ttl
+Eye	eye.ttl
+Perception	eye.ttl
+Shape	eye.ttl
+Person	style.ttl
+Style	style.ttl
+Background	background.ttl
+Entity	background.ttl
+Participant	raid.ttl
+Raid	raid.ttl
+Target	raid.ttl
+Gift	gift.ttl
+Person	gift.ttl
+BillOfSale	trade.ttl
+Buyer	trade.ttl
+Integer	trade.ttl
+Price	trade.ttl
+Product	trade.ttl
+PurchaseOrder	trade.ttl
+Seller	trade.ttl
+Trade	trade.ttl
+TradeType	trade.ttl
+Trader	trade.ttl
+Activism	activism.ttl
+Activist	activism.ttl
+Issue	activism.ttl
+Location	activism.ttl
+Case	courthouse.ttl
+Courthouse	courthouse.ttl
+Courtroom	courthouse.ttl
+Judge	courthouse.ttl
+Lawyer	courthouse.ttl
+Author	poem.ttl
+Integer	poem.ttl
+Poem	poem.ttl
+Ncbc19e54e6ff4dcd87266bab720beecbb1	poem.ttl
+Ncbc19e54e6ff4dcd87266bab720beecbb2	poem.ttl
+Author	tale.ttl
+Book	tale.ttl
+Character	tale.ttl
+Integer	tale.ttl
+Setting	tale.ttl
+Story	tale.ttl
+Tale	tale.ttl
+Theme	tale.ttl
+N3c0a9d62a1d64b6b9c7ea7f0401a59ecb1	tale.ttl
+Camp	camp.ttl
+CampType	camp.ttl
+Integer	camp.ttl
+Class	camp.ttl
+DigitalLiteracy	literacy.ttl
+Language	literacy.ttl
+Literacy	literacy.ttl
+Person	literacy.ttl
+Reading	literacy.ttl
+ReadingSkill	literacy.ttl
+Writing	literacy.ttl
+WritingSkill	literacy.ttl
+Author	example.ttl
+BlogPost	example.ttl
+Book	example.ttl
+Dessert	example.ttl
+Person	example.ttl
+Activity	activity.ttl
+Duration	activity.ttl
+Enslavement	enslavement.ttl
+Integer	enslavement.ttl
+Resource	enslavement.ttl
+Action	mission.ttl
+Agent	mission.ttl
+Mission	mission.ttl
+Missions	mission.ttl
+Purpose	mission.ttl
+Resource	mission.ttl
+Birth	birth.ttl
+BirthDate	birth.ttl
+BirthPlace	birth.ttl
+Father	birth.ttl
+Mother	birth.ttl
+Person	birth.ttl
+Auction	auction.ttl
+Bidder	auction.ttl
+Item	auction.ttl
+Home	home.ttl
+House	home.ttl
+Integer	home.ttl
+Owner	home.ttl
+Person	home.ttl
+Room	home.ttl
+RoomType	home.ttl
+Fraction	half.ttl
+Half	half.ttl
+Integer	half.ttl
+Resource	half.ttl
+Thing	half.ttl
+Case	trial.ttl
+Person	trial.ttl
+Trial	trial.ttl
+Animal	reproduction.ttl
+N99268126faf248afb7c7defbbb7a9a3eb1	reproduction.ttl
+Plant	reproduction.ttl
+Reproduction	reproduction.ttl
+ReproductiveOrganism	reproduction.ttl
+N99268126faf248afb7c7defbbb7a9a3eb7	reproduction.ttl
+N99268126faf248afb7c7defbbb7a9a3eb8	reproduction.ttl
+ActOfKindness	kindness.ttl
+Person	kindness.ttl
+Resource	kindness.ttl
+Datetime	mail.ttl
+Mail	mail.ttl
+Person	mail.ttl
+Bats	cave.ttl
+Cave	cave.ttl
+Class	cave.ttl
+Stalactite	cave.ttl
+Citation	citation.ttl
+Person	citation.ttl
+Church	church.ttl
+Datetime	church.ttl
+Location	church.ttl
+Pastor	church.ttl
+Person	church.ttl
+PostalAddress	church.ttl
+Priest	church.ttl
+Service	church.ttl
+Text	church.ttl
+Time	church.ttl
+Place	church.ttl
+Resource	church.ttl
+Event	church.ttl
+Debt	debt.ttl
+Entity	debt.ttl
+Bride	wedding.ttl
+Groom	wedding.ttl
+Guest	wedding.ttl
+Wedding	wedding.ttl
+Bill	legislature.ttl
+Legislature	legislature.ttl
+Member	legislature.ttl
+Session	legislature.ttl
+Integer	novel.ttl
+Novel	novel.ttl
+Construction	construction.ttl
+ConstructionMaterials	construction.ttl
+ConstructionWorker	construction.ttl
+Contractor	construction.ttl
+Material	construction.ttl
+Location	speech.ttl
+Person	speech.ttl
+Speech	speech.ttl
+Church	pastor.ttl
+Congregation	pastor.ttl
+Pastor	pastor.ttl
+PastoralCounseling	pastor.ttl
+Sermon	pastor.ttl
+Clergyman	pastor.ttl
+Person	sister.ttl
+Sister	sister.ttl
+Dinner	dinner.ttl
+Dish	dinner.ttl
+Ingredient	dinner.ttl
+Meal	dinner.ttl
+Food	dinner.ttl
+Author	author.ttl
+Book	author.ttl
+Person	author.ttl
+Publication	author.ttl
+Genius	genius.ttl
+Integer	genius.ttl
+Resource	genius.ttl
+Entity	medium.ttl
+Medium	medium.ttl
+Building	residence.ttl
+Person	residence.ttl
+Residence	residence.ttl
+ResidenceType	residence.ttl
+Integer	piece.ttl
+Piece	piece.ttl
+Resource	piece.ttl
+Thing	piece.ttl
+Feature	version.ttl
+Software	version.ttl
+Version	version.ttl
+Help	help.ttl
+Person	help.ttl
+Baby	baby.ttl
+Datetime	baby.ttl
+Gender	baby.ttl
+Causes	pain.ttl
+Pain	pain.ttl
+House	neighbor.ttl
+Neighbor	neighbor.ttl
+Person	neighbor.ttl
+Street	neighbor.ttl
+Charge	charge.ttl
+Entity	charge.ttl
+Interest	interest.ttl
+Person	interest.ttl
+Desire	desire.ttl
+DesireSatisfaction	desire.ttl
+Integer	desire.ttl
+Object	desire.ttl
+Subject	desire.ttl
+Thing	desire.ttl
+Datetime	task.ttl
+Task	task.ttl
+Ceremony	ceremony.ttl
+Datetime	ceremony.ttl
+Convention	convention.ttl
+Organizer	convention.ttl
+Datetime	level.ttl
+Integer	level.ttl
+Level	level.ttl
+Person	level.ttl
+SkillLevel	level.ttl
+LeasingStatus	property.ttl
+Person	property.ttl
+Property	property.ttl
+Book	isbn.ttl
+Publisher	isbn.ttl
+Employee	office.ttl
+Furniture	office.ttl
+Office	office.ttl
+Branch	branch.ttl
+Entity	branch.ttl
+Location	branch.ttl
+Constellation	star.ttl
+Integer	star.ttl
+Star	star.ttl
+Destination	pilgrimage.ttl
+Pilgrim	pilgrimage.ttl
+Pilgrimage	pilgrimage.ttl
+Religion	pilgrimage.ttl
+Unit	volume.ttl
+VolumeMeasurement	volume.ttl
+Principle	principle.ttl
+System	principle.ttl
+Child	mother.ttl
+Mother	mother.ttl
+Parent	mother.ttl
+Person	mother.ttl
+Woman	mother.ttl
+World	world.ttl
+DateTime	violence.ttl
+Location	violence.ttl
+Person	violence.ttl
+Violence	violence.ttl
+Hour	hour.ttl
+Integer	hour.ttl
+Timeperiod	hour.ttl
+Integer	village.ttl
+Location	village.ttl
+Village	village.ttl
+Cemetery	funeral.ttl
+Deceased	funeral.ttl
+Funeral	funeral.ttl
+FuneralDirector	funeral.ttl
+FuneralService	funeral.ttl
+Integer	movement.ttl
+Movement	movement.ttl
+Datetime	period.ttl
+Duration	period.ttl
+Event	period.ttl
+HistoricalPeriod	period.ttl
+Period	period.ttl
+Cause	issue.ttl
+Comment	issue.ttl
+Entity	issue.ttl
+Integer	issue.ttl
+Issue	issue.ttl
+Issuestatus	issue.ttl
+Resolution	issue.ttl
+String	issue.ttl
+Blessing	blessing.ttl
+BlessingType	blessing.ttl
+Person	blessing.ttl
+Langstring	material.ttl
+Material	material.ttl
+Resource	material.ttl
+Attention	attention.ttl
+Focus	attention.ttl
+NonNegativeInteger	attention.ttl
+Department	professor.ttl
+Professor	professor.ttl
+Subject	professor.ttl
+Author	information.ttl
+Creator	information.ttl
+Data	information.ttl
+Information	information.ttl
+Medium	information.ttl
+VolumeCapacity	capacity.ttl
+WeightCapacity	capacity.ttl
+Capacity	capacity.ttl
+Captain	captain.ttl
+Integer	captain.ttl
+Clothe	clothe.ttl
+Material	clothe.ttl
+Memoir	memoir.ttl
+Person	memoir.ttl
+Literature	memoir.ttl
+Girl	girl.ttl
+Integer	girl.ttl
+Person	girl.ttl
+School	girl.ttl
+AudioBook	audiobook.ttl
+Author	audiobook.ttl
+Narrator	audiobook.ttl
+Publisher	audiobook.ttl
+Acquisition	knowledge.ttl
+Distribution	knowledge.ttl
+DomainArea	knowledge.ttl
+Knowledge	knowledge.ttl
+Person	knowledge.ttl
+Resource	knowledge.ttl
+Source	knowledge.ttl
+Authority	punishment.ttl
+Class	punishment.ttl
+Offence	punishment.ttl
+Punishment	punishment.ttl
+Change	change.ttl
+ChangeType	change.ttl
+Datetime	change.ttl
+Event	change.ttl
+Person	change.ttl
+Datetime	project.ttl
+Manager	project.ttl
+Person	project.ttl
+Project	project.ttl
+Role	project.ttl
+Resource	project.ttl
+Country	relation.ttl
+Person	relation.ttl
+Disease	health.ttl
+Patient	health.ttl
+Symptom	health.ttl
+Treatment	health.ttl
+Physicalhealth	health.ttl
+Baseball	catcher.ttl
+Catcher	catcher.ttl
+City	state.ttl
+Country	state.ttl
+Double	state.ttl
+Integer	state.ttl
+Person	state.ttl
+State	state.ttl
+Place	state.ttl
+Agent	judge.ttl
+Judge	judge.ttl
+Judgment	judge.ttl
+LegalCase	judge.ttl
+Person	judge.ttl
+Resource	testimony.ttl
+Testimony	testimony.ttl
