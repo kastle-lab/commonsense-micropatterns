@@ -1,4 +1,4 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix spt: <http://www.speciality.com/> .
@@ -15,7 +15,7 @@ spt:hasSpeciality rdf:type rdf:Property ;
   rdfs:domain spt:Professional ;
   rdfs:range spt:speciality .
 spt:Professional a rdfs:Class ;
-  rdfs:label ""Professional""^^xsd:string .
+  rdfs:label "Professional"^^xsd:string .
 spt:doctor rdf:type spt:Professional ;
   spt:hasSpeciality spt:cardiology .
 spt:engineer rdf:type spt:Professional ;
@@ -24,4 +24,3 @@ spt:doctor rdf:type spt:Professional ;
   spt:hasSpeciality spt:neurology .
 spt:engineer rdf:type spt:Professional ;
   spt:hasSpeciality spt:mechanical_engineering .
-"

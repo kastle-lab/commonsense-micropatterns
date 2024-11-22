@@ -99,7 +99,7 @@ def parse_results(verbose=False):
         # Organize turtle output per LLM generated noun ontologies to individual directory
         if(not os.path.exists(noun_dir)): 
             os.mkdir(noun_dir)
-            print(f"\tCreating firectory: {noun_dir}")
+            print(f"\tCreating directory: {noun_dir}")
 
         with open(os.path.join(input_path, result_file), "r") as inp:
             lines = [ line.strip() for line in inp.readlines() ]
@@ -126,9 +126,15 @@ def parse_results(verbose=False):
                     # Clean up ttl lines
                     ## These were determined while running the script a few times
                     ## And seeing how RDFlib was failing to parse the graphs
+                    ontology = ontology.replace("\"\"", "\"")
                     ontology = ontology.replace(" .", " .\n")
                     ontology = ontology.replace("\".", "\".\n")
                     ontology = ontology.replace(";", ";\n")
+                    ontology = ontology.replace("\"@", "@") # removes quotes at start
+                    pattern = r'^"@' # removes quotes at start
+                    ontology = re.sub(pattern, "", ontology)
+                    pattern = r'"$' # removes quotes at end
+                    ontology = re.sub(pattern, "", ontology)
                     ontology = ontology.replace("@@", "@")
                     ontology = ontology.replace("resourceex", "resource\nex")
                     ontology = ontology.replace("propertyex", "property\nex")

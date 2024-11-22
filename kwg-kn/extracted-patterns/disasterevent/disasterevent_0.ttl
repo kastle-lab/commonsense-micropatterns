@@ -4,28 +4,28 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix disaster: <http://www.example.org/disaster#> .
 disaster:DisasterEvent rdf:type rdfs:Class ;
-rdfs:label ""Disaster Event""@en ;
-rdfs:comment ""A major adverse event resulting from natural processes of the Earth or human activity""@en .
+rdfs:label "Disaster Event"@en ;
+rdfs:comment "A major adverse event resulting from natural processes of the Earth or human activity"@en .
 disaster:hasType rdf:type rdf:Property ;
 rdfs:range disaster:DisasterType ;
 rdfs:domain disaster:DisasterEvent ;
-rdfs:label ""has type""@en ;
-rdfs:comment ""The type of the disaster event""@en .
+rdfs:label "has type"@en ;
+rdfs:comment "The type of the disaster event"@en .
 # DisasterType class and instancesdisaster:DisasterType rdf:type rdfs:Class ;
-rdfs:label ""Disaster Type""@en ;
-rdfs:comment ""The classification of the disaster event""@en .
+rdfs:label "Disaster Type"@en ;
+rdfs:comment "The classification of the disaster event"@en .
 # Instancesdisaster:NaturalDisaster rdf:type disaster:DisasterType ;
-rdfs:label ""Natural Disaster""@en .
+rdfs:label "Natural Disaster"@en .
 disaster:ManMadeDisaster rdf:type disaster:DisasterType ;
-rdfs:label ""Manmade Disaster""@en .
+rdfs:label "Manmade Disaster"@en .
 # Properties
 disaster:hasLocation rdf:type owl:ObjectProperty ;
 rdfs:domain disaster:DisasterEvent ;
 rdfs:range xsd:string ;
-rdfs:label ""has location""@en ;
-rdfs:comment ""The location where the disaster event occurred""@en .
+rdfs:label "has location"@en ;
+rdfs:comment "The location where the disaster event occurred"@en .
 disaster:hasDate rdf:type owl:DatatypeProperty ;
 rdfs:domain disaster:DisasterEvent ;
 rdfs:range xsd:dateTime ;
-rdfs:label ""has date""@en ;
-rdfs:comment ""The date when the disaster event occurred""@en .
+rdfs:label "has date"@en ;
+rdfs:comment "The date when the disaster event occurred"@en .

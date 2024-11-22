@@ -3,25 +3,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix job: <http://www.example.org/job#> .
 job:Job rdf:type rdfs:Class ;
-    rdfs:label ""Job"" ;
-    rdfs:comment ""A class representing a job or position in a company"" .
+    rdfs:label "Job" ;
+    rdfs:comment "A class representing a job or position in a company" .
 job:hasTitle rdf:type rdf:Property ;
-    rdfs:label ""has title"" ;
-    rdfs:comment ""The title of a job"" ;
+    rdfs:label "has title" ;
+    rdfs:comment "The title of a job" ;
     rdfs:domain job:Job ;
     rdfs:range xsd:string .
 job:hasIndustry rdf:type rdf:Property ;
-    rdfs:label ""has industry"" ;
-    rdfs:comment ""The industry in which a job exists"" ;
+    rdfs:label "has industry" ;
+    rdfs:comment "The industry in which a job exists" ;
     rdfs:domain job:Job ;
     rdfs:range xsd:string .
 job:requiresExperience rdf:type rdf:Property ;
-    rdfs:label ""requires experience"" ;
-    rdfs:comment ""Whether or not a job requires previous experience"" ;
+    rdfs:label "requires experience" ;
+    rdfs:comment "Whether or not a job requires previous experience" ;
     rdfs:domain job:Job ;
     rdfs:range xsd:boolean .
 job:hasSalary rdf:type rdf:Property ;
-    rdfs:label ""has salary"" ;
-    rdfs:comment ""The salary associated with a job"" ;
+    rdfs:label "has salary" ;
+    rdfs:comment "The salary associated with a job" ;
     rdfs:domain job:Job ;
     rdfs:range xsd:decimal .

@@ -18,4 +18,4 @@ MarriageOntology:hasSpouse rdf:type owl:ObjectProperty ;
 MarriageOntology:Marriage rdf:type owl:Class ;
     rdfs:subClassOf [      rdf:type owl:Restriction ;
       owl:onProperty MarriageOntology:hasSpouse ;
-      owl:cardinality ""1""^^xsd:nonNegativeInteger] .
+      owl:cardinality "1"^^xsd:nonNegativeInteger] .

@@ -3,30 +3,30 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ont: <http://www.example.org/ontology#> .
 ont:Intervention a rdfs:Class ;
-    rdfs:label ""Intervention""@en ;
-    rdfs:comment ""A class representing interventions or actions intended to change a situation, often in the context of healthcare or policy.""@en .
+    rdfs:label "Intervention"@en ;
+    rdfs:comment "A class representing interventions or actions intended to change a situation, often in the context of healthcare or policy."@en .
 ont:hasInterventionType a rdf:Property ;
-    rdfs:label ""has intervention type""@en ;
-    rdfs:comment ""The property representing the type or category of an intervention.""@en ;
+    rdfs:label "has intervention type"@en ;
+    rdfs:comment "The property representing the type or category of an intervention."@en ;
     rdfs:domain ont:Intervention ;
     rdfs:range rdfs:Literal .
 ont:hasInterventionDuration a rdf:Property ;
-    rdfs:label ""has intervention duration""@en ;
-    rdfs:comment ""The property representing the duration of an intervention, in some applicable units.""@en ;
+    rdfs:label "has intervention duration"@en ;
+    rdfs:comment "The property representing the duration of an intervention, in some applicable units."@en ;
     rdfs:domain ont:Intervention ;
     rdfs:range xsd:duration .
 ont:hasInterventionEffectiveness a rdf:Property ;
-    rdfs:label ""has intervention effectiveness""@en ;
-    rdfs:comment ""The property indicating how effective an intervention was, often subject to further detail or measurement.""@en ;
+    rdfs:label "has intervention effectiveness"@en ;
+    rdfs:comment "The property indicating how effective an intervention was, often subject to further detail or measurement."@en ;
     rdfs:domain ont:Intervention ;
     rdfs:range rdfs:Literal .
 ont:isImplementedBy a rdf:Property ;
-    rdfs:label ""is implemented by""@en ;
-    rdfs:comment ""The property indicating who or what entity is implementing or executing an intervention.""@en ;
+    rdfs:label "is implemented by"@en ;
+    rdfs:comment "The property indicating who or what entity is implementing or executing an intervention."@en ;
     rdfs:domain ont:Intervention ;
     rdfs:range rdfs:Resource .
 ont:targets a rdf:Property ;
-    rdfs:label ""targets""@en ;
-    rdfs:comment ""The property indicating what person, object, issue, or situation an intervention is focused or targeted on.""@en ;
+    rdfs:label "targets"@en ;
+    rdfs:comment "The property indicating what person, object, issue, or situation an intervention is focused or targeted on."@en ;
     rdfs:domain ont:Intervention ;
     rdfs:range rdfs:Resource .

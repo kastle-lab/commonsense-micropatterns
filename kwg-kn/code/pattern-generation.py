@@ -129,9 +129,14 @@ def parse_results(verbose=False):
                 # Clean up ttl lines
                 ## These were determined while running the script a few times
                 ## And seeing how RDFlib was failing to parse the graphs
+                ontology = ontology.replace("\"\"", "\"")
                 ontology = ontology.replace(" .", " .\n")
                 ontology = ontology.replace("\".", "\".\n")
                 ontology = ontology.replace(";", ";\n")
+                pattern = r'^"@'# removes quotes at start
+                ontology = re.sub(pattern, "@", ontology)
+                pattern = r'"$' # removes quotes at end
+                ontology = re.sub(pattern, "", ontology)
                 ontology = ontology.replace("@@", "@")
                 ontology = ontology.replace("resourceex", "resource\nex")
                 ontology = ontology.replace("propertyex", "property\nex")

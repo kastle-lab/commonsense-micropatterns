@@ -7,8 +7,8 @@ my:timePeriod rdf:type rdf:Property .
 my:timePeriod rdfs:range xsd:integer .
 my:timePeriod rdfs:domain my:Century .
 my:FirstCentury rdf:type my:Century;
-my:timePeriod ""100""^^xsd:integer .
+my:timePeriod "100"^^xsd:integer .
 my:SecondCentury rdf:type my:Century;
-my:timePeriod ""200""^^xsd:integer .
+my:timePeriod "200"^^xsd:integer .
 my:ThirdCentury rdf:type my:Century;
-my:timePeriod ""300""^^xsd:integer .
+my:timePeriod "300"^^xsd:integer .

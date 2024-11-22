@@ -8,4 +8,4 @@
 :personA rdf:type :Person ;
   :hasEthnonym :ethnonymF .
 :ethnonymF rdf:type :Ethnonym ;
-    rdf:label ""French"" .
+    rdf:label "French" .

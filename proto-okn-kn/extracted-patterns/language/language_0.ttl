@@ -11,7 +11,7 @@ lang:hasName a rdf:Property ;
   rdfs:domain lang:Language ;
   rdfs:range lang:GeographicalArea ;
  lang:GeographicalArea a rdfs:Class ;
-  rdfs:comment ""The geographical area or region where the language originated or is predominantly spoken"" .
+  rdfs:comment "The geographical area or region where the language originated or is predominantly spoken" .
   lang:hasNumberOfSpeakers a rdf:Property ;
   rdfs:domain lang:Language ;
   rdfs:range xsd:integer ;
@@ -19,12 +19,12 @@ lang:hasDialect a rdf:Property ;
   rdfs:domain lang:Language ;
   rdfs:range lang:Dialect ;
   lang:Dialect a rdfs:Class ;
-  rdfs:comment ""A particular form of a language which is unique to a specific region or social group"" .
+  rdfs:comment "A particular form of a language which is unique to a specific region or social group" .
 lang:isWrittenInScript a rdf:Property ;
   rdfs:domain lang:Language ;
   rdfs:range lang:Script ;
 lang:Script a rdfs:Class ;
-  rdfs:comment ""A set of visible or tactile signs used to represent units of language in a systematic way"" .
+  rdfs:comment "A set of visible or tactile signs used to represent units of language in a systematic way" .
 lang:isRelatedTo a rdf:Property ;
   rdfs:domain lang:Language ;
   rdfs:range lang:Language .

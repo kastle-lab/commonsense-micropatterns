@@ -5,21 +5,21 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 : a owl:Ontology ;
 :Hour a owl:Class ;
-    rdfs:label ""Hour"" ;
-    rdfs:comment ""Represents time in hours."" .
+    rdfs:label "Hour" ;
+    rdfs:comment "Represents time in hours." .
 :TimePoint a owl:Class ;
-    rdfs:label ""Time Point"" ;
-    rdfs:comment ""Represents a specific point in time."" .
+    rdfs:label "Time Point" ;
+    rdfs:comment "Represents a specific point in time." .
 :hasHour a owl:ObjectProperty ;
-    rdfs:label ""has hour"" ;
-    rdfs:comment ""Denotes that a time point has a particular hour."" ;
+    rdfs:label "has hour" ;
+    rdfs:comment "Denotes that a time point has a particular hour." ;
     rdfs:domain :TimePoint ;
     rdfs:range :Hour .
 :Minute a owl:Class ;
-    rdfs:label ""Minute"" ;
-    rdfs:comment ""Represents time in minutes."" .
+    rdfs:label "Minute" ;
+    rdfs:comment "Represents time in minutes." .
 :hasMinute a owl:ObjectProperty ;
-    rdfs:label ""has minute"" ;
-    rdfs:comment ""Denotes that an hour has a particular number of minutes."" ;
+    rdfs:label "has minute" ;
+    rdfs:comment "Denotes that an hour has a particular number of minutes." ;
     rdfs:domain :Hour ;
     rdfs:range :Minute .

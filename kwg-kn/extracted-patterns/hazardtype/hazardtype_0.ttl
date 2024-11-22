@@ -6,10 +6,10 @@
 :Cyanide rdfs:subClassOf :Chemical .
 :Earthquake rdfs:subClassOf :Natural .
 :Famine rdfs:subClassOf :Biological .
-:Hazard rdfs:label ""Hazard Type""@en .
-:Chemical rdfs:label ""Chemical Hazard""@en .
-:Natural rdfs:label ""Natural Hazard""@en .
-:Biological rdfs:label ""Biological Hazard""@en .
-:Cyanide rdfs:label ""Cyanide""@en .
-:Earthquake rdfs:label ""Earthquake""@en .
-:Famine rdfs:label ""Famine""@en .
+:Hazard rdfs:label "Hazard Type"@en .
+:Chemical rdfs:label "Chemical Hazard"@en .
+:Natural rdfs:label "Natural Hazard"@en .
+:Biological rdfs:label "Biological Hazard"@en .
+:Cyanide rdfs:label "Cyanide"@en .
+:Earthquake rdfs:label "Earthquake"@en .
+:Famine rdfs:label "Famine"@en .

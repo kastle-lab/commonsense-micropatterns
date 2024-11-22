@@ -2,26 +2,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix : <http://www.example.org/diabetes#> .
 :Diabetes a rdfs:Class ;
-    rdfs:label ""Diabetes""@en ;
-    rdfs:comment ""A chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces.""@en .
+    rdfs:label "Diabetes"@en ;
+    rdfs:comment "A chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces."@en .
 :Type1 a rdfs:Class ;
     rdfs:subClassOf :Diabetes ;
-    rdfs:label ""Type 1 Diabetes""@en ;
-    rdfs:comment ""A form of diabetes that results from the autoimmune destruction of the insulin-producing beta cells in the pancreas.""@en .
+    rdfs:label "Type 1 Diabetes"@en ;
+    rdfs:comment "A form of diabetes that results from the autoimmune destruction of the insulin-producing beta cells in the pancreas."@en .
 :Type2 a rdfs:Class ;
     rdfs:subClassOf :Diabetes ;
-    rdfs:label ""Type 2 Diabetes""@en ;
-    rdfs:comment ""A metabolic disorder that is primarily characterized by insulin resistance, relative insulin deficiency, and hyperglycemia.""@en .
+    rdfs:label "Type 2 Diabetes"@en ;
+    rdfs:comment "A metabolic disorder that is primarily characterized by insulin resistance, relative insulin deficiency, and hyperglycemia."@en .
 :Gestational a rdfs:Class ;
     rdfs:subClassOf :Diabetes ;
-    rdfs:label ""Gestational Diabetes""@en ;
-    rdfs:comment ""A form of high blood sugar affecting pregnant women.""@en .
+    rdfs:label "Gestational Diabetes"@en ;
+    rdfs:comment "A form of high blood sugar affecting pregnant women."@en .
    :Hyperglycemia a rdfs:Class ;
-    rdfs:label ""Hyperglycemia ""@en ;
-    rdfs:comment ""A condition of abnormally high blood glucose level, which is a characteristic symptom of diabetes.""@en .
+    rdfs:label "Hyperglycemia "@en ;
+    rdfs:comment "A condition of abnormally high blood glucose level, which is a characteristic symptom of diabetes."@en .
 :Insulin a rdfs:Class ;
-    rdfs:label ""Insulin""@en ;
-    rdfs:comment ""A hormone produced in pancreas to regulate the amount of glucose in the blood.""@en .
+    rdfs:label "Insulin"@en ;
+    rdfs:comment "A hormone produced in pancreas to regulate the amount of glucose in the blood."@en .
    :Diabetes rdfs:seeAlso :Hyperglycemia, :Insulin .
 :Type1 rdfs:disjointWith :Type2, :Gestational .
 :Type2 rdfs:disjointWith :Gestational .

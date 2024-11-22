@@ -3,33 +3,33 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix hf: <http://example.org/homelessFamily#> .
 hf:Family a rdfs:Class ;
-    rdfs:comment ""A group of people united by certain conviction or common affiliation. In this case, family without home.""@en .
+    rdfs:comment "A group of people united by certain conviction or common affiliation. In this case, family without home."@en .
     hf:Member a rdfs:Class ;
-    rdfs:comment ""An individual that belongs to a family.""@en ;
+    rdfs:comment "An individual that belongs to a family."@en ;
     rdfs:subClassOf foaf:Person .
     hf:hasMember a rdf:Property ;
-    rdfs:comment ""Relates a family to a person who is a member of that family.""@en ;
+    rdfs:comment "Relates a family to a person who is a member of that family."@en ;
     rdfs:domain hf:Family ;
     rdfs:range hf:Member .
 hf:isMemberOf a rdf:Property ;
-    rdfs:comment ""Relates a person to a family to which they belong.""@en ;
+    rdfs:comment "Relates a person to a family to which they belong."@en ;
     rdfs:domain hf:Member ;
     rdfs:range hf:Family .
 hf:Homelessness a rdfs:Class ;
-    rdfs:comment ""The state or condition of having no home or permanent place of residence.""@en .
+    rdfs:comment "The state or condition of having no home or permanent place of residence."@en .
 hf:isHomeless a rdf:Property ;
-    rdfs:comment ""Indicates whether a family or an individual is homeless or not.""@en ;
+    rdfs:comment "Indicates whether a family or an individual is homeless or not."@en ;
     rdfs:domain [ rdf:type owl:Class ;
  owl:unionOf ( hf:Family hf:Member ) ] ;
     rdfs:range hf:Homelessness .
 hf:Support a rdfs:Class ;
-    rdfs:comment ""Assistance provided to homeless families or individuals.""@en .
+    rdfs:comment "Assistance provided to homeless families or individuals."@en .
 hf:receivesSupport a rdf:Property ;
-    rdfs:comment ""Indicates the support received by a homeless family or individual.""@en ;
+    rdfs:comment "Indicates the support received by a homeless family or individual."@en ;
     rdfs:domain hf:Homelessness ;
     rdfs:range hf:Support .
 hf:providesSupport a rdf:Property ;
-    rdfs:comment ""Indicates the entity providing support to homeless families or individuals.""@en ;
+    rdfs:comment "Indicates the entity providing support to homeless families or individuals."@en ;
     rdfs:domain hf:Support ;
     rdfs:range [ rdf:type owl:Class ;
  owl:unionOf ( hf:Family hf:Member ) ] .

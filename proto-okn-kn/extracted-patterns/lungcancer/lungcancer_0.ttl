@@ -7,25 +7,25 @@ lc:Patient a rdfs:Class .
 lc:hasType a rdf:Property ;
     rdfs:domain lc:LungCancer ;
     rdfs:range rdfs:Literal ;
-    rdfs:comment ""The type of lung cancer"" ;
-    rdfs:label ""hasType"" .
+    rdfs:comment "The type of lung cancer" ;
+    rdfs:label "hasType" .
 lc:hasStage a rdf:Property ;
     rdfs:domain lc:LungCancer ;
     rdfs:range xsd:integer ;
-    rdfs:comment ""The stage of lung cancer"" ;
-    rdfs:label ""hasStage"" .
+    rdfs:comment "The stage of lung cancer" ;
+    rdfs:label "hasStage" .
 lc:hasSymptom a rdf:Property ;
     rdfs:domain lc:LungCancer ;
     rdfs:range rdfs:Literal ;
-    rdfs:comment ""The symptom of lung cancer"" ;
-    rdfs:label ""hasSymptom"" .
+    rdfs:comment "The symptom of lung cancer" ;
+    rdfs:label "hasSymptom" .
 lc:isDiagnosedIn a rdf:Property ;
     rdfs:domain lc:LungCancer ;
     rdfs:range lc:Patient ;
-    rdfs:comment ""The patient diagnosed with lung cancer"" ;
-    rdfs:label ""isDiagnosedIn"" .
+    rdfs:comment "The patient diagnosed with lung cancer" ;
+    rdfs:label "isDiagnosedIn" .
 lc:hasTreatment a rdf:Property ;
     rdfs:domain lc:LungCancer ;
     rdfs:range rdfs:Literal ;
-    rdfs:comment ""The treatment for lung cancer"" ;
-    rdfs:label ""hasTreatment"" .
+    rdfs:comment "The treatment for lung cancer" ;
+    rdfs:label "hasTreatment" .

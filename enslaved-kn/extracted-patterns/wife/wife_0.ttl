@@ -4,18 +4,18 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix fam: <http://example.org/family/> .
 fam:Wife rdf:type rdfs:Class ;
-    rdfs:label ""Wife"" ;
-    rdfs:comment ""Refers to a woman in the context of her marriage"" .
+    rdfs:label "Wife" ;
+    rdfs:comment "Refers to a woman in the context of her marriage" .
 fam:hasWife rdf:type rdf:Property ;
     rdfs:domain fam:Man ;
     rdfs:range fam:Wife ;
-    rdfs:label ""has wife"" ;
-    rdfs:comment ""Refers to the wife of a man in the context of a marriage"" .
+    rdfs:label "has wife" ;
+    rdfs:comment "Refers to the wife of a man in the context of a marriage" .
 fam:isWifeOf rdf:type rdf:Property ;
     rdfs:domain fam:Wife ;
     rdfs:range fam:Man ;
-    rdfs:label ""is wife of"" ;
-    rdfs:comment ""Indicates which man a woman is married to"" .
+    rdfs:label "is wife of" ;
+    rdfs:comment "Indicates which man a woman is married to" .
 fam:Man rdf:type rdfs:Class ;
-    rdfs:label ""Man"" ;
-    rdfs:comment ""Refers to a male human being"" .
+    rdfs:label "Man" ;
+    rdfs:comment "Refers to a male human being" .

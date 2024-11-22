@@ -1,26 +1,25 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix parentOnt: <http://example.org/ontology/parent#> .
 parentOnt:Parent a rdfs:Class ;
-    rdfs:label ""Parent""@en .
+    rdfs:label "Parent"@en .
 parentOnt:Child a rdfs:Class ;
-    rdfs:label ""Child""@en .
+    rdfs:label "Child"@en .
 parentOnt:hasParent rdfs:range parentOnt:Parent ;
     rdfs:domain parentOnt:Child ;
-    rdfs:label ""has parent""@en ;
+    rdfs:label "has parent"@en ;
     a rdf:Property .
 parentOnt:isParentOf rdfs:range parentOnt:Child ;
     rdfs:domain parentOnt:Parent ;
-    rdfs:label ""is parent of""@en ;
+    rdfs:label "is parent of"@en ;
     a rdf:Property .
 parentOnt:hasName a rdfs:Domain [ owl:unionOf (parentOnt:Child parentOnt:Parent ) ] ;
     rdfs:range xsd:string ;
     a rdf:Property ;
-    rdfs:label ""has name""@en .
+    rdfs:label "has name"@en .
 parentOnt:hasAge a rdfs:Domain [ owl:unionOf (parentOnt:Child parentOnt:Parent ) ] ;
     rdfs:range xsd:int ;
     a rdf:Property ;
-    rdfs:label ""has age""@en .
-"
+    rdfs:label "has age"@en .

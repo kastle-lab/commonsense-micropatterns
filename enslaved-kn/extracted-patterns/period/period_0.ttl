@@ -1,4 +1,4 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,8 +15,7 @@ ex:endDate rdf:type owl:DatatypeProperty ;
   rdfs:range xsd:dateTime .
 ex:Entity rdf:type owl:Class .
 <http://example.org/#period1> rdf:type ex:period ;
- ex:startDate ""2023-01-01T00:00:00""^^xsd:dateTime ;
- ex:endDate ""2024-12-31T23:59:59""^^xsd:dateTime .
+ ex:startDate "2023-01-01T00:00:00"^^xsd:dateTime ;
+ ex:endDate "2024-12-31T23:59:59"^^xsd:dateTime .
  <http://example.org/#entity1> rdf:type ex:Entity ;
  ex:hasPeriod <http://example.org/#period1> .
-"

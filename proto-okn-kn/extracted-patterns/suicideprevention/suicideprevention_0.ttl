@@ -1,4 +1,4 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sp: <http://www.example.com/suicidePrevention#> .
 sp:SuicidePrevention a rdfs:Class .
@@ -29,9 +29,8 @@ sp:RiskAssessment a rdfs:Class ;
 sp:DepressionScreening a rdfs:Class ;
     rdfs:subClassOf sp:MentalHealthAssessment .
 sp:awarenessCampaigns a sp:PublicAwareness ;
-    sp:name ""National Suicide Prevention Week"" .
+    sp:name "National Suicide Prevention Week" .
 sp:nationalHotline a sp:Helplines ;
-    sp:contactNumber ""1-800-273-TALK"" .
+    sp:contactNumber "1-800-273-TALK" .
 sp:localSupportGroup a sp:SupportGroups ;
-    sp:location ""CommunityHealthCenter, CityName, StateName"" .
-"
+    sp:location "CommunityHealthCenter, CityName, StateName" .

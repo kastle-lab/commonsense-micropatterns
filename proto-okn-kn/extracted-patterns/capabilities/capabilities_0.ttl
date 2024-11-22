@@ -1,37 +1,36 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix cap: <http://example.org/capabilities#> .
 cap:Capabilities rdf:type rdfs:Class ;
-                 rdfs:label ""Capabilities""@en ;
-                 rdfs:comment ""Describe the capabilities of entities""@en .
+                 rdfs:label "Capabilities"@en ;
+                 rdfs:comment "Describe the capabilities of entities"@en .
 cap:Entity rdf:type rdfs:Class ;
-           rdfs:label ""Entity""@en ;
-           rdfs:comment ""The class of all entities that may possess capabilities""@en ;
+           rdfs:label "Entity"@en ;
+           rdfs:comment "The class of all entities that may possess capabilities"@en ;
            rdfs:subClassOf cap:Capabilities .
 cap:hasCapability rdf:type rdf:Property ;
-                  rdfs:label ""has capability""@en ;
-                  rdfs:comment ""A property indicating that an entity can perform certain actions or possess certain features""@en ;
+                  rdfs:label "has capability"@en ;
+                  rdfs:comment "A property indicating that an entity can perform certain actions or possess certain features"@en ;
                   rdfs:domain cap:Entity ;
                   rdfs:range cap:Capabilities .
 cap:Physical rdf:type rdfs:Class ;
-             rdfs:label ""Physical""@en ;
-             rdfs:comment ""The class of all physical entities""@en ;
+             rdfs:label "Physical"@en ;
+             rdfs:comment "The class of all physical entities"@en ;
              rdfs:subClassOf cap:Entity .
 cap:Digital rdf:type rdfs:Class ;
-            rdfs:label ""Digital""@en ;
-            rdfs:comment ""The class of all digital entities""@en ;
+            rdfs:label "Digital"@en ;
+            rdfs:comment "The class of all digital entities"@en ;
             rdfs:subClassOf cap:Entity .
 cap:Skill rdf:type rdfs:Class ;
-           rdfs:label ""Skill""@en ;
-           rdfs:comment ""The class of all entities that may possess certain skills""@en ;
+           rdfs:label "Skill"@en ;
+           rdfs:comment "The class of all entities that may possess certain skills"@en ;
            rdfs:subClassOf cap:Capabilities .
 cap:Knowledge rdf:type rdfs:Class ;
-              rdfs:label ""Knowledge""@en ;
-              rdfs:comment ""The class of all entities that may possess knowledge""@en ;
+              rdfs:label "Knowledge"@en ;
+              rdfs:comment "The class of all entities that may possess knowledge"@en ;
               rdfs:subClassOf cap:Capabilities .
 cap:Ability rdf:type rdfs:Class ;
-            rdfs:label ""Ability""@en ;
-            rdfs:comment ""The class of all entities that may possess certain abilities""@en ;
+            rdfs:label "Ability"@en ;
+            rdfs:comment "The class of all entities that may possess certain abilities"@en ;
             rdfs:subClassOf cap:Capabilities .
-"

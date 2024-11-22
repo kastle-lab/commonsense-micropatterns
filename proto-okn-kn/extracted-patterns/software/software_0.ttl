@@ -16,10 +16,10 @@ ex:OpenSource rdf:type rdfs:Class ;
 ex:Commercial rdf:type rdfs:Class ;
              rdfs:subClassOf ex:Software .
 ex:Apache rdf:type ex:OpenSource ;
-         ex:hasName ""Apache""^^xsd:string ;
-         ex:hasType ""Server Software""^^xsd:string ;
-         ex:hasVersion ""2.4.48""^^xsd:string .
+         ex:hasName "Apache"^^xsd:string ;
+         ex:hasType "Server Software"^^xsd:string ;
+         ex:hasVersion "2.4.48"^^xsd:string .
 ex:MicrosoftOffice rdf:type ex:Commercial ;
-                  ex:hasName ""Microsoft Office""^^xsd:string ;
-                  ex:hasType ""Productivity Software""^^xsd:string ;
-                  ex:hasVersion ""2104""^^xsd:string .
+                  ex:hasName "Microsoft Office"^^xsd:string ;
+                  ex:hasType "Productivity Software"^^xsd:string ;
+                  ex:hasVersion "2104"^^xsd:string .

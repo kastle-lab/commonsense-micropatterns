@@ -19,4 +19,4 @@
     rdfs:range xsd:date .
 :Institution rdf:type owl:Class ;
     rdfs:subClassOf owl:Thing ;
-    rdfs:comment ""A complex structure composed of different people who unite to meet a need or to pursue collective goals"".
+    rdfs:comment "A complex structure composed of different people who unite to meet a need or to pursue collective goals".

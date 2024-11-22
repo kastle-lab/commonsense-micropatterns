@@ -2,29 +2,29 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix reviewer: <http://www.example.com/reviewer#> .
 # Class Definitionsreviewer:Reviewer    rdf:type rdfs:Class ;
-    rdfs:comment ""An individual who reviews items or experiences"" ;
-    rdfs:label ""Reviewer"" .
+    rdfs:comment "An individual who reviews items or experiences" ;
+    rdfs:label "Reviewer" .
 reviewer:Item    rdf:type rdfs:Class ;
-    rdfs:comment ""An item or experience that a reviewer can review"" ;
-    rdfs:label ""Item"" .
+    rdfs:comment "An item or experience that a reviewer can review" ;
+    rdfs:label "Item" .
 reviewer:Review    rdf:type rdfs:Class ;
-    rdfs:comment ""A review of an item or experience by a reviewer"" ;
-    rdfs:label ""Review"" .
+    rdfs:comment "A review of an item or experience by a reviewer" ;
+    rdfs:label "Review" .
 # Property Definitionsreviewer:reviews    rdf:type rdf:Property ;
     rdfs:domain reviewer:Reviewer ;
     rdfs:range reviewer:Review ;
-    rdfs:comment ""Indicates that a reviewer has issued a review"" ;
-    rdfs:label ""reviews"" .
+    rdfs:comment "Indicates that a reviewer has issued a review" ;
+    rdfs:label "reviews" .
 reviewer:hasReviewer    rdf:type rdf:Property ;
     rdfs:domain reviewer:Review ;
     rdfs:range reviewer:Reviewer ;
-    rdfs:comment ""Indicates that a review is associated with a reviewer"" ;
-    rdfs:label ""hasReviewer"" .
+    rdfs:comment "Indicates that a review is associated with a reviewer" ;
+    rdfs:label "hasReviewer" .
 reviewer:aboutItem    rdf:type rdf:Property ;
     rdfs:domain reviewer:Review ;
     rdfs:range reviewer:Item ;
-    rdfs:comment ""Indicates the item or experience that a review is about"" ;
-    rdfs:label ""aboutItem"" .
+    rdfs:comment "Indicates the item or experience that a review is about" ;
+    rdfs:label "aboutItem" .
 # Individual Definitionsreviewer:John_Doe rdf:type reviewer:Reviewer .
 reviewer:Book_A rdf:type reviewer:Item .
 reviewer:Review_1    rdf:type reviewer:Review ;

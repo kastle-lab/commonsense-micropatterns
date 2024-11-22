@@ -1,0 +1,6 @@
+./construct-patterns/time.ttl
+./construct-patterns/institution.ttl
+./construct-patterns/name.ttl
+./construct-patterns/researcher.ttl
+./construct-patterns/interest.ttl
+./construct-patterns/event.ttl

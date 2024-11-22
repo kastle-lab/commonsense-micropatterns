@@ -3,24 +3,24 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix interestOntology: <http://www.example.org/interestOntology#> .
 #Defining ClassesinterestOntology:Interest   rdf:type rdfs:Class ;
-  rdfs:label ""Interest"" ;
-  rdfs:comment ""A class to denote interest in a particular subject"" .
+  rdfs:label "Interest" ;
+  rdfs:comment "A class to denote interest in a particular subject" .
 interestOntology:Subject   rdf:type rdfs:Class ;
-  rdfs:label ""Subject"" ;
-  rdfs:comment ""A class to denote a particular subject of interest"" .
+  rdfs:label "Subject" ;
+  rdfs:comment "A class to denote a particular subject of interest" .
 #Defining PropertiesinterestOntology:hasInterest   rdf:type rdf:Property ;
-  rdfs:label ""has interest"" ;
-  rdfs:comment ""A property that links an individual to an interest"" ;
+  rdfs:label "has interest" ;
+  rdfs:comment "A property that links an individual to an interest" ;
   rdfs:domain interestOntology:Individual ;
   rdfs:range interestOntology:Interest .
 interestOntology:relatedToSubject  rdf:type rdf:Property ;
-  rdfs:label ""related to subject"" ;
-  rdfs:comment ""A property that links an interest to a particular subject"" ;
+  rdfs:label "related to subject" ;
+  rdfs:comment "A property that links an interest to a particular subject" ;
   rdfs:domain interestOntology:Interest ;
   rdfs:range interestOntology:Subject .
 #Creating InstancesinterestOntology:mathInterest   rdf:type interestOntology:Interest ;
-  rdfs:label ""Interest in Mathematics"" .
+  rdfs:label "Interest in Mathematics" .
 interestOntology:mathSubject  rdf:type interestOntology:Subject ;
-  rdfs:label ""Mathematics"" ;
-  rdfs:comment ""The subject of Mathematics"" .
+  rdfs:label "Mathematics" ;
+  rdfs:comment "The subject of Mathematics" .
 #Linking InstancesinterestOntology:mathInterest  interestOntology:relatedToSubject interestOntology:mathSubject .

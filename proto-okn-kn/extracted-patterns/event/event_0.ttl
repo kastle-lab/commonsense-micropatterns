@@ -3,30 +3,30 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix event: <http://example.org/event#> .
 event:EventClass     rdf:type rdfs:Class ;
-    rdfs:label ""Event Class"" ;
-    rdfs:comment ""A superclass representing any type of event"" .
+    rdfs:label "Event Class" ;
+    rdfs:comment "A superclass representing any type of event" .
 event:EventID     rdf:type rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:domain event:EventClass ;
-    rdfs:label ""Event identifier"" ;
-    rdfs:comment ""A unique identifier for the event"" .
+    rdfs:label "Event identifier" ;
+    rdfs:comment "A unique identifier for the event" .
 event:EventName     rdf:type rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:domain event:EventClass ;
-    rdfs:label ""Event name"" ;
-    rdfs:comment ""The name of the event"" .
+    rdfs:label "Event name" ;
+    rdfs:comment "The name of the event" .
 event:Location     rdf:type rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:domain event:EventClass ;
-    rdfs:label ""Event location"" ;
-    rdfs:comment ""The place where the event is held"" .
+    rdfs:label "Event location" ;
+    rdfs:comment "The place where the event is held" .
 event:EventTime     rdf:type rdf:Property ;
     rdfs:range xsd:dateTime ;
     rdfs:domain event:EventClass ;
-    rdfs:label ""Event time"" ;
-    rdfs:comment ""The time of the event"" .
+    rdfs:label "Event time" ;
+    rdfs:comment "The time of the event" .
 event:EventDescription     rdf:type rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:domain event:EventClass ;
-    rdfs:label ""Event description"" ;
-    rdfs:comment ""Detailed description of the event"" .
+    rdfs:label "Event description" ;
+    rdfs:comment "Detailed description of the event" .

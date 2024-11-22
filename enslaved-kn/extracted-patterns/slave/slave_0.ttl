@@ -15,16 +15,16 @@ ont:performsWork rdf:type rdf:Property ;
     rdfs:range ont:Work .
 ont:Work rdf:type rdfs:Class .
 ont:Owner rdf:type rdfs:Class ;
-    rdfs:comment ""The owner of the slave. Can be an individual or an institution."" .
+    rdfs:comment "The owner of the slave. Can be an individual or an institution." .
 ont:hasName rdf:type rdf:Property ;
     rdfs:domain ont:Owner ;
     rdfs:range xsd:string .
 ont:hasAge rdf:type rdf:Property ;
     rdfs:range xsd:integer .
 ont:Spartacus rdf:type ont:Slave ;
-    ont:hasOrigin ""Thrace"" ;
+    ont:hasOrigin "Thrace" ;
     ont:heldBy _:b0 ;
     ont:performsWork ont:AgriculturalWork .
-_:b0 ont:hasName ""Lentulus Batiatus"" ;
+_:b0 ont:hasName "Lentulus Batiatus" ;
     rdf:type ont:Owner .
 ont:AgriculturalWork rdf:type ont:Work .

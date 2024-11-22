@@ -8,16 +8,22 @@ from rdflib import URIRef, Graph, Namespace, Literal
 from rdflib import OWL, RDF, RDFS, XSD, TIME
 
 ###  Directory Organization
-modl = "enslaved"
+modl = "kwg-kn"
 folders = {
     "csmodl":os.path.join(".", "csmodl", "patterns"),
     "enslaved":os.path.join(".", "enslaved-modl", "patterns"),
     "keynotions":os.path.join(".", "construct-patterns"),
-    "all-keynotions": os.path.join(".", "all-key-notions", "patterns")
+    "enslaved-kn": os.path.join(".", "enslaved-kn", "patterns"),
+    "proto-okn-kn": os.path.join(".", "proto-okn-kn", "patterns"),
+    "kwg-kn": os.path.join(".", "kwg-kn", "patterns")
 }
 folder = folders[modl]
 
+#  create directories if needed
 output_folder = os.path.join(".", "extractedSharedTerms", "output")
+if not os.path.exists(os.path.join(output_folder, modl)):
+    os.mkdir(os.path.join(output_folder, modl))
+
 if not os.path.exists(os.path.join(output_folder, modl, "connected-concept")):
     os.mkdir(os.path.join(output_folder, modl, "connected-concept"))
 output_folder = os.path.join(output_folder, modl, "connected-concept")

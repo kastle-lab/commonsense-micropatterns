@@ -1,7 +1,14 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:EventClass a rdfs:Class .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/event> a owl:Ontology ;
     opla-core:hasPatternName "event Pattern"^^xsd:string ;
@@ -13,4 +20,24 @@
         "Brandon Dave"^^xsd:string,
         "Dr. Cogan Shimizu"^^xsd:string,
         "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:eventDescription a rdf:Property ;
+    rdfs:domain kastle:EventClass ;
+    rdfs:range xsd:string .
+
+kastle:eventID a rdf:Property ;
+    rdfs:domain kastle:EventClass ;
+    rdfs:range xsd:string .
+
+kastle:eventName a rdf:Property ;
+    rdfs:domain kastle:EventClass ;
+    rdfs:range xsd:string .
+
+kastle:eventTime a rdf:Property ;
+    rdfs:domain kastle:EventClass ;
+    rdfs:range kastle:Datetime .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:EventClass ;
+    rdfs:range xsd:string .
 

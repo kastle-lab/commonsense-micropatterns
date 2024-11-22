@@ -4,41 +4,41 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 # Classes
 :Story a rdfs:Class ;
-  rdfs:comment ""Represents a story in a lore"" ;
-  rdfs:label ""Story"" .
+  rdfs:comment "Represents a story in a lore" ;
+  rdfs:label "Story" .
 :Lore a rdfs:Class ;
-  rdfs:comment ""Represents a lore"" ;
-  rdfs:label ""Lore"" .
+  rdfs:comment "Represents a lore" ;
+  rdfs:label "Lore" .
 :Character a rdfs:Class ;
-  rdfs:comment ""A character that appears in stories"" ;
-  rdfs:label ""Character"" .
+  rdfs:comment "A character that appears in stories" ;
+  rdfs:label "Character" .
 :Culture a rdfs:Class ;
-  rdfs:comment ""A group that has a certain lore"" ;
-  rdfs:label ""Culture"" .
+  rdfs:comment "A group that has a certain lore" ;
+  rdfs:label "Culture" .
 # Properties
 :hasStory a rdf:Property ;
-  rdfs:comment ""Relates a lore to a story"" ;
-  rdfs:label ""hasStory"" ;
+  rdfs:comment "Relates a lore to a story" ;
+  rdfs:label "hasStory" ;
   rdfs:domain :Lore ;
   rdfs:range :Story .
 :hasCharacter a rdf:Property ;
-  rdfs:comment ""Relates a story to its characters"" ;
-  rdfs:label ""hasCharacter"" ;
+  rdfs:comment "Relates a story to its characters" ;
+  rdfs:label "hasCharacter" ;
   rdfs:domain :Story ;
   rdfs:range :Character .
 :belongsToCulture a rdf:Property ;
-  rdfs:comment ""Relates a lore to its culture"" ;
-  rdfs:label ""belongsToCulture"" ;
+  rdfs:comment "Relates a lore to its culture" ;
+  rdfs:label "belongsToCulture" ;
   rdfs:domain :Lore ;
   rdfs:range :Culture .
 :hasLore a rdf:Property ;
-  rdfs:comment ""Relates a culture to its lore"" ;
-  rdfs:label ""hasLore"" ;
+  rdfs:comment "Relates a culture to its lore" ;
+  rdfs:label "hasLore" ;
   rdfs:domain :Culture ;
   rdfs:range :Lore .
 # Individuals
 :Odysseus a :Character ;
-  foaf:name ""Odysseus"" .
+  foaf:name "Odysseus" .
 :Odyssey a :Story ;
   :hasCharacter :Odysseus .
 :GreekMythology a :Lore ;

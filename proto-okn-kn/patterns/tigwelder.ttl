@@ -1,7 +1,21 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
 @prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Material a rdfs:Class .
+
+kastle:Skill a rdfs:Class .
+
+kastle:TigWelder a rdfs:Class ;
+    rdfs:subClassOf kastle:Welder .
+
+kastle:WeldJoint a rdfs:Class .
+
+kastle:WeldingProcess a rdfs:Class .
 
 <https://archive.org/services/purl/domain/modular_ontology_design_library/tigwelder> a owl:Ontology ;
     opla-core:hasPatternName "tigwelder Pattern"^^xsd:string ;
@@ -13,4 +27,20 @@
         "Brandon Dave"^^xsd:string,
         "Dr. Cogan Shimizu"^^xsd:string,
         "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:performsProcess a rdf:Property ;
+    rdfs:domain kastle:TigWelder ;
+    rdfs:range kastle:WeldingProcess .
+
+kastle:producesWeldJoint a rdf:Property ;
+    rdfs:domain kastle:TigWelder ;
+    rdfs:range kastle:WeldJoint .
+
+kastle:requiresSkill a rdf:Property ;
+    rdfs:domain kastle:TigWelder ;
+    rdfs:range kastle:Skill .
+
+kastle:usesMaterial a rdf:Property ;
+    rdfs:domain kastle:TigWelder ;
+    rdfs:range kastle:Material .
 

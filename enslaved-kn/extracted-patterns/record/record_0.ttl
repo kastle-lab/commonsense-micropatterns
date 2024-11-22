@@ -23,12 +23,12 @@ record:hasPages rdf:type rdf:Property ;
   rdfs:domain record:DocumentRecord ;
   rdfs:range xsd:integer .
 # Instance datarecord:rec1 rdf:type record:AudioRecord ;
-  record:hasTitle ""Moonlight Sonata"" ;
-  record:hasCreatedAt ""2022-02-23T18:25:43.511Z""^^xsd:dateTime ;
-  record:hasAuthor ""Ludwig van Beethoven"" ;
-  record:hasLength ""PT15M""^^xsd:duration .
+  record:hasTitle "Moonlight Sonata" ;
+  record:hasCreatedAt "2022-02-23T18:25:43.511Z"^^xsd:dateTime ;
+  record:hasAuthor "Ludwig van Beethoven" ;
+  record:hasLength "PT15M"^^xsd:duration .
 record:rec2 rdf:type record:DocumentRecord ;
-  record:hasTitle ""War and Peace"" ;
-  record:hasCreatedAt ""2022-02-24T10:00:00.000Z""^^xsd:dateTime ;
-  record:hasAuthor ""Leo Tolstoy"" ;
+  record:hasTitle "War and Peace" ;
+  record:hasCreatedAt "2022-02-24T10:00:00.000Z"^^xsd:dateTime ;
+  record:hasAuthor "Leo Tolstoy" ;
   record:hasPages 1225 .

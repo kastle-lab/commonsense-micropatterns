@@ -2,25 +2,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix status: <http://example.org/status#> .
 status:Status  rdf:type rdfs:Class ;
-  rdfs:comment ""The class of all statuses"" ;
-  rdfs:label ""Status"" .
+  rdfs:comment "The class of all statuses" ;
+  rdfs:label "Status" .
 status:active  rdf:type status:Status ;
-  rdfs:label ""Active"" ;
-  rdfs:comment ""Status of an entity that is currently active or operational"" .
+  rdfs:label "Active" ;
+  rdfs:comment "Status of an entity that is currently active or operational" .
 status:inactive  rdf:type status:Status ;
-  rdfs:label ""Inactive"" ;
-  rdfs:comment ""Status of an entity that is currently not active or operational"" .
+  rdfs:label "Inactive" ;
+  rdfs:comment "Status of an entity that is currently not active or operational" .
 status:pending  rdf:type status:Status ;
-  rdfs:label ""Pending"" ;
-  rdfs:comment ""Status of an entity that is on hold or awaiting action"" .
+  rdfs:label "Pending" ;
+  rdfs:comment "Status of an entity that is on hold or awaiting action" .
 status:completed  rdf:type status:Status ;
-  rdfs:label ""Completed"" ;
-  rdfs:comment ""Status of an entity that has fulfilled its purpose or operation"" .
+  rdfs:label "Completed" ;
+  rdfs:comment "Status of an entity that has fulfilled its purpose or operation" .
 status:Entity  rdf:type rdfs:Class ;
-  rdfs:comment ""The class of all entities that can have a status"" ;
-  rdfs:label ""Entity"" .
+  rdfs:comment "The class of all entities that can have a status" ;
+  rdfs:label "Entity" .
 status:hasStatus  rdf:type rdf:Property ;
   rdfs:domain status:Entity ;
   rdfs:range status:Status ;
-  rdfs:comment ""Relates an entity to its current status"" ;
-  rdfs:label ""Has status"" .
+  rdfs:comment "Relates an entity to its current status" ;
+  rdfs:label "Has status" .

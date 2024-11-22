@@ -16,10 +16,10 @@ expert:worksInField rdf:type rdf:Property ;
   rdfs:domain expert:Expert ;
   rdfs:range expert:Field .
 expert:Field rdf:type rdfs:Class ;
-  rdfs:label ""Field""^^xsd:string .
+  rdfs:label "Field"^^xsd:string .
   expert:DomainExpert rdf:type rdfs:Class ;
   rdfs:subClassOf expert:Expert ;
-  rdfs:comment ""A Domain Expert is an expert with expertise in a specific field or industry""^^xsd:string .
+  rdfs:comment "A Domain Expert is an expert with expertise in a specific field or industry"^^xsd:string .
 expert:TechnicalExpert rdf:type rdfs:Class ;
   rdfs:subClassOf expert:Expert ;
-  rdfs:comment ""A Technical Expert is an expert with expertise in a specific technology or tool""^^xsd:string .
+  rdfs:comment "A Technical Expert is an expert with expertise in a specific technology or tool"^^xsd:string .

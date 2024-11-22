@@ -1,34 +1,33 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <http://example.org/>.:godmother a rdfs:Class ;
-  rdfs:label ""Godmother""@en ;
-  rdfs:comment ""A female chosen by the parents of a child to help with the child's spiritual upbringing, in many traditions.""@en .
+  rdfs:label "Godmother"@en ;
+  rdfs:comment "A female chosen by the parents of a child to help with the child's spiritual upbringing, in many traditions."@en .
 :Person a rdfs:Class ;
   rdfs:subClassOf :godmother ;
-  rdfs:comment ""Any person can be a godmother, so it's a subclass of godmother.""@en .
+  rdfs:comment "Any person can be a godmother, so it's a subclass of godmother."@en .
 :name a rdf:Property ;
   rdfs:domain :Person ;
   rdfs:range xsd:string ;
-  rdfs:comment ""The name of the person.""@en .
+  rdfs:comment "The name of the person."@en .
 :isGodmotherOf a rdf:Property ;
   rdfs:domain :Person ;
   rdfs:range :Person ;
-  rdfs:comment ""A relation indicating that a person is godmother of another person.""@en.:religion a rdf:Property ;
+  rdfs:comment "A relation indicating that a person is godmother of another person."@en.:religion a rdf:Property ;
   rdfs:domain :Person ;
   rdfs:range xsd:string ;
-  rdfs:comment ""The religion of the person.""@en .
+  rdfs:comment "The religion of the person."@en .
  :birthdate a rdf:Property ;
   rdfs:domain :Person ;
   rdfs:range xsd:date ;
-  rdfs:comment ""The date of birth of the person.""@en .
+  rdfs:comment "The date of birth of the person."@en .
 :Person1 a :Person ;
-  :name ""Jane""^^xsd:string ;
-  :birthdate ""1985-07-20""^^xsd:date ;
-  :religion ""Christianity""^^xsd:string ;
+  :name "Jane"^^xsd:string ;
+  :birthdate "1985-07-20"^^xsd:date ;
+  :religion "Christianity"^^xsd:string ;
   :isGodmotherOf :Person2 .
 :Person2 a :Person ;
-  :name ""Jessica""^^xsd:string ;
-  :birthdate ""2010-11-15""^^xsd:date ;
-  :religion ""Christianity""^^xsd:string .
-"
+  :name "Jessica"^^xsd:string ;
+  :birthdate "2010-11-15"^^xsd:date ;
+  :religion "Christianity"^^xsd:string .

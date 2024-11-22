@@ -7,16 +7,16 @@ ent:Entity rdf:type owl:Class .
 ent:hasIdentifier rdf:type owl:ObjectProperty ;
     rdfs:domain ent:Entity ;
     rdfs:range xsd:string ;
-    rdfs:label ""has identifier""@en .
+    rdfs:label "has identifier"@en .
 ent:hasType rdf:type owl:ObjectProperty ;
     rdfs:domain ent:Entity ;
     rdfs:range xsd:string ;
-    rdfs:label ""has type""@en .
+    rdfs:label "has type"@en .
 ent:hasProperty rdf:type owl:ObjectProperty ;
     rdfs:domain ent:Entity ;
     rdfs:range owl:Thing ;
-    rdfs:label ""has property""@en .
+    rdfs:label "has property"@en .
 ent:linkedEntity rdf:type owl:ObjectProperty ;
     rdfs:domain ent:Entity ;
     rdfs:range ent:Entity ;
-    rdfs:label ""linked entity""@en .
+    rdfs:label "linked entity"@en .

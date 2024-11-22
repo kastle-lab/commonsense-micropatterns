@@ -1,37 +1,36 @@
-"@prefix : <http://www.example.com/unemploymentOntology#> .
+@prefix : <http://www.example.com/unemploymentOntology#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 :Unemployment    rdf:type owl:Class ;
-    rdfs:label ""Unemployment"" .
+    rdfs:label "Unemployment" .
 :UnemploymentRate    rdf:type owl:Class ;
-    rdfs:label ""Unemployment Rate"" ;
+    rdfs:label "Unemployment Rate" ;
     rdfs:subClassOf :Unemployment .
 :LongTermUnemployment    rdf:type owl:Class ;
-    rdfs:label ""Long Term Unemployment"" ;
+    rdfs:label "Long Term Unemployment" ;
     rdfs:subClassOf :Unemployment .
 :ShortTermUnemployment    rdf:type owl:Class ;
-    rdfs:label ""Short Term Unemployment"" ;
+    rdfs:label "Short Term Unemployment" ;
     rdfs:subClassOf :Unemployment .
 :YouthUnemployment    rdf:type owl:Class ;
-    rdfs:label ""Youth Unemployment"" ;
+    rdfs:label "Youth Unemployment" ;
     rdfs:subClassOf :Unemployment .
 :hasUnemploymentRate    rdf:type owl:DatatypeProperty ;
-    rdfs:label ""has unemployment rate"" ;
+    rdfs:label "has unemployment rate" ;
     rdfs:domain :Country ;
     rdfs:range xsd:float .
 :hasLongTermUnemployment    rdf:type owl:ObjectProperty ;
-    rdfs:label ""has long-term unemployment"" ;
+    rdfs:label "has long-term unemployment" ;
     rdfs:domain :Country ;
     rdfs:range :LongTermUnemployment .
 :hasShortTermUnemployment    rdf:type owl:ObjectProperty ;
-    rdfs:label ""has short-term unemployment"" ;
+    rdfs:label "has short-term unemployment" ;
     rdfs:domain :Country ;
     rdfs:range :ShortTermUnemployment .
 :hasYouthUnemployment    rdf:type owl:ObjectProperty ;
-    rdfs:label ""has youth unemployment"" ;
+    rdfs:label "has youth unemployment" ;
     rdfs:domain :Country ;
     rdfs:range :YouthUnemployment .
 :Country    rdf:type owl:Class ;
-    rdfs:label ""Country"" .
-"
+    rdfs:label "Country" .

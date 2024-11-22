@@ -1,4 +1,4 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://example.com/> .
 # Classes
@@ -22,11 +22,10 @@ ex:hasPopulation rdf:type rdf:Property ;
 ex:JohnDoe rdf:type ex:Person ;
            ex:hasEthnicity ex:European .
 ex:European rdf:type ex:Ethnicity ;
-            ex:hasPopulation ""750 Million"" .
+            ex:hasPopulation "750 Million" .
 ex:Asian rdf:type ex:Ethnicity ;
-         ex:hasPopulation ""4.5 Billion"" .
+         ex:hasPopulation "4.5 Billion" .
 ex:African rdf:type ex:Ethnicity ;
-           ex:hasPopulation ""1.3 Billion"" .
+           ex:hasPopulation "1.3 Billion" .
 ex:American rdf:type ex:Ethnicity ;
-            ex:hasPopulation ""580 Million"" .
-"
+            ex:hasPopulation "580 Million" .

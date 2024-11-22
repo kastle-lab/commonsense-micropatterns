@@ -4,26 +4,26 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix ex: <http://www.example.org/> .
 ex:Package rdf:type owl:Class ;
-    rdfs:label ""Package""@en ;
-    rdfs:comment ""A box or bag in which things are packed for transport, storage, or sale.""@en .
+    rdfs:label "Package"@en ;
+    rdfs:comment "A box or bag in which things are packed for transport, storage, or sale."@en .
 ex:hasWeight rdf:type owl:DatatypeProperty ;
     rdfs:domain ex:Package ;
     rdfs:range xsd:float ;
-    rdfs:label ""has weight""@en ;
-    rdfs:comment ""Relates a package to its weight.""@en .
+    rdfs:label "has weight"@en ;
+    rdfs:comment "Relates a package to its weight."@en .
 ex:hasSize rdf:type owl:DatatypeProperty ;
     rdfs:domain ex:Package ;
     rdfs:range ex:Size ;
-    rdfs:label ""has size""@en ;
-    rdfs:comment ""Relates a package to its size.""@en .
+    rdfs:label "has size"@en ;
+    rdfs:comment "Relates a package to its size."@en .
 ex:Size rdf:type owl:Class ;
-    rdfs:label ""Size""@en ;
-    rdfs:comment ""The overall dimensions or magnitude of a thing.""@en .
+    rdfs:label "Size"@en ;
+    rdfs:comment "The overall dimensions or magnitude of a thing."@en .
 ex:hasContent rdf:type owl:ObjectProperty ;
     rdfs:domain ex:Package ;
     rdfs:range ex:Content ;
-    rdfs:label ""has content""@en ;
-    rdfs:comment ""Relates a package to its content.""@en .
+    rdfs:label "has content"@en ;
+    rdfs:comment "Relates a package to its content."@en .
 ex:Content rdf:type owl:Class ;
-    rdfs:label ""Content""@en ;
-    rdfs:comment ""The things that are held or included in something.""@en .
+    rdfs:label "Content"@en ;
+    rdfs:comment "The things that are held or included in something."@en .

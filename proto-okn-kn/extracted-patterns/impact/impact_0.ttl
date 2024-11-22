@@ -1,33 +1,33 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix impact: <http://www.example.org/ontology/impact#> .
 impact:Impact     rdf:type rdfs:Class ;
-    rdfs:label ""Impact""@en ;
-    rdfs:comment ""Represents the effect that a certain action, decision, or event has upon entities or environments.""@en ;
+    rdfs:label "Impact"@en ;
+    rdfs:comment "Represents the effect that a certain action, decision, or event has upon entities or environments."@en ;
 .impact:hasMagnitude    rdf:type rdf:Property ;
-    rdfs:label ""has magnitude""@en ;
-    rdfs:comment ""The measure of the size, extent or importance of an impact.""@en ;
+    rdfs:label "has magnitude"@en ;
+    rdfs:comment "The measure of the size, extent or importance of an impact."@en ;
     rdfs:domain impact:Impact ;
     rdfs:range xsd:float ;
 .impact:hasTarget     rdf:type rdf:Property ;
-    rdfs:label ""has target""@en ;
-    rdfs:comment ""The entity or environment targeted by the action, decision, or event causing the impact.""@en ;
+    rdfs:label "has target"@en ;
+    rdfs:comment "The entity or environment targeted by the action, decision, or event causing the impact."@en ;
     rdfs:domain impact:Impact ;
 .impact:hasCause     rdf:type rdf:Property ;
-    rdfs:label ""has cause""@en ;
-    rdfs:comment ""The action, decision, or event causing the impact.""@en ;
+    rdfs:label "has cause"@en ;
+    rdfs:comment "The action, decision, or event causing the impact."@en ;
     rdfs:domain impact:Impact ;
 .impact:isPositive    rdf:type rdf:Property ;
-    rdfs:label ""is positive""@en ;
-    rdfs:comment ""True if the impact is positive or beneficial;
- false if it is negative or harmful.""@en ;
+    rdfs:label "is positive"@en ;
+    rdfs:comment "True if the impact is positive or beneficial;
+ false if it is negative or harmful."@en ;
     rdfs:domain impact:Impact ;
     rdfs:range xsd:boolean ;
 .impact:Event     rdf:type rdfs:Class ;
-    rdfs:label ""Event""@en ;
-    rdfs:comment ""Represents an action, decision, or happening that can cause impacts.""@en ;
+    rdfs:label "Event"@en ;
+    rdfs:comment "Represents an action, decision, or happening that can cause impacts."@en ;
 .impact:Entity     rdf:type rdfs:Class ;
-    rdfs:label ""Entity""@en ;
-    rdfs:comment ""Represents an entity that can be affected by impacts.""@en ;
-."
+    rdfs:label "Entity"@en ;
+    rdfs:comment "Represents an entity that can be affected by impacts."@en ;
+.

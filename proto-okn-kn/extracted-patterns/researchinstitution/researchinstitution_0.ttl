@@ -4,28 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix res: <http://www.example.org/researchInstitution#> .
 res:ResearchInstitution rdf:type rdfs:Class ;
-    rdfs:label ""Research Institution""@en ;
-    rdfs:comment ""An organization that conducts research.""@en .
+    rdfs:label "Research Institution"@en ;
+    rdfs:comment "An organization that conducts research."@en .
 res:hasName rdf:type rdf:Property ;
-    rdfs:label ""has name""@en ;
-    rdfs:comment ""The name of the research institution.""@en ;
+    rdfs:label "has name"@en ;
+    rdfs:comment "The name of the research institution."@en ;
     rdfs:domain res:ResearchInstitution ;
     rdfs:range xsd:string .
 res:hasLocation rdf:type rdf:Property ;
-    rdfs:label ""has location""@en ;
-    rdfs:comment ""The location of the research institution.""@en ;
+    rdfs:label "has location"@en ;
+    rdfs:comment "The location of the research institution."@en ;
     rdfs:domain res:ResearchInstitution ;
     rdfs:range xsd:string .
 res:hasResearchFocus rdf:type rdf:Property ;
-    rdfs:label ""has research focus""@en ;
-    rdfs:comment ""The main field of research at the institution.""@en ;
+    rdfs:label "has research focus"@en ;
+    rdfs:comment "The main field of research at the institution."@en ;
     rdfs:domain res:ResearchInstitution ;
     rdfs:range xsd:string .
 res:Researcher rdf:type rdfs:Class ;
-    rdfs:label ""Researcher""@en ;
-    rdfs:comment ""A person who conducts research.""@en .
+    rdfs:label "Researcher"@en ;
+    rdfs:comment "A person who conducts research."@en .
 res:worksAt rdf:type rdf:Property ;
-    rdfs:label ""works at""@en ;
-    rdfs:comment ""The research institution where the researcher works.""@en ;
+    rdfs:label "works at"@en ;
+    rdfs:comment "The research institution where the researcher works."@en ;
     rdfs:domain res:Researcher ;
     rdfs:range res:ResearchInstitution .

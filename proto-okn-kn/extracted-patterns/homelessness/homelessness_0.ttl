@@ -4,28 +4,28 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix home: <http://www.example.org/homelessness#> .
 home:HomelessPerson rdf:type rdfs:Class ;
-                rdfs:label ""Homeless Person""@en .
+                rdfs:label "Homeless Person"@en .
 home:CauseOfHomelessness rdf:type rdfs:Class ;
-                rdfs:label ""Cause of Homelessness""@en .
+                rdfs:label "Cause of Homelessness"@en .
 home:HomelessShelter rdf:type rdfs:Class ;
-                 rdfs:label ""Homeless Shelter""@en .
+                 rdfs:label "Homeless Shelter"@en .
 home:hasCause rdf:type rdfs:Property ;
             rdfs:domain home:HomelessPerson ;
            rdfs:range home:CauseOfHomelessness ;
-           rdfs:label ""has cause"" ;
-           rdfs:comment ""The cause that leads a person to be homeless.""@en .
+           rdfs:label "has cause" ;
+           rdfs:comment "The cause that leads a person to be homeless."@en .
 home:staysIn rdf:type rdfs:Property ;
            rdfs:domain home:HomelessPerson ;
           rdfs:range home:HomelessShelter ;
-          rdfs:label ""stays in"" ;
-          rdfs:comment ""The shelter where a homeless person stays.""@en .
+          rdfs:label "stays in" ;
+          rdfs:comment "The shelter where a homeless person stays."@en .
  home:EconomicIssues rdf:type home:CauseOfHomelessness ;
-                rdfs:label ""Economic Issues""@en .
+                rdfs:label "Economic Issues"@en .
                 home:Addiction rdf:type home:CauseOfHomelessness ;
-               rdfs:label ""Addiction""@en .
+               rdfs:label "Addiction"@en .
                 home:MentalHealthIssues rdf:type home:CauseOfHomelessness ;
-                       rdfs:label ""Mental Health Issues""@en .
+                       rdfs:label "Mental Health Issues"@en .
 home:CityShelter rdf:type home:HomelessShelter ;
-                rdfs:label ""City Shelter""@en .
+                rdfs:label "City Shelter"@en .
 home:NonProfitShelter rdf:type home:HomelessShelter ;
-                     rdfs:label ""Non-Profit Shelter""@en .
+                     rdfs:label "Non-Profit Shelter"@en .

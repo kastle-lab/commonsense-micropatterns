@@ -3,20 +3,20 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex:   <http://example.org/> .
 ex:Name a rdfs:Class ;
-    rdfs:comment ""A class representing the concept of name.""@en .
+    rdfs:comment "A class representing the concept of name."@en .
 ex:hasFirstName a owl:DatatypeProperty ;
     rdfs:domain ex:Name ;
     rdfs:range xsd:string ;
-    rdfs:comment ""The property that indicates the first name of a person""@en .
+    rdfs:comment "The property that indicates the first name of a person"@en .
     ex:hasLastName a owl:DatatypeProperty ;
     rdfs:domain ex:Name ;
     rdfs:range xsd:string ;
-    rdfs:comment ""The property that indicates the last name of a person""@en .
+    rdfs:comment "The property that indicates the last name of a person"@en .
 ex:hasMiddleName a owl:DatatypeProperty ;
     rdfs:domain ex:Name ;
     rdfs:range xsd:string ;
-    rdfs:comment ""The property that indicates the middle name of a person""@en .
+    rdfs:comment "The property that indicates the middle name of a person"@en .
     ex:hasNickName a owl:DatatypeProperty ;
     rdfs:domain ex:Name ;
     rdfs:range xsd:string ;
-    rdfs:comment ""The property that indicates the nickname of a person""@en .
+    rdfs:comment "The property that indicates the nickname of a person"@en .

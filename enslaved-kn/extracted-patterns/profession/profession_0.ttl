@@ -1,30 +1,30 @@
-"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/profession#> .
 ex:Profession a owl:Class ;
-    rdfs:label ""Profession"" ;
-    rdfs:comment ""This class includes professions or vocation focused on particular field of practice"".
+    rdfs:label "Profession" ;
+    rdfs:comment "This class includes professions or vocation focused on particular field of practice".
     ex:name a owl:DatatypeProperty ;
     rdfs:domain ex:Profession ;
     rdfs:range xsd:string ;
-    rdfs:label ""name"" ;
-    rdfs:comment ""The name of the profession"" .
+    rdfs:label "name" ;
+    rdfs:comment "The name of the profession" .
 ex:description a owl:DatatypeProperty ;
     rdfs:domain ex:Profession ;
     rdfs:range xsd:string ;
-    rdfs:label ""description"" ;
-    rdfs:comment ""A brief explanation of the profession"".
+    rdfs:label "description" ;
+    rdfs:comment "A brief explanation of the profession".
 ex:requiresEducation a owl:DatatypeProperty;
     rdfs:domain ex:Profession;
     rdfs:range xsd:boolean;
-    rdfs:label ""requiresEducation"";
-    rdfs:comment ""Boolean property indicating if a profession requires education or not"".
+    rdfs:label "requiresEducation";
+    rdfs:comment "Boolean property indicating if a profession requires education or not".
 ex:Doctor a ex:Profession;
-    ex:name ""Doctor"";
-    ex:description ""A medical practitioner who diagnoses and treats illness."";
-    ex:requiresEducation ""true""^^xsd:boolean.ex:Artist a ex:Profession;
-    ex:name ""Artist"";
-    ex:description ""An individual who creates art."";
-    ex:requiresEducation ""false""^^xsd:boolean."
+    ex:name "Doctor";
+    ex:description "A medical practitioner who diagnoses and treats illness.";
+    ex:requiresEducation "true"^^xsd:boolean.ex:Artist a ex:Profession;
+    ex:name "Artist";
+    ex:description "An individual who creates art.";
+    ex:requiresEducation "false"^^xsd:boolean.

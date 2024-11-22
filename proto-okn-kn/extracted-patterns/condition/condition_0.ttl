@@ -16,12 +16,12 @@ cond:hasDuration rdf:type rdf:Property ;
                  rdfs:domain cond:Condition ;
                  rdfs:range xsd:int .
                  cond:Cancer rdf:type cond:Condition ;
-            cond:hasSeverity ""High"" ;
-            cond:hasSymptoms ""Pain, fatigue, weight loss"" ;
-            cond:requiresTreatment ""Chemotherapy"" ;
+            cond:hasSeverity "High" ;
+            cond:hasSymptoms "Pain, fatigue, weight loss" ;
+            cond:requiresTreatment "Chemotherapy" ;
             cond:hasDuration 180 .
 cond:Influenza rdf:type cond:Condition ;
-               cond:hasSeverity ""Medium"" ;
-               cond:hasSymptoms ""Fever, cough, sore throat"" ;
-               cond:requiresTreatment ""Rest and fluid intake"" ;
+               cond:hasSeverity "Medium" ;
+               cond:hasSymptoms "Fever, cough, sore throat" ;
+               cond:requiresTreatment "Rest and fluid intake" ;
                cond:hasDuration 7 .
