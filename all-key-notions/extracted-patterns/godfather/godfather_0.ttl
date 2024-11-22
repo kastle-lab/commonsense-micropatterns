@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.com/> .
+ex:godfather rdf:type rdfs:Class .
+ex:Person rdf:type rdfs:Class .
+ex:hasGodfather rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:godfather .
+    ex:male rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+    ex:female rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+    ex:marriedTo rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person .
+    ex:parentOf rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Person .
+    ex:child rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+    ex:assignedBy rdf:type rdf:Property ;
+    rdfs:domain ex:godfather ;
+    rdfs:range ex:Person .
+    ex:religion rdf:type rdfs:Class .
+    ex:followsReligion rdf:type rdf:Property ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:religion .
+    ex:baptism rdf:type rdfs:Class .
+    ex:partOfBaptism rdf:type rdf:Property ;
+    rdfs:subClassOf ex:godfather ;
+    rdfs:range ex:baptism .

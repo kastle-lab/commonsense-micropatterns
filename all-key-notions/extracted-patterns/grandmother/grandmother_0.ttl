@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+rel:grandmother a rdfs:Class ;
+    rdfs:label "Grandmother"@en ;
+    rdfs:comment "A female parent of a parent."@en ;
+    rdfs:subClassOf foaf:Person ;
+.<#Alice> a foaf:Person ;
+    foaf:name "Alice"@en ;
+    foaf:gender "female"@en ;
+    rel:grandmother <#Bob> ;
+.<#Bob> a foaf:Person ;
+    foaf:name "Bob"@en ;
+    foaf:gender "male"@en ;
+    rel:childOf <#Charlie> ;
+.<#Charlie> a foaf:Person ;
+    foaf:name "Charlie"@en ;
+    foaf:gender "male"@en ;
+    rel:childOf <#Alice> ;
+.

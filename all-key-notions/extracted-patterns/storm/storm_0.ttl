@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix storm: <http://example.org/storm/> .
+storm:Storm a rdfs:Class ;
+    rdfs:label "Storm" ;
+    rdfs:comment "A natural disaster that is caused by severe weather conditions" .
+storm:hasType a rdf:Property ;
+    rdfs:label "has type" ;
+    rdfs:comment "Type of storm" ;
+    rdfs:domain storm:Storm ;
+    rdfs:range xsd:string .
+storm:hasIntensity a rdf:Property ;
+    rdfs:label "has intensity" ;
+    rdfs:comment "Intensity of storm" ;
+    rdfs:domain storm:Storm ;
+    rdfs:range xsd:string .
+storm:hasDuration a rdf:Property ;
+    rdfs:label "has duration" ;
+    rdfs:comment "Duration of storm" ;
+    rdfs:domain storm:Storm ;
+    rdfs:range xsd:duration .
+storm:occursInRegion a rdf:Property ;
+    rdfs:label "occurs in region" ;
+    rdfs:comment "Region where storm occurs" ;
+    rdfs:domain storm:Storm ;
+    rdfs:range xsd:string .
+storm:StormInstance1 a storm:Storm ;
+    storm:hasType "Hurricane" ;
+    storm:hasIntensity "High" ;
+    storm:hasDuration "PT24H" ;
+    storm:occursInRegion "Atlantic Ocean" .

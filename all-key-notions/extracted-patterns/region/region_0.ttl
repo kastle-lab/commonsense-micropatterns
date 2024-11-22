@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.geonames.org/ontology#> .
+@prefix ex: <http://example.com/ontology#> .
+# A definition of a 'Region'ex:Region a rdfs:Class ;
+    rdfs:label "Region"@en ;
+    rdfs:comment "A geographic region or area."@en .
+# A definition of a 'Country', which is a type of 'Region'ex:Country a rdfs:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A nation with its own government, occupying a particular territorial area."@en ;
+    rdfs:subClassOf ex:Region .
+# A definition of a 'City', which is a type of 'Region'ex:City a rdfs:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A large and important town."@en ;
+    rdfs:subClassOf ex:Region .
+# Properties
+ that a 'Region' can haveex:population a rdf:Property ;
+    rdfs:label "population"@en ;
+    rdfs:comment "The total number of people who live in a particular region."@en ;
+    rdfs:domain ex:Region ;
+    rdfs:range xsd:integer .
+ex:name a rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The official name of the region."@en ;
+    rdfs:domain ex:Region ;
+    rdfs:range xsd:string .
+# Specific instances of regions - a Country and a Cityex:UnitedStates a ex:Country ;
+    ex:name "United States"^^xsd:string ;
+    ex:population 331449281^^xsd:integer .
+ex:NewYork a ex:City ;
+    ex:name "New York City"^^xsd:string ;
+    ex:population 8336817^^xsd:integer .

@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.@prefix owl: <http://www.w3.org/2002/07/owl#>.@prefix : <http://example.com#>.:patriot     rdf:type owl:Class ;
+    rdfs:label "patriot" ;
+    rdfs:comment "An individual who loves, respects and is loyal to their country and prepared to support and defend it" .
+:country     rdf:type owl:Class ;
+    rdfs:label "country" ;
+    rdfs:comment "A distinct territorial body or political entity recognized by non-domestic officials".
+:individual     rdf:type owl:Class ;
+    rdfs:label "individual" ;
+    rdfs:comment "A single human being as distinct from a group or community" .
+:supportAndDefend     rdf:type owl:ObjectProperty ;
+    rdfs:label "supportAndDefend" ;
+    rdfs:domain :patriot ;
+    rdfs:range :country ;
+    rdfs:comment "The act of standing by or providing aid in terms of resources or actions to uphold and protect a country" .
+:respects    rdf:type owl:ObjectProperty ;
+    rdfs:label "respects" ;
+    rdfs:domain :patriot ;
+    rdfs:range :country ;
+    rdfs:comment "The act of showing admiration or giving due importance to a country" .
+:loves     rdf:type owl:ObjectProperty ;
+    rdfs:label "loves" ;
+    rdfs:domain :patriot ;
+    rdfs:range :country ;
+    rdfs:comment "The act of showing an intense affection or deep rooteness for a country" .
+ :loyalTo     rdf:type owl:ObjectProperty ;
+    rdfs:label "loyalTo" ;
+    rdfs:domain :patriot ;
+    rdfs:range :country ;
+    rdfs:comment "The quality of being faithful or unwavering in allegiance to a country".

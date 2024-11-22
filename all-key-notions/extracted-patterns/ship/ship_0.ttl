@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+ ex:Ship rdf:type rdfs:Class .
+ex:MerchantShip rdf:type rdfs:Class ;
+ rdfs:subClassOf ex:Ship .
+ex:CruiseShip rdf:type rdfs:Class ;
+ rdfs:subClassOf ex:Ship .
+ ex:NavyShip rdf:type rdfs:Class ;
+ rdfs:subClassOf ex:Ship .
+ ex:hasCaptain rdf:type rdf:Property ;
+   rdfs:domain ex:Ship ;
+   rdfs:range ex:Human .
+ ex:hasCrew rdf:type rdf:Property ;
+   rdfs:domain ex:Ship ;
+   rdfs:range ex:Human .
+ ex:hasPassenger rdf:type rdf:Property ;
+   rdfs:domain ex:Ship ;
+   rdfs:range ex:Human .
+ ex:operatedBy rdf:type rdf:Property ;
+   rdfs:domain ex:Ship ;
+   rdfs:range ex:Company .
+ ex:Human rdf:type rdfs:Class .
+ ex:Company rdf:type rdfs:Class .

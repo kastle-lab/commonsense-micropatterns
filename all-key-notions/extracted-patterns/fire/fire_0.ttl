@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fo: <http://example.com/ontology/fire#> .
+fo:Fire a rdfs:Class ;
+    rdfs:label "Fire" ;
+    rdfs:comment "Considered as a fundamental element representing the heat and passion of all beings." .
+fo:Cause a rdfs:Class ;
+    rdfs:label "Cause of Fire" ;
+    rdfs:comment "Different causes that could initiate a fire." .
+fo:Effect a rdfs:Class ;
+    rdfs:label "Effect of Fire" ;
+    rdfs:comment "Different consequences that may occur as a result of a fire." .
+fo:hasCause a rdf:Property ;
+    rdfs:label "has cause" ;
+    rdfs:domain fo:Fire ;
+    rdfs:range fo:Cause .
+fo:hasEffect a rdf:Property ;
+    rdfs:label "has effect" ;
+    rdfs:domain fo:Fire ;
+    rdfs:range fo:Effect .
+fo:Arson a rdfs:Class ;
+    rdfs:subClassOf fo:Cause ;
+    rdfs:label "Arson" ;
+    rdfs:comment "Willful and malicious burning or charring of property." .
+fo:Wildfire a rdfs:Class ;
+    rdfs:subClassOf fo:Fire ;
+    rdfs:label "Wildfire" ;
+    rdfs:comment "A large, destructive fire that spreads quickly over woodland or brush." .
+fo:AirPollution a rdfs:Class ;
+    rdfs:subClassOf fo:Effect ;
+    rdfs:label "Air Pollution" ;
+    rdfs:comment "The release of particulates, harmful materials into the earth's atmosphere." .
+fo:Wildfire1 a fo:Wildfire ;
+    fo:hasCause fo:Arson ;
+    fo:hasEffect fo:AirPollution .

@@ -1,0 +1,45 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Godfather a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Religion a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/godfather> a owl:Ontology ;
+    opla-core:hasPatternName "godfather Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:assignedBy a rdf:Property ;
+    rdfs:domain kastle:Godfather ;
+    rdfs:range kastle:Person .
+
+kastle:followsReligion a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Religion .
+
+kastle:hasGodfather a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Godfather .
+
+kastle:marriedTo a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:parentOf a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+

@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rel: <http://example.org/relationship/> .
+rel:Relationship a rdfs:Class .
+rel:hasPersonA a rdf:Property ;
+    rdfs:domain rel:Relationship ;
+    rdfs:range rdfs:Resource .
+    rel:hasPersonB a rdf:Property ;
+    rdfs:domain rel:Relationship ;
+    rdfs:range rdfs:Resource .
+    rel:hasStartDate a rdf:Property ;
+    rdfs:domain rel:Relationship ;
+    rdfs:range xsd:date .
+    rel:hasEndDate a rdf:Property ;
+    rdfs:domain rel:Relationship ;
+    rdfs:range xsd:date .
+rel:RelationshipStatus a rdfs:Class .
+rel:Single a rel:RelationshipStatus .
+rel:InARelationship a rel:RelationshipStatus .
+rel:Engaged a rel:RelationshipStatus .
+rel:Married a rel:RelationshipStatus .
+rel:Separated a rel:RelationshipStatus .
+rel:Divorced a rel:RelationshipStatus .
+rel:Widowed a rel:RelationshipStatus .
+rel:hasRelationshipStatus a rdf:Property ;
+    rdfs:domain rel:Relationship ;
+    rdfs:range rel:RelationshipStatus .
+    rel:RelationshipType a rdfs:Class .
+rel:Friendship a rel:RelationshipType .
+rel:Family a rel:RelationshipType .
+rel:Romantic a rel:RelationshipType .
+rel:Professional a rel:RelationshipType .
+rel:hasRelationshipType a rdf:Property ;
+    rdfs:domain rel:Relationship ;
+    rdfs:range rel:RelationshipType .

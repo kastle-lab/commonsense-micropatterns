@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/slaveOwner#> .
+:SlaveOwner rdf:type rdfs:Class ;
+    rdfs:comment "The entity that represents a slave owner" .
+:Human rdf:type rdfs:Class ;
+    rdfs:comment "The entity that represents a human being" .
+:Slave rdf:type rdfs:Class ;
+    rdfs:subClassOf :Human ;
+    rdfs:comment "The entity that represents a slave, which is a subcategory of human" .
+:owns rdf:type rdf:Property ;
+    rdfs:domain :SlaveOwner ;
+    rdfs:range :Slave ;
+    rdfs:comment "The property that links the slave owner with the slaves they own" .
+:hasName rdf:type rdf:Property ;
+    rdfs:domain :Human ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The property that provides the name of a human" .
+:hasAge rdf:type rdf:Property ;
+    rdfs:domain :Human ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The property that provides the age of a human" .

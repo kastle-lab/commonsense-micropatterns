@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix disaster: <http://www.example.org/disaster#> .
+disaster:Disaster rdf:type rdfs:Class .
+ disaster:NaturalDisaster rdf:type rdfs:Class .
+ disaster:ManmadeDisaster rdf:type rdfs:Class .
+disaster:NaturalDisaster rdfs:subClassOf disaster:Disaster .
+disaster:ManmadeDisaster rdfs:subClassOf disaster:Disaster .
+disaster:Earthquake rdf:type rdfs:Class .
+disaster:Flood rdf:type rdfs:Class .
+disaster:Hurricane rdf:type rdfs:Class .
+disaster:Earthquake rdfs:subClassOf disaster:NaturalDisaster .
+disaster:Flood rdfs:subClassOf disaster:NaturalDisaster .
+disaster:Hurricane rdfs:subClassOf disaster:NaturalDisaster .
+disaster:NuclearAccident rdf:type rdfs:Class .
+disaster:TerroristAttack rdf:type rdfs:Class .
+disaster:IndustrialAccident rdf:type rdfs:Class .
+disaster:NuclearAccident rdfs:subClassOf disaster:ManmadeDisaster .
+disaster:TerroristAttack rdfs:subClassOf disaster:ManmadeDisaster .
+disaster:IndustrialAccident rdfs:subClassOf disaster:ManmadeDisaster .
+disaster:loss rdf:type rdf:Property .
+disaster:loss rdfs:domain disaster:Disaster .
+disaster:loss rdfs:range rdfs:Literal .
+disaster:location rdf:type rdf:Property .
+disaster:location rdfs:domain disaster:Disaster .
+disaster:location rdfs:range rdfs:Literal .
+ disaster:date rdf:type rdf:Property .
+disaster:date rdfs:domain disaster:Disaster .
+disaster:date rdfs:range rdfs:Literal .

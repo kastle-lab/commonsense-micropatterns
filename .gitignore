@@ -205,3 +205,5 @@ cython_debug/
 
 # sk
 key-notions/jupyter-notebooks/sk.txt
+code/polling-valid-prompts.py
+.gitignore

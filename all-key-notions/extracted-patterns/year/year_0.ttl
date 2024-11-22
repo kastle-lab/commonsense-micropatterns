@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix yr: <http://example.org/year#> .
+# Class & subclassyr:Year a rdfs:Class .
+yr:LeapYear a rdfs:Class ;
+    rdfs:subClassOf yr:Year .
+# Properties
+yr:hasMonth a rdf:Property ;
+    rdfs:domain yr:Year ;
+    rdfs:range xsd:int .
+    yr:hasDay a rdf:Property ;
+    rdfs:domain yr:Year ;
+    rdfs:range xsd:int .
+    yr:inDecade a rdf:Property ;
+    rdfs:domain yr:Year ;
+    rdfs:range xsd:int .
+    yr:inCentury a rdf:Property ;
+    rdfs:domain yr:Year ;
+    rdfs:range xsd:int .
+    yr:isLeap a rdf:Property ;
+    rdfs:domain yr:LeapYear ;
+    rdfs:range xsd:boolean .
+# Instancesyr:Year2000 a yr:LeapYear ;
+    yr:hasMonth 12 ;
+    yr:hasDay 366 ;
+    yr:inDecade 200 ;
+    yr:inCentury 20 ;
+    yr:isLeap true .

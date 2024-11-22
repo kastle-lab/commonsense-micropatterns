@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix manumission: <http://example.org/manumission/> .
+manumission:Manumission rdf:type rdfs:Class ;
+  rdfs:comment "The act of a slave owner freeing his or her slaves."@en ;
+  rdfs:label "Manumission"@en .
+manumission:slaveOwner rdf:type rdf:Property ;
+  rdfs:comment "The person who frees a slave."@en ;
+  rdfs:label "slave owner"@en ;
+  rdfs:domain manumission:Manumission ;
+  rdfs:range rdfs:Resource .
+manumission:slave rdf:type rdf:Property ;
+  rdfs:comment "The person who is freed."@en ;
+  rdfs:label "slave"@en ;
+  rdfs:domain manumission:Manumission ;
+  rdfs:range rdfs:Resource .
+manumission:date rdf:type rdf:Property ;
+  rdfs:comment "The date when the slave was freed."@en ;
+  rdfs:label "date of manumission"@en ;
+  rdfs:domain manumission:Manumission ;
+  rdfs:range xsd:date .

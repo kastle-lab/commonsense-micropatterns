@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix nationality: <http://www.example.org/nationality#> .
+nationality:Nationality rdf:type rdfs:Class .
+nationality:Person rdf:type rdfs:Class .
+nationality:hasNationality rdf:type rdf:Property ;
+    rdfs:domain nationality:Person ;
+    rdfs:range nationality:Nationality .
+nationality:American rdf:type nationality:Nationality ;
+    rdfs:label "American"^^xsd:string .
+nationality:French rdf:type nationality:Nationality ;
+    rdfs:label "French"^^xsd:string .
+nationality:Chinese rdf:type nationality:Nationality ;
+    rdfs:label "Chinese"^^xsd:string .
+nationality:JohnDoe rdf:type nationality:Person ;
+    nationality:hasNationality nationality:American .
+    nationality:JaneDoe rdf:type nationality:Person ;
+    nationality:hasNationality nationality:French .
+    nationality:LiuWei rdf:type nationality:Person ;
+    nationality:hasNationality nationality:Chinese .

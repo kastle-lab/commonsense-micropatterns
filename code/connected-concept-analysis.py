@@ -12,7 +12,8 @@ modl = "enslaved"
 folders = {
     "csmodl":os.path.join(".", "csmodl", "patterns"),
     "enslaved":os.path.join(".", "enslaved-modl", "patterns"),
-    "keynotions":os.path.join(".", "construct-patterns")
+    "keynotions":os.path.join(".", "construct-patterns"),
+    "allkeynotions": os.path.join(".", "all-key-notions", "patterns")
 }
 folder = folders[modl]
 

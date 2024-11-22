@@ -8,6 +8,7 @@ summary = []
 csmodl_patterns_folder = os.path.join(".", "csmodl", "patterns")
 enslaved_patterns_folder = os.path.join(".", "enslaved-modl", "patterns")
 keynotions_patterns_folder = os.path.join(".", "construct-patterns")
+all_keynotions_patterns_folder = os.path.join(".", "all-key-notions", "patterns")
 output_folder = os.path.join(".", "extractedSharedTerms", "output")
 
 # Prefixes
@@ -239,6 +240,19 @@ print(f"shared propTermCounts: {len(keynotionsd_sharedProps)}")
 print(f"uniquePropTerms: {len(keynotions_uniquePropTerms)}")
 print("")
 
+
+keynotions_ClassTerms, keynotions_uniqueClassTerms, keynotions_PropTerms, keynotions_uniquePropTerms = process_rdf_file(all_keynotions_patterns_folder)
+keynotions_classTerms_counts, keynotions_propTerms_counts = countClassTerms(keynotions_ClassTerms, keynotions_PropTerms)
+keynotions_sharedClasses, keynotionsd_sharedProps = idSharedTerms(keynotions_classTerms_counts, keynotions_propTerms_counts)
+
+writeTermFiles("all-keynotions", keynotions_ClassTerms, keynotions_classTerms_counts, keynotions_PropTerms, keynotions_propTerms_counts)
+print("All-Key-Notions:")
+print(f"shared classTermCounts: {len(keynotions_sharedClasses)}")
+print(f"uniqueClassTerms: {len(keynotions_uniqueClassTerms)}")
+print(f"shared propTermCounts: {len(keynotionsd_sharedProps)}")
+print(f"uniquePropTerms: {len(keynotions_uniquePropTerms)}")
+print("")
+
 ##### End of MODL file parsing #####
 # csmodl union enslavedmodl
 # Initialize lists to store shared terms
@@ -294,7 +308,7 @@ keynotions_ClassTerms = set(keynotions_uniqueClassTerms)
 class_intersect = sorted(modl_classTerms.intersection(keynotions_uniqueClassTerms))
 
 print(f"MODLs Classes: {len(modl_classTerms)}")
-print(f"KN Classes: {len(keynotions_uniqueClassTerms)}")
+print(f"All KN Classes: {len(keynotions_uniqueClassTerms)}")
 print(f"Intersection: {len(class_intersect)}")
 # for i in intersect:
 #     print(i)
@@ -304,7 +318,7 @@ keynotions_PropTerms = set(keynotions_uniquePropTerms)
 prop_intersect = sorted(modl_propTerms.intersection(keynotions_PropTerms))
 
 print(f"MODLs Props: {len(modl_propTerms)}")
-print(f"KN Props: {len(keynotions_PropTerms)}")
+print(f"All KN Props: {len(keynotions_PropTerms)}")
 print(f"Intersection: {len(prop_intersect)}")
 
 # Write intersection between MODL and Key Notions into file

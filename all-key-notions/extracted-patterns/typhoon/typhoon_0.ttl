@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ty: <http://example.org/typhoon#> .
+ty:Typhoon rdf:type rdfs:Class .
+ty:hasName rdf:type rdf:Property ;
+    rdfs:domain ty:Typhoon ;
+    rdfs:range xsd:string .
+ty:hasSpeed rdf:type rdf:Property ;
+    rdfs:domain ty:Typhoon ;
+    rdfs:range xsd:integer .
+ty:hasCategory rdf:type rdf:Property ;
+    rdfs:domain ty:Typhoon ;
+    rdfs:range xsd:string .
+ty:hasDate rdf:type rdf:Property ;
+    rdfs:domain ty:Typhoon ;
+    rdfs:range xsd:date .
+ty:causedDamage rdf:type rdf:Property ;
+    rdfs:domain ty:Typhoon ;
+    rdfs:range xsd:boolean.ty:TyphoonHaiyan rdf:type ty:Typhoon ;
+    ty:hasName "Super Typhoon Haiyan" ;
+    ty:hasSpeed 315 ;
+    ty:hasCategory "Category 5" ;
+    ty:hasDate "2013-11-07"^^xsd:date ;
+    ty:causedDamage true .
