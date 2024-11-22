@@ -43,6 +43,7 @@ propURIs = [
     pfs["owl"]["ObjectProperty"],
     pfs["owl"]["DatatypeProperty"]
 ]
+
 def process_rdf_file(directory):
     '''
         Processes a directory of TTL files with RDFLib Graph
@@ -181,7 +182,8 @@ def writeTermFiles(pattern_name, classTerms, classTerm_counts, propTerms, propTe
         file.close()
 
     with open(f"{output_folder}/{pattern_name}/{pattern_name}_classTermCounts.tsv", "w") as file:
-     for term in classTerm_counts:
+        classTerm_counts = dict(sorted(classTerm_counts.items(), key=lambda item: item[1][0], reverse=True))
+        for term in classTerm_counts:
           if classTerm_counts[term][0] > 1:
                file.write(f"{term}\t{classTerm_counts[term]}\n")
     file.close()    
@@ -192,6 +194,7 @@ def writeTermFiles(pattern_name, classTerms, classTerm_counts, propTerms, propTe
     file.close()
 
     with open(f"{output_folder}/{pattern_name}/{pattern_name}_PropTermCounts.tsv", "w") as file:
+     propTerms_counts = dict(sorted(propTerms_counts.items(), key=lambda item: item[1][0], reverse=True))
      for term in propTerms_counts:
           if propTerms_counts[term][0] > 1:
                file.write(f"{term}\t{propTerms_counts[term]}\n")
