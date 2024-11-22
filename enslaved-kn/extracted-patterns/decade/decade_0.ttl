@@ -1,0 +1,26 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org#> .
+ex:Decade a rdfs:Class ;
+  rdfs:comment ""A specific span of ten years."" .
+ex:hasStartYear a rdf:Property ;
+  rdfs:domain ex:Decade ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment ""The starting year of a decade."" .
+ex:hasEndYear a rdf:Property ;
+  rdfs:domain ex:Decade ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment ""The ending year of a decade."" .
+ex:containsEvents a rdf:Property ;
+  rdfs:domain ex:Decade ;
+  rdfs:range ex:Event ;
+  rdfs:comment ""Events that occurred during a specific decade."" .
+ex:Event a rdfs:Class ;
+  rdfs:comment ""An important occurrence during a specific span of time."" .
+ex:hasName a rdf:Property ;
+  rdfs:domain ex:Event ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""Name of the event."" .
+ex:hasDate a rdf:Property ;
+  rdfs:domain ex:Event ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment ""Date of the event."" .

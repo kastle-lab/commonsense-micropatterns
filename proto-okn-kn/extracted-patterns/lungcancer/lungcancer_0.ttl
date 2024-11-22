@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lc: <http://www.example.org/lungcancer#> .
+lc:LungCancer a rdfs:Class .
+lc:Patient a rdfs:Class .
+lc:hasType a rdf:Property ;
+    rdfs:domain lc:LungCancer ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment ""The type of lung cancer"" ;
+    rdfs:label ""hasType"" .
+lc:hasStage a rdf:Property ;
+    rdfs:domain lc:LungCancer ;
+    rdfs:range xsd:integer ;
+    rdfs:comment ""The stage of lung cancer"" ;
+    rdfs:label ""hasStage"" .
+lc:hasSymptom a rdf:Property ;
+    rdfs:domain lc:LungCancer ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment ""The symptom of lung cancer"" ;
+    rdfs:label ""hasSymptom"" .
+lc:isDiagnosedIn a rdf:Property ;
+    rdfs:domain lc:LungCancer ;
+    rdfs:range lc:Patient ;
+    rdfs:comment ""The patient diagnosed with lung cancer"" ;
+    rdfs:label ""isDiagnosedIn"" .
+lc:hasTreatment a rdf:Property ;
+    rdfs:domain lc:LungCancer ;
+    rdfs:range rdfs:Literal ;
+    rdfs:comment ""The treatment for lung cancer"" ;
+    rdfs:label ""hasTreatment"" .

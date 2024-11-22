@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fam: <http://example.org/family/> .
+fam:Wife rdf:type rdfs:Class ;
+    rdfs:label ""Wife"" ;
+    rdfs:comment ""Refers to a woman in the context of her marriage"" .
+fam:hasWife rdf:type rdf:Property ;
+    rdfs:domain fam:Man ;
+    rdfs:range fam:Wife ;
+    rdfs:label ""has wife"" ;
+    rdfs:comment ""Refers to the wife of a man in the context of a marriage"" .
+fam:isWifeOf rdf:type rdf:Property ;
+    rdfs:domain fam:Wife ;
+    rdfs:range fam:Man ;
+    rdfs:label ""is wife of"" ;
+    rdfs:comment ""Indicates which man a woman is married to"" .
+fam:Man rdf:type rdfs:Class ;
+    rdfs:label ""Man"" ;
+    rdfs:comment ""Refers to a male human being"" .

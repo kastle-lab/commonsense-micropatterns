@@ -1,0 +1,31 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/> .
+ex:Person rdf:type rdfs:Class ;
+    rdfs:comment ""The class of all persons"" ;
+    rdfs:label ""Person""@en .
+ex:hasName rdf:type rdf:Property ;
+    rdfs:comment ""The name of the person"" ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    rdfs:label ""has name""@en .
+ex:hasAge rdf:type rdf:Property ;
+    rdfs:comment ""The age of the person"" ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:integer ;
+    rdfs:label ""has age""@en .
+ex:hasGender rdf:type rdf:Property ;
+    rdfs:comment ""The gender of the person"" ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:string ;
+    rdfs:label ""has gender""@en .
+ex:bornIn rdf:type rdf:Property ;
+    rdfs:comment ""The birthplace of the person"" ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:Location ;
+    rdfs:label ""born in""@en .
+ex:Location rdf:type rdfs:Class ;
+    rdfs:comment ""The class of all locations"" ;
+    rdfs:label ""Location""@en .
+"

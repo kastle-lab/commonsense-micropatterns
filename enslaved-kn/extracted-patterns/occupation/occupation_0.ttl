@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oc: <http://example.org/Occupation#> .
+oc:Occupation a rdfs:Class ;
+    rdfs:label ""Occupation""@en ;
+    rdfs:comment ""The principal activity that a person spends his time doing for the purpose of earning income""@en .
+oc:hasOccupation a rdf:Property ;
+    rdfs:label ""has occupation""@en ;
+    rdfs:domain oc:Person ;
+    rdfs:range oc:Occupation .
+oc:Person a rdfs:Class ;
+    rdfs:label ""Person""@en .
+oc:Engineer a oc:Occupation ;
+    rdfs:label ""Engineer""@en .
+oc:Doctor a oc:Occupation ;
+    rdfs:label ""Doctor""@en .
+oc:Teacher a oc:Occupation ;
+    rdfs:label ""Teacher""@en .
+oc:Alice a oc:Person ;
+    oc:hasOccupation oc:Engineer .
+oc:Bob a oc:Person ;
+    oc:hasOccupation oc:Doctor .
+oc:Charlie a oc:Person ;
+    oc:hasOccupation oc:Teacher .

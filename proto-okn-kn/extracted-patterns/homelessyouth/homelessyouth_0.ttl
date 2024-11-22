@@ -1,0 +1,43 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://www.example.org/homeless_youth#> .
+:HomelessYouth a owl:Class ;
+    rdfs:label ""Homeless Youth""@en ;
+    rdfs:comment ""Youth who are living without fixed, regular, and adequate nighttime residence""@en .
+:Age a owl:DatatypeProperty ;
+    rdfs:domain :HomelessYouth ;
+    rdfs:range xsd:int ;
+    rdfs:label ""Age""@en ;
+    rdfs:comment ""The age of the homeless youth""@en .
+:Gender a owl:ObjectProperty ;
+    rdfs:domain :HomelessYouth ;
+    rdfs:range :GenderIdentity ;
+    rdfs:label ""Gender""@en ;
+    rdfs:comment ""The gender identity of the homeless youth""@en .
+:GenderIdentity a owl:Class ;
+    rdfs:label ""Gender Identity""@en ;
+    rdfs:comment ""The personal sense of one's own gender""@en ;
+    owl:oneOf (:Male :Female :Transgender :NonBinary) .
+:Male a :GenderIdentity ;
+    rdfs:label ""Male""@en .
+:Female a :GenderIdentity ;
+    rdfs:label ""Female""@en .
+:Transgender a :GenderIdentity ;
+    rdfs:label ""Transgender""@en .
+:NonBinary a :GenderIdentity ;
+    rdfs:label ""Non-binary""@en .
+:HasEducation a owl:DatatypeProperty ;
+    rdfs:domain :HomelessYouth ;
+    rdfs:range xsd:boolean ;
+    rdfs:label ""Has Education""@en ;
+    rdfs:comment ""Whether the homeless youth has received formal education""@en .
+:HasSubstanceUseIssue a owl:DatatypeProperty ;
+    rdfs:domain :HomelessYouth ;
+    rdfs:range xsd:boolean ;
+    rdfs:label ""Has Substance Use Issue""@en ;
+    rdfs:comment ""Whether the homeless youth struggles with substance use issue""@en .
+:HasMentalHealthIssue a owl:DatatypeProperty ;
+    rdfs:domain :HomelessYouth ;
+    rdfs:range xsd:boolean ;
+    rdfs:label ""Has Mental Health Issue""@en ;
+    rdfs:comment ""Whether the homeless youth struggles with mental health issue""@en .

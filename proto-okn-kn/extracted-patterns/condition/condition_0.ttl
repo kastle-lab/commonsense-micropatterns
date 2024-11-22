@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cond: <http://www.example.org/condition#> .
+cond:Condition rdf:type rdfs:Class .
+cond:hasSeverity rdf:type rdf:Property ;
+                 rdfs:domain cond:Condition ;
+                 rdfs:range xsd:string .
+                 cond:hasSymptoms rdf:type rdf:Property ;
+                 rdfs:domain cond:Condition ;
+                 rdfs:range xsd:string .
+cond:requiresTreatment rdf:type rdf:Property ;
+                       rdfs:domain cond:Condition ;
+                       rdfs:range xsd:string .
+cond:hasDuration rdf:type rdf:Property ;
+                 rdfs:domain cond:Condition ;
+                 rdfs:range xsd:int .
+                 cond:Cancer rdf:type cond:Condition ;
+            cond:hasSeverity ""High"" ;
+            cond:hasSymptoms ""Pain, fatigue, weight loss"" ;
+            cond:requiresTreatment ""Chemotherapy"" ;
+            cond:hasDuration 180 .
+cond:Influenza rdf:type cond:Condition ;
+               cond:hasSeverity ""Medium"" ;
+               cond:hasSymptoms ""Fever, cough, sore throat"" ;
+               cond:requiresTreatment ""Rest and fluid intake"" ;
+               cond:hasDuration 7 .

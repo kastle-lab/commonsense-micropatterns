@@ -1,0 +1,15 @@
+@prefix : <http://www.example.org/hazard#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+:Chemical rdfs:subClassOf :Hazard .
+:Natural rdfs:subClassOf :Hazard .
+:Biological rdfs:subClassOf :Hazard .
+:Cyanide rdfs:subClassOf :Chemical .
+:Earthquake rdfs:subClassOf :Natural .
+:Famine rdfs:subClassOf :Biological .
+:Hazard rdfs:label ""Hazard Type""@en .
+:Chemical rdfs:label ""Chemical Hazard""@en .
+:Natural rdfs:label ""Natural Hazard""@en .
+:Biological rdfs:label ""Biological Hazard""@en .
+:Cyanide rdfs:label ""Cyanide""@en .
+:Earthquake rdfs:label ""Earthquake""@en .
+:Famine rdfs:label ""Famine""@en .

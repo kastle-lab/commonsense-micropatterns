@@ -1,0 +1,35 @@
+@prefix : <http://www.example.org/ontology/cause#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:Cause a rdfs:Class ;
+    rdfs:label ""Cause""@en ;
+    rdfs:comment ""A thing that gives rise to an action, phenomenon, condition, or state""@en .
+:CauseEffect a rdfs:Class ;
+    rdfs:label ""Cause Effect""@en ;
+    rdfs:comment ""An effect produced by a cause""@en ;
+    rdfs:subClassOf :Cause .
+:Agent a rdfs:Class ;
+    rdfs:label ""Agent""@en ;
+    rdfs:comment ""An entity that causes a change in state or a process to occur""@en .
+:Result a rdfs:Class ;
+    rdfs:label ""Result""@en ;
+    rdfs:comment ""The outcome or effect produced by a cause""@en ;
+    rdfs:subClassOf :CauseEffect .
+:causedBy a owl:ObjectProperty ;
+    rdfs:label ""caused by""@en ;
+    rdfs:domain :Result ;
+    rdfs:range :Agent ;
+    rdfs:comment ""A relation between a result and its cause""@en .
+:hasEffect a owl:ObjectProperty ;
+    rdfs:label ""has effect""@en ;
+    rdfs:range :CauseEffect ;
+    rdfs:domain :Agent ;
+    rdfs:inverseOf :causedBy ;
+    rdfs:comment ""A relation describing the effect an agent has""@en .
+:hasCause a owl:ObjectProperty ;
+    rdfs:label ""has cause""@en ;
+    rdfs:range :Cause ;
+    rdfs:domain :Result ;
+    rdfs:inverseOf :hasEffect ;
+    rdfs:comment ""A relation describing the cause of a result""@en .

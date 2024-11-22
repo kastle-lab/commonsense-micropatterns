@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix weld: <http://example.org/welder#> .
+weld:Welder rdf:type rdfs:Class ;
+  rdfs:comment ""A person who utilizes high heat to fuse materials together, particularly metals.""@en;
+  rdfs:label ""Welder""@en .
+weld:name rdf:type rdf:Property ;
+  rdfs:comment ""The name of the welder.""@en ;
+  rdfs:label ""name""@en ;
+  rdfs:domain weld:Welder ;
+  rdfs:range xsd:string .
+weld:experience_years rdf:type rdf:Property ;
+  rdfs:comment ""The number of years of experience the welder has.""@en ;
+  rdfs:label ""experience years""@en ;
+  rdfs:domain weld:Welder ;
+  rdfs:range xsd:integer .
+weld:welding_type rdf:type rdf:Property ;
+  rdfs:comment ""The type of welding the welder is specialized in.""@en ;
+  rdfs:label ""welding type""@en ;
+  rdfs:domain weld:Welder .
+weld:certification rdf:type rdf:Property ;
+  rdfs:comment ""The certification the welder holds.""@en ;
+  rdfs:label ""certification""@en ;
+  rdfs:domain weld:Welder .

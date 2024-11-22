@@ -1,0 +1,41 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix weld: <http://example.org/welding/> .
+weld:TigWelder    rdf:type owl:Class ;
+    rdfs:label ""Tig Welder"" ;
+    rdfs:comment ""A person who uses the TIG (Tungsten Inert Gas) welding process to join metals together"" ;
+    rdfs:subClassOf weld:Welder .
+weld:usesMaterial    rdf:type owl:ObjectProperty ;
+    rdfs:domain weld:TigWelder ;
+    rdfs:range weld:Material ;
+    rdfs:label ""uses material"" ;
+    rdfs:comment ""The type of material a TIG welder typically uses in the welding process"" .
+weld:requiresSkill    rdf:type owl:ObjectProperty ;
+    rdfs:domain weld:TigWelder ;
+    rdfs:range weld:Skill ;
+    rdfs:label ""requires skill"" ;
+    rdfs:comment ""The type of skill required to operate TIG welding machine"" .
+weld:performsProcess    rdf:type owl:ObjectProperty ;
+    rdfs:domain weld:TigWelder ;
+    rdfs:range weld:WeldingProcess ;
+    rdfs:label ""performs process"" ;
+    rdfs:comment ""The welding process that a TIG welder performs"" .
+weld:producesWeldJoint    rdf:type owl:ObjectProperty ;
+    rdfs:domain weld:TigWelder ;
+    rdfs:range weld:WeldJoint ;
+    rdfs:label ""produces weld joint"" ;
+    rdfs:comment ""The type of weld joint that a TIG welder produces"" .
+weld:Material    rdf:type owl:Class ;
+    rdfs:label ""Material"" ;
+    rdfs:comment ""Materials that can be welded using TIG welding"" .
+weld:Skill    rdf:type owl:Class ;
+    rdfs:label ""Skill"" ;
+    rdfs:comment ""Skills needed in order to perform TIG welding"" .
+weld:WeldingProcess    rdf:type owl:Class ;
+    rdfs:label ""Welding Process"" ;
+    rdfs:comment ""The process of welding that involves the use of a TIG welder"" .
+weld:WeldJoint    rdf:type owl:Class ;
+    rdfs:label ""Weld Joint"" ;
+    rdfs:comment ""The joint resulting from the process of TIG welding"" .
+"

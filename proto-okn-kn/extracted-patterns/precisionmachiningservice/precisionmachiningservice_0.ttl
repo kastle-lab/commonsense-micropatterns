@@ -1,0 +1,29 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pms: <http://www.example.org/precision/machining/service#> .
+pms:MachiningService    rdf:type rdfs:Class ;
+    rdfs:comment ""A class representing precision machining services""^^xsd:string ;
+    rdfs:label ""MachiningService""^^xsd:string .
+pms:Machine    rdf:type rdfs:Class ;
+    rdfs:comment ""A class representing the machine used in precision machining""^^xsd:string ;
+    rdfs:label ""Machine""^^xsd:string .
+pms:Material    rdf:type rdfs:Class ;
+    rdfs:comment ""A class representing the material subject to precision machining""^^xsd:string ;
+    rdfs:label ""Material""^^xsd:string .
+pms:usesMachine    rdf:type rdf:Property ;
+    rdfs:comment ""A property linking a machining service to a machine""^^xsd:string ;
+    rdfs:domain pms:MachiningService ;
+    rdfs:range pms:Machine ;
+    rdfs:label ""usesMachine""^^xsd:string .
+pms:processMaterial    rdf:type rdf:Property ;
+    rdfs:comment ""A property linking a machining service to a material""^^xsd:string ;
+    rdfs:domain pms:MachiningService ;
+    rdfs:range pms:Material ;
+    rdfs:label ""processMaterial""^^xsd:string .
+pms:precisionLevel    rdf:type rdf:Property ;
+    rdfs:comment ""A property representing the precision level of the machining service""^^xsd:string ;
+    rdfs:domain pms:MachiningService ;
+    rdfs:range xsd:int ;
+    rdfs:label ""precisionLevel""^^xsd:string .
+"

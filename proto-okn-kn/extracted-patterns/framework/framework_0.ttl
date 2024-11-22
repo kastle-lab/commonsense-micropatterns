@@ -1,0 +1,34 @@
+"@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix framework: <http://www.example.org/framework#> .
+<http://www.example.org/framework>    a owl:Ontology ;
+    rdfs:comment ""A simple ontology focused on the concept of framework"" ;
+    rdfs:label ""Framework Ontology"" .
+framework:Framework    a owl:Class ;
+    rdfs:label ""Framework"" ;
+    rdfs:comment ""The class of all types of technology, or construction design templates generally referred as frameworks."" .
+framework:hasType    a owl:DatatypeProperty ;
+    rdfs:domain framework:Framework ;
+    rdfs:range xsd:string ;
+    rdfs:label ""has type"" ;
+    rdfs:comment ""The type of the framework."" .
+framework:createdAt    a owl:DatatypeProperty ;
+    rdfs:domain framework:Framework ;
+    rdfs:range xsd:date ;
+    rdfs:label ""created at"" ;
+    rdfs:comment ""The creation date of the framework."" .
+framework:createdBy    a owl:ObjectProperty ;
+    rdfs:comment ""A property linking a framework to its creator"" ;
+    rdfs:domain framework:Framework ;
+    rdfs:range framework:Creator ;
+    rdfs:label ""created by"" .
+framework:Creator     a owl:Class ;
+    rdfs:comment ""The class of all entities that can create a framework."" ;
+    rdfs:label ""Creator"" .
+framework:hasName    a owl:DatatypeProperty ;
+    rdfs:domain framework:Creator ;
+    rdfs:range xsd:string ;
+    rdfs:label ""has name"" ;
+    rdfs:comment ""The name of the creator entity."" .
+"

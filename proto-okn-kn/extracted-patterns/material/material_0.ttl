@@ -1,0 +1,38 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mat: <http://www.example.org/material#> .
+mat:     rdf:type owl:Ontology ;
+    rdfs:comment ""An ontology of materials"" ;
+    rdfs:label ""Material"" .
+mat:Material    rdf:type owl:Class ;
+    rdfs:label ""Material"" ;
+    rdfs:comment ""A class representing all kinds of materials"" .
+mat:Metal    rdf:type owl:Class ;
+    rdfs:label ""Metal"" ;
+    rdfs:comment ""A type of material known for its hardness, strength, and durability"" ;
+    rdfs:subClassOf mat:Material .
+mat:Plastic    rdf:type owl:Class ;
+    rdfs:label ""Plastic"" ;
+    rdfs:comment ""A type of material known for its flexibility and cost-effectiveness"" ;
+    rdfs:subClassOf mat:Material .
+mat:Wood    rdf:type owl:Class ;
+    rdfs:label ""Wood"" ;
+    rdfs:comment ""A type of material known for its natural characteristics and versatility"" ;
+    rdfs:subClassOf mat:Material .
+mat:Glass    rdf:type owl:Class ;
+    rdfs:label ""Glass"" ;
+    rdfs:comment ""A type of material known for its transparency and brittleness"" ;
+    rdfs:subClassOf mat:Material .
+mat:hasDensity    rdf:type owl:DatatypeProperty ;
+    rdfs:label ""has density"" ;
+    rdfs:comment ""The property representing the density of the material"" ;
+    rdfs:domain mat:Material ;
+    rdfs:range xsd:decimal .
+mat:isConductive    rdf:type owl:DatatypeProperty ;
+    rdfs:label ""is conductive"" ;
+    rdfs:comment ""The property indicating if the material is electrically conductive"" ;
+    rdfs:domain mat:Material ;
+    rdfs:range xsd:boolean .
+"

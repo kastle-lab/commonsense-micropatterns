@@ -1,0 +1,35 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix on: <http://ontology.example.org/plantation#> .
+on:Plantation a rdfs:Class ;
+   rdfs:comment ""A plantation is a large-scale estate meant for farming that specializes in cash crops."" .
+on:hasLocation a rdf:Property ;
+  rdfs:domain on:Plantation ;
+  rdfs:range xsd:string ;
+  rdfs:comment ""The location where the plantation is situated."" .
+  on:hasCropType a rdf:Property ;
+  rdfs:domain on:Plantation ;
+  rdfs:range on:Crop ;
+  rdfs:comment ""The type of crop that the plantation specializes in."" .
+on:Crop a rdfs:Class ;
+  rdfs:comment ""Different types of crops that can be grown on a plantation."" .
+on:Cotton a on:Crop;
+  rdfs:comment ""A soft white fibrous substance that surrounds the seeds of a tropical and subtropical plant, used as textile fiber and thread."" .
+  on:Tobacco a on:Crop;
+  rdfs:comment ""A product prepared from the leaves of the tobacco plant by curing them."" .
+on:hasowner a rdf:Property ;
+  rdfs:domain on:Plantation ;
+  rdfs:range on:Owner ;
+  rdfs:comment ""The individual or corporation that owns the plantation."" .
+on:Owner a rdfs:Class ;
+  rdfs:comment ""The entity that owns the plantation."" .
+on:IndividualOwner a on:Owner ;
+  rdfs:comment ""A single person who owns the plantation."" .
+on:CorporateOwner a on:Owner ;
+  rdfs:comment ""A corporation or company that owns the plantation."" .
+ on:hasYearEstablished a rdf:Property ;
+  rdfs:domain on:Plantation ;
+  rdfs:range xsd:date ;
+  rdfs:comment ""The year when the plantation was established."" .
+"

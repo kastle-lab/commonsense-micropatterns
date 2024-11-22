@@ -1,0 +1,27 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+dbo:Ancestry a owl:Class ;
+    rdfs:label ""Ancestry""@en ;
+    rdfs:comment ""A class representing the lineage or descent from an ancestor.""@en ;
+    rdfs:subClassOf dbo:Person .
+dbo:hasAncestor a owl:ObjectProperty ;
+    rdfs:label ""has ancestor""@en ;
+    rdfs:comment ""A property representing a direct ancestor of a person.""@en ;
+    rdfs:domain dbo:Person ;
+    rdfs:range dbo:Person .
+dbo:hasDescendant a owl:ObjectProperty ;
+    rdfs:label ""has descendant""@en ;
+    rdfs:comment ""A property representing a direct descendant of a person.""@en ;
+    rdfs:domain dbo:Person ;
+    rdfs:range dbo:Person .
+:JohnDoe a dbo:Person ;
+    foaf:name ""John Doe""@en ;
+    dbo:hasAncestor :JaneDoe ;
+    dbo:hasDescendant :JimmyDoe .
+:JaneDoe a dbo:Person ;
+    foaf:name ""Jane Doe""@en ;
+    dbo:hasDescendant :JohnDoe .
+:JimmyDoe a dbo:Person ;
+    foaf:name ""Jimmy Doe""@en ;
+    dbo:hasAncestor :JohnDoe .

@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix my: <http://www.semanticweb.org/user/ontologies/2021/century#> .
+my:Century rdf:type rdfs:Class .
+my:timePeriod rdf:type rdf:Property .
+my:timePeriod rdfs:range xsd:integer .
+my:timePeriod rdfs:domain my:Century .
+my:FirstCentury rdf:type my:Century;
+my:timePeriod ""100""^^xsd:integer .
+my:SecondCentury rdf:type my:Century;
+my:timePeriod ""200""^^xsd:integer .
+my:ThirdCentury rdf:type my:Century;
+my:timePeriod ""300""^^xsd:integer .

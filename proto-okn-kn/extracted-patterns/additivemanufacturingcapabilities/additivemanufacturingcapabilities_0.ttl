@@ -1,0 +1,41 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix addManuf: <http://www.example.org/addManuf#> .
+addManuf:AdditiveManufacturing rdf:type owl:Class ;
+    rdfs:label ""Additive Manufacturing""@en ;
+    rdfs:comment ""The process of creating three-dimensional objects from a digital file using various material layering techniques.""@en .
+addManuf:Material rdf:type owl:Class ;
+    rdfs:label ""Material""@en ;
+    rdfs:comment ""The substance or substances out of which an object or product is made.""@en .
+addManuf:Technique rdf:type owl:Class ;
+    rdfs:label ""Technique""@en ;
+    rdfs:comment ""A way of carrying out a particular task, especially in manufacturing.""@en .
+addManuf:usesMaterial rdf:type owl:ObjectProperty ;
+    rdfs:domain addManuf:AdditiveManufacturing ;
+    rdfs:range addManuf:Material ;
+    rdfs:label ""uses material""@en ;
+    rdfs:comment ""The material used in the additive manufacturing process.""@en .
+addManuf:usesTechnique rdf:type owl:ObjectProperty ;
+    rdfs:domain addManuf:AdditiveManufacturing ;
+    rdfs:range addManuf:Technique ;
+    rdfs:label ""uses technique""@en ;
+    rdfs:comment ""The technique used in the additive manufacturing process.""@en .
+addManuf:hasCapability rdf:type owl:DatatypeProperty ;
+    rdfs:domain addManuf:AdditiveManufacturing ;
+    rdfs:range rdf:XMLLiteral ;
+    rdfs:label ""has capability""@en ;
+    rdfs:comment ""The specific capabilities of the additive manufacturing process.""@en .
+addManuf:Precision rdf:type owl:Class ;
+    rdfs:label ""Precision""@en ;
+    rdfs:subClassOf addManuf:hasCapability .
+addManuf:Speed rdf:type owl:Class ;
+    rdfs:label ""Speed""@en ;
+    rdfs:subClassOf addManuf:hasCapability .
+addManuf:Flexibility rdf:type owl:Class ;
+    rdfs:label ""Flexibility""@en ;
+    rdfs:subClassOf addManuf:hasCapability .
+addManuf:CostEffectiveness rdf:type owl:Class ;
+    rdfs:label ""Cost-Effectiveness""@en ;
+    rdfs:subClassOf addManuf:hasCapability .
+"

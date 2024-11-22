@@ -1,0 +1,27 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xmld: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ontology: <http://example.org/ontology#> .
+@base <http://example.org/ontology> .
+ontology:Grandparent a rdfs:Class ;
+  rdfs:comment ""The class of all grandparents"" ;
+  rdfs:label ""Grandparent"" .
+ontology:hasGrandparent a rdf:Property ;
+  rdfs:domain ontology:Person ;
+  rdfs:range ontology:Grandparent ;
+  rdfs:comment ""The property that relates a person to their grandparent"" ;
+  rdfs:label ""hasGrandparent"" .
+ontology:Person a rdfs:Class ;
+  rdfs:comment ""The class of all persons"" ;
+  rdfs:label ""Person"" .
+ontology:isGrandparentOf a rdf:Property ;
+  rdfs:domain ontology:Grandparent ;
+  rdfs:range ontology:Person ;
+  rdfs:comment ""The property that relates a grandparent to their grandchild"";
+  rdfs:label ""isGrandparentOf"" .
+ontology:hasAge a rdf:Property ;
+  rdfs:domain ontology:Person ;
+  rdfs:range xmld:integer ;
+  rdfs:comment ""The property that relates a person to their age"" ;
+  rdfs:label ""hasAge"" .
+  "

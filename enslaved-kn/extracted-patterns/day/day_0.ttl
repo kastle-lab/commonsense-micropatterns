@@ -1,0 +1,41 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix day: <http://www.example.org/day#> .
+day:Day a rdfs:Class ;
+      rdfs:label ""Day""@en ;
+      rdfs:comment ""Class representing a day of the week.""@en .
+day:Monday a day:Day ;
+       rdfs:label ""Monday""@en ;
+       rdfs:comment ""Representation of Monday.""@en .
+day:Tuesday a day:Day ;
+       rdfs:label ""Tuesday""@en ;
+       rdfs:comment ""Representation of Tuesday.""@en .
+day:Wednesday a day:Day ;
+       rdfs:label ""Wednesday""@en ;
+       rdfs:comment ""Representation of Wednesday.""@en .
+day:Thursday a day:Day ;
+       rdfs:label ""Thursday""@en ;
+       rdfs:comment ""Representation of Thursday.""@en .
+day:Friday a day:Day ;
+       rdfs:label ""Friday""@en ;
+       rdfs:comment ""Representation of Friday.""@en .
+day:Saturday a day:Day ;
+       rdfs:label ""Saturday""@en ;
+       rdfs:comment ""Representation of Saturday.""@en .
+day:Sunday a day:Day ;
+       rdfs:label ""Sunday""@en ;
+       rdfs:comment ""Representation of Sunday.""@en .
+day:part_of_week a rdf:Property ;
+       rdfs:label ""Part of week""@en ;
+       rdfs:domain day:Day ;
+       rdfs:range xsd:string .
+day:Monday day:part_of_week ""week""^^xsd:string .
+day:Tuesday day:part_of_week ""week""^^xsd:string .
+day:Wednesday day:part_of_week ""week""^^xsd:string .
+day:Thursday day:part_of_week ""week""^^xsd:string .
+day:Friday day:part_of_week ""week""^^xsd:string .
+day:Saturday day:part_of_week ""weekend""^^xsd:string .
+day:Sunday day:part_of_week ""weekend""^^xsd:string .
+"

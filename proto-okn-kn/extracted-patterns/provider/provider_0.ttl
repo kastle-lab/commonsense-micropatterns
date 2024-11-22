@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.org/provider#> .
+:Provider a rdfs:Class ;
+    rdfs:comment ""An entity that provides a service or product"" ;
+    rdfs:label ""Provider"" :ServiceProvider a rdfs:Class ;
+    rdfs:subClassOf :Provider ;
+     rdfs:comment ""A provider that offers a service"" ;
+    rdfs:label ""ServiceProvider"" .
+:ProductProvider a rdfs:Class ;
+    rdfs:subClassOf :Provider ;
+     rdfs:comment ""A provider that delivers a product"" ;
+    rdfs:label ""ProductProvider"" .
+:provides a rdf:Property ;
+    rdfs:domain :Provider ;
+    rdfs:range [ a rdfs:Class ;
+ owl:unionOf ( :Service :Product ) ] ;
+    rdfs:comment ""The entity that the Provider provides to Consumers"" ;
+    rdfs:label ""provides"" .
+:Service a rdfs:Class ;
+    rdfs:comment ""A service that can be provided by a Service Provider"" ;
+    rdfs:label ""Service"" .
+:Product a rdfs:Class ;
+    rdfs:comment ""A product that can be provided by a Product Provider"" ;
+    rdfs:label ""Product"" .

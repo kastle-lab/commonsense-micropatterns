@@ -1,0 +1,28 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix uc: <http://www.example.com/units#> .
+uc:    rdf:type owl:Ontology ;
+    rdfs:comment ""An ontology for describing units of measurement"" .
+uc:Unit     rdf:type owl:Class ;
+    rdfs:comment ""A class for all units of measurement"" .
+uc:LengthUnit     rdf:type owl:Class ;
+    owl:subClassOf uc:Unit ;
+    rdfs:comment ""A class for units of length"" .
+uc:TimeUnit     rdf:type owl:Class ;
+    owl:subClassOf uc:Unit ;
+    rdfs:comment ""A class for units of time"" .
+uc:MassUnit     rdf:type owl:Class ;
+    owl:subClassOf uc:Unit ;
+    rdfs:comment ""A class for units of mass"" .
+uc:Meter     rdf:type owl:Class ;
+    owl:subClassOf uc:LengthUnit ;
+    rdfs:comment ""The base unit of length in the International System of Units (SI)"" .
+uc:Second     rdf:type owl:Class ;
+    owl:subClassOf uc:TimeUnit ;
+    rdfs:comment ""The base unit of time in the International System of Units (SI)"" .
+uc:Kilogram     rdf:type owl:Class ;
+    owl:subClassOf uc:MassUnit ;
+    rdfs:comment ""The base unit of mass in the International System of Units (SI)"" .
+"

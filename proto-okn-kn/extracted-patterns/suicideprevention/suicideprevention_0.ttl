@@ -1,0 +1,37 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://www.example.com/suicidePrevention#> .
+sp:SuicidePrevention a rdfs:Class .
+sp:PublicAwareness a rdfs:Class ;
+    rdfs:subClassOf sp:SuicidePrevention .
+sp:MentalHealthAssessment a rdfs:Class ;
+    rdfs:subClassOf sp:SuicidePrevention .
+sp:Hotline a rdfs:Class ;
+    rdfs:subClassOf sp:SuicidePrevention .
+sp:Training a rdfs:Class ;
+    rdfs:subClassOf sp:SuicidePrevention .
+sp:Counseling a rdfs:Class ;
+    rdfs:subClassOf sp:SuicidePrevention .
+sp:Helplines a rdfs:Class ;
+    rdfs:subClassOf sp:Hotline .
+sp:ImmediateHelp a rdfs:Class ;
+    rdfs:subClassOf sp:Hotline .
+sp:StressManagementClasses a rdfs:Class ;
+    rdfs:subClassOf sp:Training .
+sp:CrisisInterventionTraining a rdfs:Class ;
+    rdfs:subClassOf sp:Training .
+sp:PsychiatristConsultation a rdfs:Class ;
+    rdfs:subClassOf sp:Counseling .
+sp:SupportGroups a rdfs:Class ;
+    rdfs:subClassOf sp:Counseling .
+sp:RiskAssessment a rdfs:Class ;
+    rdfs:subClassOf sp:MentalHealthAssessment .
+sp:DepressionScreening a rdfs:Class ;
+    rdfs:subClassOf sp:MentalHealthAssessment .
+sp:awarenessCampaigns a sp:PublicAwareness ;
+    sp:name ""National Suicide Prevention Week"" .
+sp:nationalHotline a sp:Helplines ;
+    sp:contactNumber ""1-800-273-TALK"" .
+sp:localSupportGroup a sp:SupportGroups ;
+    sp:location ""CommunityHealthCenter, CityName, StateName"" .
+"

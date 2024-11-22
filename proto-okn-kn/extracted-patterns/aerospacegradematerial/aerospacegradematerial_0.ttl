@@ -1,0 +1,24 @@
+@prefix ex: <http://www.example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+ex:AerospaceGradeMaterial    rdf:type owl:Class ;
+    rdfs:subClassOf ex:Material ;
+    rdfs:comment ""A material suitable for use in aerospace applications"" .
+ex:Material    rdf:type owl:Class ;
+    rdfs:comment ""The general category of materials, excluding particular specifications or properties"" .
+ex:hasMaterial    rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:AerospaceEquipment ;
+    rdfs:range ex:Material ;
+    rdfs:comment ""Relates an aerospace equipment to the material it is made from"" .
+ex:AerospaceEquipment    rdf:type owl:Class ;
+    rdfs:comment ""Any type of equipment or machinery used in aerospace applications"" .
+ex:AluminumAlloy    rdf:type ex:AerospaceGradeMaterial ;
+    rdfs:label ""Aluminum Alloy"" ;
+    rdfs:comment ""A popular type of aerospace grade material, known for its light weight and resistance to corrosion"" .
+ex:CarbonFiberComposite    rdf:type ex:AerospaceGradeMaterial ;
+    rdfs:label ""Carbon Fiber Composite"" ;
+    rdfs:comment ""An aerospace grade material, valued for its high strength-to-weight ratio"" .
+ex:TitaniumAlloy    rdf:type ex:AerospaceGradeMaterial ;
+    rdfs:label ""Titanium Alloy"" ;
+    rdfs:comment ""An aerospace grade material, known for high strength and resistance to temperature extremes"" .

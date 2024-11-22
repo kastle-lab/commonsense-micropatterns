@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bcl: <http://example.org/BloodCellOntology#> .
+bcl:BloodCell a rdfs:Class ;
+    rdfs:label ""Blood Cell""@en ;
+    rdfs:comment ""The class of all blood cells""@en .
+bcl:WhiteBloodCell a rdfs:Class ;
+    rdfs:label ""White Blood Cell""@en ;
+    rdfs:comment ""The class of all white blood cells""@en ;
+    rdfs:subClassOf bcl:BloodCell .
+bcl:RedBloodCell a rdfs:Class ;
+    rdfs:label ""Red Blood Cell""@en ;
+    rdfs:comment ""The class of all red blood cells""@en ;
+    rdfs:subClassOf bcl:BloodCell .
+bcl:Platelet a rdfs:Class ;
+    rdfs:label ""Platelet""@en ;
+    rdfs:comment ""The class of all platelets""@en ;
+    rdfs:subClassOf bcl:BloodCell .
+bcl:produces a rdf:Property ;
+    rdfs:label ""produces""@en ;
+    rdfs:comment ""Indicates the blood cell which originates from another""@en ;
+    rdfs:domain bcl:BloodCell ;
+    rdfs:range bcl:BloodCell .
+bcl:hasFunction a rdf:Property ;
+    rdfs:label ""has function""@en ;
+    rdfs:comment ""Indicates the function of the blood cell""@en ;
+    rdfs:domain bcl:BloodCell ;
+    rdfs:range xsd:string .

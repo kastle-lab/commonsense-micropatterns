@@ -1,0 +1,55 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/csmodl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Department a rdfs:Class .
+
+kastle:Funding a rdfs:Class .
+
+kastle:Publication a rdfs:Class .
+
+kastle:ResearchArea a rdfs:Class .
+
+kastle:Student a rdfs:Class .
+
+kastle:Supervisor a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/researcharea> a owl:Ontology ;
+    opla-core:hasPatternName "researcharea Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasDepartment a rdf:Property ;
+    rdfs:domain kastle:ResearchArea ;
+    rdfs:range kastle:Department .
+
+kastle:hasFunding a rdf:Property ;
+    rdfs:domain kastle:ResearchArea ;
+    rdfs:range kastle:Funding .
+
+kastle:hasPublication a rdf:Property ;
+    rdfs:domain kastle:ResearchArea ;
+    rdfs:range kastle:Publication .
+
+kastle:hasStudent a rdf:Property ;
+    rdfs:domain kastle:ResearchArea ;
+    rdfs:range kastle:Student .
+
+kastle:hasSupervisor a rdf:Property ;
+    rdfs:domain kastle:ResearchArea ;
+    rdfs:range kastle:Supervisor .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:ResearchArea ;
+    rdfs:range xsd:string .
+

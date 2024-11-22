@@ -1,0 +1,30 @@
+"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix med: <http://example.org/medical#> .
+med:PostTraumaticCondition rdf:type owl:Class ;
+                           rdfs:label ""Post-Traumatic Condition""@en ;
+                           rdfs:comment ""Class of medical conditions characterized by significant distress or impairment in social, occupational, or other areas of functioning following exposure to a traumatic event""@en .
+med:hasSymptom rdf:type owl:ObjectProperty ;
+               rdfs:label ""has symptom""@en ;
+               rdfs:domain med:PostTraumaticCondition ;
+               rdfs:range med:Symptom .
+med:hasCause rdf:type owl:ObjectProperty ;
+             rdfs:label ""has cause""@en ;
+             rdfs:domain med:PostTraumaticCondition ;
+             rdfs:range med:TraumaticEvent .
+med:Symptom rdf:type owl:Class ;
+            rdfs:label ""Symptom""@en ;
+            rdfs:comment ""Element characterizing a medical condition""@en .
+med:TraumaticEvent rdf:type owl:Class ;
+                   rdfs:label ""Traumatic Event""@en ;
+                   rdfs:comment ""A distressing event causing severe emotional shock and often involving physical harm or injury""@en .
+med:diagnosedWith rdf:type owl:ObjectProperty ;
+                  rdfs:label ""diagnosed with""@en ;
+                  rdfs:domain med:Patient ;
+                  rdfs:range med:PostTraumaticCondition .
+med:Patient rdf:type owl:Class ;
+            rdfs:label ""Patient""@en ;
+            rdfs:comment ""A person who receives medical care or treatment""@en .
+"

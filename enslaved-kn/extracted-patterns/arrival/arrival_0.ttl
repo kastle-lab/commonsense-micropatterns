@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix arrival: <http://www.example.org/arrival/> .
+arrival:ArrivalEvent    rdf:type rdfs:Class ;
+    rdfs:label ""Arrival Event""@en ;
+    rdfs:comment ""An event which denotes the arrival of something or someone.""@en .
+arrival:hasArrivalTime    rdf:type rdf:Property ;
+    rdfs:label ""has arrival time""@en ;
+    rdfs:comment ""The time at which the arrival took place.""@en ;
+    rdfs:domain arrival:ArrivalEvent ;
+    rdfs:range xsd:dateTime .
+arrival:hasArrivalPlace    rdf:type rdf:Property ;
+    rdfs:label ""has arrival place""@en ;
+    rdfs:comment ""The place at which the arrival took place.""@en ;
+    rdfs:domain arrival:ArrivalEvent ;
+    rdfs:range rdfs:Resource .
+arrival:ArrivingEntity    rdf:type rdfs:Class ;
+    rdfs:label ""Arriving Entity""@en ;
+    rdfs:comment ""The entity that is arriving.""@en .
+arrival:hasArrivingEntity    rdf:type rdf:Property ;
+    rdfs:label ""has arriving entity""@en ;
+    rdfs:comment ""The entity that is identified as arriving at the event.""@en ;
+    rdfs:domain arrival:ArrivalEvent ;
+    rdfs:range arrival:ArrivingEntity .
