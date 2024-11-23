@@ -1,0 +1,61 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Human a rdfs:Class .
+
+kastle:Manumission a rdfs:Class .
+
+kastle:Slave a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
+
+kastle:SlaveOwner a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/manumission> a owl:Ontology ;
+    opla-core:hasPatternName "manumission Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:dateGranted a rdf:Property ;
+    rdfs:domain kastle:Manumission ;
+    rdfs:range xsd:date .
+
+kastle:dateOfManumission a rdf:Property ;
+    rdfs:domain kastle:Slave ;
+    rdfs:range xsd:date .
+
+kastle:grantedBy a rdf:Property ;
+    rdfs:domain kastle:Manumission ;
+    rdfs:range kastle:Human .
+
+kastle:hasManumitted a rdf:Property ;
+    rdfs:domain kastle:SlaveOwner ;
+    rdfs:range kastle:Slave .
+
+kastle:involvedSlave a rdf:Property ;
+    rdfs:domain kastle:Manumission ;
+    rdfs:range kastle:Human .
+
+kastle:legalDocument a rdf:Property ;
+    rdfs:domain kastle:Slave ;
+    rdfs:range rdfs:Literal .
+
+kastle:manumission a rdf:Property ;
+    rdfs:domain kastle:SlaveOwner ;
+    rdfs:range kastle:Slave .
+
+kastle:wasManumittedBy a rdf:Property ;
+    rdfs:domain kastle:Slave ;
+    rdfs:range kastle:SlaveOwner .
+

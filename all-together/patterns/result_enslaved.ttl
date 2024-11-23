@@ -1,0 +1,56 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Anysimpletype a rdfs:Class .
+
+kastle:Participant a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Result a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/result> a owl:Ontology ;
+    opla-core:hasPatternName "result Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:associatedWith a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Resource .
+
+kastle:hasEvaluation a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range xsd:boolean .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Participant ;
+    rdfs:range xsd:string .
+
+kastle:hasValue a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range rdfs:Literal,
+        kastle:Anysimpletype .
+
+kastle:isResultOf a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Resource .
+
+kastle:participant a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range kastle:Participant .
+
+kastle:score a rdf:Property ;
+    rdfs:domain kastle:Result ;
+    rdfs:range xsd:float .
+

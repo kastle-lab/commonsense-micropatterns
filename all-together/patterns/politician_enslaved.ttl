@@ -1,0 +1,67 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:PoliticalIssue a rdfs:Class .
+
+kastle:PoliticalParty a rdfs:Class .
+
+kastle:PoliticalPosition a rdfs:Class .
+
+kastle:Politician a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
+
+kastle:Resource a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/politician> a owl:Ontology ;
+    opla-core:hasPatternName "politician Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasBirthDate a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range xsd:date .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:hasPartyAffiliation a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range kastle:PoliticalParty .
+
+kastle:hasPoliticalParty a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range kastle:PoliticalParty .
+
+kastle:hasTerm a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range xsd:date .
+
+kastle:hasTermLength a rdf:Property ;
+    rdfs:domain kastle:PoliticalPosition ;
+    rdfs:range rdfs:Literal .
+
+kastle:holdsPosition a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range kastle:PoliticalPosition .
+
+kastle:relatedToIssue a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range kastle:PoliticalIssue .
+
+kastle:representsCountry a rdf:Property ;
+    rdfs:domain kastle:Politician ;
+    rdfs:range kastle:Resource .
+

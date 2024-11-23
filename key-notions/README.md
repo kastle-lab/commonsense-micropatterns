@@ -1,5 +1,5 @@
 # Key-Notions
-Analyzing how Key-Notions from KWG and Proto-OKN Project overlap with the MODL patterns of CS-MODL and Enslaved-MODL.
+Analyzing how Key-Notions from Enslaved.org Ontology, KnowWhereGraph and Proto-OKN Projects overlap with the MODL micropatterns of CS-MODL and Enslaved-MODL.
 
 ## Directory Structure
 * `code` -- Python scripts to analyze and generate TTL files from GPT Responses

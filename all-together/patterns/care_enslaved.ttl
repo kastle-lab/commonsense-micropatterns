@@ -1,0 +1,51 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Care a rdfs:Class .
+
+kastle:CareActivity a rdfs:Class .
+
+kastle:CareLocation a rdfs:Class .
+
+kastle:CareProvider a rdfs:Class .
+
+kastle:CareRecipient a rdfs:Class .
+
+kastle:HealthcareProfessional a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/care> a owl:Ontology ;
+    opla-core:hasPatternName "care Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:atLocation a rdf:Property ;
+    rdfs:domain kastle:Care ;
+    rdfs:range kastle:CareLocation .
+
+kastle:hasProvider a rdf:Property ;
+    rdfs:domain kastle:Care ;
+    rdfs:range kastle:CareProvider .
+
+kastle:hasRecipient a rdf:Property ;
+    rdfs:domain kastle:Care ;
+    rdfs:range kastle:CareRecipient .
+
+kastle:involvesActivity a rdf:Property ;
+    rdfs:domain kastle:Care ;
+    rdfs:range kastle:CareActivity .
+
+kastle:providesCare a rdf:Property ;
+    rdfs:domain kastle:HealthcareProfessional ;
+    rdfs:range kastle:Care .
+

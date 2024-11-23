@@ -1,0 +1,86 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Author a rdfs:Class ;
+    rdfs:subClassOf kastle:N3c0a9d62a1d64b6b9c7ea7f0401a59ecb1 .
+
+kastle:Book a rdfs:Class .
+
+kastle:Character a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Setting a rdfs:Class .
+
+kastle:Story a rdfs:Class .
+
+kastle:Tale a rdfs:Class .
+
+kastle:Theme a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/tale> a owl:Ontology ;
+    opla-core:hasPatternName "tale Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:containedIn a rdf:Property ;
+    rdfs:domain kastle:Story ;
+    rdfs:range kastle:Book .
+
+kastle:hasAuthor a rdf:Property ;
+    rdfs:domain kastle:Story,
+        kastle:Tale ;
+    rdfs:range xsd:string,
+        kastle:Author .
+
+kastle:hasCharacter a rdf:Property ;
+    rdfs:domain kastle:Story ;
+    rdfs:range kastle:Character .
+
+kastle:hasCharacters a rdf:Property ;
+    rdfs:domain kastle:Tale ;
+    rdfs:range xsd:string .
+
+kastle:hasGenre a rdf:Property ;
+    rdfs:domain kastle:Tale ;
+    rdfs:range xsd:string .
+
+kastle:hasPlot a rdf:Property ;
+    rdfs:domain kastle:Tale ;
+    rdfs:range xsd:string .
+
+kastle:hasPublicationYear a rdf:Property ;
+    rdfs:domain kastle:Tale ;
+    rdfs:range kastle:Integer .
+
+kastle:hasSetting a rdf:Property ;
+    rdfs:domain kastle:Story,
+        kastle:Tale ;
+    rdfs:range xsd:string,
+        kastle:Setting .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Story,
+        kastle:Tale ;
+    rdfs:range rdfs:Literal,
+        xsd:string .
+
+kastle:publishedOn a rdf:Property ;
+    rdfs:domain kastle:Story ;
+    rdfs:range rdfs:Literal .
+
+kastle:tellsAbout a rdf:Property ;
+    rdfs:domain kastle:Story ;
+    rdfs:range kastle:Theme .
+

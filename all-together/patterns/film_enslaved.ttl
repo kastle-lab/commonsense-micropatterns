@@ -1,0 +1,87 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Actor a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
+
+kastle:Director a rdfs:Class ;
+    rdfs:subClassOf kastle:Person .
+
+kastle:Film a rdfs:Class .
+
+kastle:Genre a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/film> a owl:Ontology ;
+    opla-core:hasPatternName "film Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:birthDate a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:date .
+
+kastle:directedBy a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range kastle:Director .
+
+kastle:hasActor a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range kastle:Actor .
+
+kastle:hasActorName a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range xsd:string .
+
+kastle:hasDirector a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range kastle:Director .
+
+kastle:hasGenre a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range kastle:Genre .
+
+kastle:hasGenreName a rdf:Property ;
+    rdfs:domain kastle:Genre ;
+    rdfs:range xsd:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Director ;
+    rdfs:range xsd:string .
+
+kastle:hasReleaseYear a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range xsd:date .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range xsd:string .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:releaseDate a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range xsd:date .
+
+kastle:starring a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range kastle:Actor .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Film ;
+    rdfs:range xsd:string .
+

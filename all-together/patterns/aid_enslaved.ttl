@@ -1,0 +1,55 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Aid a rdfs:Class .
+
+kastle:Donor a rdfs:Class .
+
+kastle:Recipient a rdfs:Class .
+
+kastle:Type a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/aid> a owl:Ontology ;
+    opla-core:hasPatternName "aid Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:aidType a rdf:Property ;
+    rdfs:domain kastle:Type ;
+    rdfs:range xsd:string .
+
+kastle:donates a rdf:Property ;
+    rdfs:domain kastle:Donor ;
+    rdfs:range kastle:Recipient .
+
+kastle:donorName a rdf:Property ;
+    rdfs:domain kastle:Donor ;
+    rdfs:range xsd:string .
+
+kastle:hasAmount a rdf:Property ;
+    rdfs:domain kastle:Aid ;
+    rdfs:range xsd:decimal .
+
+kastle:hasDonor a rdf:Property ;
+    rdfs:domain kastle:Aid ;
+    rdfs:range kastle:Donor .
+
+kastle:hasRecipient a rdf:Property ;
+    rdfs:domain kastle:Aid ;
+    rdfs:range kastle:Recipient .
+
+kastle:recipientName a rdf:Property ;
+    rdfs:domain kastle:Recipient ;
+    rdfs:range xsd:string .
+

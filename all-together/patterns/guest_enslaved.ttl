@@ -1,0 +1,73 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Event a rdfs:Class .
+
+kastle:Guest a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Invitation a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/guest> a owl:Ontology ;
+    opla-core:hasPatternName "guest Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:age a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range kastle:Integer .
+
+kastle:gender a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range xsd:string .
+
+kastle:hasAddress a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range xsd:string .
+
+kastle:hasGender a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range xsd:string .
+
+kastle:hasInvitation a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range kastle:Invitation .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range xsd:string .
+
+kastle:isAttendingEvent a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range kastle:Event .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range xsd:string .
+
+kastle:status a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range xsd:string .
+
+kastle:stayDuration a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range kastle:Integer .
+
+kastle:staysAt a rdf:Property ;
+    rdfs:domain kastle:Guest ;
+    rdfs:range kastle:Location .
+

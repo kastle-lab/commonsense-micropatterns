@@ -1,0 +1,49 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:City a rdfs:Class ;
+    rdfs:subClassOf kastle:Location .
+
+kastle:Coordinates a rdfs:Class ;
+    rdfs:subClassOf kastle:Location .
+
+kastle:Country a rdfs:Class ;
+    rdfs:subClassOf kastle:Location .
+
+kastle:Location a rdfs:Class .
+
+kastle:Street a rdfs:Class ;
+    rdfs:subClassOf kastle:Location .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/location> a owl:Ontology ;
+    opla-core:hasPatternName "location Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasCity a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:City .
+
+kastle:hasCoordinates a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:Coordinates .
+
+kastle:hasCountry a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:Country .
+
+kastle:hasStreet a rdf:Property ;
+    rdfs:domain kastle:Location ;
+    rdfs:range kastle:Street .
+

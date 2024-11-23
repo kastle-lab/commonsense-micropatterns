@@ -228,19 +228,7 @@ print(f"uniquePropTerms: {len(enslaved_uniquePropTerms)}")
 print("")
 
 ##  Key-Notions from CQs Analysis
-keynotions_ClassTerms, keynotions_uniqueClassTerms, keynotions_PropTerms, keynotions_uniquePropTerms = process_rdf_file(keynotions_patterns_folder)
-keynotions_classTerms_counts, keynotions_propTerms_counts = countClassTerms(keynotions_ClassTerms, keynotions_PropTerms)
-keynotions_sharedClasses, keynotionsd_sharedProps = idSharedTerms(keynotions_classTerms_counts, keynotions_propTerms_counts)
-
-writeTermFiles("keynotions", keynotions_ClassTerms, keynotions_classTerms_counts, keynotions_PropTerms, keynotions_propTerms_counts)
-print("Key-Notions:")
-print(f"shared classTermCounts: {len(keynotions_sharedClasses)}")
-print(f"uniqueClassTerms: {len(keynotions_uniqueClassTerms)}")
-print(f"shared propTermCounts: {len(keynotionsd_sharedProps)}")
-print(f"uniquePropTerms: {len(keynotions_uniquePropTerms)}")
-print("")
-
-
+# keynotions_ClassTerms, keynotions_uniqueClassTerms, keynotions_PropTerms, keynotions_uniquePropTerms = process_rdf_file(keynotions_patterns_folder)
 keynotions_ClassTerms, keynotions_uniqueClassTerms, keynotions_PropTerms, keynotions_uniquePropTerms = process_rdf_file(all_keynotions_patterns_folder)
 keynotions_classTerms_counts, keynotions_propTerms_counts = countClassTerms(keynotions_ClassTerms, keynotions_PropTerms)
 keynotions_sharedClasses, keynotionsd_sharedProps = idSharedTerms(keynotions_classTerms_counts, keynotions_propTerms_counts)

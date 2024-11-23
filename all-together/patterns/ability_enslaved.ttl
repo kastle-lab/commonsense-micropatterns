@@ -1,0 +1,55 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Ability a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Nonnegativeinteger a rdfs:Class .
+
+kastle:Task a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/ability> a owl:Ontology ;
+    opla-core:hasPatternName "ability Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:endDate a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:date .
+
+kastle:hasLevel a rdf:Property ;
+    rdfs:domain kastle:Ability ;
+    rdfs:range kastle:Nonnegativeinteger .
+
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Ability ;
+    rdfs:range rdfs:Literal .
+
+kastle:level a rdf:Property ;
+    rdfs:domain kastle:Ability ;
+    rdfs:range kastle:Integer .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Ability ;
+    rdfs:range xsd:string .
+
+kastle:requiredFor a rdf:Property ;
+    rdfs:domain kastle:Ability ;
+    rdfs:range kastle:Task .
+
+kastle:startDate a rdf:Property ;
+    rdfs:domain kastle:Task ;
+    rdfs:range xsd:date .
+

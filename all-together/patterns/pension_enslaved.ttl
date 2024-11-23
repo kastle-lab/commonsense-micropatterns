@@ -1,0 +1,70 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Beneficiary a rdfs:Class .
+
+kastle:Funding a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Pension a rdfs:Class .
+
+kastle:PensionPlan a rdfs:Class .
+
+kastle:Pensioner a rdfs:Class .
+
+kastle:Retiree a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/pension> a owl:Ontology ;
+    opla-core:hasPatternName "pension Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:duration a rdf:Property ;
+    rdfs:domain kastle:PensionPlan ;
+    rdfs:range kastle:Integer .
+
+kastle:hasBeneficiary a rdf:Property ;
+    rdfs:domain kastle:Pension,
+        kastle:PensionPlan ;
+    rdfs:range kastle:Beneficiary .
+
+kastle:hasFunding a rdf:Property ;
+    rdfs:domain kastle:Pension ;
+    rdfs:range kastle:Funding .
+
+kastle:hasPensionPlan a rdf:Property ;
+    rdfs:domain kastle:Pensioner ;
+    rdfs:range kastle:PensionPlan .
+
+kastle:hasRetiree a rdf:Property ;
+    rdfs:domain kastle:PensionPlan ;
+    rdfs:range kastle:Retiree .
+
+kastle:hasStartAge a rdf:Property ;
+    rdfs:domain kastle:PensionPlan ;
+    rdfs:range xsd:decimal .
+
+kastle:hasTerms a rdf:Property ;
+    rdfs:domain kastle:PensionPlan ;
+    rdfs:range xsd:string .
+
+kastle:monthlyAmount a rdf:Property ;
+    rdfs:domain kastle:PensionPlan ;
+    rdfs:range xsd:float .
+
+kastle:startAge a rdf:Property ;
+    rdfs:domain kastle:PensionPlan ;
+    rdfs:range kastle:Integer .
+

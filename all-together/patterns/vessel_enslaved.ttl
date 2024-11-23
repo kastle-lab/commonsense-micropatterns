@@ -1,0 +1,47 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Double a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Material a rdfs:Class .
+
+kastle:Vessel a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/vessel> a owl:Ontology ;
+    opla-core:hasPatternName "vessel Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:capacity a rdf:Property ;
+    rdfs:domain kastle:Vessel ;
+    rdfs:range kastle:Integer .
+
+kastle:madeOf a rdf:Property ;
+    rdfs:domain kastle:Vessel ;
+    rdfs:range kastle:Material .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Vessel ;
+    rdfs:range xsd:string .
+
+kastle:partOf a rdf:Property ;
+    rdfs:domain kastle:Vessel ;
+    rdfs:range kastle:Vessel .
+
+kastle:size a rdf:Property ;
+    rdfs:domain kastle:Vessel ;
+    rdfs:range kastle:Double .
+

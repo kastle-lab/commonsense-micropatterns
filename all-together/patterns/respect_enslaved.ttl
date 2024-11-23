@@ -1,0 +1,51 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Action a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Respect a rdfs:Class .
+
+kastle:Value a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/respect> a owl:Ontology ;
+    opla-core:hasPatternName "respect Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:forPerson a rdf:Property ;
+    rdfs:domain kastle:Respect ;
+    rdfs:range kastle:Person .
+
+kastle:forValue a rdf:Property ;
+    rdfs:domain kastle:Respect ;
+    rdfs:range kastle:Value .
+
+kastle:inAction a rdf:Property ;
+    rdfs:domain kastle:Respect ;
+    rdfs:range kastle:Action .
+
+kastle:isMutual a rdf:Property ;
+    rdfs:domain kastle:Respect ;
+    rdfs:range xsd:boolean .
+
+kastle:isSelf a rdf:Property ;
+    rdfs:domain kastle:Respect ;
+    rdfs:range xsd:boolean .
+
+kastle:levelOfRespect a rdf:Property ;
+    rdfs:domain kastle:Respect ;
+    rdfs:range xsd:decimal .
+

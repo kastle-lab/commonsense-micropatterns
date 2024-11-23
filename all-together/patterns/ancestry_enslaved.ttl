@@ -1,0 +1,73 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Ancestor a rdfs:Class .
+
+kastle:DateOfBirth a rdfs:Class .
+
+kastle:Descendant a rdfs:Class .
+
+kastle:N93cce6105e0b4d24bb5be2671f1034a6b1 a rdfs:Class .
+
+kastle:N93cce6105e0b4d24bb5be2671f1034a6b4 a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:PlaceOfBirth a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/ancestry> a owl:Ontology ;
+    opla-core:hasPatternName "ancestry Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:born a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:date .
+
+kastle:hasAncestor a rdf:Property ;
+    rdfs:domain kastle:Descendant ;
+    rdfs:range kastle:Ancestor .
+
+kastle:hasChild a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:hasDateOfBirth a rdf:Property ;
+    rdfs:domain kastle:N93cce6105e0b4d24bb5be2671f1034a6b1 ;
+    rdfs:range kastle:DateOfBirth .
+
+kastle:hasDescendant a rdf:Property ;
+    rdfs:domain kastle:Ancestor ;
+    rdfs:range kastle:Descendant .
+
+kastle:hasFather a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:hasMother a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Person .
+
+kastle:hasPlaceOfBirth a rdf:Property ;
+    rdfs:domain kastle:N93cce6105e0b4d24bb5be2671f1034a6b4 ;
+    rdfs:range kastle:PlaceOfBirth .
+
+kastle:hasSibling a rdf:Property ;
+    rdfs:domain kastle:Descendant ;
+    rdfs:range kastle:Descendant .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+

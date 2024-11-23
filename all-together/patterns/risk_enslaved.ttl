@@ -1,0 +1,57 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Impact a rdfs:Class .
+
+kastle:Probability a rdfs:Class .
+
+kastle:Risk a rdfs:Class .
+
+kastle:RiskAssessment a rdfs:Class .
+
+kastle:RiskFactor a rdfs:Class .
+
+kastle:RiskLevel a rdfs:Class .
+
+kastle:RiskManagement a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/risk> a owl:Ontology ;
+    opla-core:hasPatternName "risk Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasImpact a rdf:Property ;
+    rdfs:domain kastle:Risk ;
+    rdfs:range kastle:Impact .
+
+kastle:hasProbability a rdf:Property ;
+    rdfs:domain kastle:Risk ;
+    rdfs:range kastle:Probability .
+
+kastle:hasRiskAssessment a rdf:Property ;
+    rdfs:domain kastle:Risk ;
+    rdfs:range kastle:RiskAssessment .
+
+kastle:hasRiskFactor a rdf:Property ;
+    rdfs:domain kastle:Risk ;
+    rdfs:range kastle:RiskFactor .
+
+kastle:hasRiskLevel a rdf:Property ;
+    rdfs:domain kastle:Risk ;
+    rdfs:range kastle:RiskLevel .
+
+kastle:hasRiskManagement a rdf:Property ;
+    rdfs:domain kastle:Risk ;
+    rdfs:range kastle:RiskManagement .
+

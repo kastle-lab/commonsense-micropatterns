@@ -1,0 +1,87 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Arrest a rdfs:Class .
+
+kastle:ArrestReport a rdfs:Class .
+
+kastle:Arrestee a rdfs:Class .
+
+kastle:Arrestor a rdfs:Class ;
+    rdfs:subClassOf kastle:Lawenforcementagency .
+
+kastle:Crime a rdfs:Class .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:LawEnforcementAgency a rdfs:Class .
+
+kastle:Location a rdfs:Class .
+
+kastle:PoliceOfficer a rdfs:Class .
+
+kastle:Reason a rdfs:Class ;
+    rdfs:subClassOf kastle:Crime .
+
+kastle:Suspect a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/arrest> a owl:Ontology ;
+    opla-core:hasPatternName "arrest Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:arrestRecord a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range kastle:LawEnforcementAgency .
+
+kastle:arrestedBy a rdf:Property ;
+    rdfs:domain kastle:Suspect ;
+    rdfs:range kastle:PoliceOfficer .
+
+kastle:chargedWith a rdf:Property ;
+    rdfs:domain kastle:Suspect ;
+    rdfs:range kastle:Crime .
+
+kastle:date a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range kastle:Datetime .
+
+kastle:documentedBy a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range kastle:ArrestReport .
+
+kastle:hasArrestee a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range kastle:Arrestee .
+
+kastle:hasArrestor a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range kastle:Arrestor .
+
+kastle:hasDate a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range xsd:date .
+
+kastle:hasLocation a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range kastle:Location .
+
+kastle:hasReason a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range kastle:Reason .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Arrest ;
+    rdfs:range xsd:string .
+

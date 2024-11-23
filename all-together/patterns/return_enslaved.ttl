@@ -1,0 +1,64 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Resource a rdfs:Class .
+
+kastle:Return a rdfs:Class .
+
+kastle:ReturnItem a rdfs:Class .
+
+kastle:ReturnPolicy a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/return> a owl:Ontology ;
+    opla-core:hasPatternName "return Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasItemCondition a rdf:Property ;
+    rdfs:domain kastle:ReturnItem ;
+    rdfs:range xsd:string .
+
+kastle:hasItemName a rdf:Property ;
+    rdfs:domain kastle:ReturnItem ;
+    rdfs:range xsd:string .
+
+kastle:hasPolicyDetail a rdf:Property ;
+    rdfs:domain kastle:ReturnPolicy ;
+    rdfs:range xsd:string .
+
+kastle:hasPolicyNumber a rdf:Property ;
+    rdfs:domain kastle:ReturnPolicy ;
+    rdfs:range xsd:string .
+
+kastle:hasReturnDate a rdf:Property ;
+    rdfs:domain kastle:Return ;
+    rdfs:range xsd:date .
+
+kastle:hasReturnItem a rdf:Property ;
+    rdfs:domain kastle:Return ;
+    rdfs:range kastle:ReturnItem .
+
+kastle:hasReturnPolicy a rdf:Property ;
+    rdfs:domain kastle:Return ;
+    rdfs:range kastle:Resource,
+        kastle:ReturnPolicy .
+
+kastle:hasReturnReason a rdf:Property ;
+    rdfs:domain kastle:Return ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasReturnedItem a rdf:Property ;
+    rdfs:domain kastle:Return ;
+    rdfs:range kastle:Resource .
+

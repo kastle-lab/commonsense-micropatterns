@@ -1,8 +1,8 @@
-Person
+Capabilities
 Interest
 ExpertiseField
 Expertise
-Organization
-Capabilities
-Entity
 ExpertiseLevel
+Person
+Entity
+Organization

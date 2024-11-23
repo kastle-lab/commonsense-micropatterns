@@ -61,8 +61,7 @@
 18) What was the average age of death for enslaved people from Mozambique transported to Cuba?
 19) Did the ethnonym registered at the time of an enslaved person's arrival in the XXXX have any statistical relationship to the likelihood of subsequent manumission?
 20) What ever happened to Bernarda Angola, a Free African who ran away from her mistress Maria dos Santos Pereira, in June 1845?
-21) I am trying to tell if the Maria Rebola registered on the XXX plantation registry in 1823 is the same Maria Rebola registered in a different registry for a different plantation in
-1833. Can they be definitively identified as the same person?
+21) I am trying to tell if the Maria Rebola registered on the XXX plantation registry in 1823 is the same Maria Rebola registered in a different registry for a different plantation in 1833. Can they be definitively identified as the same person?
 22) In the mid 19th century, how was women’s experience of motherhood different and the same in West Africa, Havana, and Charleston?
 23) I am comparing an 1832 Jamaican registry of enslaved people with the same owner’s 1833 inventory of his estate. He sold 16 enslaved people. 11 of them had been enslaved since at least 1817. 8 were African born. None of them had a surname. Between 1832 and 1833 he purchased 15 enslaved people. All but one had a surname. Seven of these had a surname that was the same as the owner and his wife. Is it likely these were family members?
 24) I am looking at an inventory that gives the “value” of enslaved people. How did slave owners determine such values?

@@ -1,0 +1,57 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:HistoricalEvent a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Place a rdfs:Class .
+
+kastle:TimePeriod a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/history> a owl:Ontology ;
+    opla-core:hasPatternName "history Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:endTime a rdf:Property ;
+    rdfs:domain kastle:TimePeriod ;
+    rdfs:range kastle:Datetime .
+
+kastle:happenedDuring a rdf:Property ;
+    rdfs:domain kastle:HistoricalEvent ;
+    rdfs:range kastle:TimePeriod .
+
+kastle:involvedPerson a rdf:Property ;
+    rdfs:domain kastle:HistoricalEvent ;
+    rdfs:range kastle:Person .
+
+kastle:personName a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:placeName a rdf:Property ;
+    rdfs:domain kastle:Place ;
+    rdfs:range xsd:string .
+
+kastle:startTime a rdf:Property ;
+    rdfs:domain kastle:TimePeriod ;
+    rdfs:range kastle:Datetime .
+
+kastle:tookPlaceIn a rdf:Property ;
+    rdfs:domain kastle:HistoricalEvent ;
+    rdfs:range kastle:Place .
+

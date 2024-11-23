@@ -1,0 +1,61 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Component a rdfs:Class .
+
+kastle:Hardware a rdfs:Class .
+
+kastle:Software a rdfs:Class .
+
+kastle:Subcomponent a rdfs:Class .
+
+kastle:System a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/system> a owl:Ontology ;
+    opla-core:hasPatternName "system Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:componentType a rdf:Property ;
+    rdfs:domain kastle:Component ;
+    rdfs:range xsd:string .
+
+kastle:hasComponent a rdf:Property ;
+    rdfs:domain kastle:System ;
+    rdfs:range kastle:Component .
+
+kastle:hasHardware a rdf:Property ;
+    rdfs:domain kastle:System ;
+    rdfs:range kastle:Hardware .
+
+kastle:hasSoftware a rdf:Property ;
+    rdfs:domain kastle:System ;
+    rdfs:range kastle:Software .
+
+kastle:hasSubcomponent a rdf:Property ;
+    rdfs:domain kastle:Component ;
+    rdfs:range kastle:Subcomponent .
+
+kastle:isComponentOf a rdf:Property ;
+    rdfs:domain kastle:Hardware ;
+    rdfs:range kastle:System .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:System ;
+    rdfs:range xsd:string .
+
+kastle:subcomponentType a rdf:Property ;
+    rdfs:domain kastle:Subcomponent ;
+    rdfs:range xsd:string .
+

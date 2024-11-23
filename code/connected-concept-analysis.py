@@ -8,7 +8,7 @@ from rdflib import URIRef, Graph, Namespace, Literal
 from rdflib import OWL, RDF, RDFS, XSD, TIME
 
 ###  Directory Organization
-modl = "kwg-kn"
+modl = "enslaved"
 folders = {
     "csmodl":os.path.join(".", "csmodl", "patterns"),
     "enslaved":os.path.join(".", "enslaved-modl", "patterns"),

@@ -1,0 +1,60 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Integer a rdfs:Class .
+
+kastle:PrivateVehicle a rdfs:Class ;
+    rdfs:subClassOf kastle:Transportation .
+
+kastle:PublicTransport a rdfs:Class ;
+    rdfs:subClassOf kastle:Transportation .
+
+kastle:Transportation a rdfs:Class .
+
+kastle:Vehicle a rdfs:Class ;
+    rdfs:subClassOf kastle:Transportation .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/transportation> a owl:Ontology ;
+    opla-core:hasPatternName "transportation Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasCapacity a rdf:Property ;
+    rdfs:domain kastle:Transportation ;
+    rdfs:range kastle:Integer .
+
+kastle:hasMake a rdf:Property ;
+    rdfs:domain kastle:Transportation ;
+    rdfs:range xsd:string .
+
+kastle:hasMaxSpeed a rdf:Property ;
+    rdfs:domain kastle:Transportation ;
+    rdfs:range kastle:Integer .
+
+kastle:hasModel a rdf:Property ;
+    rdfs:domain kastle:Transportation ;
+    rdfs:range xsd:string .
+
+kastle:hasSpeed a rdf:Property ;
+    rdfs:domain kastle:Vehicle ;
+    rdfs:range kastle:Integer .
+
+kastle:operatedBy a rdf:Property ;
+    rdfs:domain kastle:PublicTransport ;
+    rdfs:range xsd:string .
+
+kastle:ownedBy a rdf:Property ;
+    rdfs:domain kastle:PrivateVehicle ;
+    rdfs:range xsd:string .
+

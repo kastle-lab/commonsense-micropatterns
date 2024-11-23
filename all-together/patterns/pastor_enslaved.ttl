@@ -1,0 +1,58 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Church a rdfs:Class .
+
+kastle:Congregation a rdfs:Class .
+
+kastle:Pastor a rdfs:Class ;
+    rdfs:subClassOf kastle:Clergyman .
+
+kastle:PastoralCounseling a rdfs:Class .
+
+kastle:Sermon a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/pastor> a owl:Ontology ;
+    opla-core:hasPatternName "pastor Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:firstOrdained a rdf:Property ;
+    rdfs:domain kastle:Pastor ;
+    rdfs:range xsd:date .
+
+kastle:leadChurch a rdf:Property ;
+    rdfs:domain kastle:Pastor ;
+    rdfs:range kastle:Church .
+
+kastle:leadConregation a rdf:Property ;
+    rdfs:domain kastle:Pastor ;
+    rdfs:range kastle:Congregation .
+
+kastle:leadsCongregation a rdf:Property ;
+    rdfs:domain kastle:Pastor ;
+    rdfs:range kastle:Congregation .
+
+kastle:pastorsChurch a rdf:Property ;
+    rdfs:domain kastle:Pastor ;
+    rdfs:range kastle:Church .
+
+kastle:preachSermon a rdf:Property ;
+    rdfs:domain kastle:Pastor ;
+    rdfs:range kastle:Sermon .
+
+kastle:providesCounseling a rdf:Property ;
+    rdfs:domain kastle:Pastor ;
+    rdfs:range kastle:PastoralCounseling .
+

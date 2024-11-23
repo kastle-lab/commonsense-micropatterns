@@ -1,0 +1,53 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Field a rdfs:Class .
+
+kastle:Skill a rdfs:Class .
+
+kastle:SkillOwner a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/skill> a owl:Ontology ;
+    opla-core:hasPatternName "skill Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Skill ;
+    rdfs:range xsd:string .
+
+kastle:hasProficiency a rdf:Property ;
+    rdfs:domain kastle:Skill ;
+    rdfs:range xsd:string .
+
+kastle:hasSkillLevel a rdf:Property ;
+    rdfs:domain kastle:Skill ;
+    rdfs:range xsd:string .
+
+kastle:isRelatedTo a rdf:Property ;
+    rdfs:domain kastle:Skill ;
+    rdfs:range kastle:Skill .
+
+kastle:ownsSkill a rdf:Property ;
+    rdfs:domain kastle:SkillOwner ;
+    rdfs:range kastle:Skill .
+
+kastle:relatedTo a rdf:Property ;
+    rdfs:domain kastle:Skill ;
+    rdfs:range kastle:Skill .
+
+kastle:usedInField a rdf:Property ;
+    rdfs:domain kastle:Skill ;
+    rdfs:range kastle:Field .
+

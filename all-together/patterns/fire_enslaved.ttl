@@ -1,0 +1,70 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Fire a rdfs:Class .
+
+kastle:FireAlarm a rdfs:Class ;
+    rdfs:subClassOf kastle:Fire .
+
+kastle:FireDepartment a rdfs:Class .
+
+kastle:FireSeverity a rdfs:Class .
+
+kastle:FireSource a rdfs:Class .
+
+kastle:Firefighter a rdfs:Class .
+
+kastle:Heat a rdfs:Class .
+
+kastle:Light a rdfs:Class .
+
+kastle:Smoke a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/fire> a owl:Ontology ;
+    opla-core:hasPatternName "fire Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:handlesFire a rdf:Property ;
+    rdfs:domain kastle:Firefighter ;
+    rdfs:range kastle:Fire .
+
+kastle:hasDepartment a rdf:Property ;
+    rdfs:domain kastle:Firefighter ;
+    rdfs:range kastle:FireDepartment .
+
+kastle:hasSeverity a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:FireSeverity .
+
+kastle:hasSource a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:FireSource .
+
+kastle:producesHeat a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Heat .
+
+kastle:producesLight a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Light .
+
+kastle:producesSmoke a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:Smoke .
+
+kastle:triggers a rdf:Property ;
+    rdfs:domain kastle:Fire ;
+    rdfs:range kastle:FireAlarm .
+

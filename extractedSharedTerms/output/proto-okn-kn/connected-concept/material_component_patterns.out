@@ -1,7 +1,7 @@
-./proto-okn-kn/patterns/welder.ttl
-./proto-okn-kn/patterns/material.ttl
+./proto-okn-kn/patterns/aerospacegradematerial.ttl
+./proto-okn-kn/patterns/homelessperson.ttl
 ./proto-okn-kn/patterns/tigwelder.ttl
 ./proto-okn-kn/patterns/additivemanufacturingcapabilities.ttl
-./proto-okn-kn/patterns/aerospacegradematerial.ttl
+./proto-okn-kn/patterns/welder.ttl
+./proto-okn-kn/patterns/material.ttl
 ./proto-okn-kn/patterns/precisionmachiningservice.ttl
-./proto-okn-kn/patterns/homelessperson.ttl

@@ -1,0 +1,72 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Damage a rdfs:Class ;
+    rdfs:subClassOf kastle:Property .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Resource a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/damage> a owl:Ontology ;
+    opla-core:hasPatternName "damage Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:affectedObject a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range xsd:string .
+
+kastle:affects a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range kastle:Resource .
+
+kastle:cause a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range xsd:string .
+
+kastle:causedBy a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range kastle:Resource .
+
+kastle:hasCause a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range kastle:Resource .
+
+kastle:hasConsequence a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range kastle:Resource .
+
+kastle:hasSeverity a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range kastle:Integer .
+
+kastle:hasType a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range rdfs:Literal .
+
+kastle:location a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range xsd:string .
+
+kastle:severity a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range xsd:int .
+
+kastle:timeOfOccurrence a rdf:Property ;
+    rdfs:domain kastle:Damage ;
+    rdfs:range kastle:Datetime .
+

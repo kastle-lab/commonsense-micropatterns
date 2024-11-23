@@ -1,0 +1,53 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Datetime a rdfs:Class .
+
+kastle:Mail a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/mail> a owl:Ontology ;
+    opla-core:hasPatternName "mail Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasBody a rdf:Property ;
+    rdfs:domain kastle:Mail ;
+    rdfs:range xsd:string .
+
+kastle:hasEmail a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range xsd:string .
+
+kastle:hasRecipient a rdf:Property ;
+    rdfs:domain kastle:Mail ;
+    rdfs:range kastle:Person .
+
+kastle:hasSender a rdf:Property ;
+    rdfs:domain kastle:Mail ;
+    rdfs:range kastle:Person .
+
+kastle:hasSubject a rdf:Property ;
+    rdfs:domain kastle:Mail ;
+    rdfs:range xsd:string .
+
+kastle:isRead a rdf:Property ;
+    rdfs:domain kastle:Mail ;
+    rdfs:range xsd:boolean .
+
+kastle:isSentOn a rdf:Property ;
+    rdfs:domain kastle:Mail ;
+    rdfs:range kastle:Datetime .
+

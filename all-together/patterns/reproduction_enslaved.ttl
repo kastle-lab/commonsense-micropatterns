@@ -1,0 +1,47 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Animal a rdfs:Class ;
+    rdfs:subClassOf kastle:N99268126faf248afb7c7defbbb7a9a3eb7 .
+
+kastle:N99268126faf248afb7c7defbbb7a9a3eb1 a rdfs:Class .
+
+kastle:Plant a rdfs:Class ;
+    rdfs:subClassOf kastle:N99268126faf248afb7c7defbbb7a9a3eb8 .
+
+kastle:Reproduction a rdfs:Class .
+
+kastle:ReproductiveOrganism a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/reproduction> a owl:Ontology ;
+    opla-core:hasPatternName "reproduction Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:asexualReproduction a rdf:Property ;
+    rdfs:domain kastle:Reproduction ;
+    rdfs:range kastle:Plant .
+
+kastle:hasParent a rdf:Property ;
+    rdfs:domain kastle:Reproduction ;
+    rdfs:range kastle:N99268126faf248afb7c7defbbb7a9a3eb1 .
+
+kastle:reproduces a rdf:Property ;
+    rdfs:domain kastle:ReproductiveOrganism ;
+    rdfs:range kastle:Reproduction .
+
+kastle:sexualReproduction a rdf:Property ;
+    rdfs:domain kastle:Reproduction ;
+    rdfs:range kastle:Animal .
+

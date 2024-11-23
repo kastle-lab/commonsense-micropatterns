@@ -1,0 +1,71 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:AcademicStudy a rdfs:Class .
+
+kastle:Researcher a rdfs:Class .
+
+kastle:Study a rdfs:Class .
+
+kastle:StudyTool a rdfs:Class .
+
+kastle:Subject a rdfs:Class .
+
+kastle:Time a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/study> a owl:Ontology ;
+    opla-core:hasPatternName "study Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:conductedBy a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Researcher .
+
+kastle:evaluate a rdf:Property ;
+    rdfs:domain kastle:AcademicStudy ;
+    rdfs:range rdfs:Literal .
+
+kastle:evaluateResult a rdf:Property ;
+    rdfs:domain kastle:AcademicStudy ;
+    rdfs:range rdfs:Literal .
+
+kastle:hasDuration a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Time .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Researcher ;
+    rdfs:range xsd:string .
+
+kastle:hasResearcher a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Researcher .
+
+kastle:hasStudyField a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range xsd:string .
+
+kastle:hasSubject a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:Subject .
+
+kastle:hasTitle a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range xsd:string .
+
+kastle:usesTool a rdf:Property ;
+    rdfs:domain kastle:Study ;
+    rdfs:range kastle:StudyTool .
+

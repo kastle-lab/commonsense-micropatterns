@@ -1,0 +1,56 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Castle a rdfs:Class ;
+    rdfs:subClassOf kastle:Kingdom .
+
+kastle:King a rdfs:Class ;
+    rdfs:subClassOf kastle:Kingdom .
+
+kastle:Kingdom a rdfs:Class .
+
+kastle:Prince a rdfs:Class ;
+    rdfs:subClassOf kastle:Kingdom .
+
+kastle:Princess a rdfs:Class ;
+    rdfs:subClassOf kastle:Kingdom .
+
+kastle:Queen a rdfs:Class ;
+    rdfs:subClassOf kastle:Kingdom .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/kingdom> a owl:Ontology ;
+    opla-core:hasPatternName "kingdom Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasCastle a rdf:Property ;
+    rdfs:domain kastle:Kingdom ;
+    rdfs:range kastle:Castle .
+
+kastle:hasKing a rdf:Property ;
+    rdfs:domain kastle:Kingdom ;
+    rdfs:range kastle:King .
+
+kastle:hasPrince a rdf:Property ;
+    rdfs:domain kastle:Kingdom ;
+    rdfs:range kastle:Prince .
+
+kastle:hasPrincess a rdf:Property ;
+    rdfs:domain kastle:Kingdom ;
+    rdfs:range kastle:Princess .
+
+kastle:hasQueen a rdf:Property ;
+    rdfs:domain kastle:Kingdom ;
+    rdfs:range kastle:Queen .
+

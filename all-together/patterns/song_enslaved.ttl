@@ -1,0 +1,63 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Artist a rdfs:Class .
+
+kastle:Genre a rdfs:Class .
+
+kastle:Lyrics a rdfs:Class .
+
+kastle:Song a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/song> a owl:Ontology ;
+    opla-core:hasPatternName "song Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:artist a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range xsd:string .
+
+kastle:content a rdf:Property ;
+    rdfs:domain kastle:Lyrics ;
+    rdfs:range xsd:string .
+
+kastle:genre a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range xsd:string .
+
+kastle:hasGenre a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range kastle:Genre .
+
+kastle:hasLyrics a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range kastle:Lyrics .
+
+kastle:length a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range xsd:decimal .
+
+kastle:publishDate a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range xsd:date .
+
+kastle:sungBy a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range kastle:Artist .
+
+kastle:title a rdf:Property ;
+    rdfs:domain kastle:Song ;
+    rdfs:range xsd:string .
+

@@ -1,0 +1,59 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Actor a rdfs:Class .
+
+kastle:Award a rdfs:Class .
+
+kastle:Country a rdfs:Class .
+
+kastle:Gender a rdfs:Class .
+
+kastle:Integer a rdfs:Class .
+
+kastle:Movie a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/actor> a owl:Ontology ;
+    opla-core:hasPatternName "actor Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:actsIn a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range kastle:Movie .
+
+kastle:hasAge a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range kastle:Integer .
+
+kastle:hasAward a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range kastle:Award .
+
+kastle:hasGender a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range kastle:Gender .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range xsd:string .
+
+kastle:hasNationality a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range kastle:Country .
+
+kastle:name a rdf:Property ;
+    rdfs:domain kastle:Actor ;
+    rdfs:range xsd:string .
+

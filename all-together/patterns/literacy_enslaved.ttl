@@ -1,0 +1,65 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:DigitalLiteracy a rdfs:Class ;
+    rdfs:subClassOf kastle:Literacy .
+
+kastle:Language a rdfs:Class .
+
+kastle:Literacy a rdfs:Class .
+
+kastle:Person a rdfs:Class .
+
+kastle:Reading a rdfs:Class .
+
+kastle:ReadingSkill a rdfs:Class .
+
+kastle:Writing a rdfs:Class ;
+    rdfs:subClassOf kastle:Literacy .
+
+kastle:WritingSkill a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/literacy> a owl:Ontology ;
+    opla-core:hasPatternName "literacy Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:digitalLiteracyLevel a rdf:Property ;
+    rdfs:domain kastle:DigitalLiteracy ;
+    rdfs:range xsd:float .
+
+kastle:hasDigitalLiteracySkill a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:DigitalLiteracy .
+
+kastle:hasLanguage a rdf:Property ;
+    rdfs:domain kastle:Literacy ;
+    rdfs:range kastle:Language .
+
+kastle:hasReadingSkill a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Reading .
+
+kastle:hasWritingSkill a rdf:Property ;
+    rdfs:domain kastle:Person ;
+    rdfs:range kastle:Writing .
+
+kastle:readingLevel a rdf:Property ;
+    rdfs:domain kastle:ReadingSkill ;
+    rdfs:range xsd:float .
+
+kastle:writingLevel a rdf:Property ;
+    rdfs:domain kastle:WritingSkill ;
+    rdfs:range xsd:float .
+

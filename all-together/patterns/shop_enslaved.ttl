@@ -1,0 +1,53 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kastle: <https://kastle.cs.wright.edu/enslaved-modl#> .
+@prefix opla-core: <http://ontologydesignpatterns.org/opla-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kastle:Category a rdfs:Class .
+
+kastle:Product a rdfs:Class .
+
+kastle:Shop a rdfs:Class .
+
+<https://archive.org/services/purl/domain/modular_ontology_design_library/shop> a owl:Ontology ;
+    opla-core:hasPatternName "shop Pattern"^^xsd:string ;
+    dc:contributor "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string ;
+    dc:creator "Andrew Eells"^^xsd:string,
+        "Brandon Dave"^^xsd:string,
+        "Dr. Cogan Shimizu"^^xsd:string,
+        "Dr. Pascal Hitzler"^^xsd:string .
+
+kastle:hasCategory a rdf:Property ;
+    rdfs:domain kastle:Product ;
+    rdfs:range kastle:Category .
+
+kastle:hasDescription a rdf:Property ;
+    rdfs:domain kastle:Category ;
+    rdfs:range xsd:string .
+
+kastle:hasName a rdf:Property ;
+    rdfs:domain kastle:Product ;
+    rdfs:range xsd:string .
+
+kastle:hasPrice a rdf:Property ;
+    rdfs:domain kastle:Product ;
+    rdfs:range xsd:float .
+
+kastle:hasProduct a rdf:Property ;
+    rdfs:domain kastle:Shop ;
+    rdfs:range kastle:Product .
+
+kastle:price a rdf:Property ;
+    rdfs:domain kastle:Product ;
+    rdfs:range xsd:decimal .
+
+kastle:sells a rdf:Property ;
+    rdfs:domain kastle:Shop ;
+    rdfs:range kastle:Product .
+
