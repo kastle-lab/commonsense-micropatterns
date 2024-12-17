@@ -93,7 +93,6 @@
 ./csmodl/patterns/Woman.ttl
 ./csmodl/patterns/Back.ttl
 ./csmodl/patterns/End.ttl
-./csmodl/patterns/Air.ttl
 ./csmodl/patterns/Case.ttl
 ./csmodl/patterns/Head.ttl
 ./csmodl/patterns/Result.ttl
