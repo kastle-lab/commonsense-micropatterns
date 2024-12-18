@@ -11,7 +11,7 @@ nlp = spacy.load("en_core_web_sm")
 # Output file paths
 nouns_out_path = r"C:/commonsense-micropatterns/extendedPaper/nouns.out"
 verbs_out_path = r"C:/commonsense-micropatterns/extendedPaper/verbs.out"
-noun_verb_path = r"C:/commonsense-micropatterns/extendedPaper/noun-verb.out"
+noun_verb_path = r"C:/commonsense-micropatterns/extendedPaper/nounVerb.out"
 
 # Read CQ md files
 enslaved_path = r"C:/commonsense-micropatterns/data/competency-questions/enslaved.md"
@@ -65,14 +65,3 @@ with open(nouns_out_path, 'w', encoding="utf-8") as nout, open(verbs_out_path, '
     # Write nouns and verbs
     for word in uni_nouns_verbs_list:
       nvout.write(f'{word}\n')
-
-# Output file paths
-classes_out_path = r"C:/commonsense-micropatterns/extendedPaper/classes.out"
-relations_out_path = r"C:/commonsense-micropatterns/extendedPaper/relations.out"
-
-with open(classes_out_path, 'r', encoding="utf-8") as classes_file:
-  class_contents = classes_file.read()
-
-with open(relations_out_path, 'r', encoding="utf-8") as relations_file:
-  relation_contents = relations_file.read()
-
