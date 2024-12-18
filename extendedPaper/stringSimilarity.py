@@ -3,6 +3,7 @@ import os
 import numpy as np
 import pandas as pd
 from numpy.linalg import norm
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Function to normalize list using lemmatization with spaCy
 def norm_list(list_of_strings):
@@ -13,9 +14,29 @@ def norm_list(list_of_strings):
         normal_list.append(" ".join(tokens))
     return normal_list
 
-# Function to compare strings between two lists, calculate their cosine similarity, and return it as a df with custom headers. Threshold disabled by default
-def comparison(list1, list2, header1="Item1", header2="Item2", threshold=False, threshold_value=0.79):
-    scores = []
+# Function to compare strings between two lists, calculate their cosine similarity, and save each compared item to a csv file in the desired directory. Threshold disabled by default. Directory must be declared. Returns list of created files. 
+def comparison(list1, list2, directory, header1="Item1", header2="Item2", threshold=False, threshold_value=0.79):
+    # Initialize tfid vectorizer
+    vectorizer = TfidfVectorizer()
+
+    # Get current working dir
+    prev_dir = os.getcwd()
+
+    # Create path to target dir
+    target_dir = directory
+    target_path = os.path.join(prev_dir, target_dir)
+
+    # Check if dir exists
+    if os.path.exists(target_path):
+        os.chdir(target_path)
+        print(f"Current directory: {os.getcwd()}")
+    else:
+        os.makedirs(target_path)
+        os.chdir(target_path)
+        print("Directory '", target_path, "' created.")
+
+   # List to keep track of created files
+    created_files = []
 
     # Compare items in list 1 and list 2
     for list1_item in list1:
@@ -24,6 +45,9 @@ def comparison(list1, list2, header1="Item1", header2="Item2", threshold=False, 
 
         if list1_item_norm == 0:  # Skip if the noun vector is zero
             continue
+
+        # List to hold tuples for string cosine sim scores
+        scores = []
 
         for list2_item in list2:
             list2_vector = nlp(list2_item).vector       # Get vector of item2
@@ -42,13 +66,25 @@ def comparison(list1, list2, header1="Item1", header2="Item2", threshold=False, 
             else:
                 scores.append((list1_item, list2_item, cosine))
 
-    # Put results into a dataframe and return             
-    df = pd.DataFrame(scores, columns=[header1, header2, "Similarity Score"])
-    return df
+        # Put results of list1_item comparisons into a dataframe and save as csv              
+        df = pd.DataFrame(scores, columns=[header1, header2, "Cosine_Sim_Score"])
+        df = df.sort_values(by="Cosine_Sim_Score", ascending=False) # Sort by descending cosine sim scores
+
+        file_path = os.path.join(os.getcwd(), f"{list1_item}.csv") # Save file path
+        df.to_csv(file_path, index=False)
+        created_files.append(file_path)
+
+    # Return to dir before function call
+    os.chdir(prev_dir)
+    print("Comparison complete.")
+
+    return created_files
 
 ### MAIN ###
 # Initiate spacy with large model
 nlp = spacy.load("en_core_web_lg")
+
+#input("Press enter to continue...")
 
 # file paths
 classes_path = r"C:/commonsense-micropatterns/extendedPaper/classes.out"
@@ -57,6 +93,7 @@ nouns_path = r"C:/commonsense-micropatterns/extendedPaper/nouns.out"
 verbs_path = r"C:/commonsense-micropatterns/extendedPaper/verbs.out"
 noun_verb_path = r"C:/commonsense-micropatterns/extendedPaper/nounVerb.out"
 
+print("Creating lits from files...")
 # Create lists from file contents
 with open(classes_path, 'r', encoding="utf-8") as classes_file, open(relations_path, 'r', encoding="utf-8") as relations_file, open(nouns_path, 'r', encoding="utf-8") as noun_file, open(verbs_path, 'r', encoding="utf-8") as verb_file, open(noun_verb_path, 'r', encoding="utf-8") as nv_file:
   class_list = classes_file.read().split("\n")      # Classes
@@ -65,6 +102,7 @@ with open(classes_path, 'r', encoding="utf-8") as classes_file, open(relations_p
   verb_list = verb_file.read().split("\n")          # Verbs list
   nv_list =  nv_file.read().split("\n")             # Combined nouns/verbs list
 
+print("Normalizing lists...")
 # Normalize lists
 class_list = norm_list(class_list)
 relation_list = norm_list(relation_list)
@@ -74,18 +112,21 @@ nv_list = norm_list(nv_list)
 cr_list = class_list + relation_list  # Combined class/relations list
 
 # Perform string similiarty  comparison
-print("Comparing...")
-df_noun = comparison(noun_list, class_list, "Noun", "Class")
-df_verb = comparison(verb_list, class_list, "Verb", "Predicate")
-df_combo = comparison(nv_list, cr_list, "CQ String", "Enslaved String")
+print("Comparing nouns with classes...")
 
-# Save dfs as csv files
-print("Saving as CSV...")
-df_noun.to_csv("nounClassComparison.csv", index=False)
-df_verb.to_csv("verbPredicateComparison.csv", index=False)
-df_combo.to_csv("nounVerbClassPredicateComparison.csv", index=False)
+noun_files_created = comparison(noun_list, class_list, "extendedPaper\\evaluations\\nounResults", "Noun", "Class")
+
+# num = 0
+# print("Noun files created:")
+# for i in noun_files_created:
+#     num = num + 1
+#     print(num, ") " ,i)
+
+print("Comparing verbs with predicates...")
+verb_files_created = comparison(verb_list, class_list, "extendedPaper\\evaluations\\verbResults", "Verb", "Predicate")
+
+print("Comparing CQ strings against Enslaved strings...")
+noun_verb_files_created = comparison(nv_list, cr_list, "extendedPaper\\evaluations\\nounVerbResults", "CQ_String", "Enslaved_String")
 
 print("Program done.")
-
-
 
