@@ -1,3 +1,7 @@
+# Michael McCain
+# 12/19/2024
+# This program compares the strings between the noun and verb lists and the class and relation lists. The cosine sim and jaro-winkler sim scores are calculated and saved to csv files. 
+
 import spacy
 import os
 import numpy as np

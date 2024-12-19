@@ -1,3 +1,7 @@
+# Michael McCain
+# 12/19/2024
+# This program extracts nouns and verbs from competency questions from the enslaved, kwg, and prot-okn.md files. The nouns and verbs are then written to separate files.  
+
 import spacy
 import os
 
