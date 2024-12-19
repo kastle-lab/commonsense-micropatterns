@@ -3,7 +3,7 @@ import os
 import numpy as np
 import pandas as pd
 from numpy.linalg import norm
-from sklearn.feature_extraction.text import TfidfVectorizer
+from strsimpy.jaro_winkler import JaroWinkler
 
 # Function to normalize list using lemmatization with spaCy
 def norm_list(list_of_strings):
@@ -16,8 +16,9 @@ def norm_list(list_of_strings):
 
 # Function to compare strings between two lists, calculate their cosine similarity, and save each compared item to a csv file in the desired directory. Threshold disabled by default. Directory must be declared. Returns list of created files. 
 def comparison(list1, list2, directory, header1="Item1", header2="Item2", threshold=False, threshold_value=0.79):
-    # Initialize tfid vectorizer
-    vectorizer = TfidfVectorizer()
+    # Initiate Jaro-Winkler
+    jw = JaroWinkler()
+
 
     # Get current working dir
     prev_dir = os.getcwd()
@@ -60,14 +61,17 @@ def comparison(list1, list2, directory, header1="Item1", header2="Item2", thresh
             cosine = np.dot(list1_vector, list2_vector) / (list1_item_norm * list2_item_norm)        
             cosine = float(cosine)                      # Convert to python float
 
+            # Jaro-Winkler Score
+            jw_score = jw.similarity(list1_item, list2_item)
+
             if threshold == True:
                 if cosine > threshold_value:
-                    scores.append((list1_item, list2_item, cosine))
+                    scores.append((list1_item, list2_item, jw_score, cosine))
             else:
-                scores.append((list1_item, list2_item, cosine))
+                scores.append((list1_item, list2_item, jw_score, cosine))
 
         # Put results of list1_item comparisons into a dataframe and save as csv              
-        df = pd.DataFrame(scores, columns=[header1, header2, "Cosine_Sim_Score"])
+        df = pd.DataFrame(scores, columns=[header1, header2, "Jaro-Winkler_Score", "Cosine_Sim_Score"])
         df = df.sort_values(by="Cosine_Sim_Score", ascending=False) # Sort by descending cosine sim scores
 
         file_path = os.path.join(os.getcwd(), f"{list1_item}.csv") # Save file path
@@ -79,6 +83,7 @@ def comparison(list1, list2, directory, header1="Item1", header2="Item2", thresh
     print("Comparison complete.")
 
     return created_files
+
 
 ### MAIN ###
 # Initiate spacy with large model
@@ -116,11 +121,11 @@ print("Comparing nouns with classes...")
 
 noun_files_created = comparison(noun_list, class_list, "extendedPaper\\evaluations\\nounResults", "Noun", "Class")
 
-# num = 0
-# print("Noun files created:")
-# for i in noun_files_created:
-#     num = num + 1
-#     print(num, ") " ,i)
+num = 0
+print("Noun files created:")
+for i in noun_files_created:
+    num = num + 1
+    print(num, ") " ,i)
 
 print("Comparing verbs with predicates...")
 verb_files_created = comparison(verb_list, class_list, "extendedPaper\\evaluations\\verbResults", "Verb", "Predicate")
