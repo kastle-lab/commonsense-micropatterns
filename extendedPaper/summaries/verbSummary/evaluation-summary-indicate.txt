@@ -1,2 +1,4 @@
 File: indicate.csv
-Good Matches: 5
+Good Matches: 0
+Percentage of Matches: 0.00%
+

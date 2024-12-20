@@ -1,2 +1,4 @@
 File: trace.csv
-Good Matches: 11
+Good Matches: 3
+Percentage of Matches: 0.31%
+

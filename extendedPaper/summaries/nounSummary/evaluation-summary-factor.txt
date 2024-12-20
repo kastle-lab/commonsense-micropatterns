@@ -1,2 +1,4 @@
 File: factor.csv
-Good Matches: 10
+Good Matches: 3
+Percentage of Matches: 0.42%
+
