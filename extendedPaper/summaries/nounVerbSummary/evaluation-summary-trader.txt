@@ -1,2 +1,4 @@
 File: trader.csv
-Good Matches: 8
+Good Matches: 3
+Percentage of Matches: 0.31%
+

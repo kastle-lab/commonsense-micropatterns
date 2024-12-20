@@ -1,2 +1,4 @@
 File: infer.csv
-Good Matches: 4
+Good Matches: 0
+Percentage of Matches: 0.00%
+

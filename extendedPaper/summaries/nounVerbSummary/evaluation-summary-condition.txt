@@ -1,2 +1,4 @@
 File: condition.csv
-Good Matches: 15
+Good Matches: 1
+Percentage of Matches: 0.10%
+

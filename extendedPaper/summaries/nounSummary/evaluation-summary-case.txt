@@ -1,2 +1,4 @@
 File: case.csv
-Good Matches: 9
+Good Matches: 4
+Percentage of Matches: 0.56%
+

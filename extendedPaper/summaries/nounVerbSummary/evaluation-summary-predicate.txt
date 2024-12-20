@@ -1,2 +1,4 @@
 File: predicate.csv
-Good Matches: 10
+Good Matches: 0
+Percentage of Matches: 0.00%
+
