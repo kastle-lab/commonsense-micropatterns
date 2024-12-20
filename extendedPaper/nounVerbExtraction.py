@@ -34,6 +34,7 @@ document = nlp(enslaved_contents + "\n" + kwg_contents + "\n" + prot_contents)
 # Store nouns and verbs
 noun_list = [token.text for token in document if token.pos_ == "NOUN"]
 verb_list = [token.text for token in document if token.pos_ == "VERB"]
+
 # Clean up lists
 undesirable_chars = ["#","?", "*", ")", "(", "()", ",", "'","-", "8)", "|", "’m"]
 

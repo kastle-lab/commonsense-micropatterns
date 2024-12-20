@@ -23,7 +23,6 @@ def comparison(list1, list2, directory, header1="Item1", header2="Item2", thresh
     # Initiate Jaro-Winkler
     jw = JaroWinkler()
 
-
     # Get current working dir
     prev_dir = os.getcwd()
 
