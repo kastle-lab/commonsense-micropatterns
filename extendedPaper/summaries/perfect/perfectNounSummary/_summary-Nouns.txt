@@ -1,0 +1,39 @@
+Threshold value: 1.0
+Total word matches: 30
+Unique words with matches: 29
+Total unique words: 104
+Percentage of words with matches: 27.88%
+
+Nouns <--> Classes 
+Match List:
+####################
+action, action
+activity, activity
+area, area
+audience, audience
+church, church
+effort, effort
+end, end
+father, father
+grandfather, grandfather
+half, half
+impact, impact
+information, information
+language, language
+manumission, manumission
+marriage, marriage
+member, member
+mission, mission
+mission, mission
+organizer, organizer
+pair, pair
+paper, paper
+provider, provider
+ship, ship
+skill, skill
+slave, slave
+source, source
+state, state
+teacher, teacher
+time, time
+value, value

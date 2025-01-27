@@ -1,0 +1,2 @@
+Verb,Predicate,Jaro-Winkler_Score,Cosine_Sim_Score
+write,write,1.0,1.0000001192092896

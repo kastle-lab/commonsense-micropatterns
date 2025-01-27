@@ -68,8 +68,9 @@ def comparison(list1, list2, directory, header1="Item1", header2="Item2", thresh
             jw_score = jw.similarity(list1_item, list2_item)
 
             if threshold == True:
-                if cosine > threshold_value:
+                if cosine >= threshold_value:
                     scores.append((list1_item, list2_item, jw_score, cosine))
+                    print(scores)
             else:
                 scores.append((list1_item, list2_item, jw_score, cosine))
 
@@ -101,7 +102,7 @@ nouns_path = r"C:/commonsense-micropatterns/extendedPaper/nouns.out"
 verbs_path = r"C:/commonsense-micropatterns/extendedPaper/verbs.out"
 noun_verb_path = r"C:/commonsense-micropatterns/extendedPaper/nounVerb.out"
 
-print("Creating lits from files...")
+print("Creating lists from files...")
 # Create lists from file contents
 with open(classes_path, 'r', encoding="utf-8") as classes_file, open(relations_path, 'r', encoding="utf-8") as relations_file, open(nouns_path, 'r', encoding="utf-8") as noun_file, open(verbs_path, 'r', encoding="utf-8") as verb_file, open(noun_verb_path, 'r', encoding="utf-8") as nv_file:
   class_list = classes_file.read().split("\n")      # Classes
@@ -122,19 +123,19 @@ cr_list = class_list + relation_list  # Combined class/relations list
 # Perform string similiarty  comparison
 print("Comparing nouns with classes...")
 
-noun_files_created = comparison(noun_list, class_list, "extendedPaper\\evaluations\\nounResults", "Noun", "Class")
+noun_files_created = comparison(noun_list, class_list, "extendedPaper\\evaluations\\perfect\\perfectNounResults", "Noun", "Class", True, 1.0)
 
-num = 0
-print("Noun files created:")
-for i in noun_files_created:
-    num = num + 1
-    print(num, ") " ,i)
+# num = 0
+# print("Noun files created:")
+# for i in noun_files_created:
+#     num = num + 1
+#     print(num, ") " ,i)
 
 print("Comparing verbs with predicates...")
-verb_files_created = comparison(verb_list, class_list, "extendedPaper\\evaluations\\verbResults", "Verb", "Predicate")
+verb_files_created = comparison(verb_list, class_list, "extendedPaper\\evaluations\\perfect\\perfectVerbResults", "Verb", "Predicate", True, 1.0)
 
 print("Comparing CQ strings against Enslaved strings...")
-noun_verb_files_created = comparison(nv_list, cr_list, "extendedPaper\\evaluations\\nounVerbResults", "CQ_String", "Enslaved_String")
+noun_verb_files_created = comparison(nv_list, cr_list, "extendedPaper\\evaluations\\perfect\\perfectNounVerbResults", "CQ_String", "Enslaved_String", True, 1.0)
 
 print("Program done.")
 
