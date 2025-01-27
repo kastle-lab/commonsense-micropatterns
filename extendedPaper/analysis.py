@@ -60,7 +60,11 @@ def process_directory(directory, threshold, output_directory, pos_type1, pos_typ
                     match_item2 = row[1]
                     matched_items = (match_item1, match_item2)
                     match_list.append(matched_items)
-            percentage = matches / len(df) * 100  # Calculate percentage of good matches compared to the total number of compared words in the csv
+
+            if len(df) != 0:
+                percentage = matches / len(df) * 100  # Calculate percentage of good matches compared to the total number of compared words in the csv
+            else:
+                percentage = 0
 
             # Write to outputfile
             with open(output_file_path, 'w') as f:
@@ -88,6 +92,7 @@ def process_directory(directory, threshold, output_directory, pos_type1, pos_typ
     match_percentage = (unique_matches / len(total_unique_words)) * 100 if total_unique_words else 0
 
     with open(sum_output_file_path, 'w') as f:
+        f.write(f'Threshold value: {threshold}\n')
         f.write(f'Total word matches: {total_matches}\n')
         f.write(f'Unique words with matches: {unique_matches}\n')
         f.write(f'Total unique words: {len(total_unique_words)}\n')
@@ -103,19 +108,19 @@ def process_directory(directory, threshold, output_directory, pos_type1, pos_typ
     return 
 
 # Threshold
-threshold = .90
+threshold = 1.0
 
 # Directories to analyze and output analysis to
-output_dir_noun = "extendedPaper\\summaries\\nounSummary"  # Output directory
-an_dir_noun = "extendedPaper\\evaluations\\nounResults"                 # Directory to analyze
+output_dir_noun = "extendedPaper\\summaries\\perfect\\perfectNounSummary"  # Output directory
+an_dir_noun = "extendedPaper\\evaluations\\perfect\\perfectNounResults"                 # Directory to analyze
 type_n = "Nouns"
 
-output_dir_verb = "extendedPaper\\summaries\\verbSummary"
-an_dir_verb = "extendedPaper\\evaluations\\verbResults"
+output_dir_verb = "extendedPaper\\summaries\\perfect\\perfectVerbSummary"
+an_dir_verb = "extendedPaper\\evaluations\\perfect\\perfectVerbResults"
 type_v = "Verbs"
 
-output_dir_nv = "extendedPaper\\summaries\\nounVerbSummary"
-an_dir_nv = "extendedPaper\\evaluations\\nounVerbResults"
+output_dir_nv = "extendedPaper\\summaries\\perfect\\perfectNounVerbSummary"
+an_dir_nv = "extendedPaper\\evaluations\\perfect\\perfectNounVerbResults"
 type_nv = "Nouns and Verbs"
 
 process_directory(an_dir_noun, threshold, output_dir_noun, type_n, "Classes")

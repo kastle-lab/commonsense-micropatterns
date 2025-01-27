@@ -1,0 +1,13 @@
+Threshold value: 1.0
+Total word matches: 4
+Unique words with matches: 4
+Total unique words: 15
+Percentage of words with matches: 26.67%
+
+Verbs <--> Predicates 
+Match List:
+####################
+end, end
+focus, focus
+impact, impact
+write, write

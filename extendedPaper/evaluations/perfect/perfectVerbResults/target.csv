@@ -1,0 +1,2 @@
+Verb,Predicate,Jaro-Winkler_Score,Cosine_Sim_Score
+target,target,1.0,1.0

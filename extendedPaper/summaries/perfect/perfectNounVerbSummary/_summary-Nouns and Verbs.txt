@@ -1,0 +1,53 @@
+Threshold value: 1.0
+Total word matches: 44
+Unique words with matches: 35
+Total unique words: 132
+Percentage of words with matches: 26.52%
+
+Nouns and Verbs <--> Classes and Predicates 
+Match List:
+####################
+action, action
+activity, activity
+area, area
+area, area
+audience, audience
+carry, carry
+church, church
+cost, cost
+effort, effort
+end, end
+father, father
+focus, focus
+focus, focus
+grandfather, grandfather
+half, half
+impact, impact
+information, information
+language, language
+manumission, manumission
+manumission, manumission
+marriage, marriage
+member, member
+member, member
+mission, mission
+mission, mission
+organizer, organizer
+organizer, organizer
+pair, pair
+paper, paper
+provider, provider
+publish, publish
+ship, ship
+skill, skill
+slave, slave
+source, source
+source, source
+state, state
+teacher, teacher
+term, term
+time, time
+time, time
+value, value
+value, value
+write, write
